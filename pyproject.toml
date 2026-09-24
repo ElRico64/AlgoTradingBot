@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sportsedge"
+version = "0.1.0"
+description = "Calibrated, uncertainty-aware MLB/NHL/NBA/NFL game prediction engine with a 70% confidence pick gate"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "scipy>=1.10", "requests>=2.31"]
+
+[project.optional-dependencies]
+llm = ["anthropic>=0.60"]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+sportsedge = "sportsedge.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["sportsedge*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,7 @@
+numpy>=1.24
+scipy>=1.10
+requests>=2.31
+# optional: LLM news analysis
+# anthropic>=0.60
+# dev
+pytest>=7.0
