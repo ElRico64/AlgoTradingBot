@@ -7,8 +7,8 @@ A pick is published only if ALL of the following hold:
      model must be confident *in its own confidence*: parameter uncertainty and
      unresolved injury news widen the band and can veto a pick.
   3. The probability comes from a calibrator fit on out-of-sample data.
-  4. Positive expected value at the offered price and an edge over the
-     de-vigged market of at least `min_edge` (default on).
+  4. Expected value of at least +1% per unit at the offered price and an edge
+     over the de-vigged market of at least `min_edge` (default on).
 
 Why (4) matters: a 70% favourite priced at -250 (break-even 71.4%) loses
 money even if the 70% is exactly right. Win rate alone is not a business;
@@ -22,7 +22,7 @@ from typing import Iterable
 
 from .stats.kelly import stake_fraction
 from .stats.odds import american_to_decimal, breakeven_probability
-from .types import Pick, Prediction
+from .types import MarketProbability, Pick, Prediction
 
 Z80 = 1.2816
 
@@ -34,31 +34,47 @@ class PickPolicy:
     require_calibrated: bool = True
     require_positive_ev: bool = True
     min_edge: float = 0.015
-    min_ev: float = 0.0
+    min_ev: float = 0.01  # +1% per unit: smaller edges are inside model noise and get ~0 stake
     markets: tuple[str, ...] = ("moneyline", "spread", "total")
     max_favorite_price: float = -600.0  # never lay more than this
     kelly_multiplier: float = 0.25
     max_stake: float = 0.03
     one_pick_per_game: bool = True
 
+    def failures(self, m: MarketProbability) -> list[str]:
+        """Every gate condition this market fails (empty list = it qualifies)."""
+        out = []
+        if m.market not in self.markets:
+            out.append("market disabled")
+        if m.probability < self.min_probability:
+            out.append(f"probability {m.probability:.1%} below {self.min_probability:.0%}")
+        if m.lower < self.min_lower_bound:
+            out.append(f"too uncertain: lower bound {m.lower:.1%} below {self.min_lower_bound:.0%}")
+        if self.require_calibrated and not m.calibrated:
+            out.append("no out-of-sample calibration for this market yet")
+        if m.price is not None and m.price < self.max_favorite_price:
+            out.append(f"price {m.price:+.0f} shorter than {self.max_favorite_price:+.0f}")
+        if self.require_positive_ev:
+            if m.price is None or m.fair_market_prob is None:
+                out.append("no market price available")
+            else:
+                ev = m.expected_value or 0.0
+                if ev <= 0:
+                    out.append(f"negative value: price {m.price:+.0f} needs "
+                               f"{breakeven_probability(m.price):.1%}, EV {ev:+.1%}")
+                elif ev < self.min_ev:
+                    out.append(f"value too thin: EV {ev:+.1%} below {self.min_ev:+.0%}")
+                elif (m.edge or 0) < self.min_edge:
+                    out.append(f"edge {m.edge:+.1%} over the market below {self.min_edge:.1%}")
+        return out
+
     def evaluate(self, pred: Prediction) -> list[Pick]:
         out = []
         for m in pred.markets:
-            if m.market not in self.markets:
-                continue
-            if m.probability < self.min_probability or m.lower < self.min_lower_bound:
-                continue
-            if self.require_calibrated and not m.calibrated:
+            if self.failures(m):
                 continue
             reasons = [f"calibrated P(win)={m.probability:.1%} ≥ {self.min_probability:.0%}",
                        f"80% credible band {m.lower:.1%}–{m.upper:.1%} (lower ≥ {self.min_lower_bound:.0%})"]
-            if m.price is not None and m.price < self.max_favorite_price:
-                continue
-            if self.require_positive_ev:
-                if m.price is None or m.fair_market_prob is None:
-                    continue
-                if (m.edge or 0) < self.min_edge or (m.expected_value or -1) <= self.min_ev:
-                    continue
             if m.price is not None:
                 be = breakeven_probability(m.price)
                 reasons.append(f"price {m.price:+.0f} needs {be:.1%}; EV {m.expected_value:+.1%} per unit")

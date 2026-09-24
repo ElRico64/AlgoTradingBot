@@ -110,6 +110,7 @@ def walk_forward(league: str, results: Sequence[GameResult], policy: Optional[Pi
                     if pk.market.price is None:
                         continue
                     picks.append({"date": g.start_time.date().isoformat(), "game": f"{g.away}@{g.home}",
+                                  "game_id": g.game_id,
                                   "market": pk.market.market, "side": pk.market.side, "line": pk.market.line,
                                   "price": pk.market.price, "p": pk.market.probability, "lower": pk.market.lower,
                                   "fair_market": pk.market.fair_market_prob, "stake": pk.stake_fraction,

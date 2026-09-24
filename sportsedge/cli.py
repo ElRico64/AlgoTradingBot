@@ -5,6 +5,8 @@
   sportsedge backtest      --league NBA --history nba.csv [--json report.json]
   sportsedge train         --league NBA --history nba.csv --state nba.pkl [--tune]
   sportsedge picks         --league NBA --state nba.pkl [--odds-api-key KEY] [--llm]
+  sportsedge daily         [--league NBA NHL] [--llm]    daily run that rebuilds the dashboard
+  sportsedge demo-site     --site-dir site              dashboard from synthetic data
 """
 from __future__ import annotations
 
@@ -27,13 +29,14 @@ DISCLAIMER = ("Probabilities are model estimates, not guarantees. Past (back-tes
 
 def _policy(a) -> PickPolicy:
     return PickPolicy(min_probability=a.min_prob, min_lower_bound=a.min_lower,
-                      require_positive_ev=not a.no_ev, min_edge=a.min_edge)
+                      require_positive_ev=not a.no_ev, min_edge=a.min_edge, min_ev=a.min_ev)
 
 
 def _add_policy_args(p):
     p.add_argument("--min-prob", type=float, default=0.70, help="confidence gate (default 0.70)")
     p.add_argument("--min-lower", type=float, default=0.62, help="lower 80%% credible bound gate")
     p.add_argument("--min-edge", type=float, default=0.015, help="min edge vs no-vig market")
+    p.add_argument("--min-ev", type=float, default=0.01, help="min expected value per unit (default 0.01)")
     p.add_argument("--no-ev", action="store_true", help="do not require positive expected value")
 
 
@@ -157,6 +160,27 @@ def cmd_picks(a):
     print("\n" + DISCLAIMER)
 
 
+def cmd_daily(a):
+    from .daily import run_daily
+
+    leagues = a.league or ["MLB", "NHL", "NBA", "NFL"]
+    data = run_daily(leagues, data_dir=a.data_dir, site_dir=a.site_dir,
+                     day=date.fromisoformat(a.date) if a.date else None, policy=_policy(a),
+                     odds_key=a.odds_api_key or os.environ.get("ODDS_API_KEY"), use_llm=a.llm,
+                     bootstrap_days=a.bootstrap_days)
+    for lg in data["leagues"]:
+        print(f"{lg['league']}: {lg['status']:5s} games={lg['games']:3d} picks={lg['picks']} {lg['message']}")
+    print(f"site written to {a.site_dir}/index.html")
+
+
+def cmd_demo_site(a):
+    from .demo_site import build_demo
+
+    data = build_demo(a.site_dir, a.league or ["MLB", "NHL", "NBA", "NFL"], policy=_policy(a))
+    print(f"demo site: {len(data['games'])} games, {len(data['picks'])} picks, {len(data['ledger'])} ledger entries "
+          f"-> {a.site_dir}/index.html")
+
+
 def main(argv=None):
     logging.basicConfig(level=logging.WARNING, format="%(levelname)s %(name)s: %(message)s")
     ap = argparse.ArgumentParser(prog="sportsedge", description=__doc__,
@@ -207,6 +231,23 @@ def main(argv=None):
     p.add_argument("--json")
     _add_policy_args(p)
     p.set_defaults(fn=cmd_picks)
+
+    p = sub.add_parser("daily", help="daily run: update history, grade, predict, build the dashboard")
+    p.add_argument("--league", nargs="+", choices=leagues)
+    p.add_argument("--data-dir", default="data")
+    p.add_argument("--site-dir", default="site")
+    p.add_argument("--date", help="override today's date (YYYY-MM-DD, US Eastern)")
+    p.add_argument("--odds-api-key")
+    p.add_argument("--llm", action="store_true", help="use Claude to read the news")
+    p.add_argument("--bootstrap-days", type=int, default=730, help="history to download on first run")
+    _add_policy_args(p)
+    p.set_defaults(fn=cmd_daily)
+
+    p = sub.add_parser("demo-site", help="build the dashboard from synthetic leagues (fictional teams)")
+    p.add_argument("--league", nargs="+", choices=leagues)
+    p.add_argument("--site-dir", default="site")
+    _add_policy_args(p)
+    p.set_defaults(fn=cmd_demo_site)
 
     a = ap.parse_args(argv)
     a.fn(a)

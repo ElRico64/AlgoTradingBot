@@ -5,7 +5,10 @@ Two things matter for a betting model and both are done here:
     are pooled in log-odds space with sharp books weighted more heavily;
   * *line shopping* — the best available price for each side is what we bet,
     so the EV gate is evaluated against a price we can actually get.
-Requires an API key (env ODDS_API_KEY or --odds-api-key).
+Requires an API key (env ODDS_API_KEY or --odds-api-key). Each request costs
+(number of markets x number of regions) credits; the default "us" region keeps a
+daily four-league run inside the free tier. Add "eu" (ODDS_API_REGIONS=us,eu)
+to include Pinnacle in the sharp consensus.
 """
 from __future__ import annotations
 
@@ -76,7 +79,7 @@ def parse_event(league: str, ev: dict) -> tuple[Optional[str], Optional[str], Op
     return home, away, start, mo
 
 
-def fetch_odds(league: str, api_key: str, regions: str = "us,eu") -> dict[tuple[str, str], MarketOdds]:
+def fetch_odds(league: str, api_key: str, regions: str = "us") -> dict[tuple[str, str], MarketOdds]:
     url = f"https://api.the-odds-api.com/v4/sports/{SPORT_KEYS[league]}/odds"
     params = {"apiKey": api_key, "regions": regions, "markets": "h2h,spreads,totals", "oddsFormat": "american"}
     try:

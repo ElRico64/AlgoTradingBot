@@ -1,0 +1,76 @@
+# Runs the model every morning, grades yesterday's picks, and publishes the
+# dashboard to GitHub Pages. Setup (one time):
+#   1. Settings -> Secrets and variables -> Actions -> New repository secret:
+#        ODDS_API_KEY       (required for multi-book odds; https://the-odds-api.com)
+#        ANTHROPIC_API_KEY  (optional; enables Claude news reading)
+#   2. Settings -> Pages -> Build and deployment -> Source: "GitHub Actions"
+#   3. Actions -> "Daily picks" -> Run workflow (first run downloads ~2 seasons
+#      of history per league and takes a while; later runs take minutes)
+name: Daily picks
+
+on:
+  schedule:
+    - cron: "40 14 * * *"   # 10:40 ET in summer / 9:40 ET in winter
+  workflow_dispatch:
+    inputs:
+      leagues:
+        description: "Leagues to run (space separated)"
+        default: "MLB NHL NBA NFL"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: daily-picks
+  cancel-in-progress: false
+
+jobs:
+  picks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install
+        run: pip install -e ".[llm]"
+
+      - name: Run the model
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          LEAGUES: ${{ github.event.inputs.leagues || 'MLB NHL NBA NFL' }}
+        run: |
+          EXTRA=""
+          if [ -n "$ANTHROPIC_API_KEY" ]; then EXTRA="--llm"; fi
+          sportsedge daily --league $LEAGUES --data-dir data --site-dir site $EXTRA
+
+      - name: Save history and the pick ledger
+        run: |
+          git config user.name "sportsedge-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then echo "no data changes"; exit 0; fi
+          git commit -m "Daily picks $(date -u +%F)"
+          git push
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: picks
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

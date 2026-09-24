@@ -12,6 +12,7 @@ from datetime import date, datetime, timedelta
 from typing import Optional
 
 from ..news.feeds import ESPN_BASE, SPORT_PATH, _get_json
+from ..teams import REGISTRY
 from ..types import Game, GameResult, MarketOdds
 
 log = logging.getLogger(__name__)
@@ -71,6 +72,12 @@ def parse_scoreboard(league: str, data: dict) -> list[Game]:
         h, a = teams["home"], teams["away"]
         habbr = (h.get("team") or {}).get("abbreviation")
         aabbr = (a.get("team") or {}).get("abbreviation")
+        season = ev.get("season") or {}
+        if season.get("type") == 1 or season.get("slug") == "preseason":
+            continue  # preseason / spring training says little about real strength
+        known = REGISTRY.get(league, {})
+        if known and (habbr not in known or aabbr not in known):
+            continue  # All-Star and exhibition games
         try:
             start = datetime.fromisoformat((ev.get("date") or comp.get("date")).replace("Z", "+00:00")).replace(tzinfo=None)
         except Exception:

@@ -56,7 +56,11 @@ sportsedge backtest --league NBA --history data/nba.csv --json reports/nba.json
 # 4. Train (optionally MLE-tune the Kalman noise) and save state
 sportsedge train --league NBA --history data/nba.csv --state nba.pkl --tune
 
-# 5. Today's picks: live slate + multi-book odds + live news (+ Claude)
+# 5. The daily dashboard (what the GitHub workflow runs every morning)
+sportsedge daily --site-dir site        # then open site/index.html
+sportsedge demo-site --site-dir site    # preview with synthetic data, no keys needed
+
+# 6. Today's picks in the terminal: live slate + multi-book odds + live news (+ Claude)
 export ODDS_API_KEY=...        # https://the-odds-api.com
 export ANTHROPIC_API_KEY=...   # optional, for --llm
 sportsedge picks --league NBA --state nba.pkl --llm --impacts data/player_impacts.csv
@@ -72,6 +76,61 @@ licensed feeds, provided team codes are consistent.
 A player-impact CSV (`league,team,player,impact,impact_sd,role`) lets you
 plug in your own player-value model. For example, points of margin lost when
 an NBA star sits (from RAPM/EPM), or a QB's value over the backup.
+
+## The daily dashboard
+
+`sportsedge daily` runs the whole pipeline and writes a self-contained web
+page to `site/index.html`. The page has four parts:
+
+* **Today's picks:** a ticket for each qualifying bet. Each ticket shows a
+  gate strip with the model's probability and 80% band, the no-vig market,
+  the price's break-even and the 70% line, plus edge, EV, stake and the reasons.
+* **The board:** every game on the slate. You can search it, filter by market
+  (moneyline, spread or total), sort it and expand any row. Expanding a row
+  shows every market and exactly which gate condition held it back.
+* **Track record:** every published pick graded at its listed price, with
+  record, hit rate against claimed probability, units and ROI, a cumulative
+  units chart and a 95% interval on the true hit rate.
+* **Controls:** league tabs, US/decimal odds and light/dark themes.
+
+`sportsedge demo-site` builds the same page from synthetic leagues with
+fictional teams, so you can see the page before any API keys are set up.
+
+### Running it every day (GitHub Actions + GitHub Pages)
+
+`.github/workflows/daily-picks.yml` runs every morning. It:
+
+1. downloads yesterday's results,
+2. grades the picks in `data/ledger.json`,
+3. retrains,
+4. fetches today's slate, odds and news, and
+5. commits the updated history and ledger, then publishes the page to
+   GitHub Pages.
+
+One-time setup:
+
+1. Merge this branch into your default branch. Scheduled workflows only run
+   there.
+2. **Settings → Secrets and variables → Actions**. Add `ODDS_API_KEY`, and
+   optionally `ANTHROPIC_API_KEY`.
+3. **Settings → Pages → Source: GitHub Actions.** Pages on a private
+   repository needs a paid GitHub plan. A page published from a public
+   repository is public.
+4. **Actions → Daily picks → Run workflow.** The first run downloads about
+   two seasons per league from ESPN and takes a while.
+
+### API keys
+
+| Service | What it's for | Where to get it | Cost |
+|---|---|---|---|
+| ESPN site API | schedules, results, injuries, headlines | no key needed | free, unofficial |
+| The Odds API | odds from many sportsbooks, no-vig consensus, best price | [the-odds-api.com](https://the-odds-api.com) → sign up → key by email | free tier (500 credits/month) covers a daily 4-league run in the `us` region; paid plans for more |
+| Anthropic API (optional) | Claude reads news and injury reports | [console.anthropic.com](https://console.anthropic.com) → API Keys | pay per use |
+
+Each Odds API request costs about (markets × regions) credits. The default
+region is `us`. Set `ODDS_API_REGIONS=us,eu` to add Pinnacle to the sharp
+consensus, which costs twice the credits. Never commit keys to the repository.
+Keep them in GitHub secrets or environment variables.
 
 ## Example pick output
 
@@ -125,6 +184,9 @@ services, so I'd lead with them rather than hide them.
 ```
 sportsedge/
   engine.py            prediction pipeline (components → MC → stacking)
+  daily.py             daily run: history, grading, predictions, ledger
+  site.py, web/        the dashboard page (self-contained HTML)
+  demo_site.py         dashboard from synthetic leagues (fictional teams)
   picks.py             confidence / EV gate and stake sizing
   backtest.py          walk-forward evaluation and statistics
   config.py            per-league priors and hyperparameters
