@@ -35,11 +35,21 @@ from .models.distributions import (MarginDist, TotalDist, count_final_distributi
                                    gaussian_total_dist, joint_score_matrix)
 from .models.elo import EloRatings
 from .models.kalman import KalmanRatings
+from .models.patterns import PatternModel
 from .models.situational import Adjustment, ScheduleTracker, compute_adjustment
 from .news.impact import AvailabilityFactor
 from .stats.calibration import StackingCalibrator
 from .stats.odds import devig
 from .types import Game, GameResult, MarketOdds, MarketProbability, Prediction
+
+def _logit(p: float) -> float:
+    p = min(max(float(p), 1e-6), 1 - 1e-6)
+    return math.log(p / (1 - p))
+
+
+def _sigmoid(x):
+    return 1.0 / (1.0 + np.exp(-np.clip(x, -30, 30)))
+
 
 WARMUP_GAMES = {"NFL": 96, "NBA": 250, "NHL": 250, "MLB": 350}
 
@@ -55,6 +65,7 @@ class EngineSettings:
     stack_l2: float = 2.0
     min_calibration_samples: int = 300
     warmup_games: Optional[int] = None
+    use_patterns: bool = True  # regime HMM + residual gradient boosting component
 
 
 @dataclass
@@ -64,6 +75,10 @@ class _Point:
     total: TotalDist
     mu_margin: float
     mu_total: float
+    k_mu: float = 0.0  # Kalman margin mean (with situational shift)
+    k_var: float = 0.0  # Kalman parameter variance
+    k_sd: float = 1.0  # Kalman predictive sd
+    pace: float = 0.0  # standardised expected total
 
 
 class LeagueEngine:
@@ -93,6 +108,10 @@ class LeagueEngine:
                 window_days=c.count_window_days, dispersion=c.count_dispersion,
                 estimate_rho=c.count_dispersion is None)
         self.components = ["count", "kalman", "elo"] if self.count else ["kalman", "elo"]
+        self.patterns: Optional[PatternModel] = None
+        if self.s.use_patterns:
+            self.patterns = PatternModel(offseason_days=c.offseason_days)
+            self.components.append("pattern")
         self.sched = ScheduleTracker()
         self.history: list[GameResult] = []
         self.oos: list[dict] = []
@@ -174,11 +193,21 @@ class LeagueEngine:
             J = joint_score_matrix(lh, la, c.max_score, self.count.dispersion, self.count.rho)
             md, td = count_final_distributions(J, self._ot_home(lh, la))
             comp["count"] = float(md.win()[0])
-            return _Point(comp, md, td, float(md.mean()[0]), float(td.mean()[0]))
+            pace = (float(td.mean()[0]) - c.league_avg_total) / c.total_obs_sd
+            return _Point(comp, md, td, float(md.mean()[0]), float(td.mean()[0]), mu, var, sd, pace)
         mt, vt, ot = kf_t.predict(g.home, g.away, g.neutral)
         mt += adj.total
         td = gaussian_total_dist(np.array([mt]), math.sqrt(vt + ot))
-        return _Point(comp, md_k, td, mu, mt)
+        return _Point(comp, md_k, td, mu, mt, mu, var, sd, (mt - c.league_avg_total) / c.total_obs_sd)
+
+    def _pattern_x(self, g: Game, pt: _Point) -> np.ndarray:
+        s = self.sched
+        rest = (s.rest_days(g.home, g.start_time), s.rest_days(g.away, g.start_time))
+        da, tza = s.travel(self.league, g.away, g.home)
+        dh, _ = s.travel(self.league, g.home, g.home)
+        return self.patterns.features(g.home, g.away, g.start_time, g.neutral, _logit(pt.comp["kalman"]),
+                                      math.sqrt(max(pt.k_var, 0.0)) / self.cfg.obs_sd, rest,
+                                      (da / 1000.0, tza, dh / 1000.0), pt.pace)
 
     def _market_fair(self, odds: Optional[MarketOdds]) -> dict[str, Optional[float]]:
         out: dict[str, Optional[float]] = {"ml": None, "spread": None, "total": None}
@@ -208,21 +237,35 @@ class LeagueEngine:
         warm = self.s.warmup_games if self.s.warmup_games is not None else WARMUP_GAMES.get(self.league, 200)
         for _, day_iter in groupby(results, key=lambda r: r.start_time.date()):
             day = list(day_iter)
-            self._ensure_count_fit(min(r.start_time for r in day))
+            t0 = min(r.start_time for r in day)
+            self._ensure_count_fit(t0)
+            if self.patterns is not None:
+                self.patterns.maybe_fit(t0)  # trained only on games before today
+            pending = []
             for r in day:
                 adj = compute_adjustment(self.cfg, r, self.sched)
+                pt = self._point(r, adj)
+                x = None
+                if self.patterns is not None:
+                    x = self._pattern_x(r, pt)
+                    pt.comp["pattern"] = float(_sigmoid(_logit(pt.comp["kalman"]) + self.patterns.correction(x)))
                 if self.n_observed >= warm:
-                    self.oos.append(self._oos_record(r, adj))
+                    self.oos.append(self._oos_record(r, pt))
                 self.n_observed += 1
+                pending.append((r, pt, x))
             for r in day:
                 self.kf_margin.update(r.home, r.away, r.margin, r.neutral, r.start_time)
                 self.kf_total.update(r.home, r.away, r.total, r.neutral, r.start_time)
                 self.elo.update(r.home, r.away, r.margin, r.neutral, r.start_time)
                 self.sched.record(r)
                 self.history.append(r)
+            if self.patterns is not None:
+                for r, pt, x in pending:
+                    z = (r.margin - pt.k_mu) / pt.k_sd
+                    y = None if r.margin == 0 else float(r.margin > 0)
+                    self.patterns.record(r.home, r.away, r.start_time, x, _logit(pt.comp["kalman"]), y, z, r.margin)
 
-    def _oos_record(self, r: GameResult, adj: Adjustment) -> dict:
-        pt = self._point(r, adj)
+    def _oos_record(self, r: GameResult, pt: _Point) -> dict:
         fair = self._market_fair(r.odds)
         rec = {"t": r.start_time, "comp": pt.comp, "market": fair["ml"],
                "y": None if r.margin == 0 else float(r.margin > 0)}
@@ -316,6 +359,14 @@ class LeagueEngine:
         adj = compute_adjustment(self.cfg, game, self.sched)
         models = self._models_at(game.start_time)
         comps, md, td, news_m = self._simulate(game, adj, factors, n, models)
+        pattern_notes = []
+        if self.patterns is not None:
+            # the learned correction rides on every draw, so news still flows through it
+            x = self._pattern_x(game, self._point(game, adj, models))
+            delta = self.patterns.correction(x)
+            comps["pattern"] = _sigmoid(np.log(np.clip(comps["kalman"], 1e-6, 1 - 1e-6) /
+                                               np.clip(1 - comps["kalman"], 1e-6, 1)) + delta)
+            pattern_notes = self.patterns.describe(game.home, game.away, x)
         fair = self._market_fair(odds)
         lo_q, hi_q = self.s.band
         comp_mean = {k: float(np.mean(v)) for k, v in comps.items()}
@@ -330,6 +381,9 @@ class LeagueEngine:
         pred = Prediction(game=game, home_win_prob=p_home, home_win_lower=lo, home_win_upper=hi,
                           expected_margin=float(np.mean(md.mean())), expected_total=float(np.mean(td.mean())),
                           components=comp_mean, adjustments=dict(adj.parts))
+        pred.notes.extend(pattern_notes)
+        if self.patterns is not None and "pattern" in comp_mean:
+            pred.adjustments["pattern_logit"] = float(_logit(comp_mean["pattern"]) - _logit(comp_mean["kalman"]))
         if factors:
             pred.adjustments["news_margin_mean"] = float(news_m.mean())
             pred.notes.extend(f.label for f in factors if f.team in (game.home, game.away))

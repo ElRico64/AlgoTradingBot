@@ -145,12 +145,22 @@ def fetch_slate(league: str, day: Optional[date] = None) -> list[Game]:
     return [g for g in fetch_scoreboard(league, day) if not isinstance(g, GameResult)]
 
 
-def fetch_history(league: str, start: date, end: date, pause: float = 0.25) -> list[GameResult]:
-    out: list[GameResult] = []
-    d = start
-    while d <= end:
-        out.extend(g for g in fetch_scoreboard(league, d) if isinstance(g, GameResult))
-        d += timedelta(days=1)
+def fetch_history(league: str, start: date, end: date, pause: float = 0.05, workers: int = 6,
+                  progress=None) -> list[GameResult]:
+    """Download every completed game between two dates (a few parallel requests, politely paced)."""
+    from concurrent.futures import ThreadPoolExecutor
+
+    days = [start + timedelta(days=k) for k in range((end - start).days + 1)]
+
+    def one(d: date) -> list[GameResult]:
         time.sleep(pause)
+        return [g for g in fetch_scoreboard(league, d) if isinstance(g, GameResult)]
+
+    out: list[GameResult] = []
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        for k, games in enumerate(ex.map(one, days), 1):
+            out.extend(games)
+            if progress and (k % 60 == 0 or k == len(days)):
+                progress(f"{league}: downloaded {k}/{len(days)} days, {len(out)} games")
     out.sort(key=lambda g: g.start_time)
     return out

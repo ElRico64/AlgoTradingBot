@@ -145,6 +145,82 @@ pipeline above.
 
 ---
 
+## 5b. Pattern engine: regime detection + residual learning (`models/patterns.py`)
+
+The structural models (§2–§5) encode what we know about sports. The pattern
+engine looks for what they miss. It has three parts.
+
+**Regime detection: a sticky hidden Markov model** (`models/regimes.py`).
+
+* **Input.** Each team's standardised surprise z<sub>t</sub> = (margin −
+  E[margin]) / sd, from the Kalman model and from the team's point of view.
+  Before it updates a team, the surprise is taken net of the opponent's
+  expected form (credit attribution).
+* **Model.** A 3-state chain {cold, normal, hot} with Gaussian emissions.
+* **Fitting.** Pooled Baum–Welch EM with scaled forward–backward recursions,
+  plus a **sticky Dirichlet prior** on the transitions (Fox et al., 2011;
+  MAP-EM).
+* **Why the prior.** Without it, EM on noisy surprises collapsed into a
+  memoryless mixture (self-transition ≈ 0.55) whose "form" signal was noise.
+  With it, regimes persist (≈ 0.92) and the signal's correlation with the
+  next result doubled.
+* **Output.** Before each game, the filter gives P(cold/normal/hot) and the
+  expected surprise.
+
+**Residual learning in two stages.** Both stages start from the structural
+logit, so they only learn corrections.
+
+* **Features (27, all pre-game).** Structural logit and its uncertainty;
+  rest and back-to-backs; travel and time zones; regime form and P(hot) −
+  P(cold); fast EWMA form; home and road splits; head-to-head EWMA; streaks;
+  volatility; season phase; games played; pace; neutral site.
+* **Stage 1 (main effects).** Ridge logistic regression with a fixed offset.
+* **Stage 2 (interactions).** Histogram gradient-boosted trees
+  (`models/boosting.py`): second-order Newton leaves −G/(H+λ) and gain
+  G<sub>L</sub>²/(H<sub>L</sub>+λ) + G<sub>R</sub>²/(H<sub>R</sub>+λ) −
+  G²/(H+λ), the XGBoost/LightGBM algorithm written in NumPy.
+* **Model selection.** The ridge penalty and the number of trees are chosen
+  by **expanding-window time-series cross-validation** (3 folds, never
+  shuffled).
+* **Leak found and fixed.** An earlier version refit stage 1 on the
+  validation block and then used that block to stop stage 2 early, so the
+  trees always looked useless.
+
+**Earn-your-place gate.** The correction is applied only when the
+cross-validated held-out log-loss gain on the league's own history is at
+least 0.0015. Otherwise the engine switches itself off. Its forecasts enter
+the stacker (§6) as one more component, with a non-negative weight fit on
+out-of-sample games only.
+
+**Validation** (`sportsedge validate-patterns`). Synthetic leagues are
+simulated with and without *planted* patterns (sticky hot/cold regimes of
+±0.35 σ and a no-rest-after-long-travel penalty of 0.3 σ). Each is
+backtested walk-forward with the engine on and off. Reported numbers are
+out-of-sample log loss (lower is better):
+
+| League | Planted patterns | Engine off | Engine on | Change |
+|---|---|---|---|---|
+| NBA | none | 0.6223 | 0.6226 | +0.0003 (noise level) |
+| NBA | yes | 0.5959 | 0.5960 | +0.0001 (no gain) |
+| NHL | none | 0.6639 | 0.6638 | −0.0001 |
+| NHL | yes | 0.6555 | 0.6540 | **−0.0015** (finds part of the pattern) |
+
+The values are model-only log loss over about 1,800–2,000 walk-forward games
+per row (2 simulated seasons, seed 5). With the market in the blend, every
+row is within ±0.0002. The simulated market already knows the truth, so there
+is nothing left for the engine to add.
+
+**What these numbers say.** An oracle that knew the planted effects
+exactly would improve NBA log loss by about 0.020. Most of that is
+unrecoverable: a team's true regime is revealed only slowly and noisily by
+its results. With about two seasons of history, the learnable part is small,
+at best about 0.001–0.003. The gate keeps the engine from adding noise when
+it has nothing to offer. On real data, run
+`sportsedge backtest` with the engine on and off (`EngineSettings(use_patterns=...)`)
+before relying on it.
+
+---
+
 ## 6. Ensemble + market: stacked log-linear pooling (`stats/calibration.py`)
 
   logit p = b₀ + Σ<sub>k</sub> w<sub>k</sub>·logit p<sub>k</sub> + w<sub>m</sub>·logit p<sub>market</sub>

@@ -250,9 +250,12 @@ class StackingCalibrator:
         return np.log(P / (1 - P))
 
     def _prior(self, with_market: bool) -> np.ndarray:
-        k = len(self.components)
+        # Structural components share the prior weight equally. Learned "pattern"
+        # components start at 0 so they must earn weight from the data; a copy of
+        # an existing component then changes nothing.
+        core = [c for c in self.components if c != "pattern"] or self.components
         per = 2 if self.features == "beta" else 1
-        prior = np.full(k * per, 1.0 / k)
+        prior = np.repeat([(1.0 / len(core)) if c in core else 0.0 for c in self.components], per)
         return np.concatenate([prior * 0.5, [0.5]]) if with_market else prior
 
     def fit(self, comp_probs: Sequence[dict[str, float]], market: Sequence[Optional[float]], y):

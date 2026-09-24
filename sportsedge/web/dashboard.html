@@ -398,7 +398,7 @@ footer p { margin: 0; max-width: 92ch; }
     $("dateline").textContent = day.toLocaleDateString([], { weekday: "long", month: "long", day: "numeric" });
     var mc = $("modechip");
     if (DATA.mode === "demo") { mc.className = "chip demo"; mc.textContent = "Demo data"; }
-    else { mc.className = "chip live"; mc.textContent = "Updated " + ago(DATA.generated_at) + " · refreshes every " + (DATA.refresh_minutes || 30) + " min"; }
+    else { mc.className = "chip live"; var rm = DATA.refresh_minutes || 30; mc.textContent = "Updated " + ago(DATA.generated_at) + " · updates " + (rm >= 60 ? "about every " + Math.round(rm / 60) + " h on game days" : "every " + rm + " min"); }
     $("banner").innerHTML = DATA.mode === "demo" ? '<div class="banner"><b>Demo board.</b> Fictional teams, players, odds and results, produced by the real model and pick rules. The live board fills in from real games, odds and news once the scheduled job runs.</div>' : "";
     var g = "Picks need a win probability of at least " + pct(gate.min_probability, 0) + " with the model's uncertainty band staying above " + pct(gate.min_lower_bound, 0) + ".";
     $("foot-gate").textContent = g + " Best bets also need an expected value of at least " + pct(gate.min_ev || 0, 0) + " per unit at the listed price. Suggested stakes are quarter-Kelly, shrunk for model uncertainty.";

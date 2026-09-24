@@ -27,6 +27,7 @@ investors actually ask:
 | Scoring (NHL/MLB) | Time-decayed Poisson (Dixon–Coles ρ) / negative-binomial attack–defence–park model, MAP via IRLS, Laplace posterior | `models/count_models.py` |
 | Scoring (NFL/NBA) | Discretised-Normal margins with NFL key-number re-weighting, OT tie resolution, totals filter | `models/distributions.py` |
 | Diversity member | Margin-of-victory Elo with autocorrelation correction | `models/elo.py` |
+| Pattern engine | Sticky 3-state hidden Markov model for hot/cold regimes (MAP Baum–Welch), plus two-stage residual learning (ridge logistic main effects, then NumPy histogram gradient-boosted trees for interactions) over 27 pre-game features. Selected by time-series cross-validation, and switched off unless it improves held-out accuracy | `models/regimes.py`, `models/boosting.py`, `models/patterns.py` |
 | Context | Rest, back-to-backs, travel, time zones, altitude; MLB starter & NHL goalie via empirical-Bayes shrinkage; weather | `models/situational.py` |
 | Live news | ESPN injury reports + headlines + any RSS; rule-based NLP or **Claude structured-output extraction**; Bernoulli availability mixtures with reliability and recency decay | `news/` |
 | Market | American/decimal odds, multiplicative / additive / power / **Shin** de-vig, log-odds consensus across books, line shopping | `stats/odds.py`, `data/oddsapi.py` |
@@ -38,6 +39,12 @@ investors actually ask:
 The full equations are in **[docs/METHODOLOGY.md](docs/METHODOLOGY.md)**.
 
 ## Quick start
+
+**New here? Follow [docs/GETTING_STARTED.md](docs/GETTING_STARTED.md).**
+Double-click `start-windows.bat` or `start-mac.command`, choose
+"1) Demo board", and the board opens in your browser. Everything is free.
+
+For developers:
 
 ```bash
 pip install -e .            # numpy, scipy, requests
@@ -113,7 +120,8 @@ fictional teams and players, so you can see it before anything is set up.
 
 * **First run of the day:** downloads yesterday's results, retrains every
   model and caches them for the day.
-* **Every 30 minutes after that:**
+* **Each refresh after that** (10 a day on GitHub around game times, or
+  every 30 minutes with `python run.py --watch` on your own computer):
   * pulls the scoreboard (upcoming, live and final games), fresh odds and
     fresh injury news;
   * re-predicts every game that hasn't started, and grades finished picks.
@@ -148,43 +156,40 @@ Posted prices matter for accuracy: sportsbook lines are among the strongest
 predictors there are, and the model blends with them. Without any price the
 board still works on the model alone.
 
-### Running it automatically (GitHub Actions + GitHub Pages)
+### Running it automatically for $0 (GitHub Actions)
 
-`.github/workflows/daily-picks.yml` refreshes the board every 30 minutes
-from 10 am to about 1:30 am US Eastern. It caches the day's trained models
-between runs, commits only the history and the pick ledger, and publishes the
-page to GitHub Pages. GitHub may start scheduled runs a few minutes late at
-busy times.
+`.github/workflows/daily-picks.yml` refreshes the board 10 times a day around
+game times: 10:15am to 11:15pm Eastern, plus a 1:45am grading run.
 
-One-time setup:
+* Each run takes about 2 minutes, roughly 600–800 Actions minutes a month.
+* The day's trained models are cached between runs.
+* Only the history and the pick ledger are committed.
+* **Public repository:** Actions and GitHub Pages are free and unlimited, and
+  the page is published to GitHub Pages.
+* **Private repository:** the job stays inside the free 2,000 minutes a
+  month. GitHub Pages needs a paid plan for private repositories, so the job
+  also pushes the finished page to a `site` branch that Cloudflare Pages
+  hosts for free.
 
-1. Merge this branch into your default branch. Scheduled workflows only run
-   there.
-2. **Settings → Secrets and variables → Actions.** Optionally add
-   `ODDS_API_KEY` and `ANTHROPIC_API_KEY`.
-3. **Settings → Pages → Source: GitHub Actions.** Pages on a private
-   repository needs a paid GitHub plan. A page published from a public
-   repository is public.
-4. **Actions → Daily picks → Run workflow.** The first run downloads about
-   two seasons per league and takes a while.
-
-Actions minutes: a refresh takes about 3 minutes including the Pages deploy.
-A 30-minute schedule (32 runs a day) is about 2,900 minutes a month. Public
-repositories get Actions for free. On a private repository that exceeds the
-free plan's 2,000 minutes a month. Either use a paid plan, or change the cron
-lines to hourly (`0 14-23 * * *` and `0 0-5 * * *`, about 1,500 minutes a
-month).
+Setup steps: [docs/GETTING_STARTED.md](docs/GETTING_STARTED.md), Part 3.
 
 ### API keys
 
 | Service | What it's for | Where to get it | Cost |
 |---|---|---|---|
 | ESPN site API | games, results, live scores, injuries, headlines, posted lines | no key needed | free, unofficial |
-| The Odds API (optional) | prices from many sportsbooks, consensus, best price | [the-odds-api.com](https://the-odds-api.com) → sign up → key by email | a free tier exists; a 30-minute refresh of four leagues needs a paid plan. Check their pricing page |
+| The Odds API (optional) | prices from many sportsbooks, consensus, best price | [the-odds-api.com](https://the-odds-api.com) → sign up → key by email | free tier (500 credits/month); the board budgets its calls to stay inside it |
 | Anthropic API (optional) | Claude reads messy news and injury reports | [console.anthropic.com](https://console.anthropic.com) → API Keys | pay per use |
 
-Each Odds API request costs about (markets × regions) credits, and the board
-makes one request per league per refresh while games are upcoming. The
+Each Odds API request costs about (markets × regions) credits. The board
+spreads the monthly allowance evenly across the days left in the month:
+
+* at most one call per league every 3 hours,
+* never more than the day's share of credits,
+* no calls once the API reports it is nearly out.
+
+Between calls it reuses the last odds it fetched, and ESPN's free lines fill
+any gaps. `ODDS_API_MONTHLY_CREDITS` and `ODDS_API_MIN_HOURS` adjust this. The
 default region is `us`. Set `ODDS_API_REGIONS=us,eu` to add Pinnacle to the
 consensus, which costs twice the credits. Keep keys in GitHub secrets or
 environment variables, never in the repository.
@@ -241,6 +246,8 @@ services, so I'd lead with them rather than hide them.
 ```
 sportsedge/
   engine.py            prediction pipeline (components → MC → stacking)
+  models/patterns.py   pattern engine (regime HMM + residual learning), with regimes.py, boosting.py
+  validation.py        pattern engine on vs. off on leagues with planted patterns
   daily.py             daily run: history, grading, predictions, ledger
   site.py, web/        the dashboard page (self-contained HTML)
   demo_site.py         dashboard from synthetic leagues (fictional teams)
@@ -253,5 +260,6 @@ sportsedge/
   data/                ESPN scoreboard, The Odds API, CSV I/O
   synthetic.py         ground-truth leagues for verification
 tests/                 unit + end-to-end statistical tests
+run.py, start-*        one-click launcher for your own computer
 docs/METHODOLOGY.md    equations and validation protocol
 ```

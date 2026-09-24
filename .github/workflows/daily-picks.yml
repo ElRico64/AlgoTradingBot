@@ -1,22 +1,33 @@
-# Refreshes the board every 30 minutes through the day: new odds, new injury
-# news, re-predicted upcoming games, graded finished games. The first run of
-# each day also downloads yesterday's results and retrains the models.
+# Keeps the picks board up to date for $0.
 #
-# One-time setup:
-#   1. Settings -> Secrets and variables -> Actions -> New repository secret
-#        ODDS_API_KEY       optional: odds from many sportsbooks (the-odds-api.com).
-#                           Without it the board uses the lines ESPN posts.
-#        ANTHROPIC_API_KEY  optional: Claude reads the news (console.anthropic.com)
-#   2. Settings -> Pages -> Build and deployment -> Source: "GitHub Actions"
-#   3. Actions -> "Daily picks" -> Run workflow. The first run downloads about two
-#      seasons per league and takes a while; refreshes take a few minutes.
+# Schedule: 10 refreshes a day, timed around game windows (US Eastern, summer
+# time): 10:15am, 12:15, 2:15, 4:15, 5:45, 6:45, 7:45pm (right before the
+# 6-8pm starts), 9:15, 11:15pm (west-coast games), 1:45am (final grading).
+# Each refresh pulls fresh injury news, odds and scores and re-predicts every
+# game that has not started. The first run of the day also retrains.
+#
+# Cost: about 2 minutes per refresh, roughly 600-800 Actions minutes a month.
+#   Public repository  -> Actions and GitHub Pages are free, no limit.
+#   Private repository -> inside the free 2,000 minutes a month. GitHub Pages
+#                         needs a paid plan for private repos, so the workflow
+#                         also pushes the finished site to a `site` branch that
+#                         Cloudflare Pages can host for free (see GETTING_STARTED.md).
+#
+# One-time setup (see docs/GETTING_STARTED.md for screenshots-level detail):
+#   1. Settings -> Actions -> General -> Workflow permissions: "Read and write".
+#   2. Public repo: Settings -> Pages -> Source: "GitHub Actions".
+#   3. Optional secrets (Settings -> Secrets and variables -> Actions):
+#        ODDS_API_KEY       free tier is enough; the board budgets its calls
+#        ANTHROPIC_API_KEY  paid; leave unset to keep the project free
+#   4. Actions -> "Daily picks" -> Run workflow.
 name: Daily picks
 
 on:
   schedule:
-    # every 30 min, 14:00-05:30 UTC = 10:00 am-1:30 am US Eastern (summer time)
-    - cron: "*/30 14-23 * * *"
-    - cron: "*/30 0-5 * * *"
+    - cron: "15 14,16,18,20 * * *"
+    - cron: "45 21,22,23 * * *"
+    - cron: "15 1,3 * * *"
+    - cron: "45 5 * * *"
   workflow_dispatch:
     inputs:
       leagues:
@@ -33,9 +44,9 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  picks:
+  refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
 
@@ -45,28 +56,30 @@ jobs:
           cache: pip
 
       - name: Install
-        run: pip install -e ".[llm]"
+        run: pip install -e .
 
       - name: Today's date (US Eastern)
         id: day
         run: echo "day=$(TZ=America/New_York date +%F)" >> "$GITHUB_OUTPUT"
 
-      - name: Restore today's trained models and board
+      - name: Restore trained models, odds cache and today's board
         uses: actions/cache/restore@v4
         with:
           path: data/.cache
           key: sportsedge-${{ steps.day.outputs.day }}-${{ github.run_id }}
-          restore-keys: sportsedge-${{ steps.day.outputs.day }}-
+          restore-keys: |
+            sportsedge-${{ steps.day.outputs.day }}-
+            sportsedge-
 
       - name: Refresh the board
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           LEAGUES: ${{ github.event.inputs.leagues || 'MLB NHL NBA NFL' }}
-          REFRESH_MINUTES: "30"
+          REFRESH_MINUTES: "120"
         run: |
           EXTRA=""
-          if [ -n "$ANTHROPIC_API_KEY" ]; then EXTRA="--llm"; fi
+          if [ -n "$ANTHROPIC_API_KEY" ]; then pip install -q anthropic; EXTRA="--llm"; fi
           sportsedge daily --league $LEAGUES --data-dir data --site-dir site $EXTRA
 
       - name: Save models and board for the next refresh
@@ -86,13 +99,29 @@ jobs:
           git pull --rebase --autostash
           git push
 
+      # Public repositories: free GitHub Pages
       - uses: actions/configure-pages@v5
+        if: ${{ !github.event.repository.private }}
       - uses: actions/upload-pages-artifact@v3
+        if: ${{ !github.event.repository.private }}
         with:
           path: site
 
-  deploy:
-    needs: picks
+      # Every repository: the finished site on a `site` branch (free Cloudflare Pages / Netlify for private repos)
+      - name: Publish site branch
+        run: |
+          cd site
+          git init -q -b site
+          git config user.name "sportsedge-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Board $(date -u '+%F %H:%M') UTC"
+          git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" site
+
+  # Public repositories only (where Actions minutes are free): deploy to GitHub Pages.
+  pages:
+    needs: refresh
+    if: ${{ !github.event.repository.private }}
     runs-on: ubuntu-latest
     environment:
       name: github-pages

@@ -58,7 +58,7 @@ def test_full_daily_run_offline(tmp_path, monkeypatch):
     todays = [g for g in games if g.start_time.date() == cut]
     state = {"started": False}
 
-    def fake_history(league, start, end, pause=0.0):
+    def fake_history(league, start, end, pause=0.0, **kw):
         return [g for g in history if start <= g.start_time.date() <= end]
 
     def fake_day(league, d):

@@ -38,11 +38,40 @@ def _market(p_true: float, noise: float, vig: float, rng) -> tuple[float, float,
     return pm, _price(pm, vig), _price(1 - pm, vig)
 
 
+REGIME_STAY = 0.94
+
+
 def generate(league: str, seasons: int = 2, seed: int = 0, market_noise: float = 0.12,
-             vig: float = 0.045, start_year: int = 2022) -> list[GameResult]:
+             vig: float = 0.045, start_year: int = 2022, patterns: bool = False) -> list[GameResult]:
+    """`patterns=True` plants effects the structural models do not know about,
+    to test whether the pattern engine can find them:
+      * each team switches between cold / normal / hot regimes (sticky Markov
+        chain, +/-0.35 obs_sd of margin), and
+      * a road team on no rest after a 1,000+ mile trip plays 0.3 obs_sd worse.
+    """
     cfg = get_config(league)
     rng = np.random.default_rng(seed)
     teams = list(REGISTRY[league])
+    regime = np.ones(len(teams), dtype=int)  # 0 cold, 1 normal, 2 hot
+    last_day: dict[int, int] = {}
+    last_venue: dict[int, int] = {}
+
+    def _regime_step(i: int) -> None:
+        if rng.random() > REGIME_STAY:
+            regime[i] = rng.choice([0, 1, 2], p=[0.3, 0.4, 0.3])
+
+    def _hidden(h: int, a: int, day_idx: int) -> float:
+        """Planted home-perspective margin effect in obs_sd units."""
+        if not patterns:
+            return 0.0
+        eff = 0.35 * ((regime[h] - 1) - (regime[a] - 1))
+        from .teams import haversine_miles
+        prev = last_venue.get(a)
+        if prev is not None and last_day.get(a) == day_idx - 1:
+            t0, t1 = REGISTRY[league][teams[prev]], REGISTRY[league][teams[h]]
+            if haversine_miles(t0.lat, t0.lon, t1.lat, t1.lon) > 1000:
+                eff += 0.30
+        return eff
     n = len(teams)
     month, dom, n_days, spacing, share = SEASON[league]
     count = cfg.score_model == "count"
@@ -75,10 +104,18 @@ def generate(league: str, seasons: int = 2, seed: int = 0, market_noise: float =
             playing = rng.permutation(n)[: int(n * share) // 2 * 2]
             for i in range(0, len(playing), 2):
                 h, a = int(playing[i]), int(playing[i + 1])
+                day_idx = s * 1000 + day
+                hidden = _hidden(h, a, day_idx)
+                if patterns:
+                    _regime_step(h)
+                    _regime_step(a)
+                last_day[h] = last_day[a] = day_idx
+                last_venue[h] = last_venue[a] = h
                 gid += 1
                 if count:
-                    lh = math.exp(mu + home + att[h] + dfn[a] + park[h])
-                    la = math.exp(mu + att[a] + dfn[h] + park[h])
+                    k = hidden * cfg.obs_sd / (cfg.league_avg_total)  # margin effect -> log-rate split
+                    lh = math.exp(mu + home + att[h] + dfn[a] + park[h] + k)
+                    la = math.exp(mu + att[a] + dfn[h] + park[h] - k)
                     J = joint_score_matrix(np.array([lh]), np.array([la]), cfg.max_score, r)
                     ot = np.array([min(0.95, max(0.05, 0.5 + cfg.extra_time_home_edge + 0.5 * (lh - la) / (lh + la)))])
                     md, td = count_final_distributions(J, ot)
@@ -97,7 +134,7 @@ def generate(league: str, seasons: int = 2, seed: int = 0, market_noise: float =
                     exp_total = lh + la
                     total_line = math.floor(exp_total) + 0.5
                 else:
-                    mean_m = theta[h] - theta[a] + cfg.home_adv_prior
+                    mean_m = theta[h] - theta[a] + cfg.home_adv_prior + hidden * cfg.obs_sd
                     mean_t = cfg.league_avg_total + scoring[h] + scoring[a]
                     md = gaussian_margin_dist(np.array([mean_m]), cfg.obs_sd,
                                               cfg.key_number_weights or None, cfg.tie_mass_factor, 0.5,
@@ -122,6 +159,8 @@ def generate(league: str, seasons: int = 2, seed: int = 0, market_noise: float =
                 out.append(GameResult(
                     game_id=f"SYN-{league}-{gid}", league=league, start_time=when, home=teams[h], away=teams[a],
                     home_score=int(hs), away_score=int(as_),
+                    # ground truth for diagnostics only; the models never read it
+                    extras={"planted_obs_sd": round(hidden, 3)} if patterns else {},
                     odds=MarketOdds(home_ml=round(hml), away_ml=round(aml), spread=spread,
                                     home_spread_price=round(hsp), away_spread_price=round(asp),
                                     total=total_line, over_price=round(op), under_price=round(up),

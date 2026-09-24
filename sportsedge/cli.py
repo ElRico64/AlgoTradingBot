@@ -181,6 +181,18 @@ def cmd_demo_site(a):
           f"-> {a.site_dir}/index.html")
 
 
+def cmd_validate_patterns(a):
+    from .validation import compare, format_rows
+
+    rows = []
+    for lg in a.league:
+        print(f"{lg}: simulating and backtesting 4 variants (plain/planted x engine off/on)...", flush=True)
+        rows.extend(compare(lg, seasons=a.seasons, seed=a.seed))
+    print(format_rows(rows))
+    print("\nLower log loss (LL) is better. Expect: no change on plain leagues, lower LL with the"
+          " engine on planted ones.")
+
+
 def main(argv=None):
     logging.basicConfig(level=logging.WARNING, format="%(levelname)s %(name)s: %(message)s")
     ap = argparse.ArgumentParser(prog="sportsedge", description=__doc__,
@@ -248,6 +260,12 @@ def main(argv=None):
     p.add_argument("--site-dir", default="site")
     _add_policy_args(p)
     p.set_defaults(fn=cmd_demo_site)
+
+    p = sub.add_parser("validate-patterns", help="check the pattern engine on leagues with planted patterns")
+    p.add_argument("--league", nargs="+", default=["NBA", "NHL"], choices=leagues)
+    p.add_argument("--seasons", type=int, default=2)
+    p.add_argument("--seed", type=int, default=5)
+    p.set_defaults(fn=cmd_validate_patterns)
 
     a = ap.parse_args(argv)
     a.fn(a)

@@ -213,6 +213,100 @@ def news_json(ev: NewsEvent, names: dict | None) -> dict:
             "published": ev.published.isoformat() if ev.published else None}
 
 
+# ------------------------------------------------------------------- odds budget
+class OddsBudget:
+    """Keeps The Odds API inside its free tier.
+
+    Each call costs (markets x regions) credits. Calls are spread evenly over
+    the month: no more than the remaining monthly credits divided by the
+    remaining days, at most one call per league every ODDS_API_MIN_HOURS
+    (default 3), and none once the API reports fewer credits than a call costs.
+    Between calls the last fetched odds are reused, and ESPN's free lines fill
+    any gaps.
+    """
+
+    def __init__(self, data_dir: str, now: Optional[datetime] = None):
+        self.path = os.path.join(data_dir, ".cache", "odds-budget.json")
+        self.now = now or datetime.now(timezone.utc)
+        self.monthly = int(os.environ.get("ODDS_API_MONTHLY_CREDITS", "500"))
+        self.min_hours = float(os.environ.get("ODDS_API_MIN_HOURS", "3"))
+        self.regions = os.environ.get("ODDS_API_REGIONS", "us")
+        month = self.now.strftime("%Y-%m")
+        st = {}
+        if os.path.exists(self.path):
+            try:
+                st = json.load(open(self.path))
+            except (OSError, ValueError):
+                st = {}
+        if st.get("month") != month:
+            st = {"month": month, "used": 0, "days": {}, "last": {}, "remaining": None}
+        self.st = st
+
+    @property
+    def cost(self) -> int:
+        return 3 * len(self.regions.split(","))
+
+    def allow(self, league: str) -> bool:
+        st, today = self.st, self.now.date().isoformat()
+        import calendar
+
+        days_in_month = calendar.monthrange(self.now.year, self.now.month)[1]
+        days_left = days_in_month - self.now.day + 1
+        spent_before_today = st["used"] - st["days"].get(today, 0)
+        daily = (self.monthly - spent_before_today) / days_left
+        if st["days"].get(today, 0) + self.cost > daily:
+            return False
+        if st.get("remaining") is not None and st["remaining"] < self.cost:
+            return False
+        last = st["last"].get(league)
+        if last and (self.now - datetime.fromisoformat(last)).total_seconds() < self.min_hours * 3600:
+            return False
+        return True
+
+    def spend(self, league: str, meta: dict) -> None:
+        today = self.now.date().isoformat()
+        cost = int(meta.get("x-requests-last", self.cost))
+        self.st["used"] += cost
+        self.st["days"][today] = self.st["days"].get(today, 0) + cost
+        self.st["last"][league] = self.now.isoformat()
+        if "x-requests-remaining" in meta:
+            self.st["remaining"] = meta["x-requests-remaining"]
+        os.makedirs(os.path.dirname(self.path), exist_ok=True)
+        with open(self.path, "w") as f:
+            json.dump(self.st, f)
+
+
+def _odds_cache_path(data_dir: str, league: str) -> str:
+    return os.path.join(data_dir, ".cache", f"odds-{league}.json")
+
+
+def load_cached_odds(data_dir: str, league: str, day: date) -> dict:
+    from dataclasses import fields
+
+    from .types import MarketOdds
+
+    p = _odds_cache_path(data_dir, league)
+    if not os.path.exists(p):
+        return {}
+    try:
+        st = json.load(open(p))
+    except (OSError, ValueError):
+        return {}
+    if st.get("day") != day.isoformat():
+        return {}
+    names = {f.name for f in fields(MarketOdds)}
+    return {tuple(k.split("|")): MarketOdds(**{a: b for a, b in v.items() if a in names}) for k, v in st["odds"].items()}
+
+
+def save_cached_odds(data_dir: str, league: str, day: date, odds: dict) -> None:
+    from dataclasses import asdict
+
+    p = _odds_cache_path(data_dir, league)
+    os.makedirs(os.path.dirname(p), exist_ok=True)
+    with open(p, "w") as f:
+        json.dump({"day": day.isoformat(), "odds": {f"{h}|{a}": asdict(o) for (h, a), o in odds.items()}}, f)
+
+
 # ---------------------------------------------------------------------- the run
 @dataclass
 class LeagueRun:
@@ -313,7 +407,8 @@ def _with_status(gj: dict, g: Game) -> dict:
     return gj
 
 
-def _load_engine(league: str, data_dir: str, day: date, bootstrap_days: int) -> tuple[LeagueEngine, list[GameResult]]:
+def _load_engine(league: str, data_dir: str, day: date, bootstrap_days: int,
+                 progress=None) -> tuple[LeagueEngine, list[GameResult]]:
     from .data.csv_io import read_results, write_results
     from .data.espn import fetch_history
 
@@ -326,12 +421,14 @@ def _load_engine(league: str, data_dir: str, day: date, bootstrap_days: int) -> 
     history = read_results(hist_path, league) if os.path.exists(hist_path) else []
     start = (history[-1].start_time.date() - timedelta(days=2)) if history else day - timedelta(days=bootstrap_days)
     merged = {g.game_id: g for g in history}
-    merged.update({g.game_id: g for g in fetch_history(league, start, day - timedelta(days=1))})
+    merged.update({g.game_id: g for g in fetch_history(league, start, day - timedelta(days=1), progress=progress)})
     history = sorted(merged.values(), key=lambda g: g.start_time)
     if not history:
         raise RuntimeError("No historical results available (is ESPN reachable?)")
     os.makedirs(os.path.dirname(hist_path), exist_ok=True)
     write_results(hist_path, history)
+    if progress:
+        progress(f"{league}: training on {len(history)} games (ratings, score models, pattern engine)...")
     eng = LeagueEngine(league).fit(history)
     os.makedirs(os.path.dirname(cache), exist_ok=True)
     for old in os.listdir(os.path.dirname(cache)):
@@ -343,12 +440,12 @@ def _load_engine(league: str, data_dir: str, day: date, bootstrap_days: int) -> 
 
 
 def run_league(league: str, data_dir: str, day: date, policy: PickPolicy, ledger: list[dict],
-               odds_key: Optional[str], analyzer, bootstrap_days: int) -> LeagueRun:
+               odds_key: Optional[str], analyzer, bootstrap_days: int, progress=None) -> LeagueRun:
     from .data.espn import fetch_day
     from .news.feeds import gather_news
     from .news.impact import PlayerImpactRegistry, build_factors
 
-    engine, history = _load_engine(league, data_dir, day, bootstrap_days)
+    engine, history = _load_engine(league, data_dir, day, bootstrap_days, progress)
     games: list[Game] = []
     for k in range(LOOKAHEAD_DAYS.get(league, 0) + 1):
         games.extend(fetch_day(league, day + timedelta(days=k)))
@@ -363,7 +460,15 @@ def run_league(league: str, data_dir: str, day: date, policy: PickPolicy, ledger
         if odds_key:
             from .data.oddsapi import fetch_odds
 
-            odds_map = fetch_odds(league, odds_key, regions=os.environ.get("ODDS_API_REGIONS", "us"))
+            odds_map = load_cached_odds(data_dir, league, day)
+            budget = OddsBudget(data_dir)
+            if budget.allow(league):
+                meta: dict = {}
+                fresh = fetch_odds(league, odds_key, regions=budget.regions, meta=meta)
+                if fresh:
+                    odds_map = fresh
+                    save_cached_odds(data_dir, league, day, fresh)
+                budget.spend(league, meta)
         events = gather_news(league, analyzer=analyzer)
         imp_path = os.path.join(data_dir, "player_impacts.csv")
         reg = PlayerImpactRegistry.from_csv(imp_path) if os.path.exists(imp_path) else None
@@ -403,7 +508,8 @@ def build_site_data(runs: list[LeagueRun], ledger: list[dict], policy: PickPolic
 
 def run_daily(leagues=ALL_LEAGUES, data_dir: str = "data", site_dir: str = "site",
               day: Optional[date] = None, policy: Optional[PickPolicy] = None,
-              odds_key: Optional[str] = None, use_llm: bool = False, bootstrap_days: int = 730) -> dict:
+              odds_key: Optional[str] = None, use_llm: bool = False, bootstrap_days: int = 730,
+              progress=None) -> dict:
     from .site import write_site
 
     day = day or today_eastern()
@@ -418,7 +524,9 @@ def run_daily(leagues=ALL_LEAGUES, data_dir: str = "data", site_dir: str = "site
     runs = []
     for lg in leagues:
         try:
-            run = run_league(lg, data_dir, day, policy, ledger, odds_key, analyzer, bootstrap_days)
+            if progress:
+                progress(f"{lg}: updating...")
+            run = run_league(lg, data_dir, day, policy, ledger, odds_key, analyzer, bootstrap_days, progress)
         except Exception as e:  # one league failing must not take down the others
             log.error("%s failed: %s\n%s", lg, e, traceback.format_exc())
             run = LeagueRun(lg, "error", f"{type(e).__name__}: {e}")

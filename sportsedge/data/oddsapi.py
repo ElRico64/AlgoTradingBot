@@ -79,11 +79,20 @@ def parse_event(league: str, ev: dict) -> tuple[Optional[str], Optional[str], Op
     return home, away, start, mo
 
 
-def fetch_odds(league: str, api_key: str, regions: str = "us") -> dict[tuple[str, str], MarketOdds]:
+def fetch_odds(league: str, api_key: str, regions: str = "us",
+               meta: Optional[dict] = None) -> dict[tuple[str, str], MarketOdds]:
+    """`meta`, if given, receives the credits remaining/used reported by the API."""
     url = f"https://api.the-odds-api.com/v4/sports/{SPORT_KEYS[league]}/odds"
     params = {"apiKey": api_key, "regions": regions, "markets": "h2h,spreads,totals", "oddsFormat": "american"}
     try:
         r = requests.get(url, params=params, timeout=20)
+        if meta is not None:
+            for k in ("x-requests-remaining", "x-requests-used", "x-requests-last"):
+                if k in r.headers:
+                    try:
+                        meta[k] = float(r.headers[k])
+                    except ValueError:
+                        pass
         r.raise_for_status()
         events = r.json()
     except Exception as e:
