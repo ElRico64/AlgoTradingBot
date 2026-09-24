@@ -326,9 +326,7 @@ class LeagueEngine:
         lo, hi = float(np.quantile(p_draws, lo_q)), float(np.quantile(p_draws, hi_q))
         lo, hi = min(lo, p_home), max(hi, p_home)
         tie_ml = float(np.mean(md.tie())) if self.league == "NFL" else 0.0
-        # A calibrator that never saw market prices must not be judged against one:
-        # its edge over the market would be pure winner's-curse.
-        ml_cal = self.calibrated and (fair["ml"] is None or self.stacker.with_market is not None)
+        ml_aware = self.stacker.with_market is not None
         pred = Prediction(game=game, home_win_prob=p_home, home_win_lower=lo, home_win_upper=hi,
                           expected_margin=float(np.mean(md.mean())), expected_total=float(np.mean(td.mean())),
                           components=comp_mean, adjustments=dict(adj.parts))
@@ -337,10 +335,10 @@ class LeagueEngine:
             pred.notes.extend(f.label for f in factors if f.team in (game.home, game.away))
         o = odds
         pred.markets.append(MarketProbability("moneyline", "home", None, p_home, lo, hi,
-                                              o.home_ml if o else None, fair["ml"], tie_ml, ml_cal))
+                                              o.home_ml if o else None, fair["ml"], tie_ml, self.calibrated, ml_aware))
         pred.markets.append(MarketProbability("moneyline", "away", None, 1 - p_home, 1 - hi, 1 - lo,
                                               o.away_ml if o else None,
-                                              None if fair["ml"] is None else 1 - fair["ml"], tie_ml, ml_cal))
+                                              None if fair["ml"] is None else 1 - fair["ml"], tie_ml, self.calibrated, ml_aware))
         if o is not None and o.spread is not None:
             p, push = md.cover(o.spread)
             self._add_two_way(pred, "spread", o.spread, p, push, self.spread_cal,
@@ -358,7 +356,8 @@ class LeagueEngine:
         mean = float(np.mean(cond))
         lo, hi = float(np.quantile(cond, self.s.band[0])), float(np.quantile(cond, self.s.band[1]))
         pp = float(np.mean(push))
-        ok = cal is not None and (fair is None or cal.with_market is not None)
-        pred.markets.append(MarketProbability(market, sides[0], line, mean, lo, hi, prices[0], fair, pp, ok))
+        ok = cal is not None
+        aware = cal is not None and cal.with_market is not None
+        pred.markets.append(MarketProbability(market, sides[0], line, mean, lo, hi, prices[0], fair, pp, ok, aware))
         pred.markets.append(MarketProbability(market, sides[1], line, 1 - mean, 1 - hi, 1 - lo, prices[1],
-                                              None if fair is None else 1 - fair, pp, ok))
+                                              None if fair is None else 1 - fair, pp, ok, aware))

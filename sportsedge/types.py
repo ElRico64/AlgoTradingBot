@@ -91,6 +91,10 @@ class MarketProbability:
     fair_market_prob: Optional[float] = None  # de-vigged market probability
     push_probability: float = 0.0
     calibrated: bool = True  # False until an out-of-sample calibrator exists
+    # True when that calibrator also saw market prices, i.e. the probability may
+    # be compared against a price (edge / EV). A model-only calibration is fine
+    # for "who wins" but its edge over the market would be winner's curse.
+    market_aware: bool = True
 
     @property
     def edge(self) -> Optional[float]:

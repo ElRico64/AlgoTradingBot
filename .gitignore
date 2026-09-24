@@ -11,3 +11,4 @@ reports/
 data/*.csv
 !data/sample*.csv
 site/
+data/.cache/

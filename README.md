@@ -77,60 +77,117 @@ A player-impact CSV (`league,team,player,impact,impact_sd,role`) lets you
 plug in your own player-value model. For example, points of margin lost when
 an NBA star sits (from RAPM/EPM), or a QB's value over the backup.
 
-## The daily dashboard
+## The dashboard
 
-`sportsedge daily` runs the whole pipeline and writes a self-contained web
-page to `site/index.html`. The page has four parts:
+`sportsedge daily` runs the pipeline and writes a self-contained web page to
+`site/index.html`. It is safe to run every 30 minutes. The page has these
+parts:
 
-* **Today's picks:** a ticket for each qualifying bet. Each ticket shows a
-  gate strip with the model's probability and 80% band, the no-vig market,
-  the price's break-even and the 70% line, plus edge, EV, stake and the reasons.
-* **The board:** every game on the slate. You can search it, filter by market
-  (moneyline, spread or total), sort it and expand any row. Expanding a row
-  shows every market and exactly which gate condition held it back.
-* **Track record:** every published pick graded at its listed price, with
-  record, hit rate against claimed probability, units and ROI, a cumulative
-  units chart and a 95% interval on the true hit rate.
-* **Controls:** league tabs, US/decimal odds and light/dark themes.
+* **Top pick:** the day's strongest pick, with team colors, a confidence
+  ring, the price and the worst price still worth taking, a countdown to the
+  start, and the latest injury news for that game.
+* **Today's picks, in two tiers:**
+  * **Best bets:** at least 70% likely *and* worth betting at today's price
+    (expected value ≥ +1% per unit). These need a posted price.
+  * **70%+ picks:** every moneyline or total the model gives at least 70%.
+    Favourites are often priced too short to profit, so each card shows
+    "worth it at": the worst price at which the pick still pays over time.
+* **All games:** every game on the day's slate (the whole week for the NFL).
+  Each card shows win probabilities as a bar in the two teams' colors, the
+  projected score, the total lean, the posted price, injury-update chips, and
+  a live score or final once the game starts. Tapping a card shows every
+  market, the model's reasoning and the news for that game.
+* **Track record:** each tier's published picks, graded at the price they
+  were published at: record, hit rate against the model's stated
+  probability, units and ROI, a units chart, and a 95% range for the true
+  hit rate.
+* **News wire:** injury and lineup updates for the teams playing today.
+* **Settings and live data:** league tabs, US or decimal odds, and light or
+  dark theme. On the hosted site, the page pulls each new refresh
+  automatically.
 
 `sportsedge demo-site` builds the same page from synthetic leagues with
-fictional teams, so you can see the page before any API keys are set up.
+fictional teams and players, so you can see it before anything is set up.
 
-### Running it every day (GitHub Actions + GitHub Pages)
+### How a game day works
 
-`.github/workflows/daily-picks.yml` runs every morning. It:
+* **First run of the day:** downloads yesterday's results, retrains every
+  model and caches them for the day.
+* **Every 30 minutes after that:**
+  * pulls the scoreboard (upcoming, live and final games), fresh odds and
+    fresh injury news;
+  * re-predicts every game that hasn't started, and grades finished picks.
+* **At the start of a game:** its prediction locks.
+* **Withdrawals:** if news before the start pushes a published pick below the
+  70% bar, the pick is marked *withdrawn* and stays visible in the record. It
+  is never silently deleted.
+* **Published prices:** a published pick stays on the record at the price it
+  was published at.
 
-1. downloads yesterday's results,
-2. grades the picks in `data/ledger.json`,
-3. retrains,
-4. fetches today's slate, odds and news, and
-5. commits the updated history and ledger, then publishes the page to
-   GitHub Pages.
+### Do you need an odds API key?
+
+**No.** ESPN's free feed covers everything the model itself needs:
+
+* every game each day for all four leagues;
+* results and live scores;
+* probable pitchers;
+* injury reports and headlines;
+* a posted moneyline, spread and total for most games.
+
+Winners, over/unders and 70%+ picks all work without a key. The Odds API is
+an upgrade:
+
+| | ESPN only (no key) | + The Odds API |
+|---|---|---|
+| Win / total / spread probabilities | yes | yes |
+| 70%+ picks with a "worth it at" price | yes | yes |
+| Best bets (value at the price) | from one posted line, when ESPN has it | best price across many sportsbooks |
+| Market consensus the model blends with | one book | sharp-weighted consensus of many books |
+
+Posted prices matter for accuracy: sportsbook lines are among the strongest
+predictors there are, and the model blends with them. Without any price the
+board still works on the model alone.
+
+### Running it automatically (GitHub Actions + GitHub Pages)
+
+`.github/workflows/daily-picks.yml` refreshes the board every 30 minutes
+from 10 am to about 1:30 am US Eastern. It caches the day's trained models
+between runs, commits only the history and the pick ledger, and publishes the
+page to GitHub Pages. GitHub may start scheduled runs a few minutes late at
+busy times.
 
 One-time setup:
 
 1. Merge this branch into your default branch. Scheduled workflows only run
    there.
-2. **Settings → Secrets and variables → Actions**. Add `ODDS_API_KEY`, and
-   optionally `ANTHROPIC_API_KEY`.
+2. **Settings → Secrets and variables → Actions.** Optionally add
+   `ODDS_API_KEY` and `ANTHROPIC_API_KEY`.
 3. **Settings → Pages → Source: GitHub Actions.** Pages on a private
    repository needs a paid GitHub plan. A page published from a public
    repository is public.
 4. **Actions → Daily picks → Run workflow.** The first run downloads about
-   two seasons per league from ESPN and takes a while.
+   two seasons per league and takes a while.
+
+Actions minutes: a refresh takes about 3 minutes including the Pages deploy.
+A 30-minute schedule (32 runs a day) is about 2,900 minutes a month. Public
+repositories get Actions for free. On a private repository that exceeds the
+free plan's 2,000 minutes a month. Either use a paid plan, or change the cron
+lines to hourly (`0 14-23 * * *` and `0 0-5 * * *`, about 1,500 minutes a
+month).
 
 ### API keys
 
 | Service | What it's for | Where to get it | Cost |
 |---|---|---|---|
-| ESPN site API | schedules, results, injuries, headlines | no key needed | free, unofficial |
-| The Odds API | odds from many sportsbooks, no-vig consensus, best price | [the-odds-api.com](https://the-odds-api.com) → sign up → key by email | free tier (500 credits/month) covers a daily 4-league run in the `us` region; paid plans for more |
-| Anthropic API (optional) | Claude reads news and injury reports | [console.anthropic.com](https://console.anthropic.com) → API Keys | pay per use |
+| ESPN site API | games, results, live scores, injuries, headlines, posted lines | no key needed | free, unofficial |
+| The Odds API (optional) | prices from many sportsbooks, consensus, best price | [the-odds-api.com](https://the-odds-api.com) → sign up → key by email | a free tier exists; a 30-minute refresh of four leagues needs a paid plan. Check their pricing page |
+| Anthropic API (optional) | Claude reads messy news and injury reports | [console.anthropic.com](https://console.anthropic.com) → API Keys | pay per use |
 
-Each Odds API request costs about (markets × regions) credits. The default
-region is `us`. Set `ODDS_API_REGIONS=us,eu` to add Pinnacle to the sharp
-consensus, which costs twice the credits. Never commit keys to the repository.
-Keep them in GitHub secrets or environment variables.
+Each Odds API request costs about (markets × regions) credits, and the board
+makes one request per league per refresh while games are upcoming. The
+default region is `us`. Set `ODDS_API_REGIONS=us,eu` to add Pinnacle to the
+consensus, which costs twice the credits. Keep keys in GitHub secrets or
+environment variables, never in the repository.
 
 ## Example pick output
 

@@ -1,16 +1,22 @@
-# Runs the model every morning, grades yesterday's picks, and publishes the
-# dashboard to GitHub Pages. Setup (one time):
-#   1. Settings -> Secrets and variables -> Actions -> New repository secret:
-#        ODDS_API_KEY       (required for multi-book odds; https://the-odds-api.com)
-#        ANTHROPIC_API_KEY  (optional; enables Claude news reading)
+# Refreshes the board every 30 minutes through the day: new odds, new injury
+# news, re-predicted upcoming games, graded finished games. The first run of
+# each day also downloads yesterday's results and retrains the models.
+#
+# One-time setup:
+#   1. Settings -> Secrets and variables -> Actions -> New repository secret
+#        ODDS_API_KEY       optional: odds from many sportsbooks (the-odds-api.com).
+#                           Without it the board uses the lines ESPN posts.
+#        ANTHROPIC_API_KEY  optional: Claude reads the news (console.anthropic.com)
 #   2. Settings -> Pages -> Build and deployment -> Source: "GitHub Actions"
-#   3. Actions -> "Daily picks" -> Run workflow (first run downloads ~2 seasons
-#      of history per league and takes a while; later runs take minutes)
+#   3. Actions -> "Daily picks" -> Run workflow. The first run downloads about two
+#      seasons per league and takes a while; refreshes take a few minutes.
 name: Daily picks
 
 on:
   schedule:
-    - cron: "40 14 * * *"   # 10:40 ET in summer / 9:40 ET in winter
+    # every 30 min, 14:00-05:30 UTC = 10:00 am-1:30 am US Eastern (summer time)
+    - cron: "*/30 14-23 * * *"
+    - cron: "*/30 0-5 * * *"
   workflow_dispatch:
     inputs:
       leagues:
@@ -41,23 +47,43 @@ jobs:
       - name: Install
         run: pip install -e ".[llm]"
 
-      - name: Run the model
+      - name: Today's date (US Eastern)
+        id: day
+        run: echo "day=$(TZ=America/New_York date +%F)" >> "$GITHUB_OUTPUT"
+
+      - name: Restore today's trained models and board
+        uses: actions/cache/restore@v4
+        with:
+          path: data/.cache
+          key: sportsedge-${{ steps.day.outputs.day }}-${{ github.run_id }}
+          restore-keys: sportsedge-${{ steps.day.outputs.day }}-
+
+      - name: Refresh the board
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           LEAGUES: ${{ github.event.inputs.leagues || 'MLB NHL NBA NFL' }}
+          REFRESH_MINUTES: "30"
         run: |
           EXTRA=""
           if [ -n "$ANTHROPIC_API_KEY" ]; then EXTRA="--llm"; fi
           sportsedge daily --league $LEAGUES --data-dir data --site-dir site $EXTRA
 
-      - name: Save history and the pick ledger
+      - name: Save models and board for the next refresh
+        uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: data/.cache
+          key: sportsedge-${{ steps.day.outputs.day }}-${{ github.run_id }}
+
+      - name: Commit history and the pick ledger
         run: |
           git config user.name "sportsedge-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data
-          if git diff --cached --quiet; then echo "no data changes"; exit 0; fi
-          git commit -m "Daily picks $(date -u +%F)"
+          git add data/history data/ledger.json
+          if git diff --cached --quiet; then echo "no record changes"; exit 0; fi
+          git commit -m "Picks update $(date -u '+%F %H:%M') UTC"
+          git pull --rebase --autostash
           git push
 
       - uses: actions/configure-pages@v5

@@ -17,7 +17,7 @@ only want high-probability picks, but then report ROI honestly.
 """
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from typing import Iterable
 
 from .stats.kelly import stake_fraction
@@ -40,6 +40,7 @@ class PickPolicy:
     kelly_multiplier: float = 0.25
     max_stake: float = 0.03
     one_pick_per_game: bool = True
+    rank_by: str = "ev"  # or "probability"
 
     def failures(self, m: MarketProbability) -> list[str]:
         """Every gate condition this market fails (empty list = it qualifies)."""
@@ -57,6 +58,8 @@ class PickPolicy:
         if self.require_positive_ev:
             if m.price is None or m.fair_market_prob is None:
                 out.append("no market price available")
+            elif not m.market_aware:
+                out.append("not enough games with posted odds to judge value yet")
             else:
                 ev = m.expected_value or 0.0
                 if ev <= 0:
@@ -93,10 +96,35 @@ class PickPolicy:
                 stake = stake_fraction(m.probability, p_sd, american_to_decimal(m.price),
                                        self.kelly_multiplier, self.max_stake)
             out.append(Pick(pred.game, m, stake, reasons))
-        out.sort(key=lambda p: -(p.market.expected_value or p.market.probability))
+        if self.rank_by == "probability":
+            out.sort(key=lambda p: -p.market.probability)
+        else:
+            out.sort(key=lambda p: -(p.market.expected_value or p.market.probability))
         return out[:1] if (self.one_pick_per_game and out) else out
 
     def select(self, preds: Iterable[Prediction]) -> list[Pick]:
         picks = [p for pred in preds for p in self.evaluate(pred)]
-        picks.sort(key=lambda p: -(p.market.expected_value or 0))
+        if self.rank_by == "probability":
+            picks.sort(key=lambda p: -p.market.probability)
+        else:
+            picks.sort(key=lambda p: -(p.market.expected_value or 0))
         return picks
+
+
+def confidence_policy(base: PickPolicy) -> PickPolicy:
+    """The "70%+" tier: win probability and confidence band only, no price test.
+
+    Moneylines and totals only. Run and puck lines at +1.5 are 70%+ almost
+    every night, and their price already reflects that.
+    """
+    return replace(base, require_positive_ev=False, markets=("moneyline", "total"),
+                   max_favorite_price=-100000.0, rank_by="probability")
+
+
+def value_line(p: float, min_ev: float = 0.01) -> float:
+    """Worst American price at which a bet with win probability p still has
+    expected value >= min_ev ("bet it at this price or better")."""
+    from .stats.odds import decimal_to_american
+
+    d = max(1.0001, (1.0 + min_ev) / max(p, 1e-6))
+    return decimal_to_american(d)

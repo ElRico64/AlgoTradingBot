@@ -117,3 +117,18 @@ def test_claude_analyzer_converts_structured_output():
     assert kw["model"] == "claude-opus-5" and kw["output_config"]["format"]["type"] == "json_schema"
     refused = ClaudeNewsAnalyzer(client=SimpleNamespace(messages=_FakeMessages(payload, "refusal")))
     assert refused.analyze("NBA", [("x", NOW, None)]) == []
+
+
+def test_news_never_moves_probability_the_wrong_way():
+    """Stacking weights are non-negative, so bad news for a team can only lower its
+    win probability, with or without a market price in the blend."""
+    games = generate("NBA", seasons=1, seed=9)
+    cut = games[-1].start_time.date()
+    eng = LeagueEngine("NBA", EngineSettings(n_draws=800, seed=2)).fit([g for g in games if g.start_time.date() < cut])
+    assert all(v >= 0 for k, v in eng.stacker.weights().items() if not k.endswith("intercept"))
+    cfg = get_config("NBA")
+    for g in [x for x in games if x.start_time.date() == cut][:4]:
+        game = Game(g.game_id, "NBA", g.start_time, g.home, g.away)
+        f = build_factors([NewsEvent("NBA", g.away, "Star", "injury", "out", reliability=1.0, role="star")], cfg, NOW)
+        for odds in (g.odds, None):
+            assert eng.predict(game, odds, f).home_win_prob > eng.predict(game, odds).home_win_prob

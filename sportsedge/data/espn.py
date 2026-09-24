@@ -61,6 +61,15 @@ def _probable(c: dict) -> Optional[dict]:
     return None
 
 
+def _team_display(c: dict) -> dict:
+    t = c.get("team") or {}
+    color = (t.get("color") or "").strip("#")
+    alt = (t.get("alternateColor") or "").strip("#")
+    return {"name": t.get("displayName") or t.get("name") or t.get("abbreviation"),
+            "color": f"#{color}" if len(color) == 6 else None, "alt": f"#{alt}" if len(alt) == 6 else None,
+            "record": ((c.get("records") or [{}])[0] or {}).get("summary")}
+
+
 def parse_scoreboard(league: str, data: dict) -> list[Game]:
     games: list[Game] = []
     for ev in data.get("events", []) or []:
@@ -96,6 +105,15 @@ def parse_scoreboard(league: str, data: dict) -> list[Game]:
         if venue.get("indoor") is True:
             extras["indoor"] = True
         status = ((ev.get("status") or comp.get("status") or {}).get("type") or {})
+        # display-only context for the dashboard (never used by the model)
+        extras["status"] = {"state": status.get("state") or ("post" if status.get("completed") else "pre"),
+                            "detail": status.get("shortDetail") or status.get("detail") or ""}
+        extras["teams"] = {side: _team_display(c) for side, c in (("home", h), ("away", a))}
+        if extras["status"]["state"] in ("in", "post"):
+            try:
+                extras["live"] = {"home": int(float(h.get("score"))), "away": int(float(a.get("score")))}
+            except (TypeError, ValueError):
+                pass
         common = dict(game_id=str(ev.get("id")), league=league, start_time=start, home=habbr, away=aabbr,
                       neutral=bool(comp.get("neutralSite")), extras=extras)
         odds = _parse_odds(comp, habbr)
@@ -115,6 +133,11 @@ def parse_scoreboard(league: str, data: dict) -> list[Game]:
 def fetch_scoreboard(league: str, day: date) -> list[Game]:
     data = _get_json(f"{ESPN_BASE}/{SPORT_PATH[league]}/scoreboard?dates={day:%Y%m%d}&limit=300")
     return parse_scoreboard(league, data) if data else []
+
+
+def fetch_day(league: str, day: date) -> list[Game]:
+    """Every game on `day` (US date): upcoming, live and final."""
+    return fetch_scoreboard(league, day)
 
 
 def fetch_slate(league: str, day: Optional[date] = None) -> list[Game]:

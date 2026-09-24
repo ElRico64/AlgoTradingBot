@@ -74,6 +74,13 @@ def read_slate(path: str, league: str) -> list[Game]:
     return games
 
 
+DISPLAY_ONLY = ("status", "teams", "live", "odds")
+
+
+def _model_extras(extras: dict) -> dict:
+    return {k: v for k, v in (extras or {}).items() if k not in DISPLAY_ONLY}
+
+
 def write_results(path: str, games: Iterable[GameResult]) -> None:
     with open(path, "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=FIELDS)
@@ -87,5 +94,5 @@ def write_results(path: str, games: Iterable[GameResult]) -> None:
                 "home_spread_price": o.home_spread_price if g.odds else None,
                 "away_spread_price": o.away_spread_price if g.odds else None, "total": o.total,
                 "over_price": o.over_price if g.odds else None, "under_price": o.under_price if g.odds else None,
-                "extras": json.dumps(g.extras) if g.extras else "",
+                "extras": json.dumps(_model_extras(g.extras)) if _model_extras(g.extras) else "",
             })

@@ -8,7 +8,7 @@ import sportsedge.news.feeds as feeds
 from sportsedge.daily import grade, pick_label, run_daily, settle_ledger
 from sportsedge.site import render_fragment
 from sportsedge.synthetic import generate
-from sportsedge.types import Game, GameResult
+from sportsedge.types import Game, GameResult, NewsEvent
 
 
 def _entry(market, side, line, price=-150):
@@ -55,31 +55,54 @@ def test_full_daily_run_offline(tmp_path, monkeypatch):
     games = generate("NBA", seasons=1, seed=9)
     cut = games[-1].start_time.date()
     history = [g for g in games if g.start_time.date() < cut]
-    today_games = [g for g in games if g.start_time.date() == cut]
-    day = cut
+    todays = [g for g in games if g.start_time.date() == cut]
+    state = {"started": False}
 
     def fake_history(league, start, end, pause=0.0):
         return [g for g in history if start <= g.start_time.date() <= end]
 
-    def fake_slate(league, d=None):
-        return [Game(g.game_id, league, g.start_time, g.home, g.away, g.neutral, {"odds": g.odds}) for g in today_games]
+    def fake_day(league, d):
+        if d == cut and not state["started"]:
+            # no posted odds: exercises the no-API-key path, where news drives the model directly
+            return [Game(g.game_id, league, g.start_time, g.home, g.away, g.neutral,
+                         {"odds": None, "status": {"state": "pre", "detail": ""}}) for g in todays]
+        if d == cut:
+            return list(todays)  # finals
+        return [g for g in history if g.start_time.date() == d]
 
+    news = {"events": []}
     monkeypatch.setattr(espn, "fetch_history", fake_history)
-    monkeypatch.setattr(espn, "fetch_slate", fake_slate)
-    monkeypatch.setattr(feeds, "gather_news", lambda league, **kw: [])
+    monkeypatch.setattr(espn, "fetch_day", fake_day)
+    monkeypatch.setattr(feeds, "gather_news", lambda league, **kw: news["events"])
     data_dir, site_dir = tmp_path / "data", tmp_path / "site"
-    out = run_daily(["NBA"], str(data_dir), str(site_dir), day=day, bootstrap_days=400)
-    assert out["leagues"][0]["status"] == "ok"
-    assert len(out["games"]) == len(today_games)
+
+    out = run_daily(["NBA"], str(data_dir), str(site_dir), day=cut, bootstrap_days=400)
+    assert out["leagues"][0]["status"] == "ok" and len(out["games"]) == len(todays)
     assert (site_dir / "index.html").exists() and (data_dir / "history" / "NBA.csv").exists()
-    for g in out["games"]:
-        assert 0 < g["p_home"] < 1 and g["markets"]
-    # second day: yesterday's picks get graded against the new results
-    ledger = json.loads((data_dir / "ledger.json").read_text())
-    history.extend(today_games)
-    monkeypatch.setattr(espn, "fetch_slate", lambda league, d=None: [])
-    out2 = run_daily(["NBA"], str(data_dir), str(site_dir), day=day + timedelta(days=1))
-    graded = {e["id"]: e for e in out2["ledger"]}
-    for e in ledger:
-        assert graded[e["id"]]["status"] in ("won", "lost", "push")
-    assert out2["leagues"][0]["status"] == "idle"
+    assert list((data_dir / ".cache").iterdir())  # engine cached for the day's refreshes
+    conf = [e for e in out["ledger"] if e["tier"] == "confidence"]
+    assert conf, "a synthetic NBA slate should have at least one 70%+ pick"
+    assert not [e for e in out["ledger"] if e["tier"] == "value"]  # no price, no value bets
+    for e in out["ledger"]:
+        assert e["status"] == "pending" and e["value_line"] <= -100 and e["price"] is None
+
+    # refresh: star player of a picked team ruled out -> the pick is withdrawn before the start
+    target = conf[0]
+    team = next(g for g in todays if g.game_id == target["game_id"])
+    picked = team.home if target["side"] == "home" else team.away
+    news["events"] = [NewsEvent("NBA", picked, "Franchise Star", "injury", "out", reliability=1.0, role="star",
+                                impact=12.0, impact_sd=0.5)]
+    out = run_daily(["NBA"], str(data_dir), str(site_dir), day=cut)
+    after = {e["id"]: e for e in out["ledger"]}[target["id"]]
+    assert after["status"] == "withdrawn" and "Withdrawn before start" in after["note"]
+    assert out["news"] and out["news"][0]["player"] == "Franchise Star"
+
+    # games finish: predictions stay frozen, pending picks are graded, withdrawn ones are not
+    news["events"] = []
+    state["started"] = True
+    out = run_daily(["NBA"], str(data_dir), str(site_dir), day=cut)
+    assert all(g["frozen"] and g["state"] == "post" for g in out["games"])
+    for e in out["ledger"]:
+        assert e["status"] in ("won", "lost", "push", "withdrawn")
+        if e["status"] != "withdrawn":
+            assert e["final"] and e["profit"] is None  # graded W/L; no price, so no units

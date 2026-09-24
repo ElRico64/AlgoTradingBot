@@ -149,9 +149,19 @@ pipeline above.
 
   logit p = b₀ + Σ<sub>k</sub> w<sub>k</sub>·logit p<sub>k</sub> + w<sub>m</sub>·logit p<sub>market</sub>
 
-The weights come from L2-penalised logistic regression, solved by Newton–IRLS.
-It is fit **only on out-of-sample (walk-forward) forecasts**. This single
-step:
+The weights come from L2-penalised logistic regression fit **only on
+out-of-sample (walk-forward) forecasts**. The weights are constrained to be
+**non-negative** (Breiman, 1996, "stacked regressions"), and the fit uses a
+bounded L-BFGS-B solver.
+
+The constraint is not optional. The components and the market are highly
+collinear: Kalman and Elo logits correlate at about 0.95. Without the
+constraint, a backtest gave the Kalman model a weight of −0.40, and news
+flows through the components, so a star's injury made the *injured* team
+more likely to win. With non-negative weights, bad news for a team can only
+lower its probability. A test enforces this.
+
+With the constraint in place, this single step:
 
 * learns how much each model deserves,
 * learns how much to trust the market, and
@@ -183,6 +193,16 @@ Platt scaling, Beta calibration (Kull et al., 2017) and isotonic regression
 
 ---
 
+**News and the market.** When a price is available, the blend leans mostly on
+the market. Market weights of 0.7–0.9 are typical, because closing lines are
+very accurate. Sportsbooks re-price within minutes of major news, and the
+board re-pulls odds on every refresh. So a late scratch reaches the forecast
+mostly through the moved line; adding the full injury effect on top of a line
+that already moved would double-count it. When no price is available, the
+news mixture model (§5) drives the forecast directly.
+
+---
+
 ## 7. Uncertainty: Monte Carlo over everything (`engine.py`)
 
 For N draws (2000 by default), we sample:
@@ -208,6 +228,19 @@ A pick is published only if **all** of these hold:
 | 3 | probability produced by an out-of-sample-fitted calibrator | required |
 | 4 | edge over no-vig market ≥ and EV > 0 at the offered price | 1.5%, on |
 | 5 | price not worse than | −600 |
+
+Condition 4 means at least +1% expected value per unit. Smaller edges sit
+inside model noise, and their uncertainty-shrunk Kelly stake is about 0.
+
+**Two published tiers.** The rules above define **Best bets**. The **70%+
+picks** tier drops condition 4 (and 5). It covers moneylines and totals only:
+run and puck lines at +1.5 are 70%+ almost every night, and their price
+already reflects it. Each 70%+ pick carries a *value line*, the worst
+American price at which it still has EV ≥ +1%:
+
+  d<sub>min</sub> = (1 + 0.01)/p,  e.g. p = 0.75 → −288
+
+Both tiers are graded separately on the record.
 
 **Why condition 4 exists.** A 72% favourite at −300 has a break-even of 75%,
 so it loses money *even if the 72% is exactly right*. High confidence is

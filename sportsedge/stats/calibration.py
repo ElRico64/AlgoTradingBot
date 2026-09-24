@@ -46,6 +46,7 @@ class LogisticRegression:
     max_iter: int = 100
     tol: float = 1e-9
     prior_mean: Optional[np.ndarray] = None  # shrink coefficients toward this
+    nonneg: bool = False  # constrain all non-intercept coefficients to be >= 0
     coef_: Optional[np.ndarray] = None
     cov_: Optional[np.ndarray] = None  # Laplace posterior covariance
 
@@ -67,6 +68,8 @@ class LogisticRegression:
         if self.prior_mean is not None:
             m0[-len(self.prior_mean):] = self.prior_mean
         beta = m0.copy()
+        if self.nonneg:
+            return self._fit_nonneg(Xd, y, w, pen, m0)
         for _ in range(self.max_iter):
             eta = Xd @ beta
             p = sigmoid(eta)
@@ -77,6 +80,30 @@ class LogisticRegression:
             beta = beta + step
             if np.max(np.abs(step)) < self.tol:
                 break
+        self.coef_ = beta
+        p = sigmoid(Xd @ beta)
+        H = (Xd.T * (w * p * (1 - p))) @ Xd + np.diag(pen)
+        self.cov_ = np.linalg.inv(H)
+        return self
+
+    def _fit_nonneg(self, Xd, y, w, pen, m0):
+        """Penalised MLE with coefficient >= 0 bounds (L-BFGS-B)."""
+        from scipy.optimize import minimize
+
+        def f(b):
+            eta = Xd @ b
+            # log(1 + e^eta) computed stably
+            nll = np.sum(w * (np.logaddexp(0.0, eta) - y * eta)) + 0.5 * np.sum(pen * (b - m0) ** 2)
+            g = Xd.T @ (w * (sigmoid(eta) - y)) + pen * (b - m0)
+            return nll, g
+
+        d = Xd.shape[1]
+        lo = 1 if self.fit_intercept else 0
+        bounds = [(None, None)] * lo + [(0.0, None)] * (d - lo)
+        x0 = np.clip(m0, [b[0] if b[0] is not None else -np.inf for b in bounds], None)
+        res = minimize(f, x0, jac=True, method="L-BFGS-B", bounds=bounds,
+                       options={"maxiter": 500, "gtol": 1e-8})
+        beta = res.x
         self.coef_ = beta
         p = sigmoid(Xd @ beta)
         H = (Xd.T * (w * p * (1 - p))) @ Xd + np.diag(pen)
@@ -196,7 +223,10 @@ class StackingCalibrator:
 
     Fitting this by penalised maximum likelihood on out-of-sample forecasts is
     both an ensemble (learns how much to trust each model and the market) and
-    a calibration step. Two sub-models are kept: one for games with a market
+    a calibration step. Weights are constrained to be non-negative (Breiman,
+    1996): the components are highly collinear, and an unconstrained fit can
+    give one of them a negative weight, which would make news that favours a
+    team move the final probability *against* it. Two sub-models are kept: one for games with a market
     price and one without.
 
     features="logit": f(p) = logit p (one slope per component).
@@ -228,12 +258,14 @@ class StackingCalibrator:
     def fit(self, comp_probs: Sequence[dict[str, float]], market: Sequence[Optional[float]], y):
         y = np.asarray(y, float)
         P = np.array([[c[k] for k in self.components] for c in comp_probs], float)
-        self.without_market = LogisticRegression(l2=self.l2, prior_mean=self._prior(False)).fit(self._feats(P), y)
+        self.without_market = LogisticRegression(l2=self.l2, prior_mean=self._prior(False),
+                                                 nonneg=True).fit(self._feats(P), y)
         has_m = np.array([m is not None for m in market])
         if has_m.sum() >= 50:
             mk = np.array([m for m in market if m is not None], float)
             X = np.column_stack([self._feats(P[has_m]), logit(mk)])
-            self.with_market = LogisticRegression(l2=self.l2, prior_mean=self._prior(True)).fit(X, y[has_m])
+            self.with_market = LogisticRegression(l2=self.l2, prior_mean=self._prior(True),
+                                                  nonneg=True).fit(X, y[has_m])
         else:
             self.with_market = None
         self.n_fit_ = len(y)

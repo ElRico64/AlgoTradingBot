@@ -85,8 +85,12 @@ class BacktestResult:
 
 def walk_forward(league: str, results: Sequence[GameResult], policy: Optional[PickPolicy] = None,
                  settings: Optional[EngineSettings] = None, recalibrate_days: int = 7,
-                 n_draws: int = 300, seed: int = 11) -> BacktestResult:
+                 n_draws: int = 300, seed: int = 11,
+                 extra_tiers: Optional[dict[str, PickPolicy]] = None) -> BacktestResult:
+    """`extra_tiers` evaluates further pick policies in the same pass; their picks
+    are returned with a `tier` field but excluded from the summary statistics."""
     policy = policy or PickPolicy()
+    tiers = {"value": policy, **(extra_tiers or {})}
     settings = settings or EngineSettings(n_draws=n_draws)
     engine = LeagueEngine(league, settings)
     results = sorted(results, key=lambda r: r.start_time)
@@ -106,17 +110,19 @@ def walk_forward(league: str, results: Sequence[GameResult], policy: Optional[Pi
                     model_only = engine.stacker.transform(pred.components, None)
                     rows.append({"p": pred.home_win_prob, "p_model_only": model_only,
                                  "market": ml.fair_market_prob, "y": float(g.margin > 0)})
-                for pk in policy.evaluate(pred):
-                    if pk.market.price is None:
-                        continue
-                    picks.append({"date": g.start_time.date().isoformat(), "game": f"{g.away}@{g.home}",
-                                  "game_id": g.game_id,
-                                  "market": pk.market.market, "side": pk.market.side, "line": pk.market.line,
-                                  "price": pk.market.price, "p": pk.market.probability, "lower": pk.market.lower,
-                                  "fair_market": pk.market.fair_market_prob, "stake": pk.stake_fraction,
-                                  "profit": settle(pk, g)})
+                for tier, pol in tiers.items():
+                    for pk in pol.evaluate(pred):
+                        if pk.market.price is None:
+                            continue
+                        picks.append({"tier": tier, "date": g.start_time.date().isoformat(),
+                                      "game": f"{g.away}@{g.home}", "game_id": g.game_id,
+                                      "market": pk.market.market, "side": pk.market.side, "line": pk.market.line,
+                                      "price": pk.market.price, "p": pk.market.probability,
+                                      "lower": pk.market.lower, "fair_market": pk.market.fair_market_prob,
+                                      "stake": pk.stake_fraction, "profit": settle(pk, g)})
         engine.observe(games)
-    return BacktestResult(league, _summarize(rows, picks, seed), reliability_table(
+    main = [p for p in picks if p["tier"] == "value"]
+    return BacktestResult(league, _summarize(rows, main, seed), reliability_table(
         [r["p"] for r in rows], [r["y"] for r in rows]) if rows else [], picks)
 
 
