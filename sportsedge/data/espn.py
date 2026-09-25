@@ -85,6 +85,8 @@ def parse_scoreboard(league: str, data: dict) -> list[Game]:
         season = ev.get("season") or {}
         if season.get("type") == 1 or season.get("slug") == "preseason":
             continue  # preseason / spring training says little about real strength
+        alias = ABBR_ALIASES.get(league, {})
+        habbr, aabbr = alias.get(habbr, habbr), alias.get(aabbr, aabbr)
         known = REGISTRY.get(league, {})
         if known and (habbr not in known or aabbr not in known):
             continue  # All-Star and exhibition games
@@ -130,6 +132,14 @@ def parse_scoreboard(league: str, data: dict) -> list[Game]:
             games.append(g)
     return games
 
+
+# alternate / historical codes -> the codes this project uses (e.g. the Athletics were "OAK" before 2025)
+ABBR_ALIASES = {
+    "MLB": {"OAK": "ATH", "AZ": "ARI", "CWS": "CHW", "WAS": "WSH", "SDP": "SD", "SFG": "SF", "TBR": "TB", "KCR": "KC"},
+    "NBA": {"GSW": "GS", "NOP": "NO", "NYK": "NY", "SAS": "SA", "UTA": "UTAH", "WAS": "WSH", "PHO": "PHX", "BRK": "BKN"},
+    "NHL": {"LAK": "LA", "NJD": "NJ", "SJS": "SJ", "TBL": "TB", "UTA": "UTAH", "WAS": "WSH"},
+    "NFL": {"WAS": "WSH", "LA": "LAR", "JAC": "JAX"},
+}
 
 last_day_failed = False  # set by fetch_day: True when ESPN did not answer
 
