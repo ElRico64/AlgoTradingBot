@@ -5,6 +5,7 @@
     python run.py --demo     demo board (fictional teams, no sports data needed)
     python run.py --live     today's real games, odds and news
     python run.py --watch    live board that refreshes every 30 minutes
+    python run.py --check    test which data sources this computer can reach
 
 The page opens in your browser at http://localhost:8000. Press Ctrl+C in this
 window to stop.
@@ -97,7 +98,8 @@ def build_live(leagues: list[str], first: bool) -> None:
 
     if first and not os.path.exists(os.path.join(DATA, "history")):
         say("First live run: downloading about two seasons of results from ESPN and training.")
-        say("This takes roughly 5-15 minutes once; later refreshes take about a minute.")
+        say("This takes roughly 10-25 minutes once (requests are paced so ESPN doesn't block them);")
+        say("later refreshes take about a minute.")
     use_llm = False
     if os.environ.get("ANTHROPIC_API_KEY"):
         try:
@@ -125,10 +127,18 @@ def main() -> None:
     g.add_argument("--demo", action="store_true", help="demo board with fictional teams")
     g.add_argument("--live", action="store_true", help="today's real games")
     g.add_argument("--watch", action="store_true", help="live board, refreshed every --every minutes")
+    g.add_argument("--check", action="store_true", help="test which data sources this computer can reach")
     ap.add_argument("--every", type=int, default=30, help="minutes between refreshes with --watch")
     ap.add_argument("--league", nargs="+", default=["MLB", "NHL", "NBA", "NFL"])
     ap.add_argument("--no-browser", action="store_true")
     a = ap.parse_args()
+    if a.check:
+        ensure_packages()
+        load_env_file()
+        from sportsedge.data.diagnose import check
+
+        check()
+        return
     if not (a.demo or a.live or a.watch):
         print("\nSportsedge\n  1) Demo board (fictional teams, works offline)\n"
               "  2) Live board for today\n  3) Live board, refreshed every 30 minutes\n")

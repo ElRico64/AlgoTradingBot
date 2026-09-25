@@ -13,6 +13,7 @@ from typing import Optional
 
 from ..news.feeds import ESPN_BASE, SPORT_PATH, _get_json
 from ..teams import REGISTRY
+from .official import canonical_id
 from ..types import Game, GameResult, MarketOdds
 
 log = logging.getLogger(__name__)
@@ -114,7 +115,7 @@ def parse_scoreboard(league: str, data: dict) -> list[Game]:
                 extras["live"] = {"home": int(float(h.get("score"))), "away": int(float(a.get("score")))}
             except (TypeError, ValueError):
                 pass
-        common = dict(game_id=str(ev.get("id")), league=league, start_time=start, home=habbr, away=aabbr,
+        common = dict(game_id=canonical_id(league, start, habbr, aabbr), league=league, start_time=start, home=habbr, away=aabbr,
                       neutral=bool(comp.get("neutralSite")), extras=extras)
         odds = _parse_odds(comp, habbr)
         if status.get("completed"):
@@ -130,14 +131,25 @@ def parse_scoreboard(league: str, data: dict) -> list[Game]:
     return games
 
 
+last_day_failed = False  # set by fetch_day: True when ESPN did not answer
+
+
+def fetch_scoreboard_raw(league: str, day: date) -> Optional[list[Game]]:
+    """Games on `day`, or None when ESPN could not be reached (vs. [] for no games)."""
+    data = _get_json(f"{ESPN_BASE}/{SPORT_PATH[league]}/scoreboard?dates={day:%Y%m%d}")
+    return None if data is None else parse_scoreboard(league, data)
+
+
 def fetch_scoreboard(league: str, day: date) -> list[Game]:
-    data = _get_json(f"{ESPN_BASE}/{SPORT_PATH[league]}/scoreboard?dates={day:%Y%m%d}&limit=300")
-    return parse_scoreboard(league, data) if data else []
+    return fetch_scoreboard_raw(league, day) or []
 
 
 def fetch_day(league: str, day: date) -> list[Game]:
     """Every game on `day` (US date): upcoming, live and final."""
-    return fetch_scoreboard(league, day)
+    global last_day_failed
+    games = fetch_scoreboard_raw(league, day)
+    last_day_failed = games is None
+    return games or []
 
 
 def fetch_slate(league: str, day: Optional[date] = None) -> list[Game]:
@@ -145,22 +157,43 @@ def fetch_slate(league: str, day: Optional[date] = None) -> list[Game]:
     return [g for g in fetch_scoreboard(league, day) if not isinstance(g, GameResult)]
 
 
-def fetch_history(league: str, start: date, end: date, pause: float = 0.05, workers: int = 6,
+last_history_failed_share = 0.0  # set by fetch_history
+# months with regular-season or playoff games; other days are skipped to spare requests
+SEASON_MONTHS = {"MLB": {3, 4, 5, 6, 7, 8, 9, 10, 11}, "NHL": {10, 11, 12, 1, 2, 3, 4, 5, 6},
+                 "NBA": {10, 11, 12, 1, 2, 3, 4, 5, 6}, "NFL": {9, 10, 11, 12, 1, 2}}
+
+
+def fetch_history(league: str, start: date, end: date, pause: float = 0.0, workers: int = 3,
                   progress=None) -> list[GameResult]:
-    """Download every completed game between two dates (a few parallel requests, politely paced)."""
+    """Download every completed game between two dates. Requests are paced by the
+    shared HTTP client; a refusing ESPN makes this return early with what it has."""
+    global last_history_failed_share
     from concurrent.futures import ThreadPoolExecutor
 
-    days = [start + timedelta(days=k) for k in range((end - start).days + 1)]
+    from .http import is_blocked
 
-    def one(d: date) -> list[GameResult]:
-        time.sleep(pause)
-        return [g for g in fetch_scoreboard(league, d) if isinstance(g, GameResult)]
+    months = SEASON_MONTHS.get(league)
+    days = [d for d in (start + timedelta(days=k) for k in range((end - start).days + 1))
+            if not months or d.month in months]
+    failed = 0
+
+    def one(d: date) -> Optional[list[Game]]:
+        if pause:
+            time.sleep(pause)
+        if is_blocked("site.api.espn.com") and is_blocked("site.web.api.espn.com"):
+            return None
+        return fetch_scoreboard_raw(league, d)
 
     out: list[GameResult] = []
     with ThreadPoolExecutor(max_workers=workers) as ex:
         for k, games in enumerate(ex.map(one, days), 1):
-            out.extend(games)
+            if games is None:
+                failed += 1
+            else:
+                out.extend(g for g in games if isinstance(g, GameResult))
             if progress and (k % 60 == 0 or k == len(days)):
-                progress(f"{league}: downloaded {k}/{len(days)} days, {len(out)} games")
+                progress(f"{league} (ESPN): {k}/{len(days)} days, {len(out)} games" +
+                         (f", {failed} days refused" if failed else ""))
+    last_history_failed_share = failed / max(1, len(days))
     out.sort(key=lambda g: g.start_time)
     return out

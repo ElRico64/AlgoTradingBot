@@ -23,19 +23,15 @@ log = logging.getLogger(__name__)
 
 SPORT_PATH = {"NFL": "football/nfl", "NBA": "basketball/nba", "MLB": "baseball/mlb", "NHL": "hockey/nhl"}
 ESPN_BASE = "https://site.api.espn.com/apis/site/v2/sports"
-UA = {"User-Agent": "sportsedge/0.1 (+research)"}
 
 POSITION_ROLE = {"QB": "QB", "G": "G", "SP": "SP", "K": "K"}
 
 
 def _get_json(url: str, timeout: float = 15.0) -> Optional[dict]:
-    try:
-        r = requests.get(url, headers=UA, timeout=timeout)
-        r.raise_for_status()
-        return r.json()
-    except Exception as e:  # network / JSON errors are non-fatal
-        log.warning("fetch failed %s: %s", url, e)
-        return None
+    """Resilient fetch (browser headers, pacing, retries, alternate host); None on failure."""
+    from ..data.http import get_json
+
+    return get_json(url, timeout=timeout)
 
 
 def _parse_time(s: Optional[str]) -> Optional[datetime]:
@@ -100,7 +96,9 @@ def fetch_espn_news(league: str, limit: int = 50) -> list[tuple[str, Optional[da
 
 def fetch_rss(url: str) -> list[tuple[str, Optional[datetime], Optional[str]]]:
     try:
-        r = requests.get(url, headers=UA, timeout=15)
+        from ..data.http import PROFILES
+
+        r = requests.get(url, headers=PROFILES[1], timeout=15)
         r.raise_for_status()
         root = ET.fromstring(r.content)
     except Exception as e:

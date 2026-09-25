@@ -410,7 +410,7 @@ def _with_status(gj: dict, g: Game) -> dict:
 def _load_engine(league: str, data_dir: str, day: date, bootstrap_days: int,
                  progress=None) -> tuple[LeagueEngine, list[GameResult]]:
     from .data.csv_io import read_results, write_results
-    from .data.espn import fetch_history
+    from .data.sources import fetch_history
 
     cache = os.path.join(data_dir, ".cache", f"{league}-{day.isoformat()}.pkl")
     if os.path.exists(cache):
@@ -424,7 +424,8 @@ def _load_engine(league: str, data_dir: str, day: date, bootstrap_days: int,
     merged.update({g.game_id: g for g in fetch_history(league, start, day - timedelta(days=1), progress=progress)})
     history = sorted(merged.values(), key=lambda g: g.start_time)
     if not history:
-        raise RuntimeError("No historical results available (is ESPN reachable?)")
+        raise RuntimeError("No historical results could be downloaded. Run `python3 run.py --check` to see which "
+                           "data sources your network can reach.")
     os.makedirs(os.path.dirname(hist_path), exist_ok=True)
     write_results(hist_path, history)
     if progress:
@@ -441,7 +442,7 @@ def _load_engine(league: str, data_dir: str, day: date, bootstrap_days: int,
 
 def run_league(league: str, data_dir: str, day: date, policy: PickPolicy, ledger: list[dict],
                odds_key: Optional[str], analyzer, bootstrap_days: int, progress=None) -> LeagueRun:
-    from .data.espn import fetch_day
+    from .data.sources import fetch_day
     from .news.feeds import gather_news
     from .news.impact import PlayerImpactRegistry, build_factors
 
@@ -528,8 +529,14 @@ def run_daily(leagues=ALL_LEAGUES, data_dir: str = "data", site_dir: str = "site
                 progress(f"{lg}: updating...")
             run = run_league(lg, data_dir, day, policy, ledger, odds_key, analyzer, bootstrap_days, progress)
         except Exception as e:  # one league failing must not take down the others
-            log.error("%s failed: %s\n%s", lg, e, traceback.format_exc())
-            run = LeagueRun(lg, "error", f"{type(e).__name__}: {e}")
+            from .data.sources import SourceUnavailable
+
+            if isinstance(e, SourceUnavailable):
+                log.warning("%s skipped: %s", lg, e)
+                run = LeagueRun(lg, "error", str(e))
+            else:
+                log.error("%s failed: %s\n%s", lg, e, traceback.format_exc())
+                run = LeagueRun(lg, "error", f"{type(e).__name__}: {e}")
         runs.append(run)
     os.makedirs(data_dir, exist_ok=True)
     with open(ledger_path, "w") as f:

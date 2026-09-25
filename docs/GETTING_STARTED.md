@@ -65,6 +65,13 @@ A window opens with a menu:
 
 **Type `1` and press Enter first.**
 
+Before the live board, you can check that your network can reach the
+sports data sources:
+
+```
+python3 run.py --check
+```
+
 * The first time, it installs three free Python packages (numpy, scipy,
   requests).
 * It then simulates four leagues and runs the full model on them. This takes
@@ -191,7 +198,8 @@ Leave `ANTHROPIC_API_KEY` unset to stay at $0.
 | Browser shows nothing | Open **http://localhost:8000** yourself. If port 8000 is busy, the window prints the address it used. |
 | "No games on the board" | That league is in its off-season or preseason today. |
 | First live run is slow | It's downloading two seasons of history once. Later runs take about a minute. |
-| A league shows "unavailable" | ESPN didn't answer. The next refresh retries automatically. |
+| `403 Forbidden` or "ESPN refused" | ESPN is blocking requests from your network. Run `python3 run.py --check` to see which sources work. Usual causes: a VPN, iCloud Private Relay (System Settings → your name → iCloud → Private Relay), a school or work network, or too many rapid requests (wait about 15 minutes). MLB and NHL switch to their official feeds automatically; NBA and NFL need ESPN. |
+| A league shows "unavailable" | Its data source didn't answer. The next refresh retries automatically. |
 | GitHub job fails on "git push" | Step 2 of Part 3: give workflows read-and-write permission. |
 
 ---
