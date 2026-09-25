@@ -683,6 +683,9 @@ footer p { margin: 0; max-width: 92ch; }
     renderHeader();
     Array.prototype.forEach.call(document.querySelectorAll("[data-cd]"), function (el) { el.textContent = countdown(el.getAttribute("data-cd")); });
   }, 30000);
+  // Opened as a file (e.g. ~/Sportsedge/site/index.html): reload now and then so
+  // background updates show up without a manual refresh.
+  if (location.protocol === "file:") { setInterval(function () { location.reload(); }, 10 * 60 * 1000); }
   // On the hosted site, pick up each scheduled refresh without a manual reload.
   if (/^https?:$/.test(location.protocol)) {
     setInterval(function () {

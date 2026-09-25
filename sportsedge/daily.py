@@ -407,16 +407,40 @@ def _with_status(gj: dict, g: Game) -> dict:
     return gj
 
 
+def _saved_engines(cache_dir: str, league: str) -> list[str]:
+    if not os.path.isdir(cache_dir):
+        return []
+    names = [n for n in os.listdir(cache_dir) if n.startswith(f"{league}-") and n.endswith(".pkl")]
+    return sorted(names, reverse=True)  # file names end in the ISO date, so newest first
+
+
+def _read_engine(path: str) -> Optional[LeagueEngine]:
+    from .engine import ENGINE_VERSION
+
+    try:
+        with open(path, "rb") as f:
+            eng = pickle.load(f)
+    except Exception:  # unreadable or from incompatible code
+        return None
+    return eng if getattr(eng, "version", None) == ENGINE_VERSION else None
+
+
 def _load_engine(league: str, data_dir: str, day: date, bootstrap_days: int,
                  progress=None) -> tuple[LeagueEngine, list[GameResult]]:
+    """Today's engine, from the fastest valid route:
+    1. already built today      -> load it (seconds);
+    2. built on an earlier day  -> load it and learn only the new results (seconds);
+    3. nothing usable saved     -> download history and train from scratch (minutes, once)."""
     from .data.csv_io import read_results, write_results
     from .data.sources import fetch_history
 
-    cache = os.path.join(data_dir, ".cache", f"{league}-{day.isoformat()}.pkl")
+    cache_dir = os.path.join(data_dir, ".cache")
+    cache = os.path.join(cache_dir, f"{league}-{day.isoformat()}.pkl")
     if os.path.exists(cache):
-        with open(cache, "rb") as f:
-            eng = pickle.load(f)
-        return eng, eng.history
+        eng = _read_engine(cache)
+        if eng is not None:
+            return eng, eng.history
+
     hist_path = os.path.join(data_dir, "history", f"{league}.csv")
     history = read_results(hist_path, league) if os.path.exists(hist_path) else []
     start = (history[-1].start_time.date() - timedelta(days=2)) if history else day - timedelta(days=bootstrap_days)
@@ -428,16 +452,36 @@ def _load_engine(league: str, data_dir: str, day: date, bootstrap_days: int,
                            "data sources your network can reach.")
     os.makedirs(os.path.dirname(hist_path), exist_ok=True)
     write_results(hist_path, history)
-    if progress:
-        progress(f"{league}: training on {len(history)} games (ratings, score models, pattern engine)...")
-    eng = LeagueEngine(league).fit(history)
-    os.makedirs(os.path.dirname(cache), exist_ok=True)
-    for old in os.listdir(os.path.dirname(cache)):
-        if old.startswith(f"{league}-") and old != os.path.basename(cache):
-            os.remove(os.path.join(os.path.dirname(cache), old))
-    with open(cache, "wb") as f:
+
+    eng = None
+    for name in _saved_engines(cache_dir, league):
+        if name >= os.path.basename(cache):
+            continue
+        eng = _read_engine(os.path.join(cache_dir, name))
+        if eng is not None:
+            break
+    if eng is not None and eng.history:
+        seen = {g.game_id for g in eng.history}
+        last = eng.history[-1].start_time
+        new = [g for g in history if g.game_id not in seen and g.start_time > last - timedelta(hours=12)]
+        if progress:
+            progress(f"{league}: updating saved models with {len(new)} new results...")
+        eng.observe(new)
+        eng.fit_calibrators()
+    else:
+        if progress:
+            progress(f"{league}: training on {len(history)} games (ratings, score models, pattern engine)... "
+                     "this is a one-time step")
+        eng = LeagueEngine(league).fit(history)
+    os.makedirs(cache_dir, exist_ok=True)
+    tmp = cache + ".tmp"
+    with open(tmp, "wb") as f:
         pickle.dump(eng, f)
-    return eng, history
+    os.replace(tmp, cache)  # atomic: a crash never leaves a half-written engine
+    for old in _saved_engines(cache_dir, league):
+        if old != os.path.basename(cache):
+            os.remove(os.path.join(cache_dir, old))
+    return eng, eng.history
 
 
 def run_league(league: str, data_dir: str, day: date, policy: PickPolicy, ledger: list[dict],

@@ -42,6 +42,11 @@ from .stats.calibration import StackingCalibrator
 from .stats.odds import devig
 from .types import Game, GameResult, MarketOdds, MarketProbability, Prediction
 
+# Bump when a code change makes previously saved engines incompatible; saved
+# engines from another version are retrained from scratch instead of reused.
+ENGINE_VERSION = 4
+
+
 def _logit(p: float) -> float:
     p = min(max(float(p), 1e-6), 1 - 1e-6)
     return math.log(p / (1 - p))
@@ -84,6 +89,7 @@ class _Point:
 class LeagueEngine:
     def __init__(self, league: str, settings: Optional[EngineSettings] = None,
                  config: Optional[LeagueConfig] = None):
+        self.version = ENGINE_VERSION
         self.cfg = config or get_config(league)
         self.league = self.cfg.league
         self.s = settings or EngineSettings()

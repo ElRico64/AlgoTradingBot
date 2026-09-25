@@ -83,19 +83,56 @@ python3 run.py --check
 
 ### Step 4: The live board
 
-Start again and choose **2**, or **3** to keep it refreshing.
+Start again and pick from the menu:
 
-* **First live run:** it downloads about two seasons of real results from
-  ESPN and trains the models. That takes roughly 5–15 minutes, once. Later
-  runs take about a minute.
-* **What's on the board:** today's real games for MLB, NHL, NBA and NFL
-  (the NFL shows the whole week), with ESPN's posted odds, live injury news,
-  and picks.
-* **Leagues in the off-season or preseason show no games.** In late
-  September, for example, that means MLB and NFL only. NHL and NBA join when
-  their regular seasons start in October.
-* **Option 3** re-pulls news, odds and scores every 30 minutes, and the open
-  page updates itself.
+```
+  1) Live board: update now, then show it
+  2) Live board: show it and keep it updated every 30 minutes (while this window is open)
+  3) Just open my board (no update)
+  4) Background updates ON  (keeps picks and track record updated even when Terminal is closed)
+  5) Background updates OFF
+  6) Demo board (fictional teams)
+  7) Check data sources
+```
+
+**The first live run is long, once.** It downloads about two seasons of
+results and trains the models, which takes roughly 10–25 minutes. After
+that:
+
+* **Starting again the same day:** your last board opens right away. The
+  update runs in the background, and the page refreshes itself when it's
+  done.
+* **A new day:** the saved models learn only the new results, which takes
+  a minute or two.
+
+**Your data is saved in `~/Sportsedge`**, the Sportsedge folder in your home
+folder. That includes the game history, the trained models, the board, and
+the pick ledger, which is your track record.
+
+* It survives closing Terminal, restarting the Mac, and downloading new
+  versions of the code.
+* The first time a new version runs, it moves your data there from the old
+  download folder automatically.
+* Picks are graded as soon as their games finish, the next time an update
+  runs. Picks from days you weren't running are graded on the next run.
+
+**Background updates (option 4, Mac):**
+
+* A small scheduled task updates the board every 30 minutes while your Mac
+  is awake, even when Terminal is closed.
+* To look at the board, run `python3 run.py --open`, or double-click
+  `~/Sportsedge/site/index.html`. The file version reloads itself every 10
+  minutes.
+* After you download a new version of the code, choose option 4 again so
+  the background job uses it.
+* Option 5 turns the background updates off. Your data is kept.
+
+**What you'll see:**
+
+* Today's real games for MLB, NHL, NBA and NFL (the NFL shows the whole
+  week), with ESPN's posted odds, live injury news and picks.
+* No games for leagues in their off-season or preseason. In late September,
+  for example, that means MLB and NFL only.
 
 ### Step 5 (optional): Add a free odds key
 

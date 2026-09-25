@@ -106,3 +106,35 @@ def test_full_daily_run_offline(tmp_path, monkeypatch):
         assert e["status"] in ("won", "lost", "push", "withdrawn")
         if e["status"] != "withdrawn":
             assert e["final"] and e["profit"] is None  # graded W/L; no price, so no units
+
+
+def test_next_day_update_matches_full_retrain(tmp_path, monkeypatch):
+    """A new day loads yesterday's saved engine and learns only the new results;
+    the forecast must equal training from scratch. Stale versions are retrained."""
+    import pickle
+
+    from sportsedge.daily import _load_engine
+    from sportsedge.engine import LeagueEngine
+
+    games = generate("NBA", seasons=1, seed=3)
+    days = sorted({g.start_time.date() for g in games})
+
+    def fake_history(league, start, end, progress=None, **kw):
+        espn.last_history_failed_share = 0.0
+        return [g for g in games if start <= g.start_time.date() <= end]
+
+    monkeypatch.setattr(espn, "fetch_history", fake_history)
+    _load_engine("NBA", str(tmp_path), days[-6], 400)
+    eng, _ = _load_engine("NBA", str(tmp_path), days[-1], 400)
+    full = LeagueEngine("NBA").fit([g for g in games if g.start_time.date() < days[-1]])
+    g = next(x for x in games if x.start_time.date() == days[-1])
+    assert eng.predict(g, g.odds, n_draws=300).home_win_prob == pytest.approx(
+        full.predict(g, g.odds, n_draws=300).home_win_prob, abs=1e-9)
+    cache = tmp_path / ".cache"
+    assert [p.name for p in cache.iterdir()] == [f"NBA-{days[-1].isoformat()}.pkl"]  # old engine cleaned up
+    # an engine saved by older code is ignored and rebuilt, never reused
+    eng.version = -1
+    with open(cache / f"NBA-{days[-1].isoformat()}.pkl", "wb") as f:
+        pickle.dump(eng, f)
+    rebuilt, _ = _load_engine("NBA", str(tmp_path), days[-1], 400)
+    assert rebuilt.version != -1
