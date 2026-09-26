@@ -49,7 +49,8 @@ def check(print_fn=print) -> bool:
     official = [lg for lg, label in (("MLB", "MLB official (statsapi.mlb.com)"), ("NHL", "NHL official (api-web.nhle.com)"))
                 if ok_any[label]]
     if espn_ok:
-        print_fn("ESPN is reachable: all four leagues, odds and injury news will work.")
+        print_fn("ESPN is reachable: all four leagues and injury news will work.")
+        odds_report(print_fn)
     else:
         print_fn("ESPN is refusing this network, so NBA and NFL can't load and there are no posted odds.")
         if official:
@@ -60,3 +61,32 @@ def check(print_fn=print) -> bool:
     if not espn_ok and not official:
         print_fn("\nNo sports data source is reachable from here: check your internet connection.")
     return espn_ok
+
+
+def odds_report(print_fn=print) -> None:
+    """How many of today's upcoming games come with betting lines from ESPN."""
+    from datetime import timedelta
+
+    from ..daily import today_eastern
+    from . import espn
+
+    day = today_eastern()
+    print_fn("\nBetting lines on ESPN (today; NFL: next 7 days):")
+    for lg in ("MLB", "NHL", "NBA", "NFL"):
+        games = []
+        for k in range(7 if lg == "NFL" else 1):
+            games += [g for g in espn.fetch_scoreboard(lg, day + timedelta(days=k))
+                      if (g.extras.get("status") or {}).get("state") == "pre"]
+        if not games:
+            print_fn(f"  {lg}: no upcoming games")
+            continue
+        board = sum(1 for g in games if g.extras.get("odds") is not None and g.extras["odds"].has_moneyline())
+        page = 0
+        tried = [g for g in games if not (g.extras.get("odds") and g.extras["odds"].has_moneyline())][:3]
+        for g in tried:
+            o = espn.fetch_game_odds(lg, g.extras.get("espn_id"), g.home, g.away) if g.extras.get("espn_id") else None
+            page += bool(o and o.has_moneyline())
+        msg = f"  {lg}: {board}/{len(games)} games have a moneyline on the scoreboard"
+        if tried:
+            msg += f"; game pages: {page}/{len(tried)} checked have one"
+        print_fn(msg)

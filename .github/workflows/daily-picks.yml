@@ -89,11 +89,12 @@ jobs:
           path: data/.cache
           key: sportsedge-${{ steps.day.outputs.day }}-${{ github.run_id }}
 
-      - name: Commit history and the pick ledger
+      - name: Commit history, odds and the pick ledger
         run: |
           git config user.name "sportsedge-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/history data/ledger.json
+          mkdir -p data/odds
+          git add data/history data/odds data/ledger.json
           if git diff --cached --quiet; then echo "no record changes"; exit 0; fi
           git commit -m "Picks update $(date -u '+%F %H:%M') UTC"
           git pull --rebase --autostash

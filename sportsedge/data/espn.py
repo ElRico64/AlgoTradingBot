@@ -20,32 +20,107 @@ log = logging.getLogger(__name__)
 
 
 def _num(v) -> Optional[float]:
+    """Parse ESPN numbers: 8.5, "-150", "+130", "EVEN", "o8.5", "u8.5"."""
+    if v is None or isinstance(v, bool):
+        return None
+    if isinstance(v, (int, float)):
+        return float(v)
+    t = str(v).strip().upper()
+    if t in ("EVEN", "EV"):
+        return 100.0
+    if t in ("PK", "PICK"):
+        return 0.0
+    t = t.lstrip("OU").replace("+", "").replace(",", "")
     try:
-        return float(str(v).replace("+", "")) if v not in (None, "", "EVEN") else (100.0 if v == "EVEN" else None)
+        return float(t)
     except ValueError:
         return None
 
 
-def _parse_odds(comp: dict, home_abbr: str) -> Optional[MarketOdds]:
-    odds_list = comp.get("odds") or []
-    if not odds_list:
+def _price(v) -> Optional[float]:
+    """An American price; anything between -100 and +100 is not one."""
+    x = _num(v)
+    return x if x is not None and abs(x) >= 100 else None
+
+
+def _quote(node, key: str) -> Optional[float]:
+    """Newer ESPN layout: {"close": {...}, "current": {...}, "open": {...}} -> latest value of `key`."""
+    if not isinstance(node, dict):
         return None
-    o = odds_list[0]
+    for when in ("close", "current", "open"):
+        leaf = node.get(when)
+        if isinstance(leaf, dict) and leaf.get(key) not in (None, ""):
+            v = _num(leaf.get(key))
+            if v is not None:
+                return v
+    return None
+
+
+def _parse_one(o: dict, league: str, home_abbr: str, away_abbr: str) -> Optional[MarketOdds]:
     ho, ao = o.get("homeTeamOdds") or {}, o.get("awayTeamOdds") or {}
-    spread = None
-    details = o.get("details") or ""
-    m = re.match(r"^\s*([A-Z]{2,4})\s+([+-]?\d+(\.\d+)?)\s*$", details)
+    ml, ps, tot = o.get("moneyline") or {}, o.get("pointSpread") or {}, o.get("total")
+    tot = tot if isinstance(tot, dict) else {}
+
+    # moneyline: legacy homeTeamOdds.moneyLine, then moneyline.home.close.odds
+    home_ml = _price(ho.get("moneyLine")) or _price(_quote(ml.get("home"), "odds"))
+    away_ml = _price(ao.get("moneyLine")) or _price(_quote(ml.get("away"), "odds"))
+
+    # spread, quoted from the home side
+    spread = _quote(ps.get("home"), "line")
+    if spread is None:
+        away_line = _quote(ps.get("away"), "line")
+        spread = -away_line if away_line is not None else None
+    details = str(o.get("details") or "").strip()
+    m = re.match(r"^([A-Z]{2,4})\s+([+-]?\d+(\.\d+)?)$", details.upper())
     if m:
+        team = ABBR_ALIASES.get(league, {}).get(m.group(1), m.group(1))
         v = float(m.group(2))
-        spread = v if m.group(1) == home_abbr else -v
-    elif details.strip().upper() in ("EVEN", "PK", "PICK"):
+        # MLB/NHL boards often show the favourite's moneyline here ("NYY -155"), not a spread
+        if abs(v) < 60 and spread is None and team in (home_abbr, away_abbr):
+            spread = v if team == home_abbr else -v
+    elif spread is None and details.upper() in ("EVEN", "PK", "PICK"):
         spread = 0.0
+    if spread is not None and abs(spread) > 60:
+        spread = None  # a price, not a line
+
+    home_sp = _price(ho.get("spreadOdds")) or _price(_quote(ps.get("home"), "odds"))
+    away_sp = _price(ao.get("spreadOdds")) or _price(_quote(ps.get("away"), "odds"))
+
+    total = _num(o.get("overUnder"))
+    if total is None:
+        total = _quote(tot.get("over"), "line") or _quote(tot.get("under"), "line")
+    if total is not None and not (0 < total < 400):
+        total = None
+    over_p = _price(o.get("overOdds")) or _price(_quote(tot.get("over"), "odds"))
+    under_p = _price(o.get("underOdds")) or _price(_quote(tot.get("under"), "odds"))
+
     mo = MarketOdds(
-        home_ml=_num(ho.get("moneyLine")), away_ml=_num(ao.get("moneyLine")), spread=spread,
-        home_spread_price=_num(ho.get("spreadOdds")) or -110.0, away_spread_price=_num(ao.get("spreadOdds")) or -110.0,
-        total=_num(o.get("overUnder")), over_price=_num(o.get("overOdds")) or -110.0,
-        under_price=_num(o.get("underOdds")) or -110.0, source=(o.get("provider") or {}).get("name", "espn"))
+        home_ml=home_ml, away_ml=away_ml, spread=spread,
+        home_spread_price=home_sp or -110.0, away_spread_price=away_sp or -110.0,
+        total=total, over_price=over_p or -110.0, under_price=under_p or -110.0,
+        source=(o.get("provider") or {}).get("name") or "espn")
     return mo if (mo.has_moneyline() or mo.spread is not None or mo.total is not None) else None
+
+
+def parse_odds_list(odds_list, league: str, home_abbr: str, away_abbr: str) -> Optional[MarketOdds]:
+    """First usable entry of an ESPN odds / pickcenter list, highest-priority provider first."""
+    if not isinstance(odds_list, list):
+        return None
+    entries = [o for o in odds_list if isinstance(o, dict)]
+    entries.sort(key=lambda o: (o.get("provider") or {}).get("priority", 99) or 99)
+    best = None
+    for o in entries:
+        mo = _parse_one(o, league, home_abbr, away_abbr)
+        if mo is None:
+            continue
+        if mo.has_moneyline():
+            return mo
+        best = best or mo
+    return best
+
+
+def _parse_odds(comp: dict, league: str, home_abbr: str, away_abbr: str) -> Optional[MarketOdds]:
+    return parse_odds_list(comp.get("odds") or [], league, home_abbr, away_abbr)
 
 
 def _probable(c: dict) -> Optional[dict]:
@@ -95,6 +170,8 @@ def parse_scoreboard(league: str, data: dict) -> list[Game]:
         except Exception:
             continue
         extras: dict = {}
+        if ev.get("id"):
+            extras["espn_id"] = str(ev["id"])
         if league == "MLB":
             hp, ap = _probable(h), _probable(a)
             if hp:
@@ -119,7 +196,7 @@ def parse_scoreboard(league: str, data: dict) -> list[Game]:
                 pass
         common = dict(game_id=canonical_id(league, start, habbr, aabbr), league=league, start_time=start, home=habbr, away=aabbr,
                       neutral=bool(comp.get("neutralSite")), extras=extras)
-        odds = _parse_odds(comp, habbr)
+        odds = _parse_odds(comp, league, habbr, aabbr)
         if status.get("completed"):
             try:
                 games.append(GameResult(**common, home_score=int(float(h.get("score"))),
@@ -160,6 +237,16 @@ def fetch_day(league: str, day: date) -> list[Game]:
     games = fetch_scoreboard_raw(league, day)
     last_day_failed = games is None
     return games or []
+
+
+def fetch_game_odds(league: str, espn_id: str, home: str, away: str) -> Optional[MarketOdds]:
+    """One game's lines from its ESPN game page ("pickcenter"), which often has
+    prices when the scoreboard shows none."""
+    data = _get_json(f"{ESPN_BASE}/{SPORT_PATH[league]}/summary?event={espn_id}")
+    if not data:
+        return None
+    return (parse_odds_list(data.get("pickcenter") or [], league, home, away)
+            or parse_odds_list(data.get("odds") or [], league, home, away))
 
 
 def fetch_slate(league: str, day: Optional[date] = None) -> list[Game]:

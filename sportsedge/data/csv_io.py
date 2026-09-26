@@ -74,7 +74,7 @@ def read_slate(path: str, league: str) -> list[Game]:
     return games
 
 
-DISPLAY_ONLY = ("status", "teams", "live", "odds")
+DISPLAY_ONLY = ("status", "teams", "live", "odds", "espn_id")
 
 
 def _model_extras(extras: dict) -> dict:

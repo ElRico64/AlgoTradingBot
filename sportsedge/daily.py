@@ -36,7 +36,7 @@ from .news.impact import AvailabilityFactor
 from .picks import PickPolicy, confidence_policy, value_line
 from .stats.odds import american_to_decimal, breakeven_probability, prob_to_american
 from .teams import REGISTRY
-from .types import Game, GameResult, NewsEvent, Pick, Prediction
+from .types import Game, GameResult, MarketOdds, NewsEvent, Pick, Prediction
 
 log = logging.getLogger(__name__)
 
@@ -230,6 +230,86 @@ def news_json(ev: NewsEvent, names: dict | None) -> dict:
     return {"league": ev.league, "team": _code(ev.team, names), "player": ev.player, "status": ev.status,
             "event": ev.event_type, "role": ev.role, "text": ev.text[:280], "source": ev.source,
             "published": ev.published.isoformat() if ev.published else None}
+
+
+# ------------------------------------------------------------------- odds store
+# The last pre-game line of every game, kept in data/odds/{league}.json. ESPN
+# drops the odds from finished games, so this is how results get their closing
+# lines: the store is attached to the history, which feeds the market blend and
+# the "beat the market" gates.
+
+_ODDS_FIELDS = ("home_ml", "away_ml", "spread", "home_spread_price", "away_spread_price",
+                "total", "over_price", "under_price", "source")
+
+
+def _odds_store_path(data_dir: str, league: str) -> str:
+    return os.path.join(data_dir, "odds", f"{league}.json")
+
+
+def load_odds_store(data_dir: str, league: str) -> dict:
+    p = _odds_store_path(data_dir, league)
+    try:
+        with open(p) as f:
+            st = json.load(f)
+        return st if isinstance(st, dict) else {}
+    except (OSError, ValueError):
+        return {}
+
+
+def save_odds_store(data_dir: str, league: str, store: dict) -> None:
+    p = _odds_store_path(data_dir, league)
+    os.makedirs(os.path.dirname(p), exist_ok=True)
+    tmp = p + ".tmp"
+    with open(tmp, "w") as f:
+        json.dump(store, f, indent=0, sort_keys=True)
+    os.replace(tmp, p)
+
+
+def remember_odds(store: dict, games: list, odds_map: dict) -> int:
+    """Record the current line of every game that has not started. Returns how many games have odds."""
+    n = 0
+    for g in games:
+        if _state(g) != "pre":
+            continue
+        o = odds_map.get((g.home, g.away)) or (g.extras or {}).get("odds")
+        if o is None:
+            continue
+        store[g.game_id] = {k: getattr(o, k) for k in _ODDS_FIELDS}
+        n += 1
+    return n
+
+
+def attach_stored_odds(history: list, store: dict) -> int:
+    """Give finished games without odds their stored pre-game line. Returns how many were filled."""
+    n = 0
+    for g in history:
+        if g.odds is None and g.game_id in store:
+            v = store[g.game_id]
+            g.odds = MarketOdds(**{k: v[k] for k in _ODDS_FIELDS if k in v})
+            n += 1
+    return n
+
+
+def fill_espn_odds(league: str, games: list, max_calls: int = 40) -> int:
+    """Upcoming games whose scoreboard entry has no moneyline: read that game's ESPN page."""
+    from .data import espn
+
+    n = 0
+    for g in games:
+        if n >= max_calls or _state(g) != "pre":
+            continue
+        cur = (g.extras or {}).get("odds")
+        eid = (g.extras or {}).get("espn_id")
+        if not eid or (cur is not None and cur.has_moneyline()):
+            continue
+        n += 1
+        try:
+            o = espn.fetch_game_odds(league, eid, g.home, g.away)
+        except Exception:  # odds are optional; never fail a run over them
+            o = None
+        if o is not None and (cur is None or o.has_moneyline()):
+            g.extras["odds"] = o
+    return n
 
 
 # ------------------------------------------------------------------- odds budget
@@ -466,6 +546,7 @@ def _load_engine(league: str, data_dir: str, day: date, bootstrap_days: int,
     merged = {g.game_id: g for g in history}
     merged.update({g.game_id: g for g in fetch_history(league, start, day - timedelta(days=1), progress=progress)})
     history = sorted(merged.values(), key=lambda g: g.start_time)
+    attach_stored_odds(history, load_odds_store(data_dir, league))
     if not history:
         raise RuntimeError("No historical results could be downloaded. Run `python3 run.py --check` to see which "
                            "data sources your network can reach.")
@@ -521,6 +602,7 @@ def run_league(league: str, data_dir: str, day: date, policy: PickPolicy, ledger
     upcoming = [g for g in games if _state(g) == "pre"]
     odds_map, events, factors = {}, [], []
     if upcoming:
+        fill_espn_odds(league, [g for g in upcoming if g.start_time - datetime.now(timezone.utc).replace(tzinfo=None) < timedelta(hours=36)])
         if odds_key:
             from .data.oddsapi import fetch_odds
 
@@ -547,6 +629,9 @@ def run_league(league: str, data_dir: str, day: date, policy: PickPolicy, ledger
                         previous=previous)
     if odds_map:
         run.odds_source = "the-odds-api"
+    store = load_odds_store(data_dir, league)
+    if remember_odds(store, games, odds_map):
+        save_odds_store(data_dir, league, store)
     os.makedirs(os.path.dirname(board_path), exist_ok=True)
     with open(board_path, "w") as f:
         json.dump({"date": day.isoformat(), "games": run.games}, f)

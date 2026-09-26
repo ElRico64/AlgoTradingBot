@@ -123,7 +123,11 @@ fictional teams and players, so you can see it before anything is set up.
 * **Each refresh after that** (10 a day on GitHub around game times, or
   every 30 minutes with `python run.py --watch` on your own computer):
   * pulls the scoreboard (upcoming, live and final games), fresh odds and
-    fresh injury news;
+    fresh injury news. When the scoreboard has no moneyline for a game, it
+    reads that game's own ESPN page;
+  * saves each game's last pre-game line in `data/odds/`. ESPN drops the
+    odds from finished games, so this is how the history gets its closing
+    lines for the market blend;
   * re-predicts every game that hasn't started, and grades finished picks.
 * **At the start of a game:** its prediction locks.
 * **Withdrawals:** if news before the start pushes a published pick below the
