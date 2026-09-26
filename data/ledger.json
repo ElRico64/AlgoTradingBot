@@ -29,8 +29,10 @@
    "news: Willi Castro (COL, out) P(plays)=82% impact\u22480.08\u00b10.06"
   ],
   "published_at": "2026-09-25T06:16:11+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": null,
+  "graded_at": "2026-09-26T06:11:08+00:00",
+  "final": "COL 1 \u2013 CHW 6"
  },
  {
   "id": "confidence:2026-09-27:NFL-20260927-SEA-WSH-13:moneyline:away",
@@ -261,6 +263,40 @@
    "news: Ronnie Harrison Jr. (MIA, ir) P(plays)=68% impact\u22480.12\u00b10.12"
   ],
   "published_at": "2026-09-25T06:29:52+00:00",
+  "status": "pending",
+  "profit": null
+ },
+ {
+  "id": "confidence:2026-09-26:MLB-20260926-COL-CHW-19:moneyline:home",
+  "tier": "confidence",
+  "date": "2026-09-26",
+  "league": "MLB",
+  "game_id": "MLB-20260926-COL-CHW-19",
+  "start": "2026-09-26T23:10:00",
+  "home": "CHW",
+  "away": "COL",
+  "label": "CHW ML",
+  "market": "moneyline",
+  "side": "home",
+  "line": null,
+  "price": null,
+  "p": 0.7097,
+  "lower": 0.6789,
+  "upper": 0.7398,
+  "fair": null,
+  "edge": null,
+  "ev": null,
+  "value_line": -236,
+  "stake": 0.0,
+  "reasons": [
+   "calibrated P(win)=71.0% \u2265 70%",
+   "80% credible band 67.9%\u201374.0% (lower \u2265 62%)",
+   "home-win components: kalman 64.2%, elo 71.6%, count 58.3%, pattern 64.2%",
+   "adjustments: away_SP_log_runs_allowed +0.04, news_margin_mean -0.02, home_SP_log_runs_allowed -0.02, weather_log_runs -0.01",
+   "news: Chase Meidroth (CHW, day-to-day) P(plays)=62% impact\u22480.08\u00b10.06",
+   "news: Willi Castro (COL, out) P(plays)=86% impact\u22480.08\u00b10.06"
+  ],
+  "published_at": "2026-09-26T06:11:10+00:00",
   "status": "pending",
   "profit": null
  }
