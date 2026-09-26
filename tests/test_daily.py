@@ -138,3 +138,15 @@ def test_next_day_update_matches_full_retrain(tmp_path, monkeypatch):
         pickle.dump(eng, f)
     rebuilt, _ = _load_engine("NBA", str(tmp_path), days[-1], 400)
     assert rebuilt.version != -1
+
+
+def test_grading_survives_a_moved_start_time():
+    from sportsedge.daily import settle_ledger
+
+    entry = dict(_entry("moneyline", "home", None), game_id="MLB-20260925-COL-CHW-19", league="MLB",
+                 date="2026-09-25", home="CHW", away="COL", start="2026-09-25T23:10:00")
+    # the final arrived with a different id (start moved an hour / other data source)
+    final = GameResult("MLB-20260925-COL-CHW-20", "MLB", datetime(2026, 9, 26, 0, 40), "CHW", "COL",
+                       home_score=5, away_score=2)
+    assert settle_ledger([entry], {final.game_id: final}, date(2026, 9, 26)) == 1
+    assert entry["status"] == "won" and entry["final"] == "COL 2 – CHW 5"

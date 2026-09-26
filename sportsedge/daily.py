@@ -112,12 +112,31 @@ def grade(entry: dict, result: GameResult) -> dict:
     return entry
 
 
+def _match_result(e: dict, results: dict[str, GameResult], by_teams: dict) -> Optional[GameResult]:
+    """Find a pick's final: by game id, else by league + US date + teams (a start time
+    that moved, or a result that came from another data source), choosing the
+    closest start time for doubleheaders."""
+    r = results.get(e["game_id"])
+    if r is not None:
+        return r
+    cands = by_teams.get((e.get("league"), e.get("date"), e.get("home"), e.get("away")), [])
+    if not cands:
+        return None
+    if len(cands) == 1 or not e.get("start"):
+        return cands[0]
+    start = datetime.fromisoformat(e["start"])
+    return min(cands, key=lambda g: abs((g.start_time - start).total_seconds()))
+
+
 def settle_ledger(ledger: list[dict], results: dict[str, GameResult], today: date) -> int:
+    by_teams: dict = {}
+    for r in results.values():
+        by_teams.setdefault((r.league, game_day(r), r.home, r.away), []).append(r)
     n = 0
     for e in ledger:
         if e.get("status") != "pending":
             continue
-        r = results.get(e["game_id"])
+        r = _match_result(e, results, by_teams)
         if r is not None:
             grade(e, r)
             n += 1

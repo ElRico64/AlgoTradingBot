@@ -297,7 +297,8 @@ footer p { margin: 0; max-width: 92ch; }
           </div>
         </div>
         <div class="seg" role="group" aria-label="Record for" id="rtier" style="justify-self:start">
-          <button type="button" data-t="value" aria-pressed="true">Best bets</button>
+          <button type="button" data-t="all" aria-pressed="true">All picks</button>
+          <button type="button" data-t="value" aria-pressed="false">Best bets</button>
           <button type="button" data-t="confidence" aria-pressed="false">70%+ picks</button>
         </div>
         <div class="figs" id="figs"></div>
@@ -333,7 +334,7 @@ footer p { margin: 0; max-width: 92ch; }
   var S = {
     league: LEAGUES.indexOf(hashLeague) >= 0 ? hashLeague : store.get("league", "ALL"),
     range: store.get("range", "30"), fmt: store.get("fmt", "us"), tier: store.get("tier", "value"),
-    rtier: store.get("rtier", "value"), sort: "time", show: "all", q: "", open: {}
+    rtier: store.get("rtier2", "all"), sort: "time", show: "all", q: "", open: {}
   };
   if (LEAGUES.indexOf(S.league) < 0) S.league = "ALL";
   var gate = DATA.gate || { min_probability: 0.7, min_lower_bound: 0.62, min_ev: 0.01 };
@@ -349,9 +350,13 @@ footer p { margin: 0; max-width: 92ch; }
   function toDate(iso) { return new Date(/[zZ]|[+-]\d\d:?\d\d$/.test(iso) ? iso : iso + "Z"); }
   function clock(iso) { return toDate(iso).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }); }
   function dayLabel(iso) {
-    var d = toDate(iso), t = new Date(DATA.date + "T12:00:00");
+    // relative to the viewer's today, so a board left open overnight still reads right
+    var d = toDate(iso), t = new Date();
     var diff = Math.round((new Date(d.getFullYear(), d.getMonth(), d.getDate()) - new Date(t.getFullYear(), t.getMonth(), t.getDate())) / 864e5);
-    return diff === 0 ? "" : diff === 1 ? "Tomorrow " : d.toLocaleDateString([], { weekday: "short" }) + " ";
+    if (diff === 0) return "Today ";
+    if (diff === 1) return "Tomorrow ";
+    if (diff === -1) return "Yesterday ";
+    return d.toLocaleDateString([], { weekday: "short", month: "short", day: "numeric" }) + " ";
   }
   function countdown(iso) {
     var ms = toDate(iso) - Date.now();
@@ -446,13 +451,14 @@ footer p { margin: 0; max-width: 92ch; }
     $("hero").innerHTML = '<section class="hero" style="--c-away:' + esc(g.away.color) + ";--c-home:" + esc(g.home.color) + '" aria-label="Top pick"><div class="hero-in"><div>' +
       '<span class="eyebrow"><span class="star">★</span> Top pick · ' + tierName + " · " + e.league + " · " + (g.state === "pre" ? cd(e.start) : esc(g.detail || "")) + "</span>" +
       "<h1>" + esc(pickTeam ? pickTeam.name : e.label) + (e.market === "moneyline" ? " to win" : "") + "</h1>" +
-      '<div class="sub">' + esc(e.label) + " at " + odds(e.price) + " · " + esc(g.away.name) + " at " + esc(g.home.name) + " · " + dayLabel(e.start) + clock(e.start) + "</div>" +
+      '<div class="sub">' + esc(e.label) + (e.price != null ? " at " + odds(e.price) : "") + " · " + esc(g.away.name) + " at " + esc(g.home.name) + " · " + dayLabel(e.start) + clock(e.start) + "</div>" +
       '<div class="faceoff"><div class="team-lg">' + badge(g.away, 52) + '<div class="nm">' + esc(g.away.abbr) + "<small>" + esc(g.away.record || "Away") + '</small></div></div><span class="vs">@</span>' +
       '<div class="team-lg">' + badge(g.home, 52) + '<div class="nm">' + esc(g.home.abbr) + "<small>" + esc(g.home.record || "Home") + "</small></div></div></div></div>" +
       '<div class="hero-side"><div class="hero-ring">' + ring(e.p, 104, true) + '<div class="lbl"><b>' + pct(e.p) + " to win</b>band " + pct(e.lower, 0) + "–" + pct(e.upper || e.p, 0) + "</div></div>" +
       '<div class="hero-stats"><div class="hstat"><div class="k">Price</div><div class="v">' + odds(e.price) + '</div></div><div class="hstat"><div class="k">Worth it at</div><div class="v">' + odds(e.value_line) + ' or better</div></div>' +
       (e.ev != null ? '<div class="hstat"><div class="k">Value</div><div class="v">' + sgnPct(e.ev) + "</div></div>" : "") + "</div>" +
-      (news ? '<div class="newsline"><b>' + esc(news.status.toUpperCase()) + "</b> · " + esc(news.text) + "</div>" : "") + "</div></div></section>";
+      (news ? '<div class="newsline"><b>' + esc(news.status.toUpperCase()) + "</b> · " + esc(news.text) +
+        (news.published ? ' <span style="opacity:.7">(' + ago(news.published) + ")</span>" : "") + "</div>" : "") + "</div></div></section>";
   }
   var TIER_HELP = {
     value: "Best bets win at least 70% of the time by the model's estimate AND pay enough at today's price to be worth it over the long run.",
@@ -579,7 +585,15 @@ footer p { margin: 0; max-width: 92ch; }
   function ledgerView() {
     var cut = null;
     if (S.range !== "all") { var c = new Date(DATA.date + "T12:00:00"); c.setDate(c.getDate() - Number(S.range)); cut = c.toISOString().slice(0, 10); }
-    return (DATA.ledger || []).filter(inLeague).filter(function (e) { return (e.tier || "value") === S.rtier && (!cut || e.date >= cut); });
+    var rows = (DATA.ledger || []).filter(inLeague).filter(function (e) { return !cut || e.date >= cut; });
+    if (S.rtier !== "all") return rows.filter(function (e) { return (e.tier || "value") === S.rtier; });
+    // All picks: a bet published in both tiers counts once (keep the best-bet entry)
+    var seen = {}, out = [];
+    rows.slice().sort(function (a, b) { return (a.tier === "value" ? 0 : 1) - (b.tier === "value" ? 0 : 1); }).forEach(function (e) {
+      var k = e.league + ":" + e.game_id + ":" + e.market + ":" + e.side;
+      if (!seen[k]) { seen[k] = 1; out.push(e); }
+    });
+    return out;
   }
   function renderRecord() {
     Array.prototype.forEach.call($("range").querySelectorAll("button"), function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-r") === S.range); });
@@ -659,7 +673,7 @@ footer p { margin: 0; max-width: 92ch; }
     render();
   });
   $("tierseg").addEventListener("click", function (e) { var b = e.target.closest("[data-t]"); if (!b) return; S.tier = b.getAttribute("data-t"); store.set("tier", S.tier); renderPicks(); });
-  $("rtier").addEventListener("click", function (e) { var b = e.target.closest("[data-t]"); if (!b) return; S.rtier = b.getAttribute("data-t"); store.set("rtier", S.rtier); renderRecord(); });
+  $("rtier").addEventListener("click", function (e) { var b = e.target.closest("[data-t]"); if (!b) return; S.rtier = b.getAttribute("data-t"); store.set("rtier2", S.rtier); renderRecord(); });
   $("range").addEventListener("click", function (e) { var b = e.target.closest("[data-r]"); if (!b) return; S.range = b.getAttribute("data-r"); store.set("range", S.range); renderRecord(); });
   function setFmt(f) { S.fmt = f; store.set("fmt", f); $("fmt-us").setAttribute("aria-pressed", f === "us"); $("fmt-dec").setAttribute("aria-pressed", f === "dec"); render(); }
   $("fmt-us").addEventListener("click", function () { setFmt("us"); });

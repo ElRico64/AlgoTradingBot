@@ -9,6 +9,7 @@
     python3 run.py --background off stop the background updates
     python3 run.py --demo           demo board (fictional teams)
     python3 run.py --check          test which data sources this computer can reach
+    python3 run.py --record         print your saved picks and how they were graded
 
 Your data (game history, trained models, the pick ledger that holds your
 track record, and the board itself) lives in ~/Sportsedge, outside the code
@@ -314,11 +315,12 @@ def main() -> None:
     g.add_argument("--refresh-once", action="store_true", help=argparse.SUPPRESS)  # used by the background job
     g.add_argument("--demo", action="store_true", help="demo board with fictional teams")
     g.add_argument("--check", action="store_true", help="test which data sources this computer can reach")
+    g.add_argument("--record", action="store_true", help="print your saved picks and how they were graded")
     ap.add_argument("--every", type=int, default=30, help="minutes between updates with --watch")
     ap.add_argument("--league", nargs="+", default=["MLB", "NHL", "NBA", "NFL"])
     ap.add_argument("--no-browser", action="store_true")
     a = ap.parse_args()
-    if not any((a.live, a.watch, a.open, a.background, a.refresh_once, a.demo, a.check)):
+    if not any((a.live, a.watch, a.open, a.background, a.refresh_once, a.demo, a.check, a.record)):
         print(MENU)
         choice = input("Choose 1-7 and press Enter: ").strip()
         mapping = {"1": "live", "2": "watch", "3": "open", "6": "demo", "7": "check"}
@@ -333,6 +335,9 @@ def main() -> None:
     load_env_file()
     migrate_old_data()
 
+    if a.record:
+        print_record()
+        return
     if a.check:
         from sportsedge.data.diagnose import check
 
@@ -375,6 +380,26 @@ def main() -> None:
                 time.sleep(3600)
     except KeyboardInterrupt:
         say("Stopped. Your data and track record are saved in " + HOME)
+
+
+def print_record(limit: int = 30) -> None:
+    import json
+
+    path = os.path.join(DATA, "ledger.json")
+    if not os.path.exists(path):
+        sys.exit(f"No picks saved yet ({path} does not exist).")
+    ledger = json.load(open(path))
+    for tier, name in (("value", "Best bets"), ("confidence", "70%+ picks")):
+        rows = [e for e in ledger if e.get("tier", "value") == tier]
+        w = sum(e.get("status") == "won" for e in rows)
+        lo = sum(e.get("status") == "lost" for e in rows)
+        pend = sum(e.get("status") == "pending" for e in rows)
+        print(f"{name:11s} {w}-{lo}  ({pend} pending, {len(rows)} published)")
+    print(f"\nLast {limit} picks (saved in {path}):")
+    for e in sorted(ledger, key=lambda e: (e.get("date", ""), e.get("id", "")), reverse=True)[:limit]:
+        price = "" if e.get("price") is None else f" {e['price']:+.0f}"
+        print(f"  {e.get('date')}  {e.get('league'):3s} {e.get('tier', 'value'):10s} {e.get('label')}{price:6s} "
+              f"p={e.get('p', 0):.0%}  {e.get('status', '?'):9s} {e.get('final') or ''}")
 
 
 def _wait_forever() -> None:
