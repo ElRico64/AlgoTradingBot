@@ -80,8 +80,10 @@
    "news: Sam Cosmi (WSH, questionable, G) P(plays)=84% impact\u22480.40\u00b10.40"
   ],
   "published_at": "2026-09-25T06:29:52+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "withdrawn",
+  "profit": null,
+  "withdrawn_at": "2026-09-26T23:54:41+00:00",
+  "note": "Withdrawn before start: too uncertain: lower bound 58.7% below 62%"
  },
  {
   "id": "confidence:2026-09-27:NFL-20260927-LAC-BUF-13:moneyline:home",
