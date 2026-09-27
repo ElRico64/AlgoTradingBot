@@ -129,8 +129,10 @@
    "news: Trey Pipkins III (LAC, questionable) P(plays)=80% impact\u22480.40\u00b10.40"
   ],
   "published_at": "2026-09-25T06:29:52+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": null,
+  "graded_at": "2026-09-27T23:04:46+00:00",
+  "final": "LAC 16 \u2013 BUF 24"
  },
  {
   "id": "confidence:2026-09-27:NFL-20260927-NYJ-DET-13:moneyline:home",
@@ -176,8 +178,10 @@
    "news: Marcelino McCrary-Ball (NYJ, ir) P(plays)=30% impact\u22480.12\u00b10.12"
   ],
   "published_at": "2026-09-25T06:29:52+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": null,
+  "graded_at": "2026-09-27T23:04:46+00:00",
+  "final": "NYJ 24 \u2013 DET 31"
  },
  {
   "id": "confidence:2026-09-27:NFL-20260927-ARI-SF-16:moneyline:home",
@@ -265,8 +269,10 @@
    "news: Ronnie Harrison Jr. (MIA, ir) P(plays)=68% impact\u22480.12\u00b10.12"
   ],
   "published_at": "2026-09-25T06:29:52+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": null,
+  "graded_at": "2026-09-27T23:04:46+00:00",
+  "final": "KC 24 \u2013 MIA 10"
  },
  {
   "id": "confidence:2026-09-26:MLB-20260926-COL-CHW-19:moneyline:home",
@@ -342,8 +348,10 @@
    "news: Everson Pereira (STL, unknown) P(plays)=98% impact\u22480.08\u00b10.06"
   ],
   "published_at": "2026-09-27T06:38:36+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.4016,
+  "graded_at": "2026-09-27T23:04:33+00:00",
+  "final": "STL 4 \u2013 MIL 6"
  },
  {
   "id": "confidence:2026-09-27:MLB-20260927-COL-CHW-15:moneyline:home",
@@ -379,7 +387,9 @@
    "news: Willi Castro (COL, out) P(plays)=89% impact\u22480.08\u00b10.06"
   ],
   "published_at": "2026-09-27T06:38:36+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.4808,
+  "graded_at": "2026-09-27T23:04:33+00:00",
+  "final": "COL 2 \u2013 CHW 4"
  }
 ]

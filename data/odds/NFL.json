@@ -77,15 +77,15 @@
 "under_price": -115.0
 },
 "NFL-20260927-LAR-DEN-20": {
-"away_ml": -130.0,
-"away_spread_price": -112.0,
-"home_ml": 110.0,
-"home_spread_price": -108.0,
-"over_price": -102.0,
+"away_ml": -112.0,
+"away_spread_price": -102.0,
+"home_ml": -108.0,
+"home_spread_price": -118.0,
+"over_price": -108.0,
 "source": "Draft Kings",
 "spread": 1.5,
 "total": 44.5,
-"under_price": -118.0
+"under_price": -112.0
 },
 "NFL-20260927-LV-NO-16": {
 "away_ml": 160.0,
@@ -154,10 +154,10 @@
 "under_price": -110.0
 },
 "NFL-20260928-PHI-CHI-20": {
-"away_ml": -218.0,
-"away_spread_price": -110.0,
-"home_ml": 180.0,
-"home_spread_price": -110.0,
+"away_ml": -205.0,
+"away_spread_price": -105.0,
+"home_ml": 170.0,
+"home_spread_price": -115.0,
 "over_price": -105.0,
 "source": "Draft Kings",
 "spread": 4.5,
@@ -166,13 +166,13 @@
 },
 "NFL-20261001-PIT-CLE-20": {
 "away_ml": -148.0,
-"away_spread_price": 100.0,
+"away_spread_price": -120.0,
 "home_ml": 124.0,
-"home_spread_price": -120.0,
+"home_spread_price": 100.0,
 "over_price": -110.0,
 "source": "Draft Kings",
-"spread": 3.0,
-"total": 37.5,
+"spread": 2.5,
+"total": 38.5,
 "under_price": -110.0
 }
 }
