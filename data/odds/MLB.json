@@ -120,6 +120,17 @@
 "total": 8.0,
 "under_price": -112.0
 },
+"MLB-20260927-ARI-SD-15": {
+"away_ml": -135.0,
+"away_spread_price": 134.0,
+"home_ml": 112.0,
+"home_spread_price": -162.0,
+"over_price": -107.0,
+"source": "DraftKings",
+"spread": 1.5,
+"total": 8.0,
+"under_price": -112.0
+},
 "MLB-20260927-ATL-MIA-15": {
 "away_ml": -110.0,
 "away_spread_price": 148.0,
@@ -142,22 +153,33 @@
 "total": 7.5,
 "under_price": -108.0
 },
+"MLB-20260927-CHC-BOS-15": {
+"away_ml": -122.0,
+"away_spread_price": 135.0,
+"home_ml": 101.0,
+"home_spread_price": -164.0,
+"over_price": -114.0,
+"source": "DraftKings",
+"spread": 1.5,
+"total": 7.5,
+"under_price": -105.0
+},
 "MLB-20260927-CIN-TOR-15": {
-"away_ml": 147.0,
-"away_spread_price": -143.0,
-"home_ml": -179.0,
-"home_spread_price": 119.0,
-"over_price": -121.0,
+"away_ml": 149.0,
+"away_spread_price": -142.0,
+"home_ml": -181.0,
+"home_spread_price": 117.0,
+"over_price": -117.0,
 "source": "DraftKings",
 "spread": -1.5,
 "total": 8.5,
-"under_price": 100.0
+"under_price": -103.0
 },
 "MLB-20260927-CLE-KC-15": {
-"away_ml": -149.0,
-"away_spread_price": 113.0,
-"home_ml": 123.0,
-"home_spread_price": -136.0,
+"away_ml": -151.0,
+"away_spread_price": 112.0,
+"home_ml": 125.0,
+"home_spread_price": -135.0,
 "over_price": -110.0,
 "source": "DraftKings",
 "spread": 1.5,
@@ -166,25 +188,47 @@
 },
 "MLB-20260927-COL-CHW-15": {
 "away_ml": 170.0,
-"away_spread_price": -118.0,
+"away_spread_price": -119.0,
 "home_ml": -208.0,
-"home_spread_price": -102.0,
+"home_spread_price": -101.0,
 "over_price": -105.0,
 "source": "DraftKings",
 "spread": -1.5,
 "total": 8.5,
 "under_price": -115.0
 },
+"MLB-20260927-HOU-ATH-15": {
+"away_ml": -176.0,
+"away_spread_price": -112.0,
+"home_ml": 145.0,
+"home_spread_price": -107.0,
+"over_price": 100.0,
+"source": "DraftKings",
+"spread": 1.5,
+"total": 9.5,
+"under_price": -120.0
+},
 "MLB-20260927-LAA-SEA-15": {
-"away_ml": 149.0,
+"away_ml": 151.0,
 "away_spread_price": -150.0,
-"home_ml": -181.0,
+"home_ml": -184.0,
 "home_spread_price": 124.0,
 "over_price": -120.0,
 "source": "DraftKings",
 "spread": -1.5,
 "total": 7.0,
 "under_price": 100.0
+},
+"MLB-20260927-LAD-SF-15": {
+"away_ml": -260.0,
+"away_spread_price": -149.0,
+"home_ml": 209.0,
+"home_spread_price": 123.0,
+"over_price": -106.0,
+"source": "DraftKings",
+"spread": 1.5,
+"total": 8.0,
+"under_price": -113.0
 },
 "MLB-20260927-NYM-WSH-13": {
 "away_ml": -110.0,
@@ -198,9 +242,9 @@
 "under_price": -102.0
 },
 "MLB-20260927-PIT-DET-15": {
-"away_ml": -135.0,
+"away_ml": -134.0,
 "away_spread_price": 128.0,
-"home_ml": 112.0,
+"home_ml": 111.0,
 "home_spread_price": -155.0,
 "over_price": -107.0,
 "source": "DraftKings",
@@ -209,7 +253,7 @@
 "under_price": -112.0
 },
 "MLB-20260927-STL-MIL-15": {
-"away_ml": 202.0,
+"away_ml": 201.0,
 "away_spread_price": -120.0,
 "home_ml": -249.0,
 "home_spread_price": 100.0,
@@ -220,21 +264,21 @@
 "under_price": -118.0
 },
 "MLB-20260927-TB-PHI-15": {
-"away_ml": 122.0,
-"away_spread_price": -186.0,
-"home_ml": -147.0,
-"home_spread_price": 153.0,
-"over_price": -117.0,
+"away_ml": 124.0,
+"away_spread_price": -180.0,
+"home_ml": -149.0,
+"home_spread_price": 148.0,
+"over_price": -118.0,
 "source": "DraftKings",
 "spread": -1.5,
 "total": 7.0,
-"under_price": -103.0
+"under_price": -102.0
 },
 "MLB-20260927-TEX-MIN-15": {
 "away_ml": -126.0,
-"away_spread_price": 135.0,
-"home_ml": 104.0,
-"home_spread_price": -163.0,
+"away_spread_price": 129.0,
+"home_ml": 105.0,
+"home_spread_price": -157.0,
 "over_price": -118.0,
 "source": "DraftKings",
 "spread": 1.5,
