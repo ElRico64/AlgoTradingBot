@@ -150,12 +150,28 @@ class UpdateLock:
 
 # ---------------------------------------------------------------- serving
 def serve(directory: str, port: int = PORT) -> str:
-    handler = functools.partial(http.server.SimpleHTTPRequestHandler, directory=directory)
-    handler.log_message = lambda *a, **k: None
+    class Quiet(http.server.SimpleHTTPRequestHandler):
+        def log_message(self, *a):  # keep the Terminal window readable
+            pass
+
+        def do_GET(self):
+            if self.path.split("?")[0] in ("/favicon.ico", "/apple-touch-icon.png",
+                                           "/apple-touch-icon-precomposed.png"):
+                self.send_response(204)  # browsers ask for icons; there are none
+                self.end_headers()
+                return
+            super().do_GET()
+
+    handler = functools.partial(Quiet, directory=directory)
 
     class Server(socketserver.ThreadingTCPServer):
         allow_reuse_address = True
         daemon_threads = True
+
+        def handle_error(self, request, client_address):
+            # a browser closing a connection early (tab closed, page reloaded) is normal
+            if not isinstance(sys.exc_info()[1], (ConnectionError, TimeoutError)):
+                super().handle_error(request, client_address)
 
     for p in range(port, port + 20):
         try:
