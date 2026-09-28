@@ -37,6 +37,7 @@ from .picks import PickPolicy, confidence_policy, value_line
 from .stats.odds import american_to_decimal, breakeven_probability, prob_to_american
 from .teams import REGISTRY
 from .types import Game, GameResult, MarketOdds, NewsEvent, Pick, Prediction
+from .version import VERSION
 
 log = logging.getLogger(__name__)
 
@@ -650,6 +651,7 @@ def build_site_data(runs: list[LeagueRun], ledger: list[dict], policy: PickPolic
                     mode: str = "live", refresh_minutes: int = 30) -> dict:
     return {
         "generated_at": _now(), "date": day.isoformat(), "mode": mode, "refresh_minutes": refresh_minutes,
+        "app_version": VERSION,
         "gate": {"min_probability": policy.min_probability, "min_lower_bound": policy.min_lower_bound,
                  "require_positive_ev": policy.require_positive_ev, "min_edge": policy.min_edge,
                  "min_ev": policy.min_ev, "kelly_multiplier": policy.kelly_multiplier},

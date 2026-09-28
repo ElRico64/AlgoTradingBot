@@ -23,6 +23,7 @@ import functools
 import glob
 import http.server
 import os
+import re
 import shutil
 import socketserver
 import subprocess
@@ -241,6 +242,44 @@ def _in_protected(path: str) -> bool:
     return any(os.path.abspath(path).startswith(p + os.sep) for p in PROTECTED)
 
 
+def code_version(folder: str) -> str:
+    """Version of the code in `folder` ("" for versions older than the version file)."""
+    try:
+        with open(os.path.join(folder, "sportsedge", "version.py")) as f:
+            m = re.search(r'VERSION\s*=\s*"([^"]+)"', f.read())
+        return m.group(1) if m else ""
+    except OSError:
+        return ""
+
+
+def _vkey(v: str) -> tuple:
+    return tuple(int(x) for x in re.findall(r"\d+", v))
+
+
+def install_code(app: str) -> None:
+    if os.path.isdir(app):
+        shutil.rmtree(app)
+    os.makedirs(app)
+    shutil.copy2(os.path.join(HERE, "run.py"), app)
+    shutil.copytree(os.path.join(HERE, "sportsedge"), os.path.join(app, "sportsedge"),
+                    ignore=shutil.ignore_patterns("__pycache__"))
+
+
+def sync_background_copy() -> None:
+    """With background updates on, keep their copy of the code at the newest version:
+    a newer download replaces it automatically; an older one gets a warning."""
+    app = os.path.join(HOME, "app")
+    if HERE == app or not os.path.exists(PLIST) or not os.path.isdir(app):
+        return
+    mine, theirs = code_version(HERE), code_version(app)
+    if _vkey(mine) > _vkey(theirs):
+        install_code(app)
+        say(f"Background updates now use this version ({mine}).")
+    elif _vkey(mine) < _vkey(theirs):
+        say(f"Note: this folder has an older version ({mine or 'before 2026.09.28'}) than your background "
+            f"updates ({theirs}). Use the newest download folder.")
+
+
 def background(on: bool) -> None:
     if sys.platform != "darwin":
         say("Background updates are set up automatically on macOS only.")
@@ -257,13 +296,8 @@ def background(on: bool) -> None:
     # macOS blocks background jobs from reading Desktop/Documents/Downloads, so the job
     # runs a copy of the code (and, if needed, its own Python) from ~/Sportsedge.
     app = os.path.join(HOME, "app")
-    say(f"Copying the program to {app} ...")
-    if os.path.isdir(app):
-        shutil.rmtree(app)
-    os.makedirs(app)
-    shutil.copy2(os.path.join(HERE, "run.py"), app)
-    shutil.copytree(os.path.join(HERE, "sportsedge"), os.path.join(app, "sportsedge"),
-                    ignore=shutil.ignore_patterns("__pycache__"))
+    say(f"Copying the program (version {code_version(HERE)}) to {app} ...")
+    install_code(app)
     if os.path.exists(os.path.join(HERE, ".env")):
         shutil.copy2(os.path.join(HERE, ".env"), os.path.join(HOME, ".env"))
     python = sys.executable
@@ -304,7 +338,7 @@ def background(on: bool) -> None:
     say("Background updates are ON: every 30 minutes while your Mac is awake, even with Terminal closed.")
     say(f"Open your board any time with:  python3 run.py --open   (or open {os.path.join(SITE, 'index.html')})")
     say(f"Activity log: {log}")
-    say("After downloading a new version of the code, run  python3 run.py --background on  again.")
+    say("When you download a new version, just start it once: the background updates switch to it automatically.")
 
 
 # ------------------------------------------------------------------- main
@@ -337,7 +371,8 @@ def main() -> None:
     ap.add_argument("--no-browser", action="store_true")
     a = ap.parse_args()
     if not any((a.live, a.watch, a.open, a.background, a.refresh_once, a.demo, a.check, a.record)):
-        print(MENU)
+        print(MENU.rstrip("\n"))
+        print(f"\n  Version {code_version(HERE)}  ·  {HERE}\n")
         choice = input("Choose 1-7 and press Enter: ").strip()
         mapping = {"1": "live", "2": "watch", "3": "open", "6": "demo", "7": "check"}
         if choice in mapping:
@@ -350,6 +385,8 @@ def main() -> None:
     ensure_packages()
     load_env_file()
     migrate_old_data()
+    if not a.refresh_once and sys.platform == "darwin":
+        sync_background_copy()
 
     if a.record:
         print_record()

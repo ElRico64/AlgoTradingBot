@@ -314,6 +314,7 @@ footer p { margin: 0; max-width: 92ch; }
   </div>
   <footer>
     <p id="foot-gate"></p>
+    <p id="foot-version"></p>
     <p>How it works: team strength from Kalman-filter ratings, score models and Elo, adjusted for rest, travel, starters and injury news, blended with the betting market and calibrated only on games the model had not seen. Predictions refresh through the day and lock at the start of each game. Every published pick stays on the record at the price it was published at.</p>
     <p>Probabilities are estimates, not guarantees. Past results do not predict future results. Bet only what you can afford to lose and check the laws where you live. Gambling problem? Call 1-800-GAMBLER.</p>
   </footer>
@@ -364,6 +365,12 @@ footer p { margin: 0; max-width: 92ch; }
     var m = Math.round(ms / 60000), h = Math.floor(m / 60);
     if (h >= 24) { var dd = Math.round(h / 24); return "in " + dd + " day" + (dd > 1 ? "s" : ""); }
     return h ? "in " + h + "h " + (m % 60) + "m" : "in " + m + "m";
+  }
+  function newsText(n) {
+    // some injury reports carry only the status word as their text: name the player instead
+    var t = (n.text || "").trim(), st = (n.status || "").toLowerCase();
+    if (!t || t.toLowerCase() === st || t.length < 12) t = [n.player, n.team ? "(" + n.team + ")" : "", n.status].filter(Boolean).join(" ");
+    return t;
   }
   function cd(iso) { return '<span data-cd="' + esc(iso) + '">' + countdown(iso) + "</span>"; }
   function ago(iso) {
@@ -457,7 +464,7 @@ footer p { margin: 0; max-width: 92ch; }
       '<div class="hero-side"><div class="hero-ring">' + ring(e.p, 104, true) + '<div class="lbl"><b>' + pct(e.p) + " to win</b>band " + pct(e.lower, 0) + "–" + pct(e.upper || e.p, 0) + "</div></div>" +
       '<div class="hero-stats"><div class="hstat"><div class="k">Price</div><div class="v">' + odds(e.price) + '</div></div><div class="hstat"><div class="k">Worth it at</div><div class="v">' + odds(e.value_line) + ' or better</div></div>' +
       (e.ev != null ? '<div class="hstat"><div class="k">Value</div><div class="v">' + sgnPct(e.ev) + "</div></div>" : "") + "</div>" +
-      (news ? '<div class="newsline"><b>' + esc(news.status.toUpperCase()) + "</b> · " + esc(news.text) +
+      (news ? '<div class="newsline"><b>' + esc((news.status || "news").toUpperCase()) + "</b> · " + esc(newsText(news)) +
         (news.published ? ' <span style="opacity:.7">(' + ago(news.published) + ")</span>" : "") + "</div>" : "") + "</div></div></section>";
   }
   var TIER_HELP = {
@@ -663,7 +670,7 @@ footer p { margin: 0; max-width: 92ch; }
     $("newsct").textContent = items.length + " update" + (items.length === 1 ? "" : "s");
     $("news").innerHTML = items.length ? items.slice(0, 40).map(function (n) {
       return '<div class="news-item"><div class="h"><span class="st ' + esc(n.status.replace(/\s.*/, "")) + '">' + esc(n.status) + "</span><b>" + esc(n.team) + "</b> · " + n.league + " · " + ago(n.published) +
-        '</div><div class="t">' + esc(n.text || (n.player + " " + n.status)) + '</div><div class="h">' + esc(n.source) + "</div></div>";
+        '</div><div class="t">' + esc(newsText(n)) + '</div><div class="h">' + esc(n.source) + "</div></div>";
     }).join("") : '<div class="muted" style="padding:8px 0">No injury or lineup news for today\'s teams yet.</div>';
   }
 
@@ -690,6 +697,7 @@ footer p { margin: 0; max-width: 92ch; }
   $("show").addEventListener("change", function (e) { S.show = e.target.value; renderGames(); });
 
   function render() {
+    $("foot-version").textContent = DATA.app_version ? "Sportsedge version " + DATA.app_version : "";
     renderHeader(); renderTabs(); renderHero(); renderPicks(); renderGames(); renderRecord(); renderNews();
     $("fmt-us").setAttribute("aria-pressed", S.fmt === "us"); $("fmt-dec").setAttribute("aria-pressed", S.fmt === "dec");
   }
@@ -706,6 +714,8 @@ footer p { margin: 0; max-width: 92ch; }
   if (/^https?:$/.test(location.protocol)) {
     setInterval(function () {
       fetch("data.json", { cache: "no-store" }).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
+        // a new version of the app wrote this board: reload so the page's own code is new too
+        if (d && d.app_version && d.app_version !== DATA.app_version) { location.reload(); return; }
         if (d && d.generated_at && d.generated_at !== DATA.generated_at) { DATA = d; render(); }
       }).catch(function () {});
     }, 120000);

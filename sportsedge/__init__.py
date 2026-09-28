@@ -4,4 +4,4 @@ from .engine import EngineSettings, LeagueEngine
 from .picks import PickPolicy
 
 __all__ = ["LeagueEngine", "EngineSettings", "PickPolicy", "walk_forward"]
-__version__ = "0.1.0"
+from .version import VERSION as __version__  # noqa: E402
