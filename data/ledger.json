@@ -501,5 +501,42 @@
   "published_at": "2026-09-28T06:59:08+00:00",
   "status": "pending",
   "profit": null
+ },
+ {
+  "id": "confidence:2026-10-04:NFL-20261004-TEN-BAL-13:moneyline:home",
+  "tier": "confidence",
+  "date": "2026-10-04",
+  "league": "NFL",
+  "game_id": "NFL-20261004-TEN-BAL-13",
+  "start": "2026-10-04T17:00:00",
+  "home": "BAL",
+  "away": "TEN",
+  "label": "BAL ML",
+  "market": "moneyline",
+  "side": "home",
+  "line": null,
+  "price": -700.0,
+  "p": 0.8026,
+  "lower": 0.728,
+  "upper": 0.8799,
+  "fair": 0.8542,
+  "edge": -0.0515,
+  "ev": -0.0826,
+  "value_line": -387,
+  "stake": 0.0,
+  "reasons": [
+   "calibrated P(win)=80.3% \u2265 70%",
+   "80% credible band 72.8%\u201388.0% (lower \u2265 62%)",
+   "price -700 needs 87.5%; EV -8.3% per unit",
+   "no-vig market 85.4% \u2192 edge -5.2%",
+   "home-win components: kalman 75.5%, elo 81.2%, pattern 81.0%",
+   "adjustments: pattern_logit +0.32, timezones -0.30, travel -0.21, news_margin_mean -0.15",
+   "news: Ronnie Stanley (BAL, out) P(plays)=5% impact\u22480.40\u00b10.40",
+   "news: Jackson Slater (TEN, questionable, G) P(plays)=72% impact\u22480.40\u00b10.40",
+   "news: Fernando Carmona (TEN, questionable, G) P(plays)=72% impact\u22480.40\u00b10.40"
+  ],
+  "published_at": "2026-09-28T20:34:33+00:00",
+  "status": "pending",
+  "profit": null
  }
 ]
