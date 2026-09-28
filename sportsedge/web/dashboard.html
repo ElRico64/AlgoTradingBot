@@ -483,7 +483,7 @@ footer p { margin: 0; max-width: 92ch; }
   var TIER_HELP = {
     value: "Best bets win at least 70% of the time by the model's estimate AND pay enough at today's price to be worth it over the long run.",
     confidence: "Every moneyline or total the model gives a 70%+ chance. Favourites are often priced too short to profit, so each card shows the worst price still worth taking.",
-    parlay: "Legs from different games combined into one bet that pays at least 2x (+100) and that the model still gives a 70%+ chance of hitting. Picked from today's games only."
+    parlay: "The parlay of the day: legs from different games, paying at least 2x (+100), shown with its real chance of hitting. Published only when every leg is worth its price and the whole parlay is a good bet at its payout."
   };
   function todaysParlays() {
     return (DATA.ledger || []).filter(function (e) { return e.tier === "parlay" && e.date === DATA.date; }).filter(inLeague);
@@ -499,7 +499,7 @@ footer p { margin: 0; max-width: 92ch; }
       return '<div class="leg"><span class="lg">' + x.league + '</span><div style="min-width:0"><div class="n">' + esc(x.label) + " " + ls + '</div><div class="g">' + esc(x.away + " @ " + x.home) + " · " + when + (x.final ? " · " + esc(x.final) : "") + '</div></div><div class="p">' + pct(x.p, 0) + "<small>" + odds(x.price) + "</small></div></div>";
     }).join("");
     var why = '<details class="why"><summary>How this parlay was built</summary><div class="body"><ul>' + (e.reasons || []).map(function (r) { return "<li>" + esc(r) + "</li>"; }).join("") +
-      "<li>Legs from the same game are never combined: their results are linked, so the simple product would be wrong.</li></ul></div></details>";
+      "<li>Legs from the same game are never combined: their results are linked, so the simple product would be wrong.</li><li>A parlay hits less often than a single pick. Size it accordingly.</li></ul></div></details>";
     return '<article class="pcard parlay"><div class="pc-top"><span>' + esc((e.leagues || []).join(" + ")) + " · " + (e.legs || []).length + " legs · first leg " + dayLabel(e.start) + clock(e.start) + "</span>" + right + "</div>" +
       '<div class="pc-main"><div class="pc-pick"><div style="min-width:0"><div class="l">' + esc(e.label) + '</div><div class="m">Pays ' + Number(e.decimal).toFixed(2) + "x your stake · model band " + pct(e.lower, 0) + "–" + pct(e.upper, 0) + "</div></div></div>" + ring(e.p, 64) + "</div>" +
       '<div class="legs">' + legs + "</div>" +
@@ -510,9 +510,9 @@ footer p { margin: 0; max-width: 92ch; }
     var list = todaysParlays().sort(function (a, b) { return b.p - a.p; });
     if (list.length) { $("picks").innerHTML = '<div class="pick-grid">' + list.map(parlayCard).join("") + "</div>"; return; }
     var sc = DATA.parlay_scan || {}, c = sc.closest;
-    $("picks").innerHTML = '<div class="empty"><b>No parlay today</b><span>No combination of legs from different games pays 2x or more with a 70%+ chance of hitting' +
-      (c ? ". The closest today: " + c.legs.length + " legs paying " + Number(c.decimal).toFixed(2) + "x, " + pct(c.p, 0) + " to hit, below the bar, so it is not published." : ".") +
-      " Paying 2x means the sportsbooks give it under a 50% chance, so a real 70%+ parlay needs the model to disagree strongly with the market on every leg. That is rare, and it should be.</span></div>";
+    $("picks").innerHTML = '<div class="empty"><b>No parlay today</b><span>No 2x+ parlay from today\'s games is a good bet by the model' +
+      (c ? ". The most likely one, " + c.legs.length + " legs paying " + Number(c.decimal).toFixed(2) + "x, has a " + pct(c.p, 0) + " chance, an expected return of " + sgnPct(c.ev) + ", so it is not published." : ".") +
+      " A parlay is only published when every leg is worth its price. The board keeps checking as news and odds move.</span></div>";
   }
   function renderPicks() {
     Array.prototype.forEach.call($("tierseg").querySelectorAll("button"), function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-t") === S.tier); });

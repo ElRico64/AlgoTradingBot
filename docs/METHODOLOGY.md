@@ -334,48 +334,58 @@ optimiser for concurrent bets (`stats/kelly.py`).
 
 ---
 
-## 8b. Parlays (`parlays.py`)
+## 8b. Parlay of the day (`parlays.py`)
 
-A parlay is published only if it pays at least 2.0x (+100), the model gives it
-at least a 70% chance of hitting, and the low end of its 80% band is at least
-62%.
+The parlay of the day pays at least 2.0x (+100) and is shown with its real
+chance of hitting. It is published only when the model sees it as a good bet
+at that payout:
+* every leg is worth its own price, so the books' margin isn't compounded;
+* the whole parlay shows an expected return of at least +2%;
+* it has at least a 40% chance, so long shots are excluded.
 
-* **Independence.** Legs come from different games, with no team in two legs.
-  Given the models, separate games are independent, so
-  P(parlay) = Π p_i. Same-game legs are excluded because their outcomes are
-  correlated.
-* **Uncertainty.** Each leg's 80% credible band is moment-matched to a
-  Beta(α, β). The band has sd ≈ (hi − lo) / 2.563, and
-  k = p(1 − p)/sd² − 1, with α = pk and β = (1 − p)k. The parlay's band is
-  the 10th/90th percentile of Π Beta draws (4,000 Monte Carlo draws, seeded
-  by the legs).
+At most one parlay is published a day: the most likely to hit among those
+that pass.
+
+* **Market check on every leg (winner's-curse correction).** Leg
+  probabilities are calibrated on average. But choosing the legs where the
+  model disagrees most with the market also chooses its errors. In the
+  walk-forward check on the simulated leagues, uncorrected parlays claimed
+  48.8% and hit 42.1% (497 parlays, 8 runs), which is the books' number.
+  Each leg therefore keeps only the share s of its disagreement that held up:
+
+      logit p_leg = logit p_market + s · (logit p_model − logit p_market)
+
+  s is estimated by maximum a posteriori per market type, from every graded
+  game the live board priced (model and market probabilities are stored
+  with the odds in `data/odds/`). The prior is normal, centred on the
+  walk-forward estimate: moneyline 0.44, spread 0.27, total 0.67, each with
+  sd 0.25.
+* **Independence.** Legs come from different games with no team twice, so
+  P(parlay) = Π p_leg. Same-game legs are excluded because their outcomes
+  are correlated.
+* **Uncertainty.** Each leg's 80% band is moment-matched to a Beta
+  distribution. The parlay's band is the 10th/90th percentile of the
+  product of Beta draws (4,000 Monte Carlo draws).
 * **Search.** Exact enumeration of the 2–4-leg combinations over the 24
-  strongest candidate legs. Legs are ranked by log(decimal) / −log(p): payout
-  gained per unit of hit probability given up, at most two per game. The
-  highest-probability qualifying combination is published, then the next on
-  disjoint games (at most two a day).
-* **Lifecycle.** Only games played that day are used. Before the first leg
-  starts, a parlay is withdrawn or reinstated as the news moves. Grading: any
+  strongest candidate legs. Legs are ranked by log(decimal) / −log(p).
+* **Lifecycle.** Only games played that day are used. A parlay is withdrawn
+  or reinstated with the news before its first leg starts. Grading: any
   lost leg loses; pushed or void legs drop out and the payout shrinks.
 
-**What to expect.** Paying 2x means the sportsbooks give the parlay under a
-50% chance. A 70%+ parlay therefore needs the model to beat the market by
-about 20 points of probability. The product compounds any per-leg
-overconfidence, so the rule is meant to fire rarely. In a walk-forward check
-on the simulated leagues, each day used only earlier games:
+**Out-of-sample check.** The shares were fitted on seed-3 seasons and the
+rule was run walk-forward on seeds 7 and 11:
 
-| League | Betting days | Parlays published | Best 2x+ combination per day (median) |
-|---|---|---|---|
-| MLB | 320 | 0 | 45.4% |
-| NBA | 261 | 0 | 44.2% |
-| NHL | 281 | 0 | 48.1% |
-| NFL | 47 | 0 | 52.6% |
+| | Parlays | Claimed | Hit | Books said | Flat ROI |
+|---|---|---|---|---|---|
+| Without the market check | 497 | 48.8% | 42.1% | 42% | about −7% |
+| With the market check | 84 | 45.2% | 48.8% | 40% | +12% |
 
-A calibrated model against a sharp market almost never finds such a parlay.
-When one appears on the live board, it means the model strongly disagrees
-with the market. The board shows the books' chance next to the model's for
-that reason, and the parlay record will show over time whether those
-disagreements were right.
+With the check, the claimed chance is honest. The ROI rests on 84 parlays,
+so its uncertainty is roughly ±25 points: not proof of an edge. Frequency is
+about one parlay per 20 league-days. The live board draws legs from all
+leagues at once, so expect roughly one or two parlays a week, and none on
+many days. A parlay that pays 2x+ and hits 70%+ never occurred in 909
+simulated betting days.
 
 ## 9. Validation protocol (`backtest.py`)
 
