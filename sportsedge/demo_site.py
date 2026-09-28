@@ -15,7 +15,7 @@ from typing import Optional
 from .backtest import walk_forward
 from .config import get_config
 from .daily import (ALL_LEAGUES, US_EASTERN, _code, build_site_data, pick_id, pick_label, predict_games,
-                    today_eastern)
+                    today_eastern, update_parlays)
 from .engine import EngineSettings, LeagueEngine
 from .news.impact import build_factors
 from .picks import PickPolicy, confidence_policy, value_line
@@ -101,7 +101,8 @@ def build_demo(site_dir: str = "site", leagues=ALL_LEAGUES, today: Optional[date
                 progress(f"{job[1]}: simulated season, backtest and today's board done")
     runs = [r for r, _ in results]
     ledger = [e for _, entries in results for e in entries]
-    data = build_site_data(runs, ledger, policy, today, mode="demo")
+    scan = update_parlays(ledger, [g for r in runs for g in r.games], today.isoformat())
+    data = build_site_data(runs, ledger, policy, today, mode="demo", parlay_scan=scan)
     write_site(data, site_dir)
     return data
 

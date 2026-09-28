@@ -135,7 +135,7 @@ def settle_ledger(ledger: list[dict], results: dict[str, GameResult], today: dat
         by_teams.setdefault((r.league, game_day(r), r.home, r.away), []).append(r)
     n = 0
     for e in ledger:
-        if e.get("status") != "pending":
+        if e.get("status") != "pending" or e.get("tier") == "parlay":
             continue
         r = _match_result(e, results, by_teams)
         if r is not None:
@@ -144,6 +144,69 @@ def settle_ledger(ledger: list[dict], results: dict[str, GameResult], today: dat
         elif (today - date.fromisoformat(e["date"])).days > VOID_AFTER_DAYS:
             e.update(status="void", profit=0.0 if e.get("price") is not None else None)
     return n
+
+
+def settle_parlays(ledger: list[dict], results: dict[str, GameResult], today: date) -> None:
+    """Grade each pending parlay's legs like single picks, then the parlay itself."""
+    from .parlays import settle_parlay
+
+    by_teams: dict = {}
+    for r in results.values():
+        by_teams.setdefault((r.league, game_day(r), r.home, r.away), []).append(r)
+    for e in ledger:
+        if e.get("tier") != "parlay" or e.get("status") != "pending":
+            continue
+        for leg in e["legs"]:
+            if leg.get("status") != "pending":
+                continue
+            r = _match_result(leg, results, by_teams)
+            if r is not None:
+                grade(leg, r)
+            elif (today - date.fromisoformat(leg["date"])).days > VOID_AFTER_DAYS:
+                leg.update(status="void")
+        settle_parlay(e)
+
+
+def update_parlays(ledger: list[dict], games: list[dict], day: str, policy=None) -> dict:
+    """Re-check today's published parlays against the latest numbers (withdraw /
+    reinstate before the first leg starts), then publish new ones from games
+    not used yet. Returns what the scan found, for the board."""
+    from .parlays import ParlayPolicy, candidate_legs, parlay_band, parlay_entry, scan
+
+    policy = policy or ParlayPolicy()
+    index = {}
+    for g in games:
+        if g.get("state") == "pre":
+            for m in g.get("markets") or []:
+                index[(g["league"], g["id"], m["market"], m["side"], m.get("line"))] = m
+    todays = [e for e in ledger if e.get("tier") == "parlay" and e.get("date") == day]
+    for e in todays:
+        if e["status"] not in ("pending", "withdrawn"):
+            continue
+        cur = [index.get((x["league"], x["game_id"], x["market"], x["side"], x.get("line"))) for x in e["legs"]]
+        if any(c is None for c in cur):
+            continue  # a leg has started or its line moved: the parlay stands as published
+        p, lo, _ = parlay_band([{**x, "p": c["p"], "lo": c["lo"], "hi": c["hi"]} for x, c in zip(e["legs"], cur)],
+                               policy.draws)
+        ok = p >= policy.min_probability and lo >= policy.min_lower_bound
+        if not ok and e["status"] == "pending":
+            e.update(status="withdrawn", withdrawn_at=_now(),
+                     note=f"Withdrawn before start: chance now {p:.1%}, band low {lo:.1%}")
+        elif ok and e["status"] == "withdrawn":
+            e.update(status="pending", note="Reinstated after new information")
+        e["p_now"] = round(p, 4)
+    used = {x["game_id"] for e in todays for x in e["legs"]}
+    legs = candidate_legs(games, day, policy)
+    chosen, near = scan(legs, policy, used)
+    ids = {e["id"] for e in ledger}
+    for combo in chosen[:max(policy.max_per_day - len(todays), 0)]:
+        entry = parlay_entry(combo, day, policy, _now())
+        if entry["id"] not in ids:
+            ledger.append(entry)
+            ids.add(entry["id"])
+    return {"candidates": len(legs), "closest": near,
+            "policy": {"min_probability": policy.min_probability, "min_decimal": policy.min_decimal,
+                       "min_lower_bound": policy.min_lower_bound, "max_legs": policy.max_legs}}
 
 
 def ledger_entry(pk: Pick, tier: str, names: dict | None, min_ev: float) -> dict:
@@ -420,6 +483,7 @@ class LeagueRun:
     calibrated: bool = False
     market_weight: Optional[float] = None
     odds_source: str = "none"
+    finals: dict = field(default_factory=dict)  # finished games, for grading parlays across leagues
 
 
 def _policies(policy: PickPolicy) -> dict[str, PickPolicy]:
@@ -636,6 +700,7 @@ def run_league(league: str, data_dir: str, day: date, policy: PickPolicy, ledger
         previous = {g["id"]: g for g in saved.get("games", [])}
     run = predict_games(engine, games, odds_map, events, factors, policy, day.isoformat(), ledger,
                         previous=previous)
+    run.finals = finals
     if odds_map:
         run.odds_source = "the-odds-api"
     store = load_odds_store(data_dir, league)
@@ -648,8 +713,9 @@ def run_league(league: str, data_dir: str, day: date, policy: PickPolicy, ledger
 
 
 def build_site_data(runs: list[LeagueRun], ledger: list[dict], policy: PickPolicy, day: date,
-                    mode: str = "live", refresh_minutes: int = 30) -> dict:
+                    mode: str = "live", refresh_minutes: int = 30, parlay_scan: Optional[dict] = None) -> dict:
     return {
+        "parlay_scan": parlay_scan,
         "generated_at": _now(), "date": day.isoformat(), "mode": mode, "refresh_minutes": refresh_minutes,
         "app_version": VERSION,
         "gate": {"min_probability": policy.min_probability, "min_lower_bound": policy.min_lower_bound,
@@ -696,9 +762,15 @@ def run_daily(leagues=ALL_LEAGUES, data_dir: str = "data", site_dir: str = "site
                 log.error("%s failed: %s\n%s", lg, e, traceback.format_exc())
                 run = LeagueRun(lg, "error", f"{type(e).__name__}: {e}")
         runs.append(run)
+    finals: dict = {}
+    for r in runs:
+        finals.update(r.finals)
+    settle_parlays(ledger, finals, day)
+    parlay_scan = update_parlays(ledger, [g for r in runs for g in r.games], day.isoformat())
     os.makedirs(data_dir, exist_ok=True)
     with open(ledger_path, "w") as f:
         json.dump(ledger, f, indent=1)
-    data = build_site_data(runs, ledger, policy, day, "live", int(os.environ.get("REFRESH_MINUTES", "30")))
+    data = build_site_data(runs, ledger, policy, day, "live", int(os.environ.get("REFRESH_MINUTES", "30")),
+                           parlay_scan=parlay_scan)
     write_site(data, site_dir)
     return data

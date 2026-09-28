@@ -442,7 +442,7 @@ def print_record(limit: int = 30) -> None:
     if not os.path.exists(path):
         sys.exit(f"No picks saved yet ({path} does not exist).")
     ledger = json.load(open(path))
-    for tier, name in (("value", "Best bets"), ("confidence", "70%+ picks")):
+    for tier, name in (("value", "Best bets"), ("confidence", "70%+ picks"), ("parlay", "Parlays")):
         rows = [e for e in ledger if e.get("tier", "value") == tier]
         w = sum(e.get("status") == "won" for e in rows)
         lo = sum(e.get("status") == "lost" for e in rows)
