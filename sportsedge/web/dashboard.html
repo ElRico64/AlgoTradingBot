@@ -367,10 +367,13 @@ footer p { margin: 0; max-width: 92ch; }
     return h ? "in " + h + "h " + (m % 60) + "m" : "in " + m + "m";
   }
   function newsText(n) {
-    // some injury reports carry only the status word as their text: name the player instead
-    var t = (n.text || "").trim(), st = (n.status || "").toLowerCase();
-    if (!t || t.toLowerCase() === st || t.length < 12) t = [n.player, n.team ? "(" + n.team + ")" : "", n.status].filter(Boolean).join(" ");
-    return t;
+    // always name the player; ESPN's comment is often just a status word ("inactive", "ir")
+    var t = (n.text || "").trim(), who = (n.player || "").trim();
+    var bare = !t || t.length < 16 || t.toLowerCase() === (n.status || "").toLowerCase();
+    if (!who) return bare ? [n.team, n.status].filter(Boolean).join(" ") + (t && t.toLowerCase() !== (n.status || "").toLowerCase() ? " · " + t : "") : t;
+    var last = who.split(" ").pop().toLowerCase();
+    if (bare) return who + (t && t.toLowerCase() !== (n.status || "").toLowerCase() ? " · " + t : "");
+    return t.toLowerCase().indexOf(last) >= 0 ? t : who + " · " + t;
   }
   function cd(iso) { return '<span data-cd="' + esc(iso) + '">' + countdown(iso) + "</span>"; }
   function ago(iso) {
@@ -578,7 +581,7 @@ footer p { margin: 0; max-width: 92ch; }
     }).join("");
     var comps = Object.keys(g.components || {}).map(function (k) { return "<span>" + esc(k) + " <b>" + pct(g.components[k]) + "</b></span>"; }).join("");
     var adj = Object.keys(g.adjustments || {}).map(function (k) { return "<span>" + esc(k.replace(/_/g, " ")) + " <b>" + (g.adjustments[k] >= 0 ? "+" : "") + g.adjustments[k].toFixed(2) + "</b></span>"; }).join("");
-    var news = (g.news || []).map(function (n) { return '<div class="news-item"><div class="h"><span class="st ' + esc(n.status) + '">' + esc(n.status) + "</span>" + esc(n.team) + " · " + esc(n.source) + " · " + ago(n.published) + '</div><div class="t">' + esc(n.text) + "</div></div>"; }).join("");
+    var news = (g.news || []).map(function (n) { return '<div class="news-item"><div class="h"><span class="st ' + esc(n.status) + '">' + esc(n.status) + "</span>" + esc(n.team) + " · " + esc(n.source) + " · " + ago(n.published) + '</div><div class="t">' + esc(newsText(n)) + "</div></div>"; }).join("");
     return '<div class="detail"><div class="facts"><span>' + esc(g.home.abbr) + " win <b>" + pct(g.p_home) + "</b> (band " + pct(g.lo, 0) + "–" + pct(g.hi, 0) + ")</span><span>Expected margin <b>" +
       (g.exp_margin >= 0 ? esc(g.home.abbr) : esc(g.away.abbr)) + " by " + Math.abs(g.exp_margin).toFixed(1) + "</b></span><span>Expected total <b>" + g.exp_total.toFixed(1) + "</b></span>" +
       (g.frozen ? '<span class="muted">Prediction locked at game start</span>' : "") + "</div>" +
