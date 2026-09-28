@@ -123,8 +123,9 @@ the pick ledger, which is your track record.
 * To look at the board, run `python3 run.py --open`, or double-click
   `~/Sportsedge/site/index.html`. The file version reloads itself every 10
   minutes.
-* After you download a new version of the code, choose option 4 again so
-  the background job uses it.
+* After you download a new version of the code, start it once (any menu
+  option): the background job switches to it automatically. The menu and the
+  bottom of the board show which version is running.
 * Option 5 turns the background updates off. Your data is kept.
 
 **What you'll see:**
