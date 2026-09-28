@@ -129,6 +129,9 @@ fictional teams and players, so you can see it before anything is set up.
     odds from finished games, so this is how the history gets its closing
     lines for the market blend;
   * re-predicts every game that hasn't started, and grades finished picks.
+* **Game day only:** picks are made on the day of the game (US Eastern), when
+  injury news is close to final. Later games, such as the rest of the NFL
+  week, show their probabilities as an early look.
 * **At the start of a game:** its prediction locks.
 * **Withdrawals:** if news before the start pushes a published pick below the
   70% bar, the pick is marked *withdrawn* and stays visible in the record. It
