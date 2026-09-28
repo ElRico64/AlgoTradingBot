@@ -334,6 +334,49 @@ optimiser for concurrent bets (`stats/kelly.py`).
 
 ---
 
+## 8b. Parlays (`parlays.py`)
+
+A parlay is published only if it pays at least 2.0x (+100), the model gives it
+at least a 70% chance of hitting, and the low end of its 80% band is at least
+62%.
+
+* **Independence.** Legs come from different games, with no team in two legs.
+  Given the models, separate games are independent, so
+  P(parlay) = Π p_i. Same-game legs are excluded because their outcomes are
+  correlated.
+* **Uncertainty.** Each leg's 80% credible band is moment-matched to a
+  Beta(α, β). The band has sd ≈ (hi − lo) / 2.563, and
+  k = p(1 − p)/sd² − 1, with α = pk and β = (1 − p)k. The parlay's band is
+  the 10th/90th percentile of Π Beta draws (4,000 Monte Carlo draws, seeded
+  by the legs).
+* **Search.** Exact enumeration of the 2–4-leg combinations over the 24
+  strongest candidate legs. Legs are ranked by log(decimal) / −log(p): payout
+  gained per unit of hit probability given up, at most two per game. The
+  highest-probability qualifying combination is published, then the next on
+  disjoint games (at most two a day).
+* **Lifecycle.** Only games played that day are used. Before the first leg
+  starts, a parlay is withdrawn or reinstated as the news moves. Grading: any
+  lost leg loses; pushed or void legs drop out and the payout shrinks.
+
+**What to expect.** Paying 2x means the sportsbooks give the parlay under a
+50% chance. A 70%+ parlay therefore needs the model to beat the market by
+about 20 points of probability. The product compounds any per-leg
+overconfidence, so the rule is meant to fire rarely. In a walk-forward check
+on the simulated leagues, each day used only earlier games:
+
+| League | Betting days | Parlays published | Best 2x+ combination per day (median) |
+|---|---|---|---|
+| MLB | 320 | 0 | 45.4% |
+| NBA | 261 | 0 | 44.2% |
+| NHL | 281 | 0 | 48.1% |
+| NFL | 47 | 0 | 52.6% |
+
+A calibrated model against a sharp market almost never finds such a parlay.
+When one appears on the live board, it means the model strongly disagrees
+with the market. The board shows the books' chance next to the model's for
+that reason, and the parlay record will show over time whether those
+disagreements were right.
+
 ## 9. Validation protocol (`backtest.py`)
 
 The backtest walks forward one day at a time:
