@@ -451,7 +451,10 @@ def predict_games(engine: LeagueEngine, games: list[Game], odds_map: dict, event
         pred = engine.predict(g, odds, factors)
         fresh.append(pred)
     upcoming = [p for p in fresh if _state(p.game) == "pre"]
-    picks = {t: pol.select(upcoming) for t, pol in policies.items()}
+    # picks are made on game day only, when the injury news is close to final;
+    # later games (the rest of the NFL week) are shown as an early look
+    game_day_preds = [p for p in upcoming if game_day(p.game) <= day]
+    picks = {t: pol.select(game_day_preds) for t, pol in policies.items()}
     teams_today = {g.home for g in games} | {g.away for g in games}
     news = [news_json(ev, names) for ev in events if ev.team in teams_today]
     run.news = sorted(news, key=lambda n: n["published"] or "", reverse=True)[:60]
@@ -459,12 +462,17 @@ def predict_games(engine: LeagueEngine, games: list[Game], odds_map: dict, event
         gnews = [n for n in run.news if n["team"] in (_code(pred.game.home, names), _code(pred.game.away, names))]
         gj = game_json(pred, policies, picks, names, gnews[:6])
         gj["frozen"] = _state(pred.game) != "pre"
+        gj["early"] = _state(pred.game) == "pre" and game_day(pred.game) > day
         run.games.append(_with_status(gj, pred.game))
     run.games.extend(frozen_json)
     run.games.sort(key=lambda x: x["start"])
 
     # --- reconcile the ledger for upcoming games ---------------------------------
-    preds_by_game = {p.game.game_id: p for p in upcoming}
+    # earlier versions published picks days ahead: take back those not yet on game day
+    early_ids = {p.game.game_id for p in upcoming if game_day(p.game) > day}
+    ledger[:] = [e for e in ledger if not (e.get("league") == engine.league and e["game_id"] in early_ids
+                                            and e.get("status") in ("pending", "withdrawn"))]
+    preds_by_game = {p.game.game_id: p for p in game_day_preds}
     for e in ledger:
         if e.get("league") != engine.league or e.get("status") not in ("pending", "withdrawn"):
             continue

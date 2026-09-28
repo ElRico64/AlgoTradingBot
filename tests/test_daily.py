@@ -150,3 +150,40 @@ def test_grading_survives_a_moved_start_time():
                        home_score=5, away_score=2)
     assert settle_ledger([entry], {final.game_id: final}, date(2026, 9, 26)) == 1
     assert entry["status"] == "won" and entry["final"] == "COL 2 – CHW 5"
+
+
+def test_picks_are_made_on_game_day_only(tmp_path, monkeypatch):
+    import sportsedge.daily as daily
+
+    games = generate("NBA", seasons=1, seed=9)
+    cut = games[-1].start_time.date()
+    history = [g for g in games if g.start_time.date() < cut - timedelta(days=1)]
+    todays = [g for g in games if g.start_time.date() == cut]
+
+    def fake_day(league, d):
+        if d == cut:
+            return [Game(g.game_id, league, g.start_time, g.home, g.away, g.neutral,
+                         {"odds": None, "status": {"state": "pre", "detail": ""}}) for g in todays]
+        return [g for g in games if g.start_time.date() == d]
+
+    monkeypatch.setattr(espn, "fetch_history", lambda league, start, end, **kw:
+                        [g for g in history if start <= g.start_time.date() <= end])
+    monkeypatch.setattr(espn, "fetch_day", fake_day)
+    monkeypatch.setattr(feeds, "gather_news", lambda league, **kw: [])
+    monkeypatch.setattr(daily, "LOOKAHEAD_DAYS", {"NBA": 1})
+    data_dir, site_dir = tmp_path / "data", tmp_path / "site"
+    # a pick published days ahead by an earlier version
+    (data_dir).mkdir()
+    early = {"id": "confidence:x:" + todays[0].game_id + ":moneyline:home", "tier": "confidence", "league": "NBA",
+             "game_id": todays[0].game_id, "date": cut.isoformat(), "status": "pending", "market": "moneyline",
+             "side": "home", "line": None}
+    (data_dir / "ledger.json").write_text(json.dumps([early]))
+
+    out = run_daily(["NBA"], str(data_dir), str(site_dir), day=cut - timedelta(days=1), bootstrap_days=400)
+    ahead = [g for g in out["games"] if g["id"] in {t.game_id for t in todays}]
+    assert ahead and all(g["early"] and not any(g["picks"].values()) for g in ahead)
+    assert not [e for e in out["ledger"] if e["game_id"] in {t.game_id for t in todays}]
+
+    out = run_daily(["NBA"], str(data_dir), str(site_dir), day=cut)
+    assert [e for e in out["ledger"] if e["tier"] == "confidence"], "game day: picks are made"
+    assert not any(g.get("early") for g in out["games"])

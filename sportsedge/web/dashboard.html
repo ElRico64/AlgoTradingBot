@@ -356,13 +356,13 @@ footer p { margin: 0; max-width: 92ch; }
     if (diff === 0) return "Today ";
     if (diff === 1) return "Tomorrow ";
     if (diff === -1) return "Yesterday ";
-    return d.toLocaleDateString([], { weekday: "short", month: "short", day: "numeric" }) + " ";
+    return d.toLocaleDateString([], { weekday: "short", month: "short", day: "numeric" }) + " · ";
   }
   function countdown(iso) {
     var ms = toDate(iso) - Date.now();
     if (ms <= 0) return "Starting";
     var m = Math.round(ms / 60000), h = Math.floor(m / 60);
-    if (h >= 24) return dayLabel(iso) + clock(iso);
+    if (h >= 24) { var dd = Math.round(h / 24); return "in " + dd + " day" + (dd > 1 ? "s" : ""); }
     return h ? "in " + h + "h " + (m % 60) + "m" : "in " + m + "m";
   }
   function cd(iso) { return '<span data-cd="' + esc(iso) + '">' + countdown(iso) + "</span>"; }
@@ -547,6 +547,7 @@ footer p { margin: 0; max-width: 92ch; }
     var tags = [];
     if (g.picks && g.picks.value) tags.push('<span class="pill best">Best bet · ' + esc(g.picks.value) + "</span>");
     else if (g.picks && g.picks.confidence) tags.push('<span class="pill conf">70%+ · ' + esc(g.picks.confidence) + "</span>");
+    else if (g.early) tags.push('<span class="pill void" title="Picks are made on game day, once the injury news is close to final">Early look · picks on game day</span>');
     var hs = (g.exp_total + g.exp_margin) / 2, as = (g.exp_total - g.exp_margin) / 2, d = g.league === "NBA" || g.league === "NFL" ? 0 : 1;
     var tot = (g.markets || []).filter(function (m) { return m.market === "total"; }).sort(function (a, b) { return b.p - a.p; })[0];
     var foot = '<span>Proj. ' + esc(g.away.abbr) + " " + as.toFixed(d) + " – " + esc(g.home.abbr) + " " + hs.toFixed(d) + "</span>";
@@ -565,7 +566,8 @@ footer p { margin: 0; max-width: 92ch; }
       var ok = !m.fails || !m.fails.length, cok = !m.conf_fails || !m.conf_fails.length;
       return "<tr><td>" + esc(m.label) + '</td><td class="num">' + pct(m.p) + '</td><td class="num">' + pct(m.lo, 0) + "–" + pct(m.hi, 0) + '</td><td class="num">' + odds(m.price) +
         '</td><td class="num">' + odds(m.value_line) + '</td><td class="num">' + sgnPct(m.edge) + '</td><td class="num">' + sgnPct(m.ev) + "</td>" +
-        (ok ? '<td class="ok">Best bet</td>' : cok ? '<td class="ok" style="color:var(--accent)">70%+ pick</td>' : '<td class="fail">' + esc((m.fails || []).slice(0, 2).join("; ")) + "</td>") + "</tr>";
+        (g.early && (ok || cok) ? '<td class="ok" style="color:var(--muted)">On track (decided on game day)</td>' :
+         ok ? '<td class="ok">Best bet</td>' : cok ? '<td class="ok" style="color:var(--accent)">70%+ pick</td>' : '<td class="fail">' + esc((m.fails || []).slice(0, 2).join("; ")) + "</td>") + "</tr>";
     }).join("");
     var comps = Object.keys(g.components || {}).map(function (k) { return "<span>" + esc(k) + " <b>" + pct(g.components[k]) + "</b></span>"; }).join("");
     var adj = Object.keys(g.adjustments || {}).map(function (k) { return "<span>" + esc(k.replace(/_/g, " ")) + " <b>" + (g.adjustments[k] >= 0 ? "+" : "") + g.adjustments[k].toFixed(2) + "</b></span>"; }).join("");
