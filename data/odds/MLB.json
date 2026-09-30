@@ -517,62 +517,62 @@ null,
 "under_price": 100.0
 },
 "MLB-20260930-BOS-NYY-20": {
-"away_ml": 113.0,
-"away_spread_price": -205.0,
-"home_ml": -136.0,
-"home_spread_price": 167.0,
+"away_ml": 118.0,
+"away_spread_price": -198.0,
+"home_ml": -142.0,
+"home_spread_price": 163.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.5758,
-0.5534
+0.5757,
+0.564
 ],
 [
 "moneyline",
 "away",
 null,
-0.4242,
-0.4466
+0.4243,
+0.436
 ],
 [
 "spread",
 "home",
 -1.5,
-0.3687,
-0.3512
+0.3689,
+0.3579
 ],
 [
 "spread",
 "away",
 -1.5,
-0.6313,
-0.6488
+0.6311,
+0.6421
 ],
 [
 "total",
 "over",
 6.5,
-0.6349,
-0.526
+0.6364,
+0.5227
 ],
 [
 "total",
 "under",
 6.5,
-0.3651,
-0.474
+0.3636,
+0.4773
 ]
 ],
-"over_price": -122.0,
+"over_price": -120.0,
 "source": "DraftKings",
 "spread": -1.5,
 "total": 6.5,
-"under_price": 101.0
+"under_price": 100.0
 },
 "MLB-20260930-CHC-SD-22": {
-"away_ml": 121.0,
+"away_ml": 120.0,
 "away_spread_price": -185.0,
 "home_ml": -145.0,
 "home_spread_price": 152.0,
@@ -582,96 +582,96 @@ null,
 "home",
 null,
 0.511,
-0.5697
+0.5686
 ],
 [
 "moneyline",
 "away",
 null,
 0.489,
-0.4303
+0.4314
 ],
 [
 "spread",
 "home",
 -1.5,
-0.3364,
+0.3367,
 0.3739
 ],
 [
 "spread",
 "away",
 -1.5,
-0.6636,
+0.6633,
 0.6261
 ],
 [
 "total",
 "over",
 7.0,
-0.6221,
-0.5283
+0.6237,
+0.5327
 ],
 [
 "total",
 "under",
 7.0,
-0.3779,
-0.4717
+0.3763,
+0.4673
 ]
 ],
-"over_price": -123.0,
+"over_price": -125.0,
 "source": "DraftKings",
 "spread": -1.5,
 "total": 7.0,
-"under_price": 102.0
+"under_price": 104.0
 },
 "MLB-20260930-CHW-HOU-17": {
-"away_ml": 128.0,
-"away_spread_price": -179.0,
-"home_ml": -155.0,
-"home_spread_price": 147.0,
+"away_ml": 122.0,
+"away_spread_price": -191.0,
+"home_ml": -147.0,
+"home_spread_price": 157.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
 0.4953,
-0.5846
+0.5723
 ],
 [
 "moneyline",
 "away",
 null,
 0.5047,
-0.4154
+0.4277
 ],
 [
 "spread",
 "home",
 -1.5,
 0.3404,
-0.3816
+0.3664
 ],
 [
 "spread",
 "away",
 -1.5,
 0.6596,
-0.6184
+0.6336
 ],
 [
 "total",
 "over",
 7.5,
-0.5734,
+0.5735,
 0.5
 ],
 [
 "total",
 "under",
 7.5,
-0.4266,
+0.4265,
 0.5
 ]
 ],
@@ -682,51 +682,51 @@ null,
 "under_price": -110.0
 },
 "MLB-20260930-PHI-ATL-14": {
-"away_ml": -117.0,
-"away_spread_price": 149.0,
-"home_ml": -103.0,
-"home_spread_price": -181.0,
+"away_ml": -114.0,
+"away_spread_price": 152.0,
+"home_ml": -106.0,
+"home_spread_price": -185.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.5479,
-0.4841
+0.5477,
+0.4909
 ],
 [
 "moneyline",
 "away",
 null,
-0.4521,
-0.5159
+0.4523,
+0.5091
 ],
 [
 "spread",
 "home",
 1.5,
-0.6669,
-0.6213
+0.6666,
+0.6261
 ],
 [
 "spread",
 "away",
 1.5,
-0.3331,
-0.3787
+0.3334,
+0.3739
 ],
 [
 "total",
 "over",
 7.0,
-0.6427,
+0.6444,
 0.5091
 ],
 [
 "total",
 "under",
 7.0,
-0.3573,
+0.3556,
 0.4909
 ]
 ],
