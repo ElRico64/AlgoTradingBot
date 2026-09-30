@@ -275,59 +275,59 @@ null,
 "under_price": -105.0
 },
 "NHL-20260930-LA-COL-22": {
-"away_ml": 160.0,
+"away_ml": 170.0,
 "away_spread_price": -155.0,
-"home_ml": -192.0,
+"home_ml": -205.0,
 "home_spread_price": 130.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.6235,
-0.6365
+0.6257,
+0.6509
 ],
 [
 "moneyline",
 "away",
 null,
-0.3765,
-0.3635
+0.3743,
+0.3491
 ],
 [
 "spread",
 "home",
 -1.5,
-0.3086,
+0.3111,
 0.4135
 ],
 [
 "spread",
 "away",
 -1.5,
-0.6914,
+0.6889,
 0.5865
 ],
 [
 "total",
 "over",
 6.5,
-0.4657,
-0.4661
+0.4668,
+0.4727
 ],
 [
 "total",
 "under",
 6.5,
-0.5343,
-0.5339
+0.5332,
+0.5273
 ]
 ],
-"over_price": 105.0,
-"source": "DraftKings",
+"over_price": 102.0,
+"source": "Draft Kings",
 "spread": -1.5,
 "total": 6.5,
-"under_price": -125.0
+"under_price": -122.0
 },
 "NHL-20260930-NYI-TOR-19": {
 "away_ml": 110.0,
