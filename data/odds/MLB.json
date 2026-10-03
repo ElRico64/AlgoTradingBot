@@ -790,5 +790,225 @@ null,
 "spread": 1.5,
 "total": 7.5,
 "under_price": -118.0
+},
+"MLB-20261003-ATL-LAD-16": {
+"away_ml": 173.0,
+"away_spread_price": -119.0,
+"home_ml": -212.0,
+"home_spread_price": -102.0,
+"model": [
+[
+"moneyline",
+"home",
+null,
+0.6145,
+0.6566
+],
+[
+"moneyline",
+"away",
+null,
+0.3855,
+0.3434
+],
+[
+"spread",
+"home",
+-1.5,
+0.3913,
+0.4808
+],
+[
+"spread",
+"away",
+-1.5,
+0.6087,
+0.5192
+],
+[
+"total",
+"over",
+8.5,
+0.496,
+0.4887
+],
+[
+"total",
+"under",
+8.5,
+0.504,
+0.5113
+]
+],
+"over_price": -105.0,
+"source": "DraftKings",
+"spread": -1.5,
+"total": 8.5,
+"under_price": -115.0
+},
+"MLB-20261003-CHW-CLE-13": {
+"away_ml": 129.0,
+"away_spread_price": -176.0,
+"home_ml": -156.0,
+"home_spread_price": 145.0,
+"model": [
+[
+"moneyline",
+"home",
+null,
+0.3903,
+0.5863
+],
+[
+"moneyline",
+"away",
+null,
+0.6097,
+0.4137
+],
+[
+"spread",
+"home",
+-1.5,
+0.2763,
+0.3852
+],
+[
+"spread",
+"away",
+-1.5,
+0.7237,
+0.6148
+],
+[
+"total",
+"over",
+7.0,
+0.5567,
+0.4717
+],
+[
+"total",
+"under",
+7.0,
+0.4433,
+0.5283
+]
+],
+"over_price": 102.0,
+"source": "DraftKings",
+"spread": -1.5,
+"total": 7.0,
+"under_price": -123.0
+},
+"MLB-20261003-NYY-TB-18": {
+"away_ml": 113.0,
+"away_spread_price": -199.0,
+"home_ml": -137.0,
+"home_spread_price": 163.0,
+"model": [
+[
+"moneyline",
+"home",
+null,
+0.5156,
+0.5543
+],
+[
+"moneyline",
+"away",
+null,
+0.4844,
+0.4457
+],
+[
+"spread",
+"home",
+-1.5,
+0.3472,
+0.3573
+],
+[
+"spread",
+"away",
+-1.5,
+0.6528,
+0.6427
+],
+[
+"total",
+"over",
+7.0,
+0.6088,
+0.4932
+],
+[
+"total",
+"under",
+7.0,
+0.3912,
+0.5068
+]
+],
+"over_price": -107.0,
+"source": "DraftKings",
+"spread": -1.5,
+"total": 7.0,
+"under_price": -113.0
+},
+"MLB-20261003-SD-MIL-20": {
+"away_ml": 166.0,
+"away_spread_price": -132.0,
+"home_ml": -203.0,
+"home_spread_price": 110.0,
+"model": [
+[
+"moneyline",
+"home",
+null,
+0.5955,
+0.647
+],
+[
+"moneyline",
+"away",
+null,
+0.4045,
+0.353
+],
+[
+"spread",
+"home",
+-1.5,
+0.3848,
+0.4536
+],
+[
+"spread",
+"away",
+-1.5,
+0.6152,
+0.5464
+],
+[
+"total",
+"over",
+7.0,
+0.6543,
+0.5045
+],
+[
+"total",
+"under",
+7.0,
+0.3457,
+0.4955
+]
+],
+"over_price": -112.0,
+"source": "DraftKings",
+"spread": -1.5,
+"total": 7.0,
+"under_price": -108.0
 }
 }
