@@ -156,8 +156,7 @@ def serve(directory: str, port: int = PORT) -> str:
             pass
 
         def do_GET(self):
-            if self.path.split("?")[0] in ("/favicon.ico", "/apple-touch-icon.png",
-                                           "/apple-touch-icon-precomposed.png"):
+            if self.path.split("?")[0] in ("/favicon.ico", "/apple-touch-icon-precomposed.png"):
                 self.send_response(204)  # browsers ask for icons; there are none
                 self.end_headers()
                 return

@@ -151,6 +151,34 @@ is free.
 
 ---
 
+## On your iPhone (free, always up to date)
+
+GitHub already updates the board about 10 times a day. Publish it as a web
+page once, and your phone opens it from anywhere, even with your Mac off:
+
+1. On github.com, open **ElRico64/AlgoTradingBot → Settings → Pages**. Under
+   **Build and deployment → Source**, choose **GitHub Actions**. On the
+   iPhone, tap **aA → Request Desktop Website** first if you don't see
+   Settings.
+2. Open **Actions → Daily picks → Run workflow**, or wait for the next
+   scheduled update. It takes a few minutes.
+3. On the iPhone, open **https://elrico64.github.io/AlgoTradingBot/** in
+   Safari, tap **Share → Add to Home Screen → Add**.
+
+The Sportsedge icon then opens the board full screen. An open board picks up
+each update by itself.
+
+Good to know:
+
+* **Everyone can see it.** The repository is public, so the page is too:
+  anyone with the address can see the picks and the record.
+* **Two track records.** The phone shows the GitHub board's record. Your Mac
+  keeps its own record in `~/Sportsedge`. Both run the same model, so their
+  picks match closely; a pick can differ when one updated after news the
+  other hasn't seen yet.
+
+---
+
 ## Part 2: See the model prove itself
 
 In a terminal inside the project folder (Mac: use `python3`):

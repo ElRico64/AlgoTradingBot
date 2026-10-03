@@ -54,6 +54,8 @@ button { cursor: pointer; }
 /* ---------- header ---------- */
 .top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 30; background: color-mix(in srgb, var(--bg) 86%, transparent);
   backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+/* phones: the header scrolls away instead of covering a third of the screen; clear the notch when opened from the home screen */
+@media (max-width: 640px) { .top { position: static; padding-top: env(safe-area-inset-top, 0px); } }
 .top .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; padding-block: 10px; }
 .brand { display: flex; align-items: center; gap: 10px; margin-right: auto; min-width: 0; }
 .mark { width: 30px; height: 30px; border-radius: 8px; background: var(--ink); display: grid; place-items: center; flex: none; }
@@ -155,6 +157,7 @@ details.why ul { margin: 0; padding-left: 18px; color: var(--ink-2); font-size: 
 .leg .p small { display: block; color: var(--muted); font-family: var(--mono); }
 .leg .st { font-size: 11px; font-weight: 700; text-transform: uppercase; }
 .leg .st.won { color: var(--won); } .leg .st.lost { color: var(--lost); } .leg .st.push, .leg .st.void { color: var(--push); }
+.pcard.parlay .pc-pick .m { white-space: normal; }
 .pcard.parlay::before { background: linear-gradient(90deg, var(--gold), var(--accent)); }
 .note-line { font-size: 12.5px; color: var(--muted); border-top: 1px dashed var(--line); padding-top: 8px; }
 .empty { background: var(--surface); border: 1px dashed var(--line); border-radius: 16px; padding: 22px; color: var(--ink-2); display: grid; gap: 6px; }

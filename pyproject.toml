@@ -20,7 +20,7 @@ sportsedge = "sportsedge.cli:main"
 include = ["sportsedge*"]
 
 [tool.setuptools.package-data]
-sportsedge = ["web/*.html"]
+sportsedge = ["web/*.html", "web/*.png"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

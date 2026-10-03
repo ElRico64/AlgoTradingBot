@@ -47,6 +47,8 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     timeout-minutes: 60
+    outputs:
+      pages_ready: ${{ steps.cfg.outcome == 'success' }}
     steps:
       - uses: actions/checkout@v4
 
@@ -100,14 +102,6 @@ jobs:
           git pull --rebase --autostash
           git push
 
-      # Public repositories: free GitHub Pages
-      - uses: actions/configure-pages@v5
-        if: ${{ !github.event.repository.private }}
-      - uses: actions/upload-pages-artifact@v3
-        if: ${{ !github.event.repository.private }}
-        with:
-          path: site
-
       # Every repository: the finished site on a `site` branch (free Cloudflare Pages / Netlify for private repos)
       - name: Publish site branch
         run: |
@@ -119,10 +113,25 @@ jobs:
           git commit -q -m "Board $(date -u '+%F %H:%M') UTC"
           git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" site
 
+      # Public repositories: free GitHub Pages. Until Pages is switched on
+      # (Settings -> Pages -> Source: GitHub Actions) these steps are skipped
+      # and the run still succeeds.
+      - id: cfg
+        uses: actions/configure-pages@v5
+        if: ${{ !github.event.repository.private }}
+        continue-on-error: true
+      - name: Pages not switched on yet
+        if: ${{ !github.event.repository.private && steps.cfg.outcome != 'success' }}
+        run: echo "::notice::GitHub Pages is off. Settings -> Pages -> Source -> GitHub Actions to publish the board at https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+      - uses: actions/upload-pages-artifact@v3
+        if: ${{ steps.cfg.outcome == 'success' }}
+        with:
+          path: site
+
   # Public repositories only (where Actions minutes are free): deploy to GitHub Pages.
   pages:
     needs: refresh
-    if: ${{ !github.event.repository.private }}
+    if: ${{ needs.refresh.outputs.pages_ready == 'true' }}
     runs-on: ubuntu-latest
     environment:
       name: github-pages
