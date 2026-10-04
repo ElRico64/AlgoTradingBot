@@ -570,8 +570,10 @@
    "news: Fernando Carmona (TEN, ir, G) P(plays)=58% impact\u22480.12\u00b10.12"
   ],
   "published_at": "2026-10-04T06:59:17+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.1429,
+  "graded_at": "2026-10-04T21:27:34+00:00",
+  "final": "TEN 18 \u2013 BAL 24"
  },
  {
   "id": "parlay:2026-10-04:7501b41151ab",
@@ -602,7 +604,10 @@
     "lo": 0.4722,
     "hi": 0.5836,
     "fair": 0.4339,
-    "status": "pending"
+    "status": "won",
+    "profit": 1.2,
+    "graded_at": "2026-10-04T21:27:36+00:00",
+    "final": "JAX 22 \u2013 CIN 17"
    },
    {
     "league": "NFL",

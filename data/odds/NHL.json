@@ -1871,55 +1871,55 @@ null,
 },
 "NHL-20261004-CGY-SEA-20": {
 "away_ml": 130.0,
-"away_spread_price": -205.0,
+"away_spread_price": -198.0,
 "home_ml": -155.0,
-"home_spread_price": 170.0,
+"home_spread_price": 164.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.5419,
+0.542,
 0.5865
 ],
 [
 "moneyline",
 "away",
 null,
-0.4581,
+0.458,
 0.4135
 ],
 [
 "spread",
 "home",
 -1.5,
-0.2826,
-0.3491
+0.2827,
+0.3572
 ],
 [
 "spread",
 "away",
 -1.5,
-0.7174,
-0.6509
+0.7173,
+0.6428
 ],
 [
 "total",
 "over",
 5.5,
-0.5696,
+0.5698,
 0.5339
 ],
 [
 "total",
 "under",
 5.5,
-0.4304,
+0.4302,
 0.4661
 ]
 ],
 "over_price": -125.0,
-"source": "DraftKings",
+"source": "Draft Kings",
 "spread": -1.5,
 "total": 5.5,
 "under_price": 105.0
@@ -1962,132 +1962,132 @@ null,
 "total",
 "over",
 6.5,
-0.5145,
+0.5147,
 0.5182
 ],
 [
 "total",
 "under",
 6.5,
-0.4855,
+0.4853,
 0.4818
 ]
 ],
 "over_price": -118.0,
-"source": "DraftKings",
+"source": "Draft Kings",
 "spread": 1.5,
 "total": 6.5,
 "under_price": -102.0
 },
 "NHL-20261004-UTAH-NYR-18": {
-"away_ml": 105.0,
+"away_ml": 100.0,
 "away_spread_price": -245.0,
-"home_ml": -125.0,
+"home_ml": -120.0,
 "home_spread_price": 200.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.5327,
-0.5339
+0.5332,
+0.5227
 ],
 [
 "moneyline",
 "away",
 null,
-0.4673,
-0.4661
+0.4668,
+0.4773
 ],
 [
 "spread",
 "home",
 -1.5,
-0.2905,
+0.2908,
 0.3116
 ],
 [
 "spread",
 "away",
 -1.5,
-0.7095,
+0.7092,
 0.6884
 ],
 [
 "total",
 "over",
 5.5,
-0.5761,
+0.576,
 0.5227
 ],
 [
 "total",
 "under",
 5.5,
-0.4239,
+0.424,
 0.4773
 ]
 ],
 "over_price": -120.0,
-"source": "DraftKings",
+"source": "Draft Kings",
 "spread": -1.5,
 "total": 5.5,
 "under_price": 100.0
 },
 "NHL-20261004-VGK-VAN-21": {
 "away_ml": -290.0,
-"away_spread_price": -105.0,
+"away_spread_price": -110.0,
 "home_ml": 235.0,
-"home_spread_price": -115.0,
+"home_spread_price": -110.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.3709,
+0.3711,
 0.2775
 ],
 [
 "moneyline",
 "away",
 null,
-0.6291,
+0.6289,
 0.7225
 ],
 [
 "spread",
 "home",
 1.5,
-0.688,
-0.5113
+0.6881,
+0.5
 ],
 [
 "spread",
 "away",
 1.5,
-0.312,
-0.4887
+0.3119,
+0.5
 ],
 [
 "total",
 "over",
 6.5,
-0.5017,
-0.4555
+0.5018,
+0.4661
 ],
 [
 "total",
 "under",
 6.5,
-0.4983,
-0.5445
+0.4982,
+0.5339
 ]
 ],
-"over_price": 110.0,
-"source": "DraftKings",
+"over_price": 105.0,
+"source": "Draft Kings",
 "spread": 1.5,
 "total": 6.5,
-"under_price": -130.0
+"under_price": -125.0
 },
 "NHL-20261004-WPG-DET-13": {
 "away_ml": -105.0,
