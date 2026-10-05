@@ -481,8 +481,10 @@
    "news: Zach Charbonnet (SEA, out) P(plays)=14% impact\u22480.40\u00b10.40"
   ],
   "published_at": "2026-10-04T06:59:17+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.2667,
+  "graded_at": "2026-10-05T00:10:17+00:00",
+  "final": "LAC 23 \u2013 SEA 30"
  },
  {
   "id": "confidence:2026-10-04:NFL-20261004-MIA-MIN-16:moneyline:home",
@@ -525,8 +527,10 @@
    "news: Nick Samac (MIN, ir) P(plays)=81% impact\u22480.12\u00b10.12"
   ],
   "published_at": "2026-10-04T06:59:17+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.1923,
+  "graded_at": "2026-10-05T00:10:17+00:00",
+  "final": "MIA 10 \u2013 MIN 15"
  },
  {
   "id": "confidence:2026-10-04:NFL-20261004-TEN-BAL-13:moneyline:home",
@@ -626,7 +630,10 @@
     "lo": 0.7813,
     "hi": 0.8715,
     "fair": 0.7682,
-    "status": "pending"
+    "status": "won",
+    "profit": 0.2667,
+    "graded_at": "2026-10-05T00:10:18+00:00",
+    "final": "LAC 23 \u2013 SEA 30"
    }
   ],
   "price": 179,
@@ -646,8 +653,9 @@
    "the sportsbooks' prices make it 33% likely; the model says 43%"
   ],
   "published_at": "2026-10-04T06:59:18+00:00",
-  "status": "pending",
-  "profit": null,
-  "p_now": 0.4299
+  "status": "won",
+  "profit": 1.7867,
+  "p_now": 0.4299,
+  "final": "JAX ML won \u00b7 SEA ML won"
  }
 ]
