@@ -1453,9 +1453,9 @@ null,
 },
 "MLB-20261007-MIL-SD-22": {
 "away_ml": -107.0,
-"away_spread_price": 159.0,
+"away_spread_price": 158.0,
 "home_ml": -112.0,
-"home_spread_price": -194.0,
+"home_spread_price": -193.0,
 "model": [
 [
 "moneyline",
@@ -1476,14 +1476,14 @@ null,
 "home",
 1.5,
 0.6228,
-0.6369
+0.6356
 ],
 [
 "spread",
 "away",
 1.5,
 0.3772,
-0.3631
+0.3644
 ],
 [
 "total",
