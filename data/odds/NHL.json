@@ -3575,56 +3575,56 @@ null,
 "under_price": -118.0
 },
 "NHL-20261009-ANA-WPG-20": {
-"away_ml": 105.0,
+"away_ml": 100.0,
 "away_spread_price": -250.0,
-"home_ml": -125.0,
+"home_ml": -120.0,
 "home_spread_price": 205.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.5955,
-0.5339
+0.5846,
+0.5227
 ],
 [
 "moneyline",
 "away",
 null,
-0.4045,
-0.4661
+0.4154,
+0.4773
 ],
 [
 "spread",
 "home",
 -1.5,
-0.2858,
+0.2878,
 0.3068
 ],
 [
 "spread",
 "away",
 -1.5,
-0.7142,
+0.7122,
 0.6932
 ],
 [
 "total",
 "over",
 6.5,
-0.4721,
+0.4719,
 0.4818
 ],
 [
 "total",
 "under",
 6.5,
-0.5279,
+0.5281,
 0.5182
 ]
 ],
 "over_price": -102.0,
-"source": "DraftKings",
+"source": "Draft Kings",
 "spread": -1.5,
 "total": 6.5,
 "under_price": -118.0
