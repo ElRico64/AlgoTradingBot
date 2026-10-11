@@ -1672,24 +1672,24 @@ null,
 "under_price": 100.0
 },
 "MLB-20261011-LAD-MIL-20": {
-"away_ml": -112.0,
+"away_ml": -108.0,
 "away_spread_price": 155.0,
-"home_ml": -107.0,
+"home_ml": -103.0,
 "home_spread_price": -188.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.4379,
-0.4943
+0.4377,
+0.4941
 ],
 [
 "moneyline",
 "away",
 null,
-0.5621,
-0.5057
+0.5623,
+0.5059
 ],
 [
 "spread",
