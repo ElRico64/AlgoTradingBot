@@ -1673,50 +1673,50 @@ null,
 },
 "MLB-20261011-LAD-MIL-20": {
 "away_ml": -107.0,
-"away_spread_price": 165.0,
+"away_spread_price": 166.0,
 "home_ml": -113.0,
-"home_spread_price": -201.0,
+"home_spread_price": -203.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.4476,
+0.4471,
 0.5068
 ],
 [
 "moneyline",
 "away",
 null,
-0.5524,
+0.5529,
 0.4932
 ],
 [
 "spread",
 "home",
 1.5,
-0.6238,
-0.6452
+0.6234,
+0.647
 ],
 [
 "spread",
 "away",
 1.5,
-0.3762,
-0.3548
+0.3766,
+0.353
 ],
 [
 "total",
 "over",
 6.0,
-0.6902,
+0.6905,
 0.5045
 ],
 [
 "total",
 "under",
 6.0,
-0.3098,
+0.3095,
 0.4955
 ]
 ],
