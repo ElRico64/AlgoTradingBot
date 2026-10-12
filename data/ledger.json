@@ -1181,8 +1181,10 @@
    "news: Filip Chytil (VAN, ir) P(plays)=97% impact\u22480.02\u00b10.02"
   ],
   "published_at": "2026-10-11T07:15:14+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.3774,
+  "graded_at": "2026-10-12T00:43:48+00:00",
+  "final": "VAN 2 \u2013 NYR 6"
  },
  {
   "id": "value:2026-10-11:NHL-20261011-SEA-WSH-17:moneyline:home",
@@ -1222,8 +1224,10 @@
    "news: Rasmus Sandin (WSH, ir) P(plays)=94% impact\u22480.02\u00b10.02"
   ],
   "published_at": "2026-10-11T07:15:14+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "lost",
+  "profit": -1.0,
+  "graded_at": "2026-10-12T00:43:48+00:00",
+  "final": "SEA 5 \u2013 WSH 3"
  },
  {
   "id": "confidence:2026-10-11:NHL-20261011-VAN-NYR-18:moneyline:home",
@@ -1266,8 +1270,10 @@
    "news: Filip Chytil (VAN, ir) P(plays)=97% impact\u22480.02\u00b10.02"
   ],
   "published_at": "2026-10-11T07:15:14+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.3774,
+  "graded_at": "2026-10-12T00:43:48+00:00",
+  "final": "VAN 2 \u2013 NYR 6"
  },
  {
   "id": "confidence:2026-10-11:NHL-20261011-SEA-WSH-17:moneyline:home",
@@ -1307,8 +1313,10 @@
    "news: Rasmus Sandin (WSH, ir) P(plays)=94% impact\u22480.02\u00b10.02"
   ],
   "published_at": "2026-10-11T07:15:14+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "lost",
+  "profit": -1.0,
+  "graded_at": "2026-10-12T00:43:48+00:00",
+  "final": "SEA 5 \u2013 WSH 3"
  },
  {
   "id": "confidence:2026-10-11:NFL-20261011-DEN-LAC-16:moneyline:away",
@@ -1451,7 +1459,10 @@
     "lo": 0.6761,
     "hi": 0.7197,
     "fair": 0.6642,
-    "status": "pending"
+    "status": "lost",
+    "profit": -1.0,
+    "graded_at": "2026-10-12T00:43:55+00:00",
+    "final": "SEA 5 \u2013 WSH 3"
    },
    {
     "league": "NHL",
@@ -1470,7 +1481,10 @@
     "lo": 0.7365,
     "hi": 0.7762,
     "fair": 0.7043,
-    "status": "pending"
+    "status": "won",
+    "profit": 0.3774,
+    "graded_at": "2026-10-12T00:43:55+00:00",
+    "final": "VAN 2 \u2013 NYR 6"
    }
   ],
   "price": 101,
@@ -1490,9 +1504,10 @@
    "the sportsbooks' prices make it 47% likely; the model says 53%"
   ],
   "published_at": "2026-10-11T07:15:38+00:00",
-  "status": "pending",
-  "profit": null,
-  "p_now": 0.5263
+  "status": "lost",
+  "profit": -1.0,
+  "p_now": 0.5263,
+  "final": "WSH ML lost \u00b7 NYR ML won"
  },
  {
   "id": "value:2026-10-11:NHL-20261011-CAR-PHI-19:moneyline:away",
