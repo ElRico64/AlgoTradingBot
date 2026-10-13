@@ -1881,13 +1881,13 @@ null,
 "under_price": -102.0
 },
 "NFL-20261018-ARI-LAR-16": {
-"away_ml": 550.0,
-"away_spread_price": -110.0,
-"home_ml": -800.0,
-"home_spread_price": -110.0,
+"away_ml": 600.0,
+"away_spread_price": -115.0,
+"home_ml": -900.0,
+"home_spread_price": -105.0,
 "over_price": -105.0,
 "source": "DraftKings",
-"spread": -12.5,
+"spread": -13.5,
 "total": 52.5,
 "under_price": -115.0
 },
@@ -1907,11 +1907,11 @@ null,
 "away_spread_price": -110.0,
 "home_ml": 230.0,
 "home_spread_price": -110.0,
-"over_price": -112.0,
+"over_price": -105.0,
 "source": "DraftKings",
 "spread": 6.0,
-"total": 52.5,
-"under_price": -108.0
+"total": 53.5,
+"under_price": -115.0
 },
 "NFL-20261018-CAR-PHI-13": {
 "away_ml": -105.0,
@@ -2011,5 +2011,16 @@ null,
 "spread": -7.0,
 "total": 44.5,
 "under_price": -118.0
+},
+"NFL-20261019-WSH-SF-20": {
+"away_ml": 320.0,
+"away_spread_price": -112.0,
+"home_ml": -410.0,
+"home_spread_price": -108.0,
+"over_price": -118.0,
+"source": "DraftKings",
+"spread": -7.5,
+"total": 50.5,
+"under_price": -102.0
 }
 }
