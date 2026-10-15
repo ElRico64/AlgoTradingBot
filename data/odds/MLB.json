@@ -1945,5 +1945,115 @@ null,
 "spread": -1.5,
 "total": 7.0,
 "under_price": -101.0
+},
+"MLB-20261015-MIL-LAD-20": {
+"away_ml": 133.0,
+"away_spread_price": -164.0,
+"home_ml": -161.0,
+"home_spread_price": 136.0,
+"model": [
+[
+"moneyline",
+"home",
+null,
+0.5917,
+0.5938
+],
+[
+"moneyline",
+"away",
+null,
+0.4083,
+0.4062
+],
+[
+"spread",
+"home",
+-1.5,
+0.3741,
+0.4013
+],
+[
+"spread",
+"away",
+-1.5,
+0.6259,
+0.5987
+],
+[
+"total",
+"over",
+7.5,
+0.537,
+0.4887
+],
+[
+"total",
+"under",
+7.5,
+0.463,
+0.5113
+]
+],
+"over_price": -105.0,
+"source": "DraftKings",
+"spread": -1.5,
+"total": 7.5,
+"under_price": -115.0
+},
+"MLB-20261015-TB-CLE-13": {
+"away_ml": 111.0,
+"away_spread_price": -202.0,
+"home_ml": -134.0,
+"home_spread_price": 165.0,
+"model": [
+[
+"moneyline",
+"home",
+null,
+0.5637,
+0.5494
+],
+[
+"moneyline",
+"away",
+null,
+0.4363,
+0.4506
+],
+[
+"spread",
+"home",
+-1.5,
+0.3682,
+0.3542
+],
+[
+"spread",
+"away",
+-1.5,
+0.6318,
+0.6458
+],
+[
+"total",
+"over",
+6.5,
+0.5986,
+0.5215
+],
+[
+"total",
+"under",
+6.5,
+0.4014,
+0.4785
+]
+],
+"over_price": -120.0,
+"source": "DraftKings",
+"spread": -1.5,
+"total": 6.5,
+"under_price": -101.0
 }
 }
