@@ -1879,14 +1879,14 @@ null,
 "moneyline",
 "home",
 null,
-0.4359,
+0.4358,
 0.4339
 ],
 [
 "moneyline",
 "away",
 null,
-0.5641,
+0.5642,
 0.5661
 ],
 [
@@ -1962,22 +1962,22 @@ null,
 "away_spread_price": -102.0,
 "home_ml": -105.0,
 "home_spread_price": -118.0,
-"over_price": -115.0,
+"over_price": -102.0,
 "source": "DraftKings",
 "spread": 1.5,
-"total": 39.5,
-"under_price": -105.0
+"total": 40.5,
+"under_price": -118.0
 },
 "NFL-20261018-CHI-ATL-13": {
 "away_ml": -115.0,
 "away_spread_price": -102.0,
 "home_ml": -105.0,
 "home_spread_price": -118.0,
-"over_price": -118.0,
+"over_price": -102.0,
 "source": "DraftKings",
 "spread": 1.5,
-"total": 50.5,
-"under_price": -102.0
+"total": 51.5,
+"under_price": -118.0
 },
 "NFL-20261018-DAL-GB-20": {
 "away_ml": 102.0,
@@ -2046,9 +2046,9 @@ null,
 "under_price": -105.0
 },
 "NFL-20261018-TEN-IND-13": {
-"away_ml": 270.0,
+"away_ml": 275.0,
 "away_spread_price": -115.0,
-"home_ml": -340.0,
+"home_ml": -345.0,
 "home_spread_price": -105.0,
 "over_price": -112.0,
 "source": "DraftKings",
