@@ -1870,59 +1870,59 @@ null,
 "under_price": -102.0
 },
 "NFL-20261015-SEA-DEN-20": {
-"away_ml": -148.0,
-"away_spread_price": -115.0,
-"home_ml": 124.0,
-"home_spread_price": -105.0,
+"away_ml": -155.0,
+"away_spread_price": -122.0,
+"home_ml": 130.0,
+"home_spread_price": 102.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.4439,
-0.4248
+0.4397,
+0.4135
 ],
 [
 "moneyline",
 "away",
 null,
-0.5561,
-0.5752
+0.5603,
+0.5865
 ],
 [
 "spread",
 "home",
 2.5,
-0.5056,
-0.4887
+0.5024,
+0.4727
 ],
 [
 "spread",
 "away",
 2.5,
-0.4944,
-0.5113
+0.4976,
+0.5273
 ],
 [
 "total",
 "over",
 40.5,
 0.5961,
-0.5
+0.5045
 ],
 [
 "total",
 "under",
 40.5,
 0.4039,
-0.5
+0.4955
 ]
 ],
-"over_price": -110.0,
+"over_price": -112.0,
 "source": "DraftKings",
 "spread": 2.5,
 "total": 40.5,
-"under_price": -110.0
+"under_price": -108.0
 },
 "NFL-20261018-ARI-LAR-16": {
 "away_ml": 600.0,
