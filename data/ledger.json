@@ -1950,8 +1950,10 @@
    "news: Lukas Cormier (VGK, ir) P(plays)=98% impact\u22480.02\u00b10.02"
   ],
   "published_at": "2026-10-15T05:55:49+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.3279,
+  "graded_at": "2026-10-16T05:54:00+00:00",
+  "final": "CGY 2 \u2013 VGK 6"
  },
  {
   "id": "value:2026-10-15:NHL-20261015-VAN-FLA-19:moneyline:home",
@@ -1994,8 +1996,10 @@
    "news: Filip Chytil (VAN, ir) P(plays)=99% impact\u22480.02\u00b10.02"
   ],
   "published_at": "2026-10-15T05:55:49+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.3356,
+  "graded_at": "2026-10-16T05:54:00+00:00",
+  "final": "VAN 2 \u2013 FLA 3"
  },
  {
   "id": "confidence:2026-10-15:NHL-20261015-CGY-VGK-22:moneyline:home",
@@ -2032,8 +2036,10 @@
    "news: Lukas Cormier (VGK, ir) P(plays)=98% impact\u22480.02\u00b10.02"
   ],
   "published_at": "2026-10-15T05:55:49+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.3279,
+  "graded_at": "2026-10-16T05:54:00+00:00",
+  "final": "CGY 2 \u2013 VGK 6"
  },
  {
   "id": "confidence:2026-10-15:NHL-20261015-VAN-FLA-19:moneyline:home",
@@ -2076,8 +2082,10 @@
    "news: Filip Chytil (VAN, ir) P(plays)=99% impact\u22480.02\u00b10.02"
   ],
   "published_at": "2026-10-15T05:55:49+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.3356,
+  "graded_at": "2026-10-16T05:54:00+00:00",
+  "final": "VAN 2 \u2013 FLA 3"
  },
  {
   "id": "confidence:2026-10-15:NHL-20261015-SEA-TB-19:moneyline:home",
@@ -2115,6 +2123,90 @@
    "news: Yanni Gourde (TB, ir) P(plays)=98% impact\u22480.02\u00b10.02"
   ],
   "published_at": "2026-10-15T05:55:49+00:00",
+  "status": "won",
+  "profit": 0.3876,
+  "graded_at": "2026-10-16T05:54:00+00:00",
+  "final": "SEA 3 \u2013 TB 4"
+ },
+ {
+  "id": "value:2026-10-16:NHL-20261016-PIT-COL-21:moneyline:home",
+  "tier": "value",
+  "date": "2026-10-16",
+  "league": "NHL",
+  "game_id": "NHL-20261016-PIT-COL-21",
+  "start": "2026-10-17T01:00:00",
+  "home": "COL",
+  "away": "PIT",
+  "label": "COL ML",
+  "market": "moneyline",
+  "side": "home",
+  "line": null,
+  "price": -218.0,
+  "p": 0.7399,
+  "lower": 0.7082,
+  "upper": 0.7712,
+  "fair": 0.6642,
+  "edge": 0.0757,
+  "ev": 0.0793,
+  "value_line": -274,
+  "stake": 0.03,
+  "reasons": [
+   "calibrated P(win)=74.0% \u2265 70%",
+   "80% credible band 70.8%\u201377.1% (lower \u2265 62%)",
+   "price -218 needs 68.6%; EV +7.9% per unit",
+   "no-vig market 66.4% \u2192 edge +7.6%",
+   "home-win components: kalman 64.1%, elo 63.3%, count 55.5%, pattern 64.1%",
+   "adjustments: news_margin_mean -0.06, altitude +0.05, rest -0.03, travel +0.03",
+   "news: Nicolas Roy (COL, day-to-day) P(plays)=62% impact\u22480.06\u00b10.06",
+   "news: Zachary L'Heureux (COL, day-to-day) P(plays)=62% impact\u22480.06\u00b10.06",
+   "news: Logan O'Connor (COL, ir) P(plays)=9% impact\u22480.02\u00b10.02",
+   "news: Georgii Merkulov (COL, ir) P(plays)=98% impact\u22480.02\u00b10.02",
+   "news: Trevor van Riemsdyk (PIT, ir) P(plays)=49% impact\u22480.02\u00b10.02",
+   "news: Justin Brazeau (PIT, ir) P(plays)=99% impact\u22480.02\u00b10.02",
+   "news: Ryan Graves (PIT, ir) P(plays)=99% impact\u22480.02\u00b10.02"
+  ],
+  "published_at": "2026-10-16T05:54:02+00:00",
+  "status": "pending",
+  "profit": null
+ },
+ {
+  "id": "confidence:2026-10-16:NHL-20261016-PIT-COL-21:moneyline:home",
+  "tier": "confidence",
+  "date": "2026-10-16",
+  "league": "NHL",
+  "game_id": "NHL-20261016-PIT-COL-21",
+  "start": "2026-10-17T01:00:00",
+  "home": "COL",
+  "away": "PIT",
+  "label": "COL ML",
+  "market": "moneyline",
+  "side": "home",
+  "line": null,
+  "price": -218.0,
+  "p": 0.7399,
+  "lower": 0.7082,
+  "upper": 0.7712,
+  "fair": 0.6642,
+  "edge": 0.0757,
+  "ev": 0.0793,
+  "value_line": -274,
+  "stake": 0.0,
+  "reasons": [
+   "calibrated P(win)=74.0% \u2265 70%",
+   "80% credible band 70.8%\u201377.1% (lower \u2265 62%)",
+   "price -218 needs 68.6%; EV +7.9% per unit",
+   "no-vig market 66.4% \u2192 edge +7.6%",
+   "home-win components: kalman 64.1%, elo 63.3%, count 55.5%, pattern 64.1%",
+   "adjustments: news_margin_mean -0.06, altitude +0.05, rest -0.03, travel +0.03",
+   "news: Nicolas Roy (COL, day-to-day) P(plays)=62% impact\u22480.06\u00b10.06",
+   "news: Zachary L'Heureux (COL, day-to-day) P(plays)=62% impact\u22480.06\u00b10.06",
+   "news: Logan O'Connor (COL, ir) P(plays)=9% impact\u22480.02\u00b10.02",
+   "news: Georgii Merkulov (COL, ir) P(plays)=98% impact\u22480.02\u00b10.02",
+   "news: Trevor van Riemsdyk (PIT, ir) P(plays)=49% impact\u22480.02\u00b10.02",
+   "news: Justin Brazeau (PIT, ir) P(plays)=99% impact\u22480.02\u00b10.02",
+   "news: Ryan Graves (PIT, ir) P(plays)=99% impact\u22480.02\u00b10.02"
+  ],
+  "published_at": "2026-10-16T05:54:02+00:00",
   "status": "pending",
   "profit": null
  }
