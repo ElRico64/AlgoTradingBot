@@ -6490,51 +6490,51 @@ null,
 "under_price": -130.0
 },
 "NHL-20261016-BOS-ANA-22": {
-"away_ml": -115.0,
+"away_ml": -118.0,
 "away_spread_price": 210.0,
-"home_ml": -105.0,
+"home_ml": -102.0,
 "home_spread_price": -258.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.4718,
-0.4887
+0.4596,
+0.4818
 ],
 [
 "moneyline",
 "away",
 null,
-0.5282,
-0.5113
+0.5404,
+0.5182
 ],
 [
 "spread",
 "home",
 1.5,
-0.7268,
+0.7225,
 0.699
 ],
 [
 "spread",
 "away",
 1.5,
-0.2732,
+0.2775,
 0.301
 ],
 [
 "total",
 "over",
 6.5,
-0.5097,
+0.5041,
 0.4661
 ],
 [
 "total",
 "under",
 6.5,
-0.4903,
+0.4959,
 0.5339
 ]
 ],
@@ -6545,51 +6545,51 @@ null,
 "under_price": -125.0
 },
 "NHL-20261016-PIT-COL-21": {
-"away_ml": 180.0,
+"away_ml": 170.0,
 "away_spread_price": -142.0,
-"home_ml": -218.0,
+"home_ml": -205.0,
 "home_spread_price": 120.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.7399,
-0.6642
+0.7195,
+0.6509
 ],
 [
 "moneyline",
 "away",
 null,
-0.2601,
-0.3358
+0.2805,
+0.3491
 ],
 [
 "spread",
 "home",
 -1.5,
-0.3135,
+0.3018,
 0.4339
 ],
 [
 "spread",
 "away",
 -1.5,
-0.6865,
+0.6982,
 0.5661
 ],
 [
 "total",
 "over",
 6.5,
-0.4943,
+0.4829,
 0.5182
 ],
 [
 "total",
 "under",
 6.5,
-0.5057,
+0.5171,
 0.4818
 ]
 ],
