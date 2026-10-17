@@ -2112,58 +2112,58 @@ null,
 "under_price": -110.0
 },
 "MLB-20261017-TB-CLE-20": {
-"away_ml": -116.0,
-"away_spread_price": 153.0,
-"home_ml": -104.0,
-"home_spread_price": -187.0,
+"away_ml": -114.0,
+"away_spread_price": 158.0,
+"home_ml": -106.0,
+"home_spread_price": -192.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.5797,
-0.4864
+0.5827,
+0.4909
 ],
 [
 "moneyline",
 "away",
 null,
-0.4203,
-0.5136
+0.4173,
+0.5091
 ],
 [
 "spread",
 "home",
 1.5,
-0.7332,
-0.6282
+0.733,
+0.635
 ],
 [
 "spread",
 "away",
 1.5,
-0.2668,
-0.3718
+0.267,
+0.365
 ],
 [
 "total",
 "over",
 6.5,
-0.5631,
-0.4955
+0.5646,
+0.5045
 ],
 [
 "total",
 "under",
 6.5,
-0.4369,
-0.5045
+0.4354,
+0.4955
 ]
 ],
-"over_price": -108.0,
+"over_price": -112.0,
 "source": "DraftKings",
 "spread": 1.5,
 "total": 6.5,
-"under_price": -112.0
+"under_price": -108.0
 }
 }
