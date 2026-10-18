@@ -7371,50 +7371,50 @@ null,
 },
 "NHL-20261018-CAR-CGY-20": {
 "away_ml": -218.0,
-"away_spread_price": 120.0,
+"away_spread_price": 114.0,
 "home_ml": 180.0,
-"home_spread_price": -142.0,
+"home_spread_price": -135.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.2391,
+0.2384,
 0.3358
 ],
 [
 "moneyline",
 "away",
 null,
-0.7609,
+0.7616,
 0.6642
 ],
 [
 "spread",
 "home",
 1.5,
-0.7345,
-0.5661
+0.7336,
+0.5536
 ],
 [
 "spread",
 "away",
 1.5,
-0.2655,
-0.4339
+0.2664,
+0.4464
 ],
 [
 "total",
 "over",
 6.5,
-0.4539,
+0.4553,
 0.4555
 ],
 [
 "total",
 "under",
 6.5,
-0.5461,
+0.5447,
 0.5445
 ]
 ],
@@ -7425,51 +7425,51 @@ null,
 "under_price": -130.0
 },
 "NHL-20261018-CBJ-MIN-18": {
-"away_ml": 154.0,
-"away_spread_price": -162.0,
-"home_ml": -185.0,
-"home_spread_price": 136.0,
+"away_ml": 160.0,
+"away_spread_price": -155.0,
+"home_ml": -192.0,
+"home_spread_price": 130.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.7204,
-0.6277
+0.7295,
+0.6365
 ],
 [
 "moneyline",
 "away",
 null,
-0.2796,
-0.3723
+0.2705,
+0.3635
 ],
 [
 "spread",
 "home",
 -1.5,
-0.3162,
-0.4027
+0.317,
+0.4135
 ],
 [
 "spread",
 "away",
 -1.5,
-0.6838,
-0.5973
+0.683,
+0.5865
 ],
 [
 "total",
 "over",
 6.5,
-0.4626,
+0.4632,
 0.4727
 ],
 [
 "total",
 "under",
 6.5,
-0.5374,
+0.5368,
 0.5273
 ]
 ],
