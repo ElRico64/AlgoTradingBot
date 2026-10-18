@@ -2849,8 +2849,10 @@
    "news: Omar Cooper Jr (NYJ, out) P(plays)=20% impact\u22480.40\u00b10.40"
   ],
   "published_at": "2026-10-18T05:58:00+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.2778,
+  "graded_at": "2026-10-18T20:45:08+00:00",
+  "final": "NYJ 19 \u2013 NE 26"
  },
  {
   "id": "confidence:2026-10-18:NFL-20261018-ARI-LAR-16:moneyline:home",
@@ -3032,8 +3034,10 @@
    "news: Tyjae Spears (TEN, questionable) P(plays)=74% impact\u22480.40\u00b10.40"
   ],
   "published_at": "2026-10-18T05:58:00+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "lost",
+  "profit": -1.0,
+  "graded_at": "2026-10-18T20:45:08+00:00",
+  "final": "TEN 26 \u2013 IND 20"
  },
  {
   "id": "parlay:2026-10-18:52619736b022",

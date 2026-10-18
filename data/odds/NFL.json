@@ -2200,51 +2200,51 @@ null,
 "under_price": -102.0
 },
 "NFL-20261018-DAL-GB-20": {
-"away_ml": -105.0,
+"away_ml": -108.0,
 "away_spread_price": -118.0,
-"home_ml": -115.0,
+"home_ml": -112.0,
 "home_spread_price": -102.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.6025,
-0.5113
+0.604,
+0.5045
 ],
 [
 "moneyline",
 "away",
 null,
-0.3975,
-0.4887
+0.396,
+0.4955
 ],
 [
 "spread",
 "home",
 -1.5,
-0.5561,
+0.5585,
 0.4818
 ],
 [
 "spread",
 "away",
 -1.5,
-0.4439,
+0.4415,
 0.5182
 ],
 [
 "total",
 "over",
 53.5,
-0.423,
+0.427,
 0.5045
 ],
 [
 "total",
 "under",
 53.5,
-0.577,
+0.573,
 0.4955
 ]
 ],
