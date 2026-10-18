@@ -2897,8 +2897,10 @@
    "news: Myles Garrett (LAR, ir) P(plays)=57% impact\u22480.12\u00b10.12"
   ],
   "published_at": "2026-10-18T05:58:00+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "lost",
+  "profit": -1.0,
+  "graded_at": "2026-10-18T23:39:36+00:00",
+  "final": "ARI 18 \u2013 LAR 16"
  },
  {
   "id": "confidence:2026-10-18:NFL-20261018-LAC-KC-16:moneyline:home",
@@ -2948,8 +2950,10 @@
    "news: Jamaree Caldwell (LAC, questionable) P(plays)=84% impact\u22480.40\u00b10.40"
   ],
   "published_at": "2026-10-18T05:58:00+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.2439,
+  "graded_at": "2026-10-18T23:39:36+00:00",
+  "final": "LAC 6 \u2013 KC 22"
  },
  {
   "id": "confidence:2026-10-18:NFL-20261018-BUF-LV-16:moneyline:away",
@@ -2992,8 +2996,10 @@
    "news: Trey Zuhn III (LV, questionable) P(plays)=88% impact\u22480.40\u00b10.40"
   ],
   "published_at": "2026-10-18T05:58:00+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.3876,
+  "graded_at": "2026-10-18T23:39:36+00:00",
+  "final": "BUF 33 \u2013 LV 30"
  },
  {
   "id": "confidence:2026-10-18:NFL-20261018-TEN-IND-13:moneyline:home",
@@ -3069,7 +3075,10 @@
     "lo": 0.6986,
     "hi": 0.7998,
     "fair": 0.699,
-    "status": "pending"
+    "status": "won",
+    "profit": 0.3876,
+    "graded_at": "2026-10-18T23:39:37+00:00",
+    "final": "BUF 33 \u2013 LV 30"
    },
    {
     "league": "NHL",

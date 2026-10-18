@@ -7370,59 +7370,59 @@ null,
 "under_price": -105.0
 },
 "NHL-20261018-CAR-CGY-20": {
-"away_ml": -218.0,
+"away_ml": -225.0,
 "away_spread_price": 114.0,
-"home_ml": 180.0,
+"home_ml": 185.0,
 "home_spread_price": -135.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.2382,
-0.3358
+0.2398,
+0.3293
 ],
 [
 "moneyline",
 "away",
 null,
-0.7618,
-0.6642
+0.7602,
+0.6707
 ],
 [
 "spread",
 "home",
 1.5,
-0.7333,
+0.7428,
 0.5536
 ],
 [
 "spread",
 "away",
 1.5,
-0.2667,
+0.2572,
 0.4464
 ],
 [
 "total",
 "over",
 6.5,
-0.4559,
-0.4555
+0.4484,
+0.4661
 ],
 [
 "total",
 "under",
 6.5,
-0.5441,
-0.5445
+0.5516,
+0.5339
 ]
 ],
-"over_price": 110.0,
-"source": "DraftKings",
+"over_price": 105.0,
+"source": "Draft Kings",
 "spread": 1.5,
 "total": 6.5,
-"under_price": -130.0
+"under_price": -125.0
 },
 "NHL-20261018-CBJ-MIN-18": {
 "away_ml": 160.0,
