@@ -7591,55 +7591,55 @@ null,
 },
 "NHL-20261019-PIT-UTAH-21": {
 "away_ml": 154.0,
-"away_spread_price": -162.0,
+"away_spread_price": -155.0,
 "home_ml": -185.0,
-"home_spread_price": 136.0,
+"home_spread_price": 130.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.7111,
+0.7123,
 0.6277
 ],
 [
 "moneyline",
 "away",
 null,
-0.2889,
+0.2877,
 0.3723
 ],
 [
 "spread",
 "home",
 -1.5,
-0.3152,
-0.4027
+0.3176,
+0.4135
 ],
 [
 "spread",
 "away",
 -1.5,
-0.6848,
-0.5973
+0.6824,
+0.5865
 ],
 [
 "total",
 "over",
 6.5,
-0.5065,
+0.5077,
 0.5536
 ],
 [
 "total",
 "under",
 6.5,
-0.4935,
+0.4923,
 0.4464
 ]
 ],
 "over_price": -135.0,
-"source": "Draft Kings",
+"source": "DraftKings",
 "spread": -1.5,
 "total": 6.5,
 "under_price": 114.0
