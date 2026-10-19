@@ -3492,8 +3492,10 @@
    "the sportsbooks' prices make it 46% likely; the model says 51%"
   ],
   "published_at": "2026-10-19T06:16:14+00:00",
-  "status": "pending",
+  "status": "withdrawn",
   "profit": null,
-  "p_now": 0.5042
+  "p_now": 0.4629,
+  "withdrawn_at": "2026-10-19T19:57:44+00:00",
+  "note": "Withdrawn before start: chance now 46.3%, expected return -5.4%"
  }
 ]
