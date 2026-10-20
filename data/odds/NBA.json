@@ -1,132 +1,132 @@
 {
 "NBA-20261020-BOS-DET-15": {
-"away_ml": -120.0,
-"away_spread_price": -105.0,
-"home_ml": 100.0,
-"home_spread_price": -115.0,
+"away_ml": -115.0,
+"away_spread_price": -102.0,
+"home_ml": -105.0,
+"home_spread_price": -118.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.5423,
-0.4773
+0.5413,
+0.4887
 ],
 [
 "moneyline",
 "away",
 null,
-0.4577,
-0.5227
+0.4587,
+0.5113
 ],
 [
 "spread",
 "home",
 1.5,
-0.5946,
-0.5113
+0.5937,
+0.5182
 ],
 [
 "spread",
 "away",
 1.5,
-0.4054,
-0.4887
+0.4063,
+0.4818
 ],
 [
 "total",
 "over",
 221.5,
 0.4335,
-0.5045
+0.4887
 ],
 [
 "total",
 "under",
 221.5,
 0.5665,
-0.4955
+0.5113
 ]
 ],
-"over_price": -112.0,
+"over_price": -105.0,
 "source": "DraftKings",
 "spread": 1.5,
 "total": 221.5,
-"under_price": -108.0
+"under_price": -115.0
 },
 "NBA-20261020-OKC-SA-21": {
-"away_ml": 102.0,
-"away_spread_price": -108.0,
-"home_ml": -122.0,
-"home_spread_price": -112.0,
+"away_ml": -102.0,
+"away_spread_price": -118.0,
+"home_ml": -118.0,
+"home_spread_price": -102.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.5758,
-0.5273
+0.5753,
+0.5182
 ],
 [
 "moneyline",
 "away",
 null,
-0.4242,
-0.4727
+0.4247,
+0.4818
 ],
 [
 "spread",
 "home",
 -1.5,
-0.5187,
-0.5045
+0.5183,
+0.4818
 ],
 [
 "spread",
 "away",
 -1.5,
-0.4813,
-0.4955
+0.4817,
+0.5182
 ],
 [
 "total",
 "over",
 232.5,
 0.3645,
-0.5045
+0.4887
 ],
 [
 "total",
 "under",
 232.5,
 0.6355,
-0.4955
+0.5113
 ]
 ],
-"over_price": -112.0,
+"over_price": -105.0,
 "source": "DraftKings",
 "spread": -1.5,
 "total": 232.5,
-"under_price": -108.0
+"under_price": -115.0
 },
 "NBA-20261020-PHI-NY-19": {
 "away_ml": 150.0,
-"away_spread_price": -108.0,
+"away_spread_price": -110.0,
 "home_ml": -180.0,
-"home_spread_price": -112.0,
+"home_spread_price": -110.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.7986,
+0.7985,
 0.6214
 ],
 [
 "moneyline",
 "away",
 null,
-0.2014,
+0.2015,
 0.3786
 ],
 [
@@ -134,14 +134,14 @@ null,
 "home",
 -4.5,
 0.6805,
-0.5045
+0.5
 ],
 [
 "spread",
 "away",
 -4.5,
 0.3195,
-0.4955
+0.5
 ],
 [
 "total",
