@@ -503,6 +503,46 @@ Pooled, the 1,156 picks at 70%+ claimed 78.0% and won 78.5%.
    Poisson-binomial expectation for the picks in view and says whether the
    record is in line, below (chance < 5%) or above what was claimed.
 
+**Loss study: could the losses have been prevented?**
+
+*Picks.* About 30 pre-game facts were tested on 1,175 historical 70%+
+moneyline picks, 253 of them losses:
+* rest and back-to-backs;
+* home or road favorite;
+* band width, and agreement between the model's parts;
+* point in the season and month;
+* winning and losing streaks;
+* last-10 form against season form;
+* MLB starters' ERA, and whether both starters were announced.
+
+Candidates were found on the first half of the picks (by date) and had to
+hold up on the second. None did. The strongest:
+
+| Group | Picks | Claimed | Won | z, 1st / 2nd half |
+|---|---|---|---|---|
+| Favorite lost 3+ in a row | 50 | 74.8% | 64.0% | −1.8 / −0.7 |
+| Favorite on a back-to-back | 303 | 75.8% | 72.6% | −1.9 / +0.4 |
+| Widest third of bands | 392 | 75.9% | 72.4% | +0.1 / −2.1 |
+
+With ~30 tests, one or two such groups are expected by chance.
+
+*All games.* On every game (about 9,000), outcomes were regressed on
+logit(p) plus each feature: recent form, streaks, rest difference and
+back-to-backs. No feature predicted the residual consistently in both
+halves. Borderline, and watched rather than acted on: NHL road teams on a
+back-to-back (t = 2.0; 1.4 in each half).
+
+*The 9 live losses.* Four (WSH, TB, ANA, and COL on Oct 19) were marginal
+picks where the model sat well above the books; the market check now
+filters them. The other five were ordinary upsets: LAR lost as an 86%
+favorite by the books' own numbers, IND and COL (Oct 10) were clear
+favorites, CHW had no posted odds, and CAR was on a back-to-back, which the
+two seasons show is already priced in.
+
+**Tried and not shipped.** Choosing the stacker's shrinkage per league by
+time-series CV (penalties 2–1000) changed out-of-sample log loss by at most
+±0.001 in every league, within run-to-run noise. It was reverted.
+
 **Checked and left alone.** The NFL replay's home margin (+2.1 predicted,
 +0.7 actual over 215 games) looked like overrated home field. Over all 597
 saved NFL games, the actual home margin is +2.00 ± 0.58, matching the
