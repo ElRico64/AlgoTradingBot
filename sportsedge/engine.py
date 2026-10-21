@@ -44,7 +44,7 @@ from .types import Game, GameResult, MarketOdds, MarketProbability, Prediction
 
 # Bump when a code change makes previously saved engines incompatible; saved
 # engines from another version are retrained from scratch instead of reused.
-ENGINE_VERSION = 4
+ENGINE_VERSION = 5  # 5: nested-CV gate for the pattern engine
 
 
 def _logit(p: float) -> float:

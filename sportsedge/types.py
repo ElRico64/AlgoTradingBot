@@ -95,6 +95,10 @@ class MarketProbability:
     # be compared against a price (edge / EV). A model-only calibration is fine
     # for "who wins" but its edge over the market would be winner's curse.
     market_aware: bool = True
+    # set by the market check (stats/market_check.py): the engine's own number and the
+    # share of its disagreement with the market that was kept
+    raw_probability: Optional[float] = None
+    check_share: Optional[float] = None
 
     @property
     def edge(self) -> Optional[float]:

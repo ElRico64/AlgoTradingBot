@@ -417,6 +417,97 @@ market is noisier than real markets by construction.
 
 ---
 
+## 9b. Review of the live record and two real seasons (October 2026)
+
+**The question.** The board started 17–3, then went 15–6. Is something
+wrong?
+
+**Live record (41 graded single picks, Sep 25 – Oct 20).**
+* The model said 76.3% on average; the picks won 78.0% (32–9).
+* From the published probabilities, the exact (Poisson-binomial)
+  distribution of wins has mean 31.3, sd 2.7, and an 80% range of 28–35.
+  The record is in line with the model.
+* The first 20 picks went 17–3 (85%), luckier than claimed. The next 21
+  went 15–6 (71%), which happens by chance about 36% of the time.
+* Losing picks and winning picks had the same gap over the books
+  (+6.3 points). There is no losing pattern to fit; fitting the 9 losses
+  would fit noise.
+
+**Two real seasons, walk-forward.** Each day was predicted only from earlier
+games, about 9,000 real games in total.
+
+| League | Games | Calibration slope | 70%+ picks | Model said | Won |
+|---|---|---|---|---|---|
+| MLB | 4,390 | 1.00 | 230 | 75.0% | 77.0% |
+| NBA | 2,089 | 1.01 | 784 | 79.1% | 79.5% |
+| NHL | 2,368 | 0.89 | 78 | 73.2% | 71.8% |
+| NFL | 215 | 0.79 | 64 | 80.3% | 79.7% |
+
+Pooled, the 1,156 picks at 70%+ claimed 78.0% and won 78.5%.
+
+**What was wrong, and what changed.**
+
+1. **Totals and spreads were worse than the books.** On about 210 graded
+   games with stored model and market probabilities, the log loss was:
+
+   | Market | Model | Books |
+   |---|---|---|
+   | Moneyline | 0.647 | 0.652 |
+   | Spread | 0.704 | 0.684 |
+   | Total | 0.717 (worse than a coin flip, 0.693) | 0.691 |
+
+   The model's over/under leans correlated *negatively* with results in
+   MLB, NHL and NFL. On two real NHL seasons, its predicted totals had zero
+   skill over the season average (regression slope 0.51). Fix: the
+   **market check** (`stats/market_check.py`). Every market keeps only the
+   share of the model's disagreement with the books that has held up:
+
+       logit p* = logit q + s · (logit p − logit q)
+
+   s is learned per league and market by maximum a posteriori, with partial
+   pooling across leagues (s = μ_market + d_league, d ~ N(0, 0.2²),
+   μ ~ N(0.5, 0.3²)). It is estimated from every graded game, wins and
+   losses alike, using the model's own (unchecked) numbers, so it never
+   learns from itself.
+
+   Walk-forward over the last 11 days, with the shares learned only from
+   earlier days:
+
+   | Market | Raw model | Books | Checked |
+   |---|---|---|---|
+   | Moneyline | 0.6444 | 0.6489 | 0.6442 |
+   | Spread | 0.7215 | 0.6979 | 0.7019 |
+   | Total | 0.7109 | 0.6895 | 0.6929 |
+
+   Learned shares: moneyline 0.51–0.64, spread 0.16–0.36, total 0.06–0.14.
+   Once a market has 100 graded games, its checked edge is trusted for
+   Best bets.
+2. **The pattern engine graded its own homework.** Its gate compared the
+   best of 6 penalty settings and 120 tree counts with a threshold, using
+   the same folds that chose them. The best of many noisy scores is
+   optimistic. Real data: the pattern-corrected component was worse than
+   the plain Kalman ratings in MLB (0.6791 vs 0.6756) and NFL (0.6528 vs
+   0.6483). Fix: **nested time-series cross-validation**. Settings are
+   chosen on earlier folds and scored on a later one, and the engine is
+   active only if that honest gain clears the threshold on average and is
+   positive on every honest fold. It now stays off in NHL and NBA, and is
+   on less often in MLB (16% of games) and NFL (23%). Final forecasts are
+   unchanged or better: MLB 0.6725 with or without the engine; NFL 0.6475
+   → 0.6471.
+3. **Closing-line value is tracked.** CLV is the price the pick was
+   published at against the last pre-game price. It measures edge with far
+   less noise than wins and losses. So far it is −0.18 ± 0.25 points of
+   implied probability: picks are published at about the final price, with
+   no sign of beating the close yet.
+4. **The board judges its own streaks.** The track record shows the exact
+   Poisson-binomial expectation for the picks in view and says whether the
+   record is in line, below (chance < 5%) or above what was claimed.
+
+**Checked and left alone.** The NFL replay's home margin (+2.1 predicted,
++0.7 actual over 215 games) looked like overrated home field. Over all 597
+saved NFL games, the actual home margin is +2.00 ± 0.58, matching the
+model.
+
 ## 10. Known limitations
 
 * Default coefficients (rest, travel, weather, key numbers, status priors)

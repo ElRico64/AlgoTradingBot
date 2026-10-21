@@ -103,9 +103,11 @@ class PatternModel:
     x_sd: Optional[np.ndarray] = None
     lin_lambda: Optional[float] = None
     val_gain: dict = field(default_factory=dict)
-    # earn-your-place gate: the correction is applied only when its cross-validated
-    # held-out log-loss gain on this league's own history reaches this level
+    # earn-your-place gate: the correction is applied only when its *nested*
+    # cross-validated log-loss gain reaches this level and is positive on every
+    # honest fold (settings chosen on earlier folds, scored on a later one)
     min_gain: float = 0.0015
+    honest_gain: dict = field(default_factory=dict)
 
     # ------------------------------------------------------------------ state
     def _team(self, t: str, when: datetime) -> TeamState:
@@ -195,12 +197,13 @@ class PatternModel:
 
         # stage 1: ridge-logistic main effects; penalty = best mean held-out gain
         lams = (3.0, 10.0, 30.0, 100.0, 300.0, 1000.0)
-        gains = np.zeros(len(lams))
-        for a, b in folds:
+        fold_gains = np.zeros((len(folds), len(lams)))
+        for k, (a, b) in enumerate(folds):
             base = _ll(off[a:b], y[a:b])
             for i, lam in enumerate(lams):
                 coef = _ridge_logit(Z[:a], y[:a], off[:a], lam)
-                gains[i] += (base - _ll(off[a:b] + Z[a:b] @ coef, y[a:b])) / len(folds)
+                fold_gains[k, i] = base - _ll(off[a:b] + Z[a:b] @ coef, y[a:b])
+        gains = fold_gains.mean(axis=0)
         i = int(np.argmax(gains))
         use_lin = gains[i] > 1e-4
         self.val_gain = {"linear": float(gains[i]) if use_lin else 0.0}
@@ -220,6 +223,18 @@ class PatternModel:
         mean_gain = np.mean(curves, axis=0)
         m = int(np.argmax(mean_gain))
         self.val_gain["trees"] = float(mean_gain[m]) if mean_gain[m] > 1e-4 else 0.0
+        # Honest gain (nested time-series CV): picking the best of many settings and
+        # then reading off its score overstates it. For each later fold, choose the
+        # settings on the folds before it only, then score that fold.
+        honest = []
+        for k in range(1, len(folds)):
+            i_k = int(np.argmax(fold_gains[:k].mean(axis=0)))
+            g_lin = fold_gains[k, i_k] if fold_gains[:k, i_k].mean() > 1e-4 else 0.0
+            c_k = np.mean(curves[:k], axis=0)
+            m_k = int(np.argmax(c_k))
+            g_tree = curves[k][m_k] if c_k[m_k] > 1e-4 else 0.0
+            honest.append(float(g_lin + g_tree))
+        self.honest_gain = {f"fold{k + 1}": g for k, g in zip(range(1, len(folds)), honest)}
         lin_all = Z @ self.lin_coef if use_lin else np.zeros(n)
         self.gbm = HistGradientBoosting(seed=self.n_fits, learning_rate=0.08).fit_fixed(
             X, y, off + lin_all, m if mean_gain[m] > 1e-4 else 0)
@@ -229,7 +244,10 @@ class PatternModel:
 
     @property
     def active(self) -> bool:
-        return sum(self.val_gain.values()) >= self.min_gain
+        if not getattr(self, "honest_gain", None):  # fitted by an earlier version: the old gate
+            return sum(self.val_gain.values()) >= self.min_gain
+        g = list(self.honest_gain.values())
+        return float(np.mean(g)) >= self.min_gain and min(g) > 0.0
 
     def correction(self, x: np.ndarray) -> float:
         """Learned logit correction to the structural forecast. Zero before the first

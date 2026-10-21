@@ -187,3 +187,30 @@ def test_picks_are_made_on_game_day_only(tmp_path, monkeypatch):
     out = run_daily(["NBA"], str(data_dir), str(site_dir), day=cut)
     assert [e for e in out["ledger"] if e["tier"] == "confidence"], "game day: picks are made"
     assert not any(g.get("early") for g in out["games"])
+
+
+def test_closing_line_value_is_attached_to_graded_moneylines():
+    from sportsedge.daily import attach_closing
+    e = {"tier": "confidence", "market": "moneyline", "side": "home", "price": -200, "status": "won", "game_id": "g1"}
+    pend = dict(e, status="pending", game_id="g2")
+    assert attach_closing([e, pend], {"g1": {"home_ml": -250, "away_ml": 210}, "g2": {"home_ml": -300}}) == 1
+    assert e["close_price"] == -250 and e["clv"] == pytest.approx(250 / 350 - 200 / 300, abs=1e-4)  # moved toward the pick
+    assert "clv" not in pend
+
+
+def test_page_script_parses(tmp_path):
+    """A syntax error in the board's script blanks the whole page: check it with Node when available."""
+    import re
+    import shutil
+    import subprocess
+    from importlib import resources
+
+    node = shutil.which("node")
+    if not node:
+        pytest.skip("node not installed")
+    html = resources.files("sportsedge").joinpath("web/dashboard.html").read_text(encoding="utf-8")
+    script = max(re.findall(r"<script>(.*?)</script>", html, re.S), key=len)
+    f = tmp_path / "page.js"
+    f.write_text(script, encoding="utf-8")
+    r = subprocess.run([node, "--check", str(f)], capture_output=True, text=True)
+    assert r.returncode == 0, r.stderr

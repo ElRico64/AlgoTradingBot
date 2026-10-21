@@ -128,7 +128,10 @@ fictional teams and players, so you can see it before anything is set up.
   * saves each game's last pre-game line in `data/odds/`. ESPN drops the
     odds from finished games, so this is how the history gets its closing
     lines for the market blend;
-  * re-predicts every game that hasn't started, and grades finished picks.
+  * re-predicts every game that hasn't started, and grades finished picks;
+  * runs the **market check**: each probability keeps only the share of the
+    model's disagreement with the sportsbooks that has held up on graded
+    games, learned per league and bet type (see `docs/METHODOLOGY.md` §9b).
 * **Game day only:** picks are made on the day of the game (US Eastern), when
   injury news is close to final. Later games, such as the rest of the NFL
   week, show their probabilities as an early look.

@@ -618,7 +618,8 @@ footer p { margin: 0; max-width: 92ch; }
   function detail(g) {
     var rows = (g.markets || []).map(function (m) {
       var ok = !m.fails || !m.fails.length, cok = !m.conf_fails || !m.conf_fails.length;
-      return "<tr><td>" + esc(m.label) + '</td><td class="num">' + pct(m.p) + '</td><td class="num">' + pct(m.lo, 0) + "–" + pct(m.hi, 0) + '</td><td class="num">' + odds(m.price) +
+      var raw = m.p_raw != null && Math.abs(m.p_raw - m.p) >= 0.005 ? '<br><small class="muted" title="The model\'s own number before the market check">model ' + pct(m.p_raw, 0) + "</small>" : "";
+      return "<tr><td>" + esc(m.label) + '</td><td class="num">' + pct(m.p) + raw + '</td><td class="num">' + pct(m.lo, 0) + "–" + pct(m.hi, 0) + '</td><td class="num">' + odds(m.price) +
         '</td><td class="num">' + odds(m.value_line) + '</td><td class="num">' + sgnPct(m.edge) + '</td><td class="num">' + sgnPct(m.ev) + "</td>" +
         (g.early && (ok || cok) ? '<td class="ok" style="color:var(--muted)">On track (decided on game day)</td>' :
          ok ? '<td class="ok">Best bet</td>' : cok ? '<td class="ok" style="color:var(--accent)">70%+ pick</td>' : '<td class="fail">' + esc((m.fails || []).slice(0, 2).join("; ")) + "</td>") + "</tr>";
@@ -629,7 +630,7 @@ footer p { margin: 0; max-width: 92ch; }
     return '<div class="detail"><div class="facts"><span>' + esc(g.home.abbr) + " win <b>" + pct(g.p_home) + "</b> (band " + pct(g.lo, 0) + "–" + pct(g.hi, 0) + ")</span><span>Expected margin <b>" +
       (g.exp_margin >= 0 ? esc(g.home.abbr) : esc(g.away.abbr)) + " by " + Math.abs(g.exp_margin).toFixed(1) + "</b></span><span>Expected total <b>" + g.exp_total.toFixed(1) + "</b></span>" +
       (g.frozen ? '<span class="muted">Prediction locked at game start</span>' : "") + "</div>" +
-      '<div class="tbl-wrap"><table><thead><tr><th>Bet</th><th>Model</th><th>Band</th><th>Price</th><th>Worth it at</th><th>Edge</th><th>Value</th><th>Verdict</th></tr></thead><tbody>' + rows + "</tbody></table></div>" +
+      '<div class="tbl-wrap"><table><thead><tr><th>Bet</th><th title="Market-checked chance; the model&#39;s own number is shown under it when different">Chance</th><th>Band</th><th>Price</th><th>Worth it at</th><th>Edge</th><th>Value</th><th>Verdict</th></tr></thead><tbody>' + rows + "</tbody></table></div>" +
       (comps ? '<div class="facts"><span class="muted">Home win by model:</span>' + comps + "</div>" : "") +
       (adj ? '<div class="facts"><span class="muted">Adjustments, home view:</span>' + adj + "</div>" : "") +
       (news ? '<div><div class="stub-k">News for this game</div>' + news + "</div>" : "") +
@@ -637,6 +638,34 @@ footer p { margin: 0; max-width: 92ch; }
   }
 
   /* ---------- record ---------- */
+  // Is this record normal? Exact distribution of wins for picks with the claimed
+  // probabilities (Poisson-binomial), so a streak can be judged against the model's own claims.
+  function pbinom(ps) {
+    var d = [1];
+    ps.forEach(function (p) {
+      var nd = new Array(d.length + 1).fill(0);
+      for (var k = 0; k < d.length; k++) { nd[k] += d[k] * (1 - p); nd[k + 1] += d[k] * p; }
+      d = nd;
+    });
+    return d;
+  }
+  function health(dec_) {
+    var n = dec_.length, w = dec_.filter(function (e) { return e.status === "won"; }).length;
+    if (n < 10) return "Fewer than 10 decided picks in this view: too early to judge the model on its record.";
+    var ps = dec_.map(function (e) { return e.p; }), d = pbinom(ps);
+    var mean = ps.reduce(function (a, b) { return a + b; }, 0), cum = 0, lo = null, hi = null, plow = 0, phigh = 0;
+    for (var k = 0; k < d.length; k++) { cum += d[k]; if (lo === null && cum >= 0.10) lo = k; if (hi === null && cum >= 0.90) hi = k; if (k <= w) plow += d[k]; if (k >= w) phigh += d[k]; }
+    var base = "From the probabilities it published, the model expected <b>" + mean.toFixed(1) + " wins</b> in these " + n + " decided picks (80% range " + lo + "–" + hi + "). It won <b>" + w + "</b>. ";
+    if (plow < 0.05) return base + "<b>Below what it claimed:</b> a record this poor or worse happens by chance only " + pct(plow, 0) + " of the time. Worth watching.";
+    if (phigh < 0.05) return base + "<b>Better than it claimed:</b> expect some cooling; a run this good happens by chance only " + pct(phigh, 0) + " of the time.";
+    return base + "<b>In line with the model.</b> Losing streaks are part of 70–80% picks: about 1 in 4 is expected to lose.";
+  }
+  function clvLine(rows) {
+    var c = rows.filter(function (e) { return e.clv != null; });
+    if (c.length < 5) return "";
+    var m = c.reduce(function (a, e) { return a + e.clv; }, 0) / c.length;
+    return '<div style="margin-top:8px">Closing-line value: after publication the price moved ' + (m >= 0 ? "toward" : "against") + " the picks by <b>" + Math.abs(100 * m).toFixed(1) + " points</b> of implied probability on average (" + c.length + " priced picks). Sustained positive values are the clearest sign of a real edge; near zero means the price already had it.</div>";
+  }
   function wilson(k, n) { if (!n) return [0, 1]; var z = 1.96, ph = k / n, d = 1 + z * z / n; var c = (ph + z * z / (2 * n)) / d, h = z * Math.sqrt(ph * (1 - ph) / n + z * z / (4 * n * n)) / d; return [Math.max(0, c - h), Math.min(1, c + h)]; }
   function ledgerView() {
     var cut = null;
@@ -666,7 +695,7 @@ footer p { margin: 0; max-width: 92ch; }
       '<div class="fig"><div class="k">Hit rate</div><div class="v">' + (w + l ? pct(w / (w + l), 0) : "—") + '</div><div class="s">model said ' + (claimed != null ? pct(claimed, 0) : "—") + "</div></div>" +
       '<div class="fig"><div class="k">Units</div><div class="v ' + (u > 0 ? "good" : u < 0 ? "bad" : "") + '">' + (priced.length ? units(u) : "—") + '</div><div class="s">ROI ' + (roi != null ? sgnPct(roi) : "—") + "</div></div>";
     var ci = wilson(w, w + l);
-    $("calib").innerHTML = w + l ? "These picks carried an average model probability of <b>" + pct(claimed) + "</b> and won <b>" + pct(w / (w + l)) + "</b>. With " + (w + l) + " decided picks the true hit rate is likely between " + pct(ci[0], 0) + " and " + pct(ci[1], 0) + ". Judge any model on hundreds of picks, not a hot week." : "No graded picks in this period yet. Picks are graded as soon as games finish.";
+    $("calib").innerHTML = w + l ? "These picks carried an average model probability of <b>" + pct(claimed) + "</b> and won <b>" + pct(w / (w + l)) + "</b>. " + health(dec_) + clvLine(graded) : "No graded picks in this period yet. Picks are graded as soon as games finish.";
     renderChart(priced);
     var list = L.slice().sort(function (a, b) { return a.date < b.date ? 1 : a.date > b.date ? -1 : 0; });
     $("recent").innerHTML = list.length ? list.slice(0, 80).map(function (e) {

@@ -4,20 +4,12 @@ model sees it as a good bet at that payout.
 
 The maths
 ---------
-* **Market check on every leg (winner's-curse correction).** The model's
-  probability is calibrated on average, but when it disagrees with the
-  sportsbooks only part of the disagreement turns out real. Picking the
-  legs where it disagrees most would pick up its errors (walk-forward on
-  simulated leagues: parlays claimed 49%, hit 42%, right at the books'
-  number). Each leg therefore keeps only the share s of its disagreement
-  that has held up:
-
-      logit p_leg = logit p_market + s · (logit p_model − logit p_market)
-
-  s is fitted by maximum likelihood on graded games, per market type, with
-  a normal prior centred on the walk-forward estimate (moneyline 0.44,
-  spread 0.27, total 0.67; sd 0.25). As the live record grows, the data
-  take over from the prior.
+* **Market check on every leg (winner's-curse correction).** Legs use the
+  board's market-checked probabilities (`stats/market_check.py`): each keeps
+  only the share of the model's disagreement with the sportsbooks that has
+  held up on graded games, learned per league and market. Picking the legs
+  where the model disagrees most would otherwise pick up its errors (walk-
+  forward on simulated leagues: unchecked parlays claimed 49%, hit 42%).
 * **Independence.** Legs come from different games with no team in two legs.
   Given the models, separate games are independent, so the hit probability
   is the product of the leg probabilities, P = Π p_i. Same-game legs are
@@ -60,9 +52,7 @@ from zoneinfo import ZoneInfo
 import numpy as np
 
 US_EASTERN = ZoneInfo("America/New_York")
-# share of the model-vs-market disagreement that held up, walk-forward on the simulated leagues
-PRIOR_SHARE = {"moneyline": 0.44, "spread": 0.27, "total": 0.67}
-PRIOR_SD = 0.25
+
 Z80 = 1.2815515655446004  # the 10th/90th percentiles of a normal are mean ± 1.2816 sd
 
 
@@ -117,39 +107,6 @@ def parlay_band(legs: list[dict], draws: int = 4000, seed: Optional[int] = None)
     return p, float(np.quantile(prod, 0.10)), float(np.quantile(prod, 0.90))
 
 
-def _logit(x: float) -> float:
-    x = min(max(x, 1e-6), 1 - 1e-6)
-    return math.log(x / (1 - x))
-
-
-def shrink(p: float, fair: float, share: float) -> float:
-    """Keep `share` of the model's disagreement with the market, on the log-odds scale."""
-    return 1 / (1 + math.exp(-(_logit(fair) + share * (_logit(p) - _logit(fair)))))
-
-
-def learn_shares(rows: list[tuple], prior: dict = PRIOR_SHARE, prior_sd: float = PRIOR_SD) -> dict:
-    """MAP estimate of the share per market type from graded legs (market, p_model, p_market, won 0/1)."""
-    from scipy.optimize import minimize_scalar
-
-    out = {}
-    for mk, s0 in prior.items():
-        r = [x for x in rows if x[0] == mk]
-        if not r:
-            out[mk] = {"share": s0, "n": 0}
-            continue
-        lp = np.array([_logit(x[1]) for x in r])
-        lf = np.array([_logit(x[2]) for x in r])
-        y = np.array([float(x[3]) for x in r])
-
-        def neg_post(s):
-            q = np.clip(1 / (1 + np.exp(-(lf + s * (lp - lf)))), 1e-9, 1 - 1e-9)
-            return -np.sum(y * np.log(q) + (1 - y) * np.log(1 - q)) + 0.5 * ((s - s0) / prior_sd) ** 2
-
-        s = float(minimize_scalar(neg_post, bounds=(-0.5, 1.5), method="bounded").x)
-        out[mk] = {"share": round(min(max(s, 0.0), 1.0), 3), "n": len(r)}
-    return out
-
-
 def leg_key(leg: dict) -> str:
     return f"{leg['league']}:{leg['game_id']}:{leg['market']}:{leg['side']}:{leg.get('line')}"
 
@@ -160,31 +117,28 @@ def parlay_id(day: str, legs: list[dict]) -> str:
 
 
 # ------------------------------------------------------------------ candidates
-def candidate_legs(games: list[dict], day: str, policy: ParlayPolicy, shares: Optional[dict] = None) -> list[dict]:
+def candidate_legs(games: list[dict], day: str, policy: ParlayPolicy) -> list[dict]:
     """Legs that can go into today's parlays: game-day games that haven't
     started, markets with a posted price, a market probability and
-    out-of-sample calibration. Probabilities are market-checked (see top)."""
-    shares = shares or {k: {"share": v} for k, v in PRIOR_SHARE.items()}
+    out-of-sample calibration. Probabilities are the board's market-checked ones."""
     legs = []
     for g in games:
         if g.get("state") != "pre" or g.get("early") or g.get("frozen") or et_date(g["start"]) != day:
             continue
         for m in g.get("markets") or []:
-            if m.get("price") is None or m.get("fair") is None or m["market"] not in shares:
+            if m.get("price") is None or m.get("fair") is None:
                 continue
             if any("calibration" in f for f in (m.get("conf_fails") or []) + (m.get("fails") or [])):
                 continue
-            sh = shares[m["market"]]["share"]
-            p = shrink(m["p"], m["fair"], sh)
+            p = m["p"]
             if p < policy.min_leg_probability:
                 continue
             legs.append({
                 "league": g["league"], "game_id": g["id"], "date": day, "start": g["start"],
                 "home": g["home"]["abbr"], "away": g["away"]["abbr"],
                 "market": m["market"], "side": m["side"], "line": m.get("line"), "label": m["label"],
-                "price": m["price"], "p": round(p, 4), "p_model": m["p"],
-                "lo": round(shrink(m.get("lo", m["p"]), m["fair"], sh), 4),
-                "hi": round(shrink(m.get("hi", m["p"]), m["fair"], sh), 4),
+                "price": m["price"], "p": round(p, 4), "p_model": m.get("p_raw", p),
+                "lo": m.get("lo", p), "hi": m.get("hi", p),
                 "fair": m.get("fair"), "status": "pending",
             })
     return legs
@@ -253,9 +207,9 @@ def parlay_entry(legs: list[dict], day: str, policy: ParlayPolicy, now: str) -> 
     d = float(np.prod([american_to_decimal(x["price"]) for x in legs]))
     fair = float(np.prod([x["fair"] for x in legs])) if all(x.get("fair") is not None for x in legs) else None
     legs = [dict(x) for x in sorted(legs, key=lambda x: x["start"])]
-    reasons = ["each leg's chance keeps only the part of the model's disagreement with the sportsbooks that has "
-               "held up on graded games: " + ", ".join(f"{x['label']} {x.get('p_model', x['p']):.0%} → {x['p']:.0%}"
-                                                      for x in legs),
+    reasons = ["each leg's chance is market-checked (keeps only the part of the model's disagreement with the "
+               "sportsbooks that has held up on graded games): "
+               + ", ".join(f"{x['label']} {x.get('p_model', x['p']):.0%} → {x['p']:.0%}" for x in legs),
                f"{len(legs)} legs from different games, so the hit chance is the product of the legs: "
                + " × ".join(f"{x['p']:.0%}" for x in legs) + f" = {p:.1%}",
                f"80% band {lo:.1%}–{hi:.1%} from simulating each leg's own uncertainty",

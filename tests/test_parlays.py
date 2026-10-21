@@ -98,18 +98,3 @@ def test_settle_rules():
     e = mk("won", "pending"); settle_parlay(e); assert e["status"] == "pending"
     e = mk("won", "push"); settle_parlay(e); assert e["status"] == "won" and abs(e["profit"] - (1 + 100 / 120 - 1)) < 1e-3
     e = mk("push", "void"); settle_parlay(e); assert e["status"] == "push" and e["profit"] == 0.0
-
-
-def test_market_check_learns_the_real_share():
-    from sportsedge.parlays import PRIOR_SHARE, learn_shares, shrink
-    rng = np.random.default_rng(1)
-    rows = []
-    for _ in range(20000):  # the model's disagreement is half real
-        fair = rng.uniform(0.3, 0.7)
-        p = 1 / (1 + np.exp(-(np.log(fair / (1 - fair)) + rng.normal(0, 0.5))))
-        truth = shrink(p, fair, 0.5)
-        rows.append(("moneyline", p, fair, float(rng.random() < truth)))
-    est = learn_shares(rows)
-    assert abs(est["moneyline"]["share"] - 0.5) < 0.08 and est["moneyline"]["n"] == 20000
-    assert est["total"]["share"] == PRIOR_SHARE["total"]  # no data: the prior
-    assert shrink(0.8, 0.6, 0.0) == pytest.approx(0.6) and shrink(0.8, 0.6, 1.0) == pytest.approx(0.8)

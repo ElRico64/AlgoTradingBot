@@ -37,6 +37,7 @@ from .picks import PickPolicy, confidence_policy, value_line
 from .stats.odds import american_to_decimal, breakeven_probability, prob_to_american
 from .teams import REGISTRY
 from .types import Game, GameResult, MarketOdds, NewsEvent, Pick, Prediction
+from .stats.market_check import apply_to_prediction
 from .version import VERSION
 
 log = logging.getLogger(__name__)
@@ -167,13 +168,32 @@ def settle_parlays(ledger: list[dict], results: dict[str, GameResult], today: da
         settle_parlay(e)
 
 
+def attach_closing(entries: list[dict], store: dict) -> int:
+    """Closing-line value of graded moneyline picks: the last pre-game price (kept in the
+    odds store) against the price the pick was published at, as implied probability.
+    Positive = the market moved toward the pick after it was published."""
+    n = 0
+    for e in entries:
+        if (e.get("tier") == "parlay" or e.get("market") != "moneyline" or e.get("price") is None
+                or e.get("close_price") is not None or e.get("status") not in ("won", "lost", "push")):
+            continue
+        v = store.get(e["game_id"]) or {}
+        close = v.get("home_ml" if e["side"] == "home" else "away_ml")
+        if close is None:
+            continue
+        e["close_price"] = close
+        e["clv"] = round(breakeven_probability(close) - breakeven_probability(e["price"]), 4)
+        n += 1
+    return n
+
+
 def remember_model(store: dict, games_json: list[dict]) -> None:
     """Keep the model's and the market's probability for every priced market of the
     day's games next to their odds, so the parlay market check can learn from results."""
     for g in games_json:
         if g.get("state") != "pre" or g.get("early") or g["id"] not in store:
             continue
-        store[g["id"]]["model"] = [[m["market"], m["side"], m.get("line"), m["p"], m["fair"]]
+        store[g["id"]]["model"] = [[m["market"], m["side"], m.get("line"), m.get("p_raw", m["p"]), m["fair"]]
                                    for m in g.get("markets") or [] if m.get("fair") is not None]
 
 
@@ -182,32 +202,37 @@ def _leg_result(market: str, side: str, line, r: GameResult) -> Optional[float]:
     return None if e == "push" else float(e == "won")
 
 
-def parlay_shares(data_dir: str, finals: dict[str, GameResult]) -> dict:
-    """Share of the model-vs-market disagreement that held up, learned from every graded
-    game the board priced (all leagues), starting from the walk-forward prior."""
-    from .parlays import learn_shares
+def market_shares(data_dir: str) -> dict:
+    """Market check shares per league and market, learned from every graded game the
+    board priced (raw model and market probabilities are kept with the odds)."""
+    from .data.csv_io import read_results
+    from .stats.market_check import fit_shares
 
     rows = []
     for league in ALL_LEAGUES:
-        for gid, v in load_odds_store(data_dir, league).items():
-            r = finals.get(gid)
-            if r is None or "model" not in v:
-                continue
-            for mk, side, line, p, fair in v["model"]:
+        store = load_odds_store(data_dir, league)
+        hist_path = os.path.join(data_dir, "history", f"{league}.csv")
+        if not store or not os.path.exists(hist_path):
+            continue
+        wanted = {gid for gid, v in store.items() if "model" in v}
+        results = {r.game_id: r for r in read_results(hist_path, league) if r.game_id in wanted}
+        for gid, r in results.items():
+            for mk, side, line, p, fair in store[gid]["model"]:
+                if side not in ("home", "over") or fair is None:
+                    continue  # one side per game and market
                 y = _leg_result(mk, side, line, r)
                 if y is not None:
-                    rows.append((mk, p, fair, y))
-    return learn_shares(rows)
+                    rows.append((league, mk, p, fair, y))
+    return fit_shares(rows, leagues=ALL_LEAGUES)
 
 
-def update_parlays(ledger: list[dict], games: list[dict], day: str, policy=None, shares: Optional[dict] = None) -> dict:
+def update_parlays(ledger: list[dict], games: list[dict], day: str, policy=None) -> dict:
     """Re-check today's published parlays against the latest numbers (withdraw /
     reinstate before the first leg starts), then publish new ones from games
     not used yet. Returns what the scan found, for the board."""
-    from .parlays import PRIOR_SHARE, ParlayPolicy, candidate_legs, parlay_band, parlay_entry, scan, shrink
+    from .parlays import ParlayPolicy, candidate_legs, parlay_band, parlay_entry, scan
 
     policy = policy or ParlayPolicy()
-    shares = shares or {k: {"share": v, "n": 0} for k, v in PRIOR_SHARE.items()}
     index = {}
     for g in games:
         if g.get("state") == "pre":
@@ -220,13 +245,8 @@ def update_parlays(ledger: list[dict], games: list[dict], day: str, policy=None,
         cur = [index.get((x["league"], x["game_id"], x["market"], x["side"], x.get("line"))) for x in e["legs"]]
         if any(c is None for c in cur):
             continue  # a leg has started or its line moved: the parlay stands as published
-        now = []
-        for x, c in zip(e["legs"], cur):
-            sh = shares.get(x["market"], {"share": 1.0})["share"]
-            fair = c.get("fair") if c.get("fair") is not None else x.get("fair")
-            f = (lambda q: shrink(q, fair, sh)) if fair is not None else (lambda q: q)
-            now.append({**x, "p": f(c["p"]), "lo": f(c["lo"]), "hi": f(c["hi"])})
-        p, lo, _ = parlay_band(now, policy.draws)
+        p, lo, _ = parlay_band([{**x, "p": c["p"], "lo": c["lo"], "hi": c["hi"]} for x, c in zip(e["legs"], cur)],
+                               policy.draws)
         ev = p * e["decimal"] - 1
         ok = (p >= policy.min_probability and ev >= policy.min_ev
               and (policy.min_lower_bound is None or lo >= policy.min_lower_bound))
@@ -237,7 +257,7 @@ def update_parlays(ledger: list[dict], games: list[dict], day: str, policy=None,
             e.update(status="pending", note="Reinstated after new information")
         e["p_now"] = round(p, 4)
     used = {x["game_id"] for e in todays for x in e["legs"]}
-    legs = candidate_legs(games, day, policy, shares)
+    legs = candidate_legs(games, day, policy)
     chosen, near = scan(legs, policy, used)
     ids = {e["id"] for e in ledger}
     for combo in chosen[:max(policy.max_per_day - len(todays), 0)]:
@@ -245,9 +265,16 @@ def update_parlays(ledger: list[dict], games: list[dict], day: str, policy=None,
         if entry["id"] not in ids:
             ledger.append(entry)
             ids.add(entry["id"])
-    return {"candidates": len(legs), "closest": near, "shares": shares,
+    return {"candidates": len(legs), "closest": near,
             "policy": {"min_probability": policy.min_probability, "min_decimal": policy.min_decimal,
                        "min_ev": policy.min_ev, "max_legs": policy.max_legs}}
+
+
+def _check_note(m) -> list[str]:
+    if m.raw_probability is None or m.check_share is None:
+        return []
+    return [f"market check: model {m.raw_probability:.1%} vs books {m.fair_market_prob:.1%} -> {m.probability:.1%} "
+            f"(keeps {m.check_share:.0%} of the model's disagreement, learned from graded games)"]
 
 
 def ledger_entry(pk: Pick, tier: str, names: dict | None, min_ev: float) -> dict:
@@ -259,12 +286,13 @@ def ledger_entry(pk: Pick, tier: str, names: dict | None, min_ev: float) -> dict
         "game_id": g.game_id, "start": g.start_time.isoformat(), "home": home, "away": away,
         "label": pick_label(home, away, m.market, m.side, m.line), "market": m.market, "side": m.side,
         "line": m.line, "price": m.price, "p": round(m.probability, 4), "lower": round(m.lower, 4),
+        "p_model": None if m.raw_probability is None else round(m.raw_probability, 4),
         "upper": round(m.upper, 4), "fair": None if m.fair_market_prob is None else round(m.fair_market_prob, 4),
         "edge": None if m.edge is None else round(m.edge, 4),
         "ev": None if m.expected_value is None else round(m.expected_value, 4),
         "value_line": round(value_line(m.probability, min_ev)),
         "stake": round(pk.stake_fraction, 4) if tier == "value" else 0.0,
-        "reasons": [_relabel_note(r, names) for r in pk.reasons],
+        "reasons": [_relabel_note(r, names) for r in pk.reasons] + _check_note(m),
         "published_at": _now(), "status": "pending", "profit": None,
     }
 
@@ -297,6 +325,8 @@ def market_json(m, game: Game, policies: dict[str, PickPolicy], names: dict | No
     return {
         "market": m.market, "side": m.side, "line": m.line, "label": label,
         "price": m.price, "p": round(m.probability, 4), "lo": round(m.lower, 4), "hi": round(m.upper, 4),
+        "p_raw": round(m.raw_probability if m.raw_probability is not None else m.probability, 4),
+        "check": m.check_share,
         "fair": None if m.fair_market_prob is None else round(m.fair_market_prob, 4),
         "edge": None if m.edge is None else round(m.edge, 4),
         "ev": None if m.expected_value is None else round(m.expected_value, 4),
@@ -533,7 +563,8 @@ def _policies(policy: PickPolicy) -> dict[str, PickPolicy]:
 
 def predict_games(engine: LeagueEngine, games: list[Game], odds_map: dict, events: list[NewsEvent],
                   factors: list[AvailabilityFactor], policy: PickPolicy, day: str, ledger: list[dict],
-                  names: dict | None = None, previous: dict | None = None) -> LeagueRun:
+                  names: dict | None = None, previous: dict | None = None,
+                  shares: Optional[dict] = None) -> LeagueRun:
     """Predict upcoming games, keep frozen predictions for started ones, and
     reconcile the ledger (new picks, withdrawals, reinstatements)."""
     policies = _policies(policy)
@@ -555,6 +586,7 @@ def predict_games(engine: LeagueEngine, games: list[Game], odds_map: dict, event
         if odds is not None and run.odds_source == "none":
             run.odds_source = odds.source
         pred = engine.predict(g, odds, factors)
+        apply_to_prediction(pred, engine.league, shares)  # market check (no-op without shares)
         fresh.append(pred)
     upcoming = [p for p in fresh if _state(p.game) == "pre"]
     # picks are made on game day only, when the injury news is close to final;
@@ -699,7 +731,8 @@ def _load_engine(league: str, data_dir: str, day: date, bootstrap_days: int,
 
 
 def run_league(league: str, data_dir: str, day: date, policy: PickPolicy, ledger: list[dict],
-               odds_key: Optional[str], analyzer, bootstrap_days: int, progress=None) -> LeagueRun:
+               odds_key: Optional[str], analyzer, bootstrap_days: int, progress=None,
+               shares: Optional[dict] = None) -> LeagueRun:
     from .data.sources import fetch_day
     from .news.feeds import gather_news
     from .news.impact import PlayerImpactRegistry, build_factors
@@ -712,6 +745,7 @@ def run_league(league: str, data_dir: str, day: date, policy: PickPolicy, ledger
     finals.update({g.game_id: g for g in fetch_day(league, day - timedelta(days=1)) if isinstance(g, GameResult)})
     finals.update({g.game_id: g for g in games if isinstance(g, GameResult)})
     settle_ledger([e for e in ledger if e["league"] == league], finals, day)
+    attach_closing([e for e in ledger if e["league"] == league], load_odds_store(data_dir, league))
 
     upcoming = [g for g in games if _state(g) == "pre"]
     odds_map, events, factors = {}, [], []
@@ -740,7 +774,7 @@ def run_league(league: str, data_dir: str, day: date, policy: PickPolicy, ledger
             saved = json.load(f)
         previous = {g["id"]: g for g in saved.get("games", [])}
     run = predict_games(engine, games, odds_map, events, factors, policy, day.isoformat(), ledger,
-                        previous=previous)
+                        previous=previous, shares=shares)
     run.finals = finals
     if odds_map:
         run.odds_source = "the-odds-api"
@@ -788,12 +822,18 @@ def run_daily(leagues=ALL_LEAGUES, data_dir: str = "data", site_dir: str = "site
         from .news.llm import ClaudeNewsAnalyzer
 
         analyzer = ClaudeNewsAnalyzer()
+    try:
+        shares = market_shares(data_dir)
+    except Exception as e:  # the check is an improvement, never a reason to fail the update
+        log.warning("market check unavailable: %s", e)
+        shares = None
     runs = []
     for lg in leagues:
         try:
             if progress:
                 progress(f"{lg}: updating...")
-            run = run_league(lg, data_dir, day, policy, ledger, odds_key, analyzer, bootstrap_days, progress)
+            run = run_league(lg, data_dir, day, policy, ledger, odds_key, analyzer, bootstrap_days, progress,
+                             shares=shares)
         except Exception as e:  # one league failing must not take down the others
             from .data.sources import SourceUnavailable
 
@@ -808,8 +848,7 @@ def run_daily(leagues=ALL_LEAGUES, data_dir: str = "data", site_dir: str = "site
     for r in runs:
         finals.update(r.finals)
     settle_parlays(ledger, finals, day)
-    parlay_scan = update_parlays(ledger, [g for r in runs for g in r.games], day.isoformat(),
-                                 shares=parlay_shares(data_dir, finals))
+    parlay_scan = update_parlays(ledger, [g for r in runs for g in r.games], day.isoformat())
     os.makedirs(data_dir, exist_ok=True)
     with open(ledger_path, "w") as f:
         json.dump(ledger, f, indent=1)
