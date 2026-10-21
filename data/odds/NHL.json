@@ -8306,56 +8306,56 @@ null,
 },
 "NHL-20261021-FLA-OTT-19": {
 "away_ml": -112.0,
-"away_spread_price": -278.0,
+"away_spread_price": 230.0,
 "home_ml": -108.0,
-"home_spread_price": 225.0,
+"home_spread_price": -285.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.5494,
+0.5496,
 0.4955
 ],
 [
 "moneyline",
 "away",
 null,
-0.4506,
+0.4504,
 0.5045
 ],
 [
 "spread",
 "home",
--1.5,
-0.2982,
-0.2861
+1.5,
+0.7617,
+0.7186
 ],
 [
 "spread",
 "away",
--1.5,
-0.7018,
-0.7139
+1.5,
+0.2383,
+0.2814
 ],
 [
 "total",
 "over",
 5.5,
-0.5747,
+0.5751,
 0.5339
 ],
 [
 "total",
 "under",
 5.5,
-0.4253,
+0.4249,
 0.4661
 ]
 ],
 "over_price": -125.0,
 "source": "DraftKings",
-"spread": -1.5,
+"spread": 1.5,
 "total": 5.5,
 "under_price": 105.0
 },
@@ -8369,42 +8369,42 @@ null,
 "moneyline",
 "home",
 null,
-0.6958,
+0.6959,
 0.6277
 ],
 [
 "moneyline",
 "away",
 null,
-0.3042,
+0.3041,
 0.3723
 ],
 [
 "spread",
 "home",
 -1.5,
-0.2972,
+0.2976,
 0.4027
 ],
 [
 "spread",
 "away",
 -1.5,
-0.7028,
+0.7024,
 0.5973
 ],
 [
 "total",
 "over",
 5.5,
-0.5598,
+0.5604,
 0.5536
 ],
 [
 "total",
 "under",
 5.5,
-0.4402,
+0.4396,
 0.4464
 ]
 ],
