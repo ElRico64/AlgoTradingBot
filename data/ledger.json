@@ -353,7 +353,9 @@
   "status": "won",
   "profit": 0.4016,
   "graded_at": "2026-09-27T23:04:33+00:00",
-  "final": "STL 4 \u2013 MIL 6"
+  "final": "STL 4 \u2013 MIL 6",
+  "close_price": -218.0,
+  "clv": -0.0279
  },
  {
   "id": "confidence:2026-09-27:MLB-20260927-COL-CHW-15:moneyline:home",
@@ -392,7 +394,9 @@
   "status": "won",
   "profit": 0.4808,
   "graded_at": "2026-09-27T23:04:33+00:00",
-  "final": "COL 2 \u2013 CHW 4"
+  "final": "COL 2 \u2013 CHW 4",
+  "close_price": -163.0,
+  "clv": -0.0556
  },
  {
   "id": "confidence:2026-10-03:MLB-20261003-ATL-LAD-16:moneyline:home",
@@ -434,7 +438,9 @@
   "status": "won",
   "profit": 0.4717,
   "graded_at": "2026-10-04T00:02:54+00:00",
-  "final": "ATL 3 \u2013 LAD 5"
+  "final": "ATL 3 \u2013 LAD 5",
+  "close_price": -212.0,
+  "clv": 0.0
  },
  {
   "id": "confidence:2026-10-04:NFL-20261004-LAC-SEA-16:moneyline:home",
@@ -484,7 +490,9 @@
   "status": "won",
   "profit": 0.2667,
   "graded_at": "2026-10-05T00:10:17+00:00",
-  "final": "LAC 23 \u2013 SEA 30"
+  "final": "LAC 23 \u2013 SEA 30",
+  "close_price": -360.0,
+  "clv": -0.0069
  },
  {
   "id": "confidence:2026-10-04:NFL-20261004-MIA-MIN-16:moneyline:home",
@@ -530,7 +538,9 @@
   "status": "won",
   "profit": 0.1923,
   "graded_at": "2026-10-05T00:10:17+00:00",
-  "final": "MIA 10 \u2013 MIN 15"
+  "final": "MIA 10 \u2013 MIN 15",
+  "close_price": -535.0,
+  "clv": 0.0038
  },
  {
   "id": "confidence:2026-10-04:NFL-20261004-TEN-BAL-13:moneyline:home",
@@ -577,7 +587,9 @@
   "status": "won",
   "profit": 0.1429,
   "graded_at": "2026-10-04T21:27:34+00:00",
-  "final": "TEN 18 \u2013 BAL 24"
+  "final": "TEN 18 \u2013 BAL 24",
+  "close_price": -750.0,
+  "clv": 0.0074
  },
  {
   "id": "parlay:2026-10-04:7501b41151ab",
@@ -699,7 +711,9 @@
   "status": "won",
   "profit": 0.3077,
   "graded_at": "2026-10-09T07:26:11+00:00",
-  "final": "VAN 2 \u2013 CAR 7"
+  "final": "VAN 2 \u2013 CAR 7",
+  "close_price": -340.0,
+  "clv": 0.008
  },
  {
   "id": "value:2026-10-10:NHL-20261010-TOR-COL-19:moneyline:home",
@@ -745,7 +759,9 @@
   "status": "lost",
   "profit": -1.0,
   "graded_at": "2026-10-11T07:15:13+00:00",
-  "final": "TOR 6 \u2013 COL 3"
+  "final": "TOR 6 \u2013 COL 3",
+  "close_price": -218.0,
+  "clv": 0.0134
  },
  {
   "id": "value:2026-10-10:NHL-20261010-VAN-NJ-15:moneyline:home",
@@ -791,7 +807,9 @@
   "status": "won",
   "profit": 0.3509,
   "graded_at": "2026-10-10T23:34:45+00:00",
-  "final": "VAN 1 \u2013 NJ 4"
+  "final": "VAN 1 \u2013 NJ 4",
+  "close_price": -298.0,
+  "clv": 0.0085
  },
  {
   "id": "value:2026-10-10:NHL-20261010-DET-MTL-19:moneyline:home",
@@ -879,7 +897,9 @@
   "status": "won",
   "profit": 0.4082,
   "graded_at": "2026-10-11T07:15:13+00:00",
-  "final": "CAR 5 \u2013 CHI 2"
+  "final": "CAR 5 \u2013 CHI 2",
+  "close_price": -245.0,
+  "clv": 0.0
  },
  {
   "id": "confidence:2026-10-10:NHL-20261010-VAN-NJ-15:moneyline:home",
@@ -925,7 +945,9 @@
   "status": "won",
   "profit": 0.3509,
   "graded_at": "2026-10-10T23:34:45+00:00",
-  "final": "VAN 1 \u2013 NJ 4"
+  "final": "VAN 1 \u2013 NJ 4",
+  "close_price": -298.0,
+  "clv": 0.0085
  },
  {
   "id": "confidence:2026-10-10:NHL-20261010-TOR-COL-19:moneyline:home",
@@ -971,7 +993,9 @@
   "status": "lost",
   "profit": -1.0,
   "graded_at": "2026-10-11T07:15:13+00:00",
-  "final": "TOR 6 \u2013 COL 3"
+  "final": "TOR 6 \u2013 COL 3",
+  "close_price": -218.0,
+  "clv": 0.0134
  },
  {
   "id": "confidence:2026-10-10:NHL-20261010-CAR-CHI-19:moneyline:away",
@@ -1013,7 +1037,9 @@
   "status": "won",
   "profit": 0.4082,
   "graded_at": "2026-10-11T07:15:13+00:00",
-  "final": "CAR 5 \u2013 CHI 2"
+  "final": "CAR 5 \u2013 CHI 2",
+  "close_price": -245.0,
+  "clv": 0.0
  },
  {
   "id": "confidence:2026-10-10:NHL-20261010-DET-MTL-19:moneyline:home",
@@ -1184,7 +1210,9 @@
   "status": "won",
   "profit": 0.3774,
   "graded_at": "2026-10-12T00:43:48+00:00",
-  "final": "VAN 2 \u2013 NYR 6"
+  "final": "VAN 2 \u2013 NYR 6",
+  "close_price": -265.0,
+  "clv": 0.0
  },
  {
   "id": "value:2026-10-11:NHL-20261011-SEA-WSH-17:moneyline:home",
@@ -1227,7 +1255,9 @@
   "status": "lost",
   "profit": -1.0,
   "graded_at": "2026-10-12T00:43:48+00:00",
-  "final": "SEA 5 \u2013 WSH 3"
+  "final": "SEA 5 \u2013 WSH 3",
+  "close_price": -218.0,
+  "clv": 0.0
  },
  {
   "id": "confidence:2026-10-11:NHL-20261011-VAN-NYR-18:moneyline:home",
@@ -1273,7 +1303,9 @@
   "status": "won",
   "profit": 0.3774,
   "graded_at": "2026-10-12T00:43:48+00:00",
-  "final": "VAN 2 \u2013 NYR 6"
+  "final": "VAN 2 \u2013 NYR 6",
+  "close_price": -265.0,
+  "clv": 0.0
  },
  {
   "id": "confidence:2026-10-11:NHL-20261011-SEA-WSH-17:moneyline:home",
@@ -1316,7 +1348,9 @@
   "status": "lost",
   "profit": -1.0,
   "graded_at": "2026-10-12T00:43:48+00:00",
-  "final": "SEA 5 \u2013 WSH 3"
+  "final": "SEA 5 \u2013 WSH 3",
+  "close_price": -218.0,
+  "clv": 0.0
  },
  {
   "id": "confidence:2026-10-11:NFL-20261011-DEN-LAC-16:moneyline:away",
@@ -1428,7 +1462,9 @@
   "status": "won",
   "profit": 0.7692,
   "graded_at": "2026-10-11T23:40:50+00:00",
-  "final": "MIN 23 \u2013 NO 13"
+  "final": "MIN 23 \u2013 NO 13",
+  "close_price": -130.0,
+  "clv": 0.0
  },
  {
   "id": "parlay:2026-10-11:4543174dc6b5",
@@ -1549,7 +1585,9 @@
   "status": "won",
   "profit": 0.4587,
   "graded_at": "2026-10-12T07:24:49+00:00",
-  "final": "CAR 4 \u2013 PHI 1"
+  "final": "CAR 4 \u2013 PHI 1",
+  "close_price": -218.0,
+  "clv": 0.0
  },
  {
   "id": "confidence:2026-10-11:NHL-20261011-CAR-PHI-19:moneyline:away",
@@ -1591,7 +1629,9 @@
   "status": "won",
   "profit": 0.4587,
   "graded_at": "2026-10-12T07:24:49+00:00",
-  "final": "CAR 4 \u2013 PHI 1"
+  "final": "CAR 4 \u2013 PHI 1",
+  "close_price": -218.0,
+  "clv": 0.0
  },
  {
   "id": "value:2026-10-12:MLB-20261012-CLE-TB-20:moneyline:home",
@@ -1629,7 +1669,9 @@
   "status": "lost",
   "profit": -1.0,
   "graded_at": "2026-10-13T07:45:54+00:00",
-  "final": "CLE 7 \u2013 TB 3"
+  "final": "CLE 7 \u2013 TB 3",
+  "close_price": -169.0,
+  "clv": -0.0041
  },
  {
   "id": "confidence:2026-10-12:MLB-20261012-CLE-TB-20:moneyline:home",
@@ -1667,7 +1709,9 @@
   "status": "lost",
   "profit": -1.0,
   "graded_at": "2026-10-13T07:45:54+00:00",
-  "final": "CLE 7 \u2013 TB 3"
+  "final": "CLE 7 \u2013 TB 3",
+  "close_price": -169.0,
+  "clv": -0.0041
  },
  {
   "id": "value:2026-10-13:NHL-20261013-VAN-NYI-19:moneyline:home",
@@ -1710,7 +1754,9 @@
   "status": "won",
   "profit": 0.4587,
   "graded_at": "2026-10-14T06:11:12+00:00",
-  "final": "VAN 2 \u2013 NYI 3"
+  "final": "VAN 2 \u2013 NYI 3",
+  "close_price": -205.0,
+  "clv": -0.0134
  },
  {
   "id": "value:2026-10-13:NHL-20261013-CGY-ANA-21:moneyline:home",
@@ -1753,7 +1799,9 @@
   "status": "lost",
   "profit": -1.0,
   "graded_at": "2026-10-14T06:11:12+00:00",
-  "final": "CGY 4 \u2013 ANA 2"
+  "final": "CGY 4 \u2013 ANA 2",
+  "close_price": -175.0,
+  "clv": -0.0358
  },
  {
   "id": "confidence:2026-10-13:NHL-20261013-VAN-NYI-19:moneyline:home",
@@ -1796,7 +1844,9 @@
   "status": "won",
   "profit": 0.4587,
   "graded_at": "2026-10-14T06:11:12+00:00",
-  "final": "VAN 2 \u2013 NYI 3"
+  "final": "VAN 2 \u2013 NYI 3",
+  "close_price": -205.0,
+  "clv": -0.0134
  },
  {
   "id": "confidence:2026-10-13:NHL-20261013-CGY-ANA-21:moneyline:home",
@@ -1839,7 +1889,9 @@
   "status": "lost",
   "profit": -1.0,
   "graded_at": "2026-10-14T06:11:12+00:00",
-  "final": "CGY 4 \u2013 ANA 2"
+  "final": "CGY 4 \u2013 ANA 2",
+  "close_price": -175.0,
+  "clv": -0.0358
  },
  {
   "id": "parlay:2026-10-13:469b1e7ac4e1",
@@ -1953,7 +2005,9 @@
   "status": "won",
   "profit": 0.3279,
   "graded_at": "2026-10-16T05:54:00+00:00",
-  "final": "CGY 2 \u2013 VGK 6"
+  "final": "CGY 2 \u2013 VGK 6",
+  "close_price": -285.0,
+  "clv": -0.0128
  },
  {
   "id": "value:2026-10-15:NHL-20261015-VAN-FLA-19:moneyline:home",
@@ -1999,7 +2053,9 @@
   "status": "won",
   "profit": 0.3356,
   "graded_at": "2026-10-16T05:54:00+00:00",
-  "final": "VAN 2 \u2013 FLA 3"
+  "final": "VAN 2 \u2013 FLA 3",
+  "close_price": -298.0,
+  "clv": 0.0
  },
  {
   "id": "confidence:2026-10-15:NHL-20261015-CGY-VGK-22:moneyline:home",
@@ -2039,7 +2095,9 @@
   "status": "won",
   "profit": 0.3279,
   "graded_at": "2026-10-16T05:54:00+00:00",
-  "final": "CGY 2 \u2013 VGK 6"
+  "final": "CGY 2 \u2013 VGK 6",
+  "close_price": -285.0,
+  "clv": -0.0128
  },
  {
   "id": "confidence:2026-10-15:NHL-20261015-VAN-FLA-19:moneyline:home",
@@ -2085,7 +2143,9 @@
   "status": "won",
   "profit": 0.3356,
   "graded_at": "2026-10-16T05:54:00+00:00",
-  "final": "VAN 2 \u2013 FLA 3"
+  "final": "VAN 2 \u2013 FLA 3",
+  "close_price": -298.0,
+  "clv": 0.0
  },
  {
   "id": "confidence:2026-10-15:NHL-20261015-SEA-TB-19:moneyline:home",
@@ -2126,7 +2186,9 @@
   "status": "won",
   "profit": 0.3876,
   "graded_at": "2026-10-16T05:54:00+00:00",
-  "final": "SEA 3 \u2013 TB 4"
+  "final": "SEA 3 \u2013 TB 4",
+  "close_price": -278.0,
+  "clv": 0.0148
  },
  {
   "id": "value:2026-10-16:NHL-20261016-PIT-COL-21:moneyline:home",
@@ -2169,7 +2231,9 @@
   "status": "won",
   "profit": 0.4587,
   "graded_at": "2026-10-17T05:38:04+00:00",
-  "final": "PIT 2 \u2013 COL 5"
+  "final": "PIT 2 \u2013 COL 5",
+  "close_price": -205.0,
+  "clv": -0.0134
  },
  {
   "id": "confidence:2026-10-16:NHL-20261016-PIT-COL-21:moneyline:home",
@@ -2212,7 +2276,9 @@
   "status": "won",
   "profit": 0.4587,
   "graded_at": "2026-10-17T05:38:04+00:00",
-  "final": "PIT 2 \u2013 COL 5"
+  "final": "PIT 2 \u2013 COL 5",
+  "close_price": -205.0,
+  "clv": -0.0134
  },
  {
   "id": "value:2026-10-17:NHL-20261017-PIT-VGK-22:moneyline:home",
@@ -2254,7 +2320,9 @@
   "status": "won",
   "profit": 0.4202,
   "graded_at": "2026-10-18T05:57:31+00:00",
-  "final": "PIT 2 \u2013 VGK 6"
+  "final": "PIT 2 \u2013 VGK 6",
+  "close_price": -205.0,
+  "clv": -0.032
  },
  {
   "id": "value:2026-10-17:NHL-20261017-VAN-TB-16:moneyline:home",
@@ -2295,7 +2363,9 @@
   "status": "won",
   "profit": 0.2632,
   "graded_at": "2026-10-17T23:25:49+00:00",
-  "final": "VAN 2 \u2013 TB 4"
+  "final": "VAN 2 \u2013 TB 4",
+  "close_price": -395.0,
+  "clv": 0.0063
  },
  {
   "id": "value:2026-10-17:NHL-20261017-CAR-WPG-15:moneyline:away",
@@ -2341,7 +2411,9 @@
   "status": "won",
   "profit": 0.5556,
   "graded_at": "2026-10-17T23:25:49+00:00",
-  "final": "CAR 3 \u2013 WPG 2"
+  "final": "CAR 3 \u2013 WPG 2",
+  "close_price": -205.0,
+  "clv": 0.0293
  },
  {
   "id": "value:2026-10-17:NHL-20261017-DAL-CHI-19:moneyline:away",
@@ -2385,7 +2457,9 @@
   "status": "won",
   "profit": 0.5051,
   "graded_at": "2026-10-18T05:57:31+00:00",
-  "final": "DAL 4 \u2013 CHI 0"
+  "final": "DAL 4 \u2013 CHI 0",
+  "close_price": -218.0,
+  "clv": 0.0211
  },
  {
   "id": "confidence:2026-10-17:NHL-20261017-VAN-TB-16:moneyline:home",
@@ -2426,7 +2500,9 @@
   "status": "won",
   "profit": 0.2632,
   "graded_at": "2026-10-17T23:25:49+00:00",
-  "final": "VAN 2 \u2013 TB 4"
+  "final": "VAN 2 \u2013 TB 4",
+  "close_price": -395.0,
+  "clv": 0.0063
  },
  {
   "id": "confidence:2026-10-17:NHL-20261017-PIT-VGK-22:moneyline:home",
@@ -2468,7 +2544,9 @@
   "status": "won",
   "profit": 0.4202,
   "graded_at": "2026-10-18T05:57:31+00:00",
-  "final": "PIT 2 \u2013 VGK 6"
+  "final": "PIT 2 \u2013 VGK 6",
+  "close_price": -205.0,
+  "clv": -0.032
  },
  {
   "id": "confidence:2026-10-17:NHL-20261017-DAL-CHI-19:moneyline:away",
@@ -2512,7 +2590,9 @@
   "status": "won",
   "profit": 0.5051,
   "graded_at": "2026-10-18T05:57:31+00:00",
-  "final": "DAL 4 \u2013 CHI 0"
+  "final": "DAL 4 \u2013 CHI 0",
+  "close_price": -218.0,
+  "clv": 0.0211
  },
  {
   "id": "confidence:2026-10-17:NHL-20261017-CAR-WPG-15:moneyline:away",
@@ -2558,7 +2638,9 @@
   "status": "won",
   "profit": 0.5556,
   "graded_at": "2026-10-17T23:25:49+00:00",
-  "final": "CAR 3 \u2013 WPG 2"
+  "final": "CAR 3 \u2013 WPG 2",
+  "close_price": -205.0,
+  "clv": 0.0293
  },
  {
   "id": "parlay:2026-10-17:7d9eeb9b2497",
@@ -2679,7 +2761,9 @@
   "status": "lost",
   "profit": -1.0,
   "graded_at": "2026-10-19T06:15:45+00:00",
-  "final": "CAR 2 \u2013 CGY 3"
+  "final": "CAR 2 \u2013 CGY 3",
+  "close_price": -225.0,
+  "clv": 0.0068
  },
  {
   "id": "value:2026-10-18:NHL-20261018-CBJ-MIN-18:moneyline:home",
@@ -2722,7 +2806,9 @@
   "status": "won",
   "profit": 0.5208,
   "graded_at": "2026-10-19T01:42:17+00:00",
-  "final": "CBJ 1 \u2013 MIN 2"
+  "final": "CBJ 1 \u2013 MIN 2",
+  "close_price": -192.0,
+  "clv": 0.0
  },
  {
   "id": "confidence:2026-10-18:NHL-20261018-CAR-CGY-20:moneyline:away",
@@ -2764,7 +2850,9 @@
   "status": "lost",
   "profit": -1.0,
   "graded_at": "2026-10-19T06:15:45+00:00",
-  "final": "CAR 2 \u2013 CGY 3"
+  "final": "CAR 2 \u2013 CGY 3",
+  "close_price": -225.0,
+  "clv": 0.0068
  },
  {
   "id": "confidence:2026-10-18:NHL-20261018-CBJ-MIN-18:moneyline:home",
@@ -2807,7 +2895,9 @@
   "status": "won",
   "profit": 0.5208,
   "graded_at": "2026-10-19T01:42:17+00:00",
-  "final": "CBJ 1 \u2013 MIN 2"
+  "final": "CBJ 1 \u2013 MIN 2",
+  "close_price": -192.0,
+  "clv": 0.0
  },
  {
   "id": "confidence:2026-10-18:NFL-20261018-NYJ-NE-13:moneyline:home",
@@ -2860,7 +2950,9 @@
   "status": "won",
   "profit": 0.2778,
   "graded_at": "2026-10-18T20:45:08+00:00",
-  "final": "NYJ 19 \u2013 NE 26"
+  "final": "NYJ 19 \u2013 NE 26",
+  "close_price": -360.0,
+  "clv": 0.0
  },
  {
   "id": "confidence:2026-10-18:NFL-20261018-ARI-LAR-16:moneyline:home",
@@ -2908,7 +3000,9 @@
   "status": "lost",
   "profit": -1.0,
   "graded_at": "2026-10-18T23:39:36+00:00",
-  "final": "ARI 18 \u2013 LAR 16"
+  "final": "ARI 18 \u2013 LAR 16",
+  "close_price": -800.0,
+  "clv": 0.0065
  },
  {
   "id": "confidence:2026-10-18:NFL-20261018-LAC-KC-16:moneyline:home",
@@ -2961,7 +3055,9 @@
   "status": "won",
   "profit": 0.2439,
   "graded_at": "2026-10-18T23:39:36+00:00",
-  "final": "LAC 6 \u2013 KC 22"
+  "final": "LAC 6 \u2013 KC 22",
+  "close_price": -425.0,
+  "clv": 0.0056
  },
  {
   "id": "confidence:2026-10-18:NFL-20261018-BUF-LV-16:moneyline:away",
@@ -3007,7 +3103,9 @@
   "status": "won",
   "profit": 0.3876,
   "graded_at": "2026-10-18T23:39:36+00:00",
-  "final": "BUF 33 \u2013 LV 30"
+  "final": "BUF 33 \u2013 LV 30",
+  "close_price": -245.0,
+  "clv": -0.0105
  },
  {
   "id": "confidence:2026-10-18:NFL-20261018-TEN-IND-13:moneyline:home",
@@ -3051,7 +3149,9 @@
   "status": "lost",
   "profit": -1.0,
   "graded_at": "2026-10-18T20:45:08+00:00",
-  "final": "TEN 26 \u2013 IND 20"
+  "final": "TEN 26 \u2013 IND 20",
+  "close_price": -325.0,
+  "clv": 0.0
  },
  {
   "id": "parlay:2026-10-18:52619736b022",
@@ -3174,7 +3274,9 @@
   "status": "won",
   "profit": 0.5405,
   "graded_at": "2026-10-20T06:04:44+00:00",
-  "final": "PIT 4 \u2013 UTAH 5"
+  "final": "PIT 4 \u2013 UTAH 5",
+  "close_price": -185.0,
+  "clv": 0.0
  },
  {
   "id": "value:2026-10-19:NHL-20261019-COL-PHI-19:moneyline:away",
@@ -3221,7 +3323,9 @@
   "status": "lost",
   "profit": -1.0,
   "graded_at": "2026-10-20T06:04:44+00:00",
-  "final": "COL 2 \u2013 PHI 3"
+  "final": "COL 2 \u2013 PHI 3",
+  "close_price": -238.0,
+  "clv": 0.0118
  },
  {
   "id": "confidence:2026-10-19:NHL-20261019-COL-PHI-19:moneyline:away",
@@ -3268,7 +3372,9 @@
   "status": "lost",
   "profit": -1.0,
   "graded_at": "2026-10-20T06:04:44+00:00",
-  "final": "COL 2 \u2013 PHI 3"
+  "final": "COL 2 \u2013 PHI 3",
+  "close_price": -238.0,
+  "clv": 0.0118
  },
  {
   "id": "confidence:2026-10-19:NHL-20261019-PIT-UTAH-21:moneyline:home",
@@ -3311,7 +3417,9 @@
   "status": "won",
   "profit": 0.5405,
   "graded_at": "2026-10-20T06:04:44+00:00",
-  "final": "PIT 4 \u2013 UTAH 5"
+  "final": "PIT 4 \u2013 UTAH 5",
+  "close_price": -185.0,
+  "clv": 0.0
  },
  {
   "id": "value:2026-10-19:NFL-20261019-WSH-SF-20:moneyline:home",
@@ -3372,7 +3480,9 @@
   "status": "won",
   "profit": 0.2198,
   "graded_at": "2026-10-20T06:05:13+00:00",
-  "final": "WSH 17 \u2013 SF 23"
+  "final": "WSH 17 \u2013 SF 23",
+  "close_price": -395.0,
+  "clv": -0.0218
  },
  {
   "id": "confidence:2026-10-19:NFL-20261019-WSH-SF-20:moneyline:home",
@@ -3433,7 +3543,9 @@
   "status": "won",
   "profit": 0.2198,
   "graded_at": "2026-10-20T06:05:13+00:00",
-  "final": "WSH 17 \u2013 SF 23"
+  "final": "WSH 17 \u2013 SF 23",
+  "close_price": -395.0,
+  "clv": -0.0218
  },
  {
   "id": "parlay:2026-10-19:e17e333ce39a",
@@ -3550,8 +3662,12 @@
    "news: Kyle Keyser (SJ, ir, G) P(plays)=99% impact\u22480.07\u00b10.04"
   ],
   "published_at": "2026-10-20T06:04:46+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "lost",
+  "profit": -1.0,
+  "graded_at": "2026-10-21T06:05:35+00:00",
+  "final": "SJ 4 \u2013 MTL 3",
+  "close_price": -225.0,
+  "clv": 0.0202
  },
  {
   "id": "value:2026-10-20:NHL-20261020-CAR-VAN-22:moneyline:away",
@@ -3594,8 +3710,12 @@
    "news: Thatcher Demko (VAN, ir, G) P(plays)=99% impact\u22480.07\u00b10.04"
   ],
   "published_at": "2026-10-20T06:04:46+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.3448,
+  "graded_at": "2026-10-21T06:05:35+00:00",
+  "final": "CAR 6 \u2013 VAN 3",
+  "close_price": -298.0,
+  "clv": 0.0052
  },
  {
   "id": "confidence:2026-10-20:NHL-20261020-CAR-VAN-22:moneyline:away",
@@ -3638,8 +3758,12 @@
    "news: Thatcher Demko (VAN, ir, G) P(plays)=99% impact\u22480.07\u00b10.04"
   ],
   "published_at": "2026-10-20T06:04:46+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.3448,
+  "graded_at": "2026-10-21T06:05:35+00:00",
+  "final": "CAR 6 \u2013 VAN 3",
+  "close_price": -298.0,
+  "clv": 0.0052
  },
  {
   "id": "confidence:2026-10-20:NHL-20261020-SJ-MTL-19:moneyline:home",
@@ -3681,8 +3805,12 @@
    "news: Kyle Keyser (SJ, ir, G) P(plays)=99% impact\u22480.07\u00b10.04"
   ],
   "published_at": "2026-10-20T06:04:46+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "lost",
+  "profit": -1.0,
+  "graded_at": "2026-10-21T06:05:35+00:00",
+  "final": "SJ 4 \u2013 MTL 3",
+  "close_price": -225.0,
+  "clv": 0.0202
  },
  {
   "id": "confidence:2026-10-20:NBA-20261020-PHI-NY-19:moneyline:home",
@@ -3721,8 +3849,12 @@
    "news: Ariel Hukporti (PHI, out) P(plays)=96% impact\u22480.80\u00b10.80"
   ],
   "published_at": "2026-10-20T06:05:07+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "lost",
+  "profit": -1.0,
+  "graded_at": "2026-10-21T06:06:20+00:00",
+  "final": "PHI 106 \u2013 NY 100",
+  "close_price": -175.0,
+  "clv": -0.0065
  },
  {
   "id": "parlay:2026-10-20:542e6a638061",
@@ -3754,7 +3886,10 @@
     "lo": 0.6635,
     "hi": 0.806,
     "fair": 0.6214,
-    "status": "pending"
+    "status": "lost",
+    "profit": -1.0,
+    "graded_at": "2026-10-21T06:06:30+00:00",
+    "final": "PHI 106 \u2013 NY 100"
    },
    {
     "league": "NHL",
@@ -3773,7 +3908,10 @@
     "lo": 0.7544,
     "hi": 0.7895,
     "fair": 0.7225,
-    "status": "pending"
+    "status": "won",
+    "profit": 0.3448,
+    "graded_at": "2026-10-21T06:06:30+00:00",
+    "final": "CAR 6 \u2013 VAN 3"
    }
   ],
   "price": 109,
@@ -3793,8 +3931,298 @@
    "the sportsbooks' prices make it 45% likely; the model says 56%"
   ],
   "published_at": "2026-10-20T06:05:14+00:00",
+  "status": "lost",
+  "profit": -1.0,
+  "p_now": 0.5628,
+  "final": "NY ML lost \u00b7 CAR ML won"
+ },
+ {
+  "id": "value:2026-10-21:NBA-20261021-SAC-LAC-22:moneyline:home",
+  "tier": "value",
+  "date": "2026-10-21",
+  "league": "NBA",
+  "game_id": "NBA-20261021-SAC-LAC-22",
+  "start": "2026-10-22T02:30:00",
+  "home": "LAC",
+  "away": "SAC",
+  "label": "LAC ML",
+  "market": "moneyline",
+  "side": "home",
+  "line": null,
+  "price": -198.0,
+  "p": 0.7196,
+  "lower": 0.6565,
+  "p_model": 0.7711,
+  "upper": 0.7992,
+  "fair": 0.6428,
+  "edge": 0.0768,
+  "ev": 0.083,
+  "value_line": -248,
+  "stake": 0.0204,
+  "reasons": [
+   "calibrated P(win)=72.0% \u2265 70%",
+   "80% credible band 65.7%\u201379.9% (lower \u2265 62%)",
+   "price -198 needs 66.4%; EV +8.3% per unit",
+   "no-vig market 64.3% \u2192 edge +7.7%",
+   "home-win components: kalman 80.1%, elo 78.9%, pattern 80.1%",
+   "adjustments: news_margin_mean +1.42, travel +0.25, pattern_logit -0.00",
+   "news: Bradley Beal (LAC, out, G) P(plays)=74% impact\u22480.80\u00b10.80",
+   "news: Max Strus (LAC, out, G) P(plays)=97% impact\u22480.80\u00b10.80",
+   "news: Yanic Konan Niederhauser (LAC, out) P(plays)=100% impact\u22480.80\u00b10.80",
+   "news: Brandon Ingram (LAC, out) P(plays)=100% impact\u22480.80\u00b10.80",
+   "news: Ben Simmons (SAC, out, G) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Malik Monk (SAC, day-to-day, G) P(plays)=62% impact\u22480.80\u00b10.80",
+   "news: Dylan Cardwell (SAC, out) P(plays)=70% impact\u22480.80\u00b10.80",
+   "news: Maxime Raynaud (SAC, out) P(plays)=70% impact\u22480.80\u00b10.80",
+   "market check: model 77.1% vs books 64.3% -> 72.0% (keeps 57% of the model's disagreement, learned from graded games)"
+  ],
+  "published_at": "2026-10-21T06:06:22+00:00",
   "status": "pending",
-  "profit": null,
-  "p_now": 0.5628
+  "profit": null
+ },
+ {
+  "id": "value:2026-10-21:NBA-20261021-DAL-HOU-20:moneyline:home",
+  "tier": "value",
+  "date": "2026-10-21",
+  "league": "NBA",
+  "game_id": "NBA-20261021-DAL-HOU-20",
+  "start": "2026-10-22T00:30:00",
+  "home": "HOU",
+  "away": "DAL",
+  "label": "HOU ML",
+  "market": "moneyline",
+  "side": "home",
+  "line": null,
+  "price": -360.0,
+  "p": 0.7954,
+  "lower": 0.739,
+  "p_model": 0.819,
+  "upper": 0.8615,
+  "fair": 0.7614,
+  "edge": 0.034,
+  "ev": 0.0164,
+  "value_line": -371,
+  "stake": 0.001,
+  "reasons": [
+   "calibrated P(win)=79.5% \u2265 70%",
+   "80% credible band 73.9%\u201386.1% (lower \u2265 62%)",
+   "price -360 needs 78.3%; EV +1.6% per unit",
+   "no-vig market 76.1% \u2192 edge +3.4%",
+   "home-win components: kalman 82.0%, elo 87.3%, pattern 82.0%",
+   "adjustments: news_margin_mean +2.98, travel +0.07, pattern_logit +0.00",
+   "news: Jett Howard (DAL, day-to-day, G) P(plays)=62% impact\u22480.80\u00b10.80",
+   "news: Caleb Martin (DAL, out) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Tarik Biberovic (DAL, out) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Dereck Lively II (DAL, out) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Santi Aldama (DAL, out) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Julian Phillips (HOU, day-to-day) P(plays)=62% impact\u22480.80\u00b10.80",
+   "news: Steven Adams (HOU, day-to-day) P(plays)=62% impact\u22480.80\u00b10.80",
+   "market check: model 81.9% vs books 76.1% -> 79.5% (keeps 57% of the model's disagreement, learned from graded games)"
+  ],
+  "published_at": "2026-10-21T06:06:22+00:00",
+  "status": "pending",
+  "profit": null
+ },
+ {
+  "id": "confidence:2026-10-21:NBA-20261021-DAL-HOU-20:moneyline:home",
+  "tier": "confidence",
+  "date": "2026-10-21",
+  "league": "NBA",
+  "game_id": "NBA-20261021-DAL-HOU-20",
+  "start": "2026-10-22T00:30:00",
+  "home": "HOU",
+  "away": "DAL",
+  "label": "HOU ML",
+  "market": "moneyline",
+  "side": "home",
+  "line": null,
+  "price": -360.0,
+  "p": 0.7954,
+  "lower": 0.739,
+  "p_model": 0.819,
+  "upper": 0.8615,
+  "fair": 0.7614,
+  "edge": 0.034,
+  "ev": 0.0164,
+  "value_line": -371,
+  "stake": 0.0,
+  "reasons": [
+   "calibrated P(win)=79.5% \u2265 70%",
+   "80% credible band 73.9%\u201386.1% (lower \u2265 62%)",
+   "price -360 needs 78.3%; EV +1.6% per unit",
+   "no-vig market 76.1% \u2192 edge +3.4%",
+   "home-win components: kalman 82.0%, elo 87.3%, pattern 82.0%",
+   "adjustments: news_margin_mean +2.98, travel +0.07, pattern_logit +0.00",
+   "news: Jett Howard (DAL, day-to-day, G) P(plays)=62% impact\u22480.80\u00b10.80",
+   "news: Caleb Martin (DAL, out) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Tarik Biberovic (DAL, out) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Dereck Lively II (DAL, out) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Santi Aldama (DAL, out) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Julian Phillips (HOU, day-to-day) P(plays)=62% impact\u22480.80\u00b10.80",
+   "news: Steven Adams (HOU, day-to-day) P(plays)=62% impact\u22480.80\u00b10.80",
+   "market check: model 81.9% vs books 76.1% -> 79.5% (keeps 57% of the model's disagreement, learned from graded games)"
+  ],
+  "published_at": "2026-10-21T06:06:22+00:00",
+  "status": "pending",
+  "profit": null
+ },
+ {
+  "id": "confidence:2026-10-21:NBA-20261021-CHI-TOR-19:moneyline:home",
+  "tier": "confidence",
+  "date": "2026-10-21",
+  "league": "NBA",
+  "game_id": "NBA-20261021-CHI-TOR-19",
+  "start": "2026-10-21T23:30:00",
+  "home": "TOR",
+  "away": "CHI",
+  "label": "TOR ML",
+  "market": "moneyline",
+  "side": "home",
+  "line": null,
+  "price": -425.0,
+  "p": 0.7872,
+  "lower": 0.7309,
+  "p_model": 0.7862,
+  "upper": 0.8549,
+  "fair": 0.7885,
+  "edge": -0.0013,
+  "ev": -0.0276,
+  "value_line": -353,
+  "stake": 0.0,
+  "reasons": [
+   "calibrated P(win)=78.7% \u2265 70%",
+   "80% credible band 73.1%\u201385.5% (lower \u2265 62%)",
+   "price -425 needs 81.0%; EV -2.8% per unit",
+   "no-vig market 78.8% \u2192 edge -0.1%",
+   "home-win components: kalman 77.9%, elo 85.8%, pattern 77.9%",
+   "adjustments: news_margin_mean +1.93, travel +0.30, timezones +0.25, pattern_logit +0.00",
+   "news: Leonard Miller (CHI, day-to-day) P(plays)=62% impact\u22480.80\u00b10.80",
+   "news: Isaac Okoro (CHI, day-to-day) P(plays)=62% impact\u22480.80\u00b10.80",
+   "news: Dailyn Swain (CHI, day-to-day, G) P(plays)=62% impact\u22480.80\u00b10.80",
+   "news: Zach Collins (CHI, day-to-day) P(plays)=62% impact\u22480.80\u00b10.80",
+   "news: Tobe Awaka (CHI, day-to-day) P(plays)=62% impact\u22480.80\u00b10.80",
+   "news: Jordan Hawkins (CHI, day-to-day, G) P(plays)=62% impact\u22480.80\u00b10.80",
+   "news: Nic Claxton (CHI, out) P(plays)=17% impact\u22480.80\u00b10.80",
+   "news: Nate Bittle (TOR, out) P(plays)=5% impact\u22480.80\u00b10.80",
+   "market check: model 78.6% vs books 78.8% -> 78.7% (keeps 57% of the model's disagreement, learned from graded games)"
+  ],
+  "published_at": "2026-10-21T06:06:22+00:00",
+  "status": "pending",
+  "profit": null
+ },
+ {
+  "id": "confidence:2026-10-21:NBA-20261021-SAC-LAC-22:moneyline:home",
+  "tier": "confidence",
+  "date": "2026-10-21",
+  "league": "NBA",
+  "game_id": "NBA-20261021-SAC-LAC-22",
+  "start": "2026-10-22T02:30:00",
+  "home": "LAC",
+  "away": "SAC",
+  "label": "LAC ML",
+  "market": "moneyline",
+  "side": "home",
+  "line": null,
+  "price": -198.0,
+  "p": 0.7196,
+  "lower": 0.6565,
+  "p_model": 0.7711,
+  "upper": 0.7992,
+  "fair": 0.6428,
+  "edge": 0.0768,
+  "ev": 0.083,
+  "value_line": -248,
+  "stake": 0.0,
+  "reasons": [
+   "calibrated P(win)=72.0% \u2265 70%",
+   "80% credible band 65.7%\u201379.9% (lower \u2265 62%)",
+   "price -198 needs 66.4%; EV +8.3% per unit",
+   "no-vig market 64.3% \u2192 edge +7.7%",
+   "home-win components: kalman 80.1%, elo 78.9%, pattern 80.1%",
+   "adjustments: news_margin_mean +1.42, travel +0.25, pattern_logit -0.00",
+   "news: Bradley Beal (LAC, out, G) P(plays)=74% impact\u22480.80\u00b10.80",
+   "news: Max Strus (LAC, out, G) P(plays)=97% impact\u22480.80\u00b10.80",
+   "news: Yanic Konan Niederhauser (LAC, out) P(plays)=100% impact\u22480.80\u00b10.80",
+   "news: Brandon Ingram (LAC, out) P(plays)=100% impact\u22480.80\u00b10.80",
+   "news: Ben Simmons (SAC, out, G) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Malik Monk (SAC, day-to-day, G) P(plays)=62% impact\u22480.80\u00b10.80",
+   "news: Dylan Cardwell (SAC, out) P(plays)=70% impact\u22480.80\u00b10.80",
+   "news: Maxime Raynaud (SAC, out) P(plays)=70% impact\u22480.80\u00b10.80",
+   "market check: model 77.1% vs books 64.3% -> 72.0% (keeps 57% of the model's disagreement, learned from graded games)"
+  ],
+  "published_at": "2026-10-21T06:06:22+00:00",
+  "status": "pending",
+  "profit": null
+ },
+ {
+  "id": "parlay:2026-10-21:63f7f0f3b809",
+  "tier": "parlay",
+  "date": "2026-10-21",
+  "league": "PARLAY",
+  "leagues": [
+   "NBA"
+  ],
+  "game_id": null,
+  "start": "2026-10-21T23:30:00",
+  "label": "2-leg parlay",
+  "legs": [
+   {
+    "league": "NBA",
+    "game_id": "NBA-20261021-CHA-BKN-19",
+    "date": "2026-10-21",
+    "start": "2026-10-21T23:30:00",
+    "home": "BKN",
+    "away": "CHA",
+    "market": "moneyline",
+    "side": "away",
+    "line": null,
+    "label": "CHA ML",
+    "price": 105.0,
+    "p": 0.6014,
+    "p_model": 0.6965,
+    "lo": 0.5204,
+    "hi": 0.6893,
+    "fair": 0.4661,
+    "status": "pending"
+   },
+   {
+    "league": "NBA",
+    "game_id": "NBA-20261021-DAL-HOU-20",
+    "date": "2026-10-21",
+    "start": "2026-10-22T00:30:00",
+    "home": "HOU",
+    "away": "DAL",
+    "market": "moneyline",
+    "side": "home",
+    "line": null,
+    "label": "HOU ML",
+    "price": -360.0,
+    "p": 0.7954,
+    "p_model": 0.819,
+    "lo": 0.739,
+    "hi": 0.8615,
+    "fair": 0.7614,
+    "status": "pending"
+   }
+  ],
+  "price": 162,
+  "decimal": 2.6194,
+  "p": 0.4784,
+  "lower": 0.4024,
+  "upper": 0.5528,
+  "fair": 0.3549,
+  "ev": 0.253,
+  "stake": 0.0,
+  "reasons": [
+   "each leg's chance is market-checked (keeps only the part of the model's disagreement with the sportsbooks that has held up on graded games): CHA ML 70% \u2192 60%, HOU ML 82% \u2192 80%",
+   "2 legs from different games, so the hit chance is the product of the legs: 60% \u00d7 80% = 47.8%",
+   "80% band 40.2%\u201355.3% from simulating each leg's own uncertainty",
+   "pays 2.62x (+162); expected return +25.3% per unit (needs +2% or more)",
+   "every leg is worth its own price: CHA ML +23.3%, HOU ML +1.6%",
+   "the sportsbooks' prices make it 35% likely; the model says 48%"
+  ],
+  "published_at": "2026-10-21T06:06:30+00:00",
+  "status": "pending",
+  "profit": null
  }
 ]
