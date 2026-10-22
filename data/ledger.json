@@ -3977,10 +3977,14 @@
    "market check: model 77.1% vs books 64.3% -> 72.0% (keeps 57% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-10-21T06:06:22+00:00",
-  "status": "pending",
-  "profit": null,
+  "status": "won",
+  "profit": 0.5051,
   "withdrawn_at": "2026-10-21T10:35:14+00:00",
-  "note": "Reinstated after new information"
+  "note": "Reinstated after new information",
+  "graded_at": "2026-10-22T06:09:04+00:00",
+  "final": "SAC 96 \u2013 LAC 121",
+  "close_price": -185.0,
+  "clv": -0.0153
  },
  {
   "id": "value:2026-10-21:NBA-20261021-DAL-HOU-20:moneyline:home",
@@ -4022,8 +4026,12 @@
    "market check: model 81.9% vs books 76.1% -> 79.5% (keeps 57% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-10-21T06:06:22+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.2778,
+  "graded_at": "2026-10-22T06:09:04+00:00",
+  "final": "DAL 110 \u2013 HOU 128",
+  "close_price": -425.0,
+  "clv": 0.0269
  },
  {
   "id": "confidence:2026-10-21:NBA-20261021-DAL-HOU-20:moneyline:home",
@@ -4065,8 +4073,12 @@
    "market check: model 81.9% vs books 76.1% -> 79.5% (keeps 57% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-10-21T06:06:22+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.2778,
+  "graded_at": "2026-10-22T06:09:04+00:00",
+  "final": "DAL 110 \u2013 HOU 128",
+  "close_price": -425.0,
+  "clv": 0.0269
  },
  {
   "id": "confidence:2026-10-21:NBA-20261021-CHI-TOR-19:moneyline:home",
@@ -4109,8 +4121,12 @@
    "market check: model 78.6% vs books 78.8% -> 78.7% (keeps 57% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-10-21T06:06:22+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.2353,
+  "graded_at": "2026-10-22T06:09:04+00:00",
+  "final": "CHI 92 \u2013 TOR 135",
+  "close_price": -470.0,
+  "clv": 0.015
  },
  {
   "id": "confidence:2026-10-21:NBA-20261021-SAC-LAC-22:moneyline:home",
@@ -4153,10 +4169,14 @@
    "market check: model 77.1% vs books 64.3% -> 72.0% (keeps 57% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-10-21T06:06:22+00:00",
-  "status": "pending",
-  "profit": null,
+  "status": "won",
+  "profit": 0.5051,
   "withdrawn_at": "2026-10-21T10:35:14+00:00",
-  "note": "Reinstated after new information"
+  "note": "Reinstated after new information",
+  "graded_at": "2026-10-22T06:09:04+00:00",
+  "final": "SAC 96 \u2013 LAC 121",
+  "close_price": -185.0,
+  "clv": -0.0153
  },
  {
   "id": "parlay:2026-10-21:63f7f0f3b809",
@@ -4187,7 +4207,10 @@
     "lo": 0.5204,
     "hi": 0.6893,
     "fair": 0.4661,
-    "status": "pending"
+    "status": "won",
+    "profit": 1.05,
+    "graded_at": "2026-10-22T06:09:12+00:00",
+    "final": "CHA 110 \u2013 BKN 103"
    },
    {
     "league": "NBA",
@@ -4206,7 +4229,10 @@
     "lo": 0.739,
     "hi": 0.8615,
     "fair": 0.7614,
-    "status": "pending"
+    "status": "won",
+    "profit": 0.2778,
+    "graded_at": "2026-10-22T06:09:12+00:00",
+    "final": "DAL 110 \u2013 HOU 128"
    }
   ],
   "price": 162,
@@ -4226,8 +4252,121 @@
    "the sportsbooks' prices make it 35% likely; the model says 48%"
   ],
   "published_at": "2026-10-21T06:06:30+00:00",
+  "status": "won",
+  "profit": 1.6194,
+  "p_now": 0.4949,
+  "final": "CHA ML won \u00b7 HOU ML won"
+ },
+ {
+  "id": "confidence:2026-10-22:NBA-20261022-DEN-OKC-21:moneyline:home",
+  "tier": "confidence",
+  "date": "2026-10-22",
+  "league": "NBA",
+  "game_id": "NBA-20261022-DEN-OKC-21",
+  "start": "2026-10-23T01:30:00",
+  "home": "OKC",
+  "away": "DEN",
+  "label": "OKC ML",
+  "market": "moneyline",
+  "side": "home",
+  "line": null,
+  "price": -340.0,
+  "p": 0.708,
+  "lower": 0.6524,
+  "p_model": 0.6531,
+  "upper": 0.7697,
+  "fair": 0.7512,
+  "edge": -0.0433,
+  "ev": -0.0838,
+  "value_line": -234,
+  "stake": 0.0,
+  "reasons": [
+   "calibrated P(win)=70.8% \u2265 70%",
+   "80% credible band 65.2%\u201377.0% (lower \u2265 62%)",
+   "price -340 needs 77.3%; EV -8.4% per unit",
+   "no-vig market 75.1% \u2192 edge -4.3%",
+   "home-win components: kalman 67.6%, elo 69.7%, pattern 67.6%",
+   "adjustments: news_margin_mean -1.25, rest -0.90, travel +0.08, pattern_logit +0.00",
+   "news: Spencer Jones (DEN, day-to-day) P(plays)=62% impact\u22480.80\u00b10.80",
+   "news: Julian Strawther (DEN, out, G) P(plays)=67% impact\u22480.80\u00b10.80",
+   "news: Nikola Topic (OKC, out, G) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Thomas Sorber (OKC, out) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Otega Oweh (OKC, out, G) P(plays)=80% impact\u22480.80\u00b10.80",
+   "market check: model 65.3% vs books 75.1% -> 70.8% (keeps 46% of the model's disagreement, learned from graded games)"
+  ],
+  "published_at": "2026-10-22T06:09:05+00:00",
   "status": "pending",
-  "profit": null,
-  "p_now": 0.4949
+  "profit": null
+ },
+ {
+  "id": "parlay:2026-10-22:637fcfd4bb5d",
+  "tier": "parlay",
+  "date": "2026-10-22",
+  "league": "PARLAY",
+  "leagues": [
+   "NHL"
+  ],
+  "game_id": null,
+  "start": "2026-10-22T23:00:00",
+  "label": "2-leg parlay",
+  "legs": [
+   {
+    "league": "NHL",
+    "game_id": "NHL-20261022-NSH-BOS-19",
+    "date": "2026-10-22",
+    "start": "2026-10-22T23:00:00",
+    "home": "BOS",
+    "away": "NSH",
+    "market": "moneyline",
+    "side": "home",
+    "line": null,
+    "label": "BOS ML",
+    "price": -155.0,
+    "p": 0.612,
+    "p_model": 0.6449,
+    "lo": 0.6001,
+    "hi": 0.624,
+    "fair": 0.5865,
+    "status": "pending"
+   },
+   {
+    "league": "NHL",
+    "game_id": "NHL-20261022-WPG-DAL-20",
+    "date": "2026-10-22",
+    "start": "2026-10-23T00:00:00",
+    "home": "DAL",
+    "away": "WPG",
+    "market": "moneyline",
+    "side": "home",
+    "line": null,
+    "label": "DAL ML",
+    "price": -205.0,
+    "p": 0.6814,
+    "p_model": 0.7197,
+    "lo": 0.6708,
+    "hi": 0.6927,
+    "fair": 0.6509,
+    "status": "pending"
+   }
+  ],
+  "price": 145,
+  "decimal": 2.4477,
+  "p": 0.417,
+  "lower": 0.4063,
+  "upper": 0.4275,
+  "fair": 0.3818,
+  "ev": 0.0207,
+  "stake": 0.0,
+  "reasons": [
+   "each leg's chance is market-checked (keeps only the part of the model's disagreement with the sportsbooks that has held up on graded games): BOS ML 64% \u2192 61%, DAL ML 72% \u2192 68%",
+   "2 legs from different games, so the hit chance is the product of the legs: 61% \u00d7 68% = 41.7%",
+   "80% band 40.6%\u201342.7% from simulating each leg's own uncertainty",
+   "pays 2.45x (+145); expected return +2.1% per unit (needs +2% or more)",
+   "every leg is worth its own price: BOS ML +0.7%, DAL ML +1.4%",
+   "the sportsbooks' prices make it 38% likely; the model says 42%"
+  ],
+  "published_at": "2026-10-22T06:09:12+00:00",
+  "status": "pending",
+  "profit": null
  }
 ]
