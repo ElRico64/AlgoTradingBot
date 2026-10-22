@@ -3950,7 +3950,7 @@
   "side": "home",
   "line": null,
   "price": -198.0,
-  "p": 0.7196,
+  "p": 0.7,
   "lower": 0.6565,
   "p_model": 0.7711,
   "upper": 0.7992,
@@ -3977,10 +3977,10 @@
    "market check: model 77.1% vs books 64.3% -> 72.0% (keeps 57% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-10-21T06:06:22+00:00",
-  "status": "withdrawn",
+  "status": "pending",
   "profit": null,
   "withdrawn_at": "2026-10-21T10:35:14+00:00",
-  "note": "Withdrawn before start: probability 69.9% below 70%"
+  "note": "Reinstated after new information"
  },
  {
   "id": "value:2026-10-21:NBA-20261021-DAL-HOU-20:moneyline:home",
@@ -4126,7 +4126,7 @@
   "side": "home",
   "line": null,
   "price": -198.0,
-  "p": 0.7196,
+  "p": 0.7,
   "lower": 0.6565,
   "p_model": 0.7711,
   "upper": 0.7992,
@@ -4153,10 +4153,10 @@
    "market check: model 77.1% vs books 64.3% -> 72.0% (keeps 57% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-10-21T06:06:22+00:00",
-  "status": "withdrawn",
+  "status": "pending",
   "profit": null,
   "withdrawn_at": "2026-10-21T10:35:14+00:00",
-  "note": "Withdrawn before start: probability 69.9% below 70%"
+  "note": "Reinstated after new information"
  },
  {
   "id": "parlay:2026-10-21:63f7f0f3b809",
