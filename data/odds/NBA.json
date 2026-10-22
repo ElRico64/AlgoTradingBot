@@ -826,56 +826,56 @@ null,
 },
 "NBA-20261022-DEN-OKC-21": {
 "away_ml": 270.0,
-"away_spread_price": -115.0,
+"away_spread_price": -102.0,
 "home_ml": -340.0,
-"home_spread_price": -105.0,
+"home_spread_price": -118.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.6529,
+0.6517,
 0.7512
 ],
 [
 "moneyline",
 "away",
 null,
-0.3471,
+0.3483,
 0.2488
 ],
 [
 "spread",
 "home",
--8.5,
-0.4224,
-0.4887
+-7.5,
+0.4488,
+0.5182
 ],
 [
 "spread",
 "away",
--8.5,
-0.5776,
-0.5113
+-7.5,
+0.5512,
+0.4818
 ],
 [
 "total",
 "over",
 236.5,
-0.4115,
+0.4098,
 0.4955
 ],
 [
 "total",
 "under",
 236.5,
-0.5885,
+0.5902,
 0.5045
 ]
 ],
 "over_price": -108.0,
 "source": "Draft Kings",
-"spread": -8.5,
+"spread": -7.5,
 "total": 236.5,
 "under_price": -112.0
 }
