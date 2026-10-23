@@ -834,28 +834,28 @@ null,
 "moneyline",
 "home",
 null,
-0.6517,
+0.652,
 0.7512
 ],
 [
 "moneyline",
 "away",
 null,
-0.3483,
+0.348,
 0.2488
 ],
 [
 "spread",
 "home",
 -7.5,
-0.4488,
+0.4491,
 0.5182
 ],
 [
 "spread",
 "away",
 -7.5,
-0.5512,
+0.5509,
 0.4818
 ],
 [
@@ -863,20 +863,20 @@ null,
 "over",
 236.5,
 0.4098,
-0.4955
+0.5045
 ],
 [
 "total",
 "under",
 236.5,
 0.5902,
-0.5045
+0.4955
 ]
 ],
-"over_price": -108.0,
+"over_price": -112.0,
 "source": "Draft Kings",
 "spread": -7.5,
 "total": 236.5,
-"under_price": -112.0
+"under_price": -108.0
 }
 }
