@@ -9075,51 +9075,51 @@ null,
 "under_price": -112.0
 },
 "NHL-20261023-MTL-CHI-20": {
-"away_ml": -148.0,
-"away_spread_price": 170.0,
-"home_ml": 124.0,
-"home_spread_price": -205.0,
+"away_ml": -170.0,
+"away_spread_price": 150.0,
+"home_ml": 142.0,
+"home_spread_price": -180.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.4719,
-0.4248
+0.435,
+0.3918
 ],
 [
 "moneyline",
 "away",
 null,
-0.5281,
-0.5752
+0.565,
+0.6082
 ],
 [
 "spread",
 "home",
 1.5,
-0.7517,
-0.6509
+0.7491,
+0.6214
 ],
 [
 "spread",
 "away",
 1.5,
-0.2483,
-0.3491
+0.2509,
+0.3786
 ],
 [
 "total",
 "over",
 6.5,
-0.4646,
+0.4682,
 0.4727
 ],
 [
 "total",
 "under",
 6.5,
-0.5354,
+0.5318,
 0.5273
 ]
 ],
@@ -9139,42 +9139,42 @@ null,
 "moneyline",
 "home",
 null,
-0.5965,
+0.5956,
 0.5339
 ],
 [
 "moneyline",
 "away",
 null,
-0.4035,
+0.4044,
 0.4661
 ],
 [
 "spread",
 "home",
 -1.5,
-0.2871,
+0.286,
 0.3174
 ],
 [
 "spread",
 "away",
 -1.5,
-0.7129,
+0.714,
 0.6826
 ],
 [
 "total",
 "over",
 6.5,
-0.474,
+0.4809,
 0.4727
 ],
 [
 "total",
 "under",
 6.5,
-0.526,
+0.5191,
 0.5273
 ]
 ],
