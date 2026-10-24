@@ -9084,104 +9084,104 @@ null,
 "moneyline",
 "home",
 null,
-0.4358,
+0.4326,
 0.3918
 ],
 [
 "moneyline",
 "away",
 null,
-0.5642,
+0.5674,
 0.6082
 ],
 [
 "spread",
 "home",
 1.5,
-0.7499,
+0.7438,
 0.6214
 ],
 [
 "spread",
 "away",
 1.5,
-0.2501,
+0.2562,
 0.3786
 ],
 [
 "total",
 "over",
 6.5,
-0.4737,
-0.4818
+0.4652,
+0.4887
 ],
 [
 "total",
 "under",
 6.5,
-0.5263,
-0.5182
+0.5348,
+0.5113
 ]
 ],
-"over_price": -102.0,
-"source": "Draft Kings",
+"over_price": -105.0,
+"source": "DraftKings",
 "spread": 1.5,
 "total": 6.5,
-"under_price": -118.0
+"under_price": -115.0
 },
 "NHL-20261023-TB-COL-21": {
-"away_ml": 105.0,
+"away_ml": 102.0,
 "away_spread_price": -238.0,
-"home_ml": -125.0,
+"home_ml": -122.0,
 "home_spread_price": 195.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.5956,
-0.5339
+0.5889,
+0.5273
 ],
 [
 "moneyline",
 "away",
 null,
-0.4044,
-0.4661
+0.4111,
+0.4727
 ],
 [
 "spread",
 "home",
 -1.5,
-0.2859,
+0.286,
 0.3174
 ],
 [
 "spread",
 "away",
 -1.5,
-0.7141,
+0.714,
 0.6826
 ],
 [
 "total",
 "over",
 6.5,
-0.4779,
-0.4727
+0.478,
+0.4818
 ],
 [
 "total",
 "under",
 6.5,
-0.5221,
-0.5273
+0.522,
+0.5182
 ]
 ],
-"over_price": 102.0,
-"source": "Draft Kings",
+"over_price": -102.0,
+"source": "DraftKings",
 "spread": -1.5,
 "total": 6.5,
-"under_price": -122.0
+"under_price": -118.0
 }
 }
