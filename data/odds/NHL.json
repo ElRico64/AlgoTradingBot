@@ -9359,47 +9359,47 @@ null,
 "moneyline",
 "home",
 null,
-0.5016,
+0.5119,
 0.4555
 ],
 [
 "moneyline",
 "away",
 null,
-0.4984,
+0.4881,
 0.5445
 ],
 [
 "spread",
 "home",
 1.5,
-0.7416,
+0.7606,
 0.6761
 ],
 [
 "spread",
 "away",
 1.5,
-0.2584,
+0.2394,
 0.3239
 ],
 [
 "total",
 "over",
 5.5,
-0.5632,
+0.5868,
 0.5536
 ],
 [
 "total",
 "under",
 5.5,
-0.4368,
+0.4132,
 0.4464
 ]
 ],
 "over_price": -135.0,
-"source": "Draft Kings",
+"source": "DraftKings",
 "spread": 1.5,
 "total": 5.5,
 "under_price": 114.0
@@ -9460,56 +9460,56 @@ null,
 "under_price": 100.0
 },
 "NHL-20261024-MIN-SEA-22": {
-"away_ml": -175.0,
+"away_ml": -185.0,
 "away_spread_price": 145.0,
-"home_ml": 145.0,
+"home_ml": 154.0,
 "home_spread_price": -175.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.4271,
-0.3859
+0.4125,
+0.3723
 ],
 [
 "moneyline",
 "away",
 null,
-0.5729,
-0.6141
+0.5875,
+0.6277
 ],
 [
 "spread",
 "home",
 1.5,
-0.7405,
+0.7403,
 0.6141
 ],
 [
 "spread",
 "away",
 1.5,
-0.2595,
+0.2597,
 0.3859
 ],
 [
 "total",
 "over",
 6.5,
-0.4887,
+0.4881,
 0.4555
 ],
 [
 "total",
 "under",
 6.5,
-0.5113,
+0.5119,
 0.5445
 ]
 ],
 "over_price": 110.0,
-"source": "Draft Kings",
+"source": "DraftKings",
 "spread": 1.5,
 "total": 6.5,
 "under_price": -130.0
