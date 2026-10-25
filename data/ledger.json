@@ -5150,8 +5150,12 @@
    "market check: model 69.3% vs books 81.7% -> 76.3% (keeps 48% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-10-25T06:11:32+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "lost",
+  "profit": -1.0,
+  "graded_at": "2026-10-25T20:52:35+00:00",
+  "final": "NYG 27 \u2013 HOU 21",
+  "close_price": -535.0,
+  "clv": 0.0038
  },
  {
   "id": "confidence:2026-10-25:NFL-20261025-IND-MIN-13:moneyline:home",
@@ -5194,8 +5198,12 @@
    "market check: model 76.7% vs books 74.3% -> 75.5% (keeps 48% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-10-25T06:11:32+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.3077,
+  "graded_at": "2026-10-25T20:52:35+00:00",
+  "final": "IND 10 \u2013 MIN 16",
+  "close_price": -325.0,
+  "clv": 0.0
  },
  {
   "id": "confidence:2026-10-25:NFL-20261025-DEN-ARI-16:moneyline:away",
@@ -5276,7 +5284,10 @@
     "lo": 0.5842,
     "hi": 0.7018,
     "fair": 0.5865,
-    "status": "pending"
+    "status": "lost",
+    "profit": -1.0,
+    "graded_at": "2026-10-25T20:52:36+00:00",
+    "final": "TB 43 \u2013 CAR 13"
    },
    {
     "league": "NBA",
@@ -5315,8 +5326,9 @@
    "the sportsbooks' prices make it 43% likely; the model says 49%"
   ],
   "published_at": "2026-10-25T06:11:32+00:00",
-  "status": "pending",
-  "profit": null,
-  "p_now": 0.4883
+  "status": "lost",
+  "profit": -1.0,
+  "p_now": 0.4883,
+  "final": "CAR ML lost \u00b7 NY ML pending"
  }
 ]
