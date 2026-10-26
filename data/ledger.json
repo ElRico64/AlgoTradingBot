@@ -5525,5 +5525,77 @@
   "published_at": "2026-10-26T06:18:28+00:00",
   "status": "pending",
   "profit": null
+ },
+ {
+  "id": "parlay:2026-10-26:b569eba214b7",
+  "tier": "parlay",
+  "date": "2026-10-26",
+  "league": "PARLAY",
+  "leagues": [
+   "NBA",
+   "NHL"
+  ],
+  "game_id": null,
+  "start": "2026-10-26T23:00:00",
+  "label": "2-leg parlay",
+  "legs": [
+   {
+    "league": "NBA",
+    "game_id": "NBA-20261026-WSH-CHA-19",
+    "date": "2026-10-26",
+    "start": "2026-10-26T23:00:00",
+    "home": "CHA",
+    "away": "WSH",
+    "market": "moneyline",
+    "side": "home",
+    "line": null,
+    "label": "CHA ML",
+    "price": -130.0,
+    "p": 0.6161,
+    "p_model": 0.7453,
+    "lo": 0.5748,
+    "hi": 0.6671,
+    "fair": 0.5445,
+    "status": "pending"
+   },
+   {
+    "league": "NHL",
+    "game_id": "NHL-20261026-DET-EDM-21",
+    "date": "2026-10-26",
+    "start": "2026-10-27T01:30:00",
+    "home": "EDM",
+    "away": "DET",
+    "market": "moneyline",
+    "side": "home",
+    "line": null,
+    "label": "EDM ML",
+    "price": -180.0,
+    "p": 0.6551,
+    "p_model": 0.7051,
+    "lo": 0.6502,
+    "hi": 0.6605,
+    "fair": 0.6214,
+    "status": "pending"
+   }
+  ],
+  "price": 175,
+  "decimal": 2.7521,
+  "p": 0.4036,
+  "lower": 0.373,
+  "upper": 0.4346,
+  "fair": 0.3384,
+  "ev": 0.1108,
+  "stake": 0.0,
+  "reasons": [
+   "each leg's chance is market-checked (keeps only the part of the model's disagreement with the sportsbooks that has held up on graded games): CHA ML 75% \u2192 62%, EDM ML 71% \u2192 66%",
+   "2 legs from different games, so the hit chance is the product of the legs: 62% \u00d7 66% = 40.4%",
+   "80% band 37.3%\u201343.5% from simulating each leg's own uncertainty",
+   "pays 2.75x (+175); expected return +11.1% per unit (needs +2% or more)",
+   "every leg is worth its own price: CHA ML +9.0%, EDM ML +1.9%",
+   "the sportsbooks' prices make it 34% likely; the model says 40%"
+  ],
+  "published_at": "2026-10-26T11:32:40+00:00",
+  "status": "pending",
+  "profit": null
  }
 ]
