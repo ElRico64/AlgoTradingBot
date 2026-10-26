@@ -9956,55 +9956,55 @@ null,
 },
 "NHL-20261025-MIN-VAN-22": {
 "away_ml": -205.0,
-"away_spread_price": 124.0,
+"away_spread_price": 120.0,
 "home_ml": 170.0,
-"home_spread_price": -148.0,
+"home_spread_price": -142.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.3723,
+0.3729,
 0.3491
 ],
 [
 "moneyline",
 "away",
 null,
-0.6277,
+0.6271,
 0.6509
 ],
 [
 "spread",
 "home",
 1.5,
-0.7261,
-0.5752
+0.7287,
+0.5661
 ],
 [
 "spread",
 "away",
 1.5,
-0.2739,
-0.4248
+0.2713,
+0.4339
 ],
 [
 "total",
 "over",
 6.5,
-0.5178,
+0.5183,
 0.5113
 ],
 [
 "total",
 "under",
 6.5,
-0.4822,
+0.4817,
 0.4887
 ]
 ],
 "over_price": -115.0,
-"source": "Draft Kings",
+"source": "DraftKings",
 "spread": 1.5,
 "total": 6.5,
 "under_price": -105.0

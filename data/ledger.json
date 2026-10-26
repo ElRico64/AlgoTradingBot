@@ -4927,8 +4927,12 @@
    "market check: model 82.7% vs books 73.5% -> 76.9% (keeps 33% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-10-25T06:11:25+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "lost",
+  "profit": -1.0,
+  "graded_at": "2026-10-26T01:43:14+00:00",
+  "final": "ORL 111 \u2013 NY 102",
+  "close_price": -285.0,
+  "clv": -0.0158
  },
  {
   "id": "confidence:2026-10-25:NBA-20261025-LAC-OKC-19:moneyline:home",
@@ -4970,8 +4974,12 @@
    "market check: model 76.2% vs books 88.3% -> 85.1% (keeps 33% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-10-25T06:11:25+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.1053,
+  "graded_at": "2026-10-26T01:43:14+00:00",
+  "final": "LAC 101 \u2013 OKC 108",
+  "close_price": -1450.0,
+  "clv": 0.0307
  },
  {
   "id": "confidence:2026-10-25:NBA-20261025-ORL-NY-19:moneyline:home",
@@ -5012,8 +5020,12 @@
    "market check: model 82.7% vs books 73.5% -> 76.9% (keeps 33% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-10-25T06:11:25+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "lost",
+  "profit": -1.0,
+  "graded_at": "2026-10-26T01:43:14+00:00",
+  "final": "ORL 111 \u2013 NY 102",
+  "close_price": -285.0,
+  "clv": -0.0158
  },
  {
   "id": "confidence:2026-10-25:NBA-20261025-LAL-UTAH-17:moneyline:away",
@@ -5052,8 +5064,12 @@
    "market check: model 73.9% vs books 68.3% -> 70.2% (keeps 33% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-10-25T06:11:25+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.4202,
+  "graded_at": "2026-10-26T01:43:14+00:00",
+  "final": "LAL 132 \u2013 UTAH 123",
+  "close_price": -250.0,
+  "clv": 0.0101
  },
  {
   "id": "value:2026-10-25:NFL-20261025-DEN-ARI-16:moneyline:away",
