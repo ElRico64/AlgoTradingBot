@@ -10890,51 +10890,51 @@ null,
 "under_price": 110.0
 },
 "NHL-20261028-CGY-EDM-20": {
-"away_ml": 180.0,
-"away_spread_price": -142.0,
-"home_ml": -218.0,
-"home_spread_price": 120.0,
+"away_ml": 160.0,
+"away_spread_price": -155.0,
+"home_ml": -192.0,
+"home_spread_price": 130.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.7241,
-0.6642
+0.6947,
+0.6365
 ],
 [
 "moneyline",
 "away",
 null,
-0.2759,
-0.3358
+0.3053,
+0.3635
 ],
 [
 "spread",
 "home",
 -1.5,
-0.3052,
-0.4339
+0.3102,
+0.4135
 ],
 [
 "spread",
 "away",
 -1.5,
-0.6948,
-0.5661
+0.6898,
+0.5865
 ],
 [
 "total",
 "over",
 6.5,
-0.5128,
+0.5168,
 0.5045
 ],
 [
 "total",
 "under",
 6.5,
-0.4872,
+0.4832,
 0.4955
 ]
 ],
@@ -10945,59 +10945,59 @@ null,
 "under_price": -108.0
 },
 "NHL-20261028-NJ-COL-21": {
-"away_ml": 145.0,
-"away_spread_price": -170.0,
-"home_ml": -175.0,
-"home_spread_price": 142.0,
+"away_ml": 124.0,
+"away_spread_price": -198.0,
+"home_ml": -148.0,
+"home_spread_price": 164.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.6736,
-0.6141
+0.6302,
+0.5752
 ],
 [
 "moneyline",
 "away",
 null,
-0.3264,
-0.3859
+0.3698,
+0.4248
 ],
 [
 "spread",
 "home",
 -1.5,
-0.3473,
-0.3918
+0.348,
+0.3572
 ],
 [
 "spread",
 "away",
 -1.5,
-0.6527,
-0.6082
+0.652,
+0.6428
 ],
 [
 "total",
 "over",
 6.5,
-0.4936,
-0.4727
+0.4934,
+0.4818
 ],
 [
 "total",
 "under",
 6.5,
-0.5064,
-0.5273
+0.5066,
+0.5182
 ]
 ],
-"over_price": 102.0,
+"over_price": -102.0,
 "source": "DraftKings",
 "spread": -1.5,
 "total": 6.5,
-"under_price": -122.0
+"under_price": -118.0
 },
 "NHL-20261028-PHI-WSH-19": {
 "away_ml": 190.0,
@@ -11009,97 +11009,97 @@ null,
 "moneyline",
 "home",
 null,
-0.7386,
+0.7391,
 0.6761
 ],
 [
 "moneyline",
 "away",
 null,
-0.2614,
+0.2609,
 0.3239
 ],
 [
 "spread",
 "home",
 -1.5,
-0.3248,
+0.33,
 0.4555
 ],
 [
 "spread",
 "away",
 -1.5,
-0.6752,
+0.67,
 0.5445
 ],
 [
 "total",
 "over",
 6.5,
-0.4769,
-0.4661
+0.4667,
+0.4464
 ],
 [
 "total",
 "under",
 6.5,
-0.5231,
-0.5339
+0.5333,
+0.5536
 ]
 ],
-"over_price": 105.0,
+"over_price": 114.0,
 "source": "DraftKings",
 "spread": -1.5,
 "total": 6.5,
-"under_price": -125.0
+"under_price": -135.0
 },
 "NHL-20261028-TOR-SEA-22": {
-"away_ml": -120.0,
-"away_spread_price": 205.0,
-"home_ml": 100.0,
-"home_spread_price": -250.0,
+"away_ml": -135.0,
+"away_spread_price": 180.0,
+"home_ml": 114.0,
+"home_spread_price": -218.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.5113,
-0.4773
+0.4753,
+0.4464
 ],
 [
 "moneyline",
 "away",
 null,
-0.4887,
-0.5227
+0.5247,
+0.5536
 ],
 [
 "spread",
 "home",
 1.5,
-0.756,
-0.6932
+0.7649,
+0.6642
 ],
 [
 "spread",
 "away",
 1.5,
-0.244,
-0.3068
+0.2351,
+0.3358
 ],
 [
 "total",
 "over",
 6.5,
-0.4925,
+0.4828,
 0.5227
 ],
 [
 "total",
 "under",
 6.5,
-0.5075,
+0.5172,
 0.4773
 ]
 ],

@@ -2497,58 +2497,58 @@ null,
 "under_price": -122.0
 },
 "MLB-20261028-MIL-TB-20": {
-"away_ml": -154.0,
-"away_spread_price": 123.0,
-"home_ml": 128.0,
-"home_spread_price": -149.0,
+"away_ml": -150.0,
+"away_spread_price": 119.0,
+"home_ml": 124.0,
+"home_spread_price": -143.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.3012,
-0.4161
+0.369,
+0.4232
 ],
 [
 "moneyline",
 "away",
 null,
-0.6988,
-0.5839
+0.631,
+0.5768
 ],
 [
 "spread",
 "home",
 1.5,
-0.6224,
-0.575
+0.657,
+0.5659
 ],
 [
 "spread",
 "away",
 1.5,
-0.3776,
-0.425
+0.343,
+0.4341
 ],
 [
 "total",
 "over",
 6.5,
-0.6318,
-0.5192
+0.6022,
+0.5103
 ],
 [
 "total",
 "under",
 6.5,
-0.3682,
-0.4808
+0.3978,
+0.4897
 ]
 ],
-"over_price": -119.0,
+"over_price": -114.0,
 "source": "DraftKings",
 "spread": 1.5,
 "total": 6.5,
-"under_price": -102.0
+"under_price": -105.0
 }
 }
