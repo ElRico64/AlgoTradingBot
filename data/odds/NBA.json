@@ -3740,168 +3740,168 @@ null,
 "under_price": -110.0
 },
 "NBA-20261029-CLE-ATL-20": {
-"away_ml": -110.0,
-"away_spread_price": -120.0,
-"home_ml": -110.0,
-"home_spread_price": 100.0,
-"model": [
-[
-"moneyline",
-"home",
-null,
-0.3832,
-0.5
-],
-[
-"moneyline",
-"away",
-null,
-0.6168,
-0.5
-],
-[
-"spread",
-"home",
--1.5,
-0.5281,
-0.4773
-],
-[
-"spread",
-"away",
--1.5,
-0.4719,
-0.5227
-],
-[
-"total",
-"over",
-239.5,
-0.4204,
-0.4887
-],
-[
-"total",
-"under",
-239.5,
-0.5796,
-0.5113
-]
-],
-"over_price": -105.0,
-"source": "DraftKings",
-"spread": -1.5,
-"total": 239.5,
-"under_price": -115.0
-},
-"NBA-20261029-MEM-POR-22": {
-"away_ml": 215.0,
+"away_ml": -105.0,
 "away_spread_price": -115.0,
-"home_ml": -265.0,
+"home_ml": -115.0,
 "home_spread_price": -105.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.6954,
-0.7043
+0.398,
+0.5113
 ],
 [
 "moneyline",
 "away",
 null,
-0.3046,
-0.2957
+0.602,
+0.4887
 ],
 [
 "spread",
 "home",
--7.5,
-0.4637,
+-1.5,
+0.5283,
 0.4887
 ],
 [
 "spread",
 "away",
--7.5,
-0.5363,
+-1.5,
+0.4717,
 0.5113
 ],
 [
 "total",
 "over",
-234.5,
-0.4466,
-0.5
+237.5,
+0.4618,
+0.5045
 ],
 [
 "total",
 "under",
-234.5,
-0.5534,
-0.5
+237.5,
+0.5382,
+0.4955
 ]
 ],
-"over_price": -110.0,
+"over_price": -112.0,
+"source": "DraftKings",
+"spread": -1.5,
+"total": 237.5,
+"under_price": -108.0
+},
+"NBA-20261029-MEM-POR-22": {
+"away_ml": 225.0,
+"away_spread_price": -110.0,
+"home_ml": -278.0,
+"home_spread_price": -110.0,
+"model": [
+[
+"moneyline",
+"home",
+null,
+0.7089,
+0.7139
+],
+[
+"moneyline",
+"away",
+null,
+0.2911,
+0.2861
+],
+[
+"spread",
+"home",
+-7.5,
+0.4644,
+0.5
+],
+[
+"spread",
+"away",
+-7.5,
+0.5356,
+0.5
+],
+[
+"total",
+"over",
+233.5,
+0.4673,
+0.5113
+],
+[
+"total",
+"under",
+233.5,
+0.5327,
+0.4887
+]
+],
+"over_price": -115.0,
 "source": "DraftKings",
 "spread": -7.5,
-"total": 234.5,
-"under_price": -110.0
+"total": 233.5,
+"under_price": -105.0
 },
 "NBA-20261029-SAC-NO-20": {
-"away_ml": 180.0,
+"away_ml": 190.0,
 "away_spread_price": -105.0,
-"home_ml": -218.0,
+"home_ml": -230.0,
 "home_spread_price": -115.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.6372,
-0.6642
+0.6535,
+0.6761
 ],
 [
 "moneyline",
 "away",
 null,
-0.3628,
-0.3358
+0.3465,
+0.3239
 ],
 [
 "spread",
 "home",
 -5.5,
-0.5191,
+0.5165,
 0.5113
 ],
 [
 "spread",
 "away",
 -5.5,
-0.4809,
+0.4835,
 0.4887
 ],
 [
 "total",
 "over",
-237.5,
-0.447,
-0.5
+236.5,
+0.4677,
+0.5045
 ],
 [
 "total",
 "under",
-237.5,
-0.553,
-0.5
+236.5,
+0.5323,
+0.4955
 ]
 ],
-"over_price": -110.0,
+"over_price": -112.0,
 "source": "DraftKings",
 "spread": -5.5,
-"total": 237.5,
-"under_price": -110.0
+"total": 236.5,
+"under_price": -108.0
 }
 }
