@@ -5925,8 +5925,12 @@
    "market check: model 88.3% vs books 65.1% -> 75.1% (keeps 34% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-10-28T06:53:25+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "lost",
+  "profit": -1.0,
+  "graded_at": "2026-10-29T07:09:42+00:00",
+  "final": "OKC 96 \u2013 DAL 120",
+  "close_price": -192.0,
+  "clv": -0.0146
  },
  {
   "id": "value:2026-10-28:NBA-20261028-NY-CHI-20:moneyline:away",
@@ -5965,8 +5969,12 @@
    "market check: model 91.5% vs books 70.9% -> 80.3% (keeps 34% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-10-28T06:53:25+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.3704,
+  "graded_at": "2026-10-29T07:09:42+00:00",
+  "final": "NY 133 \u2013 CHI 127",
+  "close_price": -278.0,
+  "clv": 0.0057
  },
  {
   "id": "value:2026-10-28:NBA-20261028-HOU-MIL-20:moneyline:away",
@@ -6004,8 +6012,12 @@
    "market check: model 90.6% vs books 73.5% -> 81.0% (keeps 34% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-10-28T06:53:25+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.3226,
+  "graded_at": "2026-10-29T07:09:42+00:00",
+  "final": "HOU 132 \u2013 MIL 100",
+  "close_price": -340.0,
+  "clv": 0.0166
  },
  {
   "id": "value:2026-10-28:NBA-20261028-SA-UTAH-21:moneyline:away",
@@ -6048,8 +6060,12 @@
    "market check: model 96.1% vs books 83.1% -> 89.6% (keeps 34% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-10-28T06:53:25+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.1739,
+  "graded_at": "2026-10-29T07:09:42+00:00",
+  "final": "SA 117 \u2013 UTAH 111",
+  "close_price": -650.0,
+  "clv": 0.0148
  },
  {
   "id": "value:2026-10-28:NBA-20261028-WSH-CLE-19:moneyline:home",
@@ -6087,8 +6103,12 @@
    "market check: model 86.3% vs books 77.7% -> 81.0% (keeps 34% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-10-28T06:53:25+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.2532,
+  "graded_at": "2026-10-29T07:09:42+00:00",
+  "final": "WSH 111 \u2013 CLE 121",
+  "close_price": -395.0,
+  "clv": 0.0
  },
  {
   "id": "confidence:2026-10-28:NBA-20261028-SA-UTAH-21:moneyline:away",
@@ -6131,8 +6151,12 @@
    "market check: model 96.1% vs books 83.1% -> 89.6% (keeps 34% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-10-28T06:53:25+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.1739,
+  "graded_at": "2026-10-29T07:09:42+00:00",
+  "final": "SA 117 \u2013 UTAH 111",
+  "close_price": -650.0,
+  "clv": 0.0148
  },
  {
   "id": "confidence:2026-10-28:NBA-20261028-WSH-CLE-19:moneyline:home",
@@ -6170,8 +6194,12 @@
    "market check: model 86.3% vs books 77.7% -> 81.0% (keeps 34% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-10-28T06:53:25+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.2532,
+  "graded_at": "2026-10-29T07:09:42+00:00",
+  "final": "WSH 111 \u2013 CLE 121",
+  "close_price": -395.0,
+  "clv": 0.0
  },
  {
   "id": "confidence:2026-10-28:NBA-20261028-HOU-MIL-20:moneyline:away",
@@ -6209,8 +6237,12 @@
    "market check: model 90.6% vs books 73.5% -> 81.0% (keeps 34% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-10-28T06:53:25+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.3226,
+  "graded_at": "2026-10-29T07:09:42+00:00",
+  "final": "HOU 132 \u2013 MIL 100",
+  "close_price": -340.0,
+  "clv": 0.0166
  },
  {
   "id": "confidence:2026-10-28:NBA-20261028-NY-CHI-20:moneyline:away",
@@ -6249,8 +6281,12 @@
    "market check: model 91.5% vs books 70.9% -> 80.3% (keeps 34% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-10-28T06:53:25+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.3704,
+  "graded_at": "2026-10-29T07:09:42+00:00",
+  "final": "NY 133 \u2013 CHI 127",
+  "close_price": -278.0,
+  "clv": 0.0057
  },
  {
   "id": "confidence:2026-10-28:NBA-20261028-OKC-DAL-21:moneyline:away",
@@ -6300,8 +6336,12 @@
    "market check: model 88.3% vs books 65.1% -> 75.1% (keeps 34% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-10-28T06:53:25+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "lost",
+  "profit": -1.0,
+  "graded_at": "2026-10-29T07:09:42+00:00",
+  "final": "OKC 96 \u2013 DAL 120",
+  "close_price": -192.0,
+  "clv": -0.0146
  },
  {
   "id": "confidence:2026-10-28:NBA-20261028-CHA-DET-19:moneyline:home",
@@ -6342,8 +6382,12 @@
    "market check: model 73.8% vs books 71.4% -> 72.2% (keeps 34% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-10-28T06:53:25+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.3597,
+  "graded_at": "2026-10-29T07:09:42+00:00",
+  "final": "CHA 89 \u2013 DET 97",
+  "close_price": -290.0,
+  "clv": 0.0081
  },
  {
   "id": "parlay:2026-10-28:f5262d150d1f",
@@ -6374,7 +6418,10 @@
     "lo": 0.7765,
     "hi": 0.835,
     "fair": 0.7086,
-    "status": "pending"
+    "status": "won",
+    "profit": 0.3704,
+    "graded_at": "2026-10-29T07:09:50+00:00",
+    "final": "NY 133 \u2013 CHI 127"
    },
    {
     "league": "NBA",
@@ -6393,7 +6440,10 @@
     "lo": 0.7169,
     "hi": 0.7947,
     "fair": 0.6509,
-    "status": "pending"
+    "status": "lost",
+    "profit": -1.0,
+    "graded_at": "2026-10-29T07:09:50+00:00",
+    "final": "OKC 96 \u2013 DAL 120"
    }
   ],
   "price": 104,
@@ -6413,9 +6463,10 @@
    "the sportsbooks' prices make it 46% likely; the model says 60%"
   ],
   "published_at": "2026-10-28T06:53:32+00:00",
-  "status": "pending",
-  "profit": null,
-  "p_now": 0.5845
+  "status": "lost",
+  "profit": -1.0,
+  "p_now": 0.5845,
+  "final": "NY ML won \u00b7 OKC ML lost"
  },
  {
   "id": "value:2026-10-28:NBA-20261028-PHI-IND-19:moneyline:away",
@@ -6461,8 +6512,12 @@
    "market check: model 82.8% vs books 63.6% -> 70.6% (keeps 31% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-10-28T11:39:02+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.5208,
+  "graded_at": "2026-10-29T07:09:42+00:00",
+  "final": "PHI 114 \u2013 IND 109",
+  "close_price": -278.0,
+  "clv": 0.0779
  },
  {
   "id": "confidence:2026-10-28:NBA-20261028-PHI-IND-19:moneyline:away",
@@ -6508,6 +6563,89 @@
    "market check: model 82.8% vs books 63.6% -> 70.6% (keeps 31% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-10-28T11:39:02+00:00",
+  "status": "won",
+  "profit": 0.5208,
+  "graded_at": "2026-10-29T07:09:42+00:00",
+  "final": "PHI 114 \u2013 IND 109",
+  "close_price": -278.0,
+  "clv": 0.0779
+ },
+ {
+  "id": "confidence:2026-10-29:NHL-20261029-WPG-TB-19:moneyline:home",
+  "tier": "confidence",
+  "date": "2026-10-29",
+  "league": "NHL",
+  "game_id": "NHL-20261029-WPG-TB-19",
+  "start": "2026-10-29T23:00:00",
+  "home": "TB",
+  "away": "WPG",
+  "label": "TB ML",
+  "market": "moneyline",
+  "side": "home",
+  "line": null,
+  "price": -245.0,
+  "p": 0.7118,
+  "lower": 0.7093,
+  "p_model": 0.759,
+  "upper": 0.7142,
+  "fair": 0.6884,
+  "edge": 0.0234,
+  "ev": 0.0023,
+  "value_line": -239,
+  "stake": 0.0,
+  "reasons": [
+   "calibrated P(win)=71.2% \u2265 70%",
+   "80% credible band 70.9%\u201371.4% (lower \u2265 62%)",
+   "price -245 needs 71.0%; EV +0.2% per unit",
+   "no-vig market 68.8% \u2192 edge +2.3%",
+   "home-win components: kalman 63.6%, elo 63.1%, count 55.2%, pattern 63.6%",
+   "adjustments: rest +0.09, news_margin_mean -0.08, timezones -0.02, travel -0.01",
+   "news: Brandon Hagel (TB, day-to-day) P(plays)=62% impact\u22480.06\u00b10.06",
+   "news: Zemgus Girgensons (TB, out) P(plays)=5% impact\u22480.06\u00b10.06",
+   "news: Victor Hedman (TB, day-to-day) P(plays)=81% impact\u22480.06\u00b10.06",
+   "news: Vladislav Namestnikov (WPG, ir) P(plays)=69% impact\u22480.02\u00b10.02",
+   "news: Nick Bjugstad (WPG, ir) P(plays)=70% impact\u22480.02\u00b10.02",
+   "news: Josh Morrissey (WPG, ir) P(plays)=89% impact\u22480.02\u00b10.02",
+   "market check: model 75.9% vs books 68.8% -> 71.2% (keeps 31% of the model's disagreement, learned from graded games)"
+  ],
+  "published_at": "2026-10-29T07:09:39+00:00",
+  "status": "pending",
+  "profit": null
+ },
+ {
+  "id": "confidence:2026-10-29:NBA-20261029-MEM-POR-22:moneyline:home",
+  "tier": "confidence",
+  "date": "2026-10-29",
+  "league": "NBA",
+  "game_id": "NBA-20261029-MEM-POR-22",
+  "start": "2026-10-30T02:00:00",
+  "home": "POR",
+  "away": "MEM",
+  "label": "POR ML",
+  "market": "moneyline",
+  "side": "home",
+  "line": null,
+  "price": -265.0,
+  "p": 0.7015,
+  "lower": 0.6903,
+  "p_model": 0.6954,
+  "upper": 0.7146,
+  "fair": 0.7043,
+  "edge": -0.0028,
+  "ev": -0.0338,
+  "value_line": -227,
+  "stake": 0.0,
+  "reasons": [
+   "calibrated P(win)=70.2% \u2265 70%",
+   "80% credible band 69.0%\u201371.5% (lower \u2265 62%)",
+   "price -265 needs 72.6%; EV -3.4% per unit",
+   "no-vig market 70.4% \u2192 edge -0.3%",
+   "home-win components: kalman 69.0%, elo 82.7%, pattern 69.0%",
+   "adjustments: news_margin_mean -0.59, rest -0.32, timezones +0.25, travel -0.06",
+   "news: Chris Youngblood (POR, out, G) P(plays)=28% impact\u22480.80\u00b10.80",
+   "market check: model 69.5% vs books 70.4% -> 70.2% (keeps 31% of the model's disagreement, learned from graded games)"
+  ],
+  "published_at": "2026-10-29T07:09:43+00:00",
   "status": "pending",
   "profit": null
  }
