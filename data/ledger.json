@@ -6609,8 +6609,10 @@
    "market check: model 75.9% vs books 68.8% -> 71.2% (keeps 31% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-10-29T07:09:39+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "withdrawn",
+  "profit": null,
+  "withdrawn_at": "2026-10-29T19:39:17+00:00",
+  "note": "Withdrawn before start: probability 69.0% below 70%"
  },
  {
   "id": "confidence:2026-10-29:NBA-20261029-MEM-POR-22:moneyline:home",
