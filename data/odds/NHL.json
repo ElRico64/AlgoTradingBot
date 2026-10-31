@@ -11880,51 +11880,51 @@ null,
 "under_price": -135.0
 },
 "NHL-20261031-BUF-LA-16": {
-"away_ml": -122.0,
-"away_spread_price": 200.0,
-"home_ml": 102.0,
-"home_spread_price": -245.0,
+"away_ml": -135.0,
+"away_spread_price": 185.0,
+"home_ml": 114.0,
+"home_spread_price": -225.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.5043,
-0.4727
+0.4708,
+0.4464
 ],
 [
 "moneyline",
 "away",
 null,
-0.4957,
-0.5273
+0.5292,
+0.5536
 ],
 [
 "spread",
 "home",
 1.5,
-0.7403,
-0.6884
+0.7363,
+0.6707
 ],
 [
 "spread",
 "away",
 1.5,
-0.2597,
-0.3116
+0.2637,
+0.3293
 ],
 [
 "total",
 "over",
 5.5,
-0.5572,
+0.5529,
 0.5536
 ],
 [
 "total",
 "under",
 5.5,
-0.4428,
+0.4471,
 0.4464
 ]
 ],
@@ -11935,106 +11935,106 @@ null,
 "under_price": 114.0
 },
 "NHL-20261031-CBJ-DAL-20": {
-"away_ml": 154.0,
+"away_ml": 160.0,
 "away_spread_price": -175.0,
-"home_ml": -185.0,
+"home_ml": -192.0,
 "home_spread_price": 145.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.6936,
-0.6277
+0.704,
+0.6365
 ],
 [
 "moneyline",
 "away",
 null,
-0.3064,
-0.3723
+0.296,
+0.3635
 ],
 [
 "spread",
 "home",
 -1.5,
-0.2956,
+0.3009,
 0.3859
 ],
 [
 "spread",
 "away",
 -1.5,
-0.7044,
+0.6991,
 0.6141
 ],
 [
 "total",
 "over",
 5.5,
-0.5536,
-0.4887
+0.5614,
+0.4773
 ],
 [
 "total",
 "under",
 5.5,
-0.4464,
-0.5113
+0.4386,
+0.5227
 ]
 ],
-"over_price": -105.0,
+"over_price": 100.0,
 "source": "DraftKings",
 "spread": -1.5,
 "total": 5.5,
-"under_price": -115.0
+"under_price": -120.0
 },
 "NHL-20261031-CGY-COL-22": {
-"away_ml": 320.0,
-"away_spread_price": 145.0,
-"home_ml": -410.0,
-"home_spread_price": -175.0,
+"away_ml": 300.0,
+"away_spread_price": 140.0,
+"home_ml": -380.0,
+"home_spread_price": -166.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.8603,
-0.7829
+0.8488,
+0.7708
 ],
 [
 "moneyline",
 "away",
 null,
-0.1397,
-0.2171
+0.1512,
+0.2292
 ],
 [
 "spread",
 "home",
 -1.5,
-0.3967,
-0.6141
+0.3856,
+0.6037
 ],
 [
 "spread",
 "away",
 -1.5,
-0.6033,
-0.3859
+0.6144,
+0.3963
 ],
 [
 "total",
 "over",
 6.5,
-0.4756,
+0.4738,
 0.5
 ],
 [
 "total",
 "under",
 6.5,
-0.5244,
+0.5262,
 0.5
 ]
 ],
@@ -12155,51 +12155,51 @@ null,
 "under_price": -125.0
 },
 "NHL-20261031-OTT-SJ-16": {
-"away_ml": -135.0,
-"away_spread_price": 180.0,
-"home_ml": 114.0,
-"home_spread_price": -218.0,
+"away_ml": -155.0,
+"away_spread_price": 160.0,
+"home_ml": 130.0,
+"home_spread_price": -192.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.472,
-0.4464
+0.4312,
+0.4135
 ],
 [
 "moneyline",
 "away",
 null,
-0.528,
-0.5536
+0.5688,
+0.5865
 ],
 [
 "spread",
 "home",
 1.5,
-0.7423,
-0.6642
+0.7432,
+0.6365
 ],
 [
 "spread",
 "away",
 1.5,
-0.2577,
-0.3358
+0.2568,
+0.3635
 ],
 [
 "total",
 "over",
 6.5,
-0.4758,
+0.475,
 0.5045
 ],
 [
 "total",
 "under",
 6.5,
-0.5242,
+0.525,
 0.4955
 ]
 ],
@@ -12210,51 +12210,51 @@ null,
 "under_price": -108.0
 },
 "NHL-20261031-PIT-MTL-19": {
-"away_ml": 130.0,
-"away_spread_price": -192.0,
-"home_ml": -155.0,
-"home_spread_price": 160.0,
+"away_ml": 105.0,
+"away_spread_price": -230.0,
+"home_ml": -125.0,
+"home_spread_price": 190.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.6463,
-0.5865
+0.5816,
+0.5339
 ],
 [
 "moneyline",
 "away",
 null,
-0.3537,
-0.4135
+0.4184,
+0.4661
 ],
 [
 "spread",
 "home",
 -1.5,
-0.2935,
-0.3635
+0.2789,
+0.3239
 ],
 [
 "spread",
 "away",
 -1.5,
-0.7065,
-0.6365
+0.7211,
+0.6761
 ],
 [
 "total",
 "over",
 6.5,
-0.4839,
+0.4921,
 0.5182
 ],
 [
 "total",
 "under",
 6.5,
-0.5161,
+0.5079,
 0.4818
 ]
 ],
@@ -12375,51 +12375,51 @@ null,
 "under_price": -135.0
 },
 "NHL-20261031-TOR-VAN-19": {
-"away_ml": -166.0,
-"away_spread_price": 150.0,
-"home_ml": 140.0,
-"home_spread_price": -180.0,
+"away_ml": -192.0,
+"away_spread_price": 130.0,
+"home_ml": 160.0,
+"home_spread_price": -155.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.4057,
-0.3963
+0.3648,
+0.3635
 ],
 [
 "moneyline",
 "away",
 null,
-0.5943,
-0.6037
+0.6352,
+0.6365
 ],
 [
 "spread",
 "home",
 1.5,
-0.7125,
-0.6214
+0.7102,
+0.5865
 ],
 [
 "spread",
 "away",
 1.5,
-0.2875,
-0.3786
+0.2898,
+0.4135
 ],
 [
 "total",
 "over",
 6.5,
-0.5297,
+0.5315,
 0.5339
 ],
 [
 "total",
 "under",
 6.5,
-0.4703,
+0.4685,
 0.4661
 ]
 ],
