@@ -7186,8 +7186,12 @@
    "market check: model 79.4% vs books 68.8% -> 72.4% (keeps 31% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-10-31T07:01:41+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.4082,
+  "graded_at": "2026-10-31T23:24:52+00:00",
+  "final": "POR 112 \u2013 UTAH 90",
+  "close_price": -265.0,
+  "clv": 0.0159
  },
  {
   "id": "value:2026-10-31:NBA-20261031-CLE-MIL-20:moneyline:away",
@@ -7389,8 +7393,12 @@
    "market check: model 79.4% vs books 68.8% -> 72.4% (keeps 31% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-10-31T07:01:41+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.4082,
+  "graded_at": "2026-10-31T23:24:52+00:00",
+  "final": "POR 112 \u2013 UTAH 90",
+  "close_price": -265.0,
+  "clv": 0.0159
  },
  {
   "id": "parlay:2026-10-31:5b5b5827ffaa",
@@ -7422,7 +7430,10 @@
     "lo": 0.6956,
     "hi": 0.698,
     "fair": 0.6707,
-    "status": "pending"
+    "status": "won",
+    "profit": 0.4444,
+    "graded_at": "2026-10-31T23:24:59+00:00",
+    "final": "CHI 4 \u2013 BOS 5"
    },
    {
     "league": "NBA",
@@ -7441,7 +7452,10 @@
     "lo": 0.7239,
     "hi": 0.7239,
     "fair": 0.6884,
-    "status": "pending"
+    "status": "won",
+    "profit": 0.4082,
+    "graded_at": "2026-10-31T23:24:59+00:00",
+    "final": "POR 112 \u2013 UTAH 90"
    }
   ],
   "price": 103,
@@ -7461,8 +7475,9 @@
    "the sportsbooks' prices make it 46% likely; the model says 50%"
   ],
   "published_at": "2026-10-31T07:01:48+00:00",
-  "status": "pending",
-  "profit": null,
-  "p_now": 0.5043
+  "status": "won",
+  "profit": 1.034,
+  "p_now": 0.5043,
+  "final": "BOS ML won \u00b7 POR ML won"
  }
 ]
