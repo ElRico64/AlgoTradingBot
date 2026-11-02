@@ -4125,10 +4125,54 @@ null,
 "under_price": -110.0
 },
 "NFL-20261102-CHI-SEA-20": {
-"away_ml": 140.0,
-"away_spread_price": -105.0,
-"home_ml": -166.0,
-"home_spread_price": -115.0,
+"away_ml": 145.0,
+"away_spread_price": -102.0,
+"home_ml": -175.0,
+"home_spread_price": -118.0,
+"model": [
+[
+"moneyline",
+"home",
+null,
+0.588,
+0.6141
+],
+[
+"moneyline",
+"away",
+null,
+0.412,
+0.3859
+],
+[
+"spread",
+"home",
+-3.0,
+0.5255,
+0.5182
+],
+[
+"spread",
+"away",
+-3.0,
+0.4745,
+0.4818
+],
+[
+"total",
+"over",
+46.5,
+0.4594,
+0.5
+],
+[
+"total",
+"under",
+46.5,
+0.5406,
+0.5
+]
+],
 "over_price": -110.0,
 "source": "DraftKings",
 "spread": -3.0,
@@ -4136,14 +4180,157 @@ null,
 "under_price": -110.0
 },
 "NFL-20261105-JAX-BAL-20": {
-"away_ml": -375.0,
+"away_ml": -410.0,
+"away_spread_price": -105.0,
+"home_ml": 320.0,
+"home_spread_price": -115.0,
+"over_price": -110.0,
+"source": "DraftKings",
+"spread": 8.5,
+"total": 43.5,
+"under_price": -110.0
+},
+"NFL-20261108-ARI-SEA-16": {
+"away_ml": 525.0,
 "away_spread_price": -110.0,
-"home_ml": 295.0,
+"home_ml": -750.0,
 "home_spread_price": -110.0,
 "over_price": -110.0,
 "source": "DraftKings",
-"spread": 7.5,
-"total": 43.5,
+"spread": -11.5,
+"total": 44.5,
 "under_price": -110.0
+},
+"NFL-20261108-CIN-ATL-09": {
+"away_ml": -166.0,
+"away_spread_price": -118.0,
+"home_ml": 140.0,
+"home_spread_price": -102.0,
+"over_price": -105.0,
+"source": "DraftKings",
+"spread": 3.0,
+"total": 51.5,
+"under_price": -115.0
+},
+"NFL-20261108-CLE-NO-13": {
+"away_ml": 124.0,
+"away_spread_price": -115.0,
+"home_ml": -148.0,
+"home_spread_price": -105.0,
+"over_price": -105.0,
+"source": "DraftKings",
+"spread": -3.0,
+"total": 43.5,
+"under_price": -115.0
+},
+"NFL-20261108-DAL-IND-13": {
+"away_ml": -258.0,
+"away_spread_price": -108.0,
+"home_ml": 210.0,
+"home_spread_price": -112.0,
+"over_price": -110.0,
+"source": "DraftKings",
+"spread": 6.0,
+"total": 51.5,
+"under_price": -110.0
+},
+"NFL-20261108-DEN-CAR-13": {
+"away_ml": -155.0,
+"away_spread_price": -105.0,
+"home_ml": 130.0,
+"home_spread_price": -115.0,
+"over_price": -115.0,
+"source": "DraftKings",
+"spread": 3.0,
+"total": 43.5,
+"under_price": -105.0
+},
+"NFL-20261108-DET-MIA-13": {
+"away_ml": -360.0,
+"away_spread_price": -110.0,
+"home_ml": 285.0,
+"home_spread_price": -110.0,
+"over_price": -115.0,
+"source": "DraftKings",
+"spread": 7.0,
+"total": 49.5,
+"under_price": -105.0
+},
+"NFL-20261108-GB-NE-16": {
+"away_ml": 124.0,
+"away_spread_price": -102.0,
+"home_ml": -148.0,
+"home_spread_price": -118.0,
+"over_price": -110.0,
+"source": "DraftKings",
+"spread": -2.5,
+"total": 47.5,
+"under_price": -110.0
+},
+"NFL-20261108-HOU-LAC-16": {
+"away_ml": -218.0,
+"away_spread_price": -105.0,
+"home_ml": 180.0,
+"home_spread_price": -115.0,
+"over_price": -105.0,
+"source": "DraftKings",
+"spread": 5.5,
+"total": 41.5,
+"under_price": -115.0
+},
+"NFL-20261108-LAR-WSH-13": {
+"away_ml": -225.0,
+"away_spread_price": -110.0,
+"home_ml": 185.0,
+"home_spread_price": -110.0,
+"over_price": -110.0,
+"source": "DraftKings",
+"spread": 5.5,
+"total": 48.5,
+"under_price": -110.0
+},
+"NFL-20261108-LV-SF-16": {
+"away_ml": 380.0,
+"away_spread_price": -110.0,
+"home_ml": -500.0,
+"home_spread_price": -110.0,
+"over_price": -105.0,
+"source": "DraftKings",
+"spread": -9.5,
+"total": 51.5,
+"under_price": -115.0
+},
+"NFL-20261108-NYG-PHI-13": {
+"away_ml": -148.0,
+"away_spread_price": -102.0,
+"home_ml": 124.0,
+"home_spread_price": -118.0,
+"over_price": -115.0,
+"source": "DraftKings",
+"spread": 3.0,
+"total": 40.5,
+"under_price": -105.0
+},
+"NFL-20261108-NYJ-KC-13": {
+"away_ml": 380.0,
+"away_spread_price": -112.0,
+"home_ml": -500.0,
+"home_spread_price": -108.0,
+"over_price": -105.0,
+"source": "DraftKings",
+"spread": -10.0,
+"total": 46.5,
+"under_price": -115.0
+},
+"NFL-20261108-TB-CHI-20": {
+"away_ml": 200.0,
+"away_spread_price": -108.0,
+"home_ml": -245.0,
+"home_spread_price": -112.0,
+"over_price": 110.0,
+"source": "DraftKings",
+"spread": -5.5,
+"total": 47.5,
+"under_price": -130.0
 }
 }
