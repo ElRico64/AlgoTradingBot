@@ -12540,51 +12540,51 @@ null,
 "under_price": -125.0
 },
 "NHL-20261101-OTT-ANA-20": {
-"away_ml": -118.0,
+"away_ml": -122.0,
 "away_spread_price": 200.0,
-"home_ml": -102.0,
+"home_ml": 102.0,
 "home_spread_price": -245.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.5165,
-0.4818
+0.5047,
+0.4727
 ],
 [
 "moneyline",
 "away",
 null,
-0.4835,
-0.5182
+0.4953,
+0.5273
 ],
 [
 "spread",
 "home",
 1.5,
-0.7643,
+0.7642,
 0.6884
 ],
 [
 "spread",
 "away",
 1.5,
-0.2357,
+0.2358,
 0.3116
 ],
 [
 "total",
 "over",
 6.5,
-0.5286,
+0.5288,
 0.5536
 ],
 [
 "total",
 "under",
 6.5,
-0.4714,
+0.4712,
 0.4464
 ]
 ],
