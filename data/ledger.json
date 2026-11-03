@@ -8012,8 +8012,12 @@
    "market check: model 87.6% vs books 83.1% -> 84.3% (keeps 25% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-02T07:42:29+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.1739,
+  "graded_at": "2026-11-03T03:04:19+00:00",
+  "final": "CHI 107 \u2013 PHI 126",
+  "close_price": -522.0,
+  "clv": -0.0126
  },
  {
   "id": "confidence:2026-11-02:NBA-20261102-MIL-MIN-20:moneyline:home",
@@ -8146,8 +8150,12 @@
    "market check: model 89.2% vs books 79.5% -> 82.2% (keeps 24% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-02T22:47:32+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.2273,
+  "graded_at": "2026-11-03T03:04:19+00:00",
+  "final": "ATL 108 \u2013 IND 104",
+  "close_price": -440.0,
+  "clv": 0.0
  },
  {
   "id": "confidence:2026-11-02:NBA-20261102-DET-CHA-19:moneyline:away",
@@ -8186,6 +8194,54 @@
    "market check: model 77.8% vs books 67.5% -> 70.2% (keeps 24% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-02T22:47:32+00:00",
+  "status": "won",
+  "profit": 0.4367,
+  "graded_at": "2026-11-03T03:04:19+00:00",
+  "final": "DET 124 \u2013 CHA 91",
+  "close_price": -229.0,
+  "clv": 0.0
+ },
+ {
+  "id": "confidence:2026-11-02:NBA-20261102-TOR-LAC-22:moneyline:away",
+  "tier": "confidence",
+  "date": "2026-11-02",
+  "league": "NBA",
+  "game_id": "NBA-20261102-TOR-LAC-22",
+  "start": "2026-11-03T03:00:00",
+  "home": "LAC",
+  "away": "TOR",
+  "label": "TOR ML",
+  "market": "moneyline",
+  "side": "away",
+  "line": null,
+  "price": -229.0,
+  "p": 0.7015,
+  "lower": 0.7015,
+  "p_model": 0.7778,
+  "upper": 0.7015,
+  "fair": 0.675,
+  "edge": 0.0265,
+  "ev": 0.0079,
+  "value_line": -227,
+  "stake": 0.0,
+  "reasons": [
+   "calibrated P(win)=70.2% \u2265 70%",
+   "80% credible band 70.2%\u201370.2% (lower \u2265 62%)",
+   "price -229 needs 69.6%; EV +0.8% per unit",
+   "no-vig market 67.5% \u2192 edge +2.7%",
+   "home-win components: kalman 38.0%, elo 42.1%, pattern 38.0%",
+   "adjustments: news_margin_mean -1.27, travel -0.10, rest +0.01, pattern_logit +0.00",
+   "news: Rui Hachimura (LAC, out) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Derrick Jones Jr. (LAC, out) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Yanic Konan Niederhauser (LAC, out) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Brandon Ingram (LAC, out) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Bradley Beal (LAC, out, G) P(plays)=99% impact\u22480.80\u00b10.80",
+   "news: Jakob Poeltl (TOR, out) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Nate Bittle (TOR, out) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Kawhi Leonard (TOR, out) P(plays)=60% impact\u22480.80\u00b10.80",
+   "market check: model 77.8% vs books 67.5% -> 70.2% (keeps 24% of the model's disagreement, learned from graded games)"
+  ],
+  "published_at": "2026-11-03T03:04:20+00:00",
   "status": "pending",
   "profit": null
  }
