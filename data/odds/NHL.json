@@ -13539,102 +13539,102 @@ null,
 "moneyline",
 "home",
 null,
-0.6037,
+0.6027,
 0.5536
 ],
 [
 "moneyline",
 "away",
 null,
-0.3963,
+0.3973,
 0.4464
 ],
 [
 "spread",
 "home",
 -1.5,
-0.3209,
+0.317,
 0.3358
 ],
 [
 "spread",
 "away",
 -1.5,
-0.6791,
+0.683,
 0.6642
 ],
 [
 "total",
 "over",
 6.5,
-0.4793,
+0.4839,
 0.4555
 ],
 [
 "total",
 "under",
 6.5,
-0.5207,
+0.5161,
 0.5445
 ]
 ],
 "over_price": 110.0,
-"source": "DraftKings",
+"source": "Draft Kings",
 "spread": -1.5,
 "total": 6.5,
 "under_price": -130.0
 },
 "NHL-20261104-CHI-FLA-19": {
-"away_ml": 205.0,
+"away_ml": 210.0,
 "away_spread_price": -125.0,
-"home_ml": -250.0,
+"home_ml": -258.0,
 "home_spread_price": 105.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.7711,
-0.6932
+0.7772,
+0.699
 ],
 [
 "moneyline",
 "away",
 null,
-0.2289,
-0.3068
+0.2228,
+0.301
 ],
 [
 "spread",
 "home",
 -1.5,
-0.3296,
+0.3291,
 0.4661
 ],
 [
 "spread",
 "away",
 -1.5,
-0.6704,
+0.6709,
 0.5339
 ],
 [
 "total",
 "over",
 5.5,
-0.5893,
+0.5902,
 0.5536
 ],
 [
 "total",
 "under",
 5.5,
-0.4107,
+0.4098,
 0.4464
 ]
 ],
 "over_price": -135.0,
-"source": "DraftKings",
+"source": "Draft Kings",
 "spread": -1.5,
 "total": 5.5,
 "under_price": 114.0
@@ -13649,102 +13649,102 @@ null,
 "moneyline",
 "home",
 null,
-0.5861,
+0.5888,
 0.5445
 ],
 [
 "moneyline",
 "away",
 null,
-0.4139,
+0.4112,
 0.4555
 ],
 [
 "spread",
 "home",
 -1.5,
-0.2889,
+0.3002,
 0.3358
 ],
 [
 "spread",
 "away",
 -1.5,
-0.7111,
+0.6998,
 0.6642
 ],
 [
 "total",
 "over",
 6.5,
-0.4767,
+0.4718,
 0.5273
 ],
 [
 "total",
 "under",
 6.5,
-0.5233,
+0.5282,
 0.4727
 ]
 ],
 "over_price": -122.0,
-"source": "DraftKings",
+"source": "Draft Kings",
 "spread": -1.5,
 "total": 6.5,
 "under_price": 102.0
 },
 "NHL-20261104-SJ-LA-22": {
-"away_ml": 130.0,
-"away_spread_price": -192.0,
-"home_ml": -155.0,
-"home_spread_price": 160.0,
+"away_ml": 140.0,
+"away_spread_price": -185.0,
+"home_ml": -166.0,
+"home_spread_price": 154.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.6422,
-0.5865
+0.6629,
+0.6037
 ],
 [
 "moneyline",
 "away",
 null,
-0.3578,
-0.4135
+0.3371,
+0.3963
 ],
 [
 "spread",
 "home",
 -1.5,
-0.3016,
-0.3635
+0.3019,
+0.3723
 ],
 [
 "spread",
 "away",
 -1.5,
-0.6984,
-0.6365
+0.6981,
+0.6277
 ],
 [
 "total",
 "over",
 6.5,
-0.4603,
+0.4608,
 0.4661
 ],
 [
 "total",
 "under",
 6.5,
-0.5397,
+0.5392,
 0.5339
 ]
 ],
 "over_price": 105.0,
-"source": "DraftKings",
+"source": "Draft Kings",
 "spread": -1.5,
 "total": 6.5,
 "under_price": -125.0
