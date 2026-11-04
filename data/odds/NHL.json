@@ -12925,51 +12925,51 @@ null,
 "under_price": -125.0
 },
 "NHL-20261103-ANA-VAN-21": {
-"away_ml": -155.0,
-"away_spread_price": 154.0,
-"home_ml": 130.0,
-"home_spread_price": -185.0,
+"away_ml": -192.0,
+"away_spread_price": 136.0,
+"home_ml": 160.0,
+"home_spread_price": -162.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.411,
-0.4135
+0.3518,
+0.3635
 ],
 [
 "moneyline",
 "away",
 null,
-0.589,
-0.5865
+0.6482,
+0.6365
 ],
 [
 "spread",
 "home",
 1.5,
-0.7248,
-0.6277
+0.7242,
+0.5973
 ],
 [
 "spread",
 "away",
 1.5,
-0.2752,
-0.3723
+0.2758,
+0.4027
 ],
 [
 "total",
 "over",
 6.5,
-0.5275,
+0.5286,
 0.5661
 ],
 [
 "total",
 "under",
 6.5,
-0.4725,
+0.4714,
 0.4339
 ]
 ],
