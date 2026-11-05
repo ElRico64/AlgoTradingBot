@@ -6653,5 +6653,115 @@ null,
 "spread": -4.5,
 "total": 231.5,
 "under_price": -109.0
+},
+"NBA-20261105-MIA-GS-22": {
+"away_ml": 230.0,
+"away_spread_price": -114.0,
+"home_ml": -281.0,
+"home_spread_price": -106.0,
+"model": [
+[
+"moneyline",
+"home",
+null,
+0.7193,
+0.7173
+],
+[
+"moneyline",
+"away",
+null,
+0.2807,
+0.2827
+],
+[
+"spread",
+"home",
+-7.5,
+0.4156,
+0.4909
+],
+[
+"spread",
+"away",
+-7.5,
+0.5844,
+0.5091
+],
+[
+"total",
+"over",
+236.5,
+0.524,
+0.4909
+],
+[
+"total",
+"under",
+236.5,
+0.476,
+0.5091
+]
+],
+"over_price": -106.0,
+"source": "Draft Kings",
+"spread": -7.5,
+"total": 236.5,
+"under_price": -114.0
+},
+"NBA-20261105-ORL-PHX-21": {
+"away_ml": 101.0,
+"away_spread_price": -110.0,
+"home_ml": -119.0,
+"home_spread_price": -110.0,
+"model": [
+[
+"moneyline",
+"home",
+null,
+0.4411,
+0.5229
+],
+[
+"moneyline",
+"away",
+null,
+0.5589,
+0.4771
+],
+[
+"spread",
+"home",
+-1.5,
+0.4594,
+0.5
+],
+[
+"spread",
+"away",
+-1.5,
+0.5406,
+0.5
+],
+[
+"total",
+"over",
+223.5,
+0.513,
+0.5
+],
+[
+"total",
+"under",
+223.5,
+0.487,
+0.5
+]
+],
+"over_price": -110.0,
+"source": "Draft Kings",
+"spread": -1.5,
+"total": 223.5,
+"under_price": -110.0
 }
 }

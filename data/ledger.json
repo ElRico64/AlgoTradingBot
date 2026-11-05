@@ -8349,8 +8349,12 @@
    "market check: model 77.1% vs books 69.3% -> 71.8% (keeps 30% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-04T07:31:32+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.4,
+  "graded_at": "2026-11-05T07:56:03+00:00",
+  "final": "CHI 3 \u2013 FLA 5",
+  "close_price": -258.0,
+  "clv": 0.0064
  },
  {
   "id": "value:2026-11-04:NBA-20261104-LAL-SAC-22:moneyline:away",
@@ -8390,8 +8394,12 @@
    "market check: model 92.8% vs books 83.1% -> 86.3% (keeps 26% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-04T07:31:36+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.1742,
+  "graded_at": "2026-11-05T07:56:08+00:00",
+  "final": "LAL 116 \u2013 SAC 103",
+  "close_price": -650.0,
+  "clv": 0.015
  },
  {
   "id": "confidence:2026-11-04:NBA-20261104-LAL-SAC-22:moneyline:away",
@@ -8431,8 +8439,12 @@
    "market check: model 92.8% vs books 83.1% -> 86.3% (keeps 26% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-04T07:31:36+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.1742,
+  "graded_at": "2026-11-05T07:56:08+00:00",
+  "final": "LAL 116 \u2013 SAC 103",
+  "close_price": -650.0,
+  "clv": 0.015
  },
  {
   "id": "confidence:2026-11-04:NBA-20261104-CHI-NY-19:moneyline:home",
@@ -8470,8 +8482,12 @@
    "market check: model 87.2% vs books 83.6% -> 84.6% (keeps 26% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-04T07:31:36+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.1675,
+  "graded_at": "2026-11-05T07:56:08+00:00",
+  "final": "CHI 105 \u2013 NY 135",
+  "close_price": -597.0,
+  "clv": 0.0
  },
  {
   "id": "confidence:2026-11-04:NBA-20261104-MIL-BOS-19:moneyline:home",
@@ -8509,8 +8525,12 @@
    "market check: model 86.5% vs books 83.0% -> 83.9% (keeps 26% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-04T07:31:36+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.1764,
+  "graded_at": "2026-11-05T07:56:08+00:00",
+  "final": "MIL 102 \u2013 BOS 109",
+  "close_price": -518.0,
+  "clv": -0.0119
  },
  {
   "id": "confidence:2026-11-04:NBA-20261104-DAL-SA-21:moneyline:home",
@@ -8551,8 +8571,12 @@
    "market check: model 85.9% vs books 82.5% -> 83.4% (keeps 26% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-04T07:31:36+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.1835,
+  "graded_at": "2026-11-05T07:56:08+00:00",
+  "final": "DAL 111 \u2013 SA 112",
+  "close_price": -620.0,
+  "clv": 0.0161
  },
  {
   "id": "confidence:2026-11-04:NBA-20261104-MIN-HOU-20:moneyline:home",
@@ -8591,8 +8615,12 @@
    "market check: model 74.6% vs books 73.6% -> 73.8% (keeps 26% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-04T07:31:36+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "lost",
+  "profit": -1.0,
+  "graded_at": "2026-11-05T07:56:08+00:00",
+  "final": "MIN 117 \u2013 HOU 107",
+  "close_price": -278.0,
+  "clv": -0.0206
  },
  {
   "id": "parlay:2026-11-04:e7176f38f81d",
@@ -8623,7 +8651,10 @@
     "lo": 0.5942,
     "hi": 0.5942,
     "fair": 0.5661,
-    "status": "pending"
+    "status": "won",
+    "profit": 0.7042,
+    "graded_at": "2026-11-05T07:56:17+00:00",
+    "final": "ATL 120 \u2013 WSH 105"
    },
    {
     "league": "NBA",
@@ -8642,7 +8673,10 @@
     "lo": 0.8634,
     "hi": 0.8634,
     "fair": 0.8313,
-    "status": "pending"
+    "status": "won",
+    "profit": 0.1742,
+    "graded_at": "2026-11-05T07:56:17+00:00",
+    "final": "LAL 116 \u2013 SAC 103"
    }
   ],
   "price": 100,
@@ -8662,10 +8696,176 @@
    "the sportsbooks' prices make it 47% likely; the model says 51%"
   ],
   "published_at": "2026-11-04T07:31:43+00:00",
-  "status": "pending",
-  "profit": null,
+  "status": "won",
+  "profit": 1.0011,
   "withdrawn_at": "2026-11-04T13:16:08+00:00",
   "note": "Reinstated after new information",
-  "p_now": 0.5362
+  "p_now": 0.5362,
+  "final": "ATL ML won \u00b7 LAL ML won"
+ },
+ {
+  "id": "value:2026-11-05:NHL-20261105-CHI-TB-19:moneyline:home",
+  "tier": "value",
+  "date": "2026-11-05",
+  "league": "NHL",
+  "game_id": "NHL-20261105-CHI-TB-19",
+  "start": "2026-11-06T00:00:00",
+  "home": "TB",
+  "away": "CHI",
+  "label": "TB ML",
+  "market": "moneyline",
+  "side": "home",
+  "line": null,
+  "price": -395.0,
+  "p": 0.8065,
+  "lower": 0.8052,
+  "p_model": 0.8639,
+  "upper": 0.8077,
+  "fair": 0.777,
+  "edge": 0.0294,
+  "ev": 0.0106,
+  "value_line": -396,
+  "stake": 0.0104,
+  "reasons": [
+   "calibrated P(win)=80.6% \u2265 70%",
+   "80% credible band 80.5%\u201380.8% (lower \u2265 62%)",
+   "price -395 needs 79.8%; EV +1.1% per unit",
+   "no-vig market 77.7% \u2192 edge +2.9%",
+   "home-win components: kalman 74.8%, elo 74.9%, count 61.6%, pattern 74.8%",
+   "adjustments: back_to_back +0.15, rest +0.03, news_margin_mean +0.02, travel +0.01",
+   "news: Bowen Byram (CHI, ir) P(plays)=18% impact\u22480.02\u00b10.02",
+   "news: Patrick Kane (CHI, out) P(plays)=28% impact\u22480.06\u00b10.06",
+   "news: Yanni Gourde (TB, ir) P(plays)=5% impact\u22480.02\u00b10.02",
+   "news: Zemgus Girgensons (TB, day-to-day) P(plays)=62% impact\u22480.06\u00b10.06",
+   "market check: model 86.4% vs books 77.7% -> 80.6% (keeps 30% of the model's disagreement, learned from graded games)"
+  ],
+  "published_at": "2026-11-05T07:56:05+00:00",
+  "status": "pending",
+  "profit": null
+ },
+ {
+  "id": "confidence:2026-11-05:NHL-20261105-CHI-TB-19:moneyline:home",
+  "tier": "confidence",
+  "date": "2026-11-05",
+  "league": "NHL",
+  "game_id": "NHL-20261105-CHI-TB-19",
+  "start": "2026-11-06T00:00:00",
+  "home": "TB",
+  "away": "CHI",
+  "label": "TB ML",
+  "market": "moneyline",
+  "side": "home",
+  "line": null,
+  "price": -395.0,
+  "p": 0.8065,
+  "lower": 0.8052,
+  "p_model": 0.8639,
+  "upper": 0.8077,
+  "fair": 0.777,
+  "edge": 0.0294,
+  "ev": 0.0106,
+  "value_line": -396,
+  "stake": 0.0,
+  "reasons": [
+   "calibrated P(win)=80.6% \u2265 70%",
+   "80% credible band 80.5%\u201380.8% (lower \u2265 62%)",
+   "price -395 needs 79.8%; EV +1.1% per unit",
+   "no-vig market 77.7% \u2192 edge +2.9%",
+   "home-win components: kalman 74.8%, elo 74.9%, count 61.6%, pattern 74.8%",
+   "adjustments: back_to_back +0.15, rest +0.03, news_margin_mean +0.02, travel +0.01",
+   "news: Bowen Byram (CHI, ir) P(plays)=18% impact\u22480.02\u00b10.02",
+   "news: Patrick Kane (CHI, out) P(plays)=28% impact\u22480.06\u00b10.06",
+   "news: Yanni Gourde (TB, ir) P(plays)=5% impact\u22480.02\u00b10.02",
+   "news: Zemgus Girgensons (TB, day-to-day) P(plays)=62% impact\u22480.06\u00b10.06",
+   "market check: model 86.4% vs books 77.7% -> 80.6% (keeps 30% of the model's disagreement, learned from graded games)"
+  ],
+  "published_at": "2026-11-05T07:56:05+00:00",
+  "status": "pending",
+  "profit": null
+ },
+ {
+  "id": "confidence:2026-11-05:NBA-20261105-MIA-GS-22:moneyline:home",
+  "tier": "confidence",
+  "date": "2026-11-05",
+  "league": "NBA",
+  "game_id": "NBA-20261105-MIA-GS-22",
+  "start": "2026-11-06T03:00:00",
+  "home": "GS",
+  "away": "MIA",
+  "label": "GS ML",
+  "market": "moneyline",
+  "side": "home",
+  "line": null,
+  "price": -281.0,
+  "p": 0.7178,
+  "lower": 0.7178,
+  "p_model": 0.7193,
+  "upper": 0.7178,
+  "fair": 0.7173,
+  "edge": 0.0005,
+  "ev": -0.0268,
+  "value_line": -246,
+  "stake": 0.0,
+  "reasons": [
+   "calibrated P(win)=71.8% \u2265 70%",
+   "80% credible band 71.8%\u201371.8% (lower \u2265 62%)",
+   "price -281 needs 73.8%; EV -2.7% per unit",
+   "no-vig market 71.7% \u2192 edge +0.1%",
+   "home-win components: kalman 64.7%, elo 68.3%, pattern 64.7%",
+   "adjustments: news_margin_mean -1.62, back_to_back +1.50, rest +0.61, travel +0.10",
+   "news: Gui Santos (GS, out) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Kristaps Porzingis (GS, out) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Moses Moody (GS, out, G) P(plays)=99% impact\u22480.80\u00b10.80",
+   "news: Jimmy Butler III (GS, out) P(plays)=99% impact\u22480.80\u00b10.80",
+   "market check: model 71.9% vs books 71.7% -> 71.8% (keeps 26% of the model's disagreement, learned from graded games)"
+  ],
+  "published_at": "2026-11-05T07:56:09+00:00",
+  "status": "pending",
+  "profit": null
+ },
+ {
+  "id": "confidence:2026-11-05:NFL-20261105-JAX-BAL-20:moneyline:away",
+  "tier": "confidence",
+  "date": "2026-11-05",
+  "league": "NFL",
+  "game_id": "NFL-20261105-JAX-BAL-20",
+  "start": "2026-11-06T01:15:00",
+  "home": "BAL",
+  "away": "JAX",
+  "label": "JAX ML",
+  "market": "moneyline",
+  "side": "away",
+  "line": null,
+  "price": -520.0,
+  "p": 0.8241,
+  "lower": 0.7971,
+  "p_model": 0.8322,
+  "upper": 0.8552,
+  "fair": 0.8173,
+  "edge": 0.0068,
+  "ev": -0.0174,
+  "value_line": -443,
+  "stake": 0.0,
+  "reasons": [
+   "calibrated P(win)=82.4% \u2265 70%",
+   "80% credible band 79.7%\u201385.5% (lower \u2265 62%)",
+   "price -520 needs 83.9%; EV -1.7% per unit",
+   "no-vig market 81.7% \u2192 edge +0.7%",
+   "home-win components: kalman 23.5%, elo 26.7%, pattern 23.5%",
+   "adjustments: news_margin_mean -4.13, travel +0.08, pattern_logit +0.00",
+   "news: Jaylinn Hawkins (BAL, out) P(plays)=5% impact\u22480.40\u00b10.40",
+   "news: Adam Randall (BAL, ir) P(plays)=5% impact\u22480.12\u00b10.12",
+   "news: Nate Wiggins (BAL, questionable) P(plays)=72% impact\u22480.40\u00b10.40",
+   "news: Tyler Huntley (BAL, out, QB) P(plays)=5% impact\u22484.00\u00b12.00",
+   "news: Tyler Loop (BAL, ir) P(plays)=15% impact\u22480.12\u00b10.12",
+   "news: Travon Walker (JAX, questionable) P(plays)=72% impact\u22480.40\u00b10.40",
+   "news: Bhayshul Tuten (JAX, questionable) P(plays)=72% impact\u22480.40\u00b10.40",
+   "news: Eric Murray (JAX, ir) P(plays)=11% impact\u22480.12\u00b10.12",
+   "news: DaVon Hamilton (JAX, ir) P(plays)=12% impact\u22480.12\u00b10.12",
+   "market check: model 83.2% vs books 81.7% -> 82.4% (keeps 44% of the model's disagreement, learned from graded games)"
+  ],
+  "published_at": "2026-11-05T07:56:16+00:00",
+  "status": "pending",
+  "profit": null
  }
 ]
