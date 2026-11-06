@@ -350,6 +350,7 @@ def game_json(pred: Prediction, policies: dict[str, PickPolicy], picks: dict[str
                                                                pk.market.market, pk.market.side, pk.market.line)
     return {
         "id": g.game_id, "league": g.league, "start": g.start_time.isoformat(),
+        "espn_id": (g.extras or {}).get("espn_id"),
         "home": _team(g.league, g.home, "home", g, names), "away": _team(g.league, g.away, "away", g, names),
         "p_home": round(pred.home_win_prob, 4), "lo": round(pred.home_win_lower, 4),
         "hi": round(pred.home_win_upper, 4), "exp_margin": round(pred.expected_margin, 2),
@@ -494,6 +495,22 @@ class OddsBudget:
             return False
         last = st["last"].get(league)
         if last and (self.now - datetime.fromisoformat(last)).total_seconds() < self.min_hours * 3600:
+            return False
+        return True
+
+    def allow_amount(self, key: str, cost: int, min_hours: float = 0.0) -> bool:
+        """Like `allow`, for calls whose cost is known (player props: one credit per market per game)."""
+        st, today = self.st, self.now.date().isoformat()
+        import calendar
+
+        days_left = calendar.monthrange(self.now.year, self.now.month)[1] - self.now.day + 1
+        daily = (self.monthly - (st["used"] - st["days"].get(today, 0))) / days_left
+        if st["days"].get(today, 0) + cost > daily:
+            return False
+        if st.get("remaining") is not None and st["remaining"] < cost:
+            return False
+        last = st["last"].get(key)
+        if min_hours and last and (self.now - datetime.fromisoformat(last)).total_seconds() < min_hours * 3600:
             return False
         return True
 
@@ -789,9 +806,10 @@ def run_league(league: str, data_dir: str, day: date, policy: PickPolicy, ledger
 
 
 def build_site_data(runs: list[LeagueRun], ledger: list[dict], policy: PickPolicy, day: date,
-                    mode: str = "live", refresh_minutes: int = 30, parlay_scan: Optional[dict] = None) -> dict:
+                    mode: str = "live", refresh_minutes: int = 30, parlay_scan: Optional[dict] = None,
+                    props: Optional[dict] = None) -> dict:
     return {
-        "parlay_scan": parlay_scan,
+        "parlay_scan": parlay_scan, "props": props,
         "generated_at": _now(), "date": day.isoformat(), "mode": mode, "refresh_minutes": refresh_minutes,
         "app_version": VERSION,
         "gate": {"min_probability": policy.min_probability, "min_lower_bound": policy.min_lower_bound,
@@ -805,6 +823,24 @@ def build_site_data(runs: list[LeagueRun], ledger: list[dict], policy: PickPolic
         "news": sorted([n for r in runs for n in r.news], key=lambda n: n["published"] or "", reverse=True)[:80],
         "ledger": sorted(ledger, key=lambda e: (e["date"], e["id"]), reverse=True),
     }
+
+
+def run_nba_props(runs: list, data_dir: str, day: date, odds_key: Optional[str], ledger: list[dict],
+                  leagues) -> Optional[dict]:
+    """NBA player props (box scores, projections, props parlays). Never fails the update."""
+    if "NBA" not in leagues or os.environ.get("PROPS", "1") == "0":
+        return None
+    nba = next((r for r in runs if r.league == "NBA" and r.status != "error"), None)
+    if nba is None:
+        return {"ready": False, "message": "Player props need today's NBA board, which did not load."}
+    try:
+        from .props.board import run_props
+
+        return run_props(data_dir, day, nba.games, nba.news, odds_key, ledger,
+                         budget=OddsBudget(data_dir) if odds_key else None)
+    except Exception as e:
+        log.warning("player props skipped: %s\n%s", e, traceback.format_exc())
+        return {"ready": False, "message": f"Player props unavailable this update ({type(e).__name__})."}
 
 
 def run_daily(leagues=ALL_LEAGUES, data_dir: str = "data", site_dir: str = "site",
@@ -848,11 +884,12 @@ def run_daily(leagues=ALL_LEAGUES, data_dir: str = "data", site_dir: str = "site
     for r in runs:
         finals.update(r.finals)
     settle_parlays(ledger, finals, day)
+    props = run_nba_props(runs, data_dir, day, odds_key, ledger, leagues)
     parlay_scan = update_parlays(ledger, [g for r in runs for g in r.games], day.isoformat())
     os.makedirs(data_dir, exist_ok=True)
     with open(ledger_path, "w") as f:
         json.dump(ledger, f, indent=1)
     data = build_site_data(runs, ledger, policy, day, "live", int(os.environ.get("REFRESH_MINUTES", "30")),
-                           parlay_scan=parlay_scan)
+                           parlay_scan=parlay_scan, props=props)
     write_site(data, site_dir)
     return data

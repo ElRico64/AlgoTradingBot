@@ -40,6 +40,8 @@ class LeagueConfig:
     count_window_days: int = 400
     max_score: int = 20
     extra_time_home_edge: float = 0.0  # OT/extra-innings home edge
+    # learn the margin distribution's width and shape (skew-t) from out-of-sample residuals
+    learn_margin_shape: bool = False
     # --- situational (margin units, home perspective) ---
     back_to_back_penalty: float = 0.0
     rest_advantage_per_day: float = 0.0  # per extra rest day, capped at 3
@@ -114,6 +116,7 @@ LEAGUES: dict[str, LeagueConfig] = {
         league="NBA",
         score_model="gaussian",
         obs_sd=12.0,
+        learn_margin_shape=True,
         prior_rating_sd=5.0,
         process_sd_per_day=0.12,
         home_adv_prior=2.4,

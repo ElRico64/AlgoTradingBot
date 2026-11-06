@@ -142,6 +142,19 @@ fictional teams and players, so you can see it before anything is set up.
 * **Published prices:** a published pick stays on the record at the price it
   was published at.
 
+### NBA player props
+
+The **Player props** tab (NBA) shows tonight's player projections (minutes,
+points, rebounds, assists, threes) and props parlays that pay at least 2x
+with a 65%+ chance. Player box scores download automatically from ESPN; the
+first two seasons fill in over the first few days.
+
+Prop *prices* need a free key from the-odds-api.com (`ODDS_API_KEY`): props
+are never priced from made-up numbers. To include alternate lines such as
+"over 5.5 assists", set
+`PROPS_MARKETS=player_points,player_assists,player_points_alternate,player_assists_alternate`.
+Each market costs one free credit per game.
+
 ### Do you need an odds API key?
 
 **No.** ESPN's free feed covers everything the model itself needs:

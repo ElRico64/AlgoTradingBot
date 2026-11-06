@@ -97,3 +97,23 @@ def test_count_model_recovers_attack_and_dispersion():
     assert 4.0 < cm.dispersion < 9.0
     m, S = cm.predict_log_rates("T9", "T0")
     assert m[0] > m[1] and S[0, 0] > 0
+
+
+def test_skew_t_margins_learned_only_when_they_beat_a_normal():
+    import numpy as np
+    from sportsedge.models.distributions import discretized_skew_t, fit_skew_t, skew_t_logpdf
+    rng = np.random.default_rng(5)
+    sh0 = fit_skew_t(rng.normal(0, 12, 3000))  # a normal: kept off, or a sane near-normal fit
+    assert sh0 is None or (1 <= sh0["a"] <= 60 and 1 <= sh0["b"] <= 60 and 6 < sh0["scale"] < 24)
+    heavy = rng.standard_t(5, 4000) * 11
+    sh = fit_skew_t(heavy)
+    assert sh is not None and sh["holdout_gain"] > 0 and 1 <= sh["a"] <= 60 and 1 <= sh["b"] <= 60
+    support, pmf = discretized_skew_t(np.array([3.0, -2.0]), sh, -90, 90)
+    assert np.allclose(pmf.sum(axis=1), 1) and np.all(np.isfinite(pmf))
+    assert abs((support * pmf[0]).sum() - 3.0) < 1.5  # centred near the prediction
+    # numerically safe even at extreme parameters
+    _, pm = discretized_skew_t(np.array([0.0]), {"a": 60, "b": 1, "loc": 40, "scale": 3}, -90, 90)
+    assert np.all(np.isfinite(pm)) and abs(pm.sum() - 1) < 1e-9
+    x = np.linspace(-200, 200, 40001)
+    trap = getattr(np, "trapezoid", None) or np.trapz
+    assert abs(trap(np.exp(skew_t_logpdf(x, 3.0, 5.0, 0.0, 10.0)), x) - 1) < 1e-3  # a real density

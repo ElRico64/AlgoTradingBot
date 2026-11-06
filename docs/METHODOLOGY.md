@@ -387,6 +387,68 @@ leagues at once, so expect roughly one or two parlays a week, and none on
 many days. A parlay that pays 2x+ and hits 70%+ never occurred in 909
 simulated betting days.
 
+## 8c. NBA player props (`props/`)
+
+**Data.** Every player's line from ESPN's free game pages, stored in
+`data/players/NBA.csv`. Downloads run newest first, within a time budget on
+each update, until two seasons are in.
+
+**Model** (`props/model.py`). For player i and stat s (points, rebounds,
+assists, threes):
+
+    mu = minutes_hat × rate_is × opponent_s × pace,   X ~ NegBin(mu, phi_s)
+
+* **minutes_hat:** an exponentially weighted average of recent minutes.
+* **rate_is:** an empirical-Bayes per-minute rate. The player's weighted stat
+  and minutes (half-life 20 games) are combined with 250 pseudo-minutes at
+  his position group's league rate: (S + K·prior) / (M + K).
+* **opponent_s:** the opponent's allowed rate for that stat, shrunk toward the
+  league rate.
+* **pace:** both teams' recent scoring and allowing, against the league
+  average.
+* **phi_s:** maximum likelihood on walk-forward residuals.
+
+Every prediction is made before that game updates the model. P(over) is
+recalibrated per stat with a logistic map fitted on those out-of-sample
+predictions, against lines placed where books hang them (half a unit off the
+player's recent average). A stat is used only after 2,000 out-of-sample
+games.
+
+On a simulated league, the raw negative-binomial probabilities were
+overconfident: calibration slopes were 0.5–0.85, because the estimated rates
+are themselves uncertain. After calibration, every bucket matched within
+sampling error.
+
+**Prices.** Prices are never invented.
+* The Odds API, with a free key, supplies main lines with consensus no-vig
+  probabilities. Alternate lines are optional; they are usually over-only, so
+  their price with the margin left in is used as a cautious fair chance.
+* Whether ESPN's free API lists props is checked on each update, and a sample
+  of the response is saved.
+* Without a price source, the board shows projections only.
+
+**Props parlay rule** (as requested): it pays at least 2.0x, has at least a
+65% chance, takes players from different games, and no listed player is
+out, doubtful or questionable. Each leg's chance is market-checked with a
+share learned from every graded prop. Grading uses box scores: a player who
+did not play voids his leg.
+
+What to expect: at 2.0x, the books' own prices imply under 50%. A 65%
+parlay therefore needs the model to beat the books by a wide margin on
+every leg. On lines at a player's usual level, a calibrated model says 65%+
+only about 0.5% of the time, so qualifying parlays will be rare and mostly
+built from alternate lines.
+
+## 8d. Methods considered (November 2026)
+
+| Method | Verdict | Evidence |
+|---|---|---|
+| **Skew-t margins (NBA)** | Shipped | Real NBA residuals: skew −0.08, excess kurtosis +0.36, sd 14.7 against the configured 12.0. A Jones–Faddy skew-t fitted on out-of-sample residuals (bounded a, b in [1, 60]; kept only if it beats a normal on the latest quarter; parameter uncertainty removed from the width). Held-out log-likelihood +0.004 per game. Spread calibration: outer-tenth frequencies 14.1%/12.7% → 11.4%/11.4%, KS distance 0.044 → 0.020. Moneyline unchanged. Fitted a = 7.8, b = 8.9. |
+| **Zero-inflated bivariate Poisson (NHL)** | Rejected by data | Goals are slightly *under*-dispersed (variance/mean 0.93–0.94), and zero inflation requires over-dispersion. The two teams' goal surprises correlate at −0.11 (empty nets, score effects), and a bivariate Poisson can only add positive correlation. Shutouts: 238 observed against about 217 under plain Poisson, within what the current negative-binomial + Dixon–Coles model already allows. |
+| **Spatial hazard xG (NHL)** | Planned | Needs shot locations from the NHL's play-by-play feed (api-web.nhle.com), which the project workspace can now reach. xG-based team ratings are known to predict better than goals; they would enter the stacker as a new component and must beat it walk-forward. |
+| **Elastic-net RAPM (NBA)** | Planned | Needs lineup stints built from ESPN play-by-play. Its value is player impact: injury adjustments, and minutes and usage for props. |
+| **Absorbing Markov chains + dynamic programming (NFL)** | Planned, limited pre-game value | Drive models (absorbing states: TD, FG, punt, turnover) mainly serve in-game win probability and 4th-down decisions. For pre-game moneylines, efficiency-based team ratings from the same play-by-play are the realistic gain. |
+
 ## 9. Validation protocol (`backtest.py`)
 
 The backtest walks forward one day at a time:

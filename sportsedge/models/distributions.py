@@ -17,6 +17,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 import numpy as np
+from typing import Optional
 from scipy import stats
 from scipy.special import ndtr
 
@@ -68,10 +69,72 @@ def discretized_normal(mu: np.ndarray, sd: float, lo: int, hi: int) -> tuple[np.
     return support, pmf
 
 
+def skew_t_logkernel(z: np.ndarray, a: float, b: float) -> np.ndarray:
+    """Jones & Faddy (2003) skew-t, unnormalised log density of the standard form:
+    (1 + z/sqrt(a+b+z^2))^(a+1/2) (1 - z/sqrt(a+b+z^2))^(b+1/2). a = b is Student-t
+    with 2a degrees of freedom; a > b skews right. Heavy tails for small a, b."""
+    r = z / np.sqrt(a + b + z * z)
+    return (a + 0.5) * np.log1p(r) + (b + 0.5) * np.log1p(-r)
+
+
+def skew_t_logpdf(x: np.ndarray, a: float, b: float, loc: float, scale: float) -> np.ndarray:
+    from scipy.special import betaln
+    z = (np.asarray(x, float) - loc) / scale
+    c = (a + b - 1) * np.log(2.0) + betaln(a, b) + 0.5 * np.log(a + b)
+    return skew_t_logkernel(z, a, b) - c - np.log(scale)
+
+
+def fit_skew_t(resid: np.ndarray) -> Optional[dict]:
+    """Maximum-likelihood Jones-Faddy skew-t for margin residuals, kept only if it
+    beats a normal on the most recent quarter of residuals (fitted on the rest)."""
+    from scipy.optimize import minimize
+    from scipy.stats import norm
+    x = np.asarray(resid, float)
+    if len(x) < 400:
+        return None
+
+    def fit(v):
+        # bounded: a, b in [1, 60] spans heavy tails (Student-t with 2 dof) to nearly normal
+        # (120 dof); unbounded fits on near-normal data drift to huge, equivalent values
+        s0, m0 = float(np.std(v)), float(np.mean(v))
+        f = lambda th: -np.sum(skew_t_logpdf(v, np.exp(th[0]), np.exp(th[1]), th[2], np.exp(th[3])))
+        th0 = np.array([np.log(8.0), np.log(8.0), m0, np.log(s0 * 0.95)])
+        bounds = [(0.0, np.log(60.0)), (0.0, np.log(60.0)), (m0 - 0.5 * s0, m0 + 0.5 * s0),
+                  (np.log(0.3 * s0), np.log(2.0 * s0))]
+        th = minimize(f, th0, method="L-BFGS-B", bounds=bounds).x
+        return {"a": float(np.exp(th[0])), "b": float(np.exp(th[1])), "loc": float(th[2]),
+                "scale": float(np.exp(th[3]))}
+
+    cut = int(len(x) * 0.75)
+    tr, te = x[:cut], x[cut:]
+    sh = fit(tr)
+    ll_skt = np.mean(skew_t_logpdf(te, sh["a"], sh["b"], sh["loc"], sh["scale"]))
+    ll_norm = np.mean(norm.logpdf(te, np.mean(tr), np.std(tr)))
+    if ll_skt <= ll_norm:
+        return None
+    out = fit(x)
+    out["holdout_gain"] = float(ll_skt - ll_norm)
+    return out
+
+
+def discretized_skew_t(mu: np.ndarray, shape: dict, lo: int, hi: int) -> tuple[np.ndarray, np.ndarray]:
+    support = np.arange(lo, hi + 1)
+    mu = np.atleast_1d(mu)[:, None]
+    z = (support[None, :] - mu - shape["loc"]) / shape["scale"]
+    lk = skew_t_logkernel(z, shape["a"], shape["b"])
+    pmf = np.exp(lk - lk.max(axis=1, keepdims=True))  # stable at any parameter values
+    pmf /= pmf.sum(axis=1, keepdims=True)
+    return support, pmf
+
+
 def gaussian_margin_dist(mu: np.ndarray, sd: float, key_weights: dict[int, float] | None = None,
                          tie_mass_factor: float = 1.0, ot_home_prob: np.ndarray | float = 0.5,
-                         ties_allowed: bool = False, span: int = 70) -> MarginDist:
-    support, pmf = discretized_normal(mu, sd, -span, span)
+                         ties_allowed: bool = False, span: int = 70, shape: Optional[dict] = None) -> MarginDist:
+    """Margin distribution around mu: a discretised normal, or the learned skew-t `shape`."""
+    if shape is not None:
+        support, pmf = discretized_skew_t(mu, shape, -span, span)
+    else:
+        support, pmf = discretized_normal(mu, sd, -span, span)
     if key_weights:
         w = np.ones_like(support, dtype=float)
         for k, m in key_weights.items():

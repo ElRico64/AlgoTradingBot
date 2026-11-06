@@ -44,7 +44,7 @@ from .types import Game, GameResult, MarketOdds, MarketProbability, Prediction
 
 # Bump when a code change makes previously saved engines incompatible; saved
 # engines from another version are retrained from scratch instead of reused.
-ENGINE_VERSION = 5  # 5: nested-CV gate for the pattern engine
+ENGINE_VERSION = 6  # 5: nested-CV gate for the pattern engine; 6: learned skew-t margins (NBA)
 
 
 def _logit(p: float) -> float:
@@ -121,6 +121,8 @@ class LeagueEngine:
         self.sched = ScheduleTracker()
         self.history: list[GameResult] = []
         self.oos: list[dict] = []
+        self.margin_resid: list[tuple[float, float]] = []  # (margin - prediction, parameter variance)
+        self.margin_shape: Optional[dict] = None  # learned skew-t (NBA)
         self.stacker = StackingCalibrator(self.components, l2=self.s.stack_l2)
         # spread / total: model probability pooled with the market's, like moneyline
         self.spread_cal: Optional[StackingCalibrator] = None
@@ -150,7 +152,7 @@ class LeagueEngine:
                                         ot if ot is not None else self._ot_home(), ties_allowed=True, span=80)
         span = 90 if c.league == "NBA" else 25
         return gaussian_margin_dist(mu, sd, None, 1.0, ot if ot is not None else self._ot_home(),
-                                    ties_allowed=False, span=span)
+                                    ties_allowed=False, span=span, shape=getattr(self, "margin_shape", None))
 
     def _ensure_count_fit(self, as_of: datetime) -> None:
         if not self.count:
@@ -265,6 +267,12 @@ class LeagueEngine:
                 self.elo.update(r.home, r.away, r.margin, r.neutral, r.start_time)
                 self.sched.record(r)
                 self.history.append(r)
+            if getattr(self.cfg, "learn_margin_shape", False):
+                res = getattr(self, "margin_resid", None)
+                if res is None:
+                    res = self.margin_resid = []
+                res.extend((float(r.margin - pt.k_mu), float(pt.k_var)) for r, pt, _ in pending)
+                del res[:-4000]
             if self.patterns is not None:
                 for r, pt, x in pending:
                     z = (r.margin - pt.k_mu) / pt.k_sd
@@ -298,6 +306,7 @@ class LeagueEngine:
         if len(ml) < self.s.min_calibration_samples:
             return False
         self.stacker.fit([r["comp"] for r in ml], [r["market"] for r in ml], [r["y"] for r in ml])
+        self._fit_margin_shape()
         for key, attr in (("spread", "spread_cal"), ("total", "total_cal")):
             rows = [r[key] for r in recs if key in r and r[key][1] is not None]
             if len(rows) >= self.s.min_calibration_samples:
@@ -305,6 +314,21 @@ class LeagueEngine:
                 setattr(self, attr, cal.fit([{"model": p} for p, _, _ in rows], [m for _, _, m in rows],
                                             [y for _, y, _ in rows]))
         return True
+
+    def _fit_margin_shape(self) -> None:
+        """Width and shape of the margin distribution from out-of-sample residuals
+        (skew-t, kept only if it beats a normal on the latest quarter). Parameter
+        uncertainty is already in the draws, so it is taken out of the width."""
+        res = getattr(self, "margin_resid", None)
+        if not getattr(self.cfg, "learn_margin_shape", False) or not res or len(res) < 400:
+            return
+        from .models.distributions import fit_skew_t
+        e = np.array([x[0] for x in res])
+        shape = fit_skew_t(e)
+        if shape is not None:
+            k_var = float(np.mean([x[1] for x in res]))
+            shape["scale"] *= float(np.sqrt(max(1.0 - k_var / max(np.var(e), 1e-9), 0.25)))
+        self.margin_shape = shape
 
     def tune(self, results: Sequence[GameResult]) -> None:
         """Maximum-likelihood re-estimation of the Kalman noise parameters."""

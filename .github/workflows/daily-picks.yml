@@ -96,7 +96,8 @@ jobs:
           git config user.name "sportsedge-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           mkdir -p data/odds
-          git add data/history data/odds data/ledger.json
+          mkdir -p data/players data/props
+          git add data/history data/odds data/players data/props data/ledger.json
           if git diff --cached --quiet; then echo "no record changes"; exit 0; fi
           git commit -m "Picks update $(date -u '+%F %H:%M') UTC"
           git pull --rebase --autostash

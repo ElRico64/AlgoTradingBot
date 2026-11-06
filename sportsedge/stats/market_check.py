@@ -28,7 +28,7 @@ from typing import Iterable, Optional
 import numpy as np
 from scipy.optimize import minimize
 
-MARKETS = ("moneyline", "spread", "total")
+MARKETS = ("moneyline", "spread", "total", "prop")
 MU0, SD0, TAU = 0.5, 0.3, 0.2
 MIN_ROWS_FOR_VALUE = 100  # graded games in a market before its checked edges are trusted for Best bets
 

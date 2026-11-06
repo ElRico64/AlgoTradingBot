@@ -272,6 +272,7 @@ footer p { margin: 0; max-width: 92ch; }
             <button type="button" data-t="value" aria-pressed="true">Best bets</button>
             <button type="button" data-t="confidence" aria-pressed="false">70%+ picks</button>
             <button type="button" data-t="parlay" aria-pressed="false">Parlays</button>
+            <button type="button" data-t="props" aria-pressed="false">Player props</button>
           </div>
           <p id="tier-help"></p>
         </div>
@@ -313,6 +314,7 @@ footer p { margin: 0; max-width: 92ch; }
           <button type="button" data-t="value" aria-pressed="false">Best bets</button>
           <button type="button" data-t="confidence" aria-pressed="false">70%+ picks</button>
           <button type="button" data-t="parlay" aria-pressed="false">Parlays</button>
+          <button type="button" data-t="props" aria-pressed="false">Props</button>
         </div>
         <div class="figs" id="figs"></div>
         <div class="chart" id="chart"></div>
@@ -486,6 +488,7 @@ footer p { margin: 0; max-width: 92ch; }
   var TIER_HELP = {
     value: "Best bets win at least 70% of the time by the model's estimate AND pay enough at today's price to be worth it over the long run.",
     confidence: "Every moneyline or total the model gives a 70%+ chance. Favourites are often priced too short to profit, so each card shows the worst price still worth taking.",
+    props: "NBA player-props parlays: players from different games, paying at least 2x (+100), with at least a 65% chance of hitting by the market-checked player model. Built only from posted prices.",
     parlay: "The parlay of the day: legs from different games, paying at least 2x (+100), shown with its real chance of hitting. Published only when every leg is worth its price and the whole parlay is a good bet at its payout."
   };
   function todaysParlays() {
@@ -509,6 +512,30 @@ footer p { margin: 0; max-width: 92ch; }
       '<div class="pc-row"><div class="kv"><div class="k">Payout</div><div class="v mono">' + (S.fmt === "dec" ? Number(e.decimal).toFixed(2) : odds(e.price)) + '</div></div><div class="kv"><div class="k">Books say</div><div class="v">' + (e.fair == null ? "—" : pct(e.fair, 0)) + '</div></div><div class="kv"><div class="k">Value</div><div class="v ' + (e.ev > 0 ? "good" : "") + '">' + sgnPct(e.ev) + "</div></div></div>" +
       (e.note ? '<div class="note-line">' + esc(e.note) + "</div>" : "") + why + "</article>";
   }
+  var STAT = { pts: "PTS", reb: "REB", ast: "AST", fg3m: "3PM" };
+  function renderProps() {
+    var P = DATA.props;
+    if (S.league !== "ALL" && S.league !== "NBA") { $("picks").innerHTML = '<div class="empty"><b>Player props are NBA only</b><span>Pick the NBA tab to see them.</span></div>'; return; }
+    if (!P) { $("picks").innerHTML = '<div class="empty"><b>No player props on this board</b><span>Player props run on the live board when the NBA has games.</span></div>'; return; }
+    var list = (DATA.ledger || []).filter(function (e) { return e.tier === "props" && e.date === DATA.date; }).sort(function (a, b) { return b.p - a.p; });
+    var html = "";
+    if (list.length) html += '<div class="pick-grid">' + list.map(parlayCard).join("") + "</div>";
+    else {
+      var c = P.closest, why = !P.ready ? esc(P.message || "Getting the player data ready.")
+        : !(P.candidates > 0) ? esc(P.prices || "No posted prop prices for tonight's games yet.")
+        : "No combination of props from different games pays 2x or more with a 65%+ chance" + (c ? ". The most likely 2x+ one: " + c.legs.map(esc).join(" + ") + ", paying " + Number(c.decimal).toFixed(2) + "x, " + pct(c.p, 0) + " to hit, below the bar." : ".") +
+          " A 2x parlay at 65%+ means beating the books by a wide margin, so it is rare.";
+      html += '<div class="empty"><b>No props parlay right now</b><span>' + why + "</span></div>";
+    }
+    if (P.projections && P.projections.length) {
+      html += '<div class="card" style="margin-top:14px"><div class="stub-k" style="margin-bottom:8px">Tonight\'s projections (model, before prices)</div><div class="tbl-wrap"><table><thead><tr><th>Player</th><th>Game</th><th>MIN</th><th>PTS</th><th>REB</th><th>AST</th><th>3PM</th></tr></thead><tbody>' +
+        P.projections.map(function (r) { return "<tr><td>" + esc(r.player) + "</td><td>" + esc(r.team) + " vs " + esc(r.opp) + '</td><td class="num">' + r.min.toFixed(0) + '</td><td class="num">' + r.pts.toFixed(1) + '</td><td class="num">' + r.reb.toFixed(1) + '</td><td class="num">' + r.ast.toFixed(1) + '</td><td class="num">' + r.fg3m.toFixed(1) + "</td></tr>"; }).join("") +
+        "</tbody></table></div></div>";
+    }
+    var notes = [P.prices, P.espn].filter(Boolean).map(esc).join(" · ");
+    if (notes) html += '<p class="muted" style="font-size:12.5px;margin-top:8px">' + notes + "</p>";
+    $("picks").innerHTML = html;
+  }
   function renderParlays() {
     var list = todaysParlays().sort(function (a, b) { return b.p - a.p; });
     if (list.length) { $("picks").innerHTML = '<div class="pick-grid">' + list.map(parlayCard).join("") + "</div>"; return; }
@@ -521,6 +548,7 @@ footer p { margin: 0; max-width: 92ch; }
     Array.prototype.forEach.call($("tierseg").querySelectorAll("button"), function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-t") === S.tier); });
     $("tier-help").textContent = TIER_HELP[S.tier];
     if (S.tier === "parlay") { renderParlays(); return; }
+    if (S.tier === "props") { renderProps(); return; }
     var list = todays(S.tier).filter(inLeague).sort(function (a, b) { return a.start < b.start ? -1 : a.start > b.start ? 1 : b.p - a.p; });
     if (!list.length) {
       var other = todays(S.tier === "value" ? "confidence" : "value").filter(inLeague).length;
@@ -672,7 +700,7 @@ footer p { margin: 0; max-width: 92ch; }
     if (S.range !== "all") { var c = new Date(DATA.date + "T12:00:00"); c.setDate(c.getDate() - Number(S.range)); cut = c.toISOString().slice(0, 10); }
     var rows = (DATA.ledger || []).filter(inLeague).filter(function (e) { return !cut || e.date >= cut; });
     if (S.rtier !== "all") return rows.filter(function (e) { return (e.tier || "value") === S.rtier; });
-    rows = rows.filter(function (e) { return e.tier !== "parlay"; });  // parlays have their own tab
+    rows = rows.filter(function (e) { return e.tier !== "parlay" && e.tier !== "props"; });  // parlays and props have their own tabs
     // All picks: a bet published in both tiers counts once (keep the best-bet entry)
     var seen = {}, out = [];
     rows.slice().sort(function (a, b) { return (a.tier === "value" ? 0 : 1) - (b.tier === "value" ? 0 : 1); }).forEach(function (e) {
@@ -700,9 +728,9 @@ footer p { margin: 0; max-width: 92ch; }
     var list = L.slice().sort(function (a, b) { return a.date < b.date ? 1 : a.date > b.date ? -1 : 0; });
     $("recent").innerHTML = list.length ? list.slice(0, 80).map(function (e) {
       var st = e.status || "pending", res = st === "pending" ? "Pending" : st.charAt(0).toUpperCase() + st.slice(1);
-      var what = e.tier === "parlay" ? esc((e.leagues || []).join("+")) + " · " + esc((e.legs || []).map(function (x) { return x.label; }).join(" + ")) : e.league + " · " + esc(e.away + " @ " + e.home);
+      var what = e.tier === "parlay" || e.tier === "props" ? esc((e.leagues || []).join("+")) + " · " + esc((e.legs || []).map(function (x) { return x.label; }).join(" + ")) : e.league + " · " + esc(e.away + " @ " + e.home);
       return '<div class="rec"><div style="min-width:0"><div class="l">' + esc(e.label) + ' <span class="mono muted" style="font-weight:400">' + odds(e.price) + '</span></div><div class="m">' + what + " · " +
-        new Date(e.date + "T12:00:00").toLocaleDateString([], { month: "short", day: "numeric" }) + " · " + pct(e.p, 0) + (e.final && e.tier !== "parlay" ? " · " + esc(e.final) : "") + '</div></div><div class="r"><span class="pill ' + st + '">' + res + "</span>" +
+        new Date(e.date + "T12:00:00").toLocaleDateString([], { month: "short", day: "numeric" }) + " · " + pct(e.p, 0) + (e.final && e.tier !== "parlay" && e.tier !== "props" ? " · " + esc(e.final) : "") + '</div></div><div class="r"><span class="pill ' + st + '">' + res + "</span>" +
         (e.profit != null && st !== "pending" && st !== "withdrawn" ? '<span class="units">' + units(e.profit) + "</span>" : "") + "</div></div>";
     }).join("") : '<div class="muted" style="padding:8px 0">No picks in this period yet.</div>';
   }
