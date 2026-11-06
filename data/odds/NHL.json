@@ -14355,59 +14355,59 @@ null,
 "under_price": 114.0
 },
 "NHL-20261106-ANA-CGY-20": {
-"away_ml": 102.0,
-"away_spread_price": -245.0,
-"home_ml": -122.0,
-"home_spread_price": 200.0,
+"away_ml": 124.0,
+"away_spread_price": -198.0,
+"home_ml": -148.0,
+"home_spread_price": 164.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.5624,
-0.5273
+0.6197,
+0.5752
 ],
 [
 "moneyline",
 "away",
 null,
-0.4376,
-0.4727
+0.3803,
+0.4248
 ],
 [
 "spread",
 "home",
 -1.5,
-0.2929,
-0.3116
+0.2846,
+0.3572
 ],
 [
 "spread",
 "away",
 -1.5,
-0.7071,
-0.6884
+0.7154,
+0.6428
 ],
 [
 "total",
 "over",
 6.5,
-0.4755,
-0.4773
+0.4673,
+0.4887
 ],
 [
 "total",
 "under",
 6.5,
-0.5245,
-0.5227
+0.5327,
+0.5113
 ]
 ],
-"over_price": 100.0,
+"over_price": -105.0,
 "source": "DraftKings",
 "spread": -1.5,
 "total": 6.5,
-"under_price": -120.0
+"under_price": -115.0
 },
 "NHL-20261106-CBJ-BUF-19": {
 "away_ml": 142.0,
@@ -14419,42 +14419,42 @@ null,
 "moneyline",
 "home",
 null,
-0.6707,
+0.6708,
 0.6082
 ],
 [
 "moneyline",
 "away",
 null,
-0.3293,
+0.3292,
 0.3918
 ],
 [
 "spread",
 "home",
 -1.5,
-0.3224,
+0.3228,
 0.3918
 ],
 [
 "spread",
 "away",
 -1.5,
-0.6776,
+0.6772,
 0.6082
 ],
 [
 "total",
 "over",
 6.5,
-0.4714,
+0.4717,
 0.4818
 ],
 [
 "total",
 "under",
 6.5,
-0.5286,
+0.5283,
 0.5182
 ]
 ],
@@ -14465,58 +14465,58 @@ null,
 "under_price": -118.0
 },
 "NHL-20261106-SJ-MIN-20": {
-"away_ml": 210.0,
-"away_spread_price": -120.0,
-"home_ml": -258.0,
-"home_spread_price": 100.0,
+"away_ml": 220.0,
+"away_spread_price": -110.0,
+"home_ml": -270.0,
+"home_spread_price": -110.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.7754,
-0.699
+0.7855,
+0.7086
 ],
 [
 "moneyline",
 "away",
 null,
-0.2246,
-0.301
+0.2145,
+0.2914
 ],
 [
 "spread",
 "home",
 -1.5,
-0.32,
-0.4773
+0.3203,
+0.5
 ],
 [
 "spread",
 "away",
 -1.5,
-0.68,
-0.5227
+0.6797,
+0.5
 ],
 [
 "total",
 "over",
 6.5,
-0.4812,
-0.4661
+0.4809,
+0.5
 ],
 [
 "total",
 "under",
 6.5,
-0.5188,
-0.5339
+0.5191,
+0.5
 ]
 ],
-"over_price": 105.0,
+"over_price": -110.0,
 "source": "DraftKings",
 "spread": -1.5,
 "total": 6.5,
-"under_price": -125.0
+"under_price": -110.0
 }
 }

@@ -1,8 +1,10 @@
 {
-"checked_at": "2026-11-06T13:17:13+00:00",
-"first_is_over": null,
-"model_corr": 0.14067402526633663,
-"model_n": 493,
+"checked_at": "2026-11-06T20:30:07+00:00",
+"first_is_over": true,
+"milestone_first_is_over_share": 1.0,
+"milestone_matches": 375,
+"model_corr": 0.4693300200235708,
+"model_n": 397,
 "results_loglik_diff": 0.0,
 "results_n": 0
 }

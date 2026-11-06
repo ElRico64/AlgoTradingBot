@@ -9042,8 +9042,10 @@
    "market check: model 81.8% vs books 69.9% -> 73.8% (keeps 29% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-06T13:14:20+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "withdrawn",
+  "profit": null,
+  "withdrawn_at": "2026-11-06T20:27:16+00:00",
+  "note": "Withdrawn before start: probability 66.1% below 70%"
  },
  {
   "id": "value:2026-11-06:NBA-20261106-BOS-CHA-19:moneyline:away",
@@ -9209,8 +9211,10 @@
    "market check: model 81.8% vs books 69.9% -> 73.8% (keeps 29% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-06T13:14:20+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "withdrawn",
+  "profit": null,
+  "withdrawn_at": "2026-11-06T20:27:16+00:00",
+  "note": "Withdrawn before start: probability 66.1% below 70%"
  },
  {
   "id": "confidence:2026-11-06:NBA-20261106-UTAH-DAL-20:moneyline:home",
@@ -9370,6 +9374,7 @@
   ],
   "published_at": "2026-11-06T13:17:13+00:00",
   "status": "pending",
-  "profit": null
+  "profit": null,
+  "p_now": 0.5178
  }
 ]

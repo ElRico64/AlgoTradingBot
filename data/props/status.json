@@ -1,48 +1,50 @@
 {
 "boxscores": {
-"days_scanned": 100,
+"days_scanned": 134,
 "errors": 4,
-"games_stored": 459,
-"new_games": 248,
-"new_rows": 5335,
-"seconds": 150.3
+"games_stored": 704,
+"new_games": 245,
+"new_rows": 5298,
+"seconds": 150.5
 },
-"candidate_legs": 0,
-"espn": "ESPN props: 497 over/unders found; still confirming which price is the over (no props parlays until it is certain)",
+"candidate_legs": 3278,
+"espn": "ESPN props: over/under side order confirmed by the data",
 "espn_orientation": {
-"checked_at": "2026-11-06T13:17:13+00:00",
-"first_is_over": null,
-"model_corr": 0.14067402526633663,
-"model_n": 493,
+"checked_at": "2026-11-06T20:30:07+00:00",
+"first_is_over": true,
+"milestone_first_is_over_share": 1.0,
+"milestone_matches": 375,
+"model_corr": 0.4693300200235708,
+"model_n": 397,
 "results_loglik_diff": 0.0,
 "results_n": 0
 },
 "espn_types": {
-"3-Point Field Goals Milestones": 526,
-"Assists Milestones": 682,
-"Assists Milestones - 1st Quarter": 72,
-"Blocks Milestones": 98,
+"1st Team FG Scorer": 90,
+"1st Team FG Scorer Exact": 180,
+"3-Point Field Goals Milestones": 537,
+"Assists Milestones": 676,
+"Assists Milestones - 1st Quarter": 97,
+"Blocks Milestones": 106,
 "First Basket": 90,
-"Points + Assists + Rebounds Milestones": 693,
-"Points + Assists Milestones": 618,
-"Points + Rebounds Milestones": 764,
-"Points Milestones": 952,
-"Points Milestones - 1st Quarter": 667,
-"Rebounds + Assists Milestones": 496,
-"Rebounds Milestones": 1279,
-"Steals + Blocks Milestones": 48,
+"Points + Assists + Rebounds Milestones": 707,
+"Points + Assists Milestones": 625,
+"Points + Rebounds Milestones": 784,
+"Points Milestones": 972,
+"Points Milestones - 1st Quarter": 734,
+"Rebounds + Assists Milestones": 521,
+"Rebounds Milestones": 1349,
 "Steals Milestones": 211,
-"Team Total Points": 36,
-"To Record a Double Double": 96,
-"Total 3-Point Field Goals": 174,
-"Total Assists": 182,
+"Team Total 3-Pointers Made": 177,
+"To Record a Double Double": 94,
+"Total 3-Point Field Goals": 172,
+"Total Assists": 178,
 "Total Assists and Rebounds": 181,
-"Total Points": 225,
-"Total Points and Assists": 185,
-"Total Points and Rebounds": 220,
-"Total Points, Rebounds, and Assists": 184,
-"Total Rebounds": 222,
-"Total Steals": 30
+"Total Points": 230,
+"Total Points and Assists": 180,
+"Total Points and Rebounds": 226,
+"Total Points, Rebounds, and Assists": 179,
+"Total Rebounds": 222
 },
 "graded_now": 0,
 "market_check": {
@@ -51,136 +53,136 @@
 "share": 0.5
 },
 "model": {
-"games": 459,
-"players": 594,
+"games": 704,
+"players": 617,
 "stats": {
 "ast": {
 "calibrated": true,
-"dispersion": 5.72,
-"oos_rows": 7262,
+"dispersion": 6.25,
+"oos_rows": 12422,
 "reliability": [
 {
-"hit": 0.3128,
-"n": 1653,
+"hit": 0.3195,
+"n": 2269,
 "range": "0.00-0.35",
-"said": 0.2978
+"said": 0.3063
 },
 {
-"hit": 0.4105,
-"n": 3990,
+"hit": 0.4168,
+"n": 7677,
 "range": "0.35-0.50",
-"said": 0.421
+"said": 0.423
 },
 {
-"hit": 0.5574,
-"n": 1480,
+"hit": 0.5506,
+"n": 2383,
 "range": "0.50-0.65",
-"said": 0.5539
+"said": 0.5484
 },
 {
-"hit": 0.7698,
-"n": 139,
+"hit": 0.8065,
+"n": 93,
 "range": "0.65-0.80",
-"said": 0.684
+"said": 0.6778
 }
 ]
 },
 "fg3m": {
 "calibrated": true,
-"dispersion": 4.36,
-"oos_rows": 7262,
+"dispersion": 4.88,
+"oos_rows": 12422,
 "reliability": [
 {
-"hit": 0.2704,
-"n": 3576,
+"hit": 0.267,
+"n": 5896,
 "range": "0.00-0.35",
-"said": 0.2641
+"said": 0.2626
 },
 {
-"hit": 0.4138,
-"n": 2680,
+"hit": 0.4135,
+"n": 4636,
 "range": "0.35-0.50",
-"said": 0.4147
+"said": 0.415
 },
 {
-"hit": 0.534,
-"n": 970,
+"hit": 0.5481,
+"n": 1779,
 "range": "0.50-0.65",
-"said": 0.5588
+"said": 0.5611
 },
 {
-"hit": 0.7778,
-"n": 36,
+"hit": 0.7117,
+"n": 111,
 "range": "0.65-0.80",
-"said": 0.6657
+"said": 0.671
 }
 ]
 },
 "pts": {
 "calibrated": true,
-"dispersion": 2.64,
-"oos_rows": 7262,
+"dispersion": 2.82,
+"oos_rows": 12422,
 "reliability": [
 {
-"hit": 0.3037,
-"n": 945,
+"hit": 0.3077,
+"n": 663,
 "range": "0.00-0.35",
-"said": 0.311
+"said": 0.3181
 },
 {
-"hit": 0.4255,
-"n": 4790,
+"hit": 0.4319,
+"n": 8944,
 "range": "0.35-0.50",
-"said": 0.4214
+"said": 0.4302
 },
 {
-"hit": 0.5435,
-"n": 1369,
+"hit": 0.5453,
+"n": 2648,
 "range": "0.50-0.65",
-"said": 0.5509
+"said": 0.5472
 },
 {
-"hit": 0.6731,
-"n": 156,
+"hit": 0.6646,
+"n": 164,
 "range": "0.65-0.80",
-"said": 0.6901
+"said": 0.6877
 }
 ]
 },
 "reb": {
 "calibrated": true,
-"dispersion": 6.58,
-"oos_rows": 7262,
+"dispersion": 7.14,
+"oos_rows": 12422,
 "reliability": [
 {
-"hit": 0.2951,
-"n": 1237,
+"hit": 0.3103,
+"n": 1827,
 "range": "0.00-0.35",
-"said": 0.294
+"said": 0.2995
 },
 {
-"hit": 0.4269,
-"n": 4078,
+"hit": 0.4241,
+"n": 7198,
 "range": "0.35-0.50",
-"said": 0.4282
+"said": 0.4289
 },
 {
-"hit": 0.555,
-"n": 1764,
+"hit": 0.5527,
+"n": 3177,
 "range": "0.50-0.65",
-"said": 0.5514
+"said": 0.5488
 },
 {
-"hit": 0.6831,
-"n": 183,
+"hit": 0.6986,
+"n": 219,
 "range": "0.65-0.80",
-"said": 0.6975
+"said": 0.6912
 }
 ]
 }
 }
 },
-"prices": "prop prices: none (add a free ODDS_API_KEY to price props; nothing is invented)",
-"rows": 10059,
-"updated_at": "2026-11-06T13:16:58+00:00"
+"prices": "prop prices: ESPN (free), 3419 milestones and 401 over/unders on 9 games",
+"rows": 15357,
+"updated_at": "2026-11-06T20:29:52+00:00"
 }
