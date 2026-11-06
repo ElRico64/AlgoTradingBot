@@ -1,14 +1,49 @@
 {
 "boxscores": {
-"days_scanned": 68,
-"errors": 8,
-"games_stored": 211,
-"new_games": 211,
-"new_rows": 4724,
-"seconds": 150.1
+"days_scanned": 100,
+"errors": 4,
+"games_stored": 459,
+"new_games": 248,
+"new_rows": 5335,
+"seconds": 150.3
 },
 "candidate_legs": 0,
-"espn": "ESPN props: listed by provider(s) 100 (sample saved; parser to be added)",
+"espn": "ESPN props: 497 over/unders found; still confirming which price is the over (no props parlays until it is certain)",
+"espn_orientation": {
+"checked_at": "2026-11-06T13:17:13+00:00",
+"first_is_over": null,
+"model_corr": 0.14067402526633663,
+"model_n": 493,
+"results_loglik_diff": 0.0,
+"results_n": 0
+},
+"espn_types": {
+"3-Point Field Goals Milestones": 526,
+"Assists Milestones": 682,
+"Assists Milestones - 1st Quarter": 72,
+"Blocks Milestones": 98,
+"First Basket": 90,
+"Points + Assists + Rebounds Milestones": 693,
+"Points + Assists Milestones": 618,
+"Points + Rebounds Milestones": 764,
+"Points Milestones": 952,
+"Points Milestones - 1st Quarter": 667,
+"Rebounds + Assists Milestones": 496,
+"Rebounds Milestones": 1279,
+"Steals + Blocks Milestones": 48,
+"Steals Milestones": 211,
+"Team Total Points": 36,
+"To Record a Double Double": 96,
+"Total 3-Point Field Goals": 174,
+"Total Assists": 182,
+"Total Assists and Rebounds": 181,
+"Total Points": 225,
+"Total Points and Assists": 185,
+"Total Points and Rebounds": 220,
+"Total Points, Rebounds, and Assists": 184,
+"Total Rebounds": 222,
+"Total Steals": 30
+},
 "graded_now": 0,
 "market_check": {
 "market_n": 0,
@@ -16,136 +51,136 @@
 "share": 0.5
 },
 "model": {
-"games": 211,
-"players": 559,
+"games": 459,
+"players": 594,
 "stats": {
 "ast": {
 "calibrated": true,
-"dispersion": 6.9,
-"oos_rows": 2386,
+"dispersion": 5.72,
+"oos_rows": 7262,
 "reliability": [
 {
-"hit": 0.2758,
-"n": 533,
+"hit": 0.3128,
+"n": 1653,
 "range": "0.00-0.35",
-"said": 0.278
+"said": 0.2978
 },
 {
-"hit": 0.424,
-"n": 1052,
+"hit": 0.4105,
+"n": 3990,
 "range": "0.35-0.50",
-"said": 0.4277
+"said": 0.421
 },
 {
-"hit": 0.5582,
-"n": 679,
+"hit": 0.5574,
+"n": 1480,
 "range": "0.50-0.65",
-"said": 0.5585
+"said": 0.5539
 },
 {
-"hit": 0.7377,
-"n": 122,
+"hit": 0.7698,
+"n": 139,
 "range": "0.65-0.80",
-"said": 0.6942
+"said": 0.684
 }
 ]
 },
 "fg3m": {
 "calibrated": true,
-"dispersion": 4.25,
-"oos_rows": 2386,
+"dispersion": 4.36,
+"oos_rows": 7262,
 "reliability": [
 {
-"hit": 0.2288,
-"n": 1040,
+"hit": 0.2704,
+"n": 3576,
 "range": "0.00-0.35",
-"said": 0.2555
+"said": 0.2641
 },
 {
-"hit": 0.4666,
-"n": 883,
+"hit": 0.4138,
+"n": 2680,
 "range": "0.35-0.50",
-"said": 0.4182
+"said": 0.4147
 },
 {
-"hit": 0.5392,
-"n": 395,
+"hit": 0.534,
+"n": 970,
 "range": "0.50-0.65",
-"said": 0.5691
+"said": 0.5588
 },
 {
-"hit": 0.6324,
-"n": 68,
+"hit": 0.7778,
+"n": 36,
 "range": "0.65-0.80",
-"said": 0.6801
+"said": 0.6657
 }
 ]
 },
 "pts": {
 "calibrated": true,
-"dispersion": 2.89,
-"oos_rows": 2386,
+"dispersion": 2.64,
+"oos_rows": 7262,
 "reliability": [
 {
-"hit": 0.2995,
-"n": 581,
+"hit": 0.3037,
+"n": 945,
 "range": "0.00-0.35",
-"said": 0.2877
+"said": 0.311
 },
 {
-"hit": 0.4259,
-"n": 1195,
+"hit": 0.4255,
+"n": 4790,
 "range": "0.35-0.50",
-"said": 0.4235
+"said": 0.4214
 },
 {
-"hit": 0.5315,
-"n": 523,
+"hit": 0.5435,
+"n": 1369,
 "range": "0.50-0.65",
-"said": 0.5569
+"said": 0.5509
 },
 {
-"hit": 0.7412,
-"n": 85,
+"hit": 0.6731,
+"n": 156,
 "range": "0.65-0.80",
-"said": 0.6917
+"said": 0.6901
 }
 ]
 },
 "reb": {
 "calibrated": true,
-"dispersion": 7.51,
-"oos_rows": 2386,
+"dispersion": 6.58,
+"oos_rows": 7262,
 "reliability": [
 {
-"hit": 0.2857,
-"n": 427,
+"hit": 0.2951,
+"n": 1237,
 "range": "0.00-0.35",
-"said": 0.278
+"said": 0.294
 },
 {
-"hit": 0.4225,
-"n": 1309,
+"hit": 0.4269,
+"n": 4078,
 "range": "0.35-0.50",
-"said": 0.4275
+"said": 0.4282
 },
 {
-"hit": 0.5603,
-"n": 580,
+"hit": 0.555,
+"n": 1764,
 "range": "0.50-0.65",
-"said": 0.5542
+"said": 0.5514
 },
 {
-"hit": 0.6866,
-"n": 67,
+"hit": 0.6831,
+"n": 183,
 "range": "0.65-0.80",
-"said": 0.698
+"said": 0.6975
 }
 ]
 }
 }
 },
 "prices": "prop prices: none (add a free ODDS_API_KEY to price props; nothing is invented)",
-"rows": 4724,
-"updated_at": "2026-11-06T01:53:44+00:00"
+"rows": 10059,
+"updated_at": "2026-11-06T13:16:58+00:00"
 }
