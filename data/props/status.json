@@ -1,0 +1,151 @@
+{
+"boxscores": {
+"days_scanned": 68,
+"errors": 8,
+"games_stored": 211,
+"new_games": 211,
+"new_rows": 4724,
+"seconds": 150.1
+},
+"candidate_legs": 0,
+"espn": "ESPN props: listed by provider(s) 100 (sample saved; parser to be added)",
+"graded_now": 0,
+"market_check": {
+"market_n": 0,
+"n": 0,
+"share": 0.5
+},
+"model": {
+"games": 211,
+"players": 559,
+"stats": {
+"ast": {
+"calibrated": true,
+"dispersion": 6.9,
+"oos_rows": 2386,
+"reliability": [
+{
+"hit": 0.2758,
+"n": 533,
+"range": "0.00-0.35",
+"said": 0.278
+},
+{
+"hit": 0.424,
+"n": 1052,
+"range": "0.35-0.50",
+"said": 0.4277
+},
+{
+"hit": 0.5582,
+"n": 679,
+"range": "0.50-0.65",
+"said": 0.5585
+},
+{
+"hit": 0.7377,
+"n": 122,
+"range": "0.65-0.80",
+"said": 0.6942
+}
+]
+},
+"fg3m": {
+"calibrated": true,
+"dispersion": 4.25,
+"oos_rows": 2386,
+"reliability": [
+{
+"hit": 0.2288,
+"n": 1040,
+"range": "0.00-0.35",
+"said": 0.2555
+},
+{
+"hit": 0.4666,
+"n": 883,
+"range": "0.35-0.50",
+"said": 0.4182
+},
+{
+"hit": 0.5392,
+"n": 395,
+"range": "0.50-0.65",
+"said": 0.5691
+},
+{
+"hit": 0.6324,
+"n": 68,
+"range": "0.65-0.80",
+"said": 0.6801
+}
+]
+},
+"pts": {
+"calibrated": true,
+"dispersion": 2.89,
+"oos_rows": 2386,
+"reliability": [
+{
+"hit": 0.2995,
+"n": 581,
+"range": "0.00-0.35",
+"said": 0.2877
+},
+{
+"hit": 0.4259,
+"n": 1195,
+"range": "0.35-0.50",
+"said": 0.4235
+},
+{
+"hit": 0.5315,
+"n": 523,
+"range": "0.50-0.65",
+"said": 0.5569
+},
+{
+"hit": 0.7412,
+"n": 85,
+"range": "0.65-0.80",
+"said": 0.6917
+}
+]
+},
+"reb": {
+"calibrated": true,
+"dispersion": 7.51,
+"oos_rows": 2386,
+"reliability": [
+{
+"hit": 0.2857,
+"n": 427,
+"range": "0.00-0.35",
+"said": 0.278
+},
+{
+"hit": 0.4225,
+"n": 1309,
+"range": "0.35-0.50",
+"said": 0.4275
+},
+{
+"hit": 0.5603,
+"n": 580,
+"range": "0.50-0.65",
+"said": 0.5542
+},
+{
+"hit": 0.6866,
+"n": 67,
+"range": "0.65-0.80",
+"said": 0.698
+}
+]
+}
+}
+},
+"prices": "prop prices: none (add a free ODDS_API_KEY to price props; nothing is invented)",
+"rows": 4724,
+"updated_at": "2026-11-06T01:53:44+00:00"
+}

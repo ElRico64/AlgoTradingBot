@@ -1,0 +1,152 @@
+{
+ "checked_at": "2026-11-06T01:53:45+00:00",
+ "event": "401909936",
+ "providers": [
+  "100"
+ ],
+ "propBets": {
+  "100": {
+   "count": 1190,
+   "items": [
+    {
+     "competition": {
+      "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/events/401909936/competitions/401909936?lang=en&region=us"
+     },
+     "athlete": {
+      "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3136193?lang=en&region=us"
+     },
+     "provider": {
+      "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/casinos/100?lang=en&region=us"
+     },
+     "type": {
+      "id": "1",
+      "name": "Total Points"
+     },
+     "odds": {
+      "american": {
+       "value": "-124",
+       "open": "-118"
+      },
+      "decimal": {
+       "value": "1.80",
+       "open": "1.84"
+      },
+      "fraction": {
+       "value": "25/31",
+       "open": "50/59"
+      },
+      "total": {
+       "value": "24.5",
+       "open": "24.5"
+      }
+     },
+     "lastUpdated": "2026-11-06T04:35Z",
+     "current": {
+      "target": {
+       "value": 24.5,
+       "displayValue": "24.5"
+      }
+     },
+     "open": {
+      "target": {
+       "value": 24.5,
+       "displayValue": "24.5"
+      }
+     }
+    },
+    {
+     "competition": {
+      "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/events/401909936/competitions/401909936?lang=en&region=us"
+     },
+     "athlete": {
+      "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3136193?lang=en&region=us"
+     },
+     "provider": {
+      "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/casinos/100?lang=en&region=us"
+     },
+     "type": {
+      "id": "1",
+      "name": "Total Points"
+     },
+     "odds": {
+      "american": {
+       "value": "-103",
+       "open": "-108"
+      },
+      "decimal": {
+       "value": "1.97",
+       "open": "1.92"
+      },
+      "fraction": {
+       "value": "100/103",
+       "open": "25/27"
+      },
+      "total": {
+       "value": "24.5",
+       "open": "24.5"
+      }
+     },
+     "lastUpdated": "2026-11-06T04:35Z",
+     "current": {
+      "target": {
+       "value": 24.5,
+       "displayValue": "24.5"
+      }
+     },
+     "open": {
+      "target": {
+       "value": 24.5,
+       "displayValue": "24.5"
+      }
+     }
+    },
+    {
+     "competition": {
+      "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/events/401909936/competitions/401909936?lang=en&region=us"
+     },
+     "athlete": {
+      "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3155526?lang=en&region=us"
+     },
+     "provider": {
+      "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/casinos/100?lang=en&region=us"
+     },
+     "type": {
+      "id": "1",
+      "name": "Total Points"
+     },
+     "odds": {
+      "american": {
+       "value": "-117",
+       "open": "-111"
+      },
+      "decimal": {
+       "value": "1.85",
+       "open": "1.90"
+      },
+      "fraction": {
+       "value": "100/117",
+       "open": "100/111"
+      },
+      "total": {
+       "value": "15.5",
+       "open": "16.5"
+      }
+     },
+     "lastUpdated": "2026-11-06T04:35Z",
+     "current": {
+      "target": {
+       "value": 15.5,
+       "displayValue": "15.5"
+      }
+     },
+     "open": {
+      "target": {
+       "value": 16.5,
+       "displayValue": "16.5"
+      }
+     }
+    }
+   ]
+  }
+ }
+}
