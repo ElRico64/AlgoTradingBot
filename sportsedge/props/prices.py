@@ -124,30 +124,32 @@ def fetch_oddsapi_props(api_key: str, games: list[dict], budget, data_dir: str) 
 # ------------------------------------------------------------------ ESPN (free)
 # ESPN's core API lists each over/under as two consecutive items at the same line with no side
 # label. Which one is the over is learned from data (see board.espn_orientation), never assumed.
-def espn_stat(type_name: str) -> Optional[str]:
-    n = (type_name or "").lower()
-    if any(c in n for c in (",", "+", " and ", "&", "double", "first", "quarter", "half", "1st", "2nd")):
-        return None  # combos, milestones and partial-game props are not modelled
-    if "three" in n or "3-point" in n or "3 point" in n or "3pt" in n:
-        return "fg3m"
-    if "rebound" in n:
-        return "reb"
-    if "assist" in n:
-        return "ast"
-    if "point" in n:
-        return "pts"
-    return None
+_ESPN_STATS = {"points": "pts", "rebounds": "reb", "assists": "ast", "3-point field goals": "fg3m",
+               "three point field goals": "fg3m", "3-pointers made": "fg3m", "threes": "fg3m"}
 
 
-def parse_espn_propbets(items: list[dict]) -> tuple[list[dict], dict]:
-    """Group ESPN prop items into pairs: (athlete id, stat, line) -> prices in listed order.
-    Returns (pairs, counts of type names seen)."""
+def espn_stat(type_name: str) -> tuple[Optional[str], Optional[str]]:
+    """(stat, kind) for an ESPN prop type: kind "pair" for full-game over/unders
+    ("Total Points"), "milestone" for over-only thresholds ("Points Milestones", i.e. 25+).
+    Combinations, partial games and specials are not modelled."""
+    n = " ".join((type_name or "").lower().split())
+    if n.startswith("total ") and n[6:] in _ESPN_STATS:
+        return _ESPN_STATS[n[6:]], "pair"
+    if n.endswith(" milestones") and n[:-11] in _ESPN_STATS:
+        return _ESPN_STATS[n[:-11]], "milestone"
+    return None, None
+
+
+def parse_espn_propbets(items: list[dict]) -> tuple[list[dict], list[dict], dict]:
+    """ESPN prop items -> (over/under pairs with prices in listed order, milestones, type counts).
+    A milestone "25+" is the over of a 24.5 line."""
     groups: dict = {}
+    miles: dict = {}
     names: dict = {}
     for it in items:
         tname = ((it.get("type") or {}).get("name")) or ""
         names[tname] = names.get(tname, 0) + 1
-        stat = espn_stat(tname)
+        stat, kind = espn_stat(tname)
         m = re.search(r"/athletes/(\d+)", ((it.get("athlete") or {}).get("$ref") or ""))
         odds = it.get("odds") or {}
         line = ((it.get("current") or {}).get("target") or {}).get("value")
@@ -160,17 +162,24 @@ def parse_espn_propbets(items: list[dict]) -> tuple[list[dict], dict]:
             line, price = float(line), float(str(price).replace("+", ""))
         except ValueError:
             continue
-        groups.setdefault((m.group(1), stat, line), []).append(price)
+        if kind == "pair":
+            groups.setdefault((m.group(1), stat, line), []).append(price)
+        else:
+            mline = line - 0.5 if float(line).is_integer() else line
+            miles[(m.group(1), stat, mline)] = price
     pairs = [{"player_id": pid, "stat": stat, "line": line, "prices": prices}
              for (pid, stat, line), prices in groups.items() if len(prices) == 2]
-    return pairs, names
+    milestones = [{"player_id": pid, "stat": stat, "line": line, "price": price}
+                  for (pid, stat, line), price in miles.items()]
+    return pairs, milestones, names
 
 
-def fetch_espn_props(games: list[dict]) -> tuple[dict, dict]:
-    """Today's ESPN prop pairs per game id (first provider that lists props). Free, no key."""
+def fetch_espn_props(games: list[dict]) -> tuple[dict, dict, dict]:
+    """Today's ESPN props per game id: (over/under pairs, milestones, type counts), from the
+    first provider that lists props. Free, no key."""
     from ..data.http import get_json
 
-    out, names = {}, {}
+    out, mout, names = {}, {}, {}
     for g in games:
         eid = g.get("espn_id")
         if not eid:
@@ -189,13 +198,13 @@ def fetch_espn_props(games: list[dict]) -> tuple[dict, dict]:
                 pages = int(pb.get("pageCount") or 1)
                 page += 1
             if items:
-                pairs, nm = parse_espn_propbets(items)
+                pairs, miles, nm = parse_espn_propbets(items)
                 for k, v in nm.items():
                     names[k] = names.get(k, 0) + v
-                if pairs:
-                    out[g["id"]] = pairs
+                if pairs or miles:
+                    out[g["id"]], mout[g["id"]] = pairs, miles
                     break
-    return out, names
+    return out, mout, names
 
 
 def priced_from_pairs(pairs_by_game: dict, first_is_over: bool) -> dict:
@@ -210,3 +219,11 @@ def priced_from_pairs(pairs_by_game: dict, first_is_over: bool) -> dict:
                          "over": over, "under": under, "fair": po / (po + pu), "books": 1})
         out[gid] = rows
     return out
+
+
+def priced_from_milestones(miles_by_game: dict) -> dict:
+    """Milestones ("25+ points") as over-only props. Their price with the margin left in is the
+    cautious fair chance: it overstates the books' view, so it can only understate the model's edge."""
+    return {gid: [{"player_id": m["player_id"], "player": "", "stat": m["stat"], "line": m["line"],
+                   "over": m["price"], "under": None, "fair": _american_to_prob(m["price"]), "books": 1,
+                   "alt": True} for m in ms] for gid, ms in miles_by_game.items()}

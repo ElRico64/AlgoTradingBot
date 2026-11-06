@@ -203,15 +203,23 @@ def _espn_item(aid, tname, line, american):
 
 
 def test_parse_espn_propbets_pairs_and_skips():
-    from sportsedge.props.prices import espn_stat, parse_espn_propbets, priced_from_pairs
+    from sportsedge.props.prices import espn_stat, parse_espn_propbets, priced_from_milestones, priced_from_pairs
     items = [_espn_item(3136193, "Total Points", 24.5, -124), _espn_item(3136193, "Total Points", 24.5, -103),
-             _espn_item(3136193, "Total Points, Rebounds and Assists", 36.5, -110),
-             _espn_item(3136193, "Total Points, Rebounds and Assists", 36.5, -110),
+             _espn_item(3136193, "Total Points, Rebounds, and Assists", 36.5, -110),
+             _espn_item(3136193, "Total Points, Rebounds, and Assists", 36.5, -110),
+             _espn_item(3136193, "Points Milestones", 25, -120), _espn_item(3136193, "Points Milestones", 30, 250),
+             _espn_item(3136193, "Points Milestones - 1st Quarter", 8, 120),
              _espn_item(3155526, "Total Rebounds", 5.5, 130)]  # single item: not a pair
-    pairs, names = parse_espn_propbets(items)
+    pairs, miles, names = parse_espn_propbets(items)
     assert pairs == [{"player_id": "3136193", "stat": "pts", "line": 24.5, "prices": [-124.0, -103.0]}]
+    assert sorted((m["line"], m["price"]) for m in miles) == [(24.5, -120.0), (29.5, 250.0)]  # 25+ = over 24.5
     assert names["Total Points"] == 2
-    assert [espn_stat(n) for n in ("Total Assists", "Total 3-Point Field Goals Made", "Double Double", "1st Quarter Points")] == ["ast", "fg3m", None, None]
+    assert [espn_stat(n)[0] for n in ("Total Assists", "Total 3-Point Field Goals", "Assists Milestones",
+                                      "Points + Assists Milestones", "To Record a Double Double",
+                                      "Points Milestones - 1st Quarter", "Total Points and Rebounds")] == \
+        ["ast", "fg3m", "ast", None, None, None, None]
+    (alt,) = [r for r in priced_from_milestones({"g": miles})["g"] if r["line"] == 24.5]
+    assert alt["under"] is None and alt["fair"] == pytest.approx(120 / 220)
     (row,) = priced_from_pairs({"g": pairs}, first_is_over=False)["g"]
     assert (row["over"], row["under"]) == (-103.0, -124.0) and row["player_id"] == "3136193" and 0.45 < row["fair"] < 0.5
 
@@ -246,3 +254,8 @@ def test_espn_side_order_is_learned_from_the_model(fitted, tmp_path):
     noise = {g: [{**p, "prices": [-110.0 - rng.integers(0, 20), -110.0 - rng.integers(0, 20)]} for p in ps]
              for g, ps in pairs_over_first.items()}
     assert board.espn_orientation(str(tmp_path / "c"), model, noise, [], day, games)["first_is_over"] is None
+    # milestones settle it even when the model check is inconclusive: "25+" prices like the over of 24.5
+    miles = {g: [{"player_id": p["player_id"], "stat": p["stat"], "line": p["line"], "price": p["prices"][1] - 3}
+                 for p in ps] for g, ps in noise.items()}
+    o = board.espn_orientation(str(tmp_path / "d"), model, noise, [], day, games, miles)
+    assert o["first_is_over"] is False and o["milestone_matches"] >= 30

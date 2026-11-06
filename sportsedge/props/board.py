@@ -24,7 +24,7 @@ from ..parlays import ParlayPolicy, et_date, parlay_band, parlay_entry, scan, se
 from ..stats.market_check import check, fit_shares
 from .boxscores import load_rows, update_boxscores
 from .model import PROP_STATS, STAT_NAMES, PropModel
-from .prices import fetch_espn_props, fetch_oddsapi_props, norm_name, priced_from_pairs
+from .prices import fetch_espn_props, fetch_oddsapi_props, norm_name, priced_from_milestones, priced_from_pairs
 
 log = logging.getLogger(__name__)
 
@@ -213,7 +213,7 @@ def _logit(p: float) -> float:
 
 
 def espn_orientation(data_dir: str, model: PropModel, pairs_today: dict, rows: list[dict], day: date,
-                     games: list[dict] = ()) -> dict:
+                     games: list[dict] = (), miles_today: Optional[dict] = None) -> dict:
     """Which of ESPN's two prices is the over? Learned, never assumed, two ways:
     * model check (now): if the first price is the over, the books' no-vig chance of the
       first item rises with the model's P(over) across hundreds of props;
@@ -262,14 +262,30 @@ def espn_orientation(data_dir: str, model: PropModel, pairs_today: dict, rows: l
                     continue
                 ll += (1 if row[pr["stat"]] > pr["line"] else -1) * _logit(q1(pr))
                 n_res += 1
+    # milestone check: "25+" is the over of 24.5, so its price matches the pair's over price
+    agree = n_mile = 0
+    for gid, pairs in pairs_today.items():
+        mp = {(m["player_id"], m["stat"], m["line"]): m["price"] for m in (miles_today or {}).get(gid, [])}
+        for pr in pairs:
+            mprice = mp.get((pr["player_id"], pr["stat"], pr["line"]))
+            if mprice is None:
+                continue
+            d0, d1 = (abs(_american_to_prob(x) - _american_to_prob(mprice)) for x in pr["prices"])
+            if abs(d0 - d1) < 0.005:
+                continue  # too close to tell
+            n_mile += 1
+            agree += d0 < d1
+    vote_mile = 0
+    if n_mile >= 30 and max(agree, n_mile - agree) >= 0.9 * n_mile:
+        vote_mile = 1 if agree > n_mile / 2 else -1
     vote_model = 0 if r_model is None or len(xs) < 100 or abs(r_model) < 0.2 else (1 if r_model > 0 else -1)
     vote_res = 0 if n_res < 200 or abs(ll) < 10 else (1 if ll > 0 else -1)
-    if vote_model and vote_res and vote_model != vote_res:
-        verdict = 0
-    else:
-        verdict = vote_model or vote_res
+    votes = {v for v in (vote_model, vote_res, vote_mile) if v}
+    verdict = votes.pop() if len(votes) == 1 else 0   # decisive somewhere, contradicted nowhere
     out = {"first_is_over": None if verdict == 0 else verdict > 0, "model_corr": r_model, "model_n": len(xs),
-           "results_loglik_diff": round(ll, 2), "results_n": n_res, "checked_at": _now()}
+           "results_loglik_diff": round(ll, 2), "results_n": n_res,
+           "milestone_matches": n_mile, "milestone_first_is_over_share": round(agree / n_mile, 3) if n_mile else None,
+           "checked_at": _now()}
     _save_json(path, out)
     return out
 
@@ -335,20 +351,26 @@ def run_props(data_dir: str, day: date, games_json: list[dict], news: list[dict]
     espn_msg = ""
     if today and not priced:
         try:
-            pairs, names = fetch_espn_props(today)
-            orient = espn_orientation(data_dir, model, pairs, rows, day, today)
+            pairs, miles, names = fetch_espn_props(today)
+            orient = espn_orientation(data_dir, model, pairs, rows, day, today, miles)
             status["espn_types"] = dict(sorted(names.items(), key=lambda kv: -kv[1])[:25])
             status["espn_orientation"] = orient
             n_pairs = sum(len(v) for v in pairs.values())
-            if not pairs:
+            n_miles = sum(len(v) for v in miles.values())
+            priced = priced_from_milestones(miles)  # over-only thresholds: usable as they are
+            if not pairs and not miles:
                 espn_msg = "ESPN props: none listed for tonight's games yet"
             elif orient["first_is_over"] is None:
-                espn_msg = (f"ESPN props: {n_pairs} over/unders found; still confirming which price is the over "
-                            "(no props parlays until it is certain)")
+                espn_msg = (f"ESPN props: {n_pairs} over/unders found; still confirming which price is the over, "
+                            "so only the milestone (X+) props are used for now")
             else:
-                priced = priced_from_pairs(pairs, orient["first_is_over"])
-                msg = f"prop prices: ESPN (free), {n_pairs} over/unders on {len(pairs)} games"
-                espn_msg = "ESPN props: side order confirmed by the data"
+                for gid, rows_ in priced_from_pairs(pairs, orient["first_is_over"]).items():
+                    priced.setdefault(gid, []).extend(rows_)
+                espn_msg = "ESPN props: over/under side order confirmed by the data"
+            if priced:
+                msg = (f"prop prices: ESPN (free), {n_miles} milestones" +
+                       (f" and {n_pairs} over/unders" if orient["first_is_over"] is not None else "") +
+                       f" on {len(priced)} games")
         except Exception as e:  # prices must never break the update
             espn_msg = f"ESPN props: check failed ({type(e).__name__})"
     section["prices"], section["espn"] = msg, espn_msg
