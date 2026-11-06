@@ -18,11 +18,13 @@ import pickle
 from datetime import date, datetime, timedelta, timezone
 from typing import Optional
 
+import numpy as np
+
 from ..parlays import ParlayPolicy, et_date, parlay_band, parlay_entry, scan, settle_parlay
 from ..stats.market_check import check, fit_shares
 from .boxscores import load_rows, update_boxscores
 from .model import PROP_STATS, STAT_NAMES, PropModel
-from .prices import fetch_oddsapi_props, norm_name, probe_espn_props
+from .prices import fetch_espn_props, fetch_oddsapi_props, norm_name, priced_from_pairs
 
 log = logging.getLogger(__name__)
 
@@ -30,6 +32,7 @@ PROP_POLICY = ParlayPolicy(min_decimal=2.0, min_probability=0.65, min_ev=0.0, mi
                            min_leg_probability=0.55, max_legs=4, max_per_day=2)
 MIN_ROWS = 3000          # box-score rows before the model projects anything
 MIN_MINUTES = 20.0       # projected minutes for a leg
+MIN_PLAYER_GAMES = 15    # games in the data before a player can be a leg (thin records disagree with books out of ignorance)
 INJURED = ("out", "doubtful", "questionable", "ir", "suspended")
 
 
@@ -147,15 +150,23 @@ def _player_index(model: PropModel, day: date) -> dict:
 def build_legs(model: PropModel, games: list[dict], priced: dict, news: list[dict], share: float,
                day: date, learn: dict) -> list[dict]:
     idx, hurt, legs = _player_index(model, day), _injured(news), []
+    active = {(pid, t) for (_, t), pid in idx.items()}
     for g in games:
         home, away = g["home"]["abbr"], g["away"]["abbr"]
         for pr in priced.get(g["id"], []):
-            nn = norm_name(pr["player"])
-            pid = idx.get((nn, home)) or idx.get((nn, away))
+            pid = pr.get("player_id")
+            if pid:  # ESPN: the same athlete ids as the box scores
+                pl0 = model.players.get(pid)
+                if pl0 is None or pl0.team not in (home, away) or (pid, pl0.team) not in active:
+                    continue
+                nn = norm_name(pl0.name)
+            else:
+                nn = norm_name(pr["player"])
+                pid = idx.get((nn, home)) or idx.get((nn, away))
             if pid is None or nn in hurt or not model.calibrated(pr["stat"]):
                 continue
             pl = model.players[pid]
-            if (pl.min_ewma or 0) < MIN_MINUTES:
+            if (pl.min_ewma or 0) < MIN_MINUTES or pl.games < MIN_PLAYER_GAMES:
                 continue
             opp = away if pl.team == home else home
             mu = model.mean(pid, pr["stat"], opp)
@@ -193,6 +204,73 @@ def _shortlist(legs: list[dict]) -> list[dict]:
         best_p = max(xs, key=lambda x: x["p"])
         best_v = max(xs, key=lambda x: x["p"] * american_to_decimal(x["price"]))
         out.extend([best_p] + ([best_v] if best_v is not best_p else []))
+    return out
+
+
+def _logit(p: float) -> float:
+    p = min(max(p, 1e-6), 1 - 1e-6)
+    return math.log(p / (1 - p))
+
+
+def espn_orientation(data_dir: str, model: PropModel, pairs_today: dict, rows: list[dict], day: date,
+                     games: list[dict] = ()) -> dict:
+    """Which of ESPN's two prices is the over? Learned, never assumed, two ways:
+    * model check (now): if the first price is the over, the books' no-vig chance of the
+      first item rises with the model's P(over) across hundreds of props;
+    * results check (after games): the first item's chance predicts "stat > line".
+    Known only when the evidence is decisive and the two checks do not disagree."""
+    from .prices import _american_to_prob
+
+    path = os.path.join(_props_dir(data_dir), "espn_orientation.json")
+    snap_dir = os.path.join(_props_dir(data_dir), "espn")
+    os.makedirs(snap_dir, exist_ok=True)
+    if pairs_today:
+        _save_json(os.path.join(snap_dir, f"{day.isoformat()}.json"), pairs_today)
+    for f in os.listdir(snap_dir):  # keep three weeks of snapshots
+        if f.endswith(".json") and f[:10] < (day - timedelta(days=21)).isoformat():
+            os.remove(os.path.join(snap_dir, f))
+
+    def q1(pr):
+        a, b = (_american_to_prob(x) for x in pr["prices"])
+        return a / (a + b)
+
+    teams = {g["id"]: (g["home"]["abbr"], g["away"]["abbr"]) for g in games}
+    xs, ms = [], []
+    for gid, pairs in pairs_today.items():
+        home, away = teams.get(gid, ("", ""))
+        for pr in pairs:
+            p = model.players.get(pr["player_id"])
+            if p is None or not model.calibrated(pr["stat"]):
+                continue
+            mu = model.mean(pr["player_id"], pr["stat"], away if p.team == home else home)
+            if mu is None:
+                continue
+            xs.append(_logit(q1(pr)))
+            ms.append(_logit(model.p_over(pr["stat"], mu, pr["line"])))
+    r_model = float(np.corrcoef(xs, ms)[0, 1]) if len(xs) >= 30 and np.std(xs) > 0 and np.std(ms) > 0 else None
+    by_game: dict = {}
+    for r in rows:
+        by_game.setdefault(r["game_id"], {})[r["player_id"]] = r
+    ll, n_res = 0.0, 0
+    for f in sorted(os.listdir(snap_dir)):
+        if not f.endswith(".json") or f[:10] >= day.isoformat():
+            continue
+        for gid, pairs in _load_json(os.path.join(snap_dir, f), {}).items():
+            for pr in pairs:
+                row = (by_game.get(gid) or {}).get(pr["player_id"])
+                if row is None or row.get(pr["stat"]) is None or row[pr["stat"]] == pr["line"]:
+                    continue
+                ll += (1 if row[pr["stat"]] > pr["line"] else -1) * _logit(q1(pr))
+                n_res += 1
+    vote_model = 0 if r_model is None or len(xs) < 100 or abs(r_model) < 0.2 else (1 if r_model > 0 else -1)
+    vote_res = 0 if n_res < 200 or abs(ll) < 10 else (1 if ll > 0 else -1)
+    if vote_model and vote_res and vote_model != vote_res:
+        verdict = 0
+    else:
+        verdict = vote_model or vote_res
+    out = {"first_is_over": None if verdict == 0 else verdict > 0, "model_corr": r_model, "model_n": len(xs),
+           "results_loglik_diff": round(ll, 2), "results_n": n_res, "checked_at": _now()}
+    _save_json(path, out)
     return out
 
 
@@ -254,15 +332,25 @@ def run_props(data_dir: str, day: date, games_json: list[dict], news: list[dict]
             if priced:
                 os.makedirs(os.path.dirname(cache), exist_ok=True)
                 _save_json(cache, priced)
-    probe_flag = os.path.join(data_dir, ".cache", f"props-espn-probe-{day.isoformat()}")
-    espn_msg = _load_json(os.path.join(d, "status.json"), {}).get("espn", "")
-    if today and not os.path.exists(probe_flag):
+    espn_msg = ""
+    if today and not priced:
         try:
-            espn_msg = probe_espn_props([g.get("espn_id") for g in today if g.get("espn_id")], data_dir)
-        except Exception as e:  # a probe must never break the update
+            pairs, names = fetch_espn_props(today)
+            orient = espn_orientation(data_dir, model, pairs, rows, day, today)
+            status["espn_types"] = dict(sorted(names.items(), key=lambda kv: -kv[1])[:25])
+            status["espn_orientation"] = orient
+            n_pairs = sum(len(v) for v in pairs.values())
+            if not pairs:
+                espn_msg = "ESPN props: none listed for tonight's games yet"
+            elif orient["first_is_over"] is None:
+                espn_msg = (f"ESPN props: {n_pairs} over/unders found; still confirming which price is the over "
+                            "(no props parlays until it is certain)")
+            else:
+                priced = priced_from_pairs(pairs, orient["first_is_over"])
+                msg = f"prop prices: ESPN (free), {n_pairs} over/unders on {len(pairs)} games"
+                espn_msg = "ESPN props: side order confirmed by the data"
+        except Exception as e:  # prices must never break the update
             espn_msg = f"ESPN props: check failed ({type(e).__name__})"
-        os.makedirs(os.path.dirname(probe_flag), exist_ok=True)
-        open(probe_flag, "w").close()
     section["prices"], section["espn"] = msg, espn_msg
     status["prices"], status["espn"] = msg, espn_msg
     # legs, re-check of today's props parlays, new parlays

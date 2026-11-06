@@ -4,9 +4,9 @@
   threes over-unders from US books. Each game costs one credit per market, so
   the calls are budgeted with the game-odds calls (at most one props refresh a
   day).
-* ESPN: whether ESPN's free API lists player props is checked on each update,
-  and a small sample of what it returns is saved to data/props/samples/, so a
-  free source can be added once its format is known.
+* ESPN (free, no key): player props from the sportsbook ESPN lists. Each
+  over/under comes as two prices with no side label; which one is the over is
+  learned from the data (board.espn_orientation) before any is used.
 """
 from __future__ import annotations
 
@@ -121,32 +121,92 @@ def fetch_oddsapi_props(api_key: str, games: list[dict], budget, data_dir: str) 
     return out, f"prop prices: The Odds API, {sum(len(v) for v in out.values())} props on {len(out)} games"
 
 
-def probe_espn_props(espn_ids: list[str], data_dir: str) -> str:
-    """Check whether ESPN's free API lists player props for an upcoming game; save a sample."""
+# ------------------------------------------------------------------ ESPN (free)
+# ESPN's core API lists each over/under as two consecutive items at the same line with no side
+# label. Which one is the over is learned from data (see board.espn_orientation), never assumed.
+def espn_stat(type_name: str) -> Optional[str]:
+    n = (type_name or "").lower()
+    if any(c in n for c in (",", "+", " and ", "&", "double", "first", "quarter", "half", "1st", "2nd")):
+        return None  # combos, milestones and partial-game props are not modelled
+    if "three" in n or "3-point" in n or "3 point" in n or "3pt" in n:
+        return "fg3m"
+    if "rebound" in n:
+        return "reb"
+    if "assist" in n:
+        return "ast"
+    if "point" in n:
+        return "pts"
+    return None
+
+
+def parse_espn_propbets(items: list[dict]) -> tuple[list[dict], dict]:
+    """Group ESPN prop items into pairs: (athlete id, stat, line) -> prices in listed order.
+    Returns (pairs, counts of type names seen)."""
+    groups: dict = {}
+    names: dict = {}
+    for it in items:
+        tname = ((it.get("type") or {}).get("name")) or ""
+        names[tname] = names.get(tname, 0) + 1
+        stat = espn_stat(tname)
+        m = re.search(r"/athletes/(\d+)", ((it.get("athlete") or {}).get("$ref") or ""))
+        odds = it.get("odds") or {}
+        line = ((it.get("current") or {}).get("target") or {}).get("value")
+        if line is None:
+            line = (odds.get("total") or {}).get("value")
+        price = (odds.get("american") or {}).get("value")
+        if not stat or not m or line is None or price in (None, ""):
+            continue
+        try:
+            line, price = float(line), float(str(price).replace("+", ""))
+        except ValueError:
+            continue
+        groups.setdefault((m.group(1), stat, line), []).append(price)
+    pairs = [{"player_id": pid, "stat": stat, "line": line, "prices": prices}
+             for (pid, stat, line), prices in groups.items() if len(prices) == 2]
+    return pairs, names
+
+
+def fetch_espn_props(games: list[dict]) -> tuple[dict, dict]:
+    """Today's ESPN prop pairs per game id (first provider that lists props). Free, no key."""
     from ..data.http import get_json
 
-    if not espn_ids:
-        return "ESPN props: no upcoming game to check"
-    eid = espn_ids[0]
-    found = []
-    providers = get_json(f"{CORE}/events/{eid}/competitions/{eid}/odds?lang=en&region=us") or {}
-    sample = {"checked_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "event": eid,
-              "providers": [], "propBets": {}}
-    for item in (providers.get("items") or [])[:6]:
-        ref = item.get("$ref") or ""
-        m = re.search(r"/odds/(\d+)", ref)
-        pid = m.group(1) if m else (item.get("provider") or {}).get("id")
-        if not pid:
+    out, names = {}, {}
+    for g in games:
+        eid = g.get("espn_id")
+        if not eid:
             continue
-        sample["providers"].append(pid)
-        pb = get_json(f"{CORE}/events/{eid}/competitions/{eid}/odds/{pid}/propBets?lang=en&region=us&limit=50")
-        if pb and (pb.get("items") or pb.get("count")):
-            found.append(pid)
-            sample["propBets"][pid] = {"count": pb.get("count"), "items": (pb.get("items") or [])[:3]}
-    d = os.path.join(data_dir, "props", "samples")
-    os.makedirs(d, exist_ok=True)
-    with open(os.path.join(d, "espn_props_probe.json"), "w") as f:
-        json.dump(sample, f, indent=1)
-    if found:
-        return f"ESPN props: listed by provider(s) {', '.join(found)} (sample saved; parser to be added)"
-    return "ESPN props: none listed on ESPN's free API for the game checked"
+        providers = get_json(f"{CORE}/events/{eid}/competitions/{eid}/odds?lang=en&region=us") or {}
+        for item in providers.get("items") or []:
+            m = re.search(r"/odds/(\d+)", item.get("$ref") or "")
+            pid = m.group(1) if m else (item.get("provider") or {}).get("id")
+            if not pid:
+                continue
+            items, page, pages = [], 1, 1
+            while page <= pages and page <= 5:
+                pb = get_json(f"{CORE}/events/{eid}/competitions/{eid}/odds/{pid}/propBets"
+                              f"?lang=en&region=us&limit=1000&page={page}") or {}
+                items.extend(pb.get("items") or [])
+                pages = int(pb.get("pageCount") or 1)
+                page += 1
+            if items:
+                pairs, nm = parse_espn_propbets(items)
+                for k, v in nm.items():
+                    names[k] = names.get(k, 0) + v
+                if pairs:
+                    out[g["id"]] = pairs
+                    break
+    return out, names
+
+
+def priced_from_pairs(pairs_by_game: dict, first_is_over: bool) -> dict:
+    """Pairs -> priced props (over, under, no-vig P(over)) once the side order is known."""
+    out = {}
+    for gid, pairs in pairs_by_game.items():
+        rows = []
+        for pr in pairs:
+            over, under = pr["prices"] if first_is_over else pr["prices"][::-1]
+            po, pu = _american_to_prob(over), _american_to_prob(under)
+            rows.append({"player_id": pr["player_id"], "player": "", "stat": pr["stat"], "line": pr["line"],
+                         "over": over, "under": under, "fair": po / (po + pu), "books": 1})
+        out[gid] = rows
+    return out

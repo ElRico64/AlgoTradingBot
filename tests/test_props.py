@@ -194,3 +194,55 @@ def test_run_props_waits_for_data_and_never_invents_prices(tmp_path, monkeypatch
     assert sec["ready"] and sec["projections"] and not ledger
     assert "nothing is invented" in sec["prices"]
     assert json.load(open(tmp_path / "props" / "status.json"))["rows"] == len(rows)
+
+
+def _espn_item(aid, tname, line, american):
+    return {"athlete": {"$ref": f"http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/{aid}?lang=en"},
+            "type": {"id": "1", "name": tname}, "odds": {"american": {"value": str(american)}, "total": {"value": str(line)}},
+            "current": {"target": {"value": line}}}
+
+
+def test_parse_espn_propbets_pairs_and_skips():
+    from sportsedge.props.prices import espn_stat, parse_espn_propbets, priced_from_pairs
+    items = [_espn_item(3136193, "Total Points", 24.5, -124), _espn_item(3136193, "Total Points", 24.5, -103),
+             _espn_item(3136193, "Total Points, Rebounds and Assists", 36.5, -110),
+             _espn_item(3136193, "Total Points, Rebounds and Assists", 36.5, -110),
+             _espn_item(3155526, "Total Rebounds", 5.5, 130)]  # single item: not a pair
+    pairs, names = parse_espn_propbets(items)
+    assert pairs == [{"player_id": "3136193", "stat": "pts", "line": 24.5, "prices": [-124.0, -103.0]}]
+    assert names["Total Points"] == 2
+    assert [espn_stat(n) for n in ("Total Assists", "Total 3-Point Field Goals Made", "Double Double", "1st Quarter Points")] == ["ast", "fg3m", None, None]
+    (row,) = priced_from_pairs({"g": pairs}, first_is_over=False)["g"]
+    assert (row["over"], row["under"]) == (-103.0, -124.0) and row["player_id"] == "3136193" and 0.45 < row["fair"] < 0.5
+
+
+def test_espn_side_order_is_learned_from_the_model(fitted, tmp_path):
+    from sportsedge.props.prices import _american_to_prob
+    model, rows, truth = fitted
+    rng = np.random.default_rng(2)
+
+    def am(p):  # fair probability -> American price with ~4.5% margin
+        q = min(max(p * 1.045 / 1.0, 0.02), 0.97)
+        return -100 * q / (1 - q) if q >= 0.5 else 100 * (1 - q) / q
+    games, pairs_over_first = [], {}
+    for k, (home, away) in enumerate((("T0", "T1"), ("T2", "T3"), ("T4", "T5"), ("T6", "T7"), ("T8", "T9"))):
+        gid = f"NBA-20260219-{away}-{home}-19"
+        games.append({"id": gid, "home": {"abbr": home}, "away": {"abbr": away}})
+        ps = []
+        for t in (home, away):
+            for j in range(8):
+                pid = f"{t}-{j}"
+                for s in ("pts", "reb", "ast"):
+                    mu = model.mean(pid, s, away if t == home else home)
+                    line = float(np.floor(mu + rng.normal(0, 1.5))) + 0.5
+                    po = model.p_over(s, mu, line)
+                    ps.append({"player_id": pid, "stat": s, "line": line, "prices": [am(po), am(1 - po)]})
+        pairs_over_first[gid] = ps
+    day = date(2026, 2, 19)
+    o = board.espn_orientation(str(tmp_path), model, pairs_over_first, [], day, games)
+    assert o["first_is_over"] is True and o["model_corr"] > 0.5
+    flipped = {g: [{**p, "prices": p["prices"][::-1]} for p in ps] for g, ps in pairs_over_first.items()}
+    assert board.espn_orientation(str(tmp_path / "b"), model, flipped, [], day, games)["first_is_over"] is False
+    noise = {g: [{**p, "prices": [-110.0 - rng.integers(0, 20), -110.0 - rng.integers(0, 20)]} for p in ps]
+             for g, ps in pairs_over_first.items()}
+    assert board.espn_orientation(str(tmp_path / "c"), model, noise, [], day, games)["first_is_over"] is None

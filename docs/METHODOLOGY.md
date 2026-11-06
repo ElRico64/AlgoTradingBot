@@ -420,6 +420,24 @@ are themselves uncertain. After calibration, every bucket matched within
 sampling error.
 
 **Prices.** Prices are never invented.
+* **ESPN** (free, no key) lists player props from its sportsbook partner,
+  confirmed on a live run: 1,190 props for one game. ESPN's player ids are
+  the box scores' ids, so props match players directly.
+
+  Each over/under arrives as two prices with no side label. Which one is the
+  over is learned, not assumed:
+  * against the model: if the first price is the over, the books' chance for
+    the first item correlates positively with the model's P(over) across
+    hundreds of props;
+  * against results: the first item's chance predicts "stat > line" once the
+    games are graded.
+
+  ESPN prices are used only when the evidence is decisive and the two checks
+  do not disagree.
+* Players need 15 games in the data before they can be a leg: with thin
+  records the model disagrees with the books out of ignorance. Example: the
+  model's first projection for Devin Booker was 20.5 points against a 24.5
+  line, built on about 10 of his games.
 * The Odds API, with a free key, supplies main lines with consensus no-vig
   probabilities. Alternate lines are optional; they are usually over-only, so
   their price with the margin left in is used as a cautious fair chance.
