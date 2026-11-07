@@ -9799,7 +9799,7 @@
   "side": "home",
   "line": null,
   "price": -258.0,
-  "p": 0.7047,
+  "p": 0.7263,
   "lower": 0.703,
   "p_model": 0.7166,
   "upper": 0.7067,
@@ -9828,10 +9828,10 @@
    "market check: model 71.7% vs books 70.0% -> 70.5% (keeps 28% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-07T07:14:06+00:00",
-  "status": "withdrawn",
+  "status": "pending",
   "profit": null,
   "withdrawn_at": "2026-11-07T18:48:55+00:00",
-  "note": "Withdrawn before start: probability 66.4% below 70%"
+  "note": "Reinstated after new information"
  },
  {
   "id": "confidence:2026-11-07:NBA-20261107-BKN-ATL-19:moneyline:home",
@@ -9947,7 +9947,7 @@
   "published_at": "2026-11-07T07:16:54+00:00",
   "status": "pending",
   "profit": null,
-  "p_now": 0.5197
+  "p_now": 0.5103
  },
  {
   "id": "value:2026-11-07:NHL-20261107-VAN-EDM-22:moneyline:home",
