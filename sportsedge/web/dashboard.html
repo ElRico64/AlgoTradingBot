@@ -532,7 +532,7 @@ footer p { margin: 0; max-width: 92ch; }
         P.projections.map(function (r) { return "<tr><td>" + esc(r.player) + "</td><td>" + esc(r.team) + " vs " + esc(r.opp) + '</td><td class="num">' + r.min.toFixed(0) + '</td><td class="num">' + r.pts.toFixed(1) + '</td><td class="num">' + r.reb.toFixed(1) + '</td><td class="num">' + r.ast.toFixed(1) + '</td><td class="num">' + r.fg3m.toFixed(1) + "</td></tr>"; }).join("") +
         "</tbody></table></div></div>";
     }
-    var notes = [P.prices, P.espn].filter(Boolean).map(esc).join(" · ");
+    var notes = [P.health, P.prices, P.espn].filter(Boolean).map(esc).join(" · ");
     if (notes) html += '<p class="muted" style="font-size:12.5px;margin-top:8px">' + notes + "</p>";
     $("picks").innerHTML = html;
   }

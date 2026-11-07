@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import argparse
 import functools
+import json
 import glob
 import http.server
 import os
@@ -81,6 +82,26 @@ def load_env_file() -> None:
 
 
 # --------------------------------------------------------------- your data
+def seed_props_data() -> None:
+    """Player box scores take days to download from scratch. A newer download carries the
+    ones GitHub has collected: start from them when they are ahead of this computer's."""
+    src = os.path.join(HERE, "data", "players", "NBA_events.json")
+    dst = os.path.join(DATA, "players", "NBA_events.json")
+    if not os.path.exists(src):
+        return
+    def done(p):
+        try:
+            with open(p) as f:
+                return len(json.load(f).get("done", {}))
+        except (OSError, ValueError):
+            return -1
+    if done(src) > done(dst):
+        for sub in ("players", "props"):
+            if os.path.isdir(os.path.join(HERE, "data", sub)):
+                shutil.copytree(os.path.join(HERE, "data", sub), os.path.join(DATA, sub), dirs_exist_ok=True)
+        say(f"Player box scores: started from the {done(src)} games in this download.")
+
+
 def migrate_old_data() -> None:
     """Earlier versions kept data inside the code folder. Copy the most recent
     such folder (this one or a sibling download) into ~/Sportsedge, once."""
@@ -384,6 +405,7 @@ def main() -> None:
     ensure_packages()
     load_env_file()
     migrate_old_data()
+    seed_props_data()
     if not a.refresh_once and sys.platform == "darwin":
         sync_background_copy()
 

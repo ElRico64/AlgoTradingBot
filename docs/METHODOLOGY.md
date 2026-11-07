@@ -409,10 +409,25 @@ assists, threes):
 * **phi_s:** maximum likelihood on walk-forward residuals.
 
 Every prediction is made before that game updates the model. P(over) is
-recalibrated per stat with a logistic map fitted on those out-of-sample
-predictions, against lines placed where books hang them (half a unit off the
-player's recent average). A stat is used only after 2,000 out-of-sample
-games.
+recalibrated per stat on those out-of-sample predictions:
+
+* **Full range of lines.** Each game is scored at five lines around the
+  player's average (base + k·d, k = −2…2, d = 35% of the base), so the
+  calibration also covers the far lines that milestones and alternates use
+  ("over 1.5 rebounds"), not only the main line.
+* **Map.** A beta calibration (two log terms and an intercept), then an
+  isotonic step once there are 15,000+ rows. Recent games weigh more: the
+  weight halves every quarter of the record.
+* **Honest check.** The map is fitted on the first 80% of games in time
+  order and scored on the latest 20% it has not seen. The final map is then
+  refitted on everything.
+* **Health gate.** A stat is *trusted* only if, on that latest 20%, every
+  60%+ bucket with 100+ predictions hit within 3 points of what was said.
+  Only trusted stats can be parlay legs. The first run on real games (Nov 6,
+  15,357 player-games) trusted rebounds (worst gap 1.5 points). Points,
+  assists and threes were paused: early-season games hit 3–5 points below
+  the model's 60%+ calls. They return automatically when they hold up.
+* A stat is used only after 2,000 out-of-sample games.
 
 On a simulated league, the raw negative-binomial probabilities were
 overconfident: calibration slopes were 0.5–0.85, because the estimated rates
@@ -434,6 +449,14 @@ sampling error.
 
   ESPN prices are used only when the evidence is decisive and the two checks
   do not disagree.
+* **Sanity filter.** A leg whose model chance is more than 20 points away
+  from the books' no-vig chance is dropped, never bet. Books are rarely that
+  wrong on a player prop; a gap that size means a misread or stale price, a
+  player not expected to play, or a role change. Example that prompted it:
+  "Paul George over 1.5 rebounds + Rudy Gobert over 1.5 rebounds" at 2.53x
+  showed as the closest parlay on Nov 6. The raw ESPN items of a few players
+  are saved on each run (`data/props/samples/`) so the format can be checked
+  by eye.
 * Players need 15 games in the data before they can be a leg: with thin
   records the model disagrees with the books out of ignorance. Example: the
   model's first projection for Devin Booker was 20.5 points against a 24.5

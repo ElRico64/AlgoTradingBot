@@ -33,6 +33,8 @@ PROP_POLICY = ParlayPolicy(min_decimal=2.0, min_probability=0.65, min_ev=0.0, mi
 MIN_ROWS = 3000          # box-score rows before the model projects anything
 MIN_MINUTES = 20.0       # projected minutes for a leg
 MIN_PLAYER_GAMES = 15    # games in the data before a player can be a leg (thin records disagree with books out of ignorance)
+MODEL_VERSION = 2        # bump when PropModel's fitted fields change
+MAX_DISAGREEMENT = 0.20  # model vs books gap beyond which a price is treated as a data problem, not an edge
 INJURED = ("out", "doubtful", "questionable", "ir", "suspended")
 
 
@@ -62,7 +64,8 @@ def _save_json(path: str, obj) -> None:
 
 
 def train_model(data_dir: str, day: date, rows: list[dict]) -> PropModel:
-    cache = os.path.join(data_dir, ".cache", f"props-model-{day.isoformat()}-{len(rows)}.pkl")
+    # the model version is in the name: a model saved by an earlier release is refitted, not reused
+    cache = os.path.join(data_dir, ".cache", f"props-model-v{MODEL_VERSION}-{day.isoformat()}-{len(rows)}.pkl")
     if os.path.exists(cache):
         try:
             with open(cache, "rb") as f:
@@ -163,7 +166,7 @@ def build_legs(model: PropModel, games: list[dict], priced: dict, news: list[dic
             else:
                 nn = norm_name(pr["player"])
                 pid = idx.get((nn, home)) or idx.get((nn, away))
-            if pid is None or nn in hurt or not model.calibrated(pr["stat"]):
+            if pid is None or nn in hurt or not model.trusted(pr["stat"]):
                 continue
             pl = model.players[pid]
             if (pl.min_ewma or 0) < MIN_MINUTES or pl.games < MIN_PLAYER_GAMES:
@@ -180,6 +183,10 @@ def build_legs(model: PropModel, games: list[dict], priced: dict, news: list[dic
                     continue  # alternate lines are over-only
                 p_raw = p_over if side == "over" else 1 - p_over
                 fair = pr["fair"] if side == "over" else 1 - pr["fair"]
+                if abs(p_raw - fair) > MAX_DISAGREEMENT:
+                    # Books are rarely 20+ points wrong on a player prop. A gap that size means a misread
+                    # or stale price, a player not expected to play, or a role change: never an edge to bet.
+                    continue
                 p = check(p_raw, fair, share)
                 label = f"{pl.name} {side} {pr['line']:g} {STAT_NAMES[pr['stat']]}"
                 legs.append({"league": "NBA", "game_id": g["id"], "date": day.isoformat(), "start": g["start"],
@@ -351,6 +358,8 @@ def run_props(data_dir: str, day: date, games_json: list[dict], news: list[dict]
     espn_msg = ""
     if today and not priced:
         try:
+            from . import prices as _prices
+            _prices.SAMPLE_DIR = os.path.join(d, "samples")
             pairs, miles, names = fetch_espn_props(today)
             orient = espn_orientation(data_dir, model, pairs, rows, day, today, miles)
             status["espn_types"] = dict(sorted(names.items(), key=lambda kv: -kv[1])[:25])
@@ -409,8 +418,13 @@ def run_props(data_dir: str, day: date, games_json: list[dict], news: list[dict]
         if entry["id"] not in ids:
             ledger.append(entry)
             ids.add(entry["id"])
+    paused = [STAT_NAMES[s] for s in PROP_STATS if model.calibrated(s) and not model.trusted(s)]
+    if paused:
+        section["health"] = ("Paused for " + ", ".join(paused) + ": on the latest games the model's 60%+ "
+                             "predictions hit more than 3 points below what it said. They return once it holds up.")
     section.update(ready=True, closest=near, candidates=len(legs),
                    calibrated={s: model.calibrated(s) for s in PROP_STATS},
+                   trusted={s: model.trusted(s) for s in PROP_STATS},
                    policy={"min_decimal": PROP_POLICY.min_decimal, "min_probability": PROP_POLICY.min_probability})
     _save_json(os.path.join(d, "status.json"), status)
     return section

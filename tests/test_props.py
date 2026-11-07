@@ -145,8 +145,9 @@ def test_props_parlay_rule_and_grading(fitted, tmp_path):
         pid = f"{home}-0"
         mu = model.mean(pid, "pts", away)
         line = max(0.5, float(np.floor(mu * 0.35)) + 0.5)  # an easy over
+        fair = model.p_over("pts", mu, line) - 0.15  # books a little less keen than the model
         priced[gid] = [{"player": _name(pid), "stat": "pts", "line": line, "over": 120.0, "under": -150.0,
-                        "fair": 0.5, "books": 3}]
+                        "fair": fair, "books": 3}]
     day = date(2026, 2, 19)
     learn: dict = {}
     legs = board.build_legs(model, games, priced, [], 1.0, day, learn)
@@ -259,3 +260,21 @@ def test_espn_side_order_is_learned_from_the_model(fitted, tmp_path):
                  for p in ps] for g, ps in noise.items()}
     o = board.espn_orientation(str(tmp_path / "d"), model, noise, [], day, games, miles)
     assert o["first_is_over"] is False and o["milestone_matches"] >= 30
+
+
+def test_implausible_prices_are_treated_as_data_problems(fitted):
+    model, rows, truth = fitted
+    pid, home, away = "T0-0", "T0", "T1"
+    gid = "NBA-20260219-T1-T0-19"
+    games = [{"id": gid, "start": "2026-02-20T00:00:00", "state": "pre", "early": False,
+              "home": {"abbr": home}, "away": {"abbr": away}}]
+    mu = model.mean(pid, "reb", away)
+    line = 0.5  # a near-certain over...
+    priced = {gid: [{"player_id": pid, "player": "", "stat": "reb", "line": line, "over": 150.0, "under": None,
+                     "fair": 0.40, "books": 1}]}  # ...priced as a 40% shot: a misread or stale price
+    p = model.p_over("reb", mu, line)
+    assert model.trusted("reb") and p > 0.7
+    assert board.build_legs(model, games, priced, [], 0.5, date(2026, 2, 19), {}) == []
+    # the same leg priced near the model's view is kept: the filter only drops implausible gaps
+    priced[gid][0]["fair"] = p - 0.05
+    assert board.build_legs(model, games, priced, [], 0.5, date(2026, 2, 19), {})

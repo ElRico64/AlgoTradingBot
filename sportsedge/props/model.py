@@ -17,10 +17,12 @@ For player i, stat s (points, rebounds, assists, made threes) in a game:
 * phi_s: maximum likelihood on the walk-forward residuals.
 
 Every prediction in `fit` is made before that game updates the states. The
-over/under probabilities are then recalibrated per stat with a logistic map,
-fitted on those out-of-sample predictions against lines placed where books
-put them (just above or below the player's recent average). A stat is
-published only with enough out-of-sample games behind its calibration.
+over/under probabilities are then recalibrated per stat with a beta calibration
+map (logit p* = c + a ln p - b ln(1-p), which bends each tail separately), fitted
+on those out-of-sample predictions against lines across the whole range books
+offer: at the player's usual level, and well below or above it where alternate
+lines and "X+" milestones sit. A stat is published only with enough
+out-of-sample games behind its calibration.
 """
 from __future__ import annotations
 
@@ -34,6 +36,8 @@ import numpy as np
 from scipy.optimize import minimize, minimize_scalar
 from scipy.special import gammaln
 from scipy.stats import nbinom
+
+from ..stats.calibration import IsotonicCalibrator
 
 PROP_STATS = ("pts", "reb", "ast", "fg3m")
 STAT_NAMES = {"pts": "points", "reb": "rebounds", "ast": "assists", "fg3m": "made threes"}
@@ -71,7 +75,9 @@ class PropModel:
     opp_M: dict = field(default_factory=lambda: defaultdict(float))        # by team: player-minutes faced
     team_pts: dict = field(default_factory=dict)                          # team -> [for_ewma, against_ewma]
     phi: dict = field(default_factory=dict)
-    cal: dict = field(default_factory=dict)                               # stat -> (a, b) logistic map
+    cal: dict = field(default_factory=dict)                               # stat -> beta map (c, a, b)
+    iso: dict = field(default_factory=dict)                               # stat -> isotonic map on top
+    health: dict = field(default_factory=dict)                            # stat -> forward calibration check
     oos: dict = field(default_factory=lambda: defaultdict(list))          # stat -> [(mu, line, actual)]
     reliability: dict = field(default_factory=dict)
     n_games: int = 0
@@ -127,12 +133,23 @@ class PropModel:
         p = min(max(self.p_over_raw(s, mu, line), 1e-6), 1 - 1e-6)
         if s not in self.cal:
             return p
-        a, b = self.cal[s]
-        z = a + b * math.log(p / (1 - p))
-        return 1 / (1 + math.exp(-z))
+        c = self.cal[s]
+        if len(c) == 2:  # fitted by an earlier version: logistic map
+            z = c[0] + c[1] * math.log(p / (1 - p))
+        else:
+            z = c[0] + c[1] * math.log(p) - c[2] * math.log(1 - p)
+        q = 1 / (1 + math.exp(-z))
+        iso = getattr(self, "iso", {}).get(s)
+        if iso is not None:
+            q = float(np.clip(iso.transform(np.array([q]))[0], 0.005, 0.995))
+        return q
 
     def calibrated(self, s: str) -> bool:
         return s in self.cal and len(self.oos.get(s, [])) >= MIN_CAL_ROWS
+
+    def trusted(self, s: str) -> bool:
+        """Calibrated, and its 60%+ predictions held up on the latest games it never saw."""
+        return self.calibrated(s) and bool(getattr(self, "health", {}).get(s, {}).get("ok"))
 
     # ------------------------------------------------------------ learning
     def _update(self, r: dict, when: datetime) -> None:
@@ -207,21 +224,64 @@ class PropModel:
                                + phi * np.log(phi / (phi + mu)) + x * np.log(mu / (phi + mu)))
             self.phi[s] = float(math.exp(minimize_scalar(nll, bounds=(math.log(0.5), math.log(500)),
                                                          method="bounded").x))
-            line = np.array([r[1] for r in rows]); y = (x > line).astype(float)
-            praw = np.clip([self.p_over_raw(s, m, l) for m, l in zip(mu, line)], 1e-6, 1 - 1e-6)
-            z = np.log(praw / (1 - praw))
-            X = np.column_stack([np.ones_like(z), z])
-            f = lambda b: np.sum(np.logaddexp(0, X @ b) - y * (X @ b)) + 0.5 * (b[1] - 1) ** 2
-            b = minimize(f, np.array([0.0, 1.0]), method="BFGS").x
-            self.cal[s] = (float(b[0]), float(b[1]))
-            pc = 1 / (1 + np.exp(-(X @ b)))
+            # calibrate across the whole range of lines books offer: at the player's usual level and
+            # well below / above it (alternate lines and "X+" milestones), not just near the median
+            base = np.array([r[1] for r in rows])
+            d = np.maximum(1.0, np.round(0.35 * base))
+            L = np.concatenate([base + k * d for k in (-2, -1, 0, 1, 2)])
+            M = np.tile(mu, 5); Xs = np.tile(x, 5)
+            keep = L >= 0.5
+            L, M, Xs = L[keep], M[keep], Xs[keep]
+            y = (Xs > L).astype(float)
+            phi = self.phi[s]
+            praw = np.clip(nbinom.sf(np.floor(L), phi, phi / (phi + M)), 1e-6, 1 - 1e-6)
+            # beta calibration (Kull et al. 2017): logit p* = c + a ln p - b ln(1-p); bends each tail.
+            # With enough rows, isotonic regression on top corrects any remaining monotone distortion
+            # (points: minutes swings make the count distribution's shape wrong at the high end).
+            rec = np.tile(np.arange(len(mu)), 5)[keep]
+            cut = int(0.8 * len(mu))
+            train = rec < cut  # reliability is reported on the latest 20%, never seen
+            # recent games count more: roles and minutes change, especially across a summer
+            w_tr = 0.5 ** ((cut - rec[train]) / max(0.25 * cut, 1.0))
+            self.cal[s] = self._fit_beta(praw[train], y[train], w_tr)
+            iso = None
+            if train.sum() >= 15000:
+                iso = IsotonicCalibrator().fit(self._beta(self.cal[s], praw[train]), y[train], w_tr)
+            pc = self._beta(self.cal[s], praw[~train])
+            if iso is not None:
+                pc = np.clip(iso.transform(pc), 0.005, 0.995)
+            yh = y[~train]
             bins = []
-            for lo, hi in ((0.0, 0.35), (0.35, 0.5), (0.5, 0.65), (0.65, 0.8), (0.8, 1.01)):
+            for lo, hi in ((0.0, 0.2), (0.2, 0.35), (0.35, 0.5), (0.5, 0.65), (0.65, 0.8), (0.8, 0.9), (0.9, 1.01)):
                 m = (pc >= lo) & (pc < hi)
                 if m.sum() >= 30:
                     bins.append({"range": f"{lo:.2f}-{min(hi, 1):.2f}", "n": int(m.sum()),
-                                 "said": round(float(pc[m].mean()), 4), "hit": round(float(y[m].mean()), 4)})
+                                 "said": round(float(pc[m].mean()), 4), "hit": round(float(yh[m].mean()), 4)})
+            # health gate: legs need 60%+ predictions that hit within 3 points on the unseen latest games
+            gaps = [b["said"] - b["hit"] for b in bins if b["said"] >= 0.6 and b["n"] >= 100]
+            worst = max([abs(g) for g in gaps], default=None)
+            self.health[s] = {"ok": worst is not None and worst <= 0.03,
+                              "worst_gap_60plus": None if worst is None else round(worst, 4)}
+            # final maps on everything, recent games weighted up
+            w = 0.5 ** ((len(mu) - rec) / max(0.25 * len(mu), 1.0))
+            self.cal[s] = self._fit_beta(praw, y, w)
+            if iso is not None:
+                self.iso[s] = IsotonicCalibrator().fit(self._beta(self.cal[s], praw), y, w)
             self.reliability[s] = bins
+
+    @staticmethod
+    def _fit_beta(praw: np.ndarray, y: np.ndarray, sw: Optional[np.ndarray] = None) -> tuple:
+        F = np.column_stack([np.ones_like(praw), np.log(praw), -np.log(1 - praw)])
+        sw = np.ones_like(y) if sw is None else sw
+        prior = np.array([0.0, 1.0, 1.0])
+        f = lambda w: np.sum(sw * (np.logaddexp(0, F @ w) - y * (F @ w))) + 0.5 * np.sum((w - prior)[1:] ** 2)
+        g = lambda w: F.T @ (sw * (1 / (1 + np.exp(-(F @ w))) - y)) + np.concatenate([[0.0], (w - prior)[1:]])
+        return tuple(float(v) for v in minimize(f, prior.copy(), jac=g, method="BFGS").x)
+
+    @staticmethod
+    def _beta(c: tuple, p: np.ndarray) -> np.ndarray:
+        p = np.clip(p, 1e-6, 1 - 1e-6)
+        return 1 / (1 + np.exp(-(c[0] + c[1] * np.log(p) - c[2] * np.log(1 - p))))
 
     def observe(self, rows: list[dict]) -> None:
         """Learn new box scores (already-seen rows are the caller's to filter)."""
@@ -230,5 +290,7 @@ class PropModel:
     def status(self) -> dict:
         return {"games": self.n_games, "players": len(self.players),
                 "stats": {s: {"oos_rows": len(self.oos.get(s, [])), "dispersion": round(self.phi.get(s, 0), 2),
-                              "calibrated": self.calibrated(s), "reliability": self.reliability.get(s, [])}
+                              "calibrated": self.calibrated(s), "trusted": self.trusted(s),
+                              "health": getattr(self, "health", {}).get(s),
+                              "reliability": self.reliability.get(s, [])}
                           for s in PROP_STATS}}

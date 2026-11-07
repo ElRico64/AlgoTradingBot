@@ -198,6 +198,7 @@ def fetch_espn_props(games: list[dict]) -> tuple[dict, dict, dict]:
                 pages = int(pb.get("pageCount") or 1)
                 page += 1
             if items:
+                _save_milestone_sample(items)
                 pairs, miles, nm = parse_espn_propbets(items)
                 for k, v in nm.items():
                     names[k] = names.get(k, 0) + v
@@ -219,6 +220,25 @@ def priced_from_pairs(pairs_by_game: dict, first_is_over: bool) -> dict:
                          "over": over, "under": under, "fair": po / (po + pu), "books": 1})
         out[gid] = rows
     return out
+
+
+SAMPLE_DIR: Optional[str] = None  # set by the board: where to keep a raw sample for inspection
+
+
+def _save_milestone_sample(items: list[dict]) -> None:
+    """Keep the raw items of a few players (all prop types) so the format can be checked by eye."""
+    if not SAMPLE_DIR:
+        return
+    keep, seen = [], []
+    for it in items:
+        ref = ((it.get("athlete") or {}).get("$ref") or "")
+        if ref not in seen and len(seen) < 3:
+            seen.append(ref)
+        if ref in seen:
+            keep.append({k: v for k, v in it.items() if k not in ("competition", "provider")})
+    os.makedirs(SAMPLE_DIR, exist_ok=True)
+    with open(os.path.join(SAMPLE_DIR, "espn_props_raw.json"), "w") as f:
+        json.dump(keep[:400], f, indent=0)
 
 
 def priced_from_milestones(miles_by_game: dict) -> dict:
