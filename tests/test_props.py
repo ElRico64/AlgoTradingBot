@@ -58,8 +58,9 @@ def _name(pid):  # letters only, like real names
     return "Player " + "ABCDEFGHIJKLMNOP"[int(t)] + "abcdefghijkl"[int(j)]
 
 
-def synth_rows(n_teams=10, per_team=8, days=120, seed=0):
-    """Simulated league: each player has true per-minute rates; stats are negative binomial."""
+def synth_rows(n_teams=10, per_team=8, days=120, seed=0, shift_day=None, shift=1.0):
+    """Simulated league: each player has true per-minute rates; stats are negative binomial.
+    From `shift_day` on, every scoring rate is multiplied by `shift` (a new season's level change)."""
     rng = np.random.default_rng(seed)
     teams = [f"T{i}" for i in range(n_teams)]
     truth = {}
@@ -84,7 +85,7 @@ def synth_rows(n_teams=10, per_team=8, days=120, seed=0):
                            "home": int(t == home), "player_id": pid, "player": _name(pid), "pos": "F",
                            "starter": int(j < 5), "min": mins, "stl": 1.0, "blk": 0.0, "tov": 1.0}
                     for s in PROP_STATS:
-                        mu = mins * tr["rate"][s]
+                        mu = mins * tr["rate"][s] * (shift if shift_day is not None and d >= shift_day else 1.0)
                         phi = 8.0
                         rec[s] = float(rng.negative_binomial(phi, phi / (phi + mu)))
                     rows.append(rec)
@@ -278,3 +279,52 @@ def test_implausible_prices_are_treated_as_data_problems(fitted):
     # the same leg priced near the model's view is kept: the filter only drops implausible gaps
     priced[gid][0]["fair"] = p - 0.05
     assert board.build_legs(model, games, priced, [], 0.5, date(2026, 2, 19), {})
+
+
+def test_model_corrects_its_own_level_drift():
+    """Every rate falls 15% (a new season's level): the model notices its own misses and corrects."""
+    rows, _ = synth_rows(days=120, shift_day=90, shift=0.85)
+    on = PropModel().fit(rows)
+    off = PropModel()
+    off.drift = lambda s: 1.0
+    off.fit(rows)
+    late = {r["date"][:10] for r in rows if r["date"][:10] >= "2026-02-04"}  # the shift's last 2 weeks
+
+    def ratio(m, s):
+        n = len(m.oos[s]); recent = m.oos[s][-int(n * len(late) / 120):]
+        return sum(x for _, _, x in recent) / sum(mu for mu, _, _ in recent)
+    for s in ("pts", "reb", "ast"):
+        assert abs(ratio(on, s) - 1) < 0.05 and ratio(off, s) < 0.93, (s, ratio(on, s), ratio(off, s))
+        assert 0.8 <= on.drift(s) < 0.97  # still correcting (player rates catch up on their own too)
+    # with no shift the correction stays near 1
+    flat = PropModel().fit(synth_rows(days=60, seed=3)[0])
+    assert all(abs(flat.drift(s) - 1) < 0.04 for s in ("pts", "reb", "ast"))
+
+
+def _ladder(aid, tname, steps):
+    return [_espn_item(aid, tname, t, p) for t, p in steps]
+
+
+def test_espn_milestone_ladders_must_match_the_full_game_line():
+    """Seen live: a part-game "2+ … 8+ rebounds" ladder listed under the same type as the full
+    game's "6+ … 20+" for a 12.5-rebound player. Only the ladder that agrees with his full-game
+    over/under is kept; with no full-game line to check against, none is."""
+    from sportsedge.props.prices import parse_espn_propbets
+    pair = [_espn_item(3155942, "Total Rebounds", 12.5, -117), _espn_item(3155942, "Total Rebounds", 12.5, -113)]
+    part = _ladder(3155942, "Rebounds Milestones", [(2, -2200), (3, -610), (4, -238), (5, -110), (6, 186), (7, 374), (8, 740)])
+    full = _ladder(3155942, "Rebounds Milestones", [(6, -3800), (8, -960), (10, -370), (12, -166), (13, -117), (14, 122), (16, 248)])
+    _, miles, names = parse_espn_propbets(pair + part + full)
+    got = {m["line"]: m["price"] for m in miles}
+    assert got == {5.5: -3800.0, 7.5: -960.0, 9.5: -370.0, 11.5: -166.0, 12.5: -117.0, 13.5: 122.0, 15.5: 248.0}
+    assert any(k.startswith("(milestone ladders left out") and v == 1 for k, v in names.items())
+    # no full-game line: nothing to check the ladder against, so it is not used
+    assert parse_espn_propbets(full)[1] == []
+    # chances must fall as the target rises
+    bad = _ladder(3155942, "Rebounds Milestones", [(10, -370), (12, -900), (14, 122)])
+    assert parse_espn_propbets(pair + bad)[1] == []
+    # two ladders that agree with the line but price the same target differently: ambiguous, both out
+    other = _ladder(3155942, "Rebounds Milestones", [(10, -250), (12, -140)])
+    assert parse_espn_propbets(pair + full + other)[1] == []
+    # a trailing one-step ladder at the main line ("13+" after the ladder) is consistent and kept
+    _, miles, _ = parse_espn_propbets(pair + full + _ladder(3155942, "Rebounds Milestones", [(13, -117)]))
+    assert {m["line"] for m in miles} >= {12.5, 15.5}

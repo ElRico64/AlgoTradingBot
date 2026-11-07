@@ -140,11 +140,49 @@ def espn_stat(type_name: str) -> tuple[Optional[str], Optional[str]]:
     return None, None
 
 
+LADDER_TOLERANCE = 0.10  # how far a milestone's implied chance may sit on the wrong side of the main line
+
+
+def _ladders(seq: list[tuple[float, float]]) -> list[list[tuple[float, float]]]:
+    """Split one player's milestones (target, price), in listed order, into ladders: a new ladder
+    starts whenever the target stops rising. ESPN can list a second ladder for the same player and
+    stat under the same type (seen: a part-game "2+ … 8+ rebounds" next to the full game's "6+ … 20+")."""
+    out: list = []
+    for t, p in seq:
+        if not out or t <= out[-1][-1][0]:
+            out.append([])
+        out[-1].append((t, p))
+    return out
+
+
+def _ladder_fits(ladder: list[tuple[float, float]], anchors: list[tuple[float, list[float]]]) -> bool:
+    """A full-game ladder agrees with the player's full-game over/under: chances fall as the target
+    rises, targets below the main line are likelier than the line's sides, targets above it less likely.
+    Checked without knowing which of the pair's prices is the over (only their range is used)."""
+    probs = [_american_to_prob(p) for _, p in ladder]
+    if any(b > a + 0.03 for a, b in zip(probs, probs[1:])):
+        return False
+    for line, prices in anchors:
+        q = [_american_to_prob(x) for x in prices]
+        lo, hi = min(q) / sum(q), max(q) / sum(q)
+        for (t, _), pr in zip(ladder, probs):
+            over_of = t - 0.5
+            if over_of < line and pr < lo - LADDER_TOLERANCE:
+                return False
+            if over_of > line and pr > hi + LADDER_TOLERANCE:
+                return False
+            if over_of == line and not (lo - LADDER_TOLERANCE <= pr <= hi + LADDER_TOLERANCE):
+                return False
+    return True
+
+
 def parse_espn_propbets(items: list[dict]) -> tuple[list[dict], list[dict], dict]:
     """ESPN prop items -> (over/under pairs with prices in listed order, milestones, type counts).
-    A milestone "25+" is the over of a 24.5 line."""
+    A milestone "25+" is the over of a 24.5 line. Milestones are kept only when they are
+    unambiguous: each ladder must agree with the player's full-game over/under for that stat,
+    and agreeing ladders must not price the same target differently."""
     groups: dict = {}
-    miles: dict = {}
+    seqs: dict = {}
     names: dict = {}
     for it in items:
         tname = ((it.get("type") or {}).get("name")) or ""
@@ -164,13 +202,31 @@ def parse_espn_propbets(items: list[dict]) -> tuple[list[dict], list[dict], dict
             continue
         if kind == "pair":
             groups.setdefault((m.group(1), stat, line), []).append(price)
-        else:
-            mline = line - 0.5 if float(line).is_integer() else line
-            miles[(m.group(1), stat, mline)] = price
+        elif float(line).is_integer():
+            seqs.setdefault((m.group(1), stat), []).append((line, price))
     pairs = [{"player_id": pid, "stat": stat, "line": line, "prices": prices}
              for (pid, stat, line), prices in groups.items() if len(prices) == 2]
-    milestones = [{"player_id": pid, "stat": stat, "line": line, "price": price}
-                  for (pid, stat, line), price in miles.items()]
+    anchors: dict = {}
+    for pr in pairs:
+        anchors.setdefault((pr["player_id"], pr["stat"]), []).append((pr["line"], pr["prices"]))
+    milestones, dropped = [], 0
+    for (pid, stat), seq in seqs.items():
+        ladders = _ladders(seq)
+        good = [ld for ld in ladders if anchors.get((pid, stat)) and _ladder_fits(ld, anchors[(pid, stat)])]
+        price_at: dict = {}
+        clash = False
+        for ld in good:
+            for t, p in ld:
+                if t in price_at and abs(_american_to_prob(price_at[t]) - _american_to_prob(p)) > 0.03:
+                    clash = True
+                price_at[t] = p
+        if clash:
+            good, price_at = [], {}
+        dropped += len(ladders) - len(good)
+        milestones += [{"player_id": pid, "stat": stat, "line": t - 0.5, "price": p}
+                       for t, p in sorted(price_at.items())]
+    if dropped:
+        names["(milestone ladders left out: no matching full-game line, or ambiguous)"] = dropped
     return pairs, milestones, names
 
 

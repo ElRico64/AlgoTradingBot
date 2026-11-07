@@ -33,7 +33,7 @@ PROP_POLICY = ParlayPolicy(min_decimal=2.0, min_probability=0.65, min_ev=0.0, mi
 MIN_ROWS = 3000          # box-score rows before the model projects anything
 MIN_MINUTES = 20.0       # projected minutes for a leg
 MIN_PLAYER_GAMES = 15    # games in the data before a player can be a leg (thin records disagree with books out of ignorance)
-MODEL_VERSION = 2        # bump when PropModel's fitted fields change
+MODEL_VERSION = 3        # bump when PropModel's fitted fields change
 MAX_DISAGREEMENT = 0.20  # model vs books gap beyond which a price is treated as a data problem, not an edge
 INJURED = ("out", "doubtful", "questionable", "ir", "suspended")
 

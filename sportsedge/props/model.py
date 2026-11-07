@@ -15,6 +15,9 @@ For player i, stat s (points, rebounds, assists, made threes) in a game:
 * pace: expected game total from both teams' recent scoring and allowing,
   over the league average.
 * phi_s: maximum likelihood on the walk-forward residuals.
+* drift_s: the model's own recent error, actual / projected over the latest
+  player-games (half-life ~4 days of games). It multiplies every projection, so a
+  league-wide shift (a new season, rule or role changes) is corrected within days.
 
 Every prediction in `fit` is made before that game updates the states. The
 over/under probabilities are then recalibrated per stat with a beta calibration
@@ -46,6 +49,7 @@ K_PLAYER = 250.0      # pseudo-minutes at the position rate
 K_OPP = 4000.0        # pseudo player-minutes at the league rate
 MIN_GAMES = 5         # games played before a player gets projections
 MIN_CAL_ROWS = 2000   # out-of-sample rows per stat before it can be published
+DRIFT_HALF_LIFE = 750.0   # player-games: how fast the model corrects its own recent level error (~4 days)
 
 
 def _group(pos: str) -> str:
@@ -80,6 +84,7 @@ class PropModel:
     health: dict = field(default_factory=dict)                            # stat -> forward calibration check
     oos: dict = field(default_factory=lambda: defaultdict(list))          # stat -> [(mu, line, actual)]
     reliability: dict = field(default_factory=dict)
+    drift_state: dict = field(default_factory=dict)  # stat -> [EW sum actual, EW sum projected, EW rows]
     n_games: int = 0
 
     # ------------------------------------------------------------ helpers
@@ -103,7 +108,29 @@ class PropModel:
         exp_total = (a[0] + a[1] + b[0] + b[1]) / 2
         return float(np.clip(exp_total / max(avg, 1e-9), 0.85, 1.15))
 
+    def drift(self, s: str) -> float:
+        """The model's own recent level error for stat s: actual / projected over the latest
+        player-games (exponentially weighted). Roles, minutes and scoring shift between and
+        within seasons; this corrects the level within days, learned from the misses."""
+        st = getattr(self, "drift_state", {}).get(s)
+        if not st or st[1] <= 0:
+            return 1.0
+        num, den, w = st
+        k = 200.0 * den / max(w, 1e-9)  # a prior of 200 player-games with no error
+        return float(np.clip((num + k) / (den + k), 0.8, 1.25))
+
+    def _learn_drift(self, s: str, actual: float, projected: float) -> None:
+        d = 0.5 ** (1.0 / DRIFT_HALF_LIFE)
+        st = self.drift_state.setdefault(s, [0.0, 0.0, 0.0])
+        st[0] = st[0] * d + actual
+        st[1] = st[1] * d + projected
+        st[2] = st[2] * d + 1.0
+
     def mean(self, pid: str, s: str, opp: str, minutes: Optional[float] = None) -> Optional[float]:
+        mu = self._raw_mean(pid, s, opp, minutes)
+        return None if mu is None else max(0.05, mu * self.drift(s))
+
+    def _raw_mean(self, pid: str, s: str, opp: str, minutes: Optional[float] = None) -> Optional[float]:
         p = self.players.get(pid)
         if p is None or p.games < MIN_GAMES or p.min_ewma is None:
             return None
@@ -194,15 +221,21 @@ class PropModel:
         by_day = defaultdict(list)
         for r in rows:
             by_day[r["date"][:10]].append(r)
+        if not hasattr(self, "drift_state"):
+            self.drift_state = {}
         for day in sorted(by_day):
             day_rows = by_day[day]
+            seen = []
             for r in day_rows:
                 pid = r["player_id"]
                 for s in PROP_STATS:
-                    mu = self.mean(pid, s, r["opp"])
+                    raw = self._raw_mean(pid, s, r["opp"])
                     line = self.line_for(pid, s)
-                    if mu is not None and line is not None and r.get(s) is not None:
-                        self.oos[s].append((mu, line, r[s]))
+                    if raw is not None and line is not None and r.get(s) is not None:
+                        self.oos[s].append((max(0.05, raw * self.drift(s)), line, r[s]))
+                        seen.append((s, r[s], raw))
+            for s, actual, raw in seen:  # after the day's predictions: the model learns its own miss
+                self._learn_drift(s, actual, raw)
             when = datetime.fromisoformat(day_rows[0]["date"])
             for r in day_rows:
                 self._update(r, when)

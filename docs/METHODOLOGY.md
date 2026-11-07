@@ -427,6 +427,33 @@ recalibrated per stat on those out-of-sample predictions:
   15,357 player-games) trusted rebounds (worst gap 1.5 points). Points,
   assists and threes were paused: early-season games hit 3–5 points below
   the model's 60%+ calls. They return automatically when they hold up.
+* **Learning from its own misses (level drift).** The replay showed why. At
+  the new season's start the model projected too high: actual ÷ projected
+  was 0.90 for points, 0.87 for assists and 0.86 for threes in October 2026,
+  against 0.96–1.02 the season before. Rebounds ran 4–8% under all along.
+  Players' rates and minutes carried over from last season and the playoffs.
+
+  The model now tracks its own recent error per stat: actual ÷ projected
+  over the latest player-games, half-life 750 (about 4 days of games), with
+  a prior of 200 games at "no error". Projections are multiplied by it.
+  Only games already played update it, so it never sees the game it
+  predicts.
+
+  Honest test on the unseen latest 20% (Nov 7, 20,431 player-games;
+  60%+ calls, said vs hit):
+
+  | | before | with the correction |
+  |---|---|---|
+  | points | 76.9% vs 73.4% | 76.1% vs 74.4% |
+  | assists | 78.5% vs 74.9% | 78.1% vs 77.5% |
+  | threes | 76.4% vs 71.7% | 74.3% vs 72.6% |
+  | rebounds | 79.6% vs 78.1% | 79.6% vs 78.4% |
+
+  Log-loss improved on every stat. Half-lives of 400, 750, 1500 and 3000
+  were tried; 400 and 750 were within noise of each other, so the steadier
+  one was kept. After the change, rebounds, assists and threes pass the
+  health gate. Points stay paused: their 90%+ calls hit 84%, mostly
+  because a player's minutes can collapse (blowouts, early exits).
 * A stat is used only after 2,000 out-of-sample games.
 
 On a simulated league, the raw negative-binomial probabilities were
@@ -449,6 +476,19 @@ sampling error.
 
   ESPN prices are used only when the evidence is decisive and the two checks
   do not disagree.
+* **Milestone ladders are checked.** ESPN can list two "X+" ladders for the
+  same player and stat under the same type, with no field telling them
+  apart. Seen live: a 12.5-rebound player had "2+ … 8+" (a part-game
+  market: 6+ at +186) next to the full game's "6+ … 20+" (6+ at −3800).
+  Items are split into ladders where the target stops rising. A ladder is
+  kept only if:
+  * its chances fall as the target rises;
+  * it agrees with that player's full-game over/under (targets below the
+    main line likelier than the line's sides, targets above it less
+    likely, 10-point tolerance);
+  * no other kept ladder prices the same target differently.
+
+  With no full-game over/under to check against, a ladder is not used.
 * **Sanity filter.** A leg whose model chance is more than 20 points away
   from the books' no-vig chance is dropped, never bet. Books are rarely that
   wrong on a player prop; a gap that size means a misread or stale price, a
