@@ -9828,8 +9828,10 @@
    "market check: model 71.7% vs books 70.0% -> 70.5% (keeps 28% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-07T07:14:06+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "withdrawn",
+  "profit": null,
+  "withdrawn_at": "2026-11-07T18:48:55+00:00",
+  "note": "Withdrawn before start: probability 66.4% below 70%"
  },
  {
   "id": "confidence:2026-11-07:NBA-20261107-BKN-ATL-19:moneyline:home",
@@ -9945,7 +9947,7 @@
   "published_at": "2026-11-07T07:16:54+00:00",
   "status": "pending",
   "profit": null,
-  "p_now": 0.5252
+  "p_now": 0.5197
  },
  {
   "id": "value:2026-11-07:NHL-20261107-VAN-EDM-22:moneyline:home",
@@ -10068,8 +10070,10 @@
    "market check: model 78.5% vs books 66.3% -> 70.4% (keeps 30% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-07T11:55:23+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "withdrawn",
+  "profit": null,
+  "withdrawn_at": "2026-11-07T18:48:55+00:00",
+  "note": "Withdrawn before start: probability 69.2% below 70%"
  },
  {
   "id": "confidence:2026-11-07:NBA-20261107-SA-POR-22:moneyline:away",
@@ -10107,7 +10111,9 @@
    "market check: model 78.5% vs books 66.3% -> 70.4% (keeps 30% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-07T11:55:23+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "withdrawn",
+  "profit": null,
+  "withdrawn_at": "2026-11-07T18:48:55+00:00",
+  "note": "Withdrawn before start: probability 69.2% below 70%"
  }
 ]
