@@ -9613,8 +9613,12 @@
    "market check: model 83.6% vs books 70.8% -> 74.9% (keeps 28% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-07T07:14:06+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.3731,
+  "graded_at": "2026-11-08T00:54:39+00:00",
+  "final": "DEN 114 \u2013 IND 102",
+  "close_price": -324.0,
+  "clv": 0.0359
  },
  {
   "id": "value:2026-11-07:NBA-20261107-HOU-PHX-21:moneyline:away",
@@ -9782,8 +9786,12 @@
    "market check: model 83.6% vs books 70.8% -> 74.9% (keeps 28% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-07T07:14:06+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.3731,
+  "graded_at": "2026-11-08T00:54:39+00:00",
+  "final": "DEN 114 \u2013 IND 102",
+  "close_price": -324.0,
+  "clv": 0.0359
  },
  {
   "id": "confidence:2026-11-07:NBA-20261107-ORL-GS-20:moneyline:home",
@@ -10048,7 +10056,7 @@
   "side": "away",
   "line": null,
   "price": -216.0,
-  "p": 0.704,
+  "p": 0.7048,
   "lower": 0.7021,
   "p_model": 0.7852,
   "upper": 0.706,
@@ -10070,10 +10078,10 @@
    "market check: model 78.5% vs books 66.3% -> 70.4% (keeps 30% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-07T11:55:23+00:00",
-  "status": "withdrawn",
+  "status": "pending",
   "profit": null,
   "withdrawn_at": "2026-11-07T18:48:55+00:00",
-  "note": "Withdrawn before start: probability 69.2% below 70%"
+  "note": "Reinstated after new information"
  },
  {
   "id": "confidence:2026-11-07:NBA-20261107-SA-POR-22:moneyline:away",
@@ -10089,7 +10097,7 @@
   "side": "away",
   "line": null,
   "price": -216.0,
-  "p": 0.704,
+  "p": 0.7048,
   "lower": 0.7021,
   "p_model": 0.7852,
   "upper": 0.706,
@@ -10111,9 +10119,9 @@
    "market check: model 78.5% vs books 66.3% -> 70.4% (keeps 30% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-07T11:55:23+00:00",
-  "status": "withdrawn",
+  "status": "pending",
   "profit": null,
   "withdrawn_at": "2026-11-07T18:48:55+00:00",
-  "note": "Withdrawn before start: probability 69.2% below 70%"
+  "note": "Reinstated after new information"
  }
 ]
