@@ -4244,42 +4244,42 @@ null,
 "moneyline",
 "home",
 null,
-0.6889,
+0.6905,
 0.7938
 ],
 [
 "moneyline",
 "away",
 null,
-0.3111,
+0.3095,
 0.2062
 ],
 [
 "spread",
 "home",
 -8.5,
-0.4061,
+0.4096,
 0.5
 ],
 [
 "spread",
 "away",
 -8.5,
-0.5939,
+0.5904,
 0.5
 ],
 [
 "total",
 "over",
 39.5,
-0.7171,
+0.7202,
 0.5045
 ],
 [
 "total",
 "under",
 39.5,
-0.2829,
+0.2798,
 0.4955
 ]
 ],
@@ -4566,50 +4566,50 @@ null,
 },
 "NFL-20261108-GB-NE-16": {
 "away_ml": 142.0,
-"away_spread_price": -108.0,
+"away_spread_price": -105.0,
 "home_ml": -170.0,
-"home_spread_price": -112.0,
+"home_spread_price": -115.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.6031,
+0.6018,
 0.6082
 ],
 [
 "moneyline",
 "away",
 null,
-0.3969,
+0.3982,
 0.3918
 ],
 [
 "spread",
 "home",
 -3.0,
-0.5342,
-0.5045
+0.5343,
+0.5113
 ],
 [
 "spread",
 "away",
 -3.0,
-0.4658,
-0.4955
+0.4657,
+0.4887
 ],
 [
 "total",
 "over",
 44.5,
-0.4406,
+0.437,
 0.5045
 ],
 [
 "total",
 "under",
 44.5,
-0.5594,
+0.563,
 0.4955
 ]
 ],
@@ -4620,57 +4620,57 @@ null,
 "under_price": -108.0
 },
 "NFL-20261108-HOU-LAC-16": {
-"away_ml": -245.0,
+"away_ml": -230.0,
 "away_spread_price": -108.0,
-"home_ml": 200.0,
+"home_ml": 190.0,
 "home_spread_price": -112.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.2758,
-0.3116
+0.2814,
+0.3239
 ],
 [
 "moneyline",
 "away",
 null,
-0.7242,
-0.6884
+0.7186,
+0.6761
 ],
 [
 "spread",
 "home",
-6.0,
-0.5552,
+5.5,
+0.5444,
 0.5045
 ],
 [
 "spread",
 "away",
-6.0,
-0.4448,
+5.5,
+0.4556,
 0.4955
 ],
 [
 "total",
 "over",
 40.5,
-0.4981,
+0.4937,
 0.5
 ],
 [
 "total",
 "under",
 40.5,
-0.5019,
+0.5063,
 0.5
 ]
 ],
 "over_price": -110.0,
 "source": "Draft Kings",
-"spread": 6.0,
+"spread": 5.5,
 "total": 40.5,
 "under_price": -110.0
 },
@@ -4730,59 +4730,59 @@ null,
 "under_price": -108.0
 },
 "NFL-20261108-LV-SF-16": {
-"away_ml": 360.0,
-"away_spread_price": -105.0,
-"home_ml": -470.0,
-"home_spread_price": -115.0,
+"away_ml": 340.0,
+"away_spread_price": -110.0,
+"home_ml": -440.0,
+"home_spread_price": -112.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.7803,
-0.8036
+0.7757,
+0.7938
 ],
 [
 "moneyline",
 "away",
 null,
-0.2197,
-0.1964
+0.2243,
+0.2062
 ],
 [
 "spread",
 "home",
--9.5,
-0.4631,
-0.5113
+-8.5,
+0.4872,
+0.5022
 ],
 [
 "spread",
 "away",
--9.5,
-0.5369,
-0.4887
+-8.5,
+0.5128,
+0.4978
 ],
 [
 "total",
 "over",
 51.5,
-0.4501,
-0.5227
+0.4481,
+0.5182
 ],
 [
 "total",
 "under",
 51.5,
-0.5499,
-0.4773
+0.5519,
+0.4818
 ]
 ],
-"over_price": -120.0,
+"over_price": -118.0,
 "source": "Draft Kings",
-"spread": -9.5,
+"spread": -8.5,
 "total": 51.5,
-"under_price": 100.0
+"under_price": -102.0
 },
 "NFL-20261108-NYG-PHI-13": {
 "away_ml": -162.0,
@@ -4895,51 +4895,51 @@ null,
 "under_price": -118.0
 },
 "NFL-20261108-TB-CHI-20": {
-"away_ml": 215.0,
+"away_ml": 220.0,
 "away_spread_price": -108.0,
-"home_ml": -265.0,
+"home_ml": -270.0,
 "home_spread_price": -112.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.6314,
-0.7043
+0.6308,
+0.7086
 ],
 [
 "moneyline",
 "away",
 null,
-0.3686,
-0.2957
+0.3692,
+0.2914
 ],
 [
 "spread",
 "home",
 -6.0,
-0.3984,
+0.3941,
 0.5045
 ],
 [
 "spread",
 "away",
 -6.0,
-0.6016,
+0.6059,
 0.4955
 ],
 [
 "total",
 "over",
 47.5,
-0.4415,
+0.442,
 0.4955
 ],
 [
 "total",
 "under",
 47.5,
-0.5585,
+0.558,
 0.5045
 ]
 ],
@@ -4950,10 +4950,10 @@ null,
 "under_price": -112.0
 },
 "NFL-20261109-BUF-MIN-20": {
-"away_ml": -170.0,
-"away_spread_price": -115.0,
-"home_ml": 142.0,
-"home_spread_price": -105.0,
+"away_ml": -175.0,
+"away_spread_price": -118.0,
+"home_ml": 145.0,
+"home_spread_price": -102.0,
 "over_price": -118.0,
 "source": "Draft Kings",
 "spread": 3.0,

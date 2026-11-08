@@ -10706,8 +10706,10 @@
    "market check: model 72.5% vs books 68.8% -> 70.6% (keeps 47% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-08T07:25:47+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "withdrawn",
+  "profit": null,
+  "withdrawn_at": "2026-11-08T18:50:38+00:00",
+  "note": "Withdrawn before start: probability 69.7% below 70%"
  },
  {
   "id": "parlay:2026-11-08:4f79325d745c",
@@ -10739,7 +10741,10 @@
     "lo": 0.632,
     "hi": 0.6986,
     "fair": 0.6141,
-    "status": "pending"
+    "status": "won",
+    "profit": 0.5714,
+    "graded_at": "2026-11-08T18:50:38+00:00",
+    "final": "CIN 34 \u2013 ATL 17"
    },
    {
     "league": "NBA",
@@ -10781,5 +10786,44 @@
   "status": "pending",
   "profit": null,
   "p_now": 0.5355
+ },
+ {
+  "id": "confidence:2026-11-08:NBA-20261108-LAL-DET-18:moneyline:home",
+  "tier": "confidence",
+  "date": "2026-11-08",
+  "league": "NBA",
+  "game_id": "NBA-20261108-LAL-DET-18",
+  "start": "2026-11-08T23:00:00",
+  "home": "DET",
+  "away": "LAL",
+  "label": "DET ML",
+  "market": "moneyline",
+  "side": "home",
+  "line": null,
+  "price": -269.0,
+  "p": 0.7174,
+  "lower": 0.7161,
+  "p_model": 0.7358,
+  "upper": 0.7189,
+  "fair": 0.7082,
+  "edge": 0.0092,
+  "ev": -0.0158,
+  "value_line": -245,
+  "stake": 0.0,
+  "reasons": [
+   "calibrated P(win)=71.7% \u2265 70%",
+   "80% credible band 71.6%\u201371.9% (lower \u2265 62%)",
+   "price -269 needs 72.9%; EV -1.6% per unit",
+   "no-vig market 70.8% \u2192 edge +0.9%",
+   "home-win components: kalman 65.3%, elo 68.8%, pattern 65.3%",
+   "adjustments: news_margin_mean -0.82, rest +0.64, travel +0.59, timezones +0.50",
+   "news: Jalen Duren (DET, out) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Isaiah Joe (DET, out, G) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Luka Doncic (LAL, out) P(plays)=10% impact\u22480.80\u00b10.80",
+   "market check: model 73.6% vs books 70.8% -> 71.7% (keeps 33% of the model's disagreement, learned from graded games)"
+  ],
+  "published_at": "2026-11-08T18:50:32+00:00",
+  "status": "pending",
+  "profit": null
  }
 ]
