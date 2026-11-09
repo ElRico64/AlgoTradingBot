@@ -4895,57 +4895,57 @@ null,
 "under_price": -118.0
 },
 "NFL-20261108-TB-CHI-20": {
-"away_ml": 220.0,
-"away_spread_price": -102.0,
-"home_ml": -270.0,
-"home_spread_price": -118.0,
+"away_ml": 235.0,
+"away_spread_price": -108.0,
+"home_ml": -290.0,
+"home_spread_price": -112.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.6321,
-0.7086
+0.5494,
+0.7225
 ],
 [
 "moneyline",
 "away",
 null,
-0.3679,
-0.2914
+0.4506,
+0.2775
 ],
 [
 "spread",
 "home",
--6.0,
-0.397,
-0.5182
+-6.5,
+0.3092,
+0.5045
 ],
 [
 "spread",
 "away",
--6.0,
-0.603,
-0.4818
+-6.5,
+0.6908,
+0.4955
 ],
 [
 "total",
 "over",
 47.5,
-0.4425,
+0.4463,
 0.4818
 ],
 [
 "total",
 "under",
 47.5,
-0.5575,
+0.5537,
 0.5182
 ]
 ],
 "over_price": -102.0,
 "source": "DraftKings",
-"spread": -6.0,
+"spread": -6.5,
 "total": 47.5,
 "under_price": -118.0
 },

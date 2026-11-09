@@ -10569,8 +10569,12 @@
    "market check: model 78.3% vs books 81.2% -> 79.9% (keeps 47% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-08T07:25:47+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.2,
+  "graded_at": "2026-11-09T01:13:28+00:00",
+  "final": "LV 17 \u2013 SF 38",
+  "close_price": -440.0,
+  "clv": -0.0185
  },
  {
   "id": "confidence:2026-11-08:NFL-20261108-ARI-SEA-16:moneyline:home",
@@ -10622,8 +10626,12 @@
    "market check: model 68.4% vs books 79.9% -> 74.9% (keeps 47% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-08T07:25:47+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.2198,
+  "graded_at": "2026-11-09T01:13:28+00:00",
+  "final": "ARI 3 \u2013 SEA 17",
+  "close_price": -440.0,
+  "clv": -0.005
  },
  {
   "id": "confidence:2026-11-08:NFL-20261108-DET-MIA-13:moneyline:away",
