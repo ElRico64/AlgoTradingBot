@@ -11173,8 +11173,10 @@
    "market check: model 80.4% vs books 76.2% -> 77.6% (keeps 33% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-09T08:00:41+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "withdrawn",
+  "profit": null,
+  "withdrawn_at": "2026-11-09T23:26:56+00:00",
+  "note": "Withdrawn before start: probability 61.0% below 70%; too uncertain: lower bound 60.6% below 62%"
  },
  {
   "id": "parlay:2026-11-09:f70b9f08f928",
@@ -11247,6 +11249,6 @@
   "published_at": "2026-11-09T08:01:16+00:00",
   "status": "pending",
   "profit": null,
-  "p_now": 0.5386
+  "p_now": 0.5508
  }
 ]

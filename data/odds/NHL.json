@@ -15510,51 +15510,51 @@ null,
 "under_price": -115.0
 },
 "NHL-20261109-NYI-SJ-22": {
-"away_ml": -135.0,
-"away_spread_price": 180.0,
-"home_ml": 114.0,
-"home_spread_price": -218.0,
+"away_ml": -142.0,
+"away_spread_price": 170.0,
+"home_ml": 120.0,
+"home_spread_price": -205.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.4495,
-0.4464
+0.4352,
+0.4339
 ],
 [
 "moneyline",
 "away",
 null,
-0.5505,
-0.5536
+0.5648,
+0.5661
 ],
 [
 "spread",
 "home",
 1.5,
-0.7461,
-0.6642
+0.7494,
+0.6509
 ],
 [
 "spread",
 "away",
 1.5,
-0.2539,
-0.3358
+0.2506,
+0.3491
 ],
 [
 "total",
 "over",
 6.5,
-0.4752,
+0.4725,
 0.4818
 ],
 [
 "total",
 "under",
 6.5,
-0.5248,
+0.5275,
 0.5182
 ]
 ],
@@ -15565,51 +15565,51 @@ null,
 "under_price": -118.0
 },
 "NHL-20261109-NYR-EDM-20": {
-"away_ml": 130.0,
-"away_spread_price": -198.0,
-"home_ml": -155.0,
-"home_spread_price": 164.0,
+"away_ml": 136.0,
+"away_spread_price": -185.0,
+"home_ml": -162.0,
+"home_spread_price": 154.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.6509,
-0.5865
+0.6657,
+0.5973
 ],
 [
 "moneyline",
 "away",
 null,
-0.3491,
-0.4135
+0.3343,
+0.4027
 ],
 [
 "spread",
 "home",
 -1.5,
-0.3102,
-0.3572
+0.3125,
+0.3723
 ],
 [
 "spread",
 "away",
 -1.5,
-0.6898,
-0.6428
+0.6875,
+0.6277
 ],
 [
 "total",
 "over",
 6.5,
-0.5054,
+0.4982,
 0.5045
 ],
 [
 "total",
 "under",
 6.5,
-0.4946,
+0.5018,
 0.4955
 ]
 ],
@@ -15629,42 +15629,42 @@ null,
 "moneyline",
 "home",
 null,
-0.4418,
+0.4375,
 0.4464
 ],
 [
 "moneyline",
 "away",
 null,
-0.5582,
+0.5625,
 0.5536
 ],
 [
 "spread",
 "home",
 1.5,
-0.7369,
+0.729,
 0.6642
 ],
 [
 "spread",
 "away",
 1.5,
-0.2631,
+0.271,
 0.3358
 ],
 [
 "total",
 "over",
 6.5,
-0.5009,
+0.494,
 0.4555
 ],
 [
 "total",
 "under",
 6.5,
-0.4991,
+0.506,
 0.5445
 ]
 ],
