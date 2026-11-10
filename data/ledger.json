@@ -10920,8 +10920,12 @@
    "market check: model 88.0% vs books 76.0% -> 80.6% (keeps 33% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-09T08:00:41+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "lost",
+  "profit": -1.0,
+  "graded_at": "2026-11-10T03:48:25+00:00",
+  "final": "CLE 112 \u2013 CHA 124",
+  "close_price": -353.0,
+  "clv": -0.0015
  },
  {
   "id": "value:2026-11-09:NBA-20261109-SA-PHX-21:moneyline:away",
@@ -11001,8 +11005,12 @@
    "market check: model 86.2% vs books 80.4% -> 82.5% (keeps 33% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-09T08:00:41+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.2137,
+  "graded_at": "2026-11-10T03:48:25+00:00",
+  "final": "WSH 111 \u2013 DET 122",
+  "close_price": -411.0,
+  "clv": -0.0196
  },
  {
   "id": "confidence:2026-11-09:NBA-20261109-CLE-CHA-19:moneyline:away",
@@ -11046,8 +11054,12 @@
    "market check: model 88.0% vs books 76.0% -> 80.6% (keeps 33% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-09T08:00:41+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "lost",
+  "profit": -1.0,
+  "graded_at": "2026-11-10T03:48:25+00:00",
+  "final": "CLE 112 \u2013 CHA 124",
+  "close_price": -353.0,
+  "clv": -0.0015
  },
  {
   "id": "confidence:2026-11-09:NBA-20261109-SA-PHX-21:moneyline:away",
@@ -11208,7 +11220,10 @@
     "lo": 0.8036,
     "hi": 0.8096,
     "fair": 0.7601,
-    "status": "pending"
+    "status": "lost",
+    "profit": -1.0,
+    "graded_at": "2026-11-10T03:48:30+00:00",
+    "final": "CLE 112 \u2013 CHA 124"
    },
    {
     "league": "NFL",
@@ -11247,8 +11262,9 @@
    "the sportsbooks' prices make it 47% likely; the model says 54%"
   ],
   "published_at": "2026-11-09T08:01:16+00:00",
-  "status": "pending",
-  "profit": null,
-  "p_now": 0.5508
+  "status": "lost",
+  "profit": -1.0,
+  "p_now": 0.5508,
+  "final": "CLE ML lost \u00b7 BUF ML pending"
  }
 ]
