@@ -15950,51 +15950,51 @@ null,
 "under_price": -115.0
 },
 "NHL-20261110-NSH-LA-22": {
-"away_ml": 110.0,
+"away_ml": 105.0,
 "away_spread_price": -230.0,
-"home_ml": -130.0,
+"home_ml": -125.0,
 "home_spread_price": 190.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.585,
-0.5445
+0.5714,
+0.5339
 ],
 [
 "moneyline",
 "away",
 null,
-0.415,
-0.4555
+0.4286,
+0.4661
 ],
 [
 "spread",
 "home",
 -1.5,
-0.2865,
+0.2856,
 0.3239
 ],
 [
 "spread",
 "away",
 -1.5,
-0.7135,
+0.7144,
 0.6761
 ],
 [
 "total",
 "over",
 6.5,
-0.454,
+0.4518,
 0.4661
 ],
 [
 "total",
 "under",
 6.5,
-0.546,
+0.5482,
 0.5339
 ]
 ],

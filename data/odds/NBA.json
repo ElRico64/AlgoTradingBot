@@ -8534,105 +8534,105 @@ null,
 "moneyline",
 "home",
 null,
-0.5944,
+0.5943,
 0.6128
 ],
 [
 "moneyline",
 "away",
 null,
-0.4056,
+0.4057,
 0.3872
 ],
 [
 "spread",
 "home",
 -3.5,
-0.4293,
+0.4286,
 0.5045
 ],
 [
 "spread",
 "away",
 -3.5,
-0.5707,
+0.5714,
 0.4955
 ],
 [
 "total",
 "over",
-224.5,
-0.5071,
-0.4955
+223.5,
+0.5236,
+0.5045
 ],
 [
 "total",
 "under",
-224.5,
-0.4929,
-0.5045
+223.5,
+0.4764,
+0.4955
 ]
 ],
-"over_price": -108.0,
+"over_price": -112.0,
 "source": "DraftKings",
 "spread": -3.5,
-"total": 224.5,
-"under_price": -112.0
+"total": 223.5,
+"under_price": -108.0
 },
 "NBA-20261110-MIA-UTAH-21": {
-"away_ml": -438.0,
-"away_spread_price": -105.0,
-"home_ml": 341.0,
-"home_spread_price": -115.0,
+"away_ml": -358.0,
+"away_spread_price": -115.0,
+"home_ml": 286.0,
+"home_spread_price": -105.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.1077,
-0.2063
+0.134,
+0.2387
 ],
 [
 "moneyline",
 "away",
 null,
-0.8923,
-0.7937
+0.866,
+0.7613
 ],
 [
 "spread",
 "home",
-9.5,
-0.7073,
-0.5113
+8.5,
+0.671,
+0.4887
 ],
 [
 "spread",
 "away",
-9.5,
-0.2927,
-0.4887
+8.5,
+0.329,
+0.5113
 ],
 [
 "total",
 "over",
 227.5,
-0.7537,
-0.4955
+0.7506,
+0.4977
 ],
 [
 "total",
 "under",
 227.5,
-0.2463,
-0.5045
+0.2494,
+0.5023
 ]
 ],
-"over_price": -108.0,
+"over_price": -109.0,
 "source": "DraftKings",
-"spread": 9.5,
+"spread": 8.5,
 "total": 227.5,
-"under_price": -112.0
+"under_price": -111.0
 },
 "NBA-20261110-MIL-NY-19": {
 "away_ml": 670.0,
@@ -8699,104 +8699,104 @@ null,
 "moneyline",
 "home",
 null,
-0.38,
+0.3796,
 0.4649
 ],
 [
 "moneyline",
 "away",
 null,
-0.62,
+0.6204,
 0.5351
 ],
 [
 "spread",
 "home",
 1.5,
-0.4509,
+0.4474,
 0.4977
 ],
 [
 "spread",
 "away",
 1.5,
-0.5491,
+0.5526,
 0.5023
 ],
 [
 "total",
 "over",
 226.5,
-0.4443,
-0.4932
+0.4414,
+0.5
 ],
 [
 "total",
 "under",
 226.5,
-0.5557,
-0.5068
+0.5586,
+0.5
 ]
 ],
-"over_price": -107.0,
+"over_price": -110.0,
 "source": "DraftKings",
 "spread": 1.5,
 "total": 226.5,
-"under_price": -113.0
+"under_price": -110.0
 },
 "NBA-20261110-ORL-SAC-22": {
-"away_ml": -237.0,
-"away_spread_price": -109.0,
-"home_ml": 196.0,
-"home_spread_price": -111.0,
+"away_ml": -217.0,
+"away_spread_price": -112.0,
+"home_ml": 180.0,
+"home_spread_price": -108.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.2052,
-0.3173
+0.2266,
+0.3363
 ],
 [
 "moneyline",
 "away",
 null,
-0.7948,
-0.6827
+0.7734,
+0.6637
 ],
 [
 "spread",
 "home",
-6.5,
-0.5667,
-0.5023
+5.5,
+0.5584,
+0.4955
 ],
 [
 "spread",
 "away",
-6.5,
-0.4333,
-0.4977
+5.5,
+0.4416,
+0.5045
 ],
 [
 "total",
 "over",
 222.5,
-0.5974,
-0.4932
+0.6007,
+0.4887
 ],
 [
 "total",
 "under",
 222.5,
-0.4026,
-0.5068
+0.3993,
+0.5113
 ]
 ],
-"over_price": -107.0,
+"over_price": -105.0,
 "source": "DraftKings",
-"spread": 6.5,
+"spread": 5.5,
 "total": 222.5,
-"under_price": -113.0
+"under_price": -115.0
 }
 }
