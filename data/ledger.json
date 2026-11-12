@@ -12000,8 +12000,12 @@
    "market check: model 82.2% vs books 73.2% -> 77.0% (keeps 39% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-12T08:22:59+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.3279,
+  "graded_at": "2026-11-12T21:29:10+00:00",
+  "final": "CAR 4 \u2013 SEA 1",
+  "close_price": -305.0,
+  "clv": 0.0
  },
  {
   "id": "confidence:2026-11-12:NHL-20261112-CAR-SEA-12:moneyline:away",
@@ -12041,8 +12045,12 @@
    "market check: model 82.2% vs books 73.2% -> 77.0% (keeps 39% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-12T08:22:59+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.3279,
+  "graded_at": "2026-11-12T21:29:10+00:00",
+  "final": "CAR 4 \u2013 SEA 1",
+  "close_price": -305.0,
+  "clv": 0.0
  },
  {
   "id": "value:2026-11-12:NBA-20261112-DET-WSH-19:moneyline:away",
@@ -12202,7 +12210,10 @@
     "lo": 0.7677,
     "hi": 0.7729,
     "fair": 0.7316,
-    "status": "pending"
+    "status": "won",
+    "profit": 0.3279,
+    "graded_at": "2026-11-12T21:29:19+00:00",
+    "final": "CAR 4 \u2013 SEA 1"
    },
    {
     "league": "NBA",
@@ -12303,7 +12314,9 @@
    "market check: model 71.9% vs books 68.9% -> 70.0% (keeps 39% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-12T13:59:01+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "withdrawn",
+  "profit": null,
+  "withdrawn_at": "2026-11-12T21:29:14+00:00",
+  "note": "Withdrawn before start: probability 68.5% below 70%"
  }
 ]
