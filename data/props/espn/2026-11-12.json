@@ -1,0 +1,1369 @@
+{
+"NBA-20261112-CHA-PHX-21": [
+{
+"line": 7.5,
+"player_id": "2583632",
+"prices": [
+-110.0,
+-115.0
+],
+"stat": "pts"
+},
+{
+"line": 17.5,
+"player_id": "3135045",
+"prices": [
+-109.0,
+-117.0
+],
+"stat": "pts"
+},
+{
+"line": 24.5,
+"player_id": "3136193",
+"prices": [
+-107.0,
+-120.0
+],
+"stat": "pts"
+},
+{
+"line": 14.5,
+"player_id": "3155526",
+"prices": [
+-123.0,
+-104.0
+],
+"stat": "pts"
+},
+{
+"line": 15.5,
+"player_id": "4066383",
+"prices": [
+-101.0,
+-126.0
+],
+"stat": "pts"
+},
+{
+"line": 7.5,
+"player_id": "4278402",
+"prices": [
+-104.0,
+-122.0
+],
+"stat": "pts"
+},
+{
+"line": 8.5,
+"player_id": "4278585",
+"prices": [
+102.0,
+-130.0
+],
+"stat": "pts"
+},
+{
+"line": 13.5,
+"player_id": "4395651",
+"prices": [
+-120.0,
+-106.0
+],
+"stat": "pts"
+},
+{
+"line": 19.5,
+"player_id": "4396971",
+"prices": [
+-124.0,
+-103.0
+],
+"stat": "pts"
+},
+{
+"line": 8.5,
+"player_id": "4433249",
+"prices": [
+-102.0,
+-125.0
+],
+"stat": "pts"
+},
+{
+"line": 13.5,
+"player_id": "4437244",
+"prices": [
+-117.0,
+-109.0
+],
+"stat": "pts"
+},
+{
+"line": 5.5,
+"player_id": "4576060",
+"prices": [
+-123.0,
+-104.0
+],
+"stat": "pts"
+},
+{
+"line": 6.5,
+"player_id": "4601023",
+"prices": [
+-114.0,
+-112.0
+],
+"stat": "pts"
+},
+{
+"line": 8.5,
+"player_id": "4602025",
+"prices": [
+-106.0,
+-120.0
+],
+"stat": "pts"
+},
+{
+"line": 6.5,
+"player_id": "5203685",
+"prices": [
+-102.0,
+-126.0
+],
+"stat": "pts"
+},
+{
+"line": 3.5,
+"player_id": "3135045",
+"prices": [
+-151.0,
+114.0
+],
+"stat": "ast"
+},
+{
+"line": 4.5,
+"player_id": "3136193",
+"prices": [
+-127.0,
+-103.0
+],
+"stat": "ast"
+},
+{
+"line": 1.5,
+"player_id": "3155526",
+"prices": [
+-178.0,
+135.0
+],
+"stat": "ast"
+},
+{
+"line": 2.5,
+"player_id": "4066383",
+"prices": [
+-120.0,
+-110.0
+],
+"stat": "ast"
+},
+{
+"line": 3.5,
+"player_id": "4278585",
+"prices": [
+130.0,
+-172.0
+],
+"stat": "ast"
+},
+{
+"line": 3.5,
+"player_id": "4395651",
+"prices": [
+101.0,
+-134.0
+],
+"stat": "ast"
+},
+{
+"line": 2.5,
+"player_id": "4396971",
+"prices": [
+-110.0,
+-120.0
+],
+"stat": "ast"
+},
+{
+"line": 1.5,
+"player_id": "4433249",
+"prices": [
+-151.0,
+115.0
+],
+"stat": "ast"
+},
+{
+"line": 2.5,
+"player_id": "4437244",
+"prices": [
+-157.0,
+119.0
+],
+"stat": "ast"
+},
+{
+"line": 2.5,
+"player_id": "4601023",
+"prices": [
+121.0,
+-160.0
+],
+"stat": "ast"
+},
+{
+"line": 2.5,
+"player_id": "4602025",
+"prices": [
+-147.0,
+111.0
+],
+"stat": "ast"
+},
+{
+"line": 3.5,
+"player_id": "2583632",
+"prices": [
+-117.0,
+-112.0
+],
+"stat": "reb"
+},
+{
+"line": 3.5,
+"player_id": "3135045",
+"prices": [
+110.0,
+-144.0
+],
+"stat": "reb"
+},
+{
+"line": 3.5,
+"player_id": "3136193",
+"prices": [
+115.0,
+-152.0
+],
+"stat": "reb"
+},
+{
+"line": 3.5,
+"player_id": "3155526",
+"prices": [
+-134.0,
+102.0
+],
+"stat": "reb"
+},
+{
+"line": 6.5,
+"player_id": "4066383",
+"prices": [
+-131.0,
+-101.0
+],
+"stat": "reb"
+},
+{
+"line": 3.5,
+"player_id": "4278402",
+"prices": [
+115.0,
+-151.0
+],
+"stat": "reb"
+},
+{
+"line": 2.5,
+"player_id": "4278585",
+"prices": [
+-131.0,
+100.0
+],
+"stat": "reb"
+},
+{
+"line": 2.5,
+"player_id": "4395651",
+"prices": [
+-121.0,
+-109.0
+],
+"stat": "reb"
+},
+{
+"line": 8.5,
+"player_id": "4396971",
+"prices": [
+-118.0,
+-111.0
+],
+"stat": "reb"
+},
+{
+"line": 8.5,
+"player_id": "4433249",
+"prices": [
+-137.0,
+104.0
+],
+"stat": "reb"
+},
+{
+"line": 3.5,
+"player_id": "4437244",
+"prices": [
+-147.0,
+112.0
+],
+"stat": "reb"
+},
+{
+"line": 4.5,
+"player_id": "4576060",
+"prices": [
+-109.0,
+-120.0
+],
+"stat": "reb"
+},
+{
+"line": 3.5,
+"player_id": "4602025",
+"prices": [
+-145.0,
+110.0
+],
+"stat": "reb"
+},
+{
+"line": 5.5,
+"player_id": "5203685",
+"prices": [
+105.0,
+-138.0
+],
+"stat": "reb"
+},
+{
+"line": 1.5,
+"player_id": "2583632",
+"prices": [
+-160.0,
+121.0
+],
+"stat": "fg3m"
+},
+{
+"line": 3.5,
+"player_id": "3135045",
+"prices": [
+103.0,
+-135.0
+],
+"stat": "fg3m"
+},
+{
+"line": 1.5,
+"player_id": "3136193",
+"prices": [
+-153.0,
+116.0
+],
+"stat": "fg3m"
+},
+{
+"line": 1.5,
+"player_id": "3155526",
+"prices": [
+-139.0,
+106.0
+],
+"stat": "fg3m"
+},
+{
+"line": 1.5,
+"player_id": "4066383",
+"prices": [
+-151.0,
+114.0
+],
+"stat": "fg3m"
+},
+{
+"line": 1.5,
+"player_id": "4278402",
+"prices": [
+111.0,
+-146.0
+],
+"stat": "fg3m"
+},
+{
+"line": 1.5,
+"player_id": "4278585",
+"prices": [
+-152.0,
+115.0
+],
+"stat": "fg3m"
+},
+{
+"line": 1.5,
+"player_id": "4395651",
+"prices": [
+-180.0,
+136.0
+],
+"stat": "fg3m"
+},
+{
+"line": 2.5,
+"player_id": "4396971",
+"prices": [
+-112.0,
+-117.0
+],
+"stat": "fg3m"
+},
+{
+"line": 1.5,
+"player_id": "4437244",
+"prices": [
+-101.0,
+-130.0
+],
+"stat": "fg3m"
+},
+{
+"line": 1.5,
+"player_id": "4602025",
+"prices": [
+-108.0,
+-122.0
+],
+"stat": "fg3m"
+}
+],
+"NBA-20261112-DAL-MIN-20": [
+{
+"line": 21.5,
+"player_id": "6442",
+"prices": [
+-107.0,
+-119.0
+],
+"stat": "pts"
+},
+{
+"line": 9.5,
+"player_id": "3032976",
+"prices": [
+-132.0,
+103.0
+],
+"stat": "pts"
+},
+{
+"line": 3.5,
+"player_id": "3138160",
+"prices": [
+-122.0,
+-104.0
+],
+"stat": "pts"
+},
+{
+"line": 7.5,
+"player_id": "4278049",
+"prices": [
+-131.0,
+102.0
+],
+"stat": "pts"
+},
+{
+"line": 13.5,
+"player_id": "4278078",
+"prices": [
+-103.0,
+-123.0
+],
+"stat": "pts"
+},
+{
+"line": 18.5,
+"player_id": "4397002",
+"prices": [
+-104.0,
+-123.0
+],
+"stat": "pts"
+},
+{
+"line": 17.5,
+"player_id": "4431671",
+"prices": [
+-123.0,
+-104.0
+],
+"stat": "pts"
+},
+{
+"line": 20.5,
+"player_id": "4432816",
+"prices": [
+-107.0,
+-119.0
+],
+"stat": "pts"
+},
+{
+"line": 13.5,
+"player_id": "4433247",
+"prices": [
+-117.0,
+-109.0
+],
+"stat": "pts"
+},
+{
+"line": 4.5,
+"player_id": "6442",
+"prices": [
+122.0,
+-161.0
+],
+"stat": "ast"
+},
+{
+"line": 1.5,
+"player_id": "3032976",
+"prices": [
+-107.0,
+-123.0
+],
+"stat": "ast"
+},
+{
+"line": 1.5,
+"player_id": "3138160",
+"prices": [
+126.0,
+-167.0
+],
+"stat": "ast"
+},
+{
+"line": 1.5,
+"player_id": "4278049",
+"prices": [
+142.0,
+-188.0
+],
+"stat": "ast"
+},
+{
+"line": 1.5,
+"player_id": "4278078",
+"prices": [
+102.0,
+-134.0
+],
+"stat": "ast"
+},
+{
+"line": 4.5,
+"player_id": "4397002",
+"prices": [
+-119.0,
+-110.0
+],
+"stat": "ast"
+},
+{
+"line": 6.5,
+"player_id": "4432816",
+"prices": [
+-114.0,
+-115.0
+],
+"stat": "ast"
+},
+{
+"line": 2.5,
+"player_id": "4433247",
+"prices": [
+-119.0,
+-111.0
+],
+"stat": "ast"
+},
+{
+"line": 6.5,
+"player_id": "5041939",
+"prices": [
+107.0,
+-141.0
+],
+"stat": "ast"
+},
+{
+"line": 3.5,
+"player_id": "6442",
+"prices": [
+-104.0,
+-126.0
+],
+"stat": "reb"
+},
+{
+"line": 11.5,
+"player_id": "3032976",
+"prices": [
+-105.0,
+-125.0
+],
+"stat": "reb"
+},
+{
+"line": 2.5,
+"player_id": "3138160",
+"prices": [
+110.0,
+-145.0
+],
+"stat": "reb"
+},
+{
+"line": 5.5,
+"player_id": "4278049",
+"prices": [
+-118.0,
+-112.0
+],
+"stat": "reb"
+},
+{
+"line": 6.5,
+"player_id": "4278078",
+"prices": [
+115.0,
+-152.0
+],
+"stat": "reb"
+},
+{
+"line": 3.5,
+"player_id": "4397002",
+"prices": [
+-151.0,
+114.0
+],
+"stat": "reb"
+},
+{
+"line": 4.5,
+"player_id": "4431671",
+"prices": [
+-148.0,
+112.0
+],
+"stat": "reb"
+},
+{
+"line": 3.5,
+"player_id": "4432816",
+"prices": [
+-154.0,
+117.0
+],
+"stat": "reb"
+},
+{
+"line": 5.5,
+"player_id": "4433247",
+"prices": [
+-122.0,
+-107.0
+],
+"stat": "reb"
+},
+{
+"line": 5.5,
+"player_id": "5041939",
+"prices": [
+-153.0,
+116.0
+],
+"stat": "reb"
+},
+{
+"line": 3.5,
+"player_id": "6442",
+"prices": [
+127.0,
+-168.0
+],
+"stat": "fg3m"
+},
+{
+"line": 0.5,
+"player_id": "3138160",
+"prices": [
+132.0,
+-175.0
+],
+"stat": "fg3m"
+},
+{
+"line": 1.5,
+"player_id": "4278078",
+"prices": [
+-149.0,
+113.0
+],
+"stat": "fg3m"
+},
+{
+"line": 1.5,
+"player_id": "4397002",
+"prices": [
+-151.0,
+115.0
+],
+"stat": "fg3m"
+},
+{
+"line": 1.5,
+"player_id": "4431671",
+"prices": [
+103.0,
+-136.0
+],
+"stat": "fg3m"
+},
+{
+"line": 3.5,
+"player_id": "4432816",
+"prices": [
+-101.0,
+-131.0
+],
+"stat": "fg3m"
+},
+{
+"line": 1.5,
+"player_id": "4433247",
+"prices": [
+104.0,
+-137.0
+],
+"stat": "fg3m"
+},
+{
+"line": 1.5,
+"player_id": "5041939",
+"prices": [
+116.0,
+-153.0
+],
+"stat": "fg3m"
+}
+],
+"NBA-20261112-DET-WSH-19": [
+{
+"line": 22.5,
+"player_id": "6583",
+"prices": [
+-116.0,
+-110.0
+],
+"stat": "pts"
+},
+{
+"line": 15.5,
+"player_id": "3157465",
+"prices": [
+-113.0,
+-113.0
+],
+"stat": "pts"
+},
+{
+"line": 12.5,
+"player_id": "3908845",
+"prices": [
+-107.0,
+-119.0
+],
+"stat": "pts"
+},
+{
+"line": 8.5,
+"player_id": "4066372",
+"prices": [
+-119.0,
+-107.0
+],
+"stat": "pts"
+},
+{
+"line": 16.5,
+"player_id": "4277905",
+"prices": [
+-111.0,
+-115.0
+],
+"stat": "pts"
+},
+{
+"line": 10.5,
+"player_id": "4278562",
+"prices": [
+-124.0,
+-103.0
+],
+"stat": "pts"
+},
+{
+"line": 24.5,
+"player_id": "4432166",
+"prices": [
+-107.0,
+-120.0
+],
+"stat": "pts"
+},
+{
+"line": 10.5,
+"player_id": "4684742",
+"prices": [
+-116.0,
+-109.0
+],
+"stat": "pts"
+},
+{
+"line": 14.5,
+"player_id": "5107199",
+"prices": [
+100.0,
+-128.0
+],
+"stat": "pts"
+},
+{
+"line": 16.5,
+"player_id": "5142718",
+"prices": [
+-115.0,
+-110.0
+],
+"stat": "pts"
+},
+{
+"line": 9.5,
+"player_id": "5160992",
+"prices": [
+-127.0,
+100.0
+],
+"stat": "pts"
+},
+{
+"line": 14.5,
+"player_id": "5174563",
+"prices": [
+-106.0,
+-121.0
+],
+"stat": "pts"
+},
+{
+"line": 7.5,
+"player_id": "5238230",
+"prices": [
+-111.0,
+-115.0
+],
+"stat": "pts"
+},
+{
+"line": 2.5,
+"player_id": "3157465",
+"prices": [
+131.0,
+-173.0
+],
+"stat": "ast"
+},
+{
+"line": 1.5,
+"player_id": "3908845",
+"prices": [
+124.0,
+-163.0
+],
+"stat": "ast"
+},
+{
+"line": 1.5,
+"player_id": "4278562",
+"prices": [
+-145.0,
+110.0
+],
+"stat": "ast"
+},
+{
+"line": 8.5,
+"player_id": "4432166",
+"prices": [
+-131.0,
+100.0
+],
+"stat": "ast"
+},
+{
+"line": 4.5,
+"player_id": "4684742",
+"prices": [
+104.0,
+-137.0
+],
+"stat": "ast"
+},
+{
+"line": 4.5,
+"player_id": "5107199",
+"prices": [
+-126.0,
+-104.0
+],
+"stat": "ast"
+},
+{
+"line": 10.5,
+"player_id": "6583",
+"prices": [
+-106.0,
+-124.0
+],
+"stat": "reb"
+},
+{
+"line": 2.5,
+"player_id": "3157465",
+"prices": [
+113.0,
+-149.0
+],
+"stat": "reb"
+},
+{
+"line": 6.5,
+"player_id": "3908845",
+"prices": [
+-122.0,
+-108.0
+],
+"stat": "reb"
+},
+{
+"line": 2.5,
+"player_id": "4277905",
+"prices": [
+-124.0,
+-106.0
+],
+"stat": "reb"
+},
+{
+"line": 7.5,
+"player_id": "4278562",
+"prices": [
+100.0,
+-132.0
+],
+"stat": "reb"
+},
+{
+"line": 5.5,
+"player_id": "4432166",
+"prices": [
+104.0,
+-137.0
+],
+"stat": "reb"
+},
+{
+"line": 7.5,
+"player_id": "4684742",
+"prices": [
+-106.0,
+-124.0
+],
+"stat": "reb"
+},
+{
+"line": 3.5,
+"player_id": "5107199",
+"prices": [
+112.0,
+-148.0
+],
+"stat": "reb"
+},
+{
+"line": 5.5,
+"player_id": "5142718",
+"prices": [
+-108.0,
+-122.0
+],
+"stat": "reb"
+},
+{
+"line": 6.5,
+"player_id": "5160992",
+"prices": [
+-128.0,
+-103.0
+],
+"stat": "reb"
+},
+{
+"line": 4.5,
+"player_id": "5174563",
+"prices": [
+-121.0,
+-109.0
+],
+"stat": "reb"
+},
+{
+"line": 0.5,
+"player_id": "6583",
+"prices": [
+-148.0,
+112.0
+],
+"stat": "fg3m"
+},
+{
+"line": 3.5,
+"player_id": "3157465",
+"prices": [
+-104.0,
+-127.0
+],
+"stat": "fg3m"
+},
+{
+"line": 0.5,
+"player_id": "3908845",
+"prices": [
+-211.0,
+158.0
+],
+"stat": "fg3m"
+},
+{
+"line": 1.5,
+"player_id": "4066372",
+"prices": [
+102.0,
+-135.0
+],
+"stat": "fg3m"
+},
+{
+"line": 2.5,
+"player_id": "4277905",
+"prices": [
+143.0,
+-190.0
+],
+"stat": "fg3m"
+},
+{
+"line": 2.5,
+"player_id": "4432166",
+"prices": [
+121.0,
+-159.0
+],
+"stat": "fg3m"
+},
+{
+"line": 1.5,
+"player_id": "5107199",
+"prices": [
+-110.0,
+-119.0
+],
+"stat": "fg3m"
+},
+{
+"line": 1.5,
+"player_id": "5142718",
+"prices": [
+178.0,
+-239.0
+],
+"stat": "fg3m"
+},
+{
+"line": 0.5,
+"player_id": "5160992",
+"prices": [
+-172.0,
+130.0
+],
+"stat": "fg3m"
+},
+{
+"line": 1.5,
+"player_id": "5174563",
+"prices": [
+-177.0,
+134.0
+],
+"stat": "fg3m"
+},
+{
+"line": 1.5,
+"player_id": "5238230",
+"prices": [
+125.0,
+-165.0
+],
+"stat": "fg3m"
+}
+],
+"NBA-20261112-TOR-PHI-19": [
+{
+"line": 16.5,
+"player_id": "1966",
+"prices": [
+-121.0,
+-105.0
+],
+"stat": "pts"
+},
+{
+"line": 19.5,
+"player_id": "3059318",
+"prices": [
+-112.0,
+-113.0
+],
+"stat": "pts"
+},
+{
+"line": 22.5,
+"player_id": "3917376",
+"prices": [
+-111.0,
+-114.0
+],
+"stat": "pts"
+},
+{
+"line": 23.5,
+"player_id": "4431678",
+"prices": [
+-122.0,
+-104.0
+],
+"stat": "pts"
+},
+{
+"line": 13.5,
+"player_id": "5124612",
+"prices": [
+-127.0,
+100.0
+],
+"stat": "pts"
+},
+{
+"line": 6.5,
+"player_id": "1966",
+"prices": [
+-113.0,
+-116.0
+],
+"stat": "ast"
+},
+{
+"line": 3.5,
+"player_id": "3059318",
+"prices": [
+112.0,
+-148.0
+],
+"stat": "ast"
+},
+{
+"line": 3.5,
+"player_id": "3917376",
+"prices": [
+-108.0,
+-121.0
+],
+"stat": "ast"
+},
+{
+"line": 5.5,
+"player_id": "4431678",
+"prices": [
+-149.0,
+113.0
+],
+"stat": "ast"
+},
+{
+"line": 3.5,
+"player_id": "5124612",
+"prices": [
+131.0,
+-173.0
+],
+"stat": "ast"
+},
+{
+"line": 7.5,
+"player_id": "1966",
+"prices": [
+112.0,
+-147.0
+],
+"stat": "reb"
+},
+{
+"line": 8.5,
+"player_id": "3059318",
+"prices": [
+-113.0,
+-116.0
+],
+"stat": "reb"
+},
+{
+"line": 6.5,
+"player_id": "3917376",
+"prices": [
+-121.0,
+-108.0
+],
+"stat": "reb"
+},
+{
+"line": 3.5,
+"player_id": "4431678",
+"prices": [
+-129.0,
+-102.0
+],
+"stat": "reb"
+},
+{
+"line": 5.5,
+"player_id": "5124612",
+"prices": [
+-142.0,
+108.0
+],
+"stat": "reb"
+},
+{
+"line": 1.5,
+"player_id": "1966",
+"prices": [
+144.0,
+-191.0
+],
+"stat": "fg3m"
+},
+{
+"line": 0.5,
+"player_id": "3059318",
+"prices": [
+-163.0,
+123.0
+],
+"stat": "fg3m"
+},
+{
+"line": 1.5,
+"player_id": "3917376",
+"prices": [
+-131.0,
+100.0
+],
+"stat": "fg3m"
+},
+{
+"line": 1.5,
+"player_id": "4395625",
+"prices": [
+103.0,
+-135.0
+],
+"stat": "fg3m"
+},
+{
+"line": 2.5,
+"player_id": "4395724",
+"prices": [
+103.0,
+-135.0
+],
+"stat": "fg3m"
+},
+{
+"line": 2.5,
+"player_id": "4431678",
+"prices": [
+-130.0,
+-101.0
+],
+"stat": "fg3m"
+},
+{
+"line": 2.5,
+"player_id": "4684272",
+"prices": [
+117.0,
+-155.0
+],
+"stat": "fg3m"
+},
+{
+"line": 1.5,
+"player_id": "5124612",
+"prices": [
+-139.0,
+106.0
+],
+"stat": "fg3m"
+}
+]
+}
