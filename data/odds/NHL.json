@@ -17004,14 +17004,14 @@ null,
 "moneyline",
 "home",
 null,
-0.6955,
+0.6956,
 0.6277
 ],
 [
 "moneyline",
 "away",
 null,
-0.3045,
+0.3044,
 0.3723
 ],
 [
@@ -17031,23 +17031,23 @@ null,
 [
 "total",
 "over",
-5.5,
-0.5249,
-0.5536
+6.5,
+0.4949,
+0.4464
 ],
 [
 "total",
 "under",
-5.5,
-0.4751,
-0.4464
+6.5,
+0.5051,
+0.5536
 ]
 ],
-"over_price": -135.0,
-"source": "DraftKings",
+"over_price": 114.0,
+"source": "Draft Kings",
 "spread": -1.5,
-"total": 5.5,
-"under_price": 114.0
+"total": 6.5,
+"under_price": -135.0
 },
 "NHL-20261113-NYR-VAN-21": {
 "away_ml": -225.0,
@@ -17099,7 +17099,7 @@ null,
 ]
 ],
 "over_price": -105.0,
-"source": "DraftKings",
+"source": "Draft Kings",
 "spread": 1.5,
 "total": 6.5,
 "under_price": -115.0
