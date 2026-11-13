@@ -16995,38 +16995,38 @@ null,
 "under_price": -130.0
 },
 "NHL-20261113-NSH-VGK-22": {
-"away_ml": 154.0,
-"away_spread_price": -162.0,
-"home_ml": -185.0,
-"home_spread_price": 136.0,
+"away_ml": 136.0,
+"away_spread_price": -180.0,
+"home_ml": -162.0,
+"home_spread_price": 150.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.6956,
-0.6277
+0.6575,
+0.5973
 ],
 [
 "moneyline",
 "away",
 null,
-0.3044,
-0.3723
+0.3425,
+0.4027
 ],
 [
 "spread",
 "home",
 -1.5,
-0.3832,
-0.4027
+0.3612,
+0.3786
 ],
 [
 "spread",
 "away",
 -1.5,
-0.6168,
-0.5973
+0.6388,
+0.6214
 ],
 [
 "total",
@@ -17044,7 +17044,7 @@ null,
 ]
 ],
 "over_price": 114.0,
-"source": "Draft Kings",
+"source": "DraftKings",
 "spread": -1.5,
 "total": 6.5,
 "under_price": -135.0
@@ -17059,14 +17059,14 @@ null,
 "moneyline",
 "home",
 null,
-0.2583,
+0.2585,
 0.3293
 ],
 [
 "moneyline",
 "away",
 null,
-0.7417,
+0.7415,
 0.6707
 ],
 [
@@ -17099,7 +17099,7 @@ null,
 ]
 ],
 "over_price": -105.0,
-"source": "Draft Kings",
+"source": "DraftKings",
 "spread": 1.5,
 "total": 6.5,
 "under_price": -115.0
