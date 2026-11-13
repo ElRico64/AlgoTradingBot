@@ -9350,59 +9350,59 @@ null,
 "under_price": -115.0
 },
 "NBA-20261112-CHA-PHX-21": {
-"away_ml": 190.0,
+"away_ml": 180.0,
 "away_spread_price": -112.0,
-"home_ml": -229.0,
+"home_ml": -217.0,
 "home_spread_price": -108.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.6994,
-0.6756
+0.682,
+0.6637
 ],
 [
 "moneyline",
 "away",
 null,
-0.3006,
-0.3244
+0.318,
+0.3363
 ],
 [
 "spread",
 "home",
 -6.5,
-0.5428,
+0.539,
 0.4955
 ],
 [
 "spread",
 "away",
 -6.5,
-0.4572,
+0.461,
 0.5045
 ],
 [
 "total",
 "over",
 214.5,
-0.6103,
-0.4955
+0.611,
+0.5045
 ],
 [
 "total",
 "under",
 214.5,
-0.3897,
-0.5045
+0.389,
+0.4955
 ]
 ],
-"over_price": -108.0,
+"over_price": -112.0,
 "source": "Draft Kings",
 "spread": -6.5,
 "total": 214.5,
-"under_price": -112.0
+"under_price": -108.0
 },
 "NBA-20261112-DAL-MIN-20": {
 "away_ml": 185.0,
