@@ -13086,8 +13086,12 @@
    "market check: model 86.2% vs books 76.8% -> 81.2% (keeps 42% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-14T07:38:15+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.2667,
+  "graded_at": "2026-11-14T23:55:34+00:00",
+  "final": "SEA 1 \u2013 CAR 5",
+  "close_price": -395.0,
+  "clv": 0.0085
  },
  {
   "id": "value:2026-11-14:NHL-20261114-DET-TB-19:moneyline:home",
@@ -13127,8 +13131,10 @@
    "market check: model 75.2% vs books 67.1% -> 70.6% (keeps 42% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-14T07:38:15+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "withdrawn",
+  "profit": null,
+  "withdrawn_at": "2026-11-14T23:55:36+00:00",
+  "note": "Withdrawn before start: probability 68.0% below 70%"
  },
  {
   "id": "confidence:2026-11-14:NHL-20261114-SEA-CAR-13:moneyline:home",
@@ -13169,8 +13175,12 @@
    "market check: model 86.2% vs books 76.8% -> 81.2% (keeps 42% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-14T07:38:15+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.2667,
+  "graded_at": "2026-11-14T23:55:34+00:00",
+  "final": "SEA 1 \u2013 CAR 5",
+  "close_price": -395.0,
+  "clv": 0.0085
  },
  {
   "id": "confidence:2026-11-14:NHL-20261114-DET-TB-19:moneyline:home",
@@ -13210,8 +13220,10 @@
    "market check: model 75.2% vs books 67.1% -> 70.6% (keeps 42% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-14T07:38:15+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "withdrawn",
+  "profit": null,
+  "withdrawn_at": "2026-11-14T23:55:36+00:00",
+  "note": "Withdrawn before start: probability 68.0% below 70%"
  },
  {
   "id": "value:2026-11-14:NBA-20261114-DEN-NO-19:moneyline:away",
@@ -13429,6 +13441,100 @@
   "published_at": "2026-11-14T07:38:48+00:00",
   "status": "pending",
   "profit": null,
-  "p_now": 0.5157
+  "p_now": 0.5162
+ },
+ {
+  "id": "value:2026-11-14:NBA-20261114-DAL-CLE-19:moneyline:away",
+  "tier": "value",
+  "date": "2026-11-14",
+  "league": "NBA",
+  "game_id": "NBA-20261114-DAL-CLE-19",
+  "start": "2026-11-15T00:30:00",
+  "home": "CLE",
+  "away": "DAL",
+  "label": "DAL ML",
+  "market": "moneyline",
+  "side": "away",
+  "line": null,
+  "price": -355.0,
+  "p": 0.7965,
+  "lower": 0.7965,
+  "p_model": 0.8582,
+  "upper": 0.7965,
+  "fair": 0.7599,
+  "edge": 0.0366,
+  "ev": 0.0209,
+  "value_line": -373,
+  "stake": 0.0186,
+  "reasons": [
+   "calibrated P(win)=79.7% \u2265 70%",
+   "80% credible band 79.7%\u201379.7% (lower \u2265 62%)",
+   "price -355 needs 78.0%; EV +2.1% per unit",
+   "no-vig market 76.0% \u2192 edge +3.7%",
+   "home-win components: kalman 52.8%, elo 56.7%, pattern 52.8%",
+   "adjustments: news_margin_mean -2.20, back_to_back -1.50, rest -0.30, timezones +0.25",
+   "news: Peyton Watson (CLE, out, G) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: James Harden (CLE, out, G) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Donovan Mitchell (CLE, out, G) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Jarrett Allen (CLE, out) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Evan Mobley (CLE, out) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Sam Merrill (CLE, out, G) P(plays)=56% impact\u22480.80\u00b10.80",
+   "news: Nae'Qwan Tomlin (CLE, out) P(plays)=100% impact\u22480.80\u00b10.80",
+   "news: Max Christie (DAL, out, G) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Dereck Lively II (DAL, out) P(plays)=43% impact\u22480.80\u00b10.80",
+   "news: Tarik Biberovic (DAL, out) P(plays)=43% impact\u22480.80\u00b10.80",
+   "news: Sergio de Larrea (DAL, out) P(plays)=43% impact\u22480.80\u00b10.80",
+   "market check: model 85.8% vs books 76.0% -> 79.7% (keeps 33% of the model's disagreement, learned from graded games)"
+  ],
+  "published_at": "2026-11-14T23:55:38+00:00",
+  "status": "pending",
+  "profit": null
+ },
+ {
+  "id": "confidence:2026-11-14:NBA-20261114-DAL-CLE-19:moneyline:away",
+  "tier": "confidence",
+  "date": "2026-11-14",
+  "league": "NBA",
+  "game_id": "NBA-20261114-DAL-CLE-19",
+  "start": "2026-11-15T00:30:00",
+  "home": "CLE",
+  "away": "DAL",
+  "label": "DAL ML",
+  "market": "moneyline",
+  "side": "away",
+  "line": null,
+  "price": -355.0,
+  "p": 0.7965,
+  "lower": 0.7965,
+  "p_model": 0.8582,
+  "upper": 0.7965,
+  "fair": 0.7599,
+  "edge": 0.0366,
+  "ev": 0.0209,
+  "value_line": -373,
+  "stake": 0.0,
+  "reasons": [
+   "calibrated P(win)=79.7% \u2265 70%",
+   "80% credible band 79.7%\u201379.7% (lower \u2265 62%)",
+   "price -355 needs 78.0%; EV +2.1% per unit",
+   "no-vig market 76.0% \u2192 edge +3.7%",
+   "home-win components: kalman 52.8%, elo 56.7%, pattern 52.8%",
+   "adjustments: news_margin_mean -2.20, back_to_back -1.50, rest -0.30, timezones +0.25",
+   "news: Peyton Watson (CLE, out, G) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: James Harden (CLE, out, G) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Donovan Mitchell (CLE, out, G) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Jarrett Allen (CLE, out) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Evan Mobley (CLE, out) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Sam Merrill (CLE, out, G) P(plays)=56% impact\u22480.80\u00b10.80",
+   "news: Nae'Qwan Tomlin (CLE, out) P(plays)=100% impact\u22480.80\u00b10.80",
+   "news: Max Christie (DAL, out, G) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Dereck Lively II (DAL, out) P(plays)=43% impact\u22480.80\u00b10.80",
+   "news: Tarik Biberovic (DAL, out) P(plays)=43% impact\u22480.80\u00b10.80",
+   "news: Sergio de Larrea (DAL, out) P(plays)=43% impact\u22480.80\u00b10.80",
+   "market check: model 85.8% vs books 76.0% -> 79.7% (keeps 33% of the model's disagreement, learned from graded games)"
+  ],
+  "published_at": "2026-11-14T23:55:38+00:00",
+  "status": "pending",
+  "profit": null
  }
 ]
