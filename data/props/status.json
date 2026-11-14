@@ -3,29 +3,48 @@
 "days_scanned": 457,
 "errors": 4,
 "games_stored": 2722,
-"new_games": 9,
-"new_rows": 193,
-"seconds": 12.6
+"new_games": 0,
+"new_rows": 0,
+"seconds": 7.6
 },
-"candidate_legs": 0,
+"candidate_legs": 845,
 "espn": "ESPN props: over/under side order confirmed by the data",
 "espn_orientation": {
-"checked_at": "2026-11-14T07:38:48+00:00",
+"checked_at": "2026-11-14T12:30:43+00:00",
 "first_is_over": true,
 "milestone_first_is_over_share": 1.0,
-"milestone_matches": 61,
-"model_corr": 0.35870322012206446,
-"model_n": 69,
+"milestone_matches": 172,
+"model_corr": 0.4152318427010009,
+"model_n": 192,
 "results_loglik_diff": 31.08,
 "results_n": 1297
 },
 "espn_types": {
-"(milestone ladders left out: no matching full-game line, or ambiguous)": 2,
-"3-Point Field Goals Milestones": 166,
-"First Basket": 40,
-"Points Milestones": 294,
-"Total 3-Point Field Goals": 58,
-"Total Points": 80
+"(milestone ladders left out: no matching full-game line, or ambiguous)": 53,
+"3-Point Field Goals Milestones": 272,
+"Assists Milestones": 359,
+"Assists Milestones - 1st Quarter": 50,
+"Blocks Milestones": 40,
+"First Basket": 50,
+"Points + Assists + Rebounds Milestones": 330,
+"Points + Assists Milestones": 287,
+"Points + Rebounds Milestones": 355,
+"Points Milestones": 496,
+"Points Milestones - 1st Quarter": 309,
+"Rebounds + Assists Milestones": 225,
+"Rebounds Milestones": 632,
+"Steals + Blocks Milestones": 22,
+"Steals Milestones": 109,
+"Team Total Points": 20,
+"To Record a Double Double": 43,
+"Total 3-Point Field Goals": 80,
+"Total Assists": 84,
+"Total Assists and Rebounds": 82,
+"Total Points": 112,
+"Total Points and Assists": 80,
+"Total Points and Rebounds": 99,
+"Total Points, Rebounds, and Assists": 79,
+"Total Rebounds": 108
 },
 "graded_now": 0,
 "market_check": {
@@ -255,7 +274,7 @@
 }
 }
 },
-"prices": "prop prices: ESPN (free), 447 milestones and 69 over/unders on 5 games",
+"prices": "prop prices: ESPN (free), 1532 milestones and 192 over/unders on 5 games",
 "rows": 58639,
-"updated_at": "2026-11-14T07:38:38+00:00"
+"updated_at": "2026-11-14T12:30:37+00:00"
 }
