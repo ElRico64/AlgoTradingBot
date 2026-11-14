@@ -12375,8 +12375,12 @@
    "market check: model 74.2% vs books 67.1% -> 70.1% (keeps 42% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-13T08:03:28+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.4444,
+  "graded_at": "2026-11-14T07:38:14+00:00",
+  "final": "NYR 5 \u2013 VAN 1",
+  "close_price": -225.0,
+  "clv": 0.0
  },
  {
   "id": "confidence:2026-11-13:NHL-20261113-NYR-VAN-21:moneyline:away",
@@ -12415,8 +12419,12 @@
    "market check: model 74.2% vs books 67.1% -> 70.1% (keeps 42% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-13T08:03:28+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.4444,
+  "graded_at": "2026-11-14T07:38:14+00:00",
+  "final": "NYR 5 \u2013 VAN 1",
+  "close_price": -225.0,
+  "clv": 0.0
  },
  {
   "id": "value:2026-11-13:NBA-20261113-NY-IND-19:moneyline:away",
@@ -12456,8 +12464,12 @@
    "market check: model 84.0% vs books 70.8% -> 76.6% (keeps 39% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-13T08:03:32+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "lost",
+  "profit": -1.0,
+  "graded_at": "2026-11-14T07:38:17+00:00",
+  "final": "NY 104 \u2013 IND 106",
+  "close_price": -337.0,
+  "clv": 0.0422
  },
  {
   "id": "value:2026-11-13:NBA-20261113-ATL-CHI-20:moneyline:away",
@@ -12500,8 +12512,12 @@
    "market check: model 84.4% vs books 71.4% -> 77.2% (keeps 39% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-13T08:03:32+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "lost",
+  "profit": -1.0,
+  "graded_at": "2026-11-14T07:38:17+00:00",
+  "final": "ATL 117 \u2013 CHI 125",
+  "close_price": -277.0,
+  "clv": 0.0
  },
  {
   "id": "value:2026-11-13:NBA-20261113-OKC-LAC-22:moneyline:away",
@@ -12544,8 +12560,12 @@
    "market check: model 84.8% vs books 71.8% -> 77.6% (keeps 39% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-13T08:03:32+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "lost",
+  "profit": -1.0,
+  "graded_at": "2026-11-14T07:38:17+00:00",
+  "final": "OKC 112 \u2013 LAC 113",
+  "close_price": -283.0,
+  "clv": 0.0
  },
  {
   "id": "value:2026-11-13:NBA-20261113-POR-SAC-22:moneyline:away",
@@ -12586,8 +12606,12 @@
    "market check: model 93.0% vs books 81.7% -> 87.3% (keeps 39% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-13T08:03:32+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.1942,
+  "graded_at": "2026-11-14T07:38:17+00:00",
+  "final": "POR 120 \u2013 SAC 107",
+  "close_price": -468.0,
+  "clv": -0.0135
  },
  {
   "id": "confidence:2026-11-13:NBA-20261113-UTAH-HOU-20:moneyline:home",
@@ -12629,8 +12653,12 @@
    "market check: model 97.2% vs books 92.0% -> 94.7% (keeps 39% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-13T08:03:32+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.0633,
+  "graded_at": "2026-11-14T07:38:17+00:00",
+  "final": "UTAH 118 \u2013 HOU 125",
+  "close_price": -1180.0,
+  "clv": -0.0186
  },
  {
   "id": "confidence:2026-11-13:NBA-20261113-GS-SA-21:moneyline:home",
@@ -12678,8 +12706,12 @@
    "market check: model 92.3% vs books 85.4% -> 88.6% (keeps 39% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-13T08:03:32+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.1429,
+  "graded_at": "2026-11-14T07:38:17+00:00",
+  "final": "GS 85 \u2013 SA 123",
+  "close_price": -650.0,
+  "clv": -0.0083
  },
  {
   "id": "confidence:2026-11-13:NBA-20261113-POR-SAC-22:moneyline:away",
@@ -12720,8 +12752,12 @@
    "market check: model 93.0% vs books 81.7% -> 87.3% (keeps 39% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-13T08:03:32+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.1942,
+  "graded_at": "2026-11-14T07:38:17+00:00",
+  "final": "POR 120 \u2013 SAC 107",
+  "close_price": -468.0,
+  "clv": -0.0135
  },
  {
   "id": "confidence:2026-11-13:NBA-20261113-MIL-ORL-19:moneyline:home",
@@ -12762,8 +12798,12 @@
    "market check: model 83.4% vs books 77.0% -> 79.7% (keeps 39% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-13T08:03:32+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.2646,
+  "graded_at": "2026-11-14T07:38:17+00:00",
+  "final": "MIL 99 \u2013 ORL 107",
+  "close_price": -395.0,
+  "clv": 0.0072
  },
  {
   "id": "confidence:2026-11-13:NBA-20261113-OKC-LAC-22:moneyline:away",
@@ -12806,8 +12846,12 @@
    "market check: model 84.8% vs books 71.8% -> 77.6% (keeps 39% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-13T08:03:32+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "lost",
+  "profit": -1.0,
+  "graded_at": "2026-11-14T07:38:17+00:00",
+  "final": "OKC 112 \u2013 LAC 113",
+  "close_price": -283.0,
+  "clv": 0.0
  },
  {
   "id": "confidence:2026-11-13:NBA-20261113-ATL-CHI-20:moneyline:away",
@@ -12850,8 +12894,12 @@
    "market check: model 84.4% vs books 71.4% -> 77.2% (keeps 39% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-13T08:03:32+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "lost",
+  "profit": -1.0,
+  "graded_at": "2026-11-14T07:38:17+00:00",
+  "final": "ATL 117 \u2013 CHI 125",
+  "close_price": -277.0,
+  "clv": 0.0
  },
  {
   "id": "confidence:2026-11-13:NBA-20261113-NY-IND-19:moneyline:away",
@@ -12891,8 +12939,12 @@
    "market check: model 84.0% vs books 70.8% -> 76.6% (keeps 39% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-13T08:03:32+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "lost",
+  "profit": -1.0,
+  "graded_at": "2026-11-14T07:38:17+00:00",
+  "final": "NY 104 \u2013 IND 106",
+  "close_price": -337.0,
+  "clv": 0.0422
  },
  {
   "id": "parlay:2026-11-13:f8cb04b1cd5c",
@@ -12923,7 +12975,10 @@
     "lo": 0.7959,
     "hi": 0.7983,
     "fair": 0.7704,
-    "status": "pending"
+    "status": "won",
+    "profit": 0.2646,
+    "graded_at": "2026-11-14T07:38:25+00:00",
+    "final": "MIL 99 \u2013 ORL 107"
    },
    {
     "league": "NBA",
@@ -12942,7 +12997,10 @@
     "lo": 0.8717,
     "hi": 0.8735,
     "fair": 0.8171,
-    "status": "pending"
+    "status": "won",
+    "profit": 0.1942,
+    "graded_at": "2026-11-14T07:38:25+00:00",
+    "final": "POR 120 \u2013 SAC 107"
    },
    {
     "league": "NBA",
@@ -12961,7 +13019,10 @@
     "lo": 0.7745,
     "hi": 0.7772,
     "fair": 0.7184,
-    "status": "pending"
+    "status": "lost",
+    "profit": -1.0,
+    "graded_at": "2026-11-14T07:38:25+00:00",
+    "final": "OKC 112 \u2013 LAC 113"
    }
   ],
   "price": 104,
@@ -12981,8 +13042,392 @@
    "the sportsbooks' prices make it 45% likely; the model says 54%"
   ],
   "published_at": "2026-11-13T08:04:07+00:00",
+  "status": "lost",
+  "profit": -1.0,
+  "p_now": 0.5397,
+  "final": "ORL ML won \u00b7 POR ML won \u00b7 OKC ML lost"
+ },
+ {
+  "id": "value:2026-11-14:NHL-20261114-SEA-CAR-13:moneyline:home",
+  "tier": "value",
+  "date": "2026-11-14",
+  "league": "NHL",
+  "game_id": "NHL-20261114-SEA-CAR-13",
+  "start": "2026-11-14T18:00:00",
+  "home": "CAR",
+  "away": "SEA",
+  "label": "CAR ML",
+  "market": "moneyline",
+  "side": "home",
+  "line": null,
+  "price": -375.0,
+  "p": 0.8121,
+  "lower": 0.8104,
+  "p_model": 0.8624,
+  "upper": 0.8138,
+  "fair": 0.7682,
+  "edge": 0.0439,
+  "ev": 0.0286,
+  "value_line": -410,
+  "stake": 0.0268,
+  "reasons": [
+   "calibrated P(win)=81.2% \u2265 70%",
+   "80% credible band 81.0%\u201381.4% (lower \u2265 62%)",
+   "price -375 needs 78.9%; EV +2.9% per unit",
+   "no-vig market 76.8% \u2192 edge +4.4%",
+   "home-win components: kalman 69.4%, elo 67.2%, count 57.5%, pattern 69.4%",
+   "adjustments: news_margin_mean +0.04, pattern_logit +0.00",
+   "news: Jordan Staal (CAR, ir) P(plays)=5% impact\u22480.02\u00b10.02",
+   "news: Jacob Melanson (SEA, ir) P(plays)=5% impact\u22480.02\u00b10.02",
+   "news: Ryan Lindgren (SEA, ir) P(plays)=5% impact\u22480.02\u00b10.02",
+   "news: Nikke Kokko (SEA, ir, G) P(plays)=76% impact\u22480.07\u00b10.04",
+   "news: Curtis Douglas (SEA, ir) P(plays)=88% impact\u22480.02\u00b10.02",
+   "news: Jared McCann (SEA, ir) P(plays)=99% impact\u22480.02\u00b10.02",
+   "market check: model 86.2% vs books 76.8% -> 81.2% (keeps 42% of the model's disagreement, learned from graded games)"
+  ],
+  "published_at": "2026-11-14T07:38:15+00:00",
   "status": "pending",
-  "profit": null,
-  "p_now": 0.5397
+  "profit": null
+ },
+ {
+  "id": "value:2026-11-14:NHL-20261114-DET-TB-19:moneyline:home",
+  "tier": "value",
+  "date": "2026-11-14",
+  "league": "NHL",
+  "game_id": "NHL-20261114-DET-TB-19",
+  "start": "2026-11-15T00:00:00",
+  "home": "TB",
+  "away": "DET",
+  "label": "TB ML",
+  "market": "moneyline",
+  "side": "home",
+  "line": null,
+  "price": -225.0,
+  "p": 0.7062,
+  "lower": 0.7037,
+  "p_model": 0.7519,
+  "upper": 0.7087,
+  "fair": 0.6707,
+  "edge": 0.0355,
+  "ev": 0.0201,
+  "value_line": -232,
+  "stake": 0.0111,
+  "reasons": [
+   "calibrated P(win)=70.6% \u2265 70%",
+   "80% credible band 70.4%\u201370.9% (lower \u2265 62%)",
+   "price -225 needs 69.2%; EV +2.0% per unit",
+   "no-vig market 67.1% \u2192 edge +3.6%",
+   "home-win components: kalman 65.7%, elo 63.9%, count 55.0%, pattern 65.7%",
+   "adjustments: news_margin_mean -0.06, travel -0.02, rest +0.00, pattern_logit +0.00",
+   "news: Albert Johansson (DET, ir) P(plays)=82% impact\u22480.02\u00b10.02",
+   "news: Dylan Larkin (DET, ir) P(plays)=96% impact\u22480.02\u00b10.02",
+   "news: Erik Cernak (TB, day-to-day) P(plays)=62% impact\u22480.06\u00b10.06",
+   "news: Anthony Cirelli (TB, day-to-day) P(plays)=62% impact\u22480.06\u00b10.06",
+   "news: Brayden Point (TB, ir) P(plays)=51% impact\u22480.02\u00b10.02",
+   "market check: model 75.2% vs books 67.1% -> 70.6% (keeps 42% of the model's disagreement, learned from graded games)"
+  ],
+  "published_at": "2026-11-14T07:38:15+00:00",
+  "status": "pending",
+  "profit": null
+ },
+ {
+  "id": "confidence:2026-11-14:NHL-20261114-SEA-CAR-13:moneyline:home",
+  "tier": "confidence",
+  "date": "2026-11-14",
+  "league": "NHL",
+  "game_id": "NHL-20261114-SEA-CAR-13",
+  "start": "2026-11-14T18:00:00",
+  "home": "CAR",
+  "away": "SEA",
+  "label": "CAR ML",
+  "market": "moneyline",
+  "side": "home",
+  "line": null,
+  "price": -375.0,
+  "p": 0.8121,
+  "lower": 0.8104,
+  "p_model": 0.8624,
+  "upper": 0.8138,
+  "fair": 0.7682,
+  "edge": 0.0439,
+  "ev": 0.0286,
+  "value_line": -410,
+  "stake": 0.0,
+  "reasons": [
+   "calibrated P(win)=81.2% \u2265 70%",
+   "80% credible band 81.0%\u201381.4% (lower \u2265 62%)",
+   "price -375 needs 78.9%; EV +2.9% per unit",
+   "no-vig market 76.8% \u2192 edge +4.4%",
+   "home-win components: kalman 69.4%, elo 67.2%, count 57.5%, pattern 69.4%",
+   "adjustments: news_margin_mean +0.04, pattern_logit +0.00",
+   "news: Jordan Staal (CAR, ir) P(plays)=5% impact\u22480.02\u00b10.02",
+   "news: Jacob Melanson (SEA, ir) P(plays)=5% impact\u22480.02\u00b10.02",
+   "news: Ryan Lindgren (SEA, ir) P(plays)=5% impact\u22480.02\u00b10.02",
+   "news: Nikke Kokko (SEA, ir, G) P(plays)=76% impact\u22480.07\u00b10.04",
+   "news: Curtis Douglas (SEA, ir) P(plays)=88% impact\u22480.02\u00b10.02",
+   "news: Jared McCann (SEA, ir) P(plays)=99% impact\u22480.02\u00b10.02",
+   "market check: model 86.2% vs books 76.8% -> 81.2% (keeps 42% of the model's disagreement, learned from graded games)"
+  ],
+  "published_at": "2026-11-14T07:38:15+00:00",
+  "status": "pending",
+  "profit": null
+ },
+ {
+  "id": "confidence:2026-11-14:NHL-20261114-DET-TB-19:moneyline:home",
+  "tier": "confidence",
+  "date": "2026-11-14",
+  "league": "NHL",
+  "game_id": "NHL-20261114-DET-TB-19",
+  "start": "2026-11-15T00:00:00",
+  "home": "TB",
+  "away": "DET",
+  "label": "TB ML",
+  "market": "moneyline",
+  "side": "home",
+  "line": null,
+  "price": -225.0,
+  "p": 0.7062,
+  "lower": 0.7037,
+  "p_model": 0.7519,
+  "upper": 0.7087,
+  "fair": 0.6707,
+  "edge": 0.0355,
+  "ev": 0.0201,
+  "value_line": -232,
+  "stake": 0.0,
+  "reasons": [
+   "calibrated P(win)=70.6% \u2265 70%",
+   "80% credible band 70.4%\u201370.9% (lower \u2265 62%)",
+   "price -225 needs 69.2%; EV +2.0% per unit",
+   "no-vig market 67.1% \u2192 edge +3.6%",
+   "home-win components: kalman 65.7%, elo 63.9%, count 55.0%, pattern 65.7%",
+   "adjustments: news_margin_mean -0.06, travel -0.02, rest +0.00, pattern_logit +0.00",
+   "news: Albert Johansson (DET, ir) P(plays)=82% impact\u22480.02\u00b10.02",
+   "news: Dylan Larkin (DET, ir) P(plays)=96% impact\u22480.02\u00b10.02",
+   "news: Erik Cernak (TB, day-to-day) P(plays)=62% impact\u22480.06\u00b10.06",
+   "news: Anthony Cirelli (TB, day-to-day) P(plays)=62% impact\u22480.06\u00b10.06",
+   "news: Brayden Point (TB, ir) P(plays)=51% impact\u22480.02\u00b10.02",
+   "market check: model 75.2% vs books 67.1% -> 70.6% (keeps 42% of the model's disagreement, learned from graded games)"
+  ],
+  "published_at": "2026-11-14T07:38:15+00:00",
+  "status": "pending",
+  "profit": null
+ },
+ {
+  "id": "value:2026-11-14:NBA-20261114-DEN-NO-19:moneyline:away",
+  "tier": "value",
+  "date": "2026-11-14",
+  "league": "NBA",
+  "game_id": "NBA-20261114-DEN-NO-19",
+  "start": "2026-11-15T00:00:00",
+  "home": "NO",
+  "away": "DEN",
+  "label": "DEN ML",
+  "market": "moneyline",
+  "side": "away",
+  "line": null,
+  "price": -556.0,
+  "p": 0.8695,
+  "lower": 0.8695,
+  "p_model": 0.9163,
+  "upper": 0.8695,
+  "fair": 0.8271,
+  "edge": 0.0424,
+  "ev": 0.0259,
+  "value_line": -619,
+  "stake": 0.03,
+  "reasons": [
+   "calibrated P(win)=86.9% \u2265 70%",
+   "80% credible band 86.9%\u201386.9% (lower \u2265 62%)",
+   "price -556 needs 84.8%; EV +2.6% per unit",
+   "no-vig market 82.7% \u2192 edge +4.2%",
+   "home-win components: kalman 17.0%, elo 10.8%, pattern 17.0%",
+   "adjustments: news_margin_mean -3.98, back_to_back -1.50, rest -0.60, travel +0.11",
+   "news: Form: cold stretch (NO, regime signal -0.65)",
+   "news: Julian Strawther (DEN, out, G) P(plays)=100% impact\u22480.80\u00b10.80",
+   "news: Dejounte Murray (NO, out, G) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Bryce McGowens (NO, out, G) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Yves Missi (NO, out) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Trey Murphy III (NO, out) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Trendon Watford (NO, out) P(plays)=15% impact\u22480.80\u00b10.80",
+   "market check: model 91.6% vs books 82.7% -> 86.9% (keeps 40% of the model's disagreement, learned from graded games)"
+  ],
+  "published_at": "2026-11-14T07:38:18+00:00",
+  "status": "pending",
+  "profit": null
+ },
+ {
+  "id": "confidence:2026-11-14:NBA-20261114-CHI-MIN-20:moneyline:home",
+  "tier": "confidence",
+  "date": "2026-11-14",
+  "league": "NBA",
+  "game_id": "NBA-20261114-CHI-MIN-20",
+  "start": "2026-11-15T01:00:00",
+  "home": "MIN",
+  "away": "CHI",
+  "label": "MIN ML",
+  "market": "moneyline",
+  "side": "home",
+  "line": null,
+  "price": -840.0,
+  "p": 0.901,
+  "lower": 0.901,
+  "p_model": 0.9325,
+  "upper": 0.901,
+  "fair": 0.8733,
+  "edge": 0.0277,
+  "ev": 0.0083,
+  "value_line": -827,
+  "stake": 0.0,
+  "reasons": [
+   "calibrated P(win)=90.1% \u2265 70%",
+   "80% credible band 90.1%\u201390.1% (lower \u2265 62%)",
+   "price -840 needs 89.4%; EV +0.8% per unit",
+   "no-vig market 87.3% \u2192 edge +2.8%",
+   "home-win components: kalman 92.7%, elo 95.6%, pattern 92.7%",
+   "adjustments: news_margin_mean +2.65, back_to_back +1.50, rest +0.30, travel +0.11",
+   "news: Jalen Smith (CHI, day-to-day) P(plays)=62% impact\u22480.80\u00b10.80",
+   "news: Dailyn Swain (CHI, out, G) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Tobe Awaka (CHI, out) P(plays)=14% impact\u22480.80\u00b10.80",
+   "news: Caleb Wilson (CHI, out) P(plays)=14% impact\u22480.80\u00b10.80",
+   "news: Anthony Edwards (MIN, out, G) P(plays)=97% impact\u22480.80\u00b10.80",
+   "market check: model 93.3% vs books 87.3% -> 90.1% (keeps 40% of the model's disagreement, learned from graded games)"
+  ],
+  "published_at": "2026-11-14T07:38:18+00:00",
+  "status": "pending",
+  "profit": null
+ },
+ {
+  "id": "confidence:2026-11-14:NBA-20261114-DEN-NO-19:moneyline:away",
+  "tier": "confidence",
+  "date": "2026-11-14",
+  "league": "NBA",
+  "game_id": "NBA-20261114-DEN-NO-19",
+  "start": "2026-11-15T00:00:00",
+  "home": "NO",
+  "away": "DEN",
+  "label": "DEN ML",
+  "market": "moneyline",
+  "side": "away",
+  "line": null,
+  "price": -556.0,
+  "p": 0.8695,
+  "lower": 0.8695,
+  "p_model": 0.9163,
+  "upper": 0.8695,
+  "fair": 0.8271,
+  "edge": 0.0424,
+  "ev": 0.0259,
+  "value_line": -619,
+  "stake": 0.0,
+  "reasons": [
+   "calibrated P(win)=86.9% \u2265 70%",
+   "80% credible band 86.9%\u201386.9% (lower \u2265 62%)",
+   "price -556 needs 84.8%; EV +2.6% per unit",
+   "no-vig market 82.7% \u2192 edge +4.2%",
+   "home-win components: kalman 17.0%, elo 10.8%, pattern 17.0%",
+   "adjustments: news_margin_mean -3.98, back_to_back -1.50, rest -0.60, travel +0.11",
+   "news: Form: cold stretch (NO, regime signal -0.65)",
+   "news: Julian Strawther (DEN, out, G) P(plays)=100% impact\u22480.80\u00b10.80",
+   "news: Dejounte Murray (NO, out, G) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Bryce McGowens (NO, out, G) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Yves Missi (NO, out) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Trey Murphy III (NO, out) P(plays)=5% impact\u22480.80\u00b10.80",
+   "news: Trendon Watford (NO, out) P(plays)=15% impact\u22480.80\u00b10.80",
+   "market check: model 91.6% vs books 82.7% -> 86.9% (keeps 40% of the model's disagreement, learned from graded games)"
+  ],
+  "published_at": "2026-11-14T07:38:18+00:00",
+  "status": "pending",
+  "profit": null
+ },
+ {
+  "id": "parlay:2026-11-14:ed03482ed8e1",
+  "tier": "parlay",
+  "date": "2026-11-14",
+  "league": "PARLAY",
+  "leagues": [
+   "NBA"
+  ],
+  "game_id": null,
+  "start": "2026-11-15T00:00:00",
+  "label": "3-leg parlay",
+  "legs": [
+   {
+    "league": "NBA",
+    "game_id": "NBA-20261114-DEN-NO-19",
+    "date": "2026-11-14",
+    "start": "2026-11-15T00:00:00",
+    "home": "NO",
+    "away": "DEN",
+    "market": "moneyline",
+    "side": "away",
+    "line": null,
+    "label": "DEN ML",
+    "price": -556.0,
+    "p": 0.8695,
+    "p_model": 0.9163,
+    "lo": 0.8695,
+    "hi": 0.8695,
+    "fair": 0.8271,
+    "status": "pending"
+   },
+   {
+    "league": "NBA",
+    "game_id": "NBA-20261114-CHI-MIN-20",
+    "date": "2026-11-14",
+    "start": "2026-11-15T01:00:00",
+    "home": "MIN",
+    "away": "CHI",
+    "market": "moneyline",
+    "side": "home",
+    "line": null,
+    "label": "MIN ML",
+    "price": -840.0,
+    "p": 0.901,
+    "p_model": 0.9325,
+    "lo": 0.901,
+    "hi": 0.901,
+    "fair": 0.8733,
+    "status": "pending"
+   },
+   {
+    "league": "NBA",
+    "game_id": "NBA-20261114-DET-MIA-20",
+    "date": "2026-11-14",
+    "start": "2026-11-15T01:00:00",
+    "home": "MIA",
+    "away": "DET",
+    "market": "moneyline",
+    "side": "away",
+    "line": null,
+    "label": "DET ML",
+    "price": -191.0,
+    "p": 0.6711,
+    "p_model": 0.7204,
+    "lo": 0.6711,
+    "hi": 0.6711,
+    "fair": 0.6359,
+    "status": "pending"
+   }
+  ],
+  "price": 101,
+  "decimal": 2.0116,
+  "p": 0.5258,
+  "lower": 0.5199,
+  "upper": 0.5314,
+  "fair": 0.4593,
+  "ev": 0.0576,
+  "stake": 0.0,
+  "reasons": [
+   "each leg's chance is market-checked (keeps only the part of the model's disagreement with the sportsbooks that has held up on graded games): DEN ML 92% \u2192 87%, MIN ML 93% \u2192 90%, DET ML 72% \u2192 67%",
+   "3 legs from different games, so the hit chance is the product of the legs: 87% \u00d7 90% \u00d7 67% = 52.6%",
+   "80% band 52.0%\u201353.1% from simulating each leg's own uncertainty",
+   "pays 2.01x (+101); expected return +5.8% per unit (needs +2% or more)",
+   "every leg is worth its own price: DEN ML +2.6%, MIN ML +0.8%, DET ML +2.2%",
+   "the sportsbooks' prices make it 46% likely; the model says 53%"
+  ],
+  "published_at": "2026-11-14T07:38:48+00:00",
+  "status": "pending",
+  "profit": null
  }
 ]
