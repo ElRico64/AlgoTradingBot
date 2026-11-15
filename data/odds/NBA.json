@@ -10363,28 +10363,28 @@ null,
 "spread",
 "home",
 8.5,
-0.5882,
+0.5855,
 0.5102
 ],
 [
 "spread",
 "away",
 8.5,
-0.4118,
+0.4145,
 0.4898
 ],
 [
 "total",
 "over",
 233.5,
-0.4654,
+0.4667,
 0.4898
 ],
 [
 "total",
 "under",
 233.5,
-0.5346,
+0.5333,
 0.5102
 ]
 ],
@@ -10505,57 +10505,57 @@ null,
 "under_price": -110.0
 },
 "NBA-20261115-HOU-WSH-19": {
-"away_ml": -326.0,
-"away_spread_price": -117.0,
-"home_ml": 262.0,
-"home_spread_price": -103.0,
+"away_ml": -337.0,
+"away_spread_price": -110.0,
+"home_ml": 271.0,
+"home_spread_price": -110.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.1858,
-0.2555
+0.1793,
+0.2492
 ],
 [
 "moneyline",
 "away",
 null,
-0.8142,
-0.7445
+0.8207,
+0.7508
 ],
 [
 "spread",
 "home",
-7.5,
-0.4205,
-0.4841
+8.5,
+0.4525,
+0.5
 ],
 [
 "spread",
 "away",
-7.5,
-0.5795,
-0.5159
+8.5,
+0.5475,
+0.5
 ],
 [
 "total",
 "over",
 224.5,
-0.5401,
+0.536,
 0.4887
 ],
 [
 "total",
 "under",
 224.5,
-0.4599,
+0.464,
 0.5113
 ]
 ],
 "over_price": -105.0,
 "source": "DraftKings",
-"spread": 7.5,
+"spread": 8.5,
 "total": 224.5,
 "under_price": -115.0
 },
@@ -10726,9 +10726,9 @@ null,
 },
 "NBA-20261115-OKC-SAC-21": {
 "away_ml": -468.0,
-"away_spread_price": -115.0,
+"away_spread_price": -108.0,
 "home_ml": 361.0,
-"home_spread_price": -105.0,
+"home_spread_price": -112.0,
 "model": [
 [
 "moneyline",
@@ -10747,35 +10747,35 @@ null,
 [
 "spread",
 "home",
-10.5,
-0.4107,
-0.4887
+11.5,
+0.4482,
+0.5045
 ],
 [
 "spread",
 "away",
-10.5,
-0.5893,
-0.5113
+11.5,
+0.5518,
+0.4955
 ],
 [
 "total",
 "over",
 223.5,
-0.5244,
+0.5253,
 0.4932
 ],
 [
 "total",
 "under",
 223.5,
-0.4756,
+0.4747,
 0.5068
 ]
 ],
 "over_price": -107.0,
 "source": "DraftKings",
-"spread": 10.5,
+"spread": 11.5,
 "total": 223.5,
 "under_price": -113.0
 },

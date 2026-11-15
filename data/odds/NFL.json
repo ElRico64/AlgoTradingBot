@@ -5564,42 +5564,42 @@ null,
 "moneyline",
 "home",
 null,
-0.5167,
+0.5028,
 0.6365
 ],
 [
 "moneyline",
 "away",
 null,
-0.4833,
+0.4972,
 0.3635
 ],
 [
 "spread",
 "home",
 -3.5,
-0.4433,
+0.4325,
 0.5
 ],
 [
 "spread",
 "away",
 -3.5,
-0.5567,
+0.5675,
 0.5
 ],
 [
 "total",
 "over",
 49.5,
-0.476,
+0.4808,
 0.4887
 ],
 [
 "total",
 "under",
 49.5,
-0.524,
+0.5192,
 0.5113
 ]
 ],
@@ -5732,12 +5732,12 @@ null,
 },
 "NFL-20261119-IND-HOU-20": {
 "away_ml": 350.0,
-"away_spread_price": -110.0,
+"away_spread_price": -105.0,
 "home_ml": -455.0,
-"home_spread_price": -110.0,
+"home_spread_price": -115.0,
 "over_price": -110.0,
-"source": "Draft Kings",
-"spread": -10.0,
+"source": "DraftKings",
+"spread": -9.5,
 "total": 44.5,
 "under_price": -110.0
 }

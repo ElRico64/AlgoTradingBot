@@ -13901,8 +13901,12 @@
    "market check: model 75.7% vs books 72.2% -> 73.4% (keeps 33% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-15T07:54:09+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.3472,
+  "graded_at": "2026-11-15T23:58:21+00:00",
+  "final": "IND 124 \u2013 PHI 131",
+  "close_price": -270.0,
+  "clv": -0.0125
  },
  {
   "id": "value:2026-11-15:NFL-20261115-BUF-NYJ-13:moneyline:away",
@@ -13952,8 +13956,12 @@
    "market check: model 91.7% vs books 77.1% -> 85.9% (keeps 50% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-15T07:54:16+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.2632,
+  "graded_at": "2026-11-15T23:58:26+00:00",
+  "final": "BUF 31 \u2013 NYJ 12",
+  "close_price": -470.0,
+  "clv": 0.0329
  },
  {
   "id": "value:2026-11-15:NFL-20261115-SF-DAL-16:moneyline:away",
@@ -14052,8 +14060,12 @@
    "market check: model 82.4% vs books 73.2% -> 78.1% (keeps 50% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-15T07:54:16+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.3279,
+  "graded_at": "2026-11-15T23:58:26+00:00",
+  "final": "SEA 21 \u2013 LV 13",
+  "close_price": -298.0,
+  "clv": -0.0043
  },
  {
   "id": "value:2026-11-15:NFL-20261115-LAR-ARI-16:moneyline:away",
@@ -14108,8 +14120,12 @@
    "market check: model 88.7% vs books 83.1% -> 86.1% (keeps 50% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-15T07:54:16+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.1739,
+  "graded_at": "2026-11-15T23:58:26+00:00",
+  "final": "LAR 34 \u2013 ARI 6",
+  "close_price": -500.0,
+  "clv": -0.0185
  },
  {
   "id": "confidence:2026-11-15:NFL-20261115-JAX-TEN-13:moneyline:away",
@@ -14154,8 +14170,12 @@
    "market check: model 94.3% vs books 85.4% -> 90.7% (keeps 50% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-15T07:54:16+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.1429,
+  "graded_at": "2026-11-15T23:58:26+00:00",
+  "final": "JAX 40 \u2013 TEN 23",
+  "close_price": -750.0,
+  "clv": 0.0074
  },
  {
   "id": "confidence:2026-11-15:NFL-20261115-LAR-ARI-16:moneyline:away",
@@ -14210,8 +14230,12 @@
    "market check: model 88.7% vs books 83.1% -> 86.1% (keeps 50% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-15T07:54:16+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.1739,
+  "graded_at": "2026-11-15T23:58:26+00:00",
+  "final": "LAR 34 \u2013 ARI 6",
+  "close_price": -500.0,
+  "clv": -0.0185
  },
  {
   "id": "confidence:2026-11-15:NFL-20261115-BUF-NYJ-13:moneyline:away",
@@ -14261,8 +14285,12 @@
    "market check: model 91.7% vs books 77.1% -> 85.9% (keeps 50% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-15T07:54:16+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.2632,
+  "graded_at": "2026-11-15T23:58:26+00:00",
+  "final": "BUF 31 \u2013 NYJ 12",
+  "close_price": -470.0,
+  "clv": 0.0329
  },
  {
   "id": "confidence:2026-11-15:NFL-20261115-SEA-LV-16:moneyline:away",
@@ -14304,8 +14332,12 @@
    "market check: model 82.4% vs books 73.2% -> 78.1% (keeps 50% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-15T07:54:16+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.3279,
+  "graded_at": "2026-11-15T23:58:26+00:00",
+  "final": "SEA 21 \u2013 LV 13",
+  "close_price": -298.0,
+  "clv": -0.0043
  },
  {
   "id": "confidence:2026-11-15:NFL-20261115-SF-DAL-16:moneyline:away",
@@ -14393,7 +14425,10 @@
     "lo": 0.8395,
     "hi": 0.8809,
     "fair": 0.7708,
-    "status": "pending"
+    "status": "won",
+    "profit": 0.2632,
+    "graded_at": "2026-11-15T23:58:27+00:00",
+    "final": "BUF 31 \u2013 NYJ 12"
    },
    {
     "league": "NFL",
@@ -14412,7 +14447,10 @@
     "lo": 0.6239,
     "hi": 0.6923,
     "fair": 0.6037,
-    "status": "pending"
+    "status": "won",
+    "profit": 0.6024,
+    "graded_at": "2026-11-15T23:58:27+00:00",
+    "final": "KC 35 \u2013 ATL 13"
    }
   ],
   "price": 102,
@@ -14432,8 +14470,9 @@
    "the sportsbooks' prices make it 47% likely; the model says 56%"
   ],
   "published_at": "2026-11-15T07:54:41+00:00",
-  "status": "pending",
-  "profit": null,
-  "p_now": 0.5799
+  "status": "won",
+  "profit": 1.0241,
+  "p_now": 0.5799,
+  "final": "BUF ML won \u00b7 KC ML won"
  }
 ]
