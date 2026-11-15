@@ -17924,7 +17924,7 @@ null,
 ]
 ],
 "over_price": -125.0,
-"source": "Draft Kings",
+"source": "DraftKings",
 "spread": -1.5,
 "total": 6.5,
 "under_price": 105.0
@@ -17979,30 +17979,30 @@ null,
 ]
 ],
 "over_price": 114.0,
-"source": "Draft Kings",
+"source": "DraftKings",
 "spread": 1.5,
 "total": 6.5,
 "under_price": -135.0
 },
 "NHL-20261115-FLA-DAL-20": {
-"away_ml": 114.0,
+"away_ml": 110.0,
 "away_spread_price": -230.0,
-"home_ml": -135.0,
+"home_ml": -130.0,
 "home_spread_price": 190.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.5632,
-0.5536
+0.5506,
+0.5445
 ],
 [
 "moneyline",
 "away",
 null,
-0.4368,
-0.4464
+0.4494,
+0.4555
 ],
 [
 "spread",
@@ -18034,7 +18034,7 @@ null,
 ]
 ],
 "over_price": -130.0,
-"source": "Draft Kings",
+"source": "DraftKings",
 "spread": -1.5,
 "total": 5.5,
 "under_price": 110.0
@@ -18049,14 +18049,14 @@ null,
 "moneyline",
 "home",
 null,
-0.3115,
+0.3133,
 0.3918
 ],
 [
 "moneyline",
 "away",
 null,
-0.6885,
+0.6867,
 0.6082
 ],
 [
@@ -18077,22 +18077,22 @@ null,
 "total",
 "over",
 6.5,
-0.5014,
-0.4955
+0.4961,
+0.4818
 ],
 [
 "total",
 "under",
 6.5,
-0.4986,
-0.5045
+0.5039,
+0.5182
 ]
 ],
-"over_price": -108.0,
-"source": "Draft Kings",
+"over_price": -102.0,
+"source": "DraftKings",
 "spread": 1.5,
 "total": 6.5,
-"under_price": -112.0
+"under_price": -118.0
 },
 "NHL-20261115-VAN-VGK-21": {
 "away_ml": 320.0,
@@ -18144,7 +18144,7 @@ null,
 ]
 ],
 "over_price": -110.0,
-"source": "Draft Kings",
+"source": "DraftKings",
 "spread": -1.5,
 "total": 6.5,
 "under_price": -110.0
