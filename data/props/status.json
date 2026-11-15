@@ -1,180 +1,213 @@
 {
 "boxscores": {
-"days_scanned": 457,
+"days_scanned": 458,
 "errors": 4,
-"games_stored": 2722,
-"new_games": 0,
-"new_rows": 0,
-"seconds": 7.8
+"games_stored": 2727,
+"new_games": 5,
+"new_rows": 107,
+"seconds": 10.5
 },
-"candidate_legs": 0,
-"espn": "",
+"candidate_legs": 268,
+"espn": "ESPN props: over/under side order confirmed by the data",
+"espn_orientation": {
+"checked_at": "2026-11-15T07:54:41+00:00",
+"first_is_over": true,
+"milestone_first_is_over_share": 0.994,
+"milestone_matches": 181,
+"model_corr": 0.4515541253844413,
+"model_n": 226,
+"results_loglik_diff": 37.46,
+"results_n": 1514
+},
+"espn_types": {
+"(milestone ladders left out: no matching full-game line, or ambiguous)": 8,
+"3-Point Field Goals Milestones": 369,
+"Assists Milestones": 200,
+"First Basket": 30,
+"First Team to Score": 2,
+"Points + Assists + Rebounds Milestones": 188,
+"Points + Assists Milestones": 179,
+"Points + Rebounds Milestones": 197,
+"Points Milestones": 445,
+"Rebounds + Assists Milestones": 79,
+"Rebounds Milestones": 279,
+"To Record a Double Double": 23,
+"To Record a Triple Double": 12,
+"Total 3-Point Field Goals": 150,
+"Total Assists": 62,
+"Total Assists and Rebounds": 62,
+"Total Points": 174,
+"Total Points and Assists": 61,
+"Total Points and Rebounds": 65,
+"Total Points, Rebounds, and Assists": 62,
+"Total Rebounds": 66
+},
 "graded_now": 0,
 "market_check": {
-"market_n": 10266,
-"n": 10266,
-"share": 0.332
+"market_n": 11034,
+"n": 11034,
+"share": 0.294
 },
 "model": {
-"games": 2722,
-"players": 744,
+"games": 2727,
+"players": 745,
 "stats": {
 "ast": {
 "calibrated": true,
-"dispersion": 8.25,
+"dispersion": 8.27,
 "health": {
-"ok": true,
-"worst_gap_60plus": 0.0293
+"ok": false,
+"worst_gap_60plus": 0.0339
 },
-"oos_rows": 55031,
+"oos_rows": 55135,
 "reliability": [
 {
-"hit": 0.1022,
-"n": 8552,
+"hit": 0.1049,
+"n": 8743,
 "range": "0.00-0.20",
-"said": 0.1073
+"said": 0.1093
 },
 {
-"hit": 0.2566,
-"n": 4898,
+"hit": 0.2603,
+"n": 4707,
 "range": "0.20-0.35",
-"said": 0.2718
+"said": 0.2737
 },
 {
-"hit": 0.4089,
-"n": 3385,
+"hit": 0.4085,
+"n": 3479,
 "range": "0.35-0.50",
-"said": 0.4266
+"said": 0.4282
 },
 {
-"hit": 0.555,
-"n": 2690,
+"hit": 0.5613,
+"n": 2537,
 "range": "0.50-0.65",
-"said": 0.5786
+"said": 0.5811
 },
 {
-"hit": 0.7008,
-"n": 3182,
+"hit": 0.6961,
+"n": 3267,
 "range": "0.65-0.80",
-"said": 0.7301
+"said": 0.73
 },
 {
-"hit": 0.8239,
-"n": 1454,
+"hit": 0.8262,
+"n": 1444,
 "range": "0.80-0.90",
-"said": 0.8476
+"said": 0.8485
 },
 {
-"hit": 0.9319,
-"n": 1249,
+"hit": 0.9329,
+"n": 1237,
 "range": "0.90-1.00",
-"said": 0.949
+"said": 0.9493
 }
 ],
-"trusted": true
+"trusted": false
 },
 "fg3m": {
 "calibrated": true,
-"dispersion": 6.13,
+"dispersion": 6.15,
 "health": {
 "ok": false,
-"worst_gap_60plus": 0.0322
+"worst_gap_60plus": 0.0338
 },
-"oos_rows": 55031,
+"oos_rows": 55135,
 "reliability": [
 {
-"hit": 0.0888,
-"n": 10726,
+"hit": 0.0876,
+"n": 10689,
 "range": "0.00-0.20",
-"said": 0.0875
+"said": 0.0884
 },
 {
-"hit": 0.2609,
-"n": 3783,
+"hit": 0.2614,
+"n": 3814,
 "range": "0.20-0.35",
-"said": 0.2661
+"said": 0.2653
 },
 {
-"hit": 0.4269,
-"n": 2776,
+"hit": 0.4231,
+"n": 2671,
 "range": "0.35-0.50",
-"said": 0.4257
+"said": 0.4234
 },
 {
-"hit": 0.5538,
-"n": 1775,
+"hit": 0.5504,
+"n": 1855,
 "range": "0.50-0.65",
-"said": 0.5662
+"said": 0.5641
 },
 {
-"hit": 0.6926,
-"n": 2160,
+"hit": 0.6895,
+"n": 2200,
 "range": "0.65-0.80",
-"said": 0.7248
+"said": 0.7233
 },
 {
-"hit": 0.833,
-"n": 964,
+"hit": 0.8335,
+"n": 967,
 "range": "0.80-0.90",
-"said": 0.8494
+"said": 0.8495
 },
 {
-"hit": 0.9472,
-"n": 246,
+"hit": 0.9454,
+"n": 238,
 "range": "0.90-1.00",
-"said": 0.9295
+"said": 0.9308
 }
 ],
 "trusted": false
 },
 "pts": {
 "calibrated": true,
-"dispersion": 2.9,
+"dispersion": 2.91,
 "health": {
 "ok": false,
-"worst_gap_60plus": 0.107
+"worst_gap_60plus": 0.1038
 },
-"oos_rows": 55031,
+"oos_rows": 55135,
 "reliability": [
 {
-"hit": 0.1121,
-"n": 7197,
+"hit": 0.1111,
+"n": 7190,
 "range": "0.00-0.20",
-"said": 0.1186
+"said": 0.1213
 },
 {
-"hit": 0.2587,
-"n": 4572,
+"hit": 0.2564,
+"n": 4520,
 "range": "0.20-0.35",
-"said": 0.2737
+"said": 0.2745
 },
 {
-"hit": 0.3976,
-"n": 5000,
+"hit": 0.394,
+"n": 4964,
 "range": "0.35-0.50",
-"said": 0.4244
+"said": 0.4241
 },
 {
-"hit": 0.5496,
-"n": 2602,
+"hit": 0.534,
+"n": 2543,
 "range": "0.50-0.65",
-"said": 0.5717
+"said": 0.5635
 },
 {
-"hit": 0.6722,
-"n": 5769,
+"hit": 0.6703,
+"n": 5893,
 "range": "0.65-0.80",
-"said": 0.702
+"said": 0.7019
 },
 {
-"hit": 0.8688,
-"n": 4299,
+"hit": 0.8686,
+"n": 4330,
 "range": "0.80-0.90",
-"said": 0.882
+"said": 0.8811
 },
 {
-"hit": 0.816,
-"n": 337,
+"hit": 0.8192,
+"n": 343,
 "range": "0.90-1.00",
 "said": 0.923
 }
@@ -183,61 +216,61 @@
 },
 "reb": {
 "calibrated": true,
-"dispersion": 7.97,
+"dispersion": 7.99,
 "health": {
 "ok": true,
-"worst_gap_60plus": 0.0285
+"worst_gap_60plus": 0.0259
 },
-"oos_rows": 55031,
+"oos_rows": 55135,
 "reliability": [
 {
-"hit": 0.1179,
-"n": 7534,
+"hit": 0.1175,
+"n": 7497,
 "range": "0.00-0.20",
-"said": 0.1141
+"said": 0.1155
 },
 {
-"hit": 0.2703,
-"n": 5238,
+"hit": 0.2695,
+"n": 5317,
 "range": "0.20-0.35",
-"said": 0.2674
+"said": 0.2697
 },
 {
-"hit": 0.4112,
-"n": 4144,
+"hit": 0.412,
+"n": 4119,
 "range": "0.35-0.50",
-"said": 0.4281
+"said": 0.4309
 },
 {
-"hit": 0.5787,
-"n": 2839,
+"hit": 0.5814,
+"n": 2819,
 "range": "0.50-0.65",
-"said": 0.5786
+"said": 0.5781
 },
 {
 "hit": 0.7047,
-"n": 3975,
+"n": 4057,
 "range": "0.65-0.80",
-"said": 0.7295
+"said": 0.7303
 },
 {
-"hit": 0.8249,
-"n": 2050,
+"hit": 0.8267,
+"n": 1939,
 "range": "0.80-0.90",
-"said": 0.8534
+"said": 0.8526
 },
 {
-"hit": 0.9352,
-"n": 2747,
+"hit": 0.9353,
+"n": 2796,
 "range": "0.90-1.00",
-"said": 0.9507
+"said": 0.9491
 }
 ],
 "trusted": true
 }
 }
 },
-"prices": "prop prices: none (add a free ODDS_API_KEY to price props; nothing is invented)",
-"rows": 58639,
-"updated_at": "2026-11-15T01:18:38+00:00"
+"prices": "prop prices: ESPN (free), 1253 milestones and 226 over/unders on 8 games",
+"rows": 58746,
+"updated_at": "2026-11-15T07:54:27+00:00"
 }
