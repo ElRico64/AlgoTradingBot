@@ -14761,8 +14761,10 @@
    "market check: model 73.4% vs books 67.1% -> 70.0% (keeps 46% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-16T08:02:01+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "withdrawn",
+  "profit": null,
+  "withdrawn_at": "2026-11-16T23:24:28+00:00",
+  "note": "Withdrawn before start: probability 69.7% below 70%"
  },
  {
   "id": "confidence:2026-11-16:NFL-20261116-LAC-BAL-20:moneyline:home",
@@ -14810,7 +14812,9 @@
    "market check: model 73.4% vs books 67.1% -> 70.0% (keeps 46% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-16T08:02:01+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "withdrawn",
+  "profit": null,
+  "withdrawn_at": "2026-11-16T23:24:28+00:00",
+  "note": "Withdrawn before start: probability 69.7% below 70%"
  }
 ]

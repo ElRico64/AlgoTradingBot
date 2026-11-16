@@ -18206,57 +18206,57 @@ null,
 },
 "NHL-20261116-VAN-UTAH-21": {
 "away_ml": 270.0,
-"away_spread_price": 114.0,
+"away_spread_price": 110.0,
 "home_ml": -340.0,
-"home_spread_price": -135.0,
+"home_spread_price": -130.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.827,
+0.8272,
 0.7512
 ],
 [
 "moneyline",
 "away",
 null,
-0.173,
+0.1728,
 0.2488
 ],
 [
 "spread",
 "home",
 -1.5,
-0.5063,
-0.5536
+0.4982,
+0.5445
 ],
 [
 "spread",
 "away",
 -1.5,
-0.4937,
-0.4464
+0.5018,
+0.4555
 ],
 [
 "total",
 "over",
 6.5,
-0.5065,
-0.5045
+0.5123,
+0.5182
 ],
 [
 "total",
 "under",
 6.5,
-0.4935,
-0.4955
+0.4877,
+0.4818
 ]
 ],
-"over_price": -112.0,
+"over_price": -118.0,
 "source": "DraftKings",
 "spread": -1.5,
 "total": 6.5,
-"under_price": -108.0
+"under_price": -102.0
 }
 }
