@@ -10725,59 +10725,59 @@ null,
 "under_price": -107.0
 },
 "NBA-20261115-OKC-SAC-21": {
-"away_ml": -468.0,
-"away_spread_price": -108.0,
-"home_ml": 361.0,
-"home_spread_price": -112.0,
+"away_ml": -597.0,
+"away_spread_price": -112.0,
+"home_ml": 443.0,
+"home_spread_price": -108.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.1284,
-0.1965
+0.0996,
+0.1638
 ],
 [
 "moneyline",
 "away",
 null,
-0.8716,
-0.8035
+0.9004,
+0.8362
 ],
 [
 "spread",
 "home",
-11.5,
-0.4482,
-0.5045
+12.5,
+0.4031,
+0.4955
 ],
 [
 "spread",
 "away",
-11.5,
-0.5518,
-0.4955
+12.5,
+0.5969,
+0.5045
 ],
 [
 "total",
 "over",
-223.5,
-0.5253,
-0.4932
+221.5,
+0.5645,
+0.5113
 ],
 [
 "total",
 "under",
-223.5,
-0.4747,
-0.5068
+221.5,
+0.4355,
+0.4887
 ]
 ],
-"over_price": -107.0,
+"over_price": -115.0,
 "source": "DraftKings",
-"spread": 11.5,
-"total": 223.5,
-"under_price": -113.0
+"spread": 12.5,
+"total": 221.5,
+"under_price": -105.0
 },
 "NBA-20261115-SA-UTAH-17": {
 "away_ml": -1180.0,

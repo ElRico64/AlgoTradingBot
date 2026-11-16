@@ -13682,8 +13682,12 @@
    "market check: model 96.0% vs books 91.5% -> 93.3% (keeps 33% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-15T07:54:09+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.0685,
+  "graded_at": "2026-11-16T01:23:25+00:00",
+  "final": "SA 110 \u2013 UTAH 102",
+  "close_price": -1180.0,
+  "clv": -0.014
  },
  {
   "id": "confidence:2026-11-15:NBA-20261115-DAL-BOS-18:moneyline:home",
@@ -13723,8 +13727,12 @@
    "market check: model 91.2% vs books 86.8% -> 88.4% (keeps 33% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-15T07:54:09+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.125,
+  "graded_at": "2026-11-16T01:23:25+00:00",
+  "final": "DAL 94 \u2013 BOS 131",
+  "close_price": -880.0,
+  "clv": 0.0091
  },
  {
   "id": "confidence:2026-11-15:NBA-20261115-OKC-SAC-21:moneyline:away",
@@ -14017,8 +14025,12 @@
    "market check: model 78.1% vs books 65.1% -> 72.0% (keeps 50% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-15T07:54:16+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.4878,
+  "graded_at": "2026-11-16T01:23:30+00:00",
+  "final": "SF 46 \u2013 DAL 40",
+  "close_price": -218.0,
+  "clv": 0.0134
  },
  {
   "id": "value:2026-11-15:NFL-20261115-SEA-LV-16:moneyline:away",
@@ -14393,8 +14405,12 @@
    "market check: model 78.1% vs books 65.1% -> 72.0% (keeps 50% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-15T07:54:16+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.4878,
+  "graded_at": "2026-11-16T01:23:30+00:00",
+  "final": "SF 46 \u2013 DAL 40",
+  "close_price": -218.0,
+  "clv": 0.0134
  },
  {
   "id": "parlay:2026-11-15:4b36f3efd763",
