@@ -1,14 +1,51 @@
 {
 "boxscores": {
-"days_scanned": 459,
+"days_scanned": 460,
 "errors": 4,
-"games_stored": 2736,
-"new_games": 0,
-"new_rows": 0,
-"seconds": 7.8
+"games_stored": 2744,
+"new_games": 8,
+"new_rows": 183,
+"seconds": 11.8
 },
-"candidate_legs": 0,
-"espn": "",
+"candidate_legs": 830,
+"espn": "ESPN props: over/under side order confirmed by the data",
+"espn_orientation": {
+"checked_at": "2026-11-17T09:15:59+00:00",
+"first_is_over": true,
+"milestone_first_is_over_share": 1.0,
+"milestone_matches": 182,
+"model_corr": 0.4711776960722898,
+"model_n": 199,
+"results_loglik_diff": 52.73,
+"results_n": 1925
+},
+"espn_types": {
+"(milestone ladders left out: no matching full-game line, or ambiguous)": 23,
+"3-Point Field Goals Milestones": 325,
+"Assists Milestones": 290,
+"Blocks Milestones": 13,
+"First Basket": 49,
+"Points + Assists + Rebounds Milestones": 263,
+"Points + Assists Milestones": 258,
+"Points + Rebounds Milestones": 273,
+"Points Milestones": 488,
+"Points Milestones - 1st Quarter": 56,
+"Rebounds + Assists Milestones": 175,
+"Rebounds Milestones": 478,
+"Steals + Blocks Milestones": 12,
+"Steals Milestones": 38,
+"To Record a Double Double": 44,
+"To Record a Triple Double": 14,
+"Total 3-Point Field Goals": 102,
+"Total Assists": 80,
+"Total Assists and Rebounds": 69,
+"Total Points": 128,
+"Total Points and Assists": 74,
+"Total Points and Rebounds": 80,
+"Total Points, Rebounds, and Assists": 73,
+"Total Rebounds": 88,
+"Total Steals": 14
+},
 "graded_now": 0,
 "market_check": {
 "market_n": 11898,
@@ -16,59 +53,59 @@
 "share": 0.31
 },
 "model": {
-"games": 2736,
+"games": 2744,
 "players": 745,
 "stats": {
 "ast": {
 "calibrated": true,
-"dispersion": 8.27,
+"dispersion": 8.31,
 "health": {
 "ok": false,
-"worst_gap_60plus": 0.0344
+"worst_gap_60plus": 0.0363
 },
-"oos_rows": 55332,
+"oos_rows": 55509,
 "reliability": [
 {
-"hit": 0.0984,
-"n": 8391,
+"hit": 0.0962,
+"n": 8390,
 "range": "0.00-0.20",
-"said": 0.1078
+"said": 0.1097
 },
 {
-"hit": 0.2501,
-"n": 4599,
+"hit": 0.2513,
+"n": 4878,
 "range": "0.20-0.35",
-"said": 0.262
+"said": 0.2685
 },
 {
-"hit": 0.3972,
-"n": 3857,
+"hit": 0.4006,
+"n": 3472,
 "range": "0.35-0.50",
-"said": 0.4204
+"said": 0.4214
 },
 {
-"hit": 0.5609,
-"n": 2740,
+"hit": 0.5536,
+"n": 2874,
 "range": "0.50-0.65",
-"said": 0.5796
+"said": 0.5762
 },
 {
-"hit": 0.6969,
-"n": 3098,
+"hit": 0.6955,
+"n": 3080,
 "range": "0.65-0.80",
-"said": 0.7313
+"said": 0.7318
 },
 {
-"hit": 0.8206,
-"n": 1544,
+"hit": 0.8207,
+"n": 1545,
 "range": "0.80-0.90",
-"said": 0.8471
+"said": 0.8488
 },
 {
-"hit": 0.9403,
-"n": 1207,
+"hit": 0.9388,
+"n": 1210,
 "range": "0.90-1.00",
-"said": 0.9492
+"said": 0.9495
 }
 ],
 "trusted": false
@@ -77,167 +114,167 @@
 "calibrated": true,
 "dispersion": 6.1,
 "health": {
-"ok": false,
-"worst_gap_60plus": 0.0317
+"ok": true,
+"worst_gap_60plus": 0.0272
 },
-"oos_rows": 55332,
+"oos_rows": 55509,
 "reliability": [
 {
-"hit": 0.0863,
-"n": 10539,
+"hit": 0.0836,
+"n": 10504,
 "range": "0.00-0.20",
-"said": 0.0883
+"said": 0.0895
 },
 {
-"hit": 0.2545,
-"n": 3835,
+"hit": 0.2527,
+"n": 3929,
 "range": "0.20-0.35",
-"said": 0.2641
+"said": 0.2636
 },
 {
-"hit": 0.4234,
-"n": 2891,
+"hit": 0.4136,
+"n": 2696,
 "range": "0.35-0.50",
-"said": 0.4237
+"said": 0.4212
 },
 {
-"hit": 0.5522,
-"n": 1869,
+"hit": 0.5557,
+"n": 2109,
 "range": "0.50-0.65",
-"said": 0.5677
+"said": 0.569
 },
 {
-"hit": 0.6909,
-"n": 2103,
+"hit": 0.6958,
+"n": 2005,
 "range": "0.65-0.80",
-"said": 0.7226
+"said": 0.723
 },
 {
-"hit": 0.8306,
-"n": 986,
+"hit": 0.8362,
+"n": 995,
 "range": "0.80-0.90",
-"said": 0.8469
+"said": 0.8463
 },
 {
-"hit": 0.9426,
-"n": 244,
+"hit": 0.9419,
+"n": 241,
 "range": "0.90-1.00",
-"said": 0.9306
+"said": 0.9301
 }
 ],
-"trusted": false
+"trusted": true
 },
 "pts": {
 "calibrated": true,
 "dispersion": 2.9,
 "health": {
 "ok": false,
-"worst_gap_60plus": 0.0872
+"worst_gap_60plus": 0.0547
 },
-"oos_rows": 55332,
+"oos_rows": 55509,
 "reliability": [
 {
-"hit": 0.1097,
-"n": 7222,
+"hit": 0.1086,
+"n": 7349,
 "range": "0.00-0.20",
-"said": 0.1242
+"said": 0.1251
 },
 {
-"hit": 0.2545,
-"n": 4404,
+"hit": 0.2517,
+"n": 4486,
 "range": "0.20-0.35",
-"said": 0.274
+"said": 0.2805
 },
 {
-"hit": 0.3867,
-"n": 4867,
+"hit": 0.3861,
+"n": 4626,
 "range": "0.35-0.50",
-"said": 0.4215
+"said": 0.4223
 },
 {
-"hit": 0.5329,
-"n": 2764,
+"hit": 0.5235,
+"n": 2789,
 "range": "0.50-0.65",
-"said": 0.5636
+"said": 0.5614
 },
 {
-"hit": 0.6684,
-"n": 5937,
+"hit": 0.6667,
+"n": 5976,
 "range": "0.65-0.80",
-"said": 0.7044
+"said": 0.7052
 },
 {
-"hit": 0.8699,
-"n": 4219,
+"hit": 0.8661,
+"n": 3750,
 "range": "0.80-0.90",
-"said": 0.8845
+"said": 0.8834
 },
 {
-"hit": 0.8146,
-"n": 383,
+"hit": 0.8484,
+"n": 831,
 "range": "0.90-1.00",
-"said": 0.9018
+"said": 0.9031
 }
 ],
 "trusted": false
 },
 "reb": {
 "calibrated": true,
-"dispersion": 7.99,
+"dispersion": 7.96,
 "health": {
-"ok": false,
-"worst_gap_60plus": 0.0311
+"ok": true,
+"worst_gap_60plus": 0.0294
 },
-"oos_rows": 55332,
+"oos_rows": 55509,
 "reliability": [
 {
-"hit": 0.1147,
-"n": 7499,
+"hit": 0.1116,
+"n": 7539,
 "range": "0.00-0.20",
-"said": 0.1167
+"said": 0.1194
 },
 {
-"hit": 0.2697,
-"n": 5395,
+"hit": 0.2583,
+"n": 4983,
 "range": "0.20-0.35",
-"said": 0.2721
+"said": 0.2699
 },
 {
-"hit": 0.4107,
-"n": 4044,
+"hit": 0.4025,
+"n": 4268,
 "range": "0.35-0.50",
-"said": 0.4318
+"said": 0.4238
 },
 {
-"hit": 0.5851,
-"n": 2938,
+"hit": 0.5768,
+"n": 3140,
 "range": "0.50-0.65",
-"said": 0.579
+"said": 0.5793
 },
 {
-"hit": 0.7044,
-"n": 3961,
+"hit": 0.7017,
+"n": 3775,
 "range": "0.65-0.80",
-"said": 0.7318
+"said": 0.7311
 },
 {
-"hit": 0.8221,
-"n": 1877,
+"hit": 0.8202,
+"n": 1969,
 "range": "0.80-0.90",
-"said": 0.8532
+"said": 0.8495
 },
 {
-"hit": 0.9342,
-"n": 2856,
+"hit": 0.9295,
+"n": 2909,
 "range": "0.90-1.00",
-"said": 0.9487
+"said": 0.9481
 }
 ],
-"trusted": false
+"trusted": true
 }
 }
 },
-"prices": "prop prices: none (add a free ODDS_API_KEY to price props; nothing is invented)",
-"rows": 58945,
-"updated_at": "2026-11-17T04:11:12+00:00"
+"prices": "prop prices: ESPN (free), 1480 milestones and 199 over/unders on 5 games",
+"rows": 59128,
+"updated_at": "2026-11-17T09:15:49+00:00"
 }
