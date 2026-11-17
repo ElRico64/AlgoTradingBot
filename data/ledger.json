@@ -14631,8 +14631,12 @@
    "market check: model 82.9% vs books 77.8% -> 79.2% (keeps 26% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-16T08:01:53+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.2532,
+  "graded_at": "2026-11-17T04:10:59+00:00",
+  "final": "CHI 115 \u2013 CLE 126",
+  "close_price": -344.0,
+  "clv": -0.0232
  },
  {
   "id": "confidence:2026-11-16:NBA-20261116-ORL-BOS-19:moneyline:home",
@@ -14671,8 +14675,12 @@
    "market check: model 82.2% vs books 77.0% -> 78.4% (keeps 26% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-16T08:01:53+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "lost",
+  "profit": -1.0,
+  "graded_at": "2026-11-17T04:10:59+00:00",
+  "final": "ORL 115 \u2013 BOS 105",
+  "close_price": -375.0,
+  "clv": -0.0013
  },
  {
   "id": "confidence:2026-11-16:NBA-20261116-PHI-BKN-19:moneyline:away",
