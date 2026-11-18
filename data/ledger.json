@@ -15092,8 +15092,10 @@
    "market check: model 78.4% vs books 71.4% -> 73.2% (keeps 24% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-18T08:35:32+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "withdrawn",
+  "profit": null,
+  "withdrawn_at": "2026-11-18T21:57:55+00:00",
+  "note": "Withdrawn before start: probability 65.1% below 70%"
  },
  {
   "id": "confidence:2026-11-18:NBA-20261118-PHX-SAC-22:moneyline:away",
@@ -15178,7 +15180,9 @@
    "market check: model 72.5% vs books 70.6% -> 71.0% (keeps 24% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-18T08:35:32+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "withdrawn",
+  "profit": null,
+  "withdrawn_at": "2026-11-18T21:57:55+00:00",
+  "note": "Withdrawn before start: probability 69.7% below 70%"
  }
 ]
