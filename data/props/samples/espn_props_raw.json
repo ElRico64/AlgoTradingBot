@@ -9,15 +9,15 @@
 },
 "odds": {
 "american": {
-"value": "-106",
+"value": "-107",
 "open": "-111"
 },
 "decimal": {
-"value": "1.94",
+"value": "1.93",
 "open": "1.90"
 },
 "fraction": {
-"value": "50/53",
+"value": "100/107",
 "open": "100/111"
 },
 "total": {
@@ -49,15 +49,15 @@
 },
 "odds": {
 "american": {
-"value": "-120",
+"value": "-119",
 "open": "-114"
 },
 "decimal": {
-"value": "1.83",
+"value": "1.84",
 "open": "1.87"
 },
 "fraction": {
-"value": "5/6",
+"value": "100/119",
 "open": "50/57"
 },
 "total": {
@@ -89,15 +89,15 @@
 },
 "odds": {
 "american": {
-"value": "-102",
+"value": "-108",
 "open": "+102"
 },
 "decimal": {
-"value": "1.98",
+"value": "1.92",
 "open": "2.02"
 },
 "fraction": {
-"value": "50/51",
+"value": "25/27",
 "open": "51/50"
 },
 "total": {
@@ -129,15 +129,15 @@
 },
 "odds": {
 "american": {
-"value": "-125",
+"value": "-118",
 "open": "-130"
 },
 "decimal": {
-"value": "1.80",
+"value": "1.84",
 "open": "1.76"
 },
 "fraction": {
-"value": "4/5",
+"value": "50/59",
 "open": "10/13"
 },
 "total": {
@@ -169,15 +169,15 @@
 },
 "odds": {
 "american": {
-"value": "-108",
+"value": "-105",
 "open": "-114"
 },
 "decimal": {
-"value": "1.92",
+"value": "1.95",
 "open": "1.87"
 },
 "fraction": {
-"value": "25/27",
+"value": "20/21",
 "open": "50/57"
 },
 "total": {
@@ -209,15 +209,15 @@
 },
 "odds": {
 "american": {
-"value": "-118",
+"value": "-121",
 "open": "-112"
 },
 "decimal": {
-"value": "1.84",
+"value": "1.82",
 "open": "1.89"
 },
 "fraction": {
-"value": "50/59",
+"value": "100/121",
 "open": "25/28"
 },
 "total": {
@@ -249,15 +249,15 @@
 },
 "odds": {
 "american": {
-"value": "+104",
+"value": "+103",
 "open": "+110"
 },
 "decimal": {
-"value": "2.04",
+"value": "2.03",
 "open": "2.10"
 },
 "fraction": {
-"value": "26/25",
+"value": "103/100",
 "open": "11/10"
 },
 "total": {
@@ -289,15 +289,15 @@
 },
 "odds": {
 "american": {
-"value": "-137",
+"value": "-136",
 "open": "-145"
 },
 "decimal": {
-"value": "1.72",
+"value": "1.73",
 "open": "1.68"
 },
 "fraction": {
-"value": "100/137",
+"value": "25/34",
 "open": "20/29"
 },
 "total": {
@@ -329,15 +329,15 @@
 },
 "odds": {
 "american": {
-"value": "+109",
+"value": "+118",
 "open": "+116"
 },
 "decimal": {
-"value": "2.09",
+"value": "2.18",
 "open": "2.16"
 },
 "fraction": {
-"value": "109/100",
+"value": "59/50",
 "open": "29/25"
 },
 "total": {
@@ -345,7 +345,7 @@
 "open": "5.5"
 }
 },
-"lastUpdated": "2026-11-19T07:31Z",
+"lastUpdated": "2026-11-19T17:26Z",
 "current": {
 "target": {
 "value": 5.5,
@@ -369,15 +369,15 @@
 },
 "odds": {
 "american": {
-"value": "-144",
+"value": "-155",
 "open": "-152"
 },
 "decimal": {
-"value": "1.69",
+"value": "1.64",
 "open": "1.65"
 },
 "fraction": {
-"value": "25/36",
+"value": "20/31",
 "open": "25/38"
 },
 "total": {
@@ -385,7 +385,7 @@
 "open": "5.5"
 }
 },
-"lastUpdated": "2026-11-19T07:31Z",
+"lastUpdated": "2026-11-19T17:26Z",
 "current": {
 "target": {
 "value": 5.5,
@@ -409,15 +409,15 @@
 },
 "odds": {
 "american": {
-"value": "+125",
+"value": "+137",
 "open": "+115"
 },
 "decimal": {
-"value": "2.25",
+"value": "2.37",
 "open": "2.15"
 },
 "fraction": {
-"value": "5/4",
+"value": "137/100",
 "open": "23/20"
 },
 "total": {
@@ -425,7 +425,7 @@
 "open": "3.5"
 }
 },
-"lastUpdated": "2026-11-19T08:38Z",
+"lastUpdated": "2026-11-19T17:20Z",
 "current": {
 "target": {
 "value": 3.5,
@@ -449,15 +449,15 @@
 },
 "odds": {
 "american": {
-"value": "-165",
+"value": "-182",
 "open": "-151"
 },
 "decimal": {
-"value": "1.60",
+"value": "1.54",
 "open": "1.66"
 },
 "fraction": {
-"value": "20/33",
+"value": "50/91",
 "open": "100/151"
 },
 "total": {
@@ -465,7 +465,7 @@
 "open": "3.5"
 }
 },
-"lastUpdated": "2026-11-19T08:38Z",
+"lastUpdated": "2026-11-19T17:20Z",
 "current": {
 "target": {
 "value": 3.5,
@@ -489,15 +489,15 @@
 },
 "odds": {
 "american": {
-"value": "-141",
+"value": "-150",
 "open": "-147"
 },
 "decimal": {
-"value": "1.70",
+"value": "1.66",
 "open": "1.68"
 },
 "fraction": {
-"value": "100/141",
+"value": "4/6",
 "open": "100/147"
 },
 "total": {
@@ -529,15 +529,15 @@
 },
 "odds": {
 "american": {
-"value": "+107",
+"value": "+114",
 "open": "+111"
 },
 "decimal": {
-"value": "2.07",
+"value": "2.14",
 "open": "2.11"
 },
 "fraction": {
-"value": "107/100",
+"value": "57/50",
 "open": "111/100"
 },
 "total": {
@@ -569,15 +569,15 @@
 },
 "odds": {
 "american": {
-"value": "+110",
+"value": "+103",
 "open": "+120"
 },
 "decimal": {
-"value": "2.10",
+"value": "2.03",
 "open": "2.20"
 },
 "fraction": {
-"value": "11/10",
+"value": "103/100",
 "open": "6/5"
 },
 "total": {
@@ -609,15 +609,15 @@
 },
 "odds": {
 "american": {
-"value": "-145",
+"value": "-135",
 "open": "-159"
 },
 "decimal": {
-"value": "1.68",
+"value": "1.74",
 "open": "1.62"
 },
 "fraction": {
-"value": "20/29",
+"value": "20/27",
 "open": "100/159"
 },
 "total": {
@@ -649,15 +649,15 @@
 },
 "odds": {
 "american": {
-"value": "+120",
+"value": "+124",
 "open": "+114"
 },
 "decimal": {
-"value": "2.20",
+"value": "2.24",
 "open": "2.14"
 },
 "fraction": {
-"value": "6/5",
+"value": "31/25",
 "open": "57/50"
 },
 "total": {
@@ -689,15 +689,15 @@
 },
 "odds": {
 "american": {
-"value": "-159",
+"value": "-164",
 "open": "-151"
 },
 "decimal": {
-"value": "1.62",
+"value": "1.60",
 "open": "1.66"
 },
 "fraction": {
-"value": "100/159",
+"value": "25/41",
 "open": "100/151"
 },
 "total": {
@@ -724,32 +724,112 @@
 "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/2991139?lang=en&region=us"
 },
 "type": {
+"id": "5",
+"name": "Total Steals"
+},
+"odds": {
+"american": {
+"value": "+127",
+"open": "+132"
+},
+"decimal": {
+"value": "2.27",
+"open": "2.32"
+},
+"fraction": {
+"value": "127/100",
+"open": "33/25"
+},
+"total": {
+"value": "1.5",
+"open": "1.5"
+}
+},
+"lastUpdated": "2026-11-19T14:33Z",
+"current": {
+"target": {
+"value": 1.5,
+"displayValue": "1.5"
+}
+},
+"open": {
+"target": {
+"value": 1.5,
+"displayValue": "1.5"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/2991139?lang=en&region=us"
+},
+"type": {
+"id": "5",
+"name": "Total Steals"
+},
+"odds": {
+"american": {
+"value": "-169",
+"open": "-176"
+},
+"decimal": {
+"value": "1.59",
+"open": "1.56"
+},
+"fraction": {
+"value": "100/169",
+"open": "25/44"
+},
+"total": {
+"value": "1.5",
+"open": "1.5"
+}
+},
+"lastUpdated": "2026-11-19T14:33Z",
+"current": {
+"target": {
+"value": 1.5,
+"displayValue": "1.5"
+}
+},
+"open": {
+"target": {
+"value": 1.5,
+"displayValue": "1.5"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/2991139?lang=en&region=us"
+},
+"type": {
 "id": "87",
 "name": "Total Points and Assists"
 },
 "odds": {
 "american": {
-"value": "-129",
+"value": "+105",
 "open": "-121"
 },
 "decimal": {
-"value": "1.77",
+"value": "2.05",
 "open": "1.82"
 },
 "fraction": {
-"value": "100/129",
+"value": "21/20",
 "open": "100/121"
 },
 "total": {
-"value": "8.5",
+"value": "9.5",
 "open": "8.5"
 }
 },
-"lastUpdated": "2026-11-19T07:40Z",
+"lastUpdated": "2026-11-19T17:27Z",
 "current": {
 "target": {
-"value": 8.5,
-"displayValue": "8.5"
+"value": 9.5,
+"displayValue": "9.5"
 }
 },
 "open": {
@@ -769,27 +849,27 @@
 },
 "odds": {
 "american": {
-"value": "-102",
+"value": "-139",
 "open": "-108"
 },
 "decimal": {
-"value": "1.98",
+"value": "1.71",
 "open": "1.92"
 },
 "fraction": {
-"value": "50/51",
+"value": "100/139",
 "open": "25/27"
 },
 "total": {
-"value": "8.5",
+"value": "9.5",
 "open": "8.5"
 }
 },
-"lastUpdated": "2026-11-19T07:40Z",
+"lastUpdated": "2026-11-19T17:27Z",
 "current": {
 "target": {
-"value": 8.5,
-"displayValue": "8.5"
+"value": 9.5,
+"displayValue": "9.5"
 }
 },
 "open": {
@@ -809,15 +889,15 @@
 },
 "odds": {
 "american": {
-"value": "-120",
+"value": "-116",
 "open": "-122"
 },
 "decimal": {
-"value": "1.83",
+"value": "1.86",
 "open": "1.81"
 },
 "fraction": {
-"value": "5/6",
+"value": "25/29",
 "open": "50/61"
 },
 "total": {
@@ -849,15 +929,15 @@
 },
 "odds": {
 "american": {
-"value": "-110",
+"value": "-113",
 "open": "-108"
 },
 "decimal": {
-"value": "1.90",
+"value": "1.88",
 "open": "1.92"
 },
 "fraction": {
-"value": "10/11",
+"value": "100/113",
 "open": "25/27"
 },
 "total": {
@@ -889,15 +969,15 @@
 },
 "odds": {
 "american": {
-"value": "-116",
+"value": "-121",
 "open": "-120"
 },
 "decimal": {
-"value": "1.86",
+"value": "1.82",
 "open": "1.83"
 },
 "fraction": {
-"value": "25/29",
+"value": "100/121",
 "open": "5/6"
 },
 "total": {
@@ -929,15 +1009,15 @@
 },
 "odds": {
 "american": {
-"value": "-113",
+"value": "-109",
 "open": "-109"
 },
 "decimal": {
-"value": "1.88",
+"value": "1.91",
 "open": "1.91"
 },
 "fraction": {
-"value": "100/113",
+"value": "100/109",
 "open": "100/109"
 },
 "total": {
@@ -969,15 +1049,15 @@
 },
 "odds": {
 "american": {
-"value": "-111",
+"value": "-107",
 "open": "-116"
 },
 "decimal": {
-"value": "1.90",
+"value": "1.93",
 "open": "1.86"
 },
 "fraction": {
-"value": "100/111",
+"value": "100/107",
 "open": "25/29"
 },
 "total": {
@@ -1009,15 +1089,15 @@
 },
 "odds": {
 "american": {
-"value": "-119",
+"value": "-123",
 "open": "-113"
 },
 "decimal": {
-"value": "1.84",
+"value": "1.81",
 "open": "1.88"
 },
 "fraction": {
-"value": "100/119",
+"value": "100/123",
 "open": "100/113"
 },
 "total": {
@@ -1049,15 +1129,15 @@
 },
 "odds": {
 "american": {
-"value": "-115",
+"value": "-110",
 "open": "-119"
 },
 "decimal": {
-"value": "1.86",
+"value": "1.90",
 "open": "1.84"
 },
 "fraction": {
-"value": "20/23",
+"value": "10/11",
 "open": "100/119"
 },
 "total": {
@@ -1089,15 +1169,15 @@
 },
 "odds": {
 "american": {
-"value": "-114",
+"value": "-119",
 "open": "-111"
 },
 "decimal": {
-"value": "1.87",
+"value": "1.84",
 "open": "1.90"
 },
 "fraction": {
-"value": "50/57",
+"value": "100/119",
 "open": "100/111"
 },
 "total": {
@@ -1129,15 +1209,15 @@
 },
 "odds": {
 "american": {
-"value": "-116",
+"value": "-114",
 "open": "-113"
 },
 "decimal": {
-"value": "1.86",
+"value": "1.87",
 "open": "1.88"
 },
 "fraction": {
-"value": "25/29",
+"value": "50/57",
 "open": "100/113"
 },
 "total": {
@@ -1169,15 +1249,15 @@
 },
 "odds": {
 "american": {
-"value": "-114",
+"value": "-115",
 "open": "-116"
 },
 "decimal": {
-"value": "1.87",
+"value": "1.86",
 "open": "1.86"
 },
 "fraction": {
-"value": "50/57",
+"value": "20/23",
 "open": "25/29"
 },
 "total": {
@@ -1209,15 +1289,15 @@
 },
 "odds": {
 "american": {
-"value": "+100",
+"value": "-103",
 "open": "-102"
 },
 "decimal": {
-"value": "2.00",
+"value": "1.97",
 "open": "1.98"
 },
 "fraction": {
-"value": "1/1",
+"value": "100/103",
 "open": "50/51"
 },
 "total": {
@@ -1225,7 +1305,7 @@
 "open": "12.5"
 }
 },
-"lastUpdated": "2026-11-19T07:44Z",
+"lastUpdated": "2026-11-19T17:19Z",
 "current": {
 "target": {
 "value": 12.5,
@@ -1249,15 +1329,15 @@
 },
 "odds": {
 "american": {
-"value": "-132",
+"value": "-128",
 "open": "-130"
 },
 "decimal": {
-"value": "1.75",
+"value": "1.78",
 "open": "1.76"
 },
 "fraction": {
-"value": "25/33",
+"value": "25/32",
 "open": "10/13"
 },
 "total": {
@@ -1265,7 +1345,7 @@
 "open": "12.5"
 }
 },
-"lastUpdated": "2026-11-19T07:44Z",
+"lastUpdated": "2026-11-19T17:19Z",
 "current": {
 "target": {
 "value": 12.5,
@@ -1289,15 +1369,15 @@
 },
 "odds": {
 "american": {
-"value": "-120",
+"value": "-119",
 "open": "-116"
 },
 "decimal": {
-"value": "1.83",
+"value": "1.84",
 "open": "1.86"
 },
 "fraction": {
-"value": "5/6",
+"value": "100/119",
 "open": "25/29"
 },
 "total": {
@@ -1369,15 +1449,15 @@
 },
 "odds": {
 "american": {
-"value": "+1100",
+"value": "+1240",
 "open": "+1220"
 },
 "decimal": {
-"value": "12.00",
+"value": "13.40",
 "open": "13.20"
 },
 "fraction": {
-"value": "11/1",
+"value": "62/5",
 "open": "61/5"
 },
 "total": {}
@@ -1477,15 +1557,15 @@
 },
 "odds": {
 "american": {
-"value": "+1780",
+"value": "+1760",
 "open": "+1840"
 },
 "decimal": {
-"value": "18.80",
+"value": "18.60",
 "open": "19.40"
 },
 "fraction": {
-"value": "89/5",
+"value": "88/5",
 "open": "92/5"
 },
 "total": {}
@@ -1504,15 +1584,15 @@
 },
 "odds": {
 "american": {
-"value": "+910",
+"value": "+900",
 "open": "+1020"
 },
 "decimal": {
-"value": "10.10",
+"value": "10.00",
 "open": "11.20"
 },
 "fraction": {
-"value": "91/10",
+"value": "9/1",
 "open": "51/5"
 },
 "total": {}
@@ -1571,7 +1651,7 @@
 },
 "odds": {
 "american": {
-"value": "-361",
+"value": "-366",
 "open": "-111"
 },
 "decimal": {
@@ -1579,7 +1659,7 @@
 "open": "1.90"
 },
 "fraction": {
-"value": "100/361",
+"value": "50/183",
 "open": "100/111"
 },
 "total": {
@@ -1611,7 +1691,7 @@
 },
 "odds": {
 "american": {
-"value": "-191",
+"value": "-192",
 "open": "-111"
 },
 "decimal": {
@@ -1619,7 +1699,7 @@
 "open": "1.90"
 },
 "fraction": {
-"value": "100/191",
+"value": "25/48",
 "open": "100/111"
 },
 "total": {
@@ -1651,15 +1731,15 @@
 },
 "odds": {
 "american": {
-"value": "-106",
+"value": "-107",
 "open": "-111"
 },
 "decimal": {
-"value": "1.94",
+"value": "1.93",
 "open": "1.90"
 },
 "fraction": {
-"value": "50/53",
+"value": "100/107",
 "open": "100/111"
 },
 "total": {
@@ -1691,15 +1771,15 @@
 },
 "odds": {
 "american": {
-"value": "+200",
+"value": "+204",
 "open": "-111"
 },
 "decimal": {
-"value": "3.00",
+"value": "3.04",
 "open": "1.90"
 },
 "fraction": {
-"value": "2/1",
+"value": "51/25",
 "open": "100/111"
 },
 "total": {
@@ -1731,15 +1811,15 @@
 },
 "odds": {
 "american": {
-"value": "+409",
+"value": "+412",
 "open": "-111"
 },
 "decimal": {
-"value": "5.09",
+"value": "5.12",
 "open": "1.90"
 },
 "fraction": {
-"value": "409/100",
+"value": "103/25",
 "open": "100/111"
 },
 "total": {
@@ -1811,15 +1891,15 @@
 },
 "odds": {
 "american": {
-"value": "+1840",
+"value": "+1880",
 "open": "-111"
 },
 "decimal": {
-"value": "19.40",
+"value": "19.80",
 "open": "1.90"
 },
 "fraction": {
-"value": "92/5",
+"value": "94/5",
 "open": "100/111"
 },
 "total": {
@@ -1851,15 +1931,15 @@
 },
 "odds": {
 "american": {
-"value": "+100",
+"value": "-108",
 "open": "+102"
 },
 "decimal": {
-"value": "2.00",
+"value": "1.92",
 "open": "2.02"
 },
 "fraction": {
-"value": "1/1",
+"value": "25/27",
 "open": "51/50"
 },
 "total": {
@@ -1891,15 +1971,15 @@
 },
 "odds": {
 "american": {
-"value": "+212",
+"value": "+199",
 "open": "+102"
 },
 "decimal": {
-"value": "3.12",
+"value": "2.99",
 "open": "2.02"
 },
 "fraction": {
-"value": "53/25",
+"value": "199/100",
 "open": "51/50"
 },
 "total": {
@@ -1931,15 +2011,15 @@
 },
 "odds": {
 "american": {
-"value": "+431",
+"value": "+411",
 "open": "+102"
 },
 "decimal": {
-"value": "5.31",
+"value": "5.11",
 "open": "2.02"
 },
 "fraction": {
-"value": "431/100",
+"value": "411/100",
 "open": "51/50"
 },
 "total": {
@@ -1971,15 +2051,15 @@
 },
 "odds": {
 "american": {
-"value": "+850",
+"value": "+810",
 "open": "+102"
 },
 "decimal": {
-"value": "9.50",
+"value": "9.10",
 "open": "2.02"
 },
 "fraction": {
-"value": "17/2",
+"value": "81/10",
 "open": "51/50"
 },
 "total": {
@@ -2011,15 +2091,15 @@
 },
 "odds": {
 "american": {
-"value": "+2000",
+"value": "+1980",
 "open": "+102"
 },
 "decimal": {
-"value": "21.00",
+"value": "20.80",
 "open": "2.02"
 },
 "fraction": {
-"value": "20/1",
+"value": "99/5",
 "open": "51/50"
 },
 "total": {
@@ -2051,15 +2131,15 @@
 },
 "odds": {
 "american": {
-"value": "-436",
+"value": "-405",
 "open": "-114"
 },
 "decimal": {
-"value": "1.22",
+"value": "1.24",
 "open": "1.87"
 },
 "fraction": {
-"value": "25/109",
+"value": "20/81",
 "open": "50/57"
 },
 "total": {
@@ -2091,15 +2171,15 @@
 },
 "odds": {
 "american": {
-"value": "-206",
+"value": "-192",
 "open": "-114"
 },
 "decimal": {
-"value": "1.48",
+"value": "1.52",
 "open": "1.87"
 },
 "fraction": {
-"value": "50/103",
+"value": "25/48",
 "open": "50/57"
 },
 "total": {
@@ -2131,15 +2211,15 @@
 },
 "odds": {
 "american": {
-"value": "-109",
+"value": "-102",
 "open": "-114"
 },
 "decimal": {
-"value": "1.91",
+"value": "1.98",
 "open": "1.87"
 },
 "fraction": {
-"value": "100/109",
+"value": "50/51",
 "open": "50/57"
 },
 "total": {
@@ -2171,15 +2251,15 @@
 },
 "odds": {
 "american": {
-"value": "+163",
+"value": "+175",
 "open": "-114"
 },
 "decimal": {
-"value": "2.63",
+"value": "2.75",
 "open": "1.87"
 },
 "fraction": {
-"value": "163/100",
+"value": "7/4",
 "open": "50/57"
 },
 "total": {
@@ -2211,15 +2291,15 @@
 },
 "odds": {
 "american": {
-"value": "+369",
+"value": "+393",
 "open": "-114"
 },
 "decimal": {
-"value": "4.69",
+"value": "4.93",
 "open": "1.87"
 },
 "fraction": {
-"value": "369/100",
+"value": "393/100",
 "open": "50/57"
 },
 "total": {
@@ -2251,15 +2331,15 @@
 },
 "odds": {
 "american": {
-"value": "+790",
+"value": "+840",
 "open": "-114"
 },
 "decimal": {
-"value": "8.90",
+"value": "9.40",
 "open": "1.87"
 },
 "fraction": {
-"value": "79/10",
+"value": "42/5",
 "open": "50/57"
 },
 "total": {
@@ -2291,15 +2371,15 @@
 },
 "odds": {
 "american": {
-"value": "+1260",
+"value": "+1360",
 "open": "-114"
 },
 "decimal": {
-"value": "13.60",
+"value": "14.60",
 "open": "1.87"
 },
 "fraction": {
-"value": "63/5",
+"value": "68/5",
 "open": "50/57"
 },
 "total": {
@@ -2331,15 +2411,15 @@
 },
 "odds": {
 "american": {
-"value": "-125",
+"value": "-117",
 "open": "-108"
 },
 "decimal": {
-"value": "1.80",
+"value": "1.85",
 "open": "1.92"
 },
 "fraction": {
-"value": "4/5",
+"value": "100/117",
 "open": "25/27"
 },
 "total": {
@@ -2371,15 +2451,15 @@
 },
 "odds": {
 "american": {
-"value": "+193",
+"value": "+204",
 "open": "-108"
 },
 "decimal": {
-"value": "2.93",
+"value": "3.04",
 "open": "1.92"
 },
 "fraction": {
-"value": "193/100",
+"value": "51/25",
 "open": "25/27"
 },
 "total": {
@@ -2411,15 +2491,15 @@
 },
 "odds": {
 "american": {
-"value": "+417",
+"value": "+442",
 "open": "-108"
 },
 "decimal": {
-"value": "5.17",
+"value": "5.42",
 "open": "1.92"
 },
 "fraction": {
-"value": "417/100",
+"value": "221/50",
 "open": "25/27"
 },
 "total": {
@@ -2451,15 +2531,15 @@
 },
 "odds": {
 "american": {
-"value": "+840",
+"value": "+870",
 "open": "-108"
 },
 "decimal": {
-"value": "9.40",
+"value": "9.70",
 "open": "1.92"
 },
 "fraction": {
-"value": "42/5",
+"value": "87/10",
 "open": "25/27"
 },
 "total": {
@@ -2491,15 +2571,15 @@
 },
 "odds": {
 "american": {
-"value": "+1540",
+"value": "+1640",
 "open": "-108"
 },
 "decimal": {
-"value": "16.40",
+"value": "17.40",
 "open": "1.92"
 },
 "fraction": {
-"value": "77/5",
+"value": "82/5",
 "open": "25/27"
 },
 "total": {
@@ -2531,15 +2611,15 @@
 },
 "odds": {
 "american": {
-"value": "+2500",
+"value": "+2600",
 "open": "-108"
 },
 "decimal": {
-"value": "26.00",
+"value": "27.00",
 "open": "1.92"
 },
 "fraction": {
-"value": "25/1",
+"value": "26/1",
 "open": "25/27"
 },
 "total": {
@@ -2571,7 +2651,7 @@
 },
 "odds": {
 "american": {
-"value": "-234",
+"value": "-233",
 "open": "+110"
 },
 "decimal": {
@@ -2579,7 +2659,7 @@
 "open": "2.10"
 },
 "fraction": {
-"value": "50/117",
+"value": "100/233",
 "open": "11/10"
 },
 "total": {
@@ -2611,15 +2691,15 @@
 },
 "odds": {
 "american": {
-"value": "+104",
+"value": "+106",
 "open": "+110"
 },
 "decimal": {
-"value": "2.04",
+"value": "2.06",
 "open": "2.10"
 },
 "fraction": {
-"value": "26/25",
+"value": "53/50",
 "open": "11/10"
 },
 "total": {
@@ -2651,15 +2731,15 @@
 },
 "odds": {
 "american": {
-"value": "+229",
+"value": "+235",
 "open": "+110"
 },
 "decimal": {
-"value": "3.29",
+"value": "3.35",
 "open": "2.10"
 },
 "fraction": {
-"value": "229/100",
+"value": "47/20",
 "open": "11/10"
 },
 "total": {
@@ -2691,15 +2771,15 @@
 },
 "odds": {
 "american": {
-"value": "+482",
+"value": "+493",
 "open": "+110"
 },
 "decimal": {
-"value": "5.82",
+"value": "5.93",
 "open": "2.10"
 },
 "fraction": {
-"value": "241/50",
+"value": "493/100",
 "open": "11/10"
 },
 "total": {
@@ -2731,15 +2811,15 @@
 },
 "odds": {
 "american": {
-"value": "+970",
+"value": "+990",
 "open": "+110"
 },
 "decimal": {
-"value": "10.70",
+"value": "10.90",
 "open": "2.10"
 },
 "fraction": {
-"value": "97/10",
+"value": "99/10",
 "open": "11/10"
 },
 "total": {
@@ -2771,15 +2851,15 @@
 },
 "odds": {
 "american": {
-"value": "+1860",
+"value": "+1820",
 "open": "+110"
 },
 "decimal": {
-"value": "19.60",
+"value": "19.20",
 "open": "2.10"
 },
 "fraction": {
-"value": "93/5",
+"value": "91/5",
 "open": "11/10"
 },
 "total": {
@@ -2803,6 +2883,46 @@
 },
 {
 "athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/2991139?lang=en&region=us"
+},
+"type": {
+"id": "219",
+"name": "Assists Milestones"
+},
+"odds": {
+"american": {
+"value": "+2900",
+"open": "+110"
+},
+"decimal": {
+"value": "30.00",
+"open": "2.10"
+},
+"fraction": {
+"value": "29/1",
+"open": "11/10"
+},
+"total": {
+"value": "9+",
+"open": "4+"
+}
+},
+"lastUpdated": "2026-11-19T17:01Z",
+"current": {
+"target": {
+"value": 9.0,
+"displayValue": "9+"
+}
+},
+"open": {
+"target": {
+"value": 4.0,
+"displayValue": "4+"
+}
+}
+},
+{
+"athlete": {
 "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3936099?lang=en&region=us"
 },
 "type": {
@@ -2811,15 +2931,15 @@
 },
 "odds": {
 "american": {
-"value": "+148",
+"value": "+145",
 "open": "-191"
 },
 "decimal": {
-"value": "2.48",
+"value": "2.45",
 "open": "1.52"
 },
 "fraction": {
-"value": "37/25",
+"value": "29/20",
 "open": "100/191"
 },
 "total": {
@@ -2851,15 +2971,15 @@
 },
 "odds": {
 "american": {
-"value": "+470",
+"value": "+444",
 "open": "-191"
 },
 "decimal": {
-"value": "5.70",
+"value": "5.44",
 "open": "1.52"
 },
 "fraction": {
-"value": "47/10",
+"value": "111/25",
 "open": "100/191"
 },
 "total": {
@@ -2891,15 +3011,15 @@
 },
 "odds": {
 "american": {
-"value": "+1300",
+"value": "+1240",
 "open": "-191"
 },
 "decimal": {
-"value": "14.00",
+"value": "13.40",
 "open": "1.52"
 },
 "fraction": {
-"value": "13/1",
+"value": "62/5",
 "open": "100/191"
 },
 "total": {
@@ -2931,15 +3051,15 @@
 },
 "odds": {
 "american": {
-"value": "+2700",
+"value": "+2600",
 "open": "-191"
 },
 "decimal": {
-"value": "28.00",
+"value": "27.00",
 "open": "1.52"
 },
 "fraction": {
-"value": "27/1",
+"value": "26/1",
 "open": "100/191"
 },
 "total": {
@@ -2971,15 +3091,15 @@
 },
 "odds": {
 "american": {
-"value": "-118",
+"value": "-131",
 "open": "+116"
 },
 "decimal": {
-"value": "1.84",
+"value": "1.76",
 "open": "2.16"
 },
 "fraction": {
-"value": "50/59",
+"value": "100/131",
 "open": "29/25"
 },
 "total": {
@@ -3011,15 +3131,15 @@
 },
 "odds": {
 "american": {
-"value": "+249",
+"value": "+223",
 "open": "+116"
 },
 "decimal": {
-"value": "3.49",
+"value": "3.23",
 "open": "2.16"
 },
 "fraction": {
-"value": "249/100",
+"value": "223/100",
 "open": "29/25"
 },
 "total": {
@@ -3051,15 +3171,15 @@
 },
 "odds": {
 "american": {
-"value": "+680",
+"value": "+594",
 "open": "+116"
 },
 "decimal": {
-"value": "7.80",
+"value": "6.94",
 "open": "2.16"
 },
 "fraction": {
-"value": "34/5",
+"value": "297/50",
 "open": "29/25"
 },
 "total": {
@@ -3091,15 +3211,15 @@
 },
 "odds": {
 "american": {
-"value": "-890",
+"value": "-820",
 "open": "+116"
 },
 "decimal": {
-"value": "1.11",
+"value": "1.12",
 "open": "2.16"
 },
 "fraction": {
-"value": "10/89",
+"value": "5/41",
 "open": "29/25"
 },
 "total": {
@@ -3131,15 +3251,15 @@
 },
 "odds": {
 "american": {
-"value": "-347",
+"value": "-327",
 "open": "+116"
 },
 "decimal": {
-"value": "1.28",
+"value": "1.30",
 "open": "2.16"
 },
 "fraction": {
-"value": "100/347",
+"value": "100/327",
 "open": "29/25"
 },
 "total": {
@@ -3171,15 +3291,15 @@
 },
 "odds": {
 "american": {
-"value": "-169",
+"value": "-160",
 "open": "+116"
 },
 "decimal": {
-"value": "1.59",
+"value": "1.62",
 "open": "2.16"
 },
 "fraction": {
-"value": "100/169",
+"value": "5/8",
 "open": "29/25"
 },
 "total": {
@@ -3211,15 +3331,15 @@
 },
 "odds": {
 "american": {
-"value": "+110",
+"value": "+118",
 "open": "+116"
 },
 "decimal": {
-"value": "2.10",
+"value": "2.18",
 "open": "2.16"
 },
 "fraction": {
-"value": "11/10",
+"value": "59/50",
 "open": "29/25"
 },
 "total": {
@@ -3251,15 +3371,15 @@
 },
 "odds": {
 "american": {
-"value": "+196",
+"value": "+213",
 "open": "+116"
 },
 "decimal": {
-"value": "2.96",
+"value": "3.13",
 "open": "2.16"
 },
 "fraction": {
-"value": "49/25",
+"value": "213/100",
 "open": "29/25"
 },
 "total": {
@@ -3291,15 +3411,15 @@
 },
 "odds": {
 "american": {
-"value": "+337",
+"value": "+370",
 "open": "+116"
 },
 "decimal": {
-"value": "4.37",
+"value": "4.70",
 "open": "2.16"
 },
 "fraction": {
-"value": "337/100",
+"value": "37/10",
 "open": "29/25"
 },
 "total": {
@@ -3331,15 +3451,15 @@
 },
 "odds": {
 "american": {
-"value": "+571",
+"value": "+620",
 "open": "+116"
 },
 "decimal": {
-"value": "6.71",
+"value": "7.20",
 "open": "2.16"
 },
 "fraction": {
-"value": "571/100",
+"value": "31/5",
 "open": "29/25"
 },
 "total": {
@@ -3371,15 +3491,15 @@
 },
 "odds": {
 "american": {
-"value": "+940",
+"value": "+1020",
 "open": "+116"
 },
 "decimal": {
-"value": "10.40",
+"value": "11.20",
 "open": "2.16"
 },
 "fraction": {
-"value": "47/5",
+"value": "51/5",
 "open": "29/25"
 },
 "total": {
@@ -3411,15 +3531,15 @@
 },
 "odds": {
 "american": {
-"value": "+1560",
+"value": "+1580",
 "open": "+116"
 },
 "decimal": {
-"value": "16.60",
+"value": "16.80",
 "open": "2.16"
 },
 "fraction": {
-"value": "78/5",
+"value": "79/5",
 "open": "29/25"
 },
 "total": {
@@ -3451,15 +3571,15 @@
 },
 "odds": {
 "american": {
-"value": "+2300",
+"value": "+2400",
 "open": "+116"
 },
 "decimal": {
-"value": "24.00",
+"value": "25.00",
 "open": "2.16"
 },
 "fraction": {
-"value": "23/1",
+"value": "24/1",
 "open": "29/25"
 },
 "total": {
@@ -3491,15 +3611,15 @@
 },
 "odds": {
 "american": {
-"value": "-190",
+"value": "-183",
 "open": "+115"
 },
 "decimal": {
-"value": "1.52",
+"value": "1.54",
 "open": "2.15"
 },
 "fraction": {
-"value": "10/19",
+"value": "100/183",
 "open": "23/20"
 },
 "total": {
@@ -3531,15 +3651,15 @@
 },
 "odds": {
 "american": {
-"value": "+128",
+"value": "+137",
 "open": "+115"
 },
 "decimal": {
-"value": "2.28",
+"value": "2.37",
 "open": "2.15"
 },
 "fraction": {
-"value": "32/25",
+"value": "137/100",
 "open": "23/20"
 },
 "total": {
@@ -3571,15 +3691,15 @@
 },
 "odds": {
 "american": {
-"value": "+283",
+"value": "+307",
 "open": "+115"
 },
 "decimal": {
-"value": "3.83",
+"value": "4.07",
 "open": "2.15"
 },
 "fraction": {
-"value": "283/100",
+"value": "307/100",
 "open": "23/20"
 },
 "total": {
@@ -3611,15 +3731,15 @@
 },
 "odds": {
 "american": {
-"value": "+600",
+"value": "+640",
 "open": "+115"
 },
 "decimal": {
-"value": "7.00",
+"value": "7.40",
 "open": "2.15"
 },
 "fraction": {
-"value": "6/1",
+"value": "32/5",
 "open": "23/20"
 },
 "total": {
@@ -3651,15 +3771,15 @@
 },
 "odds": {
 "american": {
-"value": "+1220",
+"value": "+1260",
 "open": "+115"
 },
 "decimal": {
-"value": "13.20",
+"value": "13.60",
 "open": "2.15"
 },
 "fraction": {
-"value": "61/5",
+"value": "63/5",
 "open": "23/20"
 },
 "total": {
@@ -3691,15 +3811,15 @@
 },
 "odds": {
 "american": {
-"value": "+2200",
+"value": "+2300",
 "open": "+115"
 },
 "decimal": {
-"value": "23.00",
+"value": "24.00",
 "open": "2.15"
 },
 "fraction": {
-"value": "22/1",
+"value": "23/1",
 "open": "23/20"
 },
 "total": {
@@ -3731,15 +3851,15 @@
 },
 "odds": {
 "american": {
-"value": "+157",
+"value": "+151",
 "open": "+115"
 },
 "decimal": {
-"value": "2.57",
+"value": "2.51",
 "open": "2.15"
 },
 "fraction": {
-"value": "157/100",
+"value": "151/100",
 "open": "23/20"
 },
 "total": {
@@ -3771,15 +3891,15 @@
 },
 "odds": {
 "american": {
-"value": "+541",
+"value": "+522",
 "open": "+115"
 },
 "decimal": {
-"value": "6.41",
+"value": "6.22",
 "open": "2.15"
 },
 "fraction": {
-"value": "541/100",
+"value": "261/50",
 "open": "23/20"
 },
 "total": {
@@ -3811,15 +3931,15 @@
 },
 "odds": {
 "american": {
-"value": "+124",
+"value": "+110",
 "open": "+141"
 },
 "decimal": {
-"value": "2.24",
+"value": "2.10",
 "open": "2.41"
 },
 "fraction": {
-"value": "31/25",
+"value": "11/10",
 "open": "141/100"
 },
 "total": {
@@ -3851,15 +3971,15 @@
 },
 "odds": {
 "american": {
-"value": "+408",
+"value": "+346",
 "open": "+141"
 },
 "decimal": {
-"value": "5.08",
+"value": "4.46",
 "open": "2.41"
 },
 "fraction": {
-"value": "102/25",
+"value": "173/50",
 "open": "141/100"
 },
 "total": {
@@ -3891,15 +4011,15 @@
 },
 "odds": {
 "american": {
-"value": "+1280",
+"value": "+1060",
 "open": "+141"
 },
 "decimal": {
-"value": "13.80",
+"value": "11.60",
 "open": "2.41"
 },
 "fraction": {
-"value": "64/5",
+"value": "53/5",
 "open": "141/100"
 },
 "total": {
@@ -3931,15 +4051,15 @@
 },
 "odds": {
 "american": {
-"value": "-340",
+"value": "-369",
 "open": "+141"
 },
 "decimal": {
-"value": "1.29",
+"value": "1.27",
 "open": "2.41"
 },
 "fraction": {
-"value": "5/17",
+"value": "100/369",
 "open": "141/100"
 },
 "total": {
@@ -3971,15 +4091,15 @@
 },
 "odds": {
 "american": {
-"value": "-143",
+"value": "-153",
 "open": "+141"
 },
 "decimal": {
-"value": "1.69",
+"value": "1.65",
 "open": "2.41"
 },
 "fraction": {
-"value": "100/143",
+"value": "100/153",
 "open": "141/100"
 },
 "total": {
@@ -4011,15 +4131,15 @@
 },
 "odds": {
 "american": {
-"value": "+147",
+"value": "+135",
 "open": "+141"
 },
 "decimal": {
-"value": "2.47",
+"value": "2.35",
 "open": "2.41"
 },
 "fraction": {
-"value": "147/100",
+"value": "27/20",
 "open": "141/100"
 },
 "total": {
@@ -4051,15 +4171,15 @@
 },
 "odds": {
 "american": {
-"value": "+288",
+"value": "+263",
 "open": "+141"
 },
 "decimal": {
-"value": "3.88",
+"value": "3.63",
 "open": "2.41"
 },
 "fraction": {
-"value": "72/25",
+"value": "263/100",
 "open": "141/100"
 },
 "total": {
@@ -4091,15 +4211,15 @@
 },
 "odds": {
 "american": {
-"value": "+547",
+"value": "+492",
 "open": "+141"
 },
 "decimal": {
-"value": "6.47",
+"value": "5.92",
 "open": "2.41"
 },
 "fraction": {
-"value": "547/100",
+"value": "123/25",
 "open": "141/100"
 },
 "total": {
@@ -4131,15 +4251,15 @@
 },
 "odds": {
 "american": {
-"value": "+1000",
+"value": "+900",
 "open": "+141"
 },
 "decimal": {
-"value": "11.00",
+"value": "10.00",
 "open": "2.41"
 },
 "fraction": {
-"value": "10/1",
+"value": "9/1",
 "open": "141/100"
 },
 "total": {
@@ -4171,15 +4291,15 @@
 },
 "odds": {
 "american": {
-"value": "+1680",
+"value": "+1560",
 "open": "+141"
 },
 "decimal": {
-"value": "17.80",
+"value": "16.60",
 "open": "2.41"
 },
 "fraction": {
-"value": "84/5",
+"value": "78/5",
 "open": "141/100"
 },
 "total": {
@@ -4211,15 +4331,15 @@
 },
 "odds": {
 "american": {
-"value": "+2500",
+"value": "+2400",
 "open": "+141"
 },
 "decimal": {
-"value": "26.00",
+"value": "25.00",
 "open": "2.41"
 },
 "fraction": {
-"value": "25/1",
+"value": "24/1",
 "open": "141/100"
 },
 "total": {
@@ -4251,15 +4371,15 @@
 },
 "odds": {
 "american": {
-"value": "-387",
+"value": "-427",
 "open": "+121"
 },
 "decimal": {
-"value": "1.25",
+"value": "1.23",
 "open": "2.21"
 },
 "fraction": {
-"value": "100/387",
+"value": "100/427",
 "open": "121/100"
 },
 "total": {
@@ -4291,15 +4411,15 @@
 },
 "odds": {
 "american": {
-"value": "+110",
+"value": "+101",
 "open": "+121"
 },
 "decimal": {
-"value": "2.10",
+"value": "2.01",
 "open": "2.21"
 },
 "fraction": {
-"value": "11/10",
+"value": "101/100",
 "open": "121/100"
 },
 "total": {
@@ -4331,15 +4451,15 @@
 },
 "odds": {
 "american": {
-"value": "+328",
+"value": "+299",
 "open": "+121"
 },
 "decimal": {
-"value": "4.28",
+"value": "3.99",
 "open": "2.21"
 },
 "fraction": {
-"value": "82/25",
+"value": "299/100",
 "open": "121/100"
 },
 "total": {
@@ -4371,15 +4491,15 @@
 },
 "odds": {
 "american": {
-"value": "+860",
+"value": "+790",
 "open": "+121"
 },
 "decimal": {
-"value": "9.60",
+"value": "8.90",
 "open": "2.21"
 },
 "fraction": {
-"value": "43/5",
+"value": "79/10",
 "open": "121/100"
 },
 "total": {
@@ -4411,15 +4531,15 @@
 },
 "odds": {
 "american": {
-"value": "+1980",
+"value": "+1800",
 "open": "+121"
 },
 "decimal": {
-"value": "20.80",
+"value": "19.00",
 "open": "2.21"
 },
 "fraction": {
-"value": "99/5",
+"value": "18/1",
 "open": "121/100"
 },
 "total": {
@@ -4451,15 +4571,15 @@
 },
 "odds": {
 "american": {
-"value": "-127",
+"value": "-115",
 "open": "-140"
 },
 "decimal": {
-"value": "1.78",
+"value": "1.86",
 "open": "1.71"
 },
 "fraction": {
-"value": "100/127",
+"value": "20/23",
 "open": "5/7"
 },
 "total": {
@@ -4491,15 +4611,15 @@
 },
 "odds": {
 "american": {
-"value": "+384",
+"value": "+445",
 "open": "-140"
 },
 "decimal": {
-"value": "4.84",
+"value": "5.45",
 "open": "1.71"
 },
 "fraction": {
-"value": "96/25",
+"value": "89/20",
 "open": "5/7"
 },
 "total": {
@@ -4531,15 +4651,15 @@
 },
 "odds": {
 "american": {
-"value": "+1380",
+"value": "+1580",
 "open": "-140"
 },
 "decimal": {
-"value": "14.80",
+"value": "16.80",
 "open": "1.71"
 },
 "fraction": {
-"value": "69/5",
+"value": "79/5",
 "open": "5/7"
 },
 "total": {
@@ -4571,15 +4691,15 @@
 },
 "odds": {
 "american": {
-"value": "-371",
+"value": "-356",
 "open": "+114"
 },
 "decimal": {
-"value": "1.26",
+"value": "1.28",
 "open": "2.14"
 },
 "fraction": {
-"value": "100/371",
+"value": "25/89",
 "open": "57/50"
 },
 "total": {
@@ -4611,15 +4731,15 @@
 },
 "odds": {
 "american": {
-"value": "+123",
+"value": "+124",
 "open": "+114"
 },
 "decimal": {
-"value": "2.23",
+"value": "2.24",
 "open": "2.14"
 },
 "fraction": {
-"value": "123/100",
+"value": "31/25",
 "open": "57/50"
 },
 "total": {
@@ -4651,15 +4771,15 @@
 },
 "odds": {
 "american": {
-"value": "+377",
+"value": "+378",
 "open": "+114"
 },
 "decimal": {
-"value": "4.77",
+"value": "4.78",
 "open": "2.14"
 },
 "fraction": {
-"value": "377/100",
+"value": "189/50",
 "open": "57/50"
 },
 "total": {
@@ -4771,7 +4891,7 @@
 },
 "odds": {
 "american": {
-"value": "-349",
+"value": "-357",
 "open": "+132"
 },
 "decimal": {
@@ -4779,7 +4899,7 @@
 "open": "2.32"
 },
 "fraction": {
-"value": "100/349",
+"value": "100/357",
 "open": "33/25"
 },
 "total": {
@@ -4811,15 +4931,15 @@
 },
 "odds": {
 "american": {
-"value": "+132",
+"value": "+127",
 "open": "+132"
 },
 "decimal": {
-"value": "2.32",
+"value": "2.27",
 "open": "2.32"
 },
 "fraction": {
-"value": "33/25",
+"value": "127/100",
 "open": "33/25"
 },
 "total": {
@@ -4851,15 +4971,15 @@
 },
 "odds": {
 "american": {
-"value": "+431",
+"value": "+392",
 "open": "+132"
 },
 "decimal": {
-"value": "5.31",
+"value": "4.92",
 "open": "2.32"
 },
 "fraction": {
-"value": "431/100",
+"value": "98/25",
 "open": "33/25"
 },
 "total": {
@@ -4891,15 +5011,15 @@
 },
 "odds": {
 "american": {
-"value": "+1160",
+"value": "+1060",
 "open": "+132"
 },
 "decimal": {
-"value": "12.60",
+"value": "11.60",
 "open": "2.32"
 },
 "fraction": {
-"value": "58/5",
+"value": "53/5",
 "open": "33/25"
 },
 "total": {
@@ -4931,15 +5051,15 @@
 },
 "odds": {
 "american": {
-"value": "+2400",
+"value": "+2200",
 "open": "+132"
 },
 "decimal": {
-"value": "25.00",
+"value": "23.00",
 "open": "2.32"
 },
 "fraction": {
-"value": "24/1",
+"value": "22/1",
 "open": "33/25"
 },
 "total": {
@@ -4971,15 +5091,15 @@
 },
 "odds": {
 "american": {
-"value": "-169",
+"value": "-200",
 "open": "-169"
 },
 "decimal": {
-"value": "1.59",
+"value": "1.50",
 "open": "1.59"
 },
 "fraction": {
-"value": "100/169",
+"value": "1/2",
 "open": "100/169"
 },
 "total": {
@@ -5011,15 +5131,55 @@
 },
 "odds": {
 "american": {
-"value": "+910",
+"value": "+233",
 "open": "-169"
 },
 "decimal": {
-"value": "10.10",
+"value": "3.33",
 "open": "1.59"
 },
 "fraction": {
-"value": "91/10",
+"value": "233/100",
+"open": "100/169"
+},
+"total": {
+"value": "2+",
+"open": "1+"
+}
+},
+"lastUpdated": "2026-11-19T11:33Z",
+"current": {
+"target": {
+"value": 2.0,
+"displayValue": "2+"
+}
+},
+"open": {
+"target": {
+"value": 1.0,
+"displayValue": "1+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3448?lang=en&region=us"
+},
+"type": {
+"id": "223",
+"name": "Blocks Milestones"
+},
+"odds": {
+"american": {
+"value": "+730",
+"open": "-169"
+},
+"decimal": {
+"value": "8.30",
+"open": "1.59"
+},
+"fraction": {
+"value": "73/10",
 "open": "100/169"
 },
 "total": {
@@ -5051,15 +5211,15 @@
 },
 "odds": {
 "american": {
-"value": "+2200",
+"value": "+1800",
 "open": "-169"
 },
 "decimal": {
-"value": "23.00",
+"value": "19.00",
 "open": "1.59"
 },
 "fraction": {
-"value": "22/1",
+"value": "18/1",
 "open": "100/169"
 },
 "total": {
@@ -5091,15 +5251,15 @@
 },
 "odds": {
 "american": {
-"value": "-111",
+"value": "-118",
 "open": "-111"
 },
 "decimal": {
-"value": "1.90",
+"value": "1.84",
 "open": "1.90"
 },
 "fraction": {
-"value": "100/111",
+"value": "50/59",
 "open": "100/111"
 },
 "total": {
@@ -5131,15 +5291,55 @@
 },
 "odds": {
 "american": {
-"value": "+1480",
+"value": "+403",
 "open": "-111"
 },
 "decimal": {
-"value": "15.80",
+"value": "5.03",
 "open": "1.90"
 },
 "fraction": {
-"value": "74/5",
+"value": "403/100",
+"open": "100/111"
+},
+"total": {
+"value": "2+",
+"open": "1+"
+}
+},
+"lastUpdated": "2026-11-19T11:33Z",
+"current": {
+"target": {
+"value": 2.0,
+"displayValue": "2+"
+}
+},
+"open": {
+"target": {
+"value": 1.0,
+"displayValue": "1+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3936099?lang=en&region=us"
+},
+"type": {
+"id": "223",
+"name": "Blocks Milestones"
+},
+"odds": {
+"american": {
+"value": "+1320",
+"open": "-111"
+},
+"decimal": {
+"value": "14.20",
+"open": "1.90"
+},
+"fraction": {
+"value": "66/5",
 "open": "100/111"
 },
 "total": {
@@ -5171,15 +5371,15 @@
 },
 "odds": {
 "american": {
-"value": "+146",
+"value": "+153",
 "open": "+147"
 },
 "decimal": {
-"value": "2.46",
+"value": "2.53",
 "open": "2.47"
 },
 "fraction": {
-"value": "73/50",
+"value": "153/100",
 "open": "147/100"
 },
 "total": {
@@ -5211,15 +5411,15 @@
 },
 "odds": {
 "american": {
-"value": "+509",
+"value": "+510",
 "open": "+147"
 },
 "decimal": {
-"value": "6.09",
+"value": "6.10",
 "open": "2.47"
 },
 "fraction": {
-"value": "509/100",
+"value": "51/10",
 "open": "147/100"
 },
 "total": {
@@ -5251,15 +5451,15 @@
 },
 "odds": {
 "american": {
-"value": "-1680",
+"value": "-1580",
 "open": "+110"
 },
 "decimal": {
-"value": "1.05",
+"value": "1.06",
 "open": "2.10"
 },
 "fraction": {
-"value": "5/84",
+"value": "5/79",
 "open": "11/10"
 },
 "total": {
@@ -5291,7 +5491,7 @@
 },
 "odds": {
 "american": {
-"value": "-298",
+"value": "-297",
 "open": "+110"
 },
 "decimal": {
@@ -5299,7 +5499,7 @@
 "open": "2.10"
 },
 "fraction": {
-"value": "50/149",
+"value": "100/297",
 "open": "11/10"
 },
 "total": {
@@ -5331,15 +5531,15 @@
 },
 "odds": {
 "american": {
-"value": "+105",
+"value": "+108",
 "open": "+110"
 },
 "decimal": {
-"value": "2.05",
+"value": "2.08",
 "open": "2.10"
 },
 "fraction": {
-"value": "21/20",
+"value": "27/25",
 "open": "11/10"
 },
 "total": {
@@ -5371,15 +5571,15 @@
 },
 "odds": {
 "american": {
-"value": "+292",
+"value": "+301",
 "open": "+110"
 },
 "decimal": {
-"value": "3.92",
+"value": "4.01",
 "open": "2.10"
 },
 "fraction": {
-"value": "73/25",
+"value": "301/100",
 "open": "11/10"
 },
 "total": {
@@ -5411,15 +5611,15 @@
 },
 "odds": {
 "american": {
-"value": "+730",
+"value": "+770",
 "open": "+110"
 },
 "decimal": {
-"value": "8.30",
+"value": "8.70",
 "open": "2.10"
 },
 "fraction": {
-"value": "73/10",
+"value": "77/10",
 "open": "11/10"
 },
 "total": {
@@ -5451,15 +5651,15 @@
 },
 "odds": {
 "american": {
-"value": "+1660",
+"value": "+1720",
 "open": "+110"
 },
 "decimal": {
-"value": "17.60",
+"value": "18.20",
 "open": "2.10"
 },
 "fraction": {
-"value": "83/5",
+"value": "86/5",
 "open": "11/10"
 },
 "total": {
@@ -5491,15 +5691,15 @@
 },
 "odds": {
 "american": {
-"value": "-119",
+"value": "-115",
 "open": "+110"
 },
 "decimal": {
-"value": "1.84",
+"value": "1.86",
 "open": "2.10"
 },
 "fraction": {
-"value": "100/119",
+"value": "20/23",
 "open": "11/10"
 },
 "total": {
@@ -5531,15 +5731,15 @@
 },
 "odds": {
 "american": {
-"value": "-298",
+"value": "-311",
 "open": "-102"
 },
 "decimal": {
-"value": "1.33",
+"value": "1.32",
 "open": "1.98"
 },
 "fraction": {
-"value": "50/149",
+"value": "100/311",
 "open": "50/51"
 },
 "total": {
@@ -5571,15 +5771,15 @@
 },
 "odds": {
 "american": {
-"value": "+187",
+"value": "+186",
 "open": "-102"
 },
 "decimal": {
-"value": "2.87",
+"value": "2.86",
 "open": "1.98"
 },
 "fraction": {
-"value": "187/100",
+"value": "93/50",
 "open": "50/51"
 },
 "total": {
@@ -5611,15 +5811,15 @@
 },
 "odds": {
 "american": {
-"value": "+820",
+"value": "+780",
 "open": "-102"
 },
 "decimal": {
-"value": "9.20",
+"value": "8.80",
 "open": "1.98"
 },
 "fraction": {
-"value": "41/5",
+"value": "39/5",
 "open": "50/51"
 },
 "total": {
@@ -5651,15 +5851,15 @@
 },
 "odds": {
 "american": {
-"value": "+2300",
+"value": "+2400",
 "open": "-102"
 },
 "decimal": {
-"value": "24.00",
+"value": "25.00",
 "open": "1.98"
 },
 "fraction": {
-"value": "23/1",
+"value": "24/1",
 "open": "50/51"
 },
 "total": {
@@ -5667,7 +5867,7 @@
 "open": "13+"
 }
 },
-"lastUpdated": "2026-11-19T09:09Z",
+"lastUpdated": "2026-11-19T14:34Z",
 "current": {
 "target": {
 "value": 25.0,
@@ -5691,15 +5891,15 @@
 },
 "odds": {
 "american": {
-"value": "-101",
+"value": "-102",
 "open": "-102"
 },
 "decimal": {
-"value": "1.99",
+"value": "1.98",
 "open": "1.98"
 },
 "fraction": {
-"value": "100/101",
+"value": "50/51",
 "open": "50/51"
 },
 "total": {
@@ -5707,7 +5907,7 @@
 "open": "13+"
 }
 },
-"lastUpdated": "2026-11-19T07:44Z",
+"lastUpdated": "2026-11-19T16:26Z",
 "current": {
 "target": {
 "value": 13.0,
@@ -5731,15 +5931,15 @@
 },
 "odds": {
 "american": {
-"value": "-562",
+"value": "-552",
 "open": "-116"
 },
 "decimal": {
-"value": "1.17",
+"value": "1.18",
 "open": "1.86"
 },
 "fraction": {
-"value": "50/281",
+"value": "25/138",
 "open": "25/29"
 },
 "total": {
@@ -5771,15 +5971,15 @@
 },
 "odds": {
 "american": {
-"value": "-120",
+"value": "-119",
 "open": "-116"
 },
 "decimal": {
-"value": "1.83",
+"value": "1.84",
 "open": "1.86"
 },
 "fraction": {
-"value": "5/6",
+"value": "100/119",
 "open": "25/29"
 },
 "total": {
@@ -5811,15 +6011,15 @@
 },
 "odds": {
 "american": {
-"value": "+277",
+"value": "+274",
 "open": "-116"
 },
 "decimal": {
-"value": "3.77",
+"value": "3.74",
 "open": "1.86"
 },
 "fraction": {
-"value": "277/100",
+"value": "137/50",
 "open": "25/29"
 },
 "total": {
@@ -5851,15 +6051,15 @@
 },
 "odds": {
 "american": {
-"value": "+790",
+"value": "+820",
 "open": "-116"
 },
 "decimal": {
-"value": "8.90",
+"value": "9.20",
 "open": "1.86"
 },
 "fraction": {
-"value": "79/10",
+"value": "41/5",
 "open": "25/29"
 },
 "total": {
@@ -5931,7 +6131,7 @@
 },
 "odds": {
 "american": {
-"value": "-4500",
+"value": "-3900",
 "open": "-105"
 },
 "decimal": {
@@ -5939,7 +6139,7 @@
 "open": "1.95"
 },
 "fraction": {
-"value": "1/45",
+"value": "1/39",
 "open": "20/21"
 },
 "total": {
@@ -5947,7 +6147,7 @@
 "open": "14+"
 }
 },
-"lastUpdated": "2026-11-19T11:21Z",
+"lastUpdated": "2026-11-19T13:11Z",
 "current": {
 "target": {
 "value": 5.0,
@@ -5971,15 +6171,15 @@
 },
 "odds": {
 "american": {
-"value": "-334",
+"value": "-329",
 "open": "-105"
 },
 "decimal": {
-"value": "1.29",
+"value": "1.30",
 "open": "1.95"
 },
 "fraction": {
-"value": "50/167",
+"value": "100/329",
 "open": "20/21"
 },
 "total": {
@@ -6011,15 +6211,15 @@
 },
 "odds": {
 "american": {
-"value": "+120",
+"value": "+122",
 "open": "-105"
 },
 "decimal": {
-"value": "2.20",
+"value": "2.22",
 "open": "1.95"
 },
 "fraction": {
-"value": "6/5",
+"value": "61/50",
 "open": "20/21"
 },
 "total": {
@@ -6051,15 +6251,15 @@
 },
 "odds": {
 "american": {
-"value": "+376",
+"value": "+390",
 "open": "-105"
 },
 "decimal": {
-"value": "4.76",
+"value": "4.90",
 "open": "1.95"
 },
 "fraction": {
-"value": "94/25",
+"value": "39/10",
 "open": "20/21"
 },
 "total": {
@@ -6091,15 +6291,15 @@
 },
 "odds": {
 "american": {
-"value": "+1080",
+"value": "+1100",
 "open": "-105"
 },
 "decimal": {
-"value": "11.80",
+"value": "12.00",
 "open": "1.95"
 },
 "fraction": {
-"value": "54/5",
+"value": "11/1",
 "open": "20/21"
 },
 "total": {
@@ -6171,15 +6371,15 @@
 },
 "odds": {
 "american": {
-"value": "-107",
+"value": "-106",
 "open": "-105"
 },
 "decimal": {
-"value": "1.93",
+"value": "1.94",
 "open": "1.95"
 },
 "fraction": {
-"value": "100/107",
+"value": "50/53",
 "open": "20/21"
 },
 "total": {
@@ -6211,15 +6411,15 @@
 },
 "odds": {
 "american": {
-"value": "-970",
+"value": "-1060",
 "open": "+115"
 },
 "decimal": {
-"value": "1.10",
+"value": "1.09",
 "open": "2.15"
 },
 "fraction": {
-"value": "10/97",
+"value": "5/53",
 "open": "23/20"
 },
 "total": {
@@ -6251,15 +6451,15 @@
 },
 "odds": {
 "american": {
-"value": "+112",
+"value": "+106",
 "open": "+115"
 },
 "decimal": {
-"value": "2.12",
+"value": "2.06",
 "open": "2.15"
 },
 "fraction": {
-"value": "28/25",
+"value": "53/50",
 "open": "23/20"
 },
 "total": {
@@ -6291,15 +6491,15 @@
 },
 "odds": {
 "american": {
-"value": "+584",
+"value": "+580",
 "open": "+115"
 },
 "decimal": {
-"value": "6.84",
+"value": "6.80",
 "open": "2.15"
 },
 "fraction": {
-"value": "146/25",
+"value": "29/5",
 "open": "23/20"
 },
 "total": {
@@ -6331,15 +6531,15 @@
 },
 "odds": {
 "american": {
-"value": "+2100",
+"value": "+2000",
 "open": "+115"
 },
 "decimal": {
-"value": "22.00",
+"value": "21.00",
 "open": "2.15"
 },
 "fraction": {
-"value": "21/1",
+"value": "20/1",
 "open": "23/20"
 },
 "total": {
@@ -6363,46 +6563,6 @@
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/2991139?lang=en&region=us"
-},
-"type": {
-"id": "226",
-"name": "Points + Assists Milestones"
-},
-"odds": {
-"american": {
-"value": "-130",
-"open": "+115"
-},
-"decimal": {
-"value": "1.76",
-"open": "2.15"
-},
-"fraction": {
-"value": "10/13",
-"open": "23/20"
-},
-"total": {
-"value": "9+",
-"open": "10+"
-}
-},
-"lastUpdated": "2026-11-19T07:39Z",
-"current": {
-"target": {
-"value": 9.0,
-"displayValue": "9+"
-}
-},
-"open": {
-"target": {
-"value": 10.0,
-"displayValue": "10+"
-}
-}
-},
-{
-"athlete": {
 "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3936099?lang=en&region=us"
 },
 "type": {
@@ -6411,7 +6571,7 @@
 },
 "odds": {
 "american": {
-"value": "-1400",
+"value": "-1280",
 "open": "-116"
 },
 "decimal": {
@@ -6419,7 +6579,7 @@
 "open": "1.86"
 },
 "fraction": {
-"value": "1/14",
+"value": "5/64",
 "open": "25/29"
 },
 "total": {
@@ -6451,15 +6611,15 @@
 },
 "odds": {
 "american": {
-"value": "-166",
+"value": "-155",
 "open": "-116"
 },
 "decimal": {
-"value": "1.60",
+"value": "1.64",
 "open": "1.86"
 },
 "fraction": {
-"value": "50/83",
+"value": "20/31",
 "open": "25/29"
 },
 "total": {
@@ -6491,15 +6651,15 @@
 },
 "odds": {
 "american": {
-"value": "+247",
+"value": "+258",
 "open": "-116"
 },
 "decimal": {
-"value": "3.47",
+"value": "3.58",
 "open": "1.86"
 },
 "fraction": {
-"value": "247/100",
+"value": "129/50",
 "open": "25/29"
 },
 "total": {
@@ -6531,15 +6691,15 @@
 },
 "odds": {
 "american": {
-"value": "+850",
+"value": "+870",
 "open": "-116"
 },
 "decimal": {
-"value": "9.50",
+"value": "9.70",
 "open": "1.86"
 },
 "fraction": {
-"value": "17/2",
+"value": "87/10",
 "open": "25/29"
 },
 "total": {
@@ -6571,15 +6731,15 @@
 },
 "odds": {
 "american": {
-"value": "+2200",
+"value": "+2300",
 "open": "-116"
 },
 "decimal": {
-"value": "23.00",
+"value": "24.00",
 "open": "1.86"
 },
 "fraction": {
-"value": "22/1",
+"value": "23/1",
 "open": "25/29"
 },
 "total": {
@@ -6611,15 +6771,15 @@
 },
 "odds": {
 "american": {
-"value": "-122",
+"value": "-114",
 "open": "-116"
 },
 "decimal": {
-"value": "1.81",
+"value": "1.87",
 "open": "1.86"
 },
 "fraction": {
-"value": "50/61",
+"value": "50/57",
 "open": "25/29"
 },
 "total": {
@@ -6651,7 +6811,7 @@
 },
 "odds": {
 "american": {
-"value": "-900",
+"value": "-870",
 "open": "-122"
 },
 "decimal": {
@@ -6659,7 +6819,7 @@
 "open": "1.81"
 },
 "fraction": {
-"value": "1/9",
+"value": "10/87",
 "open": "50/61"
 },
 "total": {
@@ -6691,15 +6851,15 @@
 },
 "odds": {
 "american": {
-"value": "-195",
+"value": "-192",
 "open": "-122"
 },
 "decimal": {
-"value": "1.51",
+"value": "1.52",
 "open": "1.81"
 },
 "fraction": {
-"value": "20/39",
+"value": "25/48",
 "open": "50/61"
 },
 "total": {
@@ -6731,15 +6891,15 @@
 },
 "odds": {
 "american": {
-"value": "+162",
+"value": "+166",
 "open": "-122"
 },
 "decimal": {
-"value": "2.62",
+"value": "2.66",
 "open": "1.81"
 },
 "fraction": {
-"value": "81/50",
+"value": "83/50",
 "open": "50/61"
 },
 "total": {
@@ -6771,15 +6931,15 @@
 },
 "odds": {
 "american": {
-"value": "+443",
+"value": "+460",
 "open": "-122"
 },
 "decimal": {
-"value": "5.43",
+"value": "5.60",
 "open": "1.81"
 },
 "fraction": {
-"value": "443/100",
+"value": "23/5",
 "open": "50/61"
 },
 "total": {
@@ -6811,15 +6971,15 @@
 },
 "odds": {
 "american": {
-"value": "+1120",
+"value": "+1160",
 "open": "-122"
 },
 "decimal": {
-"value": "12.20",
+"value": "12.60",
 "open": "1.81"
 },
 "fraction": {
-"value": "56/5",
+"value": "58/5",
 "open": "50/61"
 },
 "total": {
@@ -6851,7 +7011,7 @@
 },
 "odds": {
 "american": {
-"value": "-119",
+"value": "-118",
 "open": "-122"
 },
 "decimal": {
@@ -6859,7 +7019,7 @@
 "open": "1.81"
 },
 "fraction": {
-"value": "100/119",
+"value": "50/59",
 "open": "50/61"
 },
 "total": {
@@ -6931,7 +7091,7 @@
 },
 "odds": {
 "american": {
-"value": "-780",
+"value": "-830",
 "open": "+116"
 },
 "decimal": {
@@ -6939,7 +7099,7 @@
 "open": "2.16"
 },
 "fraction": {
-"value": "5/39",
+"value": "10/83",
 "open": "29/25"
 },
 "total": {
@@ -6971,15 +7131,15 @@
 },
 "odds": {
 "american": {
-"value": "+121",
+"value": "+120",
 "open": "+116"
 },
 "decimal": {
-"value": "2.21",
+"value": "2.20",
 "open": "2.16"
 },
 "fraction": {
-"value": "121/100",
+"value": "6/5",
 "open": "29/25"
 },
 "total": {
@@ -7011,15 +7171,15 @@
 },
 "odds": {
 "american": {
-"value": "+610",
+"value": "+600",
 "open": "+116"
 },
 "decimal": {
-"value": "7.10",
+"value": "7.00",
 "open": "2.16"
 },
 "fraction": {
-"value": "61/10",
+"value": "6/1",
 "open": "29/25"
 },
 "total": {
@@ -7091,15 +7251,15 @@
 },
 "odds": {
 "american": {
-"value": "-118",
+"value": "-120",
 "open": "+116"
 },
 "decimal": {
-"value": "1.84",
+"value": "1.83",
 "open": "2.16"
 },
 "fraction": {
-"value": "50/59",
+"value": "5/6",
 "open": "29/25"
 },
 "total": {
@@ -7131,15 +7291,15 @@
 },
 "odds": {
 "american": {
-"value": "-369",
+"value": "-355",
 "open": "+111"
 },
 "decimal": {
-"value": "1.27",
+"value": "1.28",
 "open": "2.11"
 },
 "fraction": {
-"value": "100/369",
+"value": "20/71",
 "open": "111/100"
 },
 "total": {
@@ -7171,15 +7331,15 @@
 },
 "odds": {
 "american": {
-"value": "+117",
+"value": "+118",
 "open": "+111"
 },
 "decimal": {
-"value": "2.17",
+"value": "2.18",
 "open": "2.11"
 },
 "fraction": {
-"value": "117/100",
+"value": "59/50",
 "open": "111/100"
 },
 "total": {
@@ -7211,15 +7371,15 @@
 },
 "odds": {
 "american": {
-"value": "+392",
+"value": "+395",
 "open": "+111"
 },
 "decimal": {
-"value": "4.92",
+"value": "4.95",
 "open": "2.11"
 },
 "fraction": {
-"value": "98/25",
+"value": "79/20",
 "open": "111/100"
 },
 "total": {
@@ -7251,15 +7411,15 @@
 },
 "odds": {
 "american": {
-"value": "+1120",
+"value": "+1140",
 "open": "+111"
 },
 "decimal": {
-"value": "12.20",
+"value": "12.40",
 "open": "2.11"
 },
 "fraction": {
-"value": "56/5",
+"value": "57/5",
 "open": "111/100"
 },
 "total": {
@@ -7291,15 +7451,15 @@
 },
 "odds": {
 "american": {
-"value": "+2400",
+"value": "+2600",
 "open": "+111"
 },
 "decimal": {
-"value": "25.00",
+"value": "27.00",
 "open": "2.11"
 },
 "fraction": {
-"value": "24/1",
+"value": "26/1",
 "open": "111/100"
 },
 "total": {
@@ -7307,7 +7467,7 @@
 "open": "15+"
 }
 },
-"lastUpdated": "2026-11-19T06:11Z",
+"lastUpdated": "2026-11-19T17:19Z",
 "current": {
 "target": {
 "value": 30.0,
@@ -7331,15 +7491,15 @@
 },
 "odds": {
 "american": {
-"value": "-110",
+"value": "-108",
 "open": "+111"
 },
 "decimal": {
-"value": "1.90",
+"value": "1.92",
 "open": "2.11"
 },
 "fraction": {
-"value": "10/11",
+"value": "25/27",
 "open": "111/100"
 },
 "total": {
@@ -7371,575 +7531,655 @@
 },
 "odds": {
 "american": {
-"value": "-424",
+"value": "-407",
 "open": "+103"
+},
+"decimal": {
+"value": "1.24",
+"open": "2.03"
+},
+"fraction": {
+"value": "100/407",
+"open": "103/100"
+},
+"total": {
+"value": "2+",
+"open": "4+"
+}
+},
+"lastUpdated": "2026-11-19T11:17Z",
+"current": {
+"target": {
+"value": 2.0,
+"displayValue": "2+"
+}
+},
+"open": {
+"target": {
+"value": 4.0,
+"displayValue": "4+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3448?lang=en&region=us"
+},
+"type": {
+"id": "228",
+"name": "Points Milestones - 1st Quarter"
+},
+"odds": {
+"american": {
+"value": "-152",
+"open": "+103"
+},
+"decimal": {
+"value": "1.65",
+"open": "2.03"
+},
+"fraction": {
+"value": "25/38",
+"open": "103/100"
+},
+"total": {
+"value": "3+",
+"open": "4+"
+}
+},
+"lastUpdated": "2026-11-19T11:17Z",
+"current": {
+"target": {
+"value": 3.0,
+"displayValue": "3+"
+}
+},
+"open": {
+"target": {
+"value": 4.0,
+"displayValue": "4+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3448?lang=en&region=us"
+},
+"type": {
+"id": "228",
+"name": "Points Milestones - 1st Quarter"
+},
+"odds": {
+"american": {
+"value": "-407",
+"open": "+103"
+},
+"decimal": {
+"value": "1.24",
+"open": "2.03"
+},
+"fraction": {
+"value": "100/407",
+"open": "103/100"
+},
+"total": {
+"value": "2+",
+"open": "4+"
+}
+},
+"lastUpdated": "2026-11-19T11:17Z",
+"current": {
+"target": {
+"value": 2.0,
+"displayValue": "2+"
+}
+},
+"open": {
+"target": {
+"value": 4.0,
+"displayValue": "4+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3448?lang=en&region=us"
+},
+"type": {
+"id": "228",
+"name": "Points Milestones - 1st Quarter"
+},
+"odds": {
+"american": {
+"value": "-152",
+"open": "+103"
+},
+"decimal": {
+"value": "1.65",
+"open": "2.03"
+},
+"fraction": {
+"value": "25/38",
+"open": "103/100"
+},
+"total": {
+"value": "3+",
+"open": "4+"
+}
+},
+"lastUpdated": "2026-11-19T11:17Z",
+"current": {
+"target": {
+"value": 3.0,
+"displayValue": "3+"
+}
+},
+"open": {
+"target": {
+"value": 4.0,
+"displayValue": "4+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3448?lang=en&region=us"
+},
+"type": {
+"id": "228",
+"name": "Points Milestones - 1st Quarter"
+},
+"odds": {
+"american": {
+"value": "+107",
+"open": "+103"
+},
+"decimal": {
+"value": "2.07",
+"open": "2.03"
+},
+"fraction": {
+"value": "107/100",
+"open": "103/100"
+},
+"total": {
+"value": "4+",
+"open": "4+"
+}
+},
+"lastUpdated": "2026-11-19T11:17Z",
+"current": {
+"target": {
+"value": 4.0,
+"displayValue": "4+"
+}
+},
+"open": {
+"target": {
+"value": 4.0,
+"displayValue": "4+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3448?lang=en&region=us"
+},
+"type": {
+"id": "228",
+"name": "Points Milestones - 1st Quarter"
+},
+"odds": {
+"american": {
+"value": "+166",
+"open": "+103"
+},
+"decimal": {
+"value": "2.66",
+"open": "2.03"
+},
+"fraction": {
+"value": "83/50",
+"open": "103/100"
+},
+"total": {
+"value": "5+",
+"open": "4+"
+}
+},
+"lastUpdated": "2026-11-19T11:17Z",
+"current": {
+"target": {
+"value": 5.0,
+"displayValue": "5+"
+}
+},
+"open": {
+"target": {
+"value": 4.0,
+"displayValue": "4+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3448?lang=en&region=us"
+},
+"type": {
+"id": "228",
+"name": "Points Milestones - 1st Quarter"
+},
+"odds": {
+"american": {
+"value": "+280",
+"open": "+103"
+},
+"decimal": {
+"value": "3.80",
+"open": "2.03"
+},
+"fraction": {
+"value": "14/5",
+"open": "103/100"
+},
+"total": {
+"value": "6+",
+"open": "4+"
+}
+},
+"lastUpdated": "2026-11-19T11:17Z",
+"current": {
+"target": {
+"value": 6.0,
+"displayValue": "6+"
+}
+},
+"open": {
+"target": {
+"value": 4.0,
+"displayValue": "4+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3448?lang=en&region=us"
+},
+"type": {
+"id": "228",
+"name": "Points Milestones - 1st Quarter"
+},
+"odds": {
+"american": {
+"value": "+427",
+"open": "+103"
+},
+"decimal": {
+"value": "5.27",
+"open": "2.03"
+},
+"fraction": {
+"value": "427/100",
+"open": "103/100"
+},
+"total": {
+"value": "7+",
+"open": "4+"
+}
+},
+"lastUpdated": "2026-11-19T11:17Z",
+"current": {
+"target": {
+"value": 7.0,
+"displayValue": "7+"
+}
+},
+"open": {
+"target": {
+"value": 4.0,
+"displayValue": "4+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3448?lang=en&region=us"
+},
+"type": {
+"id": "228",
+"name": "Points Milestones - 1st Quarter"
+},
+"odds": {
+"american": {
+"value": "+660",
+"open": "+103"
+},
+"decimal": {
+"value": "7.60",
+"open": "2.03"
+},
+"fraction": {
+"value": "33/5",
+"open": "103/100"
+},
+"total": {
+"value": "8+",
+"open": "4+"
+}
+},
+"lastUpdated": "2026-11-19T11:17Z",
+"current": {
+"target": {
+"value": 8.0,
+"displayValue": "8+"
+}
+},
+"open": {
+"target": {
+"value": 4.0,
+"displayValue": "4+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3936099?lang=en&region=us"
+},
+"type": {
+"id": "228",
+"name": "Points Milestones - 1st Quarter"
+},
+"odds": {
+"american": {
+"value": "-309",
+"open": "+124"
+},
+"decimal": {
+"value": "1.32",
+"open": "2.24"
+},
+"fraction": {
+"value": "100/309",
+"open": "31/25"
+},
+"total": {
+"value": "2+",
+"open": "4+"
+}
+},
+"lastUpdated": "2026-11-19T11:17Z",
+"current": {
+"target": {
+"value": 2.0,
+"displayValue": "2+"
+}
+},
+"open": {
+"target": {
+"value": 4.0,
+"displayValue": "4+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3936099?lang=en&region=us"
+},
+"type": {
+"id": "228",
+"name": "Points Milestones - 1st Quarter"
+},
+"odds": {
+"american": {
+"value": "-133",
+"open": "+124"
+},
+"decimal": {
+"value": "1.75",
+"open": "2.24"
+},
+"fraction": {
+"value": "100/133",
+"open": "31/25"
+},
+"total": {
+"value": "3+",
+"open": "4+"
+}
+},
+"lastUpdated": "2026-11-19T11:17Z",
+"current": {
+"target": {
+"value": 3.0,
+"displayValue": "3+"
+}
+},
+"open": {
+"target": {
+"value": 4.0,
+"displayValue": "4+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3936099?lang=en&region=us"
+},
+"type": {
+"id": "228",
+"name": "Points Milestones - 1st Quarter"
+},
+"odds": {
+"american": {
+"value": "+140",
+"open": "+124"
+},
+"decimal": {
+"value": "2.40",
+"open": "2.24"
+},
+"fraction": {
+"value": "7/5",
+"open": "31/25"
+},
+"total": {
+"value": "4+",
+"open": "4+"
+}
+},
+"lastUpdated": "2026-11-19T11:17Z",
+"current": {
+"target": {
+"value": 4.0,
+"displayValue": "4+"
+}
+},
+"open": {
+"target": {
+"value": 4.0,
+"displayValue": "4+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3936099?lang=en&region=us"
+},
+"type": {
+"id": "228",
+"name": "Points Milestones - 1st Quarter"
+},
+"odds": {
+"american": {
+"value": "+195",
+"open": "+124"
+},
+"decimal": {
+"value": "2.95",
+"open": "2.24"
+},
+"fraction": {
+"value": "39/20",
+"open": "31/25"
+},
+"total": {
+"value": "5+",
+"open": "4+"
+}
+},
+"lastUpdated": "2026-11-19T11:17Z",
+"current": {
+"target": {
+"value": 5.0,
+"displayValue": "5+"
+}
+},
+"open": {
+"target": {
+"value": 4.0,
+"displayValue": "4+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3936099?lang=en&region=us"
+},
+"type": {
+"id": "228",
+"name": "Points Milestones - 1st Quarter"
+},
+"odds": {
+"american": {
+"value": "+348",
+"open": "+124"
+},
+"decimal": {
+"value": "4.48",
+"open": "2.24"
+},
+"fraction": {
+"value": "87/25",
+"open": "31/25"
+},
+"total": {
+"value": "6+",
+"open": "4+"
+}
+},
+"lastUpdated": "2026-11-19T11:17Z",
+"current": {
+"target": {
+"value": 6.0,
+"displayValue": "6+"
+}
+},
+"open": {
+"target": {
+"value": 4.0,
+"displayValue": "4+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3936099?lang=en&region=us"
+},
+"type": {
+"id": "228",
+"name": "Points Milestones - 1st Quarter"
+},
+"odds": {
+"american": {
+"value": "+561",
+"open": "+124"
+},
+"decimal": {
+"value": "6.61",
+"open": "2.24"
+},
+"fraction": {
+"value": "561/100",
+"open": "31/25"
+},
+"total": {
+"value": "7+",
+"open": "4+"
+}
+},
+"lastUpdated": "2026-11-19T11:17Z",
+"current": {
+"target": {
+"value": 7.0,
+"displayValue": "7+"
+}
+},
+"open": {
+"target": {
+"value": 4.0,
+"displayValue": "4+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3936099?lang=en&region=us"
+},
+"type": {
+"id": "228",
+"name": "Points Milestones - 1st Quarter"
+},
+"odds": {
+"american": {
+"value": "+830",
+"open": "+124"
+},
+"decimal": {
+"value": "9.30",
+"open": "2.24"
+},
+"fraction": {
+"value": "83/10",
+"open": "31/25"
+},
+"total": {
+"value": "8+",
+"open": "4+"
+}
+},
+"lastUpdated": "2026-11-19T11:17Z",
+"current": {
+"target": {
+"value": 8.0,
+"displayValue": "8+"
+}
+},
+"open": {
+"target": {
+"value": 4.0,
+"displayValue": "4+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3448?lang=en&region=us"
+},
+"type": {
+"id": "327",
+"name": "Rebounds + Assists Milestones"
+},
+"odds": {
+"american": {
+"value": "-425",
+"open": "+130"
 },
 "decimal": {
 "value": "1.23",
-"open": "2.03"
-},
-"fraction": {
-"value": "25/106",
-"open": "103/100"
-},
-"total": {
-"value": "2+",
-"open": "4+"
-}
-},
-"lastUpdated": "2026-11-19T11:17Z",
-"current": {
-"target": {
-"value": 2.0,
-"displayValue": "2+"
-}
-},
-"open": {
-"target": {
-"value": 4.0,
-"displayValue": "4+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3448?lang=en&region=us"
-},
-"type": {
-"id": "228",
-"name": "Points Milestones - 1st Quarter"
-},
-"odds": {
-"american": {
-"value": "-156",
-"open": "+103"
-},
-"decimal": {
-"value": "1.64",
-"open": "2.03"
-},
-"fraction": {
-"value": "25/39",
-"open": "103/100"
-},
-"total": {
-"value": "3+",
-"open": "4+"
-}
-},
-"lastUpdated": "2026-11-19T11:17Z",
-"current": {
-"target": {
-"value": 3.0,
-"displayValue": "3+"
-}
-},
-"open": {
-"target": {
-"value": 4.0,
-"displayValue": "4+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3448?lang=en&region=us"
-},
-"type": {
-"id": "228",
-"name": "Points Milestones - 1st Quarter"
-},
-"odds": {
-"american": {
-"value": "+103",
-"open": "+103"
-},
-"decimal": {
-"value": "2.03",
-"open": "2.03"
-},
-"fraction": {
-"value": "103/100",
-"open": "103/100"
-},
-"total": {
-"value": "4+",
-"open": "4+"
-}
-},
-"lastUpdated": "2026-11-19T11:17Z",
-"current": {
-"target": {
-"value": 4.0,
-"displayValue": "4+"
-}
-},
-"open": {
-"target": {
-"value": 4.0,
-"displayValue": "4+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3448?lang=en&region=us"
-},
-"type": {
-"id": "228",
-"name": "Points Milestones - 1st Quarter"
-},
-"odds": {
-"american": {
-"value": "+161",
-"open": "+103"
-},
-"decimal": {
-"value": "2.61",
-"open": "2.03"
-},
-"fraction": {
-"value": "161/100",
-"open": "103/100"
-},
-"total": {
-"value": "5+",
-"open": "4+"
-}
-},
-"lastUpdated": "2026-11-19T11:17Z",
-"current": {
-"target": {
-"value": 5.0,
-"displayValue": "5+"
-}
-},
-"open": {
-"target": {
-"value": 4.0,
-"displayValue": "4+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3448?lang=en&region=us"
-},
-"type": {
-"id": "228",
-"name": "Points Milestones - 1st Quarter"
-},
-"odds": {
-"american": {
-"value": "+274",
-"open": "+103"
-},
-"decimal": {
-"value": "3.74",
-"open": "2.03"
-},
-"fraction": {
-"value": "137/50",
-"open": "103/100"
-},
-"total": {
-"value": "6+",
-"open": "4+"
-}
-},
-"lastUpdated": "2026-11-19T11:17Z",
-"current": {
-"target": {
-"value": 6.0,
-"displayValue": "6+"
-}
-},
-"open": {
-"target": {
-"value": 4.0,
-"displayValue": "4+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3448?lang=en&region=us"
-},
-"type": {
-"id": "228",
-"name": "Points Milestones - 1st Quarter"
-},
-"odds": {
-"american": {
-"value": "+414",
-"open": "+103"
-},
-"decimal": {
-"value": "5.14",
-"open": "2.03"
-},
-"fraction": {
-"value": "207/50",
-"open": "103/100"
-},
-"total": {
-"value": "7+",
-"open": "4+"
-}
-},
-"lastUpdated": "2026-11-19T11:17Z",
-"current": {
-"target": {
-"value": 7.0,
-"displayValue": "7+"
-}
-},
-"open": {
-"target": {
-"value": 4.0,
-"displayValue": "4+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3448?lang=en&region=us"
-},
-"type": {
-"id": "228",
-"name": "Points Milestones - 1st Quarter"
-},
-"odds": {
-"american": {
-"value": "+640",
-"open": "+103"
-},
-"decimal": {
-"value": "7.40",
-"open": "2.03"
-},
-"fraction": {
-"value": "32/5",
-"open": "103/100"
-},
-"total": {
-"value": "8+",
-"open": "4+"
-}
-},
-"lastUpdated": "2026-11-19T11:17Z",
-"current": {
-"target": {
-"value": 8.0,
-"displayValue": "8+"
-}
-},
-"open": {
-"target": {
-"value": 4.0,
-"displayValue": "4+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3936099?lang=en&region=us"
-},
-"type": {
-"id": "228",
-"name": "Points Milestones - 1st Quarter"
-},
-"odds": {
-"american": {
-"value": "-338",
-"open": "+124"
-},
-"decimal": {
-"value": "1.29",
-"open": "2.24"
-},
-"fraction": {
-"value": "50/169",
-"open": "31/25"
-},
-"total": {
-"value": "2+",
-"open": "4+"
-}
-},
-"lastUpdated": "2026-11-19T11:17Z",
-"current": {
-"target": {
-"value": 2.0,
-"displayValue": "2+"
-}
-},
-"open": {
-"target": {
-"value": 4.0,
-"displayValue": "4+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3936099?lang=en&region=us"
-},
-"type": {
-"id": "228",
-"name": "Points Milestones - 1st Quarter"
-},
-"odds": {
-"american": {
-"value": "-143",
-"open": "+124"
-},
-"decimal": {
-"value": "1.69",
-"open": "2.24"
-},
-"fraction": {
-"value": "100/143",
-"open": "31/25"
-},
-"total": {
-"value": "3+",
-"open": "4+"
-}
-},
-"lastUpdated": "2026-11-19T11:17Z",
-"current": {
-"target": {
-"value": 3.0,
-"displayValue": "3+"
-}
-},
-"open": {
-"target": {
-"value": 4.0,
-"displayValue": "4+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3936099?lang=en&region=us"
-},
-"type": {
-"id": "228",
-"name": "Points Milestones - 1st Quarter"
-},
-"odds": {
-"american": {
-"value": "+127",
-"open": "+124"
-},
-"decimal": {
-"value": "2.27",
-"open": "2.24"
-},
-"fraction": {
-"value": "127/100",
-"open": "31/25"
-},
-"total": {
-"value": "4+",
-"open": "4+"
-}
-},
-"lastUpdated": "2026-11-19T11:17Z",
-"current": {
-"target": {
-"value": 4.0,
-"displayValue": "4+"
-}
-},
-"open": {
-"target": {
-"value": 4.0,
-"displayValue": "4+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3936099?lang=en&region=us"
-},
-"type": {
-"id": "228",
-"name": "Points Milestones - 1st Quarter"
-},
-"odds": {
-"american": {
-"value": "+180",
-"open": "+124"
-},
-"decimal": {
-"value": "2.80",
-"open": "2.24"
-},
-"fraction": {
-"value": "9/5",
-"open": "31/25"
-},
-"total": {
-"value": "5+",
-"open": "4+"
-}
-},
-"lastUpdated": "2026-11-19T11:17Z",
-"current": {
-"target": {
-"value": 5.0,
-"displayValue": "5+"
-}
-},
-"open": {
-"target": {
-"value": 4.0,
-"displayValue": "4+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3936099?lang=en&region=us"
-},
-"type": {
-"id": "228",
-"name": "Points Milestones - 1st Quarter"
-},
-"odds": {
-"american": {
-"value": "+318",
-"open": "+124"
-},
-"decimal": {
-"value": "4.18",
-"open": "2.24"
-},
-"fraction": {
-"value": "159/50",
-"open": "31/25"
-},
-"total": {
-"value": "6+",
-"open": "4+"
-}
-},
-"lastUpdated": "2026-11-19T11:17Z",
-"current": {
-"target": {
-"value": 6.0,
-"displayValue": "6+"
-}
-},
-"open": {
-"target": {
-"value": 4.0,
-"displayValue": "4+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3936099?lang=en&region=us"
-},
-"type": {
-"id": "228",
-"name": "Points Milestones - 1st Quarter"
-},
-"odds": {
-"american": {
-"value": "+494",
-"open": "+124"
-},
-"decimal": {
-"value": "5.94",
-"open": "2.24"
-},
-"fraction": {
-"value": "247/50",
-"open": "31/25"
-},
-"total": {
-"value": "7+",
-"open": "4+"
-}
-},
-"lastUpdated": "2026-11-19T11:17Z",
-"current": {
-"target": {
-"value": 7.0,
-"displayValue": "7+"
-}
-},
-"open": {
-"target": {
-"value": 4.0,
-"displayValue": "4+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3936099?lang=en&region=us"
-},
-"type": {
-"id": "228",
-"name": "Points Milestones - 1st Quarter"
-},
-"odds": {
-"american": {
-"value": "+740",
-"open": "+124"
-},
-"decimal": {
-"value": "8.40",
-"open": "2.24"
-},
-"fraction": {
-"value": "37/5",
-"open": "31/25"
-},
-"total": {
-"value": "8+",
-"open": "4+"
-}
-},
-"lastUpdated": "2026-11-19T11:17Z",
-"current": {
-"target": {
-"value": 8.0,
-"displayValue": "8+"
-}
-},
-"open": {
-"target": {
-"value": 4.0,
-"displayValue": "4+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3448?lang=en&region=us"
-},
-"type": {
-"id": "327",
-"name": "Rebounds + Assists Milestones"
-},
-"odds": {
-"american": {
-"value": "-475",
-"open": "+130"
-},
-"decimal": {
-"value": "1.21",
 "open": "2.30"
 },
 "fraction": {
-"value": "4/19",
+"value": "4/17",
 "open": "13/10"
 },
 "total": {
@@ -7971,15 +8211,15 @@
 },
 "odds": {
 "american": {
-"value": "-145",
+"value": "-135",
 "open": "+130"
 },
 "decimal": {
-"value": "1.68",
+"value": "1.74",
 "open": "2.30"
 },
 "fraction": {
-"value": "20/29",
+"value": "20/27",
 "open": "13/10"
 },
 "total": {
@@ -7987,7 +8227,7 @@
 "open": "8+"
 }
 },
-"lastUpdated": "2026-11-19T11:23Z",
+"lastUpdated": "2026-11-19T12:28Z",
 "current": {
 "target": {
 "value": 7.0,
@@ -8011,15 +8251,15 @@
 },
 "odds": {
 "american": {
-"value": "+110",
+"value": "+120",
 "open": "+130"
 },
 "decimal": {
-"value": "2.10",
+"value": "2.20",
 "open": "2.30"
 },
 "fraction": {
-"value": "11/10",
+"value": "6/5",
 "open": "13/10"
 },
 "total": {
@@ -8051,15 +8291,15 @@
 },
 "odds": {
 "american": {
-"value": "+275",
+"value": "+295",
 "open": "+130"
 },
 "decimal": {
-"value": "3.75",
+"value": "3.95",
 "open": "2.30"
 },
 "fraction": {
-"value": "11/4",
+"value": "59/20",
 "open": "13/10"
 },
 "total": {
@@ -8131,15 +8371,15 @@
 },
 "odds": {
 "american": {
-"value": "+1700",
+"value": "+1900",
 "open": "+130"
 },
 "decimal": {
-"value": "18.00",
+"value": "20.00",
 "open": "2.30"
 },
 "fraction": {
-"value": "17/1",
+"value": "19/1",
 "open": "13/10"
 },
 "total": {
@@ -8171,15 +8411,15 @@
 },
 "odds": {
 "american": {
-"value": "-450",
+"value": "-425",
 "open": "-120"
 },
 "decimal": {
-"value": "1.22",
+"value": "1.23",
 "open": "1.83"
 },
 "fraction": {
-"value": "2/9",
+"value": "4/17",
 "open": "5/6"
 },
 "total": {
@@ -8211,15 +8451,15 @@
 },
 "odds": {
 "american": {
-"value": "+150",
+"value": "+160",
 "open": "-120"
 },
 "decimal": {
-"value": "2.50",
+"value": "2.60",
 "open": "1.83"
 },
 "fraction": {
-"value": "6/4",
+"value": "8/5",
 "open": "5/6"
 },
 "total": {
@@ -8251,15 +8491,15 @@
 },
 "odds": {
 "american": {
-"value": "+425",
+"value": "+450",
 "open": "-120"
 },
 "decimal": {
-"value": "5.25",
+"value": "5.50",
 "open": "1.83"
 },
 "fraction": {
-"value": "17/4",
+"value": "9/2",
 "open": "5/6"
 },
 "total": {
@@ -8291,15 +8531,15 @@
 },
 "odds": {
 "american": {
-"value": "+1100",
+"value": "+1200",
 "open": "-120"
 },
 "decimal": {
-"value": "12.00",
+"value": "13.00",
 "open": "1.83"
 },
 "fraction": {
-"value": "11/1",
+"value": "12/1",
 "open": "5/6"
 },
 "total": {
@@ -8331,15 +8571,15 @@
 },
 "odds": {
 "american": {
-"value": "-120",
+"value": "-110",
 "open": "-120"
 },
 "decimal": {
-"value": "1.83",
+"value": "1.90",
 "open": "1.83"
 },
 "fraction": {
-"value": "5/6",
+"value": "10/11",
 "open": "5/6"
 },
 "total": {

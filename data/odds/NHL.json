@@ -19030,24 +19030,24 @@ null,
 "under_price": -130.0
 },
 "NHL-20261119-ANA-COL-21": {
-"away_ml": 120.0,
+"away_ml": 110.0,
 "away_spread_price": -218.0,
-"home_ml": -142.0,
+"home_ml": -130.0,
 "home_spread_price": 180.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.5775,
-0.5661
+0.5487,
+0.5445
 ],
 [
 "moneyline",
 "away",
 null,
-0.4225,
-0.4339
+0.4513,
+0.4555
 ],
 [
 "spread",
@@ -19067,42 +19067,42 @@ null,
 "total",
 "over",
 6.5,
-0.5184,
-0.5273
+0.521,
+0.5339
 ],
 [
 "total",
 "under",
 6.5,
-0.4816,
-0.4727
+0.479,
+0.4661
 ]
 ],
-"over_price": -122.0,
+"over_price": -125.0,
 "source": "DraftKings",
 "spread": -1.5,
 "total": 6.5,
-"under_price": 102.0
+"under_price": 105.0
 },
 "NHL-20261119-BUF-WSH-19": {
-"away_ml": 114.0,
+"away_ml": 120.0,
 "away_spread_price": -218.0,
-"home_ml": -135.0,
+"home_ml": -142.0,
 "home_spread_price": 180.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.5606,
-0.5536
+0.5773,
+0.5661
 ],
 [
 "moneyline",
 "away",
 null,
-0.4394,
-0.4464
+0.4227,
+0.4339
 ],
 [
 "spread",
@@ -19232,28 +19232,28 @@ null,
 "total",
 "over",
 5.5,
-0.521,
-0.5339
+0.5166,
+0.5227
 ],
 [
 "total",
 "under",
 5.5,
-0.479,
-0.4661
+0.4834,
+0.4773
 ]
 ],
-"over_price": -125.0,
+"over_price": -120.0,
 "source": "DraftKings",
 "spread": -1.5,
 "total": 5.5,
-"under_price": 105.0
+"under_price": 100.0
 },
 "NHL-20261119-EDM-TB-19": {
 "away_ml": 120.0,
-"away_spread_price": -218.0,
+"away_spread_price": -205.0,
 "home_ml": -142.0,
-"home_spread_price": 180.0,
+"home_spread_price": 170.0,
 "model": [
 [
 "moneyline",
@@ -19273,15 +19273,15 @@ null,
 "spread",
 "home",
 -1.5,
-0.322,
-0.3358
+0.3337,
+0.3491
 ],
 [
 "spread",
 "away",
 -1.5,
-0.678,
-0.6642
+0.6663,
+0.6509
 ],
 [
 "total",
@@ -19305,24 +19305,24 @@ null,
 "under_price": -125.0
 },
 "NHL-20261119-LA-TOR-19": {
-"away_ml": -110.0,
+"away_ml": -105.0,
 "away_spread_price": -278.0,
-"home_ml": -110.0,
+"home_ml": -115.0,
 "home_spread_price": 225.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.4888,
-0.5
+0.5041,
+0.5113
 ],
 [
 "moneyline",
 "away",
 null,
-0.5112,
-0.5
+0.4959,
+0.4887
 ],
 [
 "spread",
@@ -19360,93 +19360,93 @@ null,
 "under_price": -125.0
 },
 "NHL-20261119-MIN-CGY-20": {
-"away_ml": -218.0,
-"away_spread_price": 120.0,
-"home_ml": 180.0,
-"home_spread_price": -142.0,
+"away_ml": -225.0,
+"away_spread_price": 114.0,
+"home_ml": 185.0,
+"home_spread_price": -135.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.2764,
-0.3358
+0.2686,
+0.3293
 ],
 [
 "moneyline",
 "away",
 null,
-0.7236,
-0.6642
+0.7314,
+0.6707
 ],
 [
 "spread",
 "home",
 1.5,
-0.5264,
-0.5661
+0.5151,
+0.5536
 ],
 [
 "spread",
 "away",
 1.5,
-0.4736,
-0.4339
+0.4849,
+0.4464
 ],
 [
 "total",
 "over",
 6.5,
-0.4862,
-0.4464
+0.4898,
+0.4555
 ],
 [
 "total",
 "under",
 6.5,
-0.5138,
-0.5536
+0.5102,
+0.5445
 ]
 ],
-"over_price": 114.0,
+"over_price": 110.0,
 "source": "DraftKings",
 "spread": 1.5,
 "total": 6.5,
-"under_price": -135.0
+"under_price": -130.0
 },
 "NHL-20261119-MTL-CAR-19": {
-"away_ml": 215.0,
-"away_spread_price": -108.0,
-"home_ml": -265.0,
-"home_spread_price": -112.0,
+"away_ml": 225.0,
+"away_spread_price": -105.0,
+"home_ml": -278.0,
+"home_spread_price": -115.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.7551,
-0.7043
+0.7664,
+0.7139
 ],
 [
 "moneyline",
 "away",
 null,
-0.2449,
-0.2957
+0.2336,
+0.2861
 ],
 [
 "spread",
 "home",
 -1.5,
-0.4709,
-0.5045
+0.477,
+0.5113
 ],
 [
 "spread",
 "away",
 -1.5,
-0.5291,
-0.4955
+0.523,
+0.4887
 ],
 [
 "total",
@@ -19581,9 +19581,9 @@ null,
 },
 "NHL-20261119-STL-PIT-19": {
 "away_ml": -108.0,
-"away_spread_price": -290.0,
+"away_spread_price": -285.0,
 "home_ml": -112.0,
-"home_spread_price": 235.0,
+"home_spread_price": 230.0,
 "model": [
 [
 "moneyline",
@@ -19603,15 +19603,15 @@ null,
 "spread",
 "home",
 -1.5,
-0.2707,
-0.2775
+0.2742,
+0.2814
 ],
 [
 "spread",
 "away",
 -1.5,
-0.7293,
-0.7225
+0.7258,
+0.7186
 ],
 [
 "total",
@@ -19636,9 +19636,9 @@ null,
 },
 "NHL-20261119-VAN-SEA-21": {
 "away_ml": 142.0,
-"away_spread_price": -170.0,
+"away_spread_price": -180.0,
 "home_ml": -170.0,
-"home_spread_price": 142.0,
+"home_spread_price": 150.0,
 "model": [
 [
 "moneyline",
@@ -19658,15 +19658,15 @@ null,
 "spread",
 "home",
 -1.5,
-0.3712,
-0.3918
+0.3596,
+0.3786
 ],
 [
 "spread",
 "away",
 -1.5,
-0.6288,
-0.6082
+0.6404,
+0.6214
 ],
 [
 "total",
