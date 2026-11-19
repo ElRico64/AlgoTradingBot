@@ -19028,5 +19028,665 @@ null,
 "spread": -1.5,
 "total": 6.5,
 "under_price": -130.0
+},
+"NHL-20261119-ANA-COL-21": {
+"away_ml": 120.0,
+"away_spread_price": -218.0,
+"home_ml": -142.0,
+"home_spread_price": 180.0,
+"model": [
+[
+"moneyline",
+"home",
+null,
+0.5775,
+0.5661
+],
+[
+"moneyline",
+"away",
+null,
+0.4225,
+0.4339
+],
+[
+"spread",
+"home",
+-1.5,
+0.322,
+0.3358
+],
+[
+"spread",
+"away",
+-1.5,
+0.678,
+0.6642
+],
+[
+"total",
+"over",
+6.5,
+0.5184,
+0.5273
+],
+[
+"total",
+"under",
+6.5,
+0.4816,
+0.4727
+]
+],
+"over_price": -122.0,
+"source": "DraftKings",
+"spread": -1.5,
+"total": 6.5,
+"under_price": 102.0
+},
+"NHL-20261119-BUF-WSH-19": {
+"away_ml": 114.0,
+"away_spread_price": -218.0,
+"home_ml": -135.0,
+"home_spread_price": 180.0,
+"model": [
+[
+"moneyline",
+"home",
+null,
+0.5606,
+0.5536
+],
+[
+"moneyline",
+"away",
+null,
+0.4394,
+0.4464
+],
+[
+"spread",
+"home",
+-1.5,
+0.322,
+0.3358
+],
+[
+"spread",
+"away",
+-1.5,
+0.678,
+0.6642
+],
+[
+"total",
+"over",
+6.5,
+0.521,
+0.5339
+],
+[
+"total",
+"under",
+6.5,
+0.479,
+0.4661
+]
+],
+"over_price": -125.0,
+"source": "DraftKings",
+"spread": -1.5,
+"total": 6.5,
+"under_price": 105.0
+},
+"NHL-20261119-CBJ-CHI-20": {
+"away_ml": -162.0,
+"away_spread_price": 164.0,
+"home_ml": 136.0,
+"home_spread_price": -198.0,
+"model": [
+[
+"moneyline",
+"home",
+null,
+0.3602,
+0.4027
+],
+[
+"moneyline",
+"away",
+null,
+0.6398,
+0.5973
+],
+[
+"spread",
+"home",
+1.5,
+0.5973,
+0.6428
+],
+[
+"spread",
+"away",
+1.5,
+0.4027,
+0.3572
+],
+[
+"total",
+"over",
+5.5,
+0.5252,
+0.5445
+],
+[
+"total",
+"under",
+5.5,
+0.4748,
+0.4555
+]
+],
+"over_price": -130.0,
+"source": "DraftKings",
+"spread": 1.5,
+"total": 5.5,
+"under_price": 110.0
+},
+"NHL-20261119-DAL-VGK-22": {
+"away_ml": 105.0,
+"away_spread_price": -245.0,
+"home_ml": -125.0,
+"home_spread_price": 200.0,
+"model": [
+[
+"moneyline",
+"home",
+null,
+0.5345,
+0.5339
+],
+[
+"moneyline",
+"away",
+null,
+0.4655,
+0.4661
+],
+[
+"spread",
+"home",
+-1.5,
+0.3008,
+0.3116
+],
+[
+"spread",
+"away",
+-1.5,
+0.6992,
+0.6884
+],
+[
+"total",
+"over",
+5.5,
+0.521,
+0.5339
+],
+[
+"total",
+"under",
+5.5,
+0.479,
+0.4661
+]
+],
+"over_price": -125.0,
+"source": "DraftKings",
+"spread": -1.5,
+"total": 5.5,
+"under_price": 105.0
+},
+"NHL-20261119-EDM-TB-19": {
+"away_ml": 120.0,
+"away_spread_price": -218.0,
+"home_ml": -142.0,
+"home_spread_price": 180.0,
+"model": [
+[
+"moneyline",
+"home",
+null,
+0.5774,
+0.5661
+],
+[
+"moneyline",
+"away",
+null,
+0.4226,
+0.4339
+],
+[
+"spread",
+"home",
+-1.5,
+0.322,
+0.3358
+],
+[
+"spread",
+"away",
+-1.5,
+0.678,
+0.6642
+],
+[
+"total",
+"over",
+6.5,
+0.494,
+0.4661
+],
+[
+"total",
+"under",
+6.5,
+0.506,
+0.5339
+]
+],
+"over_price": 105.0,
+"source": "DraftKings",
+"spread": -1.5,
+"total": 6.5,
+"under_price": -125.0
+},
+"NHL-20261119-LA-TOR-19": {
+"away_ml": -110.0,
+"away_spread_price": -278.0,
+"home_ml": -110.0,
+"home_spread_price": 225.0,
+"model": [
+[
+"moneyline",
+"home",
+null,
+0.4888,
+0.5
+],
+[
+"moneyline",
+"away",
+null,
+0.5112,
+0.5
+],
+[
+"spread",
+"home",
+-1.5,
+0.2783,
+0.2861
+],
+[
+"spread",
+"away",
+-1.5,
+0.7217,
+0.7139
+],
+[
+"total",
+"over",
+6.5,
+0.494,
+0.4661
+],
+[
+"total",
+"under",
+6.5,
+0.506,
+0.5339
+]
+],
+"over_price": 105.0,
+"source": "DraftKings",
+"spread": -1.5,
+"total": 6.5,
+"under_price": -125.0
+},
+"NHL-20261119-MIN-CGY-20": {
+"away_ml": -218.0,
+"away_spread_price": 120.0,
+"home_ml": 180.0,
+"home_spread_price": -142.0,
+"model": [
+[
+"moneyline",
+"home",
+null,
+0.2764,
+0.3358
+],
+[
+"moneyline",
+"away",
+null,
+0.7236,
+0.6642
+],
+[
+"spread",
+"home",
+1.5,
+0.5264,
+0.5661
+],
+[
+"spread",
+"away",
+1.5,
+0.4736,
+0.4339
+],
+[
+"total",
+"over",
+6.5,
+0.4862,
+0.4464
+],
+[
+"total",
+"under",
+6.5,
+0.5138,
+0.5536
+]
+],
+"over_price": 114.0,
+"source": "DraftKings",
+"spread": 1.5,
+"total": 6.5,
+"under_price": -135.0
+},
+"NHL-20261119-MTL-CAR-19": {
+"away_ml": 215.0,
+"away_spread_price": -108.0,
+"home_ml": -265.0,
+"home_spread_price": -112.0,
+"model": [
+[
+"moneyline",
+"home",
+null,
+0.7551,
+0.7043
+],
+[
+"moneyline",
+"away",
+null,
+0.2449,
+0.2957
+],
+[
+"spread",
+"home",
+-1.5,
+0.4709,
+0.5045
+],
+[
+"spread",
+"away",
+-1.5,
+0.5291,
+0.4955
+],
+[
+"total",
+"over",
+6.5,
+0.5184,
+0.5273
+],
+[
+"total",
+"under",
+6.5,
+0.4816,
+0.4727
+]
+],
+"over_price": -122.0,
+"source": "DraftKings",
+"spread": -1.5,
+"total": 6.5,
+"under_price": 102.0
+},
+"NHL-20261119-NYI-WPG-19": {
+"away_ml": -105.0,
+"away_spread_price": -265.0,
+"home_ml": -115.0,
+"home_spread_price": 215.0,
+"model": [
+[
+"moneyline",
+"home",
+null,
+0.5041,
+0.5113
+],
+[
+"moneyline",
+"away",
+null,
+0.4959,
+0.4887
+],
+[
+"spread",
+"home",
+-1.5,
+0.2868,
+0.2957
+],
+[
+"spread",
+"away",
+-1.5,
+0.7132,
+0.7043
+],
+[
+"total",
+"over",
+6.5,
+0.4862,
+0.4464
+],
+[
+"total",
+"under",
+6.5,
+0.5138,
+0.5536
+]
+],
+"over_price": 114.0,
+"source": "DraftKings",
+"spread": -1.5,
+"total": 6.5,
+"under_price": -135.0
+},
+"NHL-20261119-PHI-OTT-19": {
+"away_ml": 150.0,
+"away_spread_price": -175.0,
+"home_ml": -180.0,
+"home_spread_price": 145.0,
+"model": [
+[
+"moneyline",
+"home",
+null,
+0.6503,
+0.6214
+],
+[
+"moneyline",
+"away",
+null,
+0.3497,
+0.3786
+],
+[
+"spread",
+"home",
+-1.5,
+0.366,
+0.3859
+],
+[
+"spread",
+"away",
+-1.5,
+0.634,
+0.6141
+],
+[
+"total",
+"over",
+5.5,
+0.521,
+0.5339
+],
+[
+"total",
+"under",
+5.5,
+0.479,
+0.4661
+]
+],
+"over_price": -125.0,
+"source": "DraftKings",
+"spread": -1.5,
+"total": 5.5,
+"under_price": 105.0
+},
+"NHL-20261119-STL-PIT-19": {
+"away_ml": -108.0,
+"away_spread_price": -290.0,
+"home_ml": -112.0,
+"home_spread_price": 235.0,
+"model": [
+[
+"moneyline",
+"home",
+null,
+0.4953,
+0.5045
+],
+[
+"moneyline",
+"away",
+null,
+0.5047,
+0.4955
+],
+[
+"spread",
+"home",
+-1.5,
+0.2707,
+0.2775
+],
+[
+"spread",
+"away",
+-1.5,
+0.7293,
+0.7225
+],
+[
+"total",
+"over",
+6.5,
+0.4967,
+0.4727
+],
+[
+"total",
+"under",
+6.5,
+0.5033,
+0.5273
+]
+],
+"over_price": 102.0,
+"source": "DraftKings",
+"spread": -1.5,
+"total": 6.5,
+"under_price": -122.0
+},
+"NHL-20261119-VAN-SEA-21": {
+"away_ml": 142.0,
+"away_spread_price": -170.0,
+"home_ml": -170.0,
+"home_spread_price": 142.0,
+"model": [
+[
+"moneyline",
+"home",
+null,
+0.6335,
+0.6082
+],
+[
+"moneyline",
+"away",
+null,
+0.3665,
+0.3918
+],
+[
+"spread",
+"home",
+-1.5,
+0.3712,
+0.3918
+],
+[
+"spread",
+"away",
+-1.5,
+0.6288,
+0.6082
+],
+[
+"total",
+"over",
+6.5,
+0.5093,
+0.5045
+],
+[
+"total",
+"under",
+6.5,
+0.4907,
+0.4955
+]
+],
+"over_price": -112.0,
+"source": "DraftKings",
+"spread": -1.5,
+"total": 6.5,
+"under_price": -108.0
 }
 }
