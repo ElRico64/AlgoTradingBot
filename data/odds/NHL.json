@@ -18921,9 +18921,9 @@ null,
 },
 "NHL-20261118-COL-UTAH-22": {
 "away_ml": -110.0,
-"away_spread_price": -265.0,
+"away_spread_price": -285.0,
 "home_ml": -110.0,
-"home_spread_price": 215.0,
+"home_spread_price": 230.0,
 "model": [
 [
 "moneyline",
@@ -18943,15 +18943,15 @@ null,
 "spread",
 "home",
 -1.5,
-0.2853,
-0.2957
+0.2726,
+0.2814
 ],
 [
 "spread",
 "away",
 -1.5,
-0.7147,
-0.7043
+0.7274,
+0.7186
 ],
 [
 "total",
@@ -18969,7 +18969,7 @@ null,
 ]
 ],
 "over_price": -102.0,
-"source": "DraftKings",
+"source": "Draft Kings",
 "spread": -1.5,
 "total": 6.5,
 "under_price": -118.0
