@@ -1,128 +1,165 @@
 {
 "boxscores": {
-"days_scanned": 462,
+"days_scanned": 463,
 "errors": 4,
-"games_stored": 2761,
-"new_games": 0,
-"new_rows": 0,
-"seconds": 7.4
+"games_stored": 2765,
+"new_games": 4,
+"new_rows": 89,
+"seconds": 9.9
 },
-"candidate_legs": 0,
-"espn": "",
+"candidate_legs": 1866,
+"espn": "ESPN props: over/under side order confirmed by the data",
+"espn_orientation": {
+"checked_at": "2026-11-20T08:37:08+00:00",
+"first_is_over": true,
+"milestone_first_is_over_share": 1.0,
+"milestone_matches": 301,
+"model_corr": 0.45730531422677195,
+"model_n": 352,
+"results_loglik_diff": 67.79,
+"results_n": 2298
+},
+"espn_types": {
+"(milestone ladders left out: no matching full-game line, or ambiguous)": 26,
+"3-Point Field Goals Milestones": 497,
+"Assists Milestones": 479,
+"Assists Milestones - 1st Quarter": 17,
+"First Basket": 85,
+"Points + Assists + Rebounds Milestones": 494,
+"Points + Assists Milestones": 432,
+"Points + Rebounds Milestones": 469,
+"Points Milestones": 827,
+"Points Milestones - 1st Quarter": 86,
+"Rebounds + Assists Milestones": 339,
+"Rebounds Milestones": 786,
+"Steals Milestones": 42,
+"To Record a Double Double": 60,
+"To Record a Triple Double": 20,
+"Total 3-Point Field Goals": 180,
+"Total Assists": 140,
+"Total Assists and Rebounds": 134,
+"Total Blocks": 14,
+"Total Points": 224,
+"Total Points and Assists": 133,
+"Total Points and Rebounds": 143,
+"Total Points, Rebounds, and Assists": 136,
+"Total Rebounds": 160,
+"Total Steals": 14
+},
 "graded_now": 0,
 "market_check": {
-"market_n": 14541,
-"n": 14541,
-"share": 0.306
+"market_n": 15439,
+"n": 15439,
+"share": 0.299
 },
 "model": {
-"games": 2761,
+"games": 2765,
 "players": 745,
 "stats": {
 "ast": {
 "calibrated": true,
-"dispersion": 8.38,
+"dispersion": 8.41,
 "health": {
 "ok": true,
-"worst_gap_60plus": 0.026
+"worst_gap_60plus": 0.0164
 },
-"oos_rows": 55883,
+"oos_rows": 55972,
 "reliability": [
 {
-"hit": 0.1066,
-"n": 9053,
+"hit": 0.1091,
+"n": 9192,
 "range": "0.00-0.20",
-"said": 0.1131
+"said": 0.1141
 },
 {
-"hit": 0.2744,
-"n": 4431,
+"hit": 0.2804,
+"n": 4462,
 "range": "0.20-0.35",
-"said": 0.2745
+"said": 0.2822
 },
 {
-"hit": 0.4236,
-"n": 3591,
+"hit": 0.4286,
+"n": 3404,
 "range": "0.35-0.50",
 "said": 0.4254
 },
 {
-"hit": 0.5724,
-"n": 2547,
+"hit": 0.5727,
+"n": 2490,
 "range": "0.50-0.65",
-"said": 0.5815
+"said": 0.5796
 },
 {
-"hit": 0.7012,
-"n": 3019,
+"hit": 0.7049,
+"n": 3094,
 "range": "0.65-0.80",
-"said": 0.7272
+"said": 0.7213
 },
 {
-"hit": 0.8273,
-"n": 1546,
+"hit": 0.8306,
+"n": 1564,
 "range": "0.80-0.90",
-"said": 0.8472
+"said": 0.8462
 },
 {
-"hit": 0.9446,
-"n": 1191,
+"hit": 0.9458,
+"n": 1163,
 "range": "0.90-1.00",
-"said": 0.9462
+"said": 0.9476
 }
 ],
 "trusted": true
 },
 "fg3m": {
 "calibrated": true,
-"dispersion": 6.04,
+"dispersion": 6.05,
 "health": {
 "ok": true,
-"worst_gap_60plus": 0.0168
+"worst_gap_60plus": 0.0147
 },
-"oos_rows": 55883,
+"oos_rows": 55972,
 "reliability": [
 {
-"hit": 0.0884,
-"n": 10817,
+"hit": 0.0888,
+"n": 10801,
 "range": "0.00-0.20",
-"said": 0.0903
+"said": 0.09
 },
 {
-"hit": 0.2738,
-"n": 3846,
+"hit": 0.2681,
+"n": 3626,
 "range": "0.20-0.35",
-"said": 0.2682
+"said": 0.2622
 },
 {
-"hit": 0.4302,
-"n": 2580,
+"hit": 0.4286,
+"n": 3017,
 "range": "0.35-0.50",
-"said": 0.4276
+"said": 0.4247
 },
 {
-"hit": 0.5504,
-"n": 1924,
+"hit": 0.5588,
+"n": 1718,
 "range": "0.50-0.65",
-"said": 0.5652
+"said": 0.5707
 },
 {
-"hit": 0.7024,
-"n": 2060,
+"hit": 0.7123,
+"n": 2169,
 "range": "0.65-0.80",
-"said": 0.7192
+"said": 0.7215
 },
 {
-"hit": 0.8387,
-"n": 992,
+"hit": 0.8401,
+"n": 888,
 "range": "0.80-0.90",
-"said": 0.8457
+"said": 0.8478
 },
 {
-"hit": 0.9432,
-"n": 229,
+"hit": 0.9435,
+"n": 230,
 "range": "0.90-1.00",
-"said": 0.9286
+"said": 0.9288
 }
 ],
 "trusted": true
@@ -132,112 +169,112 @@
 "dispersion": 2.9,
 "health": {
 "ok": false,
-"worst_gap_60plus": 0.0881
+"worst_gap_60plus": 0.0801
 },
-"oos_rows": 55883,
+"oos_rows": 55972,
 "reliability": [
 {
-"hit": 0.1121,
-"n": 7397,
+"hit": 0.113,
+"n": 7356,
 "range": "0.00-0.20",
-"said": 0.1217
+"said": 0.1211
 },
 {
-"hit": 0.261,
-"n": 4537,
+"hit": 0.2594,
+"n": 4572,
 "range": "0.20-0.35",
-"said": 0.2772
+"said": 0.2755
 },
 {
-"hit": 0.3954,
-"n": 4631,
+"hit": 0.4003,
+"n": 4776,
 "range": "0.35-0.50",
-"said": 0.4191
+"said": 0.4208
 },
 {
-"hit": 0.5514,
-"n": 2978,
+"hit": 0.5531,
+"n": 2665,
 "range": "0.50-0.65",
-"said": 0.5642
+"said": 0.5616
 },
 {
-"hit": 0.6715,
-"n": 5684,
+"hit": 0.6721,
+"n": 5822,
 "range": "0.65-0.80",
-"said": 0.704
+"said": 0.7005
 },
 {
-"hit": 0.8721,
-"n": 4300,
+"hit": 0.8729,
+"n": 4367,
 "range": "0.80-0.90",
-"said": 0.8805
+"said": 0.8786
 },
 {
-"hit": 0.8159,
-"n": 277,
+"hit": 0.8238,
+"n": 244,
 "range": "0.90-1.00",
-"said": 0.904
+"said": 0.9039
 }
 ],
 "trusted": false
 },
 "reb": {
 "calibrated": true,
-"dispersion": 7.95,
+"dispersion": 7.97,
 "health": {
 "ok": true,
-"worst_gap_60plus": 0.0203
+"worst_gap_60plus": 0.0228
 },
-"oos_rows": 55883,
+"oos_rows": 55972,
 "reliability": [
 {
-"hit": 0.113,
-"n": 7644,
+"hit": 0.1125,
+"n": 7636,
 "range": "0.00-0.20",
-"said": 0.1183
+"said": 0.1177
 },
 {
-"hit": 0.2638,
-"n": 5042,
+"hit": 0.2694,
+"n": 5274,
 "range": "0.20-0.35",
-"said": 0.2674
+"said": 0.2712
 },
 {
-"hit": 0.4131,
-"n": 4275,
+"hit": 0.4144,
+"n": 4158,
 "range": "0.35-0.50",
-"said": 0.4238
+"said": 0.4296
 },
 {
-"hit": 0.5828,
-"n": 3111,
+"hit": 0.5857,
+"n": 2974,
 "range": "0.50-0.65",
-"said": 0.5808
+"said": 0.5841
 },
 {
-"hit": 0.7133,
-"n": 3865,
+"hit": 0.7137,
+"n": 3901,
 "range": "0.65-0.80",
-"said": 0.7328
+"said": 0.7313
 },
 {
-"hit": 0.8293,
-"n": 1740,
+"hit": 0.83,
+"n": 1876,
 "range": "0.80-0.90",
-"said": 0.8496
+"said": 0.8528
 },
 {
-"hit": 0.9294,
-"n": 2876,
+"hit": 0.9347,
+"n": 2725,
 "range": "0.90-1.00",
-"said": 0.9454
+"said": 0.9478
 }
 ],
 "trusted": true
 }
 }
 },
-"prices": "prop prices: none (add a free ODDS_API_KEY to price props; nothing is invented)",
-"rows": 59508,
-"updated_at": "2026-11-20T02:36:33+00:00"
+"prices": "prop prices: ESPN (free), 2491 milestones and 352 over/unders on 9 games",
+"rows": 59597,
+"updated_at": "2026-11-20T08:36:50+00:00"
 }
