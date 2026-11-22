@@ -12925,58 +12925,58 @@ null,
 "under_price": -112.0
 },
 "NBA-20261121-BOS-SAC-22": {
-"away_ml": -790.0,
-"away_spread_price": -112.0,
-"home_ml": 554.0,
-"home_spread_price": -108.0,
+"away_ml": -600.0,
+"away_spread_price": -116.0,
+"home_ml": 446.0,
+"home_spread_price": -104.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.0724,
-0.1326
+0.0953,
+0.163
 ],
 [
 "moneyline",
 "away",
 null,
-0.9276,
-0.8674
+0.9047,
+0.837
 ],
 [
 "spread",
 "home",
-13.5,
-0.4069,
-0.4955
+11.5,
+0.4023,
+0.4864
 ],
 [
 "spread",
 "away",
-13.5,
-0.5931,
-0.5045
+11.5,
+0.5977,
+0.5136
 ],
 [
 "total",
 "over",
-217.5,
-0.5786,
+215.5,
+0.6176,
 0.5113
 ],
 [
 "total",
 "under",
-217.5,
-0.4214,
+215.5,
+0.3824,
 0.4887
 ]
 ],
 "over_price": -115.0,
-"source": "Draft Kings",
-"spread": 13.5,
-"total": 217.5,
+"source": "DraftKings",
+"spread": 11.5,
+"total": 215.5,
 "under_price": -105.0
 },
 "NBA-20261121-LAC-DAL-20": {
