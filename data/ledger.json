@@ -16032,8 +16032,12 @@
    "market check: model 81.0% vs books 69.9% -> 75.1% (keeps 43% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-22T08:02:40+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "lost",
+  "profit": -1.0,
+  "graded_at": "2026-11-23T01:58:28+00:00",
+  "final": "JAX 18 \u2013 NYG 23",
+  "close_price": -262.0,
+  "clv": 0.0047
  },
  {
   "id": "confidence:2026-11-22:NFL-20261122-MIA-BUF-13:moneyline:home",
@@ -16086,8 +16090,12 @@
    "market check: model 93.9% vs books 91.5% -> 92.6% (keeps 43% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-22T08:02:40+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.0694,
+  "graded_at": "2026-11-23T01:58:28+00:00",
+  "final": "MIA 9 \u2013 BUF 26",
+  "close_price": -1480.0,
+  "clv": 0.0016
  },
  {
   "id": "confidence:2026-11-22:NFL-20261122-ARI-KC-13:moneyline:home",
@@ -16135,8 +16143,12 @@
    "market check: model 92.6% vs books 91.0% -> 91.7% (keeps 43% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-22T08:02:40+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.0758,
+  "graded_at": "2026-11-23T01:58:28+00:00",
+  "final": "ARI 7 \u2013 KC 34",
+  "close_price": -1400.0,
+  "clv": 0.0038
  },
  {
   "id": "confidence:2026-11-22:NFL-20261122-NO-CHI-13:moneyline:home",
@@ -16181,8 +16193,12 @@
    "market check: model 88.2% vs books 84.5% -> 86.2% (keeps 43% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-22T08:02:40+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.1562,
+  "graded_at": "2026-11-23T01:58:28+00:00",
+  "final": "NO 13 \u2013 CHI 21",
+  "close_price": -660.0,
+  "clv": 0.0036
  },
  {
   "id": "confidence:2026-11-22:NFL-20261122-LV-DEN-16:moneyline:home",
@@ -16223,8 +16239,12 @@
    "market check: model 87.8% vs books 84.8% -> 86.2% (keeps 43% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-22T08:02:40+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.1515,
+  "graded_at": "2026-11-23T01:58:28+00:00",
+  "final": "LV 24 \u2013 DEN 38",
+  "close_price": -587.0,
+  "clv": -0.014
  },
  {
   "id": "confidence:2026-11-22:NFL-20261122-JAX-NYG-16:moneyline:away",
@@ -16264,8 +16284,12 @@
    "market check: model 81.0% vs books 69.9% -> 75.1% (keeps 43% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-22T08:02:40+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "lost",
+  "profit": -1.0,
+  "graded_at": "2026-11-23T01:58:28+00:00",
+  "final": "JAX 18 \u2013 NYG 23",
+  "close_price": -262.0,
+  "clv": 0.0047
  },
  {
   "id": "confidence:2026-11-22:NFL-20261122-TEN-DAL-13:moneyline:home",
@@ -16315,8 +16339,12 @@
    "market check: model 74.3% vs books 75.4% -> 74.9% (keeps 43% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-22T08:02:40+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.2915,
+  "graded_at": "2026-11-23T01:58:28+00:00",
+  "final": "TEN 30 \u2013 DAL 51",
+  "close_price": -348.0,
+  "clv": 0.0025
  },
  {
   "id": "parlay:2026-11-22:22c1360055df",
@@ -16347,7 +16375,10 @@
     "lo": 0.6511,
     "hi": 0.7049,
     "fair": 0.6353,
-    "status": "pending"
+    "status": "lost",
+    "profit": -1.0,
+    "graded_at": "2026-11-23T01:58:30+00:00",
+    "final": "PIT 16 \u2013 PHI 19"
    },
    {
     "league": "NFL",
@@ -16366,7 +16397,10 @@
     "lo": 0.7307,
     "hi": 0.7756,
     "fair": 0.6988,
-    "status": "pending"
+    "status": "lost",
+    "profit": -1.0,
+    "graded_at": "2026-11-23T01:58:30+00:00",
+    "final": "JAX 18 \u2013 NYG 23"
    }
   ],
   "price": 112,
@@ -16386,8 +16420,9 @@
    "the sportsbooks' prices make it 44% likely; the model says 51%"
   ],
   "published_at": "2026-11-22T08:03:03+00:00",
-  "status": "pending",
-  "profit": null,
-  "p_now": 0.5097
+  "status": "lost",
+  "profit": -1.0,
+  "p_now": 0.5097,
+  "final": "PIT ML lost \u00b7 JAX ML lost"
  }
 ]
