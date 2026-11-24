@@ -21120,24 +21120,24 @@ null,
 "under_price": -110.0
 },
 "NHL-20261124-VGK-EDM-20": {
-"away_ml": -118.0,
+"away_ml": -120.0,
 "away_spread_price": 210.0,
-"home_ml": -102.0,
+"home_ml": 100.0,
 "home_spread_price": -258.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.4643,
-0.4818
+0.4585,
+0.4773
 ],
 [
 "moneyline",
 "away",
 null,
-0.5357,
-0.5182
+0.5415,
+0.5227
 ],
 [
 "spread",
@@ -21157,21 +21157,21 @@ null,
 "total",
 "over",
 6.5,
-0.5093,
-0.4661
+0.5266,
+0.5273
 ],
 [
 "total",
 "under",
 6.5,
-0.4907,
-0.5339
+0.4734,
+0.4727
 ]
 ],
-"over_price": 105.0,
-"source": "Draft Kings",
+"over_price": -122.0,
+"source": "DraftKings",
 "spread": 1.5,
 "total": 6.5,
-"under_price": -125.0
+"under_price": 102.0
 }
 }
