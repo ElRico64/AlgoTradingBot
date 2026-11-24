@@ -14191,9 +14191,9 @@ null,
 },
 "NBA-20261124-BOS-WSH-20": {
 "away_ml": -453.0,
-"away_spread_price": -110.0,
+"away_spread_price": -103.0,
 "home_ml": 351.0,
-"home_spread_price": -110.0,
+"home_spread_price": -117.0,
 "model": [
 [
 "moneyline",
@@ -14212,16 +14212,16 @@ null,
 [
 "spread",
 "home",
-10.5,
-0.5538,
-0.5
+11.5,
+0.5823,
+0.5159
 ],
 [
 "spread",
 "away",
-10.5,
-0.4462,
-0.5
+11.5,
+0.4177,
+0.4841
 ],
 [
 "total",
@@ -14240,43 +14240,43 @@ null,
 ],
 "over_price": -112.0,
 "source": "Draft Kings",
-"spread": 10.5,
+"spread": 11.5,
 "total": 217.5,
 "under_price": -108.0
 },
 "NBA-20261124-DAL-DEN-22": {
-"away_ml": 261.0,
-"away_spread_price": -103.0,
-"home_ml": -324.0,
-"home_spread_price": -118.0,
+"away_ml": 251.0,
+"away_spread_price": -112.0,
+"home_ml": -310.0,
+"home_spread_price": -108.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.7398,
-0.7436
+0.7317,
+0.7356
 ],
 [
 "moneyline",
 "away",
 null,
-0.2602,
-0.2564
+0.2683,
+0.2644
 ],
 [
 "spread",
 "home",
--7.5,
-0.4684,
-0.5169
+-8.5,
+0.4394,
+0.4955
 ],
 [
 "spread",
 "away",
--7.5,
-0.5316,
-0.4831
+-8.5,
+0.5606,
+0.5045
 ],
 [
 "total",
@@ -14295,63 +14295,63 @@ null,
 ],
 "over_price": -109.0,
 "source": "Draft Kings",
-"spread": -7.5,
+"spread": -8.5,
 "total": 233.5,
 "under_price": -111.0
 },
 "NBA-20261124-DET-ORL-19": {
-"away_ml": -135.0,
-"away_spread_price": -106.0,
-"home_ml": 114.0,
-"home_spread_price": -114.0,
+"away_ml": -142.0,
+"away_spread_price": -109.0,
+"home_ml": 120.0,
+"home_spread_price": -111.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.3968,
-0.4464
+0.3848,
+0.4339
 ],
 [
 "moneyline",
 "away",
 null,
-0.6032,
-0.5536
+0.6152,
+0.5661
 ],
 [
 "spread",
 "home",
 2.5,
 0.4225,
-0.5091
+0.5023
 ],
 [
 "spread",
 "away",
 2.5,
 0.5775,
-0.4909
+0.4977
 ],
 [
 "total",
 "over",
-211.5,
-0.6678,
-0.5068
+213.5,
+0.6287,
+0.5045
 ],
 [
 "total",
 "under",
-211.5,
-0.3322,
-0.4932
+213.5,
+0.3713,
+0.4955
 ]
 ],
-"over_price": -113.0,
+"over_price": -112.0,
 "source": "Draft Kings",
 "spread": 2.5,
-"total": 211.5,
-"under_price": -107.0
+"total": 213.5,
+"under_price": -108.0
 }
 }

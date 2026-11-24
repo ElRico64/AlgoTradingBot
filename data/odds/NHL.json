@@ -21121,9 +21121,9 @@ null,
 },
 "NHL-20261124-VGK-EDM-20": {
 "away_ml": -118.0,
-"away_spread_price": 220.0,
+"away_spread_price": 210.0,
 "home_ml": -102.0,
-"home_spread_price": -270.0,
+"home_spread_price": -258.0,
 "model": [
 [
 "moneyline",
@@ -21143,15 +21143,15 @@ null,
 "spread",
 "home",
 1.5,
-0.6574,
-0.7086
+0.6477,
+0.699
 ],
 [
 "spread",
 "away",
 1.5,
-0.3426,
-0.2914
+0.3523,
+0.301
 ],
 [
 "total",
