@@ -16512,8 +16512,12 @@
    "market check: model 86.8% vs books 84.6% -> 85.1% (keeps 22% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-23T09:09:22+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.1538,
+  "graded_at": "2026-11-24T05:34:34+00:00",
+  "final": "LAC 104 \u2013 HOU 116",
+  "close_price": -650.0,
+  "clv": 0.0
  },
  {
   "id": "confidence:2026-11-23:NBA-20261123-BKN-MIN-19:moneyline:home",
@@ -16552,8 +16556,12 @@
    "market check: model 86.2% vs books 84.0% -> 84.5% (keeps 22% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-23T09:09:22+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.1613,
+  "graded_at": "2026-11-24T05:34:34+00:00",
+  "final": "BKN 116 \u2013 MIN 142",
+  "close_price": -620.0,
+  "clv": 0.0
  },
  {
   "id": "confidence:2026-11-23:NBA-20261123-SA-SAC-22:moneyline:away",
@@ -16594,8 +16602,12 @@
    "market check: model 85.9% vs books 80.8% -> 82.0% (keeps 22% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-23T09:09:22+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.2066,
+  "graded_at": "2026-11-24T05:34:34+00:00",
+  "final": "SA 123 \u2013 SAC 107",
+  "close_price": -309.0,
+  "clv": -0.0733
  },
  {
   "id": "confidence:2026-11-23:NBA-20261123-MIL-TOR-19:moneyline:home",
@@ -16635,8 +16647,12 @@
    "market check: model 83.1% vs books 81.1% -> 81.6% (keeps 22% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-23T09:09:22+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "lost",
+  "profit": -1.0,
+  "graded_at": "2026-11-24T05:34:34+00:00",
+  "final": "MIL 116 \u2013 TOR 111",
+  "close_price": -467.0,
+  "clv": -0.008
  },
  {
   "id": "confidence:2026-11-23:NBA-20261123-CLE-CHI-20:moneyline:away",
@@ -16677,8 +16693,12 @@
    "market check: model 80.5% vs books 75.1% -> 76.3% (keeps 22% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-23T09:09:22+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "lost",
+  "profit": -1.0,
+  "graded_at": "2026-11-24T05:34:34+00:00",
+  "final": "CLE 108 \u2013 CHI 122",
+  "close_price": -336.0,
+  "clv": -0.0005
  },
  {
   "id": "confidence:2026-11-23:NFL-20261123-CIN-WSH-20:moneyline:away",
@@ -16725,6 +16745,84 @@
    "market check: model 77.6% vs books 72.8% -> 74.8% (keeps 42% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-23T09:09:30+00:00",
+  "status": "lost",
+  "profit": -1.0,
+  "graded_at": "2026-11-24T05:34:49+00:00",
+  "final": "CIN 20 \u2013 WSH 22",
+  "close_price": -302.0,
+  "clv": 0.0038
+ },
+ {
+  "id": "confidence:2026-11-24:NBA-20261124-BOS-WSH-20:moneyline:away",
+  "tier": "confidence",
+  "date": "2026-11-24",
+  "league": "NBA",
+  "game_id": "NBA-20261124-BOS-WSH-20",
+  "start": "2026-11-25T01:00:00",
+  "home": "WSH",
+  "away": "BOS",
+  "label": "BOS ML",
+  "market": "moneyline",
+  "side": "away",
+  "line": null,
+  "price": -453.0,
+  "p": 0.8055,
+  "lower": 0.8046,
+  "p_model": 0.8353,
+  "upper": 0.8067,
+  "fair": 0.7987,
+  "edge": 0.0068,
+  "ev": -0.0166,
+  "value_line": -394,
+  "stake": 0.0,
+  "reasons": [
+   "calibrated P(win)=80.6% \u2265 70%",
+   "80% credible band 80.5%\u201380.7% (lower \u2265 62%)",
+   "price -453 needs 81.9%; EV -1.7% per unit",
+   "no-vig market 79.9% \u2192 edge +0.7%",
+   "home-win components: kalman 26.3%, elo 35.8%, pattern 26.3%",
+   "adjustments: news_margin_mean +1.08, timezones +0.75, travel +0.73, rest +0.02",
+   "news: Mitchell Robinson (BOS, out) P(plays)=5% impact\u22481.14\u00b10.40",
+   "market check: model 83.5% vs books 79.9% -> 80.6% (keeps 18% of the model's disagreement, learned from graded games)"
+  ],
+  "published_at": "2026-11-24T05:34:36+00:00",
+  "status": "pending",
+  "profit": null
+ },
+ {
+  "id": "confidence:2026-11-24:NBA-20261124-DAL-DEN-22:moneyline:home",
+  "tier": "confidence",
+  "date": "2026-11-24",
+  "league": "NBA",
+  "game_id": "NBA-20261124-DAL-DEN-22",
+  "start": "2026-11-25T03:00:00",
+  "home": "DEN",
+  "away": "DAL",
+  "label": "DEN ML",
+  "market": "moneyline",
+  "side": "home",
+  "line": null,
+  "price": -322.0,
+  "p": 0.742,
+  "lower": 0.7408,
+  "p_model": 0.7388,
+  "upper": 0.7432,
+  "fair": 0.7426,
+  "edge": -0.0007,
+  "ev": -0.0276,
+  "value_line": -277,
+  "stake": 0.0,
+  "reasons": [
+   "calibrated P(win)=74.2% \u2265 70%",
+   "80% credible band 74.1%\u201374.3% (lower \u2265 62%)",
+   "price -322 needs 76.3%; EV -2.8% per unit",
+   "no-vig market 74.3% \u2192 edge -0.1%",
+   "home-win components: kalman 67.9%, elo 75.3%, pattern 67.9%",
+   "adjustments: altitude +0.80, timezones -0.25, travel -0.16, news_margin_mean +0.13",
+   "news: P.J. Washington (DAL, day-to-day) P(plays)=62% impact\u22480.32\u00b10.30",
+   "market check: model 73.9% vs books 74.3% -> 74.2% (keeps 18% of the model's disagreement, learned from graded games)"
+  ],
+  "published_at": "2026-11-24T05:34:36+00:00",
   "status": "pending",
   "profit": null
  }
