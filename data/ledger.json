@@ -16476,8 +16476,12 @@
    "market check: model 89.0% vs books 86.7% -> 87.2% (keeps 22% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-23T09:09:22+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.1266,
+  "graded_at": "2026-11-24T10:59:06+00:00",
+  "final": "UTAH 94 \u2013 LAL 109",
+  "close_price": -800.0,
+  "clv": 0.0012
  },
  {
   "id": "confidence:2026-11-23:NBA-20261123-LAC-HOU-20:moneyline:home",
