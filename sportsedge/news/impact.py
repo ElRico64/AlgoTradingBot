@@ -52,12 +52,18 @@ class PlayerImpactRegistry:
 
     def __init__(self):
         self._d: dict[tuple[str, str], tuple[float, float, Optional[str]]] = {}
+        # leagues whose table covers every player who matters: anyone missing from it has no
+        # measurable cost (a fringe player, or one out long enough to be in his team's rating)
+        self.complete: set = set()
 
     def add(self, league: str, player: str, impact: float, impact_sd: float, role: Optional[str] = None):
-        self._d[(league.upper(), player.lower())] = (impact, impact_sd, role)
+        self._d[(league.upper(), _key(player))] = (impact, impact_sd, role)
 
     def get(self, league: str, player: str):
-        return self._d.get((league.upper(), (player or "").lower()))
+        return self._d.get((league.upper(), _key(player)))
+
+    def covers(self, league: str) -> bool:
+        return league.upper() in getattr(self, "complete", set())
 
     @classmethod
     def from_csv(cls, path: str) -> "PlayerImpactRegistry":
@@ -67,6 +73,15 @@ class PlayerImpactRegistry:
                 reg.add(row["league"], row["player"], float(row["impact"]),
                         float(row.get("impact_sd") or float(row["impact"]) * 0.4), row.get("role") or None)
         return reg
+
+
+def _key(name: Optional[str]) -> str:
+    """Player names compared without accents, punctuation or suffixes (Jr., III)."""
+    import re
+    import unicodedata
+
+    s = unicodedata.normalize("NFKD", name or "").encode("ascii", "ignore").decode().lower()
+    return " ".join(p for p in re.sub(r"[^a-z ]", " ", s).split() if p not in ("jr", "sr", "ii", "iii", "iv", "v"))
 
 
 def _aware(d: Optional[datetime]) -> datetime:
@@ -99,6 +114,8 @@ def build_factors(events: Iterable[NewsEvent], cfg: LeagueConfig, as_of: datetim
         if q >= 0.999:
             continue
         reg = registry.get(cfg.league, ev.player) if registry else None
+        if reg is None and registry is not None and registry.covers(cfg.league):
+            continue  # priced from data: no measurable cost
         role = ev.role or (reg[2] if reg else None)
         if reg:
             imp, sd = reg[0], reg[1]
@@ -108,7 +125,8 @@ def build_factors(events: Iterable[NewsEvent], cfg: LeagueConfig, as_of: datetim
             imp, sd = cfg.role_impacts[role]
         else:
             imp, sd = cfg.default_player_impact, cfg.default_player_impact_sd
-        if ev.status == "ir" or ev.event_type == "trade":
+        if (ev.status == "ir" or ev.event_type == "trade") and not (registry and registry.covers(cfg.league)):
+            # (a data-priced table already discounts players missing from recent games)
             imp *= LONG_TERM_DISCOUNT
             sd *= LONG_TERM_DISCOUNT
         if imp <= 0:

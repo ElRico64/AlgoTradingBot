@@ -44,7 +44,7 @@ from .types import Game, GameResult, MarketOdds, MarketProbability, Prediction
 
 # Bump when a code change makes previously saved engines incompatible; saved
 # engines from another version are retrained from scratch instead of reused.
-ENGINE_VERSION = 6  # 5: nested-CV gate for the pattern engine; 6: learned skew-t margins (NBA)
+ENGINE_VERSION = 7  # 5: nested-CV gate for the pattern engine; 6: learned skew-t margins (NBA); 7: player absences (NBA)
 
 
 def _logit(p: float) -> float:
@@ -129,8 +129,20 @@ class LeagueEngine:
         self.total_cal: Optional[StackingCalibrator] = None
         self._last_dispersion_fit: Optional[datetime] = None
         self.n_observed = 0
+        # player absences (NBA): game_id -> absence cost from box scores (home perspective, unscaled);
+        # how much of it shows up in results is learned from the engine's own residuals
+        self.lineup: dict = {}
+        self.lineup_xe = 0.0
+        self.lineup_xx = 0.0
 
     # ------------------------------------------------------------------ utils
+    @property
+    def lineup_scale(self) -> float:
+        """Margin points per point of box-score absence cost, learned from residuals:
+        c = (sum x e + k * 1) / (sum x^2 + k), a ridge toward 1 (cost taken at face value)."""
+        k = 50.0
+        return float(np.clip((getattr(self, "lineup_xe", 0.0) + k) / (getattr(self, "lineup_xx", 0.0) + k), 0.0, 2.0))
+
     @property
     def half_total(self) -> float:
         return self.cfg.league_avg_total / 2.0
@@ -250,9 +262,17 @@ class LeagueEngine:
             if self.patterns is not None:
                 self.patterns.maybe_fit(t0)  # trained only on games before today
             pending = []
+            lineup = getattr(self, "lineup", None) or {}
+            scale = self.lineup_scale if lineup else 0.0
+            lin_obs = []
             for r in day:
                 adj = compute_adjustment(self.cfg, r, self.sched)
+                x = float(lineup.get(r.game_id, 0.0))
+                if x:
+                    adj.add_margin("absences", scale * x)
                 pt = self._point(r, adj)
+                if x:
+                    lin_obs.append((x, float(r.margin - (pt.k_mu - scale * x))))
                 x = None
                 if self.patterns is not None:
                     x = self._pattern_x(r, pt)
@@ -261,6 +281,9 @@ class LeagueEngine:
                     self.oos.append(self._oos_record(r, pt))
                 self.n_observed += 1
                 pending.append((r, pt, x))
+            for x, e in lin_obs:  # learned after the day's forecasts, like everything else
+                self.lineup_xe = 0.9995 * getattr(self, "lineup_xe", 0.0) + x * e
+                self.lineup_xx = 0.9995 * getattr(self, "lineup_xx", 0.0) + x * x
             for r in day:
                 self.kf_margin.update(r.home, r.away, r.margin, r.neutral, r.start_time)
                 self.kf_total.update(r.home, r.away, r.total, r.neutral, r.start_time)

@@ -142,6 +142,18 @@ fictional teams and players, so you can see it before anything is set up.
 * **Published prices:** a published pick stays on the record at the price it
   was published at.
 
+### NBA injuries and spreads
+
+* **Injuries are priced by who the player is.** Each NBA player's value
+  comes from two seasons of box scores (`docs/METHODOLOGY.md` §8e). The
+  engine learns from its own misses how much an absence moves results. The
+  injury report sets each player's chance of playing. Tonight's table is in
+  `data/players/NBA_impacts.csv`.
+* **NBA spreads 70%+** is its own tab and record. A spread is published only
+  when the market-checked chance to cover is at least 70%. Spreads are set
+  near 50/50, so this is rare. On days with none, the tab shows the
+  strongest cover chance and why it falls short.
+
 ### NBA player props
 
 The **Player props** tab (NBA) shows tonight's player projections (minutes,

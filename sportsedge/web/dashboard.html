@@ -271,6 +271,7 @@ footer p { margin: 0; max-width: 92ch; }
           <div class="seg" role="group" aria-label="Pick type" id="tierseg">
             <button type="button" data-t="value" aria-pressed="true">Best bets</button>
             <button type="button" data-t="confidence" aria-pressed="false">70%+ picks</button>
+            <button type="button" data-t="spreads" aria-pressed="false">NBA spreads</button>
             <button type="button" data-t="parlay" aria-pressed="false">Parlays</button>
             <button type="button" data-t="props" aria-pressed="false">Player props</button>
           </div>
@@ -313,6 +314,7 @@ footer p { margin: 0; max-width: 92ch; }
           <button type="button" data-t="all" aria-pressed="true">All picks</button>
           <button type="button" data-t="value" aria-pressed="false">Best bets</button>
           <button type="button" data-t="confidence" aria-pressed="false">70%+ picks</button>
+          <button type="button" data-t="spreads" aria-pressed="false">NBA spreads</button>
           <button type="button" data-t="parlay" aria-pressed="false">Parlays</button>
           <button type="button" data-t="props" aria-pressed="false">Props</button>
         </div>
@@ -436,7 +438,7 @@ footer p { margin: 0; max-width: 92ch; }
   function renderTabs() {
     $("tabs").innerHTML = LEAGUES.map(function (lg) {
       var games = DATA.games.filter(function (g) { return lg === "ALL" || g.league === lg; }).length;
-      var picks = todays("value").concat(todays("confidence")).filter(function (e) { return (lg === "ALL" || e.league === lg) && e.status !== "withdrawn"; });
+      var picks = todays("value").concat(todays("confidence"), todays("spreads")).filter(function (e) { return (lg === "ALL" || e.league === lg) && e.status !== "withdrawn"; });
       var ids = {}; picks.forEach(function (e) { ids[e.game_id] = 1; });
       var info = (DATA.leagues || []).filter(function (l) { return l.league === lg; })[0];
       var sub = info && info.status === "error" ? "unavailable" : games + (games === 1 ? " game" : " games");
@@ -457,7 +459,7 @@ footer p { margin: 0; max-width: 92ch; }
   }
   function heroPick() {
     var pool = todays("value").filter(inLeague).filter(function (e) { return e.status === "pending"; });
-    if (!pool.length) pool = todays("confidence").filter(inLeague).filter(function (e) { return e.status === "pending"; });
+    if (!pool.length) pool = todays("confidence").concat(todays("spreads")).filter(inLeague).filter(function (e) { return e.status === "pending"; });
     return pool.sort(function (a, b) { return (b.ev || 0) - (a.ev || 0) || b.p - a.p; })[0];
   }
   function renderHero() {
@@ -470,7 +472,7 @@ footer p { margin: 0; max-width: 92ch; }
       return;
     }
     var g = gameById(e.game_id, e.league) || { home: { abbr: e.home, name: e.home }, away: { abbr: e.away, name: e.away } };
-    var tierName = (e.tier || "value") === "value" ? "Best bet" : "70%+ pick";
+    var tierName = (e.tier || "value") === "value" ? "Best bet" : e.tier === "spreads" ? "NBA spread 70%+" : "70%+ pick";
     var pickTeam = e.market === "moneyline" ? (e.side === "home" ? g.home : g.away) : null;
     var news = (g.news || [])[0];
     $("hero").innerHTML = '<section class="hero" style="--c-away:' + esc(g.away.color) + ";--c-home:" + esc(g.home.color) + '" aria-label="Top pick"><div class="hero-in"><div>' +
@@ -488,6 +490,7 @@ footer p { margin: 0; max-width: 92ch; }
   var TIER_HELP = {
     value: "Best bets win at least 70% of the time by the model's estimate AND pay enough at today's price to be worth it over the long run.",
     confidence: "Every moneyline or total the model gives a 70%+ chance. Favourites are often priced too short to profit, so each card shows the worst price still worth taking.",
+    spreads: "NBA spread picks: the team covers the posted spread with at least a 70% chance by the market-checked model, inside the same confidence band. Spreads are set near 50/50, so these are rare by design.",
     props: "NBA player-props parlays: players from different games, paying at least 2x (+100), with at least a 65% chance of hitting by the market-checked player model. Built only from posted prices.",
     parlay: "The parlay of the day: legs from different games, paying at least 2x (+100), shown with its real chance of hitting. Published only when every leg is worth its price and the whole parlay is a good bet at its payout."
   };
@@ -544,11 +547,23 @@ footer p { margin: 0; max-width: 92ch; }
       (c ? ". The most likely one, " + c.legs.length + " legs paying " + Number(c.decimal).toFixed(2) + "x, has a " + pct(c.p, 0) + " chance, an expected return of " + sgnPct(c.ev) + ", so it is not published." : ".") +
       " A parlay is only published when every leg is worth its price. The board keeps checking as news and odds move.</span></div>";
   }
+  function renderNoSpreads() {
+    var best = null;
+    DATA.games.filter(function (g) { return g.league === "NBA" && g.state === "pre" && (S.league === "ALL" || S.league === "NBA"); }).forEach(function (g) {
+      (g.markets || []).forEach(function (m) { if (m.market === "spread" && (!best || m.p > best.m.p)) best = { g: g, m: m }; });
+    });
+    var why = best && best.m.conf_fails && best.m.conf_fails.length ? " (" + esc(best.m.conf_fails[0]) + ")" : "";
+    $("picks").innerHTML = '<div class="empty"><b>No NBA spread pick right now</b><span>' +
+      (best ? "The strongest cover chance on today's NBA board is " + esc(best.m.label) + " at " + pct(best.m.p, 0) + why + ". A spread is published only at 70% or more." :
+        "No NBA game with a posted spread on this board yet.") +
+      " Spreads are set so both sides are close to 50%, so a 70% cover call needs the model to see something the line does not; most days none will. The board keeps checking as news and odds move.</span></div>";
+  }
   function renderPicks() {
     Array.prototype.forEach.call($("tierseg").querySelectorAll("button"), function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-t") === S.tier); });
     $("tier-help").textContent = TIER_HELP[S.tier];
     if (S.tier === "parlay") { renderParlays(); return; }
     if (S.tier === "props") { renderProps(); return; }
+    if (S.tier === "spreads" && !todays("spreads").filter(inLeague).length) { renderNoSpreads(); return; }
     var list = todays(S.tier).filter(inLeague).sort(function (a, b) { return a.start < b.start ? -1 : a.start > b.start ? 1 : b.p - a.p; });
     if (!list.length) {
       var other = todays(S.tier === "value" ? "confidence" : "value").filter(inLeague).length;
@@ -564,7 +579,7 @@ footer p { margin: 0; max-width: 92ch; }
     var m = marketFor(e);
     var team = e.market === "moneyline" ? (e.side === "home" ? g.home : g.away) : null;
     var st = e.status || "pending";
-    var right = st === "pending" ? (g.state === "pre" ? '<span class="pill ' + ((e.tier || "value") === "value" ? "best" : "conf") + '">' + ((e.tier || "value") === "value" ? "Best bet" : "70%+") + "</span>" : statusPill(g))
+    var right = st === "pending" ? (g.state === "pre" ? '<span class="pill ' + ((e.tier || "value") === "value" ? "best" : "conf") + '">' + ((e.tier || "value") === "value" ? "Best bet" : e.tier === "spreads" ? "Spread 70%+" : "70%+") + "</span>" : statusPill(g))
       : '<span class="pill ' + st + '">' + (st === "withdrawn" ? "Withdrawn" : st.charAt(0).toUpperCase() + st.slice(1)) + (e.profit != null && st !== "withdrawn" ? " · " + units(e.profit) : "") + "</span>";
     var nowPrice = m ? m.price : null, ok = better(e.price, e.value_line);
     var when = g.state === "pre" ? dayLabel(e.start) + clock(e.start) + " · " + cd(e.start) : (g.live ? esc(g.away.abbr) + " " + g.live.away + " – " + esc(g.home.abbr) + " " + g.live.home + " · " + esc(g.detail || "") : "");
@@ -606,7 +621,7 @@ footer p { margin: 0; max-width: 92ch; }
     var rows = DATA.games.filter(inLeague).filter(function (g) {
       if (q && (g.home.name + " " + g.away.name + " " + g.home.abbr + " " + g.away.abbr).toLowerCase().indexOf(q) < 0) return false;
       if (S.show === "upcoming" && g.state !== "pre") return false;
-      if (S.show === "picks" && !(g.picks && (g.picks.value || g.picks.confidence))) return false;
+      if (S.show === "picks" && !(g.picks && (g.picks.value || g.picks.confidence || g.picks.spreads))) return false;
       return true;
     });
     rows.sort(function (a, b) {
@@ -629,6 +644,7 @@ footer p { margin: 0; max-width: 92ch; }
     var tags = [];
     if (g.picks && g.picks.value) tags.push('<span class="pill best">Best bet · ' + esc(g.picks.value) + "</span>");
     else if (g.picks && g.picks.confidence) tags.push('<span class="pill conf">70%+ · ' + esc(g.picks.confidence) + "</span>");
+    if (g.picks && g.picks.spreads) tags.push('<span class="pill conf">Spread 70%+ · ' + esc(g.picks.spreads) + "</span>");
     else if (g.early) tags.push('<span class="pill void" title="Picks are made on game day, once the injury news is close to final">Early look · picks on game day</span>');
     var hs = (g.exp_total + g.exp_margin) / 2, as = (g.exp_total - g.exp_margin) / 2, d = g.league === "NBA" || g.league === "NFL" ? 0 : 1;
     var tot = (g.markets || []).filter(function (m) { return m.market === "total"; }).sort(function (a, b) { return b.p - a.p; })[0];

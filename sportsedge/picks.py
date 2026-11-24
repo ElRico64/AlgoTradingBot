@@ -18,7 +18,7 @@ only want high-probability picks, but then report ROI honestly.
 from __future__ import annotations
 
 from dataclasses import dataclass, replace
-from typing import Iterable
+from typing import Iterable, Optional
 
 from .stats.kelly import stake_fraction
 from .stats.odds import american_to_decimal, breakeven_probability
@@ -41,6 +41,7 @@ class PickPolicy:
     max_stake: float = 0.03
     one_pick_per_game: bool = True
     rank_by: str = "ev"  # or "probability"
+    leagues: Optional[tuple[str, ...]] = None  # None: every league
 
     def failures(self, m: MarketProbability) -> list[str]:
         """Every gate condition this market fails (empty list = it qualifies)."""
@@ -73,6 +74,8 @@ class PickPolicy:
 
     def evaluate(self, pred: Prediction) -> list[Pick]:
         out = []
+        if self.leagues is not None and pred.game.league not in self.leagues:
+            return out
         for m in pred.markets:
             if self.failures(m):
                 continue
@@ -118,6 +121,17 @@ def confidence_policy(base: PickPolicy) -> PickPolicy:
     every night, and their price already reflects that.
     """
     return replace(base, require_positive_ev=False, markets=("moneyline", "total"),
+                   max_favorite_price=-100000.0, rank_by="probability")
+
+
+def spread_policy(base: PickPolicy) -> PickPolicy:
+    """NBA spreads at 70%+: the chance to cover the posted spread, market-checked like every
+    other probability, with the same confidence band and out-of-sample calibration rules.
+
+    NBA spreads are set so each side is close to 50%, so a 70% cover call means the model
+    sees something the line does not. Expect very few; each is tracked on its own record.
+    (NHL and MLB ±1.5 lines are left out: they are 70%+ most nights and priced that way.)"""
+    return replace(base, require_positive_ev=False, markets=("spread",), leagues=("NBA",),
                    max_favorite_price=-100000.0, rank_by="probability")
 
 

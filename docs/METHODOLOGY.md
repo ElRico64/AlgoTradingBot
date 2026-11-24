@@ -318,6 +318,20 @@ American price at which it still has EV ≥ +1%:
 
 Both tiers are graded separately on the record.
 
+**NBA spreads 70%+** (added November 24, 2026) is a third tier with the same
+rules as 70%+ picks, for NBA spreads only. It needs:
+* a calibrated, market-checked chance of covering the posted spread of at
+  least 70%;
+* a confidence band whose lower end is at least 62%;
+* a spread calibrator fitted on at least 300 out-of-sample games with posted
+  spreads.
+
+NBA spreads are set so each side is close to 50%. A 70% cover call therefore
+means the model sees something the line does not, typically a star ruled out
+after the line was set, so these picks are rare by design. They have their
+own record tab. When none qualifies, the board shows the strongest cover
+chance of the day and the reason it falls short.
+
 **Why condition 4 exists.** A 72% favourite at −300 has a break-even of 75%,
 so it loses money *even if the 72% is exactly right*. High confidence is
 mostly found on heavy favourites, and heavy favourites are priced
@@ -520,6 +534,79 @@ every leg. On lines at a player's usual level, a calibrated model says 65%+
 only about 0.5% of the time, so qualifying parlays will be rare and mostly
 built from alternate lines.
 
+## 8e. NBA player availability: player values from box scores (`models/player_value.py`)
+
+**The weakness.** Every injured NBA player was priced at the same 0.8 ± 0.8
+points. ESPN's injury feed does not give a role, so Nikola Jokić "out" cost
+Denver as much as a twelfth man. A questionable star barely widened the band.
+
+**Player values.** A box-score-informed regularised adjusted plus-minus:
+
+    margin_g = a + Σ_i s_gi (m_gi / 48) v_i + e_g,    v_i = z_i'γ + u_i,  u_i ~ N(0, σ²/λ)
+
+* m_gi: minutes played; s = +1 home, −1 away.
+* v_i: net points per 48 minutes against an average player.
+* z_i: box-score rates per 36 minutes (points, rebounds, assists, steals,
+  blocks, turnovers, threes), shrunk toward the league rate.
+* γ: learned jointly with u. A player with little data is valued by what his
+  box score says such players are worth; a long record of results with and
+  without him moves him away from it.
+* Games are weighted with a one-year half-life. λ = 30 was chosen on real
+  games; 10, 100 and 300 were close behind.
+
+**What an absence costs.** The player's minutes are shared by his teammates
+in proportion to theirs:
+
+    cost = S(with him) − S(without him),   S = Σ_i (240 m_i/Σm)/48 · v_i
+
+This is multiplied by the share of the team's recent games he played: a
+player missing for weeks is already in the team's rating. A "bench takes his
+minutes" variant, (v_i − v_bench)·m_i/48, sounds more realistic. It predicted
+worse (log-loss 0.598 vs 0.592) and was not used.
+
+**In the engine.**
+* Every past game gets its absence cost from the box scores: the current
+  regulars who did not play. Values are refitted every 14 days on earlier
+  games only.
+* The ratings are left as they are. The cost moves the game's prediction
+  only, so the walk-forward record, the stacker and the margin shape all
+  learn with it.
+* How much of the cost shows up in results is learned from the engine's own
+  residuals: c = (Σxe + 50)/(Σx² + 50), a ridge toward 1. On real games it
+  settled at 1.36.
+* Live, the injury report sets each player's chance of playing. The cost
+  times c is his impact in the Monte Carlo mixture: a questionable star now
+  widens the band, as intended. Players not in the table carry no cost.
+  The table is saved to `data/players/NBA_impacts.csv` on every run.
+
+**Result** (1,585 NBA games, Nov 2025–Nov 2026; stacker fitted on the
+earlier 40%, scored on the rest):
+
+| out-of-sample log-loss | before | with absences |
+|---|---|---|
+| ratings model (Kalman) | 0.6011 | **0.5924** |
+| full engine (stacked) | 0.6003 | **0.5918** |
+| this season's games with posted odds (248) | 0.5994 | **0.5856** |
+| spread cover chance (raw) | 0.7105 | **0.7040** |
+
+The test uses who actually sat. The live injury report knows most of that
+before tip-off (out and doubtful players), but not late scratches. The live
+gain will be somewhat smaller.
+
+**Honest context.** On this season's 248 graded games the market's own
+probabilities still beat the engine:
+
+| | engine | market |
+|---|---|---|
+| moneyline | 0.592 | 0.568 |
+| spread | 0.713 | 0.693 |
+
+The market check learned shares of 0.175 (moneyline) and 0.05 (spread). This
+is why 70%+ moneyline picks were well calibrated (said 80.0%, hit 79.7% on
+118) yet about break-even in units (−0.3). Absences close about 40% of the
+gap. The check gives the engine more say on its own as its new predictions
+prove themselves.
+
 ## 8d. Methods considered (November 2026)
 
 | Method | Verdict | Evidence |
@@ -690,6 +777,29 @@ time-series CV (penalties 2–1000) changed out-of-sample log loss by at most
 +0.7 actual over 215 games) looked like overrated home field. Over all 597
 saved NFL games, the actual home margin is +2.00 ± 0.58, matching the
 model.
+
+## 9c. NBA moneyline loss study (November 24, 2026)
+
+**70%+ NBA moneyline picks.**
+* Record 94–24 (79.7%). The picks said 80.0%; the market said 77.6%.
+* By bucket, said vs hit:
+
+  | said | hit | picks |
+  |---|---|---|
+  | 72% | 82% | 33 |
+  | 78% | 57% | 28 |
+  | 82% | 86% | 29 |
+  | 88% | 94% | 18 |
+  | 92% | 90% | 10 |
+
+  The weak 75–80% bucket is within chance (the others ran above).
+* Units −0.3; mean closing-line value +0.37%.
+
+**Losses.** Most had the price move against the pick before tip-off: news
+the model did not have. A regular missing the game was no more common in
+losses than in wins (33% vs 32%). The difference was who: Tatum and White
+(BOS), Holmgren and Jalen Williams (OKC), Sengun (HOU), Irving (DAL). All
+were priced at the flat 0.8 points. This led to §8e.
 
 ## 10. Known limitations
 

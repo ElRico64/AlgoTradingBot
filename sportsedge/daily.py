@@ -20,6 +20,7 @@ price it was published at; grading never rewrites those fields.
 """
 from __future__ import annotations
 
+import csv
 import hashlib
 import json
 import logging
@@ -33,7 +34,7 @@ from typing import Optional
 from .config import get_config
 from .engine import LeagueEngine
 from .news.impact import AvailabilityFactor
-from .picks import PickPolicy, confidence_policy, value_line
+from .picks import PickPolicy, confidence_policy, spread_policy, value_line
 from .stats.odds import american_to_decimal, breakeven_probability, prob_to_american
 from .teams import REGISTRY
 from .types import Game, GameResult, MarketOdds, NewsEvent, Pick, Prediction
@@ -50,7 +51,7 @@ except Exception:  # pragma: no cover
     US_EASTERN = timezone(timedelta(hours=-5))
 
 ALL_LEAGUES = ("MLB", "NHL", "NBA", "NFL")
-TIERS = ("value", "confidence")
+TIERS = ("value", "confidence", "spreads")
 VOID_AFTER_DAYS = 4
 LOOKAHEAD_DAYS = {"NFL": 6}  # NFL plays weekly: show the whole upcoming week
 TEAM_COLORS = ["#1D428A", "#C8102E", "#00471B", "#F58426", "#552583", "#007A78", "#B4975A", "#222222",
@@ -334,7 +335,8 @@ def market_json(m, game: Game, policies: dict[str, PickPolicy], names: dict | No
         "fair_price": round(prob_to_american(m.probability)),
         "value_line": round(value_line(m.probability, policies["value"].min_ev)),
         "push": round(m.push_probability, 4),
-        "fails": policies["value"].failures(m), "conf_fails": policies["confidence"].failures(m),
+        "fails": policies["value"].failures(m),
+        "conf_fails": (policies["spreads"] if m.market == "spread" and game.league == "NBA" else policies["confidence"]).failures(m),
     }
 
 
@@ -575,7 +577,7 @@ class LeagueRun:
 
 
 def _policies(policy: PickPolicy) -> dict[str, PickPolicy]:
-    return {"value": policy, "confidence": confidence_policy(policy)}
+    return {"value": policy, "confidence": confidence_policy(policy), "spreads": spread_policy(policy)}
 
 
 def predict_games(engine: LeagueEngine, games: list[Game], odds_map: dict, events: list[NewsEvent],
@@ -687,6 +689,48 @@ def _read_engine(path: str) -> Optional[LeagueEngine]:
     return eng if getattr(eng, "version", None) == ENGINE_VERSION else None
 
 
+def nba_absences(data_dir: str) -> dict:
+    """Walk-forward absence cost of every NBA game in the box scores (empty without them)."""
+    from .models.player_value import absence_features
+    from .props.boxscores import load_rows
+
+    try:
+        rows = load_rows(data_dir)
+        return absence_features(rows) if len(rows) > 5000 else {}
+    except Exception as e:  # never let this stop the picks
+        log.warning("NBA absences unavailable: %s", e)
+        return {}
+
+
+def nba_impact_registry(data_dir: str, scale: float, base=None):
+    """What each NBA player's absence costs his team now, priced from box scores and the
+    engine's learned scale. Saved to data/players/NBA_impacts.csv for inspection."""
+    from .models.player_value import player_impacts
+    from .news.impact import PlayerImpactRegistry
+    from .props.boxscores import load_rows
+
+    try:
+        rows = load_rows(data_dir)
+        if len(rows) <= 5000:
+            return base
+        imps = player_impacts(rows, scale=scale)
+    except Exception as e:
+        log.warning("NBA player impacts unavailable: %s", e)
+        return base
+    reg = base or PlayerImpactRegistry()
+    for x in imps:
+        if base is None or base.get("NBA", x["player"]) is None:  # a hand-made table wins
+            reg.add("NBA", x["player"], x["impact"], x["impact_sd"])
+    if len(imps) >= 50:  # only a full table may say "anyone missing from it has no measurable cost"
+        reg.complete.add("NBA")
+    path = os.path.join(data_dir, "players", "NBA_impacts.csv")
+    with open(path, "w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=list(imps[0]) if imps else ["player"])
+        w.writeheader()
+        w.writerows(imps)
+    return reg
+
+
 def _load_engine(league: str, data_dir: str, day: date, bootstrap_days: int,
                  progress=None) -> tuple[LeagueEngine, list[GameResult]]:
     """Today's engine, from the fastest valid route:
@@ -716,6 +760,7 @@ def _load_engine(league: str, data_dir: str, day: date, bootstrap_days: int,
     os.makedirs(os.path.dirname(hist_path), exist_ok=True)
     write_results(hist_path, history)
 
+    lineup = nba_absences(data_dir) if league == "NBA" else {}
     eng = None
     for name in _saved_engines(cache_dir, league):
         if name >= os.path.basename(cache):
@@ -729,13 +774,16 @@ def _load_engine(league: str, data_dir: str, day: date, bootstrap_days: int,
         new = [g for g in history if g.game_id not in seen and g.start_time > last - timedelta(hours=12)]
         if progress:
             progress(f"{league}: updating saved models with {len(new)} new results...")
+        eng.lineup = lineup
         eng.observe(new)
         eng.fit_calibrators()
     else:
         if progress:
             progress(f"{league}: training on {len(history)} games (ratings, score models, pattern engine)... "
                      "this is a one-time step")
-        eng = LeagueEngine(league).fit(history)
+        eng = LeagueEngine(league)
+        eng.lineup = lineup
+        eng.fit(history)
     os.makedirs(cache_dir, exist_ok=True)
     tmp = cache + ".tmp"
     with open(tmp, "wb") as f:
@@ -783,6 +831,8 @@ def run_league(league: str, data_dir: str, day: date, policy: PickPolicy, ledger
         events = gather_news(league, analyzer=analyzer)
         imp_path = os.path.join(data_dir, "player_impacts.csv")
         reg = PlayerImpactRegistry.from_csv(imp_path) if os.path.exists(imp_path) else None
+        if league == "NBA":
+            reg = nba_impact_registry(data_dir, engine.lineup_scale, reg)
         factors = build_factors(events, get_config(league), datetime.now(timezone.utc), reg)
     board_path = os.path.join(data_dir, ".cache", f"board-{league}.json")
     previous = {}
