@@ -5,47 +5,10 @@
 "games_stored": 2797,
 "new_games": 0,
 "new_rows": 0,
-"seconds": 7.3
+"seconds": 7.6
 },
-"candidate_legs": 886,
-"espn": "ESPN props: over/under side order confirmed by the data",
-"espn_orientation": {
-"checked_at": "2026-11-24T23:29:32+00:00",
-"first_is_over": true,
-"milestone_first_is_over_share": 1.0,
-"milestone_matches": 126,
-"model_corr": 0.5538908030847699,
-"model_n": 136,
-"results_loglik_diff": 78.64,
-"results_n": 2743
-},
-"espn_types": {
-"(milestone ladders left out: no matching full-game line, or ambiguous)": 40,
-"1st Team FG Scorer Exact": 60,
-"3-Point Field Goals Milestones": 200,
-"Assists Milestones": 240,
-"Assists Milestones - 1st Quarter": 41,
-"Blocks Milestones": 47,
-"Points + Assists + Rebounds Milestones": 248,
-"Points + Assists Milestones": 229,
-"Points + Rebounds Milestones": 261,
-"Points Milestones": 351,
-"Points Milestones - 1st Quarter": 249,
-"Rebounds + Assists Milestones": 179,
-"Rebounds Milestones": 441,
-"Steals + Blocks Milestones": 43,
-"Steals Milestones": 85,
-"Team Total 3-Pointers Made": 55,
-"To Record a Double Double": 33,
-"Total 3-Point Field Goals": 66,
-"Total Assists": 56,
-"Total Assists and Rebounds": 60,
-"Total Points": 78,
-"Total Points and Assists": 60,
-"Total Points and Rebounds": 72,
-"Total Points, Rebounds, and Assists": 60,
-"Total Rebounds": 72
-},
+"candidate_legs": 0,
+"espn": "",
 "graded_now": 0,
 "market_check": {
 "market_n": 22434,
@@ -274,7 +237,7 @@
 }
 }
 },
-"prices": "prop prices: ESPN (free), 1077 milestones and 136 over/unders on 3 games",
+"prices": "prop prices: none (add a free ODDS_API_KEY to price props; nothing is invented)",
 "rows": 60279,
-"updated_at": "2026-11-24T23:29:27+00:00"
+"updated_at": "2026-11-25T04:36:11+00:00"
 }

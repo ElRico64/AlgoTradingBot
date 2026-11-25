@@ -16790,8 +16790,12 @@
    "market check: model 83.5% vs books 79.9% -> 80.6% (keeps 18% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-24T05:34:36+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.2208,
+  "graded_at": "2026-11-25T04:35:58+00:00",
+  "final": "BOS 131 \u2013 WSH 116",
+  "close_price": -452.0,
+  "clv": -0.0003
  },
  {
   "id": "confidence:2026-11-24:NBA-20261124-DAL-DEN-22:moneyline:home",
