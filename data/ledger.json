@@ -16908,8 +16908,12 @@
    "market check: model 70.2% vs books 70.8% -> 70.7% (keeps 17% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-25T16:04:01+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.3717,
+  "graded_at": "2026-11-26T03:46:04+00:00",
+  "final": "LAC 97 \u2013 MEM 115",
+  "close_price": -269.0,
+  "clv": 0.0
  },
  {
   "id": "confidence:2026-11-25:NBA-20261125-SAC-GS-22:moneyline:home",
