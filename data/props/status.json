@@ -1,74 +1,74 @@
 {
 "boxscores": {
-"days_scanned": 468,
+"days_scanned": 469,
 "errors": 4,
-"games_stored": 2800,
-"new_games": 0,
-"new_rows": 0,
-"seconds": 7.3
+"games_stored": 2809,
+"new_games": 9,
+"new_rows": 190,
+"seconds": 12.5
 },
 "candidate_legs": 0,
 "espn": "",
 "graded_now": 0,
 "market_check": {
-"market_n": 23151,
-"n": 23151,
-"share": 0.237
+"market_n": 25261,
+"n": 25261,
+"share": 0.226
 },
 "model": {
-"games": 2800,
-"players": 746,
+"games": 2809,
+"players": 747,
 "stats": {
 "ast": {
 "calibrated": true,
-"dispersion": 8.34,
+"dispersion": 8.4,
 "health": {
 "ok": true,
-"worst_gap_60plus": 0.0056
+"worst_gap_60plus": 0.0077
 },
-"oos_rows": 56719,
+"oos_rows": 56907,
 "reliability": [
 {
-"hit": 0.1117,
-"n": 8883,
+"hit": 0.1108,
+"n": 8790,
 "range": "0.00-0.20",
 "said": 0.1094
 },
 {
-"hit": 0.2879,
-"n": 4863,
+"hit": 0.2874,
+"n": 4955,
 "range": "0.20-0.35",
-"said": 0.2749
+"said": 0.276
 },
 {
-"hit": 0.4472,
-"n": 3269,
+"hit": 0.4462,
+"n": 3216,
 "range": "0.35-0.50",
 "said": 0.425
 },
 {
-"hit": 0.5828,
-"n": 2785,
+"hit": 0.5834,
+"n": 2883,
 "range": "0.50-0.65",
-"said": 0.5822
+"said": 0.5834
 },
 {
-"hit": 0.72,
-"n": 2893,
+"hit": 0.7229,
+"n": 2876,
 "range": "0.65-0.80",
-"said": 0.725
+"said": 0.7245
 },
 {
-"hit": 0.8384,
-"n": 1535,
+"hit": 0.8396,
+"n": 1571,
 "range": "0.80-0.90",
-"said": 0.844
+"said": 0.8473
 },
 {
-"hit": 0.9449,
-"n": 1197,
+"hit": 0.9476,
+"n": 1164,
 "range": "0.90-1.00",
-"said": 0.9462
+"said": 0.9483
 }
 ],
 "trusted": true
@@ -80,49 +80,49 @@
 "ok": true,
 "worst_gap_60plus": 0.0129
 },
-"oos_rows": 56719,
+"oos_rows": 56907,
 "reliability": [
 {
-"hit": 0.0961,
-"n": 10882,
+"hit": 0.0962,
+"n": 10869,
 "range": "0.00-0.20",
-"said": 0.0902
+"said": 0.0917
 },
 {
-"hit": 0.2778,
-"n": 3549,
+"hit": 0.2793,
+"n": 3562,
 "range": "0.20-0.35",
 "said": 0.2648
 },
 {
-"hit": 0.4323,
-"n": 2741,
+"hit": 0.4348,
+"n": 2847,
 "range": "0.35-0.50",
-"said": 0.4165
+"said": 0.4218
 },
 {
-"hit": 0.5491,
-"n": 1976,
+"hit": 0.5477,
+"n": 1888,
 "range": "0.50-0.65",
-"said": 0.5632
+"said": 0.5683
 },
 {
-"hit": 0.7104,
-"n": 2134,
+"hit": 0.7072,
+"n": 2097,
 "range": "0.65-0.80",
-"said": 0.7198
+"said": 0.7182
 },
 {
-"hit": 0.8344,
-"n": 924,
+"hit": 0.8309,
+"n": 976,
 "range": "0.80-0.90",
-"said": 0.8414
+"said": 0.8407
 },
 {
-"hit": 0.938,
-"n": 274,
+"hit": 0.9393,
+"n": 280,
 "range": "0.90-1.00",
-"said": 0.9251
+"said": 0.9264
 }
 ],
 "trusted": true
@@ -132,49 +132,49 @@
 "dispersion": 2.9,
 "health": {
 "ok": false,
-"worst_gap_60plus": 0.0952
+"worst_gap_60plus": 0.0862
 },
-"oos_rows": 56719,
+"oos_rows": 56907,
 "reliability": [
 {
 "hit": 0.1206,
-"n": 7495,
+"n": 7480,
 "range": "0.00-0.20",
-"said": 0.1201
+"said": 0.1217
 },
 {
-"hit": 0.2718,
-"n": 4205,
+"hit": 0.2735,
+"n": 4201,
 "range": "0.20-0.35",
-"said": 0.2714
+"said": 0.2729
 },
 {
-"hit": 0.4203,
-"n": 5330,
+"hit": 0.42,
+"n": 5272,
 "range": "0.35-0.50",
 "said": 0.4185
 },
 {
-"hit": 0.5893,
-"n": 2659,
+"hit": 0.5827,
+"n": 2480,
 "range": "0.50-0.65",
-"said": 0.5789
+"said": 0.5717
 },
 {
-"hit": 0.682,
-"n": 5472,
+"hit": 0.6814,
+"n": 5687,
 "range": "0.65-0.80",
-"said": 0.7
+"said": 0.6951
 },
 {
-"hit": 0.8767,
-"n": 4460,
+"hit": 0.8744,
+"n": 4507,
 "range": "0.80-0.90",
-"said": 0.8767
+"said": 0.8776
 },
 {
-"hit": 0.8087,
-"n": 183,
+"hit": 0.8177,
+"n": 181,
 "range": "0.90-1.00",
 "said": 0.9039
 }
@@ -183,54 +183,54 @@
 },
 "reb": {
 "calibrated": true,
-"dispersion": 7.96,
+"dispersion": 7.98,
 "health": {
 "ok": true,
-"worst_gap_60plus": 0.0091
+"worst_gap_60plus": 0.0063
 },
-"oos_rows": 56719,
+"oos_rows": 56907,
 "reliability": [
 {
-"hit": 0.1215,
-"n": 7726,
+"hit": 0.1192,
+"n": 7489,
 "range": "0.00-0.20",
-"said": 0.1184
+"said": 0.1174
 },
 {
-"hit": 0.2697,
-"n": 4735,
+"hit": 0.276,
+"n": 5101,
 "range": "0.20-0.35",
-"said": 0.2682
+"said": 0.268
 },
 {
-"hit": 0.4103,
-"n": 4294,
+"hit": 0.4133,
+"n": 4215,
 "range": "0.35-0.50",
-"said": 0.4205
+"said": 0.4239
 },
 {
-"hit": 0.5953,
-"n": 3267,
+"hit": 0.6009,
+"n": 3167,
 "range": "0.50-0.65",
-"said": 0.5751
+"said": 0.5769
 },
 {
-"hit": 0.7212,
-"n": 3877,
+"hit": 0.7231,
+"n": 3868,
 "range": "0.65-0.80",
-"said": 0.7303
+"said": 0.7294
 },
 {
-"hit": 0.8495,
-"n": 2206,
+"hit": 0.848,
+"n": 2316,
 "range": "0.80-0.90",
-"said": 0.8538
+"said": 0.8517
 },
 {
-"hit": 0.9435,
-"n": 2461,
+"hit": 0.948,
+"n": 2441,
 "range": "0.90-1.00",
-"said": 0.9517
+"said": 0.9527
 }
 ],
 "trusted": true
@@ -238,6 +238,6 @@
 }
 },
 "prices": "prop prices: none (add a free ODDS_API_KEY to price props; nothing is invented)",
-"rows": 60349,
-"updated_at": "2026-11-26T03:46:18+00:00"
+"rows": 60539,
+"updated_at": "2026-11-26T09:35:17+00:00"
 }
