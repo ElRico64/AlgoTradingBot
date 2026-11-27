@@ -17004,7 +17004,11 @@
    "market check: model 71.5% vs books 79.3% -> 76.8% (keeps 34% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-26T09:35:04+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "lost",
+  "profit": -1.0,
+  "graded_at": "2026-11-27T03:47:28+00:00",
+  "final": "PHI 39 \u2013 DAL 38",
+  "close_price": -478.0,
+  "clv": 0.0136
  }
 ]
