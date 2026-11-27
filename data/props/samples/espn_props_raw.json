@@ -9,27 +9,27 @@
 },
 "odds": {
 "american": {
-"value": "-103",
+"value": "-109",
 "open": "-105"
 },
 "decimal": {
-"value": "1.97",
+"value": "1.91",
 "open": "1.95"
 },
 "fraction": {
-"value": "100/103",
+"value": "100/109",
 "open": "20/21"
 },
 "total": {
-"value": "13.5",
+"value": "16.5",
 "open": "12.5"
 }
 },
-"lastUpdated": "2026-11-27T18:18Z",
+"lastUpdated": "2026-11-27T22:42Z",
 "current": {
 "target": {
-"value": 13.5,
-"displayValue": "13.5"
+"value": 16.5,
+"displayValue": "16.5"
 }
 },
 "open": {
@@ -49,27 +49,27 @@
 },
 "odds": {
 "american": {
-"value": "-124",
+"value": "-117",
 "open": "-121"
 },
 "decimal": {
-"value": "1.80",
+"value": "1.85",
 "open": "1.82"
 },
 "fraction": {
-"value": "25/31",
+"value": "100/117",
 "open": "100/121"
 },
 "total": {
-"value": "13.5",
+"value": "16.5",
 "open": "12.5"
 }
 },
-"lastUpdated": "2026-11-27T18:18Z",
+"lastUpdated": "2026-11-27T22:42Z",
 "current": {
 "target": {
-"value": 13.5,
-"displayValue": "13.5"
+"value": 16.5,
+"displayValue": "16.5"
 }
 },
 "open": {
@@ -89,15 +89,15 @@
 },
 "odds": {
 "american": {
-"value": "-113",
+"value": "-115",
 "open": "-126"
 },
 "decimal": {
-"value": "1.88",
+"value": "1.86",
 "open": "1.79"
 },
 "fraction": {
-"value": "100/113",
+"value": "20/23",
 "open": "50/63"
 },
 "total": {
@@ -105,7 +105,7 @@
 "open": "5.5"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 5.5,
@@ -129,15 +129,15 @@
 },
 "odds": {
 "american": {
-"value": "-112",
+"value": "-111",
 "open": "-101"
 },
 "decimal": {
-"value": "1.89",
+"value": "1.90",
 "open": "1.99"
 },
 "fraction": {
-"value": "25/28",
+"value": "100/111",
 "open": "100/101"
 },
 "total": {
@@ -145,7 +145,7 @@
 "open": "5.5"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 5.5,
@@ -161,7 +161,7 @@
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "1",
@@ -169,39 +169,39 @@
 },
 "odds": {
 "american": {
-"value": "-105",
-"open": "-105"
+"value": "-104",
+"open": "-104"
 },
 "decimal": {
-"value": "1.95",
-"open": "1.95"
+"value": "1.96",
+"open": "1.96"
 },
 "fraction": {
-"value": "20/21",
-"open": "20/21"
+"value": "25/26",
+"open": "25/26"
 },
 "total": {
-"value": "21.5",
-"open": "21.5"
+"value": "11.5",
+"open": "11.5"
 }
 },
-"lastUpdated": "2026-11-27T18:04Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
-"value": 21.5,
-"displayValue": "21.5"
+"value": 11.5,
+"displayValue": "11.5"
 }
 },
 "open": {
 "target": {
-"value": 21.5,
-"displayValue": "21.5"
+"value": 11.5,
+"displayValue": "11.5"
 }
 }
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "1",
@@ -209,33 +209,33 @@
 },
 "odds": {
 "american": {
-"value": "-122",
-"open": "-122"
+"value": "-123",
+"open": "-123"
 },
 "decimal": {
 "value": "1.81",
 "open": "1.81"
 },
 "fraction": {
-"value": "50/61",
-"open": "50/61"
+"value": "100/123",
+"open": "100/123"
 },
 "total": {
-"value": "21.5",
-"open": "21.5"
+"value": "11.5",
+"open": "11.5"
 }
 },
-"lastUpdated": "2026-11-27T18:04Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
-"value": 21.5,
-"displayValue": "21.5"
+"value": 11.5,
+"displayValue": "11.5"
 }
 },
 "open": {
 "target": {
-"value": 21.5,
-"displayValue": "21.5"
+"value": 11.5,
+"displayValue": "11.5"
 }
 }
 },
@@ -249,27 +249,27 @@
 },
 "odds": {
 "american": {
-"value": "-107",
+"value": "-125",
 "open": "+123"
 },
 "decimal": {
-"value": "1.93",
+"value": "1.80",
 "open": "2.23"
 },
 "fraction": {
-"value": "100/107",
+"value": "4/5",
 "open": "123/100"
 },
 "total": {
-"value": "4.5",
+"value": "5.5",
 "open": "4.5"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:35Z",
 "current": {
 "target": {
-"value": 4.5,
-"displayValue": "4.5"
+"value": 5.5,
+"displayValue": "5.5"
 }
 },
 "open": {
@@ -289,27 +289,27 @@
 },
 "odds": {
 "american": {
-"value": "-123",
+"value": "-106",
 "open": "-162"
 },
 "decimal": {
-"value": "1.81",
+"value": "1.94",
 "open": "1.61"
 },
 "fraction": {
-"value": "100/123",
+"value": "50/53",
 "open": "50/81"
 },
 "total": {
-"value": "4.5",
+"value": "5.5",
 "open": "4.5"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:35Z",
 "current": {
 "target": {
-"value": 4.5,
-"displayValue": "4.5"
+"value": 5.5,
+"displayValue": "5.5"
 }
 },
 "open": {
@@ -329,27 +329,27 @@
 },
 "odds": {
 "american": {
-"value": "+117",
+"value": "-157",
 "open": "-144"
 },
 "decimal": {
-"value": "2.17",
+"value": "1.63",
 "open": "1.69"
 },
 "fraction": {
-"value": "117/100",
+"value": "100/157",
 "open": "25/36"
 },
 "total": {
-"value": "5.5",
+"value": "4.5",
 "open": "5.5"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T23:42Z",
 "current": {
 "target": {
-"value": 5.5,
-"displayValue": "5.5"
+"value": 4.5,
+"displayValue": "4.5"
 }
 },
 "open": {
@@ -369,27 +369,27 @@
 },
 "odds": {
 "american": {
-"value": "-154",
+"value": "+119",
 "open": "+109"
 },
 "decimal": {
-"value": "1.64",
+"value": "2.19",
 "open": "2.09"
 },
 "fraction": {
-"value": "50/77",
+"value": "119/100",
 "open": "109/100"
 },
 "total": {
-"value": "5.5",
+"value": "4.5",
 "open": "5.5"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T23:42Z",
 "current": {
 "target": {
-"value": 5.5,
-"displayValue": "5.5"
+"value": 4.5,
+"displayValue": "4.5"
 }
 },
 "open": {
@@ -401,7 +401,7 @@
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "2",
@@ -409,39 +409,39 @@
 },
 "odds": {
 "american": {
-"value": "-109",
-"open": "+108"
+"value": "-162",
+"open": "-144"
 },
 "decimal": {
-"value": "1.91",
-"open": "2.08"
+"value": "1.61",
+"open": "1.69"
 },
 "fraction": {
-"value": "100/109",
-"open": "27/25"
+"value": "50/81",
+"open": "25/36"
 },
 "total": {
-"value": "4.5",
-"open": "4.5"
+"value": "2.5",
+"open": "2.5"
 }
 },
-"lastUpdated": "2026-11-27T07:50Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
-"value": 4.5,
-"displayValue": "4.5"
+"value": 2.5,
+"displayValue": "2.5"
 }
 },
 "open": {
 "target": {
-"value": 4.5,
-"displayValue": "4.5"
+"value": 2.5,
+"displayValue": "2.5"
 }
 }
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "2",
@@ -449,33 +449,33 @@
 },
 "odds": {
 "american": {
-"value": "-121",
-"open": "-142"
+"value": "+123",
+"open": "+109"
 },
 "decimal": {
-"value": "1.82",
-"open": "1.70"
+"value": "2.23",
+"open": "2.09"
 },
 "fraction": {
-"value": "100/121",
-"open": "50/71"
+"value": "123/100",
+"open": "109/100"
 },
 "total": {
-"value": "4.5",
-"open": "4.5"
+"value": "2.5",
+"open": "2.5"
 }
 },
-"lastUpdated": "2026-11-27T07:50Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
-"value": 4.5,
-"displayValue": "4.5"
+"value": 2.5,
+"displayValue": "2.5"
 }
 },
 "open": {
 "target": {
-"value": 4.5,
-"displayValue": "4.5"
+"value": 2.5,
+"displayValue": "2.5"
 }
 }
 },
@@ -489,27 +489,27 @@
 },
 "odds": {
 "american": {
-"value": "-156",
+"value": "-103",
 "open": "-128"
 },
 "decimal": {
-"value": "1.64",
+"value": "1.97",
 "open": "1.78"
 },
 "fraction": {
-"value": "25/39",
+"value": "100/103",
 "open": "25/32"
 },
 "total": {
-"value": "3.5",
+"value": "4.5",
 "open": "3.5"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:35Z",
 "current": {
 "target": {
-"value": 3.5,
-"displayValue": "3.5"
+"value": 4.5,
+"displayValue": "4.5"
 }
 },
 "open": {
@@ -529,27 +529,27 @@
 },
 "odds": {
 "american": {
-"value": "+118",
+"value": "-128",
 "open": "-103"
 },
 "decimal": {
-"value": "2.18",
+"value": "1.78",
 "open": "1.97"
 },
 "fraction": {
-"value": "59/50",
+"value": "25/32",
 "open": "100/103"
 },
 "total": {
-"value": "3.5",
+"value": "4.5",
 "open": "3.5"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:35Z",
 "current": {
 "target": {
-"value": 3.5,
-"displayValue": "3.5"
+"value": 4.5,
+"displayValue": "4.5"
 }
 },
 "open": {
@@ -569,15 +569,15 @@
 },
 "odds": {
 "american": {
-"value": "-124",
+"value": "-110",
 "open": "-130"
 },
 "decimal": {
-"value": "1.80",
+"value": "1.90",
 "open": "1.76"
 },
 "fraction": {
-"value": "25/31",
+"value": "10/11",
 "open": "10/13"
 },
 "total": {
@@ -585,7 +585,7 @@
 "open": "4.5"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 4.5,
@@ -609,15 +609,15 @@
 },
 "odds": {
 "american": {
-"value": "-106",
+"value": "-119",
 "open": "-101"
 },
 "decimal": {
-"value": "1.94",
+"value": "1.84",
 "open": "1.99"
 },
 "fraction": {
-"value": "50/53",
+"value": "100/119",
 "open": "100/101"
 },
 "total": {
@@ -625,7 +625,7 @@
 "open": "4.5"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 4.5,
@@ -641,155 +641,155 @@
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "3",
 "name": "Total Rebounds"
+},
+"odds": {
+"american": {
+"value": "-108",
+"open": "-110"
+},
+"decimal": {
+"value": "1.92",
+"open": "1.90"
+},
+"fraction": {
+"value": "25/27",
+"open": "10/11"
+},
+"total": {
+"value": "3.5",
+"open": "3.5"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 3.5,
+"displayValue": "3.5"
+}
+},
+"open": {
+"target": {
+"value": 3.5,
+"displayValue": "3.5"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "3",
+"name": "Total Rebounds"
+},
+"odds": {
+"american": {
+"value": "-121",
+"open": "-120"
+},
+"decimal": {
+"value": "1.82",
+"open": "1.83"
+},
+"fraction": {
+"value": "100/121",
+"open": "5/6"
+},
+"total": {
+"value": "3.5",
+"open": "3.5"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 3.5,
+"displayValue": "3.5"
+}
+},
+"open": {
+"target": {
+"value": 3.5,
+"displayValue": "3.5"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
+},
+"type": {
+"id": "4",
+"name": "Total 3-Point Field Goals"
 },
 "odds": {
 "american": {
 "value": "-105",
-"open": "-107"
+"open": "-174"
 },
 "decimal": {
 "value": "1.95",
-"open": "1.93"
+"open": "1.57"
 },
 "fraction": {
 "value": "20/21",
-"open": "100/107"
+"open": "50/87"
 },
 "total": {
-"value": "3.5",
-"open": "3.5"
+"value": "2.5",
+"open": "1.5"
 }
 },
-"lastUpdated": "2026-11-27T07:50Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
-"value": 3.5,
-"displayValue": "3.5"
+"value": 2.5,
+"displayValue": "2.5"
 }
 },
 "open": {
 "target": {
-"value": 3.5,
-"displayValue": "3.5"
+"value": 1.5,
+"displayValue": "1.5"
 }
 }
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
 },
 "type": {
-"id": "3",
-"name": "Total Rebounds"
+"id": "4",
+"name": "Total 3-Point Field Goals"
 },
 "odds": {
 "american": {
 "value": "-126",
-"open": "-123"
-},
-"decimal": {
-"value": "1.79",
-"open": "1.81"
-},
-"fraction": {
-"value": "50/63",
-"open": "100/123"
-},
-"total": {
-"value": "3.5",
-"open": "3.5"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 3.5,
-"displayValue": "3.5"
-}
-},
-"open": {
-"target": {
-"value": 3.5,
-"displayValue": "3.5"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
-},
-"type": {
-"id": "4",
-"name": "Total 3-Point Field Goals"
-},
-"odds": {
-"american": {
-"value": "-191",
-"open": "-174"
-},
-"decimal": {
-"value": "1.52",
-"open": "1.57"
-},
-"fraction": {
-"value": "100/191",
-"open": "50/87"
-},
-"total": {
-"value": "1.5",
-"open": "1.5"
-}
-},
-"lastUpdated": "2026-11-27T08:39Z",
-"current": {
-"target": {
-"value": 1.5,
-"displayValue": "1.5"
-}
-},
-"open": {
-"target": {
-"value": 1.5,
-"displayValue": "1.5"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
-},
-"type": {
-"id": "4",
-"name": "Total 3-Point Field Goals"
-},
-"odds": {
-"american": {
-"value": "+144",
 "open": "+131"
 },
 "decimal": {
-"value": "2.44",
+"value": "1.79",
 "open": "2.31"
 },
 "fraction": {
-"value": "36/25",
+"value": "50/63",
 "open": "131/100"
 },
 "total": {
-"value": "1.5",
+"value": "2.5",
 "open": "1.5"
 }
 },
-"lastUpdated": "2026-11-27T08:39Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
-"value": 1.5,
-"displayValue": "1.5"
+"value": 2.5,
+"displayValue": "2.5"
 }
 },
 "open": {
@@ -825,7 +825,7 @@
 "open": "0.5"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 0.5,
@@ -865,7 +865,7 @@
 "open": "0.5"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 0.5,
@@ -881,81 +881,161 @@
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "4",
 "name": "Total 3-Point Field Goals"
+},
+"odds": {
+"american": {
+"value": "+145",
+"open": "+135"
+},
+"decimal": {
+"value": "2.45",
+"open": "2.35"
+},
+"fraction": {
+"value": "29/20",
+"open": "27/20"
+},
+"total": {
+"value": "2.5",
+"open": "2.5"
+}
+},
+"lastUpdated": "2026-11-28T00:32Z",
+"current": {
+"target": {
+"value": 2.5,
+"displayValue": "2.5"
+}
+},
+"open": {
+"target": {
+"value": 2.5,
+"displayValue": "2.5"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "4",
+"name": "Total 3-Point Field Goals"
+},
+"odds": {
+"american": {
+"value": "-192",
+"open": "-179"
+},
+"decimal": {
+"value": "1.52",
+"open": "1.55"
+},
+"fraction": {
+"value": "25/48",
+"open": "100/179"
+},
+"total": {
+"value": "2.5",
+"open": "2.5"
+}
+},
+"lastUpdated": "2026-11-28T00:32Z",
+"current": {
+"target": {
+"value": 2.5,
+"displayValue": "2.5"
+}
+},
+"open": {
+"target": {
+"value": 2.5,
+"displayValue": "2.5"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
+},
+"type": {
+"id": "5",
+"name": "Total Steals"
 },
 "odds": {
 "american": {
 "value": "+129",
-"open": "+131"
+"open": "+134"
 },
 "decimal": {
 "value": "2.29",
-"open": "2.31"
+"open": "2.34"
 },
 "fraction": {
 "value": "129/100",
-"open": "131/100"
+"open": "67/50"
 },
 "total": {
-"value": "3.5",
-"open": "3.5"
+"value": "1.5",
+"open": "1.5"
 }
 },
-"lastUpdated": "2026-11-27T16:25Z",
+"lastUpdated": "2026-11-27T22:39Z",
 "current": {
 "target": {
-"value": 3.5,
-"displayValue": "3.5"
+"value": 1.5,
+"displayValue": "1.5"
 }
 },
 "open": {
 "target": {
-"value": 3.5,
-"displayValue": "3.5"
+"value": 1.5,
+"displayValue": "1.5"
 }
 }
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
 },
 "type": {
-"id": "4",
-"name": "Total 3-Point Field Goals"
+"id": "5",
+"name": "Total Steals"
 },
 "odds": {
 "american": {
-"value": "-170",
-"open": "-174"
+"value": "-172",
+"open": "-179"
 },
 "decimal": {
 "value": "1.58",
-"open": "1.57"
+"open": "1.55"
 },
 "fraction": {
-"value": "10/17",
-"open": "50/87"
+"value": "25/43",
+"open": "100/179"
 },
 "total": {
-"value": "3.5",
-"open": "3.5"
+"value": "1.5",
+"open": "1.5"
 }
 },
-"lastUpdated": "2026-11-27T16:25Z",
+"lastUpdated": "2026-11-27T22:39Z",
 "current": {
 "target": {
-"value": 3.5,
-"displayValue": "3.5"
+"value": 1.5,
+"displayValue": "1.5"
 }
 },
 "open": {
 "target": {
-"value": 3.5,
-"displayValue": "3.5"
+"value": 1.5,
+"displayValue": "1.5"
 }
 }
 },
@@ -969,27 +1049,27 @@
 },
 "odds": {
 "american": {
-"value": "-125",
+"value": "-109",
 "open": "-115"
 },
 "decimal": {
-"value": "1.80",
+"value": "1.91",
 "open": "1.86"
 },
 "fraction": {
-"value": "4/5",
+"value": "100/109",
 "open": "20/23"
 },
 "total": {
-"value": "17.5",
+"value": "22.5",
 "open": "16.5"
 }
 },
-"lastUpdated": "2026-11-27T08:39Z",
+"lastUpdated": "2026-11-27T22:54Z",
 "current": {
 "target": {
-"value": 17.5,
-"displayValue": "17.5"
+"value": 22.5,
+"displayValue": "22.5"
 }
 },
 "open": {
@@ -1009,27 +1089,27 @@
 },
 "odds": {
 "american": {
-"value": "-106",
+"value": "-120",
 "open": "-114"
 },
 "decimal": {
-"value": "1.94",
+"value": "1.83",
 "open": "1.87"
 },
 "fraction": {
-"value": "50/53",
+"value": "5/6",
 "open": "50/57"
 },
 "total": {
-"value": "17.5",
+"value": "22.5",
 "open": "16.5"
 }
 },
-"lastUpdated": "2026-11-27T08:39Z",
+"lastUpdated": "2026-11-27T22:54Z",
 "current": {
 "target": {
-"value": 17.5,
-"displayValue": "17.5"
+"value": 22.5,
+"displayValue": "22.5"
 }
 },
 "open": {
@@ -1049,7 +1129,7 @@
 },
 "odds": {
 "american": {
-"value": "-131",
+"value": "-130",
 "open": "-101"
 },
 "decimal": {
@@ -1057,7 +1137,7 @@
 "open": "1.99"
 },
 "fraction": {
-"value": "100/131",
+"value": "10/13",
 "open": "100/101"
 },
 "total": {
@@ -1065,7 +1145,7 @@
 "open": "12.5"
 }
 },
-"lastUpdated": "2026-11-27T18:22Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 10.5,
@@ -1105,7 +1185,7 @@
 "open": "12.5"
 }
 },
-"lastUpdated": "2026-11-27T18:22Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 10.5,
@@ -1121,7 +1201,7 @@
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "87",
@@ -1129,39 +1209,39 @@
 },
 "odds": {
 "american": {
-"value": "-121",
-"open": "-116"
+"value": "-110",
+"open": "-106"
 },
 "decimal": {
-"value": "1.82",
-"open": "1.86"
+"value": "1.90",
+"open": "1.94"
 },
 "fraction": {
-"value": "100/121",
-"open": "25/29"
+"value": "10/11",
+"open": "50/53"
 },
 "total": {
-"value": "25.5",
-"open": "25.5"
+"value": "14.5",
+"open": "14.5"
 }
 },
-"lastUpdated": "2026-11-27T07:50Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
-"value": 25.5,
-"displayValue": "25.5"
+"value": 14.5,
+"displayValue": "14.5"
 }
 },
 "open": {
 "target": {
-"value": 25.5,
-"displayValue": "25.5"
+"value": 14.5,
+"displayValue": "14.5"
 }
 }
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "87",
@@ -1169,33 +1249,33 @@
 },
 "odds": {
 "american": {
-"value": "-109",
-"open": "-113"
+"value": "-119",
+"open": "-124"
 },
 "decimal": {
-"value": "1.91",
-"open": "1.88"
+"value": "1.84",
+"open": "1.80"
 },
 "fraction": {
-"value": "100/109",
-"open": "100/113"
+"value": "100/119",
+"open": "25/31"
 },
 "total": {
-"value": "25.5",
-"open": "25.5"
+"value": "14.5",
+"open": "14.5"
 }
 },
-"lastUpdated": "2026-11-27T07:50Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
-"value": 25.5,
-"displayValue": "25.5"
+"value": 14.5,
+"displayValue": "14.5"
 }
 },
 "open": {
 "target": {
-"value": 25.5,
-"displayValue": "25.5"
+"value": 14.5,
+"displayValue": "14.5"
 }
 }
 },
@@ -1209,27 +1289,27 @@
 },
 "odds": {
 "american": {
-"value": "-108",
+"value": "-126",
 "open": "-105"
 },
 "decimal": {
-"value": "1.92",
+"value": "1.79",
 "open": "1.95"
 },
 "fraction": {
-"value": "25/27",
+"value": "50/63",
 "open": "20/21"
 },
 "total": {
-"value": "17.5",
+"value": "20.5",
 "open": "16.5"
 }
 },
-"lastUpdated": "2026-11-27T08:39Z",
+"lastUpdated": "2026-11-27T22:54Z",
 "current": {
 "target": {
-"value": 17.5,
-"displayValue": "17.5"
+"value": 20.5,
+"displayValue": "20.5"
 }
 },
 "open": {
@@ -1249,27 +1329,27 @@
 },
 "odds": {
 "american": {
-"value": "-122",
+"value": "-104",
 "open": "-125"
 },
 "decimal": {
-"value": "1.81",
+"value": "1.96",
 "open": "1.80"
 },
 "fraction": {
-"value": "50/61",
+"value": "25/26",
 "open": "4/5"
 },
 "total": {
-"value": "17.5",
+"value": "20.5",
 "open": "16.5"
 }
 },
-"lastUpdated": "2026-11-27T08:39Z",
+"lastUpdated": "2026-11-27T22:54Z",
 "current": {
 "target": {
-"value": 17.5,
-"displayValue": "17.5"
+"value": 20.5,
+"displayValue": "20.5"
 }
 },
 "open": {
@@ -1289,15 +1369,15 @@
 },
 "odds": {
 "american": {
-"value": "-113",
+"value": "-111",
 "open": "-127"
 },
 "decimal": {
-"value": "1.88",
+"value": "1.90",
 "open": "1.78"
 },
 "fraction": {
-"value": "100/113",
+"value": "100/111",
 "open": "100/127"
 },
 "total": {
@@ -1305,7 +1385,7 @@
 "open": "10.5"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 10.5,
@@ -1329,15 +1409,15 @@
 },
 "odds": {
 "american": {
-"value": "-117",
+"value": "-119",
 "open": "-104"
 },
 "decimal": {
-"value": "1.85",
+"value": "1.84",
 "open": "1.96"
 },
 "fraction": {
-"value": "100/117",
+"value": "100/119",
 "open": "25/26"
 },
 "total": {
@@ -1345,7 +1425,7 @@
 "open": "10.5"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 10.5,
@@ -1361,7 +1441,7 @@
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "88",
@@ -1369,39 +1449,39 @@
 },
 "odds": {
 "american": {
-"value": "-121",
-"open": "-120"
+"value": "-123",
+"open": "-125"
 },
 "decimal": {
-"value": "1.82",
-"open": "1.83"
+"value": "1.81",
+"open": "1.80"
 },
 "fraction": {
-"value": "100/121",
-"open": "5/6"
+"value": "100/123",
+"open": "4/5"
 },
 "total": {
-"value": "24.5",
-"open": "24.5"
+"value": "14.5",
+"open": "14.5"
 }
 },
-"lastUpdated": "2026-11-27T18:18Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
-"value": 24.5,
-"displayValue": "24.5"
+"value": 14.5,
+"displayValue": "14.5"
 }
 },
 "open": {
 "target": {
-"value": 24.5,
-"displayValue": "24.5"
+"value": 14.5,
+"displayValue": "14.5"
 }
 }
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "88",
@@ -1409,33 +1489,33 @@
 },
 "odds": {
 "american": {
-"value": "-109",
-"open": "-109"
+"value": "-107",
+"open": "-105"
 },
 "decimal": {
-"value": "1.91",
-"open": "1.91"
+"value": "1.93",
+"open": "1.95"
 },
 "fraction": {
-"value": "100/109",
-"open": "100/109"
+"value": "100/107",
+"open": "20/21"
 },
 "total": {
-"value": "24.5",
-"open": "24.5"
+"value": "14.5",
+"open": "14.5"
 }
 },
-"lastUpdated": "2026-11-27T18:18Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
-"value": 24.5,
-"displayValue": "24.5"
+"value": 14.5,
+"displayValue": "14.5"
 }
 },
 "open": {
 "target": {
-"value": 24.5,
-"displayValue": "24.5"
+"value": 14.5,
+"displayValue": "14.5"
 }
 }
 },
@@ -1449,27 +1529,27 @@
 },
 "odds": {
 "american": {
-"value": "-117",
+"value": "+102",
 "open": "-138"
 },
 "decimal": {
-"value": "1.85",
+"value": "2.02",
 "open": "1.72"
 },
 "fraction": {
-"value": "100/117",
+"value": "51/50",
 "open": "50/69"
 },
 "total": {
-"value": "8.5",
+"value": "10.5",
 "open": "7.5"
 }
 },
-"lastUpdated": "2026-11-27T08:39Z",
+"lastUpdated": "2026-11-27T22:49Z",
 "current": {
 "target": {
-"value": 8.5,
-"displayValue": "8.5"
+"value": 10.5,
+"displayValue": "10.5"
 }
 },
 "open": {
@@ -1482,6 +1562,86 @@
 {
 "athlete": {
 "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
+},
+"type": {
+"id": "89",
+"name": "Total Assists and Rebounds"
+},
+"odds": {
+"american": {
+"value": "-134",
+"open": "+105"
+},
+"decimal": {
+"value": "1.74",
+"open": "2.05"
+},
+"fraction": {
+"value": "50/67",
+"open": "21/20"
+},
+"total": {
+"value": "10.5",
+"open": "7.5"
+}
+},
+"lastUpdated": "2026-11-27T22:49Z",
+"current": {
+"target": {
+"value": 10.5,
+"displayValue": "10.5"
+}
+},
+"open": {
+"target": {
+"value": 7.5,
+"displayValue": "7.5"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
+},
+"type": {
+"id": "89",
+"name": "Total Assists and Rebounds"
+},
+"odds": {
+"american": {
+"value": "-117",
+"open": "-132"
+},
+"decimal": {
+"value": "1.85",
+"open": "1.75"
+},
+"fraction": {
+"value": "100/117",
+"open": "25/33"
+},
+"total": {
+"value": "9.5",
+"open": "10.5"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 9.5,
+"displayValue": "9.5"
+}
+},
+"open": {
+"target": {
+"value": 10.5,
+"displayValue": "10.5"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
 },
 "type": {
 "id": "89",
@@ -1490,94 +1650,14 @@
 "odds": {
 "american": {
 "value": "-113",
-"open": "+105"
-},
-"decimal": {
-"value": "1.88",
-"open": "2.05"
-},
-"fraction": {
-"value": "100/113",
-"open": "21/20"
-},
-"total": {
-"value": "8.5",
-"open": "7.5"
-}
-},
-"lastUpdated": "2026-11-27T08:39Z",
-"current": {
-"target": {
-"value": 8.5,
-"displayValue": "8.5"
-}
-},
-"open": {
-"target": {
-"value": 7.5,
-"displayValue": "7.5"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
-},
-"type": {
-"id": "89",
-"name": "Total Assists and Rebounds"
-},
-"odds": {
-"american": {
-"value": "-128",
-"open": "-132"
-},
-"decimal": {
-"value": "1.78",
-"open": "1.75"
-},
-"fraction": {
-"value": "25/32",
-"open": "25/33"
-},
-"total": {
-"value": "9.5",
-"open": "10.5"
-}
-},
-"lastUpdated": "2026-11-27T17:20Z",
-"current": {
-"target": {
-"value": 9.5,
-"displayValue": "9.5"
-}
-},
-"open": {
-"target": {
-"value": 10.5,
-"displayValue": "10.5"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
-},
-"type": {
-"id": "89",
-"name": "Total Assists and Rebounds"
-},
-"odds": {
-"american": {
-"value": "-103",
 "open": "+100"
 },
 "decimal": {
-"value": "1.97",
+"value": "1.88",
 "open": "2.00"
 },
 "fraction": {
-"value": "100/103",
+"value": "100/113",
 "open": "1/1"
 },
 "total": {
@@ -1585,7 +1665,7 @@
 "open": "10.5"
 }
 },
-"lastUpdated": "2026-11-27T17:20Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 9.5,
@@ -1601,7 +1681,7 @@
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "89",
@@ -1609,39 +1689,39 @@
 },
 "odds": {
 "american": {
-"value": "-143",
-"open": "-135"
+"value": "-114",
+"open": "-108"
 },
 "decimal": {
-"value": "1.69",
-"open": "1.74"
+"value": "1.87",
+"open": "1.92"
 },
 "fraction": {
-"value": "100/143",
-"open": "20/27"
+"value": "50/57",
+"open": "25/27"
 },
 "total": {
-"value": "7.5",
-"open": "7.5"
+"value": "6.5",
+"open": "6.5"
 }
 },
-"lastUpdated": "2026-11-27T18:20Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
-"value": 7.5,
-"displayValue": "7.5"
+"value": 6.5,
+"displayValue": "6.5"
 }
 },
 "open": {
 "target": {
-"value": 7.5,
-"displayValue": "7.5"
+"value": 6.5,
+"displayValue": "6.5"
 }
 }
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "89",
@@ -1649,33 +1729,33 @@
 },
 "odds": {
 "american": {
-"value": "+108",
-"open": "+103"
+"value": "-115",
+"open": "-122"
 },
 "decimal": {
-"value": "2.08",
-"open": "2.03"
+"value": "1.86",
+"open": "1.81"
 },
 "fraction": {
-"value": "27/25",
-"open": "103/100"
+"value": "20/23",
+"open": "50/61"
 },
 "total": {
-"value": "7.5",
-"open": "7.5"
+"value": "6.5",
+"open": "6.5"
 }
 },
-"lastUpdated": "2026-11-27T18:20Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
-"value": 7.5,
-"displayValue": "7.5"
+"value": 6.5,
+"displayValue": "6.5"
 }
 },
 "open": {
 "target": {
-"value": 7.5,
-"displayValue": "7.5"
+"value": 6.5,
+"displayValue": "6.5"
 }
 }
 },
@@ -1689,27 +1769,27 @@
 },
 "odds": {
 "american": {
-"value": "-126",
+"value": "-123",
 "open": "-113"
 },
 "decimal": {
-"value": "1.79",
+"value": "1.81",
 "open": "1.88"
 },
 "fraction": {
-"value": "50/63",
+"value": "100/123",
 "open": "100/113"
 },
 "total": {
-"value": "21.5",
+"value": "26.5",
 "open": "20.5"
 }
 },
-"lastUpdated": "2026-11-27T08:39Z",
+"lastUpdated": "2026-11-27T22:59Z",
 "current": {
 "target": {
-"value": 21.5,
-"displayValue": "21.5"
+"value": 26.5,
+"displayValue": "26.5"
 }
 },
 "open": {
@@ -1729,27 +1809,27 @@
 },
 "odds": {
 "american": {
-"value": "-104",
+"value": "-107",
 "open": "-117"
 },
 "decimal": {
-"value": "1.96",
+"value": "1.93",
 "open": "1.85"
 },
 "fraction": {
-"value": "25/26",
+"value": "100/107",
 "open": "100/117"
 },
 "total": {
-"value": "21.5",
+"value": "26.5",
 "open": "20.5"
 }
 },
-"lastUpdated": "2026-11-27T08:39Z",
+"lastUpdated": "2026-11-27T22:59Z",
 "current": {
 "target": {
-"value": 21.5,
-"displayValue": "21.5"
+"value": 26.5,
+"displayValue": "26.5"
 }
 },
 "open": {
@@ -1762,126 +1842,6 @@
 {
 "athlete": {
 "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
-},
-"type": {
-"id": "90",
-"name": "Total Points, Rebounds, and Assists"
-},
-"odds": {
-"american": {
-"value": "-124",
-"open": "-102"
-},
-"decimal": {
-"value": "1.80",
-"open": "1.98"
-},
-"fraction": {
-"value": "25/31",
-"open": "50/51"
-},
-"total": {
-"value": "15.5",
-"open": "17.5"
-}
-},
-"lastUpdated": "2026-11-27T16:25Z",
-"current": {
-"target": {
-"value": 15.5,
-"displayValue": "15.5"
-}
-},
-"open": {
-"target": {
-"value": 17.5,
-"displayValue": "17.5"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
-},
-"type": {
-"id": "90",
-"name": "Total Points, Rebounds, and Assists"
-},
-"odds": {
-"american": {
-"value": "-106",
-"open": "-129"
-},
-"decimal": {
-"value": "1.94",
-"open": "1.77"
-},
-"fraction": {
-"value": "50/53",
-"open": "100/129"
-},
-"total": {
-"value": "15.5",
-"open": "17.5"
-}
-},
-"lastUpdated": "2026-11-27T16:25Z",
-"current": {
-"target": {
-"value": 15.5,
-"displayValue": "15.5"
-}
-},
-"open": {
-"target": {
-"value": 17.5,
-"displayValue": "17.5"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "90",
-"name": "Total Points, Rebounds, and Assists"
-},
-"odds": {
-"american": {
-"value": "-110",
-"open": "-109"
-},
-"decimal": {
-"value": "1.90",
-"open": "1.91"
-},
-"fraction": {
-"value": "10/11",
-"open": "100/109"
-},
-"total": {
-"value": "29.5",
-"open": "29.5"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 29.5,
-"displayValue": "29.5"
-}
-},
-"open": {
-"target": {
-"value": 29.5,
-"displayValue": "29.5"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
 },
 "type": {
 "id": "90",
@@ -1890,32 +1850,152 @@
 "odds": {
 "american": {
 "value": "-120",
-"open": "-121"
+"open": "-102"
 },
 "decimal": {
 "value": "1.83",
-"open": "1.82"
+"open": "1.98"
 },
 "fraction": {
 "value": "5/6",
-"open": "100/121"
+"open": "50/51"
 },
 "total": {
-"value": "29.5",
-"open": "29.5"
+"value": "15.5",
+"open": "17.5"
 }
 },
-"lastUpdated": "2026-11-27T07:50Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
-"value": 29.5,
-"displayValue": "29.5"
+"value": 15.5,
+"displayValue": "15.5"
 }
 },
 "open": {
 "target": {
-"value": 29.5,
-"displayValue": "29.5"
+"value": 17.5,
+"displayValue": "17.5"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
+},
+"type": {
+"id": "90",
+"name": "Total Points, Rebounds, and Assists"
+},
+"odds": {
+"american": {
+"value": "-110",
+"open": "-129"
+},
+"decimal": {
+"value": "1.90",
+"open": "1.77"
+},
+"fraction": {
+"value": "10/11",
+"open": "100/129"
+},
+"total": {
+"value": "15.5",
+"open": "17.5"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 15.5,
+"displayValue": "15.5"
+}
+},
+"open": {
+"target": {
+"value": 17.5,
+"displayValue": "17.5"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "90",
+"name": "Total Points, Rebounds, and Assists"
+},
+"odds": {
+"american": {
+"value": "-127",
+"open": "-124"
+},
+"decimal": {
+"value": "1.78",
+"open": "1.80"
+},
+"fraction": {
+"value": "100/127",
+"open": "25/31"
+},
+"total": {
+"value": "17.5",
+"open": "17.5"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 17.5,
+"displayValue": "17.5"
+}
+},
+"open": {
+"target": {
+"value": 17.5,
+"displayValue": "17.5"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "90",
+"name": "Total Points, Rebounds, and Assists"
+},
+"odds": {
+"american": {
+"value": "-104",
+"open": "-106"
+},
+"decimal": {
+"value": "1.96",
+"open": "1.94"
+},
+"fraction": {
+"value": "25/26",
+"open": "50/53"
+},
+"total": {
+"value": "17.5",
+"open": "17.5"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 17.5,
+"displayValue": "17.5"
+}
+},
+"open": {
+"target": {
+"value": 17.5,
+"displayValue": "17.5"
 }
 }
 },
@@ -1929,20 +2009,20 @@
 },
 "odds": {
 "american": {
-"value": "+1920",
+"value": "+770",
 "open": "+2500"
 },
 "decimal": {
-"value": "20.20",
+"value": "8.70",
 "open": "26.00"
 },
 "fraction": {
-"value": "96/5",
+"value": "77/10",
 "open": "25/1"
 },
 "total": {}
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {},
 "open": {}
 },
@@ -1956,26 +2036,26 @@
 },
 "odds": {
 "american": {
-"value": "+1920",
+"value": "+2200",
 "open": "+1320"
 },
 "decimal": {
-"value": "20.20",
+"value": "23.00",
 "open": "14.20"
 },
 "fraction": {
-"value": "96/5",
+"value": "22/1",
 "open": "66/5"
 },
 "total": {}
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {},
 "open": {}
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "92",
@@ -1983,20 +2063,20 @@
 },
 "odds": {
 "american": {
-"value": "+2100",
-"open": "+2300"
+"value": "+3700",
+"open": "+3700"
 },
 "decimal": {
-"value": "22.00",
-"open": "24.00"
+"value": "38.00",
+"open": "38.00"
 },
 "fraction": {
-"value": "21/1",
-"open": "23/1"
+"value": "37/1",
+"open": "37/1"
 },
 "total": {}
 },
-"lastUpdated": "2026-11-27T07:50Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {},
 "open": {}
 },
@@ -2023,7 +2103,7 @@
 },
 "total": {}
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {},
 "open": {}
 },
@@ -2050,13 +2130,13 @@
 },
 "total": {}
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {},
 "open": {}
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "93",
@@ -2064,20 +2144,20 @@
 },
 "odds": {
 "american": {
-"value": "+8800",
-"open": "+8800"
+"value": "+9400",
+"open": "+9400"
 },
 "decimal": {
-"value": "89.00",
-"open": "89.00"
+"value": "95.00",
+"open": "95.00"
 },
 "fraction": {
-"value": "88/1",
-"open": "88/1"
+"value": "94/1",
+"open": "94/1"
 },
 "total": {}
 },
-"lastUpdated": "2026-11-27T07:50Z",
+"lastUpdated": "2026-11-27T22:51Z",
 "current": {},
 "open": {}
 },
@@ -2091,26 +2171,26 @@
 },
 "odds": {
 "american": {
-"value": "+980",
+"value": "+1140",
 "open": "+990"
 },
 "decimal": {
-"value": "10.80",
+"value": "12.40",
 "open": "10.90"
 },
 "fraction": {
-"value": "49/5",
+"value": "57/5",
 "open": "99/10"
 },
 "total": {}
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:37Z",
 "current": {},
 "open": {}
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "94",
@@ -2118,20 +2198,20 @@
 },
 "odds": {
 "american": {
-"value": "+570",
-"open": "+552"
+"value": "+780",
+"open": "+820"
 },
 "decimal": {
-"value": "6.70",
-"open": "6.52"
+"value": "8.80",
+"open": "9.20"
 },
 "fraction": {
-"value": "57/10",
-"open": "138/25"
+"value": "39/5",
+"open": "41/5"
 },
 "total": {}
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:37Z",
 "current": {},
 "open": {}
 },
@@ -2158,13 +2238,13 @@
 },
 "total": {}
 },
-"lastUpdated": "2026-11-27T17:14Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {},
 "open": {}
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "96",
@@ -2172,20 +2252,20 @@
 },
 "odds": {
 "american": {
-"value": "+310",
-"open": "+310"
+"value": "+425",
+"open": "+425"
 },
 "decimal": {
-"value": "4.10",
-"open": "4.10"
+"value": "5.25",
+"open": "5.25"
 },
 "fraction": {
-"value": "31/10",
-"open": "31/10"
+"value": "17/4",
+"open": "17/4"
 },
 "total": {}
 },
-"lastUpdated": "2026-11-27T17:15Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {},
 "open": {}
 },
@@ -2212,7 +2292,7 @@
 },
 "total": {}
 },
-"lastUpdated": "2026-11-27T17:14Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {},
 "open": {}
 },
@@ -2239,13 +2319,13 @@
 },
 "total": {}
 },
-"lastUpdated": "2026-11-27T17:14Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {},
 "open": {}
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "97",
@@ -2253,20 +2333,47 @@
 },
 "odds": {
 "american": {
-"value": "+700",
-"open": "+700"
+"value": "+1000",
+"open": "+1000"
 },
 "decimal": {
-"value": "8.00",
-"open": "8.00"
+"value": "11.00",
+"open": "11.00"
 },
 "fraction": {
-"value": "7/1",
-"open": "7/1"
+"value": "10/1",
+"open": "10/1"
 },
 "total": {}
 },
-"lastUpdated": "2026-11-27T17:15Z",
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {},
+"open": {}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "97",
+"name": "1st Team FG Scorer Exact"
+},
+"odds": {
+"american": {
+"value": "+800",
+"open": "+800"
+},
+"decimal": {
+"value": "9.00",
+"open": "9.00"
+},
+"fraction": {
+"value": "8/1",
+"open": "8/1"
+},
+"total": {}
+},
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {},
 "open": {}
 },
@@ -2280,55 +2387,15 @@
 },
 "odds": {
 "american": {
-"value": "-1520",
+"value": "-1920",
 "open": "-105"
 },
 "decimal": {
-"value": "1.06",
+"value": "1.05",
 "open": "1.95"
 },
 "fraction": {
-"value": "5/76",
-"open": "20/21"
-},
-"total": {
-"value": "6+",
-"open": "13+"
-}
-},
-"lastUpdated": "2026-11-27T07:51Z",
-"current": {
-"target": {
-"value": 6.0,
-"displayValue": "6+"
-}
-},
-"open": {
-"target": {
-"value": 13.0,
-"displayValue": "13+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
-},
-"type": {
-"id": "218",
-"name": "Points Milestones"
-},
-"odds": {
-"american": {
-"value": "-590",
-"open": "-105"
-},
-"decimal": {
-"value": "1.16",
-"open": "1.95"
-},
-"fraction": {
-"value": "10/59",
+"value": "5/96",
 "open": "20/21"
 },
 "total": {
@@ -2336,7 +2403,7 @@
 "open": "13+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-28T00:32Z",
 "current": {
 "target": {
 "value": 8.0,
@@ -2360,15 +2427,15 @@
 },
 "odds": {
 "american": {
-"value": "-308",
+"value": "-800",
 "open": "-105"
 },
 "decimal": {
-"value": "1.32",
+"value": "1.12",
 "open": "1.95"
 },
 "fraction": {
-"value": "25/77",
+"value": "1/8",
 "open": "20/21"
 },
 "total": {
@@ -2376,7 +2443,7 @@
 "open": "13+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 10.0,
@@ -2400,15 +2467,15 @@
 },
 "odds": {
 "american": {
-"value": "-171",
+"value": "-413",
 "open": "-105"
 },
 "decimal": {
-"value": "1.58",
+"value": "1.24",
 "open": "1.95"
 },
 "fraction": {
-"value": "100/171",
+"value": "100/413",
 "open": "20/21"
 },
 "total": {
@@ -2416,7 +2483,7 @@
 "open": "13+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 12.0,
@@ -2440,15 +2507,15 @@
 },
 "odds": {
 "american": {
-"value": "+125",
+"value": "-180",
 "open": "-105"
 },
 "decimal": {
-"value": "2.25",
+"value": "1.55",
 "open": "1.95"
 },
 "fraction": {
-"value": "5/4",
+"value": "5/9",
 "open": "20/21"
 },
 "total": {
@@ -2456,7 +2523,7 @@
 "open": "13+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 15.0,
@@ -2480,15 +2547,15 @@
 },
 "odds": {
 "american": {
-"value": "+250",
+"value": "+114",
 "open": "-105"
 },
 "decimal": {
-"value": "3.50",
+"value": "2.14",
 "open": "1.95"
 },
 "fraction": {
-"value": "5/2",
+"value": "57/50",
 "open": "20/21"
 },
 "total": {
@@ -2496,7 +2563,7 @@
 "open": "13+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 18.0,
@@ -2520,15 +2587,15 @@
 },
 "odds": {
 "american": {
-"value": "+391",
+"value": "+178",
 "open": "-105"
 },
 "decimal": {
-"value": "4.91",
+"value": "2.78",
 "open": "1.95"
 },
 "fraction": {
-"value": "391/100",
+"value": "89/50",
 "open": "20/21"
 },
 "total": {
@@ -2536,7 +2603,7 @@
 "open": "13+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 20.0,
@@ -2560,15 +2627,15 @@
 },
 "odds": {
 "american": {
-"value": "+1160",
+"value": "+524",
 "open": "-105"
 },
 "decimal": {
-"value": "12.60",
+"value": "6.24",
 "open": "1.95"
 },
 "fraction": {
-"value": "58/5",
+"value": "131/25",
 "open": "20/21"
 },
 "total": {
@@ -2576,7 +2643,7 @@
 "open": "13+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 25.0,
@@ -2600,15 +2667,15 @@
 },
 "odds": {
 "american": {
-"value": "+2900",
+"value": "+1400",
 "open": "-105"
 },
 "decimal": {
-"value": "30.00",
+"value": "15.00",
 "open": "1.95"
 },
 "fraction": {
-"value": "29/1",
+"value": "14/1",
 "open": "20/21"
 },
 "total": {
@@ -2616,7 +2683,7 @@
 "open": "13+"
 }
 },
-"lastUpdated": "2026-11-27T08:39Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 30.0,
@@ -2640,27 +2707,27 @@
 },
 "odds": {
 "american": {
-"value": "-102",
+"value": "-111",
 "open": "-105"
 },
 "decimal": {
-"value": "1.98",
+"value": "1.90",
 "open": "1.95"
 },
 "fraction": {
-"value": "50/51",
+"value": "100/111",
 "open": "20/21"
 },
 "total": {
-"value": "14+",
+"value": "17+",
 "open": "13+"
 }
 },
-"lastUpdated": "2026-11-27T18:04Z",
+"lastUpdated": "2026-11-27T22:42Z",
 "current": {
 "target": {
-"value": 14.0,
-"displayValue": "14+"
+"value": 17.0,
+"displayValue": "17+"
 }
 },
 "open": {
@@ -2672,7 +2739,7 @@
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
 },
 "type": {
 "id": "218",
@@ -2680,503 +2747,23 @@
 },
 "odds": {
 "american": {
-"value": "-112",
-"open": "-126"
-},
-"decimal": {
-"value": "1.89",
-"open": "1.79"
-},
-"fraction": {
-"value": "25/28",
-"open": "50/63"
-},
-"total": {
-"value": "6+",
-"open": "6+"
-}
-},
-"lastUpdated": "2026-11-27T04:27Z",
-"current": {
-"target": {
-"value": 6.0,
-"displayValue": "6+"
-}
-},
-"open": {
-"target": {
-"value": 6.0,
-"displayValue": "6+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
-},
-"type": {
-"id": "218",
-"name": "Points Milestones"
-},
-"odds": {
-"american": {
-"value": "+177",
-"open": "-126"
-},
-"decimal": {
-"value": "2.77",
-"open": "1.79"
-},
-"fraction": {
-"value": "177/100",
-"open": "50/63"
-},
-"total": {
-"value": "8+",
-"open": "6+"
-}
-},
-"lastUpdated": "2026-11-27T04:27Z",
-"current": {
-"target": {
-"value": 8.0,
-"displayValue": "8+"
-}
-},
-"open": {
-"target": {
-"value": 6.0,
-"displayValue": "6+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
-},
-"type": {
-"id": "218",
-"name": "Points Milestones"
-},
-"odds": {
-"american": {
-"value": "+349",
-"open": "-126"
-},
-"decimal": {
-"value": "4.49",
-"open": "1.79"
-},
-"fraction": {
-"value": "349/100",
-"open": "50/63"
-},
-"total": {
-"value": "10+",
-"open": "6+"
-}
-},
-"lastUpdated": "2026-11-27T04:27Z",
-"current": {
-"target": {
-"value": 10.0,
-"displayValue": "10+"
-}
-},
-"open": {
-"target": {
-"value": 6.0,
-"displayValue": "6+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
-},
-"type": {
-"id": "218",
-"name": "Points Milestones"
-},
-"odds": {
-"american": {
-"value": "+670",
-"open": "-126"
-},
-"decimal": {
-"value": "7.70",
-"open": "1.79"
-},
-"fraction": {
-"value": "67/10",
-"open": "50/63"
-},
-"total": {
-"value": "12+",
-"open": "6+"
-}
-},
-"lastUpdated": "2026-11-27T04:27Z",
-"current": {
-"target": {
-"value": 12.0,
-"displayValue": "12+"
-}
-},
-"open": {
-"target": {
-"value": 6.0,
-"displayValue": "6+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
-},
-"type": {
-"id": "218",
-"name": "Points Milestones"
-},
-"odds": {
-"american": {
-"value": "+1540",
-"open": "-126"
-},
-"decimal": {
-"value": "16.40",
-"open": "1.79"
-},
-"fraction": {
-"value": "77/5",
-"open": "50/63"
-},
-"total": {
-"value": "15+",
-"open": "6+"
-}
-},
-"lastUpdated": "2026-11-27T04:27Z",
-"current": {
-"target": {
-"value": 15.0,
-"displayValue": "15+"
-}
-},
-"open": {
-"target": {
-"value": 6.0,
-"displayValue": "6+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
-},
-"type": {
-"id": "218",
-"name": "Points Milestones"
-},
-"odds": {
-"american": {
-"value": "+2900",
-"open": "-126"
-},
-"decimal": {
-"value": "30.00",
-"open": "1.79"
-},
-"fraction": {
-"value": "29/1",
-"open": "50/63"
-},
-"total": {
-"value": "18+",
-"open": "6+"
-}
-},
-"lastUpdated": "2026-11-27T16:25Z",
-"current": {
-"target": {
-"value": 18.0,
-"displayValue": "18+"
-}
-},
-"open": {
-"target": {
-"value": 6.0,
-"displayValue": "6+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "218",
-"name": "Points Milestones"
-},
-"odds": {
-"american": {
-"value": "-1660",
+"value": "+3000",
 "open": "-105"
 },
 "decimal": {
-"value": "1.06",
+"value": "31.00",
 "open": "1.95"
 },
 "fraction": {
-"value": "5/83",
-"open": "20/21"
-},
-"total": {
-"value": "12+",
-"open": "22+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 12.0,
-"displayValue": "12+"
-}
-},
-"open": {
-"target": {
-"value": 22.0,
-"displayValue": "22+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "218",
-"name": "Points Milestones"
-},
-"odds": {
-"american": {
-"value": "-567",
-"open": "-105"
-},
-"decimal": {
-"value": "1.17",
-"open": "1.95"
-},
-"fraction": {
-"value": "100/567",
-"open": "20/21"
-},
-"total": {
-"value": "15+",
-"open": "22+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 15.0,
-"displayValue": "15+"
-}
-},
-"open": {
-"target": {
-"value": 22.0,
-"displayValue": "22+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "218",
-"name": "Points Milestones"
-},
-"odds": {
-"american": {
-"value": "-256",
-"open": "-105"
-},
-"decimal": {
-"value": "1.39",
-"open": "1.95"
-},
-"fraction": {
-"value": "25/64",
-"open": "20/21"
-},
-"total": {
-"value": "18+",
-"open": "22+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 18.0,
-"displayValue": "18+"
-}
-},
-"open": {
-"target": {
-"value": 22.0,
-"displayValue": "22+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "218",
-"name": "Points Milestones"
-},
-"odds": {
-"american": {
-"value": "-161",
-"open": "-105"
-},
-"decimal": {
-"value": "1.62",
-"open": "1.95"
-},
-"fraction": {
-"value": "100/161",
-"open": "20/21"
-},
-"total": {
-"value": "20+",
-"open": "22+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 20.0,
-"displayValue": "20+"
-}
-},
-"open": {
-"target": {
-"value": 22.0,
-"displayValue": "22+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "218",
-"name": "Points Milestones"
-},
-"odds": {
-"american": {
-"value": "+175",
-"open": "-105"
-},
-"decimal": {
-"value": "2.75",
-"open": "1.95"
-},
-"fraction": {
-"value": "7/4",
-"open": "20/21"
-},
-"total": {
-"value": "25+",
-"open": "22+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 25.0,
-"displayValue": "25+"
-}
-},
-"open": {
-"target": {
-"value": 22.0,
-"displayValue": "22+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "218",
-"name": "Points Milestones"
-},
-"odds": {
-"american": {
-"value": "+472",
-"open": "-105"
-},
-"decimal": {
-"value": "5.72",
-"open": "1.95"
-},
-"fraction": {
-"value": "118/25",
-"open": "20/21"
-},
-"total": {
-"value": "30+",
-"open": "22+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 30.0,
-"displayValue": "30+"
-}
-},
-"open": {
-"target": {
-"value": 22.0,
-"displayValue": "22+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "218",
-"name": "Points Milestones"
-},
-"odds": {
-"american": {
-"value": "+1220",
-"open": "-105"
-},
-"decimal": {
-"value": "13.20",
-"open": "1.95"
-},
-"fraction": {
-"value": "61/5",
+"value": "30/1",
 "open": "20/21"
 },
 "total": {
 "value": "35+",
-"open": "22+"
+"open": "13+"
 }
 },
-"lastUpdated": "2026-11-27T07:50Z",
+"lastUpdated": "2026-11-27T23:42Z",
 "current": {
 "target": {
 "value": 35.0,
@@ -3185,14 +2772,14 @@
 },
 "open": {
 "target": {
-"value": 22.0,
-"displayValue": "22+"
+"value": 13.0,
+"displayValue": "13+"
 }
 }
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
 },
 "type": {
 "id": "218",
@@ -3200,39 +2787,39 @@
 },
 "odds": {
 "american": {
-"value": "-104",
-"open": "-105"
+"value": "-117",
+"open": "-126"
 },
 "decimal": {
-"value": "1.96",
-"open": "1.95"
+"value": "1.85",
+"open": "1.79"
 },
 "fraction": {
-"value": "25/26",
-"open": "20/21"
+"value": "100/117",
+"open": "50/63"
 },
 "total": {
-"value": "22+",
-"open": "22+"
+"value": "6+",
+"open": "6+"
 }
 },
-"lastUpdated": "2026-11-27T17:53Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
-"value": 22.0,
-"displayValue": "22+"
+"value": 6.0,
+"displayValue": "6+"
 }
 },
 "open": {
 "target": {
-"value": 22.0,
-"displayValue": "22+"
+"value": 6.0,
+"displayValue": "6+"
 }
 }
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
 },
 "type": {
 "id": "218",
@@ -3240,33 +2827,513 @@
 },
 "odds": {
 "american": {
-"value": "+2600",
-"open": "-105"
+"value": "+169",
+"open": "-126"
 },
 "decimal": {
-"value": "27.00",
-"open": "1.95"
+"value": "2.69",
+"open": "1.79"
 },
 "fraction": {
-"value": "26/1",
-"open": "20/21"
+"value": "169/100",
+"open": "50/63"
 },
 "total": {
-"value": "40+",
-"open": "22+"
+"value": "8+",
+"open": "6+"
 }
 },
-"lastUpdated": "2026-11-27T07:50Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
-"value": 40.0,
-"displayValue": "40+"
+"value": 8.0,
+"displayValue": "8+"
 }
 },
 "open": {
 "target": {
-"value": 22.0,
-"displayValue": "22+"
+"value": 6.0,
+"displayValue": "6+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
+},
+"type": {
+"id": "218",
+"name": "Points Milestones"
+},
+"odds": {
+"american": {
+"value": "+339",
+"open": "-126"
+},
+"decimal": {
+"value": "4.39",
+"open": "1.79"
+},
+"fraction": {
+"value": "339/100",
+"open": "50/63"
+},
+"total": {
+"value": "10+",
+"open": "6+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 10.0,
+"displayValue": "10+"
+}
+},
+"open": {
+"target": {
+"value": 6.0,
+"displayValue": "6+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
+},
+"type": {
+"id": "218",
+"name": "Points Milestones"
+},
+"odds": {
+"american": {
+"value": "+640",
+"open": "-126"
+},
+"decimal": {
+"value": "7.40",
+"open": "1.79"
+},
+"fraction": {
+"value": "32/5",
+"open": "50/63"
+},
+"total": {
+"value": "12+",
+"open": "6+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 12.0,
+"displayValue": "12+"
+}
+},
+"open": {
+"target": {
+"value": 6.0,
+"displayValue": "6+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
+},
+"type": {
+"id": "218",
+"name": "Points Milestones"
+},
+"odds": {
+"american": {
+"value": "+1520",
+"open": "-126"
+},
+"decimal": {
+"value": "16.20",
+"open": "1.79"
+},
+"fraction": {
+"value": "76/5",
+"open": "50/63"
+},
+"total": {
+"value": "15+",
+"open": "6+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 15.0,
+"displayValue": "15+"
+}
+},
+"open": {
+"target": {
+"value": 6.0,
+"displayValue": "6+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
+},
+"type": {
+"id": "218",
+"name": "Points Milestones"
+},
+"odds": {
+"american": {
+"value": "+2900",
+"open": "-126"
+},
+"decimal": {
+"value": "30.00",
+"open": "1.79"
+},
+"fraction": {
+"value": "29/1",
+"open": "50/63"
+},
+"total": {
+"value": "18+",
+"open": "6+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 18.0,
+"displayValue": "18+"
+}
+},
+"open": {
+"target": {
+"value": 6.0,
+"displayValue": "6+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "218",
+"name": "Points Milestones"
+},
+"odds": {
+"american": {
+"value": "-710",
+"open": "-104"
+},
+"decimal": {
+"value": "1.14",
+"open": "1.96"
+},
+"fraction": {
+"value": "10/71",
+"open": "25/26"
+},
+"total": {
+"value": "6+",
+"open": "12+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 6.0,
+"displayValue": "6+"
+}
+},
+"open": {
+"target": {
+"value": 12.0,
+"displayValue": "12+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "218",
+"name": "Points Milestones"
+},
+"odds": {
+"american": {
+"value": "-334",
+"open": "-104"
+},
+"decimal": {
+"value": "1.29",
+"open": "1.96"
+},
+"fraction": {
+"value": "50/167",
+"open": "25/26"
+},
+"total": {
+"value": "8+",
+"open": "12+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 8.0,
+"displayValue": "8+"
+}
+},
+"open": {
+"target": {
+"value": 12.0,
+"displayValue": "12+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "218",
+"name": "Points Milestones"
+},
+"odds": {
+"american": {
+"value": "-179",
+"open": "-104"
+},
+"decimal": {
+"value": "1.55",
+"open": "1.96"
+},
+"fraction": {
+"value": "100/179",
+"open": "25/26"
+},
+"total": {
+"value": "10+",
+"open": "12+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 10.0,
+"displayValue": "10+"
+}
+},
+"open": {
+"target": {
+"value": 12.0,
+"displayValue": "12+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "218",
+"name": "Points Milestones"
+},
+"odds": {
+"american": {
+"value": "-102",
+"open": "-104"
+},
+"decimal": {
+"value": "1.98",
+"open": "1.96"
+},
+"fraction": {
+"value": "50/51",
+"open": "25/26"
+},
+"total": {
+"value": "12+",
+"open": "12+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 12.0,
+"displayValue": "12+"
+}
+},
+"open": {
+"target": {
+"value": 12.0,
+"displayValue": "12+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "218",
+"name": "Points Milestones"
+},
+"odds": {
+"american": {
+"value": "+206",
+"open": "-104"
+},
+"decimal": {
+"value": "3.06",
+"open": "1.96"
+},
+"fraction": {
+"value": "103/50",
+"open": "25/26"
+},
+"total": {
+"value": "15+",
+"open": "12+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 15.0,
+"displayValue": "15+"
+}
+},
+"open": {
+"target": {
+"value": 12.0,
+"displayValue": "12+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "218",
+"name": "Points Milestones"
+},
+"odds": {
+"american": {
+"value": "+419",
+"open": "-104"
+},
+"decimal": {
+"value": "5.19",
+"open": "1.96"
+},
+"fraction": {
+"value": "419/100",
+"open": "25/26"
+},
+"total": {
+"value": "18+",
+"open": "12+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 18.0,
+"displayValue": "18+"
+}
+},
+"open": {
+"target": {
+"value": 12.0,
+"displayValue": "12+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "218",
+"name": "Points Milestones"
+},
+"odds": {
+"american": {
+"value": "+660",
+"open": "-104"
+},
+"decimal": {
+"value": "7.60",
+"open": "1.96"
+},
+"fraction": {
+"value": "33/5",
+"open": "25/26"
+},
+"total": {
+"value": "20+",
+"open": "12+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 20.0,
+"displayValue": "20+"
+}
+},
+"open": {
+"target": {
+"value": 12.0,
+"displayValue": "12+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "218",
+"name": "Points Milestones"
+},
+"odds": {
+"american": {
+"value": "+1960",
+"open": "-104"
+},
+"decimal": {
+"value": "20.60",
+"open": "1.96"
+},
+"fraction": {
+"value": "98/5",
+"open": "25/26"
+},
+"total": {
+"value": "25+",
+"open": "12+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 25.0,
+"displayValue": "25+"
+}
+},
+"open": {
+"target": {
+"value": 12.0,
+"displayValue": "12+"
 }
 }
 },
@@ -3280,7 +3347,47 @@
 },
 "odds": {
 "american": {
-"value": "-573",
+"value": "-1880",
+"open": "+123"
+},
+"decimal": {
+"value": "1.05",
+"open": "2.23"
+},
+"fraction": {
+"value": "5/94",
+"open": "123/100"
+},
+"total": {
+"value": "3+",
+"open": "5+"
+}
+},
+"lastUpdated": "2026-11-27T21:30Z",
+"current": {
+"target": {
+"value": 3.0,
+"displayValue": "3+"
+}
+},
+"open": {
+"target": {
+"value": 5.0,
+"displayValue": "5+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
+},
+"type": {
+"id": "219",
+"name": "Assists Milestones"
+},
+"odds": {
+"american": {
+"value": "-586",
 "open": "+123"
 },
 "decimal": {
@@ -3288,47 +3395,7 @@
 "open": "2.23"
 },
 "fraction": {
-"value": "100/573",
-"open": "123/100"
-},
-"total": {
-"value": "3+",
-"open": "5+"
-}
-},
-"lastUpdated": "2026-11-27T07:51Z",
-"current": {
-"target": {
-"value": 3.0,
-"displayValue": "3+"
-}
-},
-"open": {
-"target": {
-"value": 5.0,
-"displayValue": "5+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
-},
-"type": {
-"id": "219",
-"name": "Assists Milestones"
-},
-"odds": {
-"american": {
-"value": "-228",
-"open": "+123"
-},
-"decimal": {
-"value": "1.43",
-"open": "2.23"
-},
-"fraction": {
-"value": "25/57",
+"value": "50/293",
 "open": "123/100"
 },
 "total": {
@@ -3336,7 +3403,7 @@
 "open": "5+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 4.0,
@@ -3360,15 +3427,15 @@
 },
 "odds": {
 "american": {
-"value": "-106",
+"value": "-252",
 "open": "+123"
 },
 "decimal": {
-"value": "1.94",
+"value": "1.39",
 "open": "2.23"
 },
 "fraction": {
-"value": "50/53",
+"value": "25/63",
 "open": "123/100"
 },
 "total": {
@@ -3376,7 +3443,7 @@
 "open": "5+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 5.0,
@@ -3400,15 +3467,15 @@
 },
 "odds": {
 "american": {
-"value": "+190",
+"value": "-124",
 "open": "+123"
 },
 "decimal": {
-"value": "2.90",
+"value": "1.80",
 "open": "2.23"
 },
 "fraction": {
-"value": "19/10",
+"value": "25/31",
 "open": "123/100"
 },
 "total": {
@@ -3416,7 +3483,7 @@
 "open": "5+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 6.0,
@@ -3440,15 +3507,15 @@
 },
 "odds": {
 "american": {
-"value": "+361",
+"value": "+153",
 "open": "+123"
 },
 "decimal": {
-"value": "4.61",
+"value": "2.53",
 "open": "2.23"
 },
 "fraction": {
-"value": "361/100",
+"value": "153/100",
 "open": "123/100"
 },
 "total": {
@@ -3456,7 +3523,7 @@
 "open": "5+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 7.0,
@@ -3480,15 +3547,15 @@
 },
 "odds": {
 "american": {
-"value": "+680",
+"value": "+277",
 "open": "+123"
 },
 "decimal": {
-"value": "7.80",
+"value": "3.77",
 "open": "2.23"
 },
 "fraction": {
-"value": "34/5",
+"value": "277/100",
 "open": "123/100"
 },
 "total": {
@@ -3496,7 +3563,7 @@
 "open": "5+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 8.0,
@@ -3520,15 +3587,15 @@
 },
 "odds": {
 "american": {
-"value": "+1220",
+"value": "+505",
 "open": "+123"
 },
 "decimal": {
-"value": "13.20",
+"value": "6.05",
 "open": "2.23"
 },
 "fraction": {
-"value": "61/5",
+"value": "101/20",
 "open": "123/100"
 },
 "total": {
@@ -3536,7 +3603,7 @@
 "open": "5+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 9.0,
@@ -3560,15 +3627,15 @@
 },
 "odds": {
 "american": {
-"value": "+2000",
+"value": "+870",
 "open": "+123"
 },
 "decimal": {
-"value": "21.00",
+"value": "9.70",
 "open": "2.23"
 },
 "fraction": {
-"value": "20/1",
+"value": "87/10",
 "open": "123/100"
 },
 "total": {
@@ -3576,11 +3643,91 @@
 "open": "5+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 10.0,
 "displayValue": "10+"
+}
+},
+"open": {
+"target": {
+"value": 5.0,
+"displayValue": "5+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
+},
+"type": {
+"id": "219",
+"name": "Assists Milestones"
+},
+"odds": {
+"american": {
+"value": "+1480",
+"open": "+123"
+},
+"decimal": {
+"value": "15.80",
+"open": "2.23"
+},
+"fraction": {
+"value": "74/5",
+"open": "123/100"
+},
+"total": {
+"value": "11+",
+"open": "5+"
+}
+},
+"lastUpdated": "2026-11-27T21:30Z",
+"current": {
+"target": {
+"value": 11.0,
+"displayValue": "11+"
+}
+},
+"open": {
+"target": {
+"value": 5.0,
+"displayValue": "5+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
+},
+"type": {
+"id": "219",
+"name": "Assists Milestones"
+},
+"odds": {
+"american": {
+"value": "+2300",
+"open": "+123"
+},
+"decimal": {
+"value": "24.00",
+"open": "2.23"
+},
+"fraction": {
+"value": "23/1",
+"open": "123/100"
+},
+"total": {
+"value": "12+",
+"open": "5+"
+}
+},
+"lastUpdated": "2026-11-27T21:35Z",
+"current": {
+"target": {
+"value": 12.0,
+"displayValue": "12+"
 }
 },
 "open": {
@@ -3600,15 +3747,15 @@
 },
 "odds": {
 "american": {
-"value": "-920",
+"value": "-870",
 "open": "+125"
 },
 "decimal": {
-"value": "1.10",
+"value": "1.11",
 "open": "2.25"
 },
 "fraction": {
-"value": "5/46",
+"value": "10/87",
 "open": "5/4"
 },
 "total": {
@@ -3616,7 +3763,7 @@
 "open": "7+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 3.0,
@@ -3640,15 +3787,15 @@
 },
 "odds": {
 "american": {
-"value": "-347",
+"value": "-334",
 "open": "+125"
 },
 "decimal": {
-"value": "1.28",
+"value": "1.29",
 "open": "2.25"
 },
 "fraction": {
-"value": "100/347",
+"value": "50/167",
 "open": "5/4"
 },
 "total": {
@@ -3656,7 +3803,7 @@
 "open": "7+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 4.0,
@@ -3680,15 +3827,15 @@
 },
 "odds": {
 "american": {
-"value": "-164",
+"value": "-157",
 "open": "+125"
 },
 "decimal": {
-"value": "1.60",
+"value": "1.63",
 "open": "2.25"
 },
 "fraction": {
-"value": "25/41",
+"value": "100/157",
 "open": "5/4"
 },
 "total": {
@@ -3696,7 +3843,7 @@
 "open": "7+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 5.0,
@@ -3720,15 +3867,15 @@
 },
 "odds": {
 "american": {
-"value": "+117",
+"value": "+125",
 "open": "+125"
 },
 "decimal": {
-"value": "2.17",
+"value": "2.25",
 "open": "2.25"
 },
 "fraction": {
-"value": "117/100",
+"value": "5/4",
 "open": "5/4"
 },
 "total": {
@@ -3736,7 +3883,7 @@
 "open": "7+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 6.0,
@@ -3760,15 +3907,15 @@
 },
 "odds": {
 "american": {
-"value": "+215",
+"value": "+227",
 "open": "+125"
 },
 "decimal": {
-"value": "3.15",
+"value": "3.27",
 "open": "2.25"
 },
 "fraction": {
-"value": "43/20",
+"value": "227/100",
 "open": "5/4"
 },
 "total": {
@@ -3776,7 +3923,7 @@
 "open": "7+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 7.0,
@@ -3800,15 +3947,15 @@
 },
 "odds": {
 "american": {
-"value": "+383",
+"value": "+418",
 "open": "+125"
 },
 "decimal": {
-"value": "4.83",
+"value": "5.18",
 "open": "2.25"
 },
 "fraction": {
-"value": "383/100",
+"value": "209/50",
 "open": "5/4"
 },
 "total": {
@@ -3816,7 +3963,7 @@
 "open": "7+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 8.0,
@@ -3840,15 +3987,15 @@
 },
 "odds": {
 "american": {
-"value": "+670",
+"value": "+730",
 "open": "+125"
 },
 "decimal": {
-"value": "7.70",
+"value": "8.30",
 "open": "2.25"
 },
 "fraction": {
-"value": "67/10",
+"value": "73/10",
 "open": "5/4"
 },
 "total": {
@@ -3856,7 +4003,7 @@
 "open": "7+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 9.0,
@@ -3880,15 +4027,15 @@
 },
 "odds": {
 "american": {
-"value": "+1200",
+"value": "+1240",
 "open": "+125"
 },
 "decimal": {
-"value": "13.00",
+"value": "13.40",
 "open": "2.25"
 },
 "fraction": {
-"value": "12/1",
+"value": "62/5",
 "open": "5/4"
 },
 "total": {
@@ -3896,7 +4043,7 @@
 "open": "7+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 10.0,
@@ -3920,15 +4067,15 @@
 },
 "odds": {
 "american": {
-"value": "+1900",
+"value": "+1920",
 "open": "+125"
 },
 "decimal": {
-"value": "20.00",
+"value": "20.20",
 "open": "2.25"
 },
 "fraction": {
-"value": "19/1",
+"value": "96/5",
 "open": "5/4"
 },
 "total": {
@@ -3936,7 +4083,7 @@
 "open": "7+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 11.0,
@@ -3960,15 +4107,15 @@
 },
 "odds": {
 "american": {
-"value": "+2900",
+"value": "+2800",
 "open": "+125"
 },
 "decimal": {
-"value": "30.00",
+"value": "29.00",
 "open": "2.25"
 },
 "fraction": {
-"value": "29/1",
+"value": "28/1",
 "open": "5/4"
 },
 "total": {
@@ -3976,7 +4123,7 @@
 "open": "7+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T22:22Z",
 "current": {
 "target": {
 "value": 12.0,
@@ -3992,7 +4139,7 @@
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "219",
@@ -4000,23 +4147,23 @@
 },
 "odds": {
 "american": {
-"value": "-670",
-"open": "+108"
+"value": "-165",
+"open": "-144"
 },
 "decimal": {
-"value": "1.14",
-"open": "2.08"
+"value": "1.60",
+"open": "1.69"
 },
 "fraction": {
-"value": "10/67",
-"open": "27/25"
+"value": "20/33",
+"open": "25/36"
 },
 "total": {
 "value": "3+",
-"open": "5+"
+"open": "3+"
 }
 },
-"lastUpdated": "2026-11-27T07:50Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 3.0,
@@ -4025,14 +4172,14 @@
 },
 "open": {
 "target": {
-"value": 5.0,
-"displayValue": "5+"
+"value": 3.0,
+"displayValue": "3+"
 }
 }
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "219",
@@ -4040,23 +4187,23 @@
 },
 "odds": {
 "american": {
-"value": "-239",
-"open": "+108"
+"value": "+145",
+"open": "-144"
 },
 "decimal": {
-"value": "1.41",
-"open": "2.08"
+"value": "2.45",
+"open": "1.69"
 },
 "fraction": {
-"value": "100/239",
-"open": "27/25"
+"value": "29/20",
+"open": "25/36"
 },
 "total": {
 "value": "4+",
-"open": "5+"
+"open": "3+"
 }
 },
-"lastUpdated": "2026-11-27T07:50Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 4.0,
@@ -4065,14 +4212,14 @@
 },
 "open": {
 "target": {
-"value": 5.0,
-"displayValue": "5+"
+"value": 3.0,
+"displayValue": "3+"
 }
 }
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "219",
@@ -4080,23 +4227,23 @@
 },
 "odds": {
 "american": {
-"value": "-106",
-"open": "+108"
+"value": "+316",
+"open": "-144"
 },
 "decimal": {
-"value": "1.94",
-"open": "2.08"
+"value": "4.16",
+"open": "1.69"
 },
 "fraction": {
-"value": "50/53",
-"open": "27/25"
+"value": "79/25",
+"open": "25/36"
 },
 "total": {
 "value": "5+",
-"open": "5+"
+"open": "3+"
 }
 },
-"lastUpdated": "2026-11-27T07:50Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 5.0,
@@ -4105,14 +4252,14 @@
 },
 "open": {
 "target": {
-"value": 5.0,
-"displayValue": "5+"
+"value": 3.0,
+"displayValue": "3+"
 }
 }
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "219",
@@ -4120,23 +4267,23 @@
 },
 "odds": {
 "american": {
-"value": "+192",
-"open": "+108"
+"value": "+650",
+"open": "-144"
 },
 "decimal": {
-"value": "2.92",
-"open": "2.08"
+"value": "7.50",
+"open": "1.69"
 },
 "fraction": {
-"value": "48/25",
-"open": "27/25"
+"value": "13/2",
+"open": "25/36"
 },
 "total": {
 "value": "6+",
-"open": "5+"
+"open": "3+"
 }
 },
-"lastUpdated": "2026-11-27T07:50Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 6.0,
@@ -4145,94 +4292,14 @@
 },
 "open": {
 "target": {
-"value": 5.0,
-"displayValue": "5+"
+"value": 3.0,
+"displayValue": "3+"
 }
 }
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "219",
-"name": "Assists Milestones"
-},
-"odds": {
-"american": {
-"value": "+368",
-"open": "+108"
-},
-"decimal": {
-"value": "4.68",
-"open": "2.08"
-},
-"fraction": {
-"value": "92/25",
-"open": "27/25"
-},
-"total": {
-"value": "7+",
-"open": "5+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 7.0,
-"displayValue": "7+"
-}
-},
-"open": {
-"target": {
-"value": 5.0,
-"displayValue": "5+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "219",
-"name": "Assists Milestones"
-},
-"odds": {
-"american": {
-"value": "+710",
-"open": "+108"
-},
-"decimal": {
-"value": "8.10",
-"open": "2.08"
-},
-"fraction": {
-"value": "71/10",
-"open": "27/25"
-},
-"total": {
-"value": "8+",
-"open": "5+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 8.0,
-"displayValue": "8+"
-}
-},
-"open": {
-"target": {
-"value": 5.0,
-"displayValue": "5+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "219",
@@ -4241,38 +4308,38 @@
 "odds": {
 "american": {
 "value": "+1320",
-"open": "+108"
+"open": "-144"
 },
 "decimal": {
 "value": "14.20",
-"open": "2.08"
+"open": "1.69"
 },
 "fraction": {
 "value": "66/5",
-"open": "27/25"
+"open": "25/36"
 },
 "total": {
-"value": "9+",
-"open": "5+"
+"value": "7+",
+"open": "3+"
 }
 },
-"lastUpdated": "2026-11-27T07:50Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
-"value": 9.0,
-"displayValue": "9+"
+"value": 7.0,
+"displayValue": "7+"
 }
 },
 "open": {
 "target": {
-"value": 5.0,
-"displayValue": "5+"
+"value": 3.0,
+"displayValue": "3+"
 }
 }
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "219",
@@ -4281,32 +4348,32 @@
 "odds": {
 "american": {
 "value": "+2200",
-"open": "+108"
+"open": "-144"
 },
 "decimal": {
 "value": "23.00",
-"open": "2.08"
+"open": "1.69"
 },
 "fraction": {
 "value": "22/1",
-"open": "27/25"
+"open": "25/36"
 },
 "total": {
-"value": "10+",
-"open": "5+"
+"value": "8+",
+"open": "3+"
 }
 },
-"lastUpdated": "2026-11-27T07:50Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
-"value": 10.0,
-"displayValue": "10+"
+"value": 8.0,
+"displayValue": "8+"
 }
 },
 "open": {
 "target": {
-"value": 5.0,
-"displayValue": "5+"
+"value": 3.0,
+"displayValue": "3+"
 }
 }
 },
@@ -4320,15 +4387,15 @@
 },
 "odds": {
 "american": {
-"value": "-382",
+"value": "-563",
 "open": "-128"
 },
 "decimal": {
-"value": "1.26",
+"value": "1.17",
 "open": "1.78"
 },
 "fraction": {
-"value": "50/191",
+"value": "100/563",
 "open": "25/32"
 },
 "total": {
@@ -4336,7 +4403,7 @@
 "open": "4+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 3.0,
@@ -4360,15 +4427,15 @@
 },
 "odds": {
 "american": {
-"value": "-157",
+"value": "-221",
 "open": "-128"
 },
 "decimal": {
-"value": "1.63",
+"value": "1.45",
 "open": "1.78"
 },
 "fraction": {
-"value": "100/157",
+"value": "100/221",
 "open": "25/32"
 },
 "total": {
@@ -4376,7 +4443,7 @@
 "open": "4+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 4.0,
@@ -4400,15 +4467,15 @@
 },
 "odds": {
 "american": {
-"value": "+133",
+"value": "-103",
 "open": "-128"
 },
 "decimal": {
-"value": "2.33",
+"value": "1.97",
 "open": "1.78"
 },
 "fraction": {
-"value": "133/100",
+"value": "100/103",
 "open": "25/32"
 },
 "total": {
@@ -4416,7 +4483,7 @@
 "open": "4+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 5.0,
@@ -4440,15 +4507,15 @@
 },
 "odds": {
 "american": {
-"value": "+256",
+"value": "+193",
 "open": "-128"
 },
 "decimal": {
-"value": "3.56",
+"value": "2.93",
 "open": "1.78"
 },
 "fraction": {
-"value": "64/25",
+"value": "193/100",
 "open": "25/32"
 },
 "total": {
@@ -4456,7 +4523,7 @@
 "open": "4+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 6.0,
@@ -4480,15 +4547,15 @@
 },
 "odds": {
 "american": {
-"value": "+490",
+"value": "+366",
 "open": "-128"
 },
 "decimal": {
-"value": "5.90",
+"value": "4.66",
 "open": "1.78"
 },
 "fraction": {
-"value": "49/10",
+"value": "183/50",
 "open": "25/32"
 },
 "total": {
@@ -4496,7 +4563,7 @@
 "open": "4+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 7.0,
@@ -4520,15 +4587,15 @@
 },
 "odds": {
 "american": {
-"value": "+920",
+"value": "+680",
 "open": "-128"
 },
 "decimal": {
-"value": "10.20",
+"value": "7.80",
 "open": "1.78"
 },
 "fraction": {
-"value": "46/5",
+"value": "34/5",
 "open": "25/32"
 },
 "total": {
@@ -4536,7 +4603,7 @@
 "open": "4+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 8.0,
@@ -4560,15 +4627,15 @@
 },
 "odds": {
 "american": {
-"value": "+1580",
+"value": "+1180",
 "open": "-128"
 },
 "decimal": {
-"value": "16.80",
+"value": "12.80",
 "open": "1.78"
 },
 "fraction": {
-"value": "79/5",
+"value": "59/5",
 "open": "25/32"
 },
 "total": {
@@ -4576,7 +4643,7 @@
 "open": "4+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 9.0,
@@ -4600,15 +4667,15 @@
 },
 "odds": {
 "american": {
-"value": "+2400",
+"value": "+1960",
 "open": "-128"
 },
 "decimal": {
-"value": "25.00",
+"value": "20.60",
 "open": "1.78"
 },
 "fraction": {
-"value": "24/1",
+"value": "98/5",
 "open": "25/32"
 },
 "total": {
@@ -4616,11 +4683,51 @@
 "open": "4+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 10.0,
 "displayValue": "10+"
+}
+},
+"open": {
+"target": {
+"value": 4.0,
+"displayValue": "4+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
+},
+"type": {
+"id": "220",
+"name": "Rebounds Milestones"
+},
+"odds": {
+"american": {
+"value": "+2800",
+"open": "-128"
+},
+"decimal": {
+"value": "29.00",
+"open": "1.78"
+},
+"fraction": {
+"value": "28/1",
+"open": "25/32"
+},
+"total": {
+"value": "11+",
+"open": "4+"
+}
+},
+"lastUpdated": "2026-11-27T22:13Z",
+"current": {
+"target": {
+"value": 11.0,
+"displayValue": "11+"
 }
 },
 "open": {
@@ -4640,15 +4747,15 @@
 },
 "odds": {
 "american": {
-"value": "+125",
+"value": "+133",
 "open": "-130"
 },
 "decimal": {
-"value": "2.25",
+"value": "2.33",
 "open": "1.76"
 },
 "fraction": {
-"value": "5/4",
+"value": "133/100",
 "open": "10/13"
 },
 "total": {
@@ -4656,7 +4763,7 @@
 "open": "5+"
 }
 },
-"lastUpdated": "2026-11-27T12:29Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 2.0,
@@ -4680,15 +4787,15 @@
 },
 "odds": {
 "american": {
-"value": "+398",
+"value": "+437",
 "open": "-130"
 },
 "decimal": {
-"value": "4.98",
+"value": "5.37",
 "open": "1.76"
 },
 "fraction": {
-"value": "199/50",
+"value": "437/100",
 "open": "10/13"
 },
 "total": {
@@ -4696,7 +4803,7 @@
 "open": "5+"
 }
 },
-"lastUpdated": "2026-11-27T12:29Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 3.0,
@@ -4720,15 +4827,15 @@
 },
 "odds": {
 "american": {
-"value": "+1200",
+"value": "+1360",
 "open": "-130"
 },
 "decimal": {
-"value": "13.00",
+"value": "14.60",
 "open": "1.76"
 },
 "fraction": {
-"value": "12/1",
+"value": "68/5",
 "open": "10/13"
 },
 "total": {
@@ -4736,7 +4843,7 @@
 "open": "5+"
 }
 },
-"lastUpdated": "2026-11-27T12:29Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 4.0,
@@ -4760,15 +4867,15 @@
 },
 "odds": {
 "american": {
-"value": "-610",
+"value": "-526",
 "open": "-130"
 },
 "decimal": {
-"value": "1.16",
+"value": "1.19",
 "open": "1.76"
 },
 "fraction": {
-"value": "10/61",
+"value": "50/263",
 "open": "10/13"
 },
 "total": {
@@ -4776,7 +4883,7 @@
 "open": "5+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 3.0,
@@ -4800,15 +4907,15 @@
 },
 "odds": {
 "american": {
-"value": "-249",
+"value": "-221",
 "open": "-130"
 },
 "decimal": {
-"value": "1.40",
+"value": "1.45",
 "open": "1.76"
 },
 "fraction": {
-"value": "100/249",
+"value": "100/221",
 "open": "10/13"
 },
 "total": {
@@ -4816,7 +4923,7 @@
 "open": "5+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 4.0,
@@ -4840,15 +4947,15 @@
 },
 "odds": {
 "american": {
-"value": "-123",
+"value": "-107",
 "open": "-130"
 },
 "decimal": {
-"value": "1.81",
+"value": "1.93",
 "open": "1.76"
 },
 "fraction": {
-"value": "100/123",
+"value": "100/107",
 "open": "10/13"
 },
 "total": {
@@ -4856,7 +4963,7 @@
 "open": "5+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 5.0,
@@ -4880,15 +4987,15 @@
 },
 "odds": {
 "american": {
-"value": "+150",
+"value": "+173",
 "open": "-130"
 },
 "decimal": {
-"value": "2.50",
+"value": "2.73",
 "open": "1.76"
 },
 "fraction": {
-"value": "6/4",
+"value": "173/100",
 "open": "10/13"
 },
 "total": {
@@ -4896,7 +5003,7 @@
 "open": "5+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 6.0,
@@ -4920,15 +5027,15 @@
 },
 "odds": {
 "american": {
-"value": "+270",
+"value": "+321",
 "open": "-130"
 },
 "decimal": {
-"value": "3.70",
+"value": "4.21",
 "open": "1.76"
 },
 "fraction": {
-"value": "27/10",
+"value": "321/100",
 "open": "10/13"
 },
 "total": {
@@ -4936,7 +5043,7 @@
 "open": "5+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 7.0,
@@ -4960,15 +5067,15 @@
 },
 "odds": {
 "american": {
-"value": "+482",
+"value": "+570",
 "open": "-130"
 },
 "decimal": {
-"value": "5.82",
+"value": "6.70",
 "open": "1.76"
 },
 "fraction": {
-"value": "241/50",
+"value": "57/10",
 "open": "10/13"
 },
 "total": {
@@ -4976,7 +5083,7 @@
 "open": "5+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 8.0,
@@ -5000,15 +5107,15 @@
 },
 "odds": {
 "american": {
-"value": "+840",
+"value": "+1000",
 "open": "-130"
 },
 "decimal": {
-"value": "9.40",
+"value": "11.00",
 "open": "1.76"
 },
 "fraction": {
-"value": "42/5",
+"value": "10/1",
 "open": "10/13"
 },
 "total": {
@@ -5016,7 +5123,7 @@
 "open": "5+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 9.0,
@@ -5040,15 +5147,15 @@
 },
 "odds": {
 "american": {
-"value": "+1380",
+"value": "+1640",
 "open": "-130"
 },
 "decimal": {
-"value": "14.80",
+"value": "17.40",
 "open": "1.76"
 },
 "fraction": {
-"value": "69/5",
+"value": "82/5",
 "open": "10/13"
 },
 "total": {
@@ -5056,7 +5163,7 @@
 "open": "5+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 10.0,
@@ -5080,15 +5187,15 @@
 },
 "odds": {
 "american": {
-"value": "+2100",
+"value": "+2400",
 "open": "-130"
 },
 "decimal": {
-"value": "22.00",
+"value": "25.00",
 "open": "1.76"
 },
 "fraction": {
-"value": "21/1",
+"value": "24/1",
 "open": "10/13"
 },
 "total": {
@@ -5096,7 +5203,7 @@
 "open": "5+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 11.0,
@@ -5112,7 +5219,7 @@
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "220",
@@ -5120,63 +5227,23 @@
 },
 "odds": {
 "american": {
-"value": "+2900",
-"open": "-130"
+"value": "-247",
+"open": "-110"
 },
 "decimal": {
-"value": "30.00",
-"open": "1.76"
+"value": "1.40",
+"open": "1.90"
 },
 "fraction": {
-"value": "29/1",
-"open": "10/13"
-},
-"total": {
-"value": "12+",
-"open": "5+"
-}
-},
-"lastUpdated": "2026-11-27T18:22Z",
-"current": {
-"target": {
-"value": 12.0,
-"displayValue": "12+"
-}
-},
-"open": {
-"target": {
-"value": 5.0,
-"displayValue": "5+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "220",
-"name": "Rebounds Milestones"
-},
-"odds": {
-"american": {
-"value": "-251",
-"open": "-107"
-},
-"decimal": {
-"value": "1.39",
-"open": "1.93"
-},
-"fraction": {
-"value": "100/251",
-"open": "100/107"
+"value": "100/247",
+"open": "10/11"
 },
 "total": {
 "value": "3+",
 "open": "4+"
 }
 },
-"lastUpdated": "2026-11-27T07:50Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 3.0,
@@ -5192,7 +5259,7 @@
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "220",
@@ -5200,23 +5267,23 @@
 },
 "odds": {
 "american": {
-"value": "-106",
-"open": "-107"
+"value": "-107",
+"open": "-110"
 },
 "decimal": {
-"value": "1.94",
-"open": "1.93"
+"value": "1.93",
+"open": "1.90"
 },
 "fraction": {
-"value": "50/53",
-"open": "100/107"
+"value": "100/107",
+"open": "10/11"
 },
 "total": {
 "value": "4+",
 "open": "4+"
 }
 },
-"lastUpdated": "2026-11-27T07:50Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 4.0,
@@ -5232,7 +5299,7 @@
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "220",
@@ -5240,23 +5307,23 @@
 },
 "odds": {
 "american": {
-"value": "+205",
-"open": "-107"
+"value": "+190",
+"open": "-110"
 },
 "decimal": {
-"value": "3.05",
-"open": "1.93"
+"value": "2.90",
+"open": "1.90"
 },
 "fraction": {
-"value": "41/20",
-"open": "100/107"
+"value": "19/10",
+"open": "10/11"
 },
 "total": {
 "value": "5+",
 "open": "4+"
 }
 },
-"lastUpdated": "2026-11-27T07:50Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 5.0,
@@ -5272,7 +5339,7 @@
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "220",
@@ -5280,23 +5347,23 @@
 },
 "odds": {
 "american": {
-"value": "+421",
-"open": "-107"
+"value": "+374",
+"open": "-110"
 },
 "decimal": {
-"value": "5.21",
-"open": "1.93"
+"value": "4.74",
+"open": "1.90"
 },
 "fraction": {
-"value": "421/100",
-"open": "100/107"
+"value": "187/50",
+"open": "10/11"
 },
 "total": {
 "value": "6+",
 "open": "4+"
 }
 },
-"lastUpdated": "2026-11-27T07:50Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 6.0,
@@ -5312,7 +5379,7 @@
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "220",
@@ -5320,23 +5387,23 @@
 },
 "odds": {
 "american": {
-"value": "+820",
-"open": "-107"
+"value": "+710",
+"open": "-110"
 },
 "decimal": {
-"value": "9.20",
-"open": "1.93"
+"value": "8.10",
+"open": "1.90"
 },
 "fraction": {
-"value": "41/5",
-"open": "100/107"
+"value": "71/10",
+"open": "10/11"
 },
 "total": {
 "value": "7+",
 "open": "4+"
 }
 },
-"lastUpdated": "2026-11-27T07:50Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 7.0,
@@ -5352,7 +5419,7 @@
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "220",
@@ -5360,23 +5427,23 @@
 },
 "odds": {
 "american": {
-"value": "+1560",
-"open": "-107"
+"value": "+1200",
+"open": "-110"
 },
 "decimal": {
-"value": "16.60",
-"open": "1.93"
+"value": "13.00",
+"open": "1.90"
 },
 "fraction": {
-"value": "78/5",
-"open": "100/107"
+"value": "12/1",
+"open": "10/11"
 },
 "total": {
 "value": "8+",
 "open": "4+"
 }
 },
-"lastUpdated": "2026-11-27T07:50Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 8.0,
@@ -5392,7 +5459,7 @@
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "220",
@@ -5400,23 +5467,23 @@
 },
 "odds": {
 "american": {
-"value": "+2500",
-"open": "-107"
+"value": "+2000",
+"open": "-110"
 },
 "decimal": {
-"value": "26.00",
-"open": "1.93"
+"value": "21.00",
+"open": "1.90"
 },
 "fraction": {
-"value": "25/1",
-"open": "100/107"
+"value": "20/1",
+"open": "10/11"
 },
 "total": {
 "value": "9+",
 "open": "4+"
 }
 },
-"lastUpdated": "2026-11-27T07:50Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 9.0,
@@ -5432,86 +5499,6 @@
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "220",
-"name": "Rebounds Milestones"
-},
-"odds": {
-"american": {
-"value": "+146",
-"open": "-107"
-},
-"decimal": {
-"value": "2.46",
-"open": "1.93"
-},
-"fraction": {
-"value": "73/50",
-"open": "100/107"
-},
-"total": {
-"value": "2+",
-"open": "4+"
-}
-},
-"lastUpdated": "2026-11-27T12:32Z",
-"current": {
-"target": {
-"value": 2.0,
-"displayValue": "2+"
-}
-},
-"open": {
-"target": {
-"value": 4.0,
-"displayValue": "4+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "220",
-"name": "Rebounds Milestones"
-},
-"odds": {
-"american": {
-"value": "+501",
-"open": "-107"
-},
-"decimal": {
-"value": "6.01",
-"open": "1.93"
-},
-"fraction": {
-"value": "501/100",
-"open": "100/107"
-},
-"total": {
-"value": "3+",
-"open": "4+"
-}
-},
-"lastUpdated": "2026-11-27T12:32Z",
-"current": {
-"target": {
-"value": 3.0,
-"displayValue": "3+"
-}
-},
-"open": {
-"target": {
-"value": 4.0,
-"displayValue": "4+"
-}
-}
-},
-{
-"athlete": {
 "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
 },
 "type": {
@@ -5520,15 +5507,15 @@
 },
 "odds": {
 "american": {
-"value": "-910",
+"value": "-1740",
 "open": "+167"
 },
 "decimal": {
-"value": "1.10",
+"value": "1.05",
 "open": "2.67"
 },
 "fraction": {
-"value": "10/91",
+"value": "5/87",
 "open": "167/100"
 },
 "total": {
@@ -5536,7 +5523,7 @@
 "open": "3+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 1.0,
@@ -5560,15 +5547,15 @@
 },
 "odds": {
 "american": {
-"value": "-192",
+"value": "-304",
 "open": "+167"
 },
 "decimal": {
-"value": "1.52",
+"value": "1.32",
 "open": "2.67"
 },
 "fraction": {
-"value": "25/48",
+"value": "25/76",
 "open": "167/100"
 },
 "total": {
@@ -5576,7 +5563,7 @@
 "open": "3+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 2.0,
@@ -5600,15 +5587,15 @@
 },
 "odds": {
 "american": {
-"value": "+150",
+"value": "-103",
 "open": "+167"
 },
 "decimal": {
-"value": "2.50",
+"value": "1.97",
 "open": "2.67"
 },
 "fraction": {
-"value": "6/4",
+"value": "100/103",
 "open": "167/100"
 },
 "total": {
@@ -5616,7 +5603,7 @@
 "open": "3+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 3.0,
@@ -5640,15 +5627,15 @@
 },
 "odds": {
 "american": {
-"value": "+381",
+"value": "+240",
 "open": "+167"
 },
 "decimal": {
-"value": "4.81",
+"value": "3.40",
 "open": "2.67"
 },
 "fraction": {
-"value": "381/100",
+"value": "12/5",
 "open": "167/100"
 },
 "total": {
@@ -5656,7 +5643,7 @@
 "open": "3+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 4.0,
@@ -5680,15 +5667,15 @@
 },
 "odds": {
 "american": {
-"value": "+880",
+"value": "+549",
 "open": "+167"
 },
 "decimal": {
-"value": "9.80",
+"value": "6.49",
 "open": "2.67"
 },
 "fraction": {
-"value": "44/5",
+"value": "549/100",
 "open": "167/100"
 },
 "total": {
@@ -5696,7 +5683,7 @@
 "open": "3+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 5.0,
@@ -5720,15 +5707,15 @@
 },
 "odds": {
 "american": {
-"value": "+1820",
+"value": "+1140",
 "open": "+167"
 },
 "decimal": {
-"value": "19.20",
+"value": "12.40",
 "open": "2.67"
 },
 "fraction": {
-"value": "91/5",
+"value": "57/5",
 "open": "167/100"
 },
 "total": {
@@ -5736,7 +5723,7 @@
 "open": "3+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 6.0,
@@ -5752,407 +5739,7 @@
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
-},
-"type": {
-"id": "221",
-"name": "3-Point Field Goals Milestones"
-},
-"odds": {
-"american": {
-"value": "-194",
-"open": "+192"
-},
-"decimal": {
-"value": "1.51",
-"open": "2.92"
-},
-"fraction": {
-"value": "50/97",
-"open": "48/25"
-},
-"total": {
-"value": "1+",
-"open": "2+"
-}
-},
-"lastUpdated": "2026-11-27T04:27Z",
-"current": {
-"target": {
-"value": 1.0,
-"displayValue": "1+"
-}
-},
-"open": {
-"target": {
-"value": 2.0,
-"displayValue": "2+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
-},
-"type": {
-"id": "221",
-"name": "3-Point Field Goals Milestones"
-},
-"odds": {
-"american": {
-"value": "+232",
-"open": "+192"
-},
-"decimal": {
-"value": "3.32",
-"open": "2.92"
-},
-"fraction": {
-"value": "58/25",
-"open": "48/25"
-},
-"total": {
-"value": "2+",
-"open": "2+"
-}
-},
-"lastUpdated": "2026-11-27T04:27Z",
-"current": {
-"target": {
-"value": 2.0,
-"displayValue": "2+"
-}
-},
-"open": {
-"target": {
-"value": 2.0,
-"displayValue": "2+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
-},
-"type": {
-"id": "221",
-"name": "3-Point Field Goals Milestones"
-},
-"odds": {
-"american": {
-"value": "+760",
-"open": "+192"
-},
-"decimal": {
-"value": "8.60",
-"open": "2.92"
-},
-"fraction": {
-"value": "38/5",
-"open": "48/25"
-},
-"total": {
-"value": "3+",
-"open": "2+"
-}
-},
-"lastUpdated": "2026-11-27T04:27Z",
-"current": {
-"target": {
-"value": 3.0,
-"displayValue": "3+"
-}
-},
-"open": {
-"target": {
-"value": 2.0,
-"displayValue": "2+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
-},
-"type": {
-"id": "221",
-"name": "3-Point Field Goals Milestones"
-},
-"odds": {
-"american": {
-"value": "+1960",
-"open": "+192"
-},
-"decimal": {
-"value": "20.60",
-"open": "2.92"
-},
-"fraction": {
-"value": "98/5",
-"open": "48/25"
-},
-"total": {
-"value": "4+",
-"open": "2+"
-}
-},
-"lastUpdated": "2026-11-27T04:27Z",
-"current": {
-"target": {
-"value": 4.0,
-"displayValue": "4+"
-}
-},
-"open": {
-"target": {
-"value": 2.0,
-"displayValue": "2+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "221",
-"name": "3-Point Field Goals Milestones"
-},
-"odds": {
-"american": {
-"value": "-580",
-"open": "+132"
-},
-"decimal": {
-"value": "1.17",
-"open": "2.32"
-},
-"fraction": {
-"value": "5/29",
-"open": "33/25"
-},
-"total": {
-"value": "2+",
-"open": "4+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 2.0,
-"displayValue": "2+"
-}
-},
-"open": {
-"target": {
-"value": 4.0,
-"displayValue": "4+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "221",
-"name": "3-Point Field Goals Milestones"
-},
-"odds": {
-"american": {
-"value": "-188",
-"open": "+132"
-},
-"decimal": {
-"value": "1.53",
-"open": "2.32"
-},
-"fraction": {
-"value": "25/47",
-"open": "33/25"
-},
-"total": {
-"value": "3+",
-"open": "4+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 3.0,
-"displayValue": "3+"
-}
-},
-"open": {
-"target": {
-"value": 4.0,
-"displayValue": "4+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "221",
-"name": "3-Point Field Goals Milestones"
-},
-"odds": {
-"american": {
-"value": "+130",
-"open": "+132"
-},
-"decimal": {
-"value": "2.30",
-"open": "2.32"
-},
-"fraction": {
-"value": "13/10",
-"open": "33/25"
-},
-"total": {
-"value": "4+",
-"open": "4+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 4.0,
-"displayValue": "4+"
-}
-},
-"open": {
-"target": {
-"value": 4.0,
-"displayValue": "4+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "221",
-"name": "3-Point Field Goals Milestones"
-},
-"odds": {
-"american": {
-"value": "+289",
-"open": "+132"
-},
-"decimal": {
-"value": "3.89",
-"open": "2.32"
-},
-"fraction": {
-"value": "289/100",
-"open": "33/25"
-},
-"total": {
-"value": "5+",
-"open": "4+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 5.0,
-"displayValue": "5+"
-}
-},
-"open": {
-"target": {
-"value": 4.0,
-"displayValue": "4+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "221",
-"name": "3-Point Field Goals Milestones"
-},
-"odds": {
-"american": {
-"value": "+620",
-"open": "+132"
-},
-"decimal": {
-"value": "7.20",
-"open": "2.32"
-},
-"fraction": {
-"value": "31/5",
-"open": "33/25"
-},
-"total": {
-"value": "6+",
-"open": "4+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 6.0,
-"displayValue": "6+"
-}
-},
-"open": {
-"target": {
-"value": 4.0,
-"displayValue": "4+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "221",
-"name": "3-Point Field Goals Milestones"
-},
-"odds": {
-"american": {
-"value": "+1260",
-"open": "+132"
-},
-"decimal": {
-"value": "13.60",
-"open": "2.32"
-},
-"fraction": {
-"value": "63/5",
-"open": "33/25"
-},
-"total": {
-"value": "7+",
-"open": "4+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 7.0,
-"displayValue": "7+"
-}
-},
-"open": {
-"target": {
-"value": 4.0,
-"displayValue": "4+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
 },
 "type": {
 "id": "221",
@@ -6161,32 +5748,432 @@
 "odds": {
 "american": {
 "value": "+2200",
-"open": "+132"
+"open": "+167"
 },
 "decimal": {
 "value": "23.00",
-"open": "2.32"
+"open": "2.67"
 },
 "fraction": {
 "value": "22/1",
-"open": "33/25"
+"open": "167/100"
 },
 "total": {
-"value": "8+",
-"open": "4+"
+"value": "7+",
+"open": "3+"
 }
 },
-"lastUpdated": "2026-11-27T07:50Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
-"value": 8.0,
-"displayValue": "8+"
+"value": 7.0,
+"displayValue": "7+"
 }
 },
 "open": {
 "target": {
+"value": 3.0,
+"displayValue": "3+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
+},
+"type": {
+"id": "221",
+"name": "3-Point Field Goals Milestones"
+},
+"odds": {
+"american": {
+"value": "-201",
+"open": "+192"
+},
+"decimal": {
+"value": "1.49",
+"open": "2.92"
+},
+"fraction": {
+"value": "100/201",
+"open": "48/25"
+},
+"total": {
+"value": "1+",
+"open": "2+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 1.0,
+"displayValue": "1+"
+}
+},
+"open": {
+"target": {
+"value": 2.0,
+"displayValue": "2+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
+},
+"type": {
+"id": "221",
+"name": "3-Point Field Goals Milestones"
+},
+"odds": {
+"american": {
+"value": "+222",
+"open": "+192"
+},
+"decimal": {
+"value": "3.22",
+"open": "2.92"
+},
+"fraction": {
+"value": "111/50",
+"open": "48/25"
+},
+"total": {
+"value": "2+",
+"open": "2+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 2.0,
+"displayValue": "2+"
+}
+},
+"open": {
+"target": {
+"value": 2.0,
+"displayValue": "2+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
+},
+"type": {
+"id": "221",
+"name": "3-Point Field Goals Milestones"
+},
+"odds": {
+"american": {
+"value": "+720",
+"open": "+192"
+},
+"decimal": {
+"value": "8.20",
+"open": "2.92"
+},
+"fraction": {
+"value": "36/5",
+"open": "48/25"
+},
+"total": {
+"value": "3+",
+"open": "2+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 3.0,
+"displayValue": "3+"
+}
+},
+"open": {
+"target": {
+"value": 2.0,
+"displayValue": "2+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
+},
+"type": {
+"id": "221",
+"name": "3-Point Field Goals Milestones"
+},
+"odds": {
+"american": {
+"value": "+1920",
+"open": "+192"
+},
+"decimal": {
+"value": "20.20",
+"open": "2.92"
+},
+"fraction": {
+"value": "96/5",
+"open": "48/25"
+},
+"total": {
+"value": "4+",
+"open": "2+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
 "value": 4.0,
 "displayValue": "4+"
+}
+},
+"open": {
+"target": {
+"value": 2.0,
+"displayValue": "2+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "221",
+"name": "3-Point Field Goals Milestones"
+},
+"odds": {
+"american": {
+"value": "-930",
+"open": "+136"
+},
+"decimal": {
+"value": "1.10",
+"open": "2.36"
+},
+"fraction": {
+"value": "10/93",
+"open": "34/25"
+},
+"total": {
+"value": "1+",
+"open": "3+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 1.0,
+"displayValue": "1+"
+}
+},
+"open": {
+"target": {
+"value": 3.0,
+"displayValue": "3+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "221",
+"name": "3-Point Field Goals Milestones"
+},
+"odds": {
+"american": {
+"value": "-193",
+"open": "+136"
+},
+"decimal": {
+"value": "1.51",
+"open": "2.36"
+},
+"fraction": {
+"value": "100/193",
+"open": "34/25"
+},
+"total": {
+"value": "2+",
+"open": "3+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 2.0,
+"displayValue": "2+"
+}
+},
+"open": {
+"target": {
+"value": 3.0,
+"displayValue": "3+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "221",
+"name": "3-Point Field Goals Milestones"
+},
+"odds": {
+"american": {
+"value": "+144",
+"open": "+136"
+},
+"decimal": {
+"value": "2.44",
+"open": "2.36"
+},
+"fraction": {
+"value": "36/25",
+"open": "34/25"
+},
+"total": {
+"value": "3+",
+"open": "3+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 3.0,
+"displayValue": "3+"
+}
+},
+"open": {
+"target": {
+"value": 3.0,
+"displayValue": "3+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "221",
+"name": "3-Point Field Goals Milestones"
+},
+"odds": {
+"american": {
+"value": "+353",
+"open": "+136"
+},
+"decimal": {
+"value": "4.53",
+"open": "2.36"
+},
+"fraction": {
+"value": "353/100",
+"open": "34/25"
+},
+"total": {
+"value": "4+",
+"open": "3+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 4.0,
+"displayValue": "4+"
+}
+},
+"open": {
+"target": {
+"value": 3.0,
+"displayValue": "3+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "221",
+"name": "3-Point Field Goals Milestones"
+},
+"odds": {
+"american": {
+"value": "+790",
+"open": "+136"
+},
+"decimal": {
+"value": "8.90",
+"open": "2.36"
+},
+"fraction": {
+"value": "79/10",
+"open": "34/25"
+},
+"total": {
+"value": "5+",
+"open": "3+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 5.0,
+"displayValue": "5+"
+}
+},
+"open": {
+"target": {
+"value": 3.0,
+"displayValue": "3+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "221",
+"name": "3-Point Field Goals Milestones"
+},
+"odds": {
+"american": {
+"value": "+1720",
+"open": "+136"
+},
+"decimal": {
+"value": "18.20",
+"open": "2.36"
+},
+"fraction": {
+"value": "86/5",
+"open": "34/25"
+},
+"total": {
+"value": "6+",
+"open": "3+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 6.0,
+"displayValue": "6+"
+}
+},
+"open": {
+"target": {
+"value": 3.0,
+"displayValue": "3+"
 }
 }
 },
@@ -6200,15 +6187,15 @@
 },
 "odds": {
 "american": {
-"value": "-251",
+"value": "-358",
 "open": "+181"
 },
 "decimal": {
-"value": "1.39",
+"value": "1.27",
 "open": "2.81"
 },
 "fraction": {
-"value": "100/251",
+"value": "50/179",
 "open": "181/100"
 },
 "total": {
@@ -6216,7 +6203,7 @@
 "open": "2+"
 }
 },
-"lastUpdated": "2026-11-27T12:24Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 1.0,
@@ -6240,15 +6227,15 @@
 },
 "odds": {
 "american": {
-"value": "+180",
+"value": "+128",
 "open": "+181"
 },
 "decimal": {
-"value": "2.80",
+"value": "2.28",
 "open": "2.81"
 },
 "fraction": {
-"value": "9/5",
+"value": "32/25",
 "open": "181/100"
 },
 "total": {
@@ -6256,7 +6243,7 @@
 "open": "2+"
 }
 },
-"lastUpdated": "2026-11-27T12:24Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 2.0,
@@ -6280,15 +6267,15 @@
 },
 "odds": {
 "american": {
-"value": "+594",
+"value": "+412",
 "open": "+181"
 },
 "decimal": {
-"value": "6.94",
+"value": "5.12",
 "open": "2.81"
 },
 "fraction": {
-"value": "297/50",
+"value": "103/25",
 "open": "181/100"
 },
 "total": {
@@ -6296,7 +6283,7 @@
 "open": "2+"
 }
 },
-"lastUpdated": "2026-11-27T12:24Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 3.0,
@@ -6320,15 +6307,15 @@
 },
 "odds": {
 "american": {
-"value": "+1560",
+"value": "+1100",
 "open": "+181"
 },
 "decimal": {
-"value": "16.60",
+"value": "12.00",
 "open": "2.81"
 },
 "fraction": {
-"value": "78/5",
+"value": "11/1",
 "open": "181/100"
 },
 "total": {
@@ -6336,11 +6323,51 @@
 "open": "2+"
 }
 },
-"lastUpdated": "2026-11-27T12:24Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 4.0,
 "displayValue": "4+"
+}
+},
+"open": {
+"target": {
+"value": 2.0,
+"displayValue": "2+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
+},
+"type": {
+"id": "222",
+"name": "Steals Milestones"
+},
+"odds": {
+"american": {
+"value": "+2300",
+"open": "+181"
+},
+"decimal": {
+"value": "24.00",
+"open": "2.81"
+},
+"fraction": {
+"value": "23/1",
+"open": "181/100"
+},
+"total": {
+"value": "5+",
+"open": "2+"
+}
+},
+"lastUpdated": "2026-11-27T21:35Z",
+"current": {
+"target": {
+"value": 5.0,
+"displayValue": "5+"
 }
 },
 "open": {
@@ -6360,15 +6387,15 @@
 },
 "odds": {
 "american": {
-"value": "-179",
+"value": "-184",
 "open": "-159"
 },
 "decimal": {
-"value": "1.55",
+"value": "1.54",
 "open": "1.62"
 },
 "fraction": {
-"value": "100/179",
+"value": "25/46",
 "open": "100/159"
 },
 "total": {
@@ -6376,7 +6403,7 @@
 "open": "1+"
 }
 },
-"lastUpdated": "2026-11-27T12:16Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 1.0,
@@ -6400,15 +6427,15 @@
 },
 "odds": {
 "american": {
-"value": "+259",
+"value": "+242",
 "open": "-159"
 },
 "decimal": {
-"value": "3.59",
+"value": "3.42",
 "open": "1.62"
 },
 "fraction": {
-"value": "259/100",
+"value": "121/50",
 "open": "100/159"
 },
 "total": {
@@ -6416,7 +6443,7 @@
 "open": "1+"
 }
 },
-"lastUpdated": "2026-11-27T12:16Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 2.0,
@@ -6440,15 +6467,15 @@
 },
 "odds": {
 "american": {
-"value": "+860",
+"value": "+820",
 "open": "-159"
 },
 "decimal": {
-"value": "9.60",
+"value": "9.20",
 "open": "1.62"
 },
 "fraction": {
-"value": "43/5",
+"value": "41/5",
 "open": "100/159"
 },
 "total": {
@@ -6456,7 +6483,7 @@
 "open": "1+"
 }
 },
-"lastUpdated": "2026-11-27T12:16Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 3.0,
@@ -6480,15 +6507,15 @@
 },
 "odds": {
 "american": {
-"value": "+2100",
+"value": "+2000",
 "open": "-159"
 },
 "decimal": {
-"value": "22.00",
+"value": "21.00",
 "open": "1.62"
 },
 "fraction": {
-"value": "21/1",
+"value": "20/1",
 "open": "100/159"
 },
 "total": {
@@ -6496,7 +6523,7 @@
 "open": "1+"
 }
 },
-"lastUpdated": "2026-11-27T12:16Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 4.0,
@@ -6512,7 +6539,7 @@
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "222",
@@ -6520,23 +6547,23 @@
 },
 "odds": {
 "american": {
-"value": "-258",
-"open": "+196"
+"value": "-492",
+"open": "-102"
 },
 "decimal": {
-"value": "1.38",
-"open": "2.96"
+"value": "1.20",
+"open": "1.98"
 },
 "fraction": {
-"value": "50/129",
-"open": "49/25"
+"value": "25/123",
+"open": "50/51"
 },
 "total": {
 "value": "1+",
 "open": "2+"
 }
 },
-"lastUpdated": "2026-11-27T12:24Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 1.0,
@@ -6552,7 +6579,7 @@
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "222",
@@ -6560,23 +6587,23 @@
 },
 "odds": {
 "american": {
-"value": "+183",
-"open": "+196"
+"value": "-109",
+"open": "-102"
 },
 "decimal": {
-"value": "2.83",
-"open": "2.96"
+"value": "1.91",
+"open": "1.98"
 },
 "fraction": {
-"value": "183/100",
-"open": "49/25"
+"value": "100/109",
+"open": "50/51"
 },
 "total": {
 "value": "2+",
 "open": "2+"
 }
 },
-"lastUpdated": "2026-11-27T12:24Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 2.0,
@@ -6592,7 +6619,7 @@
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "222",
@@ -6600,23 +6627,23 @@
 },
 "odds": {
 "american": {
-"value": "+600",
-"open": "+196"
+"value": "+274",
+"open": "-102"
 },
 "decimal": {
-"value": "7.00",
-"open": "2.96"
+"value": "3.74",
+"open": "1.98"
 },
 "fraction": {
-"value": "6/1",
-"open": "49/25"
+"value": "137/50",
+"open": "50/51"
 },
 "total": {
 "value": "3+",
 "open": "2+"
 }
 },
-"lastUpdated": "2026-11-27T12:24Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 3.0,
@@ -6632,7 +6659,7 @@
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "222",
@@ -6640,23 +6667,23 @@
 },
 "odds": {
 "american": {
-"value": "+1560",
-"open": "+196"
+"value": "+710",
+"open": "-102"
 },
 "decimal": {
-"value": "16.60",
-"open": "2.96"
+"value": "8.10",
+"open": "1.98"
 },
 "fraction": {
-"value": "78/5",
-"open": "49/25"
+"value": "71/10",
+"open": "50/51"
 },
 "total": {
 "value": "4+",
 "open": "2+"
 }
 },
-"lastUpdated": "2026-11-27T12:24Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 4.0,
@@ -6672,6 +6699,46 @@
 },
 {
 "athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "222",
+"name": "Steals Milestones"
+},
+"odds": {
+"american": {
+"value": "+1580",
+"open": "-102"
+},
+"decimal": {
+"value": "16.80",
+"open": "1.98"
+},
+"fraction": {
+"value": "79/5",
+"open": "50/51"
+},
+"total": {
+"value": "5+",
+"open": "2+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 5.0,
+"displayValue": "5+"
+}
+},
+"open": {
+"target": {
+"value": 2.0,
+"displayValue": "2+"
+}
+}
+},
+{
+"athlete": {
 "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
 },
 "type": {
@@ -6680,15 +6747,15 @@
 },
 "odds": {
 "american": {
-"value": "-102",
+"value": "+101",
 "open": "-111"
 },
 "decimal": {
-"value": "1.98",
+"value": "2.01",
 "open": "1.90"
 },
 "fraction": {
-"value": "50/51",
+"value": "101/100",
 "open": "100/111"
 },
 "total": {
@@ -6696,7 +6763,7 @@
 "open": "2+"
 }
 },
-"lastUpdated": "2026-11-27T12:29Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 2.0,
@@ -6720,15 +6787,15 @@
 },
 "odds": {
 "american": {
-"value": "+314",
+"value": "+325",
 "open": "-111"
 },
 "decimal": {
-"value": "4.14",
+"value": "4.25",
 "open": "1.90"
 },
 "fraction": {
-"value": "157/50",
+"value": "13/4",
 "open": "100/111"
 },
 "total": {
@@ -6736,7 +6803,7 @@
 "open": "2+"
 }
 },
-"lastUpdated": "2026-11-27T12:29Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 3.0,
@@ -6760,15 +6827,15 @@
 },
 "odds": {
 "american": {
-"value": "+930",
+"value": "+1060",
 "open": "-111"
 },
 "decimal": {
-"value": "10.30",
+"value": "11.60",
 "open": "1.90"
 },
 "fraction": {
-"value": "93/10",
+"value": "53/5",
 "open": "100/111"
 },
 "total": {
@@ -6776,127 +6843,7 @@
 "open": "2+"
 }
 },
-"lastUpdated": "2026-11-27T12:29Z",
-"current": {
-"target": {
-"value": 4.0,
-"displayValue": "4+"
-}
-},
-"open": {
-"target": {
-"value": 2.0,
-"displayValue": "2+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "224",
-"name": "Assists Milestones - 1st Quarter"
-},
-"odds": {
-"american": {
-"value": "-121",
-"open": "-113"
-},
-"decimal": {
-"value": "1.82",
-"open": "1.88"
-},
-"fraction": {
-"value": "100/121",
-"open": "100/113"
-},
-"total": {
-"value": "2+",
-"open": "2+"
-}
-},
-"lastUpdated": "2026-11-27T12:32Z",
-"current": {
-"target": {
-"value": 2.0,
-"displayValue": "2+"
-}
-},
-"open": {
-"target": {
-"value": 2.0,
-"displayValue": "2+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "224",
-"name": "Assists Milestones - 1st Quarter"
-},
-"odds": {
-"american": {
-"value": "+265",
-"open": "-113"
-},
-"decimal": {
-"value": "3.65",
-"open": "1.88"
-},
-"fraction": {
-"value": "53/20",
-"open": "100/113"
-},
-"total": {
-"value": "3+",
-"open": "2+"
-}
-},
-"lastUpdated": "2026-11-27T12:32Z",
-"current": {
-"target": {
-"value": 3.0,
-"displayValue": "3+"
-}
-},
-"open": {
-"target": {
-"value": 2.0,
-"displayValue": "2+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "224",
-"name": "Assists Milestones - 1st Quarter"
-},
-"odds": {
-"american": {
-"value": "+770",
-"open": "-113"
-},
-"decimal": {
-"value": "8.70",
-"open": "1.88"
-},
-"fraction": {
-"value": "77/10",
-"open": "100/113"
-},
-"total": {
-"value": "4+",
-"open": "2+"
-}
-},
-"lastUpdated": "2026-11-27T12:32Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 4.0,
@@ -6920,15 +6867,15 @@
 },
 "odds": {
 "american": {
-"value": "-760",
+"value": "-4600",
 "open": "-113"
 },
 "decimal": {
-"value": "1.13",
+"value": "1.02",
 "open": "1.88"
 },
 "fraction": {
-"value": "5/38",
+"value": "1/46",
 "open": "100/113"
 },
 "total": {
@@ -6936,7 +6883,7 @@
 "open": "21+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T22:54Z",
 "current": {
 "target": {
 "value": 15.0,
@@ -6960,15 +6907,15 @@
 },
 "odds": {
 "american": {
-"value": "-199",
+"value": "-620",
 "open": "-113"
 },
 "decimal": {
-"value": "1.50",
+"value": "1.16",
 "open": "1.88"
 },
 "fraction": {
-"value": "100/199",
+"value": "5/31",
 "open": "100/113"
 },
 "total": {
@@ -6976,7 +6923,7 @@
 "open": "21+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 20.0,
@@ -7000,15 +6947,15 @@
 },
 "odds": {
 "american": {
-"value": "+148",
+"value": "-187",
 "open": "-113"
 },
 "decimal": {
-"value": "2.48",
+"value": "1.53",
 "open": "1.88"
 },
 "fraction": {
-"value": "37/25",
+"value": "100/187",
 "open": "100/113"
 },
 "total": {
@@ -7016,7 +6963,7 @@
 "open": "21+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 25.0,
@@ -7040,15 +6987,15 @@
 },
 "odds": {
 "american": {
-"value": "+398",
+"value": "+145",
 "open": "-113"
 },
 "decimal": {
-"value": "4.98",
+"value": "2.45",
 "open": "1.88"
 },
 "fraction": {
-"value": "199/50",
+"value": "29/20",
 "open": "100/113"
 },
 "total": {
@@ -7056,7 +7003,7 @@
 "open": "21+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 30.0,
@@ -7080,15 +7027,15 @@
 },
 "odds": {
 "american": {
-"value": "+1020",
+"value": "+373",
 "open": "-113"
 },
 "decimal": {
-"value": "11.20",
+"value": "4.73",
 "open": "1.88"
 },
 "fraction": {
-"value": "51/5",
+"value": "373/100",
 "open": "100/113"
 },
 "total": {
@@ -7096,7 +7043,7 @@
 "open": "21+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 35.0,
@@ -7120,15 +7067,15 @@
 },
 "odds": {
 "american": {
-"value": "+2100",
+"value": "+910",
 "open": "-113"
 },
 "decimal": {
-"value": "22.00",
+"value": "10.10",
 "open": "1.88"
 },
 "fraction": {
-"value": "21/1",
+"value": "91/10",
 "open": "100/113"
 },
 "total": {
@@ -7136,7 +7083,7 @@
 "open": "21+"
 }
 },
-"lastUpdated": "2026-11-27T08:24Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 40.0,
@@ -7160,27 +7107,67 @@
 },
 "odds": {
 "american": {
-"value": "-127",
+"value": "-124",
 "open": "-113"
 },
 "decimal": {
-"value": "1.78",
+"value": "1.80",
 "open": "1.88"
 },
 "fraction": {
-"value": "100/127",
+"value": "25/31",
 "open": "100/113"
 },
 "total": {
-"value": "22+",
+"value": "27+",
 "open": "21+"
 }
 },
-"lastUpdated": "2026-11-27T08:39Z",
+"lastUpdated": "2026-11-27T22:54Z",
 "current": {
 "target": {
-"value": 22.0,
-"displayValue": "22+"
+"value": 27.0,
+"displayValue": "27+"
+}
+},
+"open": {
+"target": {
+"value": 21.0,
+"displayValue": "21+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
+},
+"type": {
+"id": "225",
+"name": "Points + Assists + Rebounds Milestones"
+},
+"odds": {
+"american": {
+"value": "+1920",
+"open": "-113"
+},
+"decimal": {
+"value": "20.20",
+"open": "1.88"
+},
+"fraction": {
+"value": "96/5",
+"open": "100/113"
+},
+"total": {
+"value": "45+",
+"open": "21+"
+}
+},
+"lastUpdated": "2026-11-27T21:35Z",
+"current": {
+"target": {
+"value": 45.0,
+"displayValue": "45+"
 }
 },
 "open": {
@@ -7200,7 +7187,7 @@
 },
 "odds": {
 "american": {
-"value": "-890",
+"value": "-840",
 "open": "-102"
 },
 "decimal": {
@@ -7208,7 +7195,7 @@
 "open": "1.98"
 },
 "fraction": {
-"value": "10/89",
+"value": "5/42",
 "open": "50/51"
 },
 "total": {
@@ -7216,7 +7203,7 @@
 "open": "18+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 10.0,
@@ -7240,15 +7227,15 @@
 },
 "odds": {
 "american": {
-"value": "-164",
+"value": "-156",
 "open": "-102"
 },
 "decimal": {
-"value": "1.60",
+"value": "1.64",
 "open": "1.98"
 },
 "fraction": {
-"value": "25/41",
+"value": "25/39",
 "open": "50/51"
 },
 "total": {
@@ -7256,7 +7243,7 @@
 "open": "18+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 15.0,
@@ -7280,15 +7267,15 @@
 },
 "odds": {
 "american": {
-"value": "+220",
+"value": "+234",
 "open": "-102"
 },
 "decimal": {
-"value": "3.20",
+"value": "3.34",
 "open": "1.98"
 },
 "fraction": {
-"value": "11/5",
+"value": "117/50",
 "open": "50/51"
 },
 "total": {
@@ -7296,7 +7283,7 @@
 "open": "18+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 20.0,
@@ -7320,15 +7307,15 @@
 },
 "odds": {
 "american": {
-"value": "+700",
+"value": "+750",
 "open": "-102"
 },
 "decimal": {
-"value": "8.00",
+"value": "8.50",
 "open": "1.98"
 },
 "fraction": {
-"value": "7/1",
+"value": "15/2",
 "open": "50/51"
 },
 "total": {
@@ -7336,7 +7323,7 @@
 "open": "18+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 25.0,
@@ -7360,15 +7347,15 @@
 },
 "odds": {
 "american": {
-"value": "+1880",
+"value": "+2000",
 "open": "-102"
 },
 "decimal": {
-"value": "19.80",
+"value": "21.00",
 "open": "1.98"
 },
 "fraction": {
-"value": "94/5",
+"value": "20/1",
 "open": "50/51"
 },
 "total": {
@@ -7376,7 +7363,7 @@
 "open": "18+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 30.0,
@@ -7400,15 +7387,15 @@
 },
 "odds": {
 "american": {
-"value": "-124",
+"value": "-118",
 "open": "-102"
 },
 "decimal": {
-"value": "1.80",
+"value": "1.84",
 "open": "1.98"
 },
 "fraction": {
-"value": "25/31",
+"value": "50/59",
 "open": "50/51"
 },
 "total": {
@@ -7416,7 +7403,7 @@
 "open": "18+"
 }
 },
-"lastUpdated": "2026-11-27T12:26Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 16.0,
@@ -7432,7 +7419,7 @@
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "225",
@@ -7440,303 +7427,23 @@
 },
 "odds": {
 "american": {
-"value": "-1240",
-"open": "-109"
+"value": "-1400",
+"open": "+124"
 },
 "decimal": {
-"value": "1.08",
-"open": "1.91"
+"value": "1.07",
+"open": "2.24"
 },
 "fraction": {
-"value": "5/62",
-"open": "100/109"
-},
-"total": {
-"value": "20+",
-"open": "30+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 20.0,
-"displayValue": "20+"
-}
-},
-"open": {
-"target": {
-"value": 30.0,
-"displayValue": "30+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "225",
-"name": "Points + Assists + Rebounds Milestones"
-},
-"odds": {
-"american": {
-"value": "-314",
-"open": "-109"
-},
-"decimal": {
-"value": "1.31",
-"open": "1.91"
-},
-"fraction": {
-"value": "50/157",
-"open": "100/109"
-},
-"total": {
-"value": "25+",
-"open": "30+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 25.0,
-"displayValue": "25+"
-}
-},
-"open": {
-"target": {
-"value": 30.0,
-"displayValue": "30+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "225",
-"name": "Points + Assists + Rebounds Milestones"
-},
-"odds": {
-"american": {
-"value": "-111",
-"open": "-109"
-},
-"decimal": {
-"value": "1.90",
-"open": "1.91"
-},
-"fraction": {
-"value": "100/111",
-"open": "100/109"
-},
-"total": {
-"value": "30+",
-"open": "30+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 30.0,
-"displayValue": "30+"
-}
-},
-"open": {
-"target": {
-"value": 30.0,
-"displayValue": "30+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "225",
-"name": "Points + Assists + Rebounds Milestones"
-},
-"odds": {
-"american": {
-"value": "+224",
-"open": "-109"
-},
-"decimal": {
-"value": "3.24",
-"open": "1.91"
-},
-"fraction": {
-"value": "56/25",
-"open": "100/109"
-},
-"total": {
-"value": "35+",
-"open": "30+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 35.0,
-"displayValue": "35+"
-}
-},
-"open": {
-"target": {
-"value": 30.0,
-"displayValue": "30+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "225",
-"name": "Points + Assists + Rebounds Milestones"
-},
-"odds": {
-"american": {
-"value": "+548",
-"open": "-109"
-},
-"decimal": {
-"value": "6.48",
-"open": "1.91"
-},
-"fraction": {
-"value": "137/25",
-"open": "100/109"
-},
-"total": {
-"value": "40+",
-"open": "30+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 40.0,
-"displayValue": "40+"
-}
-},
-"open": {
-"target": {
-"value": 30.0,
-"displayValue": "30+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "225",
-"name": "Points + Assists + Rebounds Milestones"
-},
-"odds": {
-"american": {
-"value": "+1240",
-"open": "-109"
-},
-"decimal": {
-"value": "13.40",
-"open": "1.91"
-},
-"fraction": {
-"value": "62/5",
-"open": "100/109"
-},
-"total": {
-"value": "45+",
-"open": "30+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 45.0,
-"displayValue": "45+"
-}
-},
-"open": {
-"target": {
-"value": 30.0,
-"displayValue": "30+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "225",
-"name": "Points + Assists + Rebounds Milestones"
-},
-"odds": {
-"american": {
-"value": "+2400",
-"open": "-109"
-},
-"decimal": {
-"value": "25.00",
-"open": "1.91"
-},
-"fraction": {
-"value": "24/1",
-"open": "100/109"
-},
-"total": {
-"value": "50+",
-"open": "30+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 50.0,
-"displayValue": "50+"
-}
-},
-"open": {
-"target": {
-"value": 30.0,
-"displayValue": "30+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
-},
-"type": {
-"id": "226",
-"name": "Points + Assists Milestones"
-},
-"odds": {
-"american": {
-"value": "-1520",
-"open": "-115"
-},
-"decimal": {
-"value": "1.06",
-"open": "1.86"
-},
-"fraction": {
-"value": "5/76",
-"open": "20/23"
+"value": "1/14",
+"open": "31/25"
 },
 "total": {
 "value": "10+",
-"open": "17+"
+"open": "20+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 10.0,
@@ -7745,8 +7452,248 @@
 },
 "open": {
 "target": {
-"value": 17.0,
-"displayValue": "17+"
+"value": 20.0,
+"displayValue": "20+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "225",
+"name": "Points + Assists + Rebounds Milestones"
+},
+"odds": {
+"american": {
+"value": "-259",
+"open": "+124"
+},
+"decimal": {
+"value": "1.38",
+"open": "2.24"
+},
+"fraction": {
+"value": "100/259",
+"open": "31/25"
+},
+"total": {
+"value": "15+",
+"open": "20+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 15.0,
+"displayValue": "15+"
+}
+},
+"open": {
+"target": {
+"value": 20.0,
+"displayValue": "20+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "225",
+"name": "Points + Assists + Rebounds Milestones"
+},
+"odds": {
+"american": {
+"value": "+121",
+"open": "+124"
+},
+"decimal": {
+"value": "2.21",
+"open": "2.24"
+},
+"fraction": {
+"value": "121/100",
+"open": "31/25"
+},
+"total": {
+"value": "20+",
+"open": "20+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 20.0,
+"displayValue": "20+"
+}
+},
+"open": {
+"target": {
+"value": 20.0,
+"displayValue": "20+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "225",
+"name": "Points + Assists + Rebounds Milestones"
+},
+"odds": {
+"american": {
+"value": "+331",
+"open": "+124"
+},
+"decimal": {
+"value": "4.31",
+"open": "2.24"
+},
+"fraction": {
+"value": "331/100",
+"open": "31/25"
+},
+"total": {
+"value": "25+",
+"open": "20+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 25.0,
+"displayValue": "25+"
+}
+},
+"open": {
+"target": {
+"value": 20.0,
+"displayValue": "20+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "225",
+"name": "Points + Assists + Rebounds Milestones"
+},
+"odds": {
+"american": {
+"value": "+880",
+"open": "+124"
+},
+"decimal": {
+"value": "9.80",
+"open": "2.24"
+},
+"fraction": {
+"value": "44/5",
+"open": "31/25"
+},
+"total": {
+"value": "30+",
+"open": "20+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 30.0,
+"displayValue": "30+"
+}
+},
+"open": {
+"target": {
+"value": 20.0,
+"displayValue": "20+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "225",
+"name": "Points + Assists + Rebounds Milestones"
+},
+"odds": {
+"american": {
+"value": "+1960",
+"open": "+124"
+},
+"decimal": {
+"value": "20.60",
+"open": "2.24"
+},
+"fraction": {
+"value": "98/5",
+"open": "31/25"
+},
+"total": {
+"value": "35+",
+"open": "20+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 35.0,
+"displayValue": "35+"
+}
+},
+"open": {
+"target": {
+"value": 20.0,
+"displayValue": "20+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "225",
+"name": "Points + Assists + Rebounds Milestones"
+},
+"odds": {
+"american": {
+"value": "-126",
+"open": "+124"
+},
+"decimal": {
+"value": "1.79",
+"open": "2.24"
+},
+"fraction": {
+"value": "50/63",
+"open": "31/25"
+},
+"total": {
+"value": "18+",
+"open": "20+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 18.0,
+"displayValue": "18+"
+}
+},
+"open": {
+"target": {
+"value": 20.0,
+"displayValue": "20+"
 }
 }
 },
@@ -7760,15 +7707,15 @@
 },
 "odds": {
 "american": {
-"value": "-263",
+"value": "-870",
 "open": "-115"
 },
 "decimal": {
-"value": "1.38",
+"value": "1.11",
 "open": "1.86"
 },
 "fraction": {
-"value": "100/263",
+"value": "10/87",
 "open": "20/23"
 },
 "total": {
@@ -7776,7 +7723,7 @@
 "open": "17+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 15.0,
@@ -7800,15 +7747,15 @@
 },
 "odds": {
 "american": {
-"value": "+130",
+"value": "-211",
 "open": "-115"
 },
 "decimal": {
-"value": "2.30",
+"value": "1.47",
 "open": "1.86"
 },
 "fraction": {
-"value": "13/10",
+"value": "100/211",
 "open": "20/23"
 },
 "total": {
@@ -7816,11 +7763,51 @@
 "open": "17+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 20.0,
 "displayValue": "20+"
+}
+},
+"open": {
+"target": {
+"value": 17.0,
+"displayValue": "17+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
+},
+"type": {
+"id": "226",
+"name": "Points + Assists Milestones"
+},
+"odds": {
+"american": {
+"value": "+142",
+"open": "-115"
+},
+"decimal": {
+"value": "2.42",
+"open": "1.86"
+},
+"fraction": {
+"value": "71/50",
+"open": "20/23"
+},
+"total": {
+"value": "25+",
+"open": "17+"
+}
+},
+"lastUpdated": "2026-11-27T21:30Z",
+"current": {
+"target": {
+"value": 25.0,
+"displayValue": "25+"
 }
 },
 "open": {
@@ -7852,51 +7839,11 @@
 "open": "20/23"
 },
 "total": {
-"value": "25+",
-"open": "17+"
-}
-},
-"lastUpdated": "2026-11-27T07:51Z",
-"current": {
-"target": {
-"value": 25.0,
-"displayValue": "25+"
-}
-},
-"open": {
-"target": {
-"value": 17.0,
-"displayValue": "17+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
-},
-"type": {
-"id": "226",
-"name": "Points + Assists Milestones"
-},
-"odds": {
-"american": {
-"value": "+1080",
-"open": "-115"
-},
-"decimal": {
-"value": "11.80",
-"open": "1.86"
-},
-"fraction": {
-"value": "54/5",
-"open": "20/23"
-},
-"total": {
 "value": "30+",
 "open": "17+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 30.0,
@@ -7920,15 +7867,15 @@
 },
 "odds": {
 "american": {
-"value": "+2300",
+"value": "+980",
 "open": "-115"
 },
 "decimal": {
-"value": "24.00",
+"value": "10.80",
 "open": "1.86"
 },
 "fraction": {
-"value": "23/1",
+"value": "49/5",
 "open": "20/23"
 },
 "total": {
@@ -7936,7 +7883,7 @@
 "open": "17+"
 }
 },
-"lastUpdated": "2026-11-27T08:13Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 35.0,
@@ -7960,27 +7907,67 @@
 },
 "odds": {
 "american": {
-"value": "-122",
+"value": "-108",
 "open": "-115"
 },
 "decimal": {
-"value": "1.81",
+"value": "1.92",
 "open": "1.86"
 },
 "fraction": {
-"value": "50/61",
+"value": "25/27",
 "open": "20/23"
 },
 "total": {
-"value": "18+",
+"value": "23+",
 "open": "17+"
 }
 },
-"lastUpdated": "2026-11-27T08:39Z",
+"lastUpdated": "2026-11-27T22:51Z",
 "current": {
 "target": {
-"value": 18.0,
-"displayValue": "18+"
+"value": 23.0,
+"displayValue": "23+"
+}
+},
+"open": {
+"target": {
+"value": 17.0,
+"displayValue": "17+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
+},
+"type": {
+"id": "226",
+"name": "Points + Assists Milestones"
+},
+"odds": {
+"american": {
+"value": "+2100",
+"open": "-115"
+},
+"decimal": {
+"value": "22.00",
+"open": "1.86"
+},
+"fraction": {
+"value": "21/1",
+"open": "20/23"
+},
+"total": {
+"value": "40+",
+"open": "17+"
+}
+},
+"lastUpdated": "2026-11-27T21:35Z",
+"current": {
+"target": {
+"value": 40.0,
+"displayValue": "40+"
 }
 },
 "open": {
@@ -8000,15 +7987,15 @@
 },
 "odds": {
 "american": {
-"value": "-2700",
+"value": "-2500",
 "open": "-101"
 },
 "decimal": {
-"value": "1.03",
+"value": "1.04",
 "open": "1.99"
 },
 "fraction": {
-"value": "1/27",
+"value": "1/25",
 "open": "100/101"
 },
 "total": {
@@ -8016,7 +8003,7 @@
 "open": "13+"
 }
 },
-"lastUpdated": "2026-11-27T04:28Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 5.0,
@@ -8040,15 +8027,15 @@
 },
 "odds": {
 "american": {
-"value": "-184",
+"value": "-186",
 "open": "-101"
 },
 "decimal": {
-"value": "1.54",
+"value": "1.53",
 "open": "1.99"
 },
 "fraction": {
-"value": "25/46",
+"value": "50/93",
 "open": "100/101"
 },
 "total": {
@@ -8056,7 +8043,7 @@
 "open": "13+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 10.0,
@@ -8080,15 +8067,15 @@
 },
 "odds": {
 "american": {
-"value": "-129",
+"value": "-133",
 "open": "-101"
 },
 "decimal": {
-"value": "1.77",
+"value": "1.75",
 "open": "1.99"
 },
 "fraction": {
-"value": "100/129",
+"value": "100/133",
 "open": "100/101"
 },
 "total": {
@@ -8096,7 +8083,7 @@
 "open": "13+"
 }
 },
-"lastUpdated": "2026-11-27T18:21Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 11.0,
@@ -8120,15 +8107,15 @@
 },
 "odds": {
 "american": {
-"value": "+259",
+"value": "+255",
 "open": "-101"
 },
 "decimal": {
-"value": "3.59",
+"value": "3.55",
 "open": "1.99"
 },
 "fraction": {
-"value": "259/100",
+"value": "51/20",
 "open": "100/101"
 },
 "total": {
@@ -8136,7 +8123,7 @@
 "open": "13+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 15.0,
@@ -8160,15 +8147,15 @@
 },
 "odds": {
 "american": {
-"value": "+980",
+"value": "+960",
 "open": "-101"
 },
 "decimal": {
-"value": "10.80",
+"value": "10.60",
 "open": "1.99"
 },
 "fraction": {
-"value": "49/5",
+"value": "48/5",
 "open": "100/101"
 },
 "total": {
@@ -8176,7 +8163,7 @@
 "open": "13+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 20.0,
@@ -8216,7 +8203,7 @@
 "open": "13+"
 }
 },
-"lastUpdated": "2026-11-27T17:53Z",
+"lastUpdated": "2026-11-27T22:06Z",
 "current": {
 "target": {
 "value": 25.0,
@@ -8232,7 +8219,7 @@
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "226",
@@ -8240,343 +8227,23 @@
 },
 "odds": {
 "american": {
-"value": "-3400",
-"open": "-117"
+"value": "-444",
+"open": "-106"
 },
 "decimal": {
-"value": "1.02",
-"open": "1.85"
+"value": "1.22",
+"open": "1.94"
 },
 "fraction": {
-"value": "1/34",
-"open": "100/117"
-},
-"total": {
-"value": "15+",
-"open": "26+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 15.0,
-"displayValue": "15+"
-}
-},
-"open": {
-"target": {
-"value": 26.0,
-"displayValue": "26+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "226",
-"name": "Points + Assists Milestones"
-},
-"odds": {
-"american": {
-"value": "-492",
-"open": "-117"
-},
-"decimal": {
-"value": "1.20",
-"open": "1.85"
-},
-"fraction": {
-"value": "25/123",
-"open": "100/117"
-},
-"total": {
-"value": "20+",
-"open": "26+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 20.0,
-"displayValue": "20+"
-}
-},
-"open": {
-"target": {
-"value": 26.0,
-"displayValue": "26+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "226",
-"name": "Points + Assists Milestones"
-},
-"odds": {
-"american": {
-"value": "-147",
-"open": "-117"
-},
-"decimal": {
-"value": "1.68",
-"open": "1.85"
-},
-"fraction": {
-"value": "100/147",
-"open": "100/117"
-},
-"total": {
-"value": "25+",
-"open": "26+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 25.0,
-"displayValue": "25+"
-}
-},
-"open": {
-"target": {
-"value": 26.0,
-"displayValue": "26+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "226",
-"name": "Points + Assists Milestones"
-},
-"odds": {
-"american": {
-"value": "+182",
-"open": "-117"
-},
-"decimal": {
-"value": "2.82",
-"open": "1.85"
-},
-"fraction": {
-"value": "91/50",
-"open": "100/117"
-},
-"total": {
-"value": "30+",
-"open": "26+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 30.0,
-"displayValue": "30+"
-}
-},
-"open": {
-"target": {
-"value": 26.0,
-"displayValue": "26+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "226",
-"name": "Points + Assists Milestones"
-},
-"odds": {
-"american": {
-"value": "+465",
-"open": "-117"
-},
-"decimal": {
-"value": "5.65",
-"open": "1.85"
-},
-"fraction": {
-"value": "93/20",
-"open": "100/117"
-},
-"total": {
-"value": "35+",
-"open": "26+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 35.0,
-"displayValue": "35+"
-}
-},
-"open": {
-"target": {
-"value": 26.0,
-"displayValue": "26+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "226",
-"name": "Points + Assists Milestones"
-},
-"odds": {
-"american": {
-"value": "+1120",
-"open": "-117"
-},
-"decimal": {
-"value": "12.20",
-"open": "1.85"
-},
-"fraction": {
-"value": "56/5",
-"open": "100/117"
-},
-"total": {
-"value": "40+",
-"open": "26+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 40.0,
-"displayValue": "40+"
-}
-},
-"open": {
-"target": {
-"value": 26.0,
-"displayValue": "26+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "226",
-"name": "Points + Assists Milestones"
-},
-"odds": {
-"american": {
-"value": "+2300",
-"open": "-117"
-},
-"decimal": {
-"value": "24.00",
-"open": "1.85"
-},
-"fraction": {
-"value": "23/1",
-"open": "100/117"
-},
-"total": {
-"value": "45+",
-"open": "26+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 45.0,
-"displayValue": "45+"
-}
-},
-"open": {
-"target": {
-"value": 26.0,
-"displayValue": "26+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "226",
-"name": "Points + Assists Milestones"
-},
-"odds": {
-"american": {
-"value": "-120",
-"open": "-117"
-},
-"decimal": {
-"value": "1.83",
-"open": "1.85"
-},
-"fraction": {
-"value": "5/6",
-"open": "100/117"
-},
-"total": {
-"value": "26+",
-"open": "26+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 26.0,
-"displayValue": "26+"
-}
-},
-"open": {
-"target": {
-"value": 26.0,
-"displayValue": "26+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
-},
-"type": {
-"id": "227",
-"name": "Points + Rebounds Milestones"
-},
-"odds": {
-"american": {
-"value": "-1140",
-"open": "-105"
-},
-"decimal": {
-"value": "1.08",
-"open": "1.95"
-},
-"fraction": {
-"value": "5/57",
-"open": "20/21"
+"value": "25/111",
+"open": "50/53"
 },
 "total": {
 "value": "10+",
-"open": "17+"
+"open": "15+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 10.0,
@@ -8585,8 +8252,168 @@
 },
 "open": {
 "target": {
-"value": 17.0,
-"displayValue": "17+"
+"value": 15.0,
+"displayValue": "15+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "226",
+"name": "Points + Assists Milestones"
+},
+"odds": {
+"american": {
+"value": "-107",
+"open": "-106"
+},
+"decimal": {
+"value": "1.93",
+"open": "1.94"
+},
+"fraction": {
+"value": "100/107",
+"open": "50/53"
+},
+"total": {
+"value": "15+",
+"open": "15+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 15.0,
+"displayValue": "15+"
+}
+},
+"open": {
+"target": {
+"value": 15.0,
+"displayValue": "15+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "226",
+"name": "Points + Assists Milestones"
+},
+"odds": {
+"american": {
+"value": "+291",
+"open": "-106"
+},
+"decimal": {
+"value": "3.91",
+"open": "1.94"
+},
+"fraction": {
+"value": "291/100",
+"open": "50/53"
+},
+"total": {
+"value": "20+",
+"open": "15+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 20.0,
+"displayValue": "20+"
+}
+},
+"open": {
+"target": {
+"value": 15.0,
+"displayValue": "15+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "226",
+"name": "Points + Assists Milestones"
+},
+"odds": {
+"american": {
+"value": "+830",
+"open": "-106"
+},
+"decimal": {
+"value": "9.30",
+"open": "1.94"
+},
+"fraction": {
+"value": "83/10",
+"open": "50/53"
+},
+"total": {
+"value": "25+",
+"open": "15+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 25.0,
+"displayValue": "25+"
+}
+},
+"open": {
+"target": {
+"value": 15.0,
+"displayValue": "15+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "226",
+"name": "Points + Assists Milestones"
+},
+"odds": {
+"american": {
+"value": "+2000",
+"open": "-106"
+},
+"decimal": {
+"value": "21.00",
+"open": "1.94"
+},
+"fraction": {
+"value": "20/1",
+"open": "50/53"
+},
+"total": {
+"value": "30+",
+"open": "15+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 30.0,
+"displayValue": "30+"
+}
+},
+"open": {
+"target": {
+"value": 15.0,
+"displayValue": "15+"
 }
 }
 },
@@ -8600,15 +8427,15 @@
 },
 "odds": {
 "american": {
-"value": "-222",
+"value": "-585",
 "open": "-105"
 },
 "decimal": {
-"value": "1.45",
+"value": "1.17",
 "open": "1.95"
 },
 "fraction": {
-"value": "50/111",
+"value": "20/117",
 "open": "20/21"
 },
 "total": {
@@ -8616,7 +8443,7 @@
 "open": "17+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 15.0,
@@ -8640,15 +8467,15 @@
 },
 "odds": {
 "american": {
-"value": "+144",
+"value": "-160",
 "open": "-105"
 },
 "decimal": {
-"value": "2.44",
+"value": "1.62",
 "open": "1.95"
 },
 "fraction": {
-"value": "36/25",
+"value": "5/8",
 "open": "20/21"
 },
 "total": {
@@ -8656,7 +8483,7 @@
 "open": "17+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 20.0,
@@ -8680,15 +8507,15 @@
 },
 "odds": {
 "american": {
-"value": "+402",
+"value": "+180",
 "open": "-105"
 },
 "decimal": {
-"value": "5.02",
+"value": "2.80",
 "open": "1.95"
 },
 "fraction": {
-"value": "201/50",
+"value": "9/5",
 "open": "20/21"
 },
 "total": {
@@ -8696,7 +8523,7 @@
 "open": "17+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 25.0,
@@ -8713,6 +8540,286 @@
 {
 "athlete": {
 "$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
+},
+"type": {
+"id": "227",
+"name": "Points + Rebounds Milestones"
+},
+"odds": {
+"american": {
+"value": "+476",
+"open": "-105"
+},
+"decimal": {
+"value": "5.76",
+"open": "1.95"
+},
+"fraction": {
+"value": "119/25",
+"open": "20/21"
+},
+"total": {
+"value": "30+",
+"open": "17+"
+}
+},
+"lastUpdated": "2026-11-27T21:30Z",
+"current": {
+"target": {
+"value": 30.0,
+"displayValue": "30+"
+}
+},
+"open": {
+"target": {
+"value": 17.0,
+"displayValue": "17+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
+},
+"type": {
+"id": "227",
+"name": "Points + Rebounds Milestones"
+},
+"odds": {
+"american": {
+"value": "+1180",
+"open": "-105"
+},
+"decimal": {
+"value": "12.80",
+"open": "1.95"
+},
+"fraction": {
+"value": "59/5",
+"open": "20/21"
+},
+"total": {
+"value": "35+",
+"open": "17+"
+}
+},
+"lastUpdated": "2026-11-27T21:30Z",
+"current": {
+"target": {
+"value": 35.0,
+"displayValue": "35+"
+}
+},
+"open": {
+"target": {
+"value": 17.0,
+"displayValue": "17+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
+},
+"type": {
+"id": "227",
+"name": "Points + Rebounds Milestones"
+},
+"odds": {
+"american": {
+"value": "-128",
+"open": "-105"
+},
+"decimal": {
+"value": "1.78",
+"open": "1.95"
+},
+"fraction": {
+"value": "25/32",
+"open": "20/21"
+},
+"total": {
+"value": "21+",
+"open": "17+"
+}
+},
+"lastUpdated": "2026-11-27T22:54Z",
+"current": {
+"target": {
+"value": 21.0,
+"displayValue": "21+"
+}
+},
+"open": {
+"target": {
+"value": 17.0,
+"displayValue": "17+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
+},
+"type": {
+"id": "227",
+"name": "Points + Rebounds Milestones"
+},
+"odds": {
+"american": {
+"value": "+2300",
+"open": "-105"
+},
+"decimal": {
+"value": "24.00",
+"open": "1.95"
+},
+"fraction": {
+"value": "23/1",
+"open": "20/21"
+},
+"total": {
+"value": "40+",
+"open": "17+"
+}
+},
+"lastUpdated": "2026-11-27T21:37Z",
+"current": {
+"target": {
+"value": 40.0,
+"displayValue": "40+"
+}
+},
+"open": {
+"target": {
+"value": 17.0,
+"displayValue": "17+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
+},
+"type": {
+"id": "227",
+"name": "Points + Rebounds Milestones"
+},
+"odds": {
+"american": {
+"value": "-1480",
+"open": "-127"
+},
+"decimal": {
+"value": "1.06",
+"open": "1.78"
+},
+"fraction": {
+"value": "5/74",
+"open": "100/127"
+},
+"total": {
+"value": "5+",
+"open": "11+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 5.0,
+"displayValue": "5+"
+}
+},
+"open": {
+"target": {
+"value": 11.0,
+"displayValue": "11+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
+},
+"type": {
+"id": "227",
+"name": "Points + Rebounds Milestones"
+},
+"odds": {
+"american": {
+"value": "-149",
+"open": "-127"
+},
+"decimal": {
+"value": "1.67",
+"open": "1.78"
+},
+"fraction": {
+"value": "100/149",
+"open": "100/127"
+},
+"total": {
+"value": "10+",
+"open": "11+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 10.0,
+"displayValue": "10+"
+}
+},
+"open": {
+"target": {
+"value": 11.0,
+"displayValue": "11+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
+},
+"type": {
+"id": "227",
+"name": "Points + Rebounds Milestones"
+},
+"odds": {
+"american": {
+"value": "+291",
+"open": "-127"
+},
+"decimal": {
+"value": "3.91",
+"open": "1.78"
+},
+"fraction": {
+"value": "291/100",
+"open": "100/127"
+},
+"total": {
+"value": "15+",
+"open": "11+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 15.0,
+"displayValue": "15+"
+}
+},
+"open": {
+"target": {
+"value": 11.0,
+"displayValue": "11+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
 },
 "type": {
 "id": "227",
@@ -8721,146 +8828,26 @@
 "odds": {
 "american": {
 "value": "+1060",
-"open": "-105"
-},
-"decimal": {
-"value": "11.60",
-"open": "1.95"
-},
-"fraction": {
-"value": "53/5",
-"open": "20/21"
-},
-"total": {
-"value": "30+",
-"open": "17+"
-}
-},
-"lastUpdated": "2026-11-27T07:51Z",
-"current": {
-"target": {
-"value": 30.0,
-"displayValue": "30+"
-}
-},
-"open": {
-"target": {
-"value": 17.0,
-"displayValue": "17+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
-},
-"type": {
-"id": "227",
-"name": "Points + Rebounds Milestones"
-},
-"odds": {
-"american": {
-"value": "-108",
-"open": "-105"
-},
-"decimal": {
-"value": "1.92",
-"open": "1.95"
-},
-"fraction": {
-"value": "25/27",
-"open": "20/21"
-},
-"total": {
-"value": "18+",
-"open": "17+"
-}
-},
-"lastUpdated": "2026-11-27T08:39Z",
-"current": {
-"target": {
-"value": 18.0,
-"displayValue": "18+"
-}
-},
-"open": {
-"target": {
-"value": 17.0,
-"displayValue": "17+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
-},
-"type": {
-"id": "227",
-"name": "Points + Rebounds Milestones"
-},
-"odds": {
-"american": {
-"value": "+2300",
-"open": "-105"
-},
-"decimal": {
-"value": "24.00",
-"open": "1.95"
-},
-"fraction": {
-"value": "23/1",
-"open": "20/21"
-},
-"total": {
-"value": "35+",
-"open": "17+"
-}
-},
-"lastUpdated": "2026-11-27T08:39Z",
-"current": {
-"target": {
-"value": 35.0,
-"displayValue": "35+"
-}
-},
-"open": {
-"target": {
-"value": 17.0,
-"displayValue": "17+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
-},
-"type": {
-"id": "227",
-"name": "Points + Rebounds Milestones"
-},
-"odds": {
-"american": {
-"value": "-1560",
 "open": "-127"
 },
 "decimal": {
-"value": "1.06",
+"value": "11.60",
 "open": "1.78"
 },
 "fraction": {
-"value": "5/78",
+"value": "53/5",
 "open": "100/127"
 },
 "total": {
-"value": "5+",
+"value": "20+",
 "open": "11+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
-"value": 5.0,
-"displayValue": "5+"
+"value": 20.0,
+"displayValue": "20+"
 }
 },
 "open": {
@@ -8880,23 +8867,103 @@
 },
 "odds": {
 "american": {
-"value": "-157",
+"value": "-109",
 "open": "-127"
 },
 "decimal": {
-"value": "1.63",
+"value": "1.91",
 "open": "1.78"
 },
 "fraction": {
-"value": "100/157",
+"value": "100/109",
 "open": "100/127"
 },
 "total": {
-"value": "10+",
+"value": "11+",
 "open": "11+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 11.0,
+"displayValue": "11+"
+}
+},
+"open": {
+"target": {
+"value": 11.0,
+"displayValue": "11+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
+},
+"type": {
+"id": "227",
+"name": "Points + Rebounds Milestones"
+},
+"odds": {
+"american": {
+"value": "+2500",
+"open": "-127"
+},
+"decimal": {
+"value": "26.00",
+"open": "1.78"
+},
+"fraction": {
+"value": "25/1",
+"open": "100/127"
+},
+"total": {
+"value": "25+",
+"open": "11+"
+}
+},
+"lastUpdated": "2026-11-27T23:42Z",
+"current": {
+"target": {
+"value": 25.0,
+"displayValue": "25+"
+}
+},
+"open": {
+"target": {
+"value": 11.0,
+"displayValue": "11+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "227",
+"name": "Points + Rebounds Milestones"
+},
+"odds": {
+"american": {
+"value": "-497",
+"open": "-126"
+},
+"decimal": {
+"value": "1.20",
+"open": "1.79"
+},
+"fraction": {
+"value": "100/497",
+"open": "50/63"
+},
+"total": {
+"value": "10+",
+"open": "15+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 10.0,
@@ -8905,14 +8972,14 @@
 },
 "open": {
 "target": {
-"value": 11.0,
-"displayValue": "11+"
+"value": 15.0,
+"displayValue": "15+"
 }
 }
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "227",
@@ -8920,23 +8987,23 @@
 },
 "odds": {
 "american": {
-"value": "+275",
-"open": "-127"
+"value": "-124",
+"open": "-126"
 },
 "decimal": {
-"value": "3.75",
-"open": "1.78"
+"value": "1.80",
+"open": "1.79"
 },
 "fraction": {
-"value": "11/4",
-"open": "100/127"
+"value": "25/31",
+"open": "50/63"
 },
 "total": {
 "value": "15+",
-"open": "11+"
+"open": "15+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 15.0,
@@ -8945,14 +9012,14 @@
 },
 "open": {
 "target": {
-"value": 11.0,
-"displayValue": "11+"
+"value": 15.0,
+"displayValue": "15+"
 }
 }
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "227",
@@ -8960,23 +9027,23 @@
 },
 "odds": {
 "american": {
-"value": "+980",
-"open": "-127"
+"value": "+247",
+"open": "-126"
 },
 "decimal": {
-"value": "10.80",
-"open": "1.78"
+"value": "3.47",
+"open": "1.79"
 },
 "fraction": {
-"value": "49/5",
-"open": "100/127"
+"value": "247/100",
+"open": "50/63"
 },
 "total": {
 "value": "20+",
-"open": "11+"
+"open": "15+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 20.0,
@@ -8984,135 +9051,15 @@
 }
 },
 "open": {
-"target": {
-"value": 11.0,
-"displayValue": "11+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
-},
-"type": {
-"id": "227",
-"name": "Points + Rebounds Milestones"
-},
-"odds": {
-"american": {
-"value": "-113",
-"open": "-127"
-},
-"decimal": {
-"value": "1.88",
-"open": "1.78"
-},
-"fraction": {
-"value": "100/113",
-"open": "100/127"
-},
-"total": {
-"value": "11+",
-"open": "11+"
-}
-},
-"lastUpdated": "2026-11-27T04:27Z",
-"current": {
-"target": {
-"value": 11.0,
-"displayValue": "11+"
-}
-},
-"open": {
-"target": {
-"value": 11.0,
-"displayValue": "11+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
-},
-"type": {
-"id": "227",
-"name": "Points + Rebounds Milestones"
-},
-"odds": {
-"american": {
-"value": "+2500",
-"open": "-127"
-},
-"decimal": {
-"value": "26.00",
-"open": "1.78"
-},
-"fraction": {
-"value": "25/1",
-"open": "100/127"
-},
-"total": {
-"value": "25+",
-"open": "11+"
-}
-},
-"lastUpdated": "2026-11-27T17:53Z",
-"current": {
-"target": {
-"value": 25.0,
-"displayValue": "25+"
-}
-},
-"open": {
-"target": {
-"value": 11.0,
-"displayValue": "11+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "227",
-"name": "Points + Rebounds Milestones"
-},
-"odds": {
-"american": {
-"value": "-1680",
-"open": "-120"
-},
-"decimal": {
-"value": "1.05",
-"open": "1.83"
-},
-"fraction": {
-"value": "5/84",
-"open": "5/6"
-},
-"total": {
-"value": "15+",
-"open": "25+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
 "target": {
 "value": 15.0,
 "displayValue": "15+"
 }
-},
-"open": {
-"target": {
-"value": 25.0,
-"displayValue": "25+"
-}
 }
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "227",
@@ -9120,63 +9067,23 @@
 },
 "odds": {
 "american": {
-"value": "-358",
-"open": "-120"
+"value": "+710",
+"open": "-126"
 },
 "decimal": {
-"value": "1.27",
-"open": "1.83"
+"value": "8.10",
+"open": "1.79"
 },
 "fraction": {
-"value": "50/179",
-"open": "5/6"
-},
-"total": {
-"value": "20+",
-"open": "25+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 20.0,
-"displayValue": "20+"
-}
-},
-"open": {
-"target": {
-"value": 25.0,
-"displayValue": "25+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "227",
-"name": "Points + Rebounds Milestones"
-},
-"odds": {
-"american": {
-"value": "-120",
-"open": "-120"
-},
-"decimal": {
-"value": "1.83",
-"open": "1.83"
-},
-"fraction": {
-"value": "5/6",
-"open": "5/6"
+"value": "71/10",
+"open": "50/63"
 },
 "total": {
 "value": "25+",
-"open": "25+"
+"open": "15+"
 }
 },
-"lastUpdated": "2026-11-27T07:50Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 25.0,
@@ -9185,14 +9092,14 @@
 },
 "open": {
 "target": {
-"value": 25.0,
-"displayValue": "25+"
+"value": 15.0,
+"displayValue": "15+"
 }
 }
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "227",
@@ -9200,23 +9107,23 @@
 },
 "odds": {
 "american": {
-"value": "+220",
-"open": "-120"
+"value": "+1700",
+"open": "-126"
 },
 "decimal": {
-"value": "3.20",
-"open": "1.83"
+"value": "18.00",
+"open": "1.79"
 },
 "fraction": {
-"value": "11/5",
-"open": "5/6"
+"value": "17/1",
+"open": "50/63"
 },
 "total": {
 "value": "30+",
-"open": "25+"
+"open": "15+"
 }
 },
-"lastUpdated": "2026-11-27T07:50Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 30.0,
@@ -9225,134 +9132,14 @@
 },
 "open": {
 "target": {
-"value": 25.0,
-"displayValue": "25+"
+"value": 15.0,
+"displayValue": "15+"
 }
 }
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "227",
-"name": "Points + Rebounds Milestones"
-},
-"odds": {
-"american": {
-"value": "+551",
-"open": "-120"
-},
-"decimal": {
-"value": "6.51",
-"open": "1.83"
-},
-"fraction": {
-"value": "551/100",
-"open": "5/6"
-},
-"total": {
-"value": "35+",
-"open": "25+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 35.0,
-"displayValue": "35+"
-}
-},
-"open": {
-"target": {
-"value": 25.0,
-"displayValue": "25+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "227",
-"name": "Points + Rebounds Milestones"
-},
-"odds": {
-"american": {
-"value": "+1300",
-"open": "-120"
-},
-"decimal": {
-"value": "14.00",
-"open": "1.83"
-},
-"fraction": {
-"value": "13/1",
-"open": "5/6"
-},
-"total": {
-"value": "40+",
-"open": "25+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 40.0,
-"displayValue": "40+"
-}
-},
-"open": {
-"target": {
-"value": 25.0,
-"displayValue": "25+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "227",
-"name": "Points + Rebounds Milestones"
-},
-"odds": {
-"american": {
-"value": "+2500",
-"open": "-120"
-},
-"decimal": {
-"value": "26.00",
-"open": "1.83"
-},
-"fraction": {
-"value": "25/1",
-"open": "5/6"
-},
-"total": {
-"value": "45+",
-"open": "25+"
-}
-},
-"lastUpdated": "2026-11-27T07:50Z",
-"current": {
-"target": {
-"value": 45.0,
-"displayValue": "45+"
-}
-},
-"open": {
-"target": {
-"value": 25.0,
-"displayValue": "25+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "228",
@@ -9360,23 +9147,23 @@
 },
 "odds": {
 "american": {
-"value": "-2300",
-"open": "+117"
+"value": "-282",
+"open": "+144"
 },
 "decimal": {
-"value": "1.04",
-"open": "2.17"
+"value": "1.35",
+"open": "2.44"
 },
 "fraction": {
-"value": "1/23",
-"open": "117/100"
+"value": "50/141",
+"open": "36/25"
 },
 "total": {
 "value": "2+",
-"open": "8+"
+"open": "4+"
 }
 },
-"lastUpdated": "2026-11-27T16:16Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 2.0,
@@ -9385,14 +9172,14 @@
 },
 "open": {
 "target": {
-"value": 8.0,
-"displayValue": "8+"
+"value": 4.0,
+"displayValue": "4+"
 }
 }
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "228",
@@ -9400,23 +9187,23 @@
 },
 "odds": {
 "american": {
-"value": "-810",
-"open": "+117"
+"value": "-143",
+"open": "+144"
 },
 "decimal": {
-"value": "1.12",
-"open": "2.17"
+"value": "1.69",
+"open": "2.44"
 },
 "fraction": {
-"value": "10/81",
-"open": "117/100"
+"value": "100/143",
+"open": "36/25"
 },
 "total": {
 "value": "3+",
-"open": "8+"
+"open": "4+"
 }
 },
-"lastUpdated": "2026-11-27T12:31Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 3.0,
@@ -9425,14 +9212,14 @@
 },
 "open": {
 "target": {
-"value": 8.0,
-"displayValue": "8+"
+"value": 4.0,
+"displayValue": "4+"
 }
 }
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "228",
@@ -9440,23 +9227,23 @@
 },
 "odds": {
 "american": {
-"value": "-457",
-"open": "+117"
+"value": "+148",
+"open": "+144"
 },
 "decimal": {
-"value": "1.21",
-"open": "2.17"
+"value": "2.48",
+"open": "2.44"
 },
 "fraction": {
-"value": "100/457",
-"open": "117/100"
+"value": "37/25",
+"open": "36/25"
 },
 "total": {
 "value": "4+",
-"open": "8+"
+"open": "4+"
 }
 },
-"lastUpdated": "2026-11-27T12:31Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 4.0,
@@ -9465,14 +9252,14 @@
 },
 "open": {
 "target": {
-"value": 8.0,
-"displayValue": "8+"
+"value": 4.0,
+"displayValue": "4+"
 }
 }
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "228",
@@ -9480,23 +9267,23 @@
 },
 "odds": {
 "american": {
-"value": "-292",
-"open": "+117"
+"value": "+191",
+"open": "+144"
 },
 "decimal": {
-"value": "1.34",
-"open": "2.17"
+"value": "2.91",
+"open": "2.44"
 },
 "fraction": {
-"value": "25/73",
-"open": "117/100"
+"value": "191/100",
+"open": "36/25"
 },
 "total": {
 "value": "5+",
-"open": "8+"
+"open": "4+"
 }
 },
-"lastUpdated": "2026-11-27T12:31Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 5.0,
@@ -9505,14 +9292,14 @@
 },
 "open": {
 "target": {
-"value": 8.0,
-"displayValue": "8+"
+"value": 4.0,
+"displayValue": "4+"
 }
 }
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "228",
@@ -9520,23 +9307,23 @@
 },
 "odds": {
 "american": {
-"value": "-173",
-"open": "+117"
+"value": "+321",
+"open": "+144"
 },
 "decimal": {
-"value": "1.57",
-"open": "2.17"
+"value": "4.21",
+"open": "2.44"
 },
 "fraction": {
-"value": "100/173",
-"open": "117/100"
+"value": "321/100",
+"open": "36/25"
 },
 "total": {
 "value": "6+",
-"open": "8+"
+"open": "4+"
 }
 },
-"lastUpdated": "2026-11-27T12:31Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 6.0,
@@ -9545,14 +9332,14 @@
 },
 "open": {
 "target": {
-"value": 8.0,
-"displayValue": "8+"
+"value": 4.0,
+"displayValue": "4+"
 }
 }
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "228",
@@ -9560,23 +9347,23 @@
 },
 "odds": {
 "american": {
-"value": "-119",
-"open": "+117"
+"value": "+547",
+"open": "+144"
 },
 "decimal": {
-"value": "1.84",
-"open": "2.17"
+"value": "6.47",
+"open": "2.44"
 },
 "fraction": {
-"value": "100/119",
-"open": "117/100"
+"value": "547/100",
+"open": "36/25"
 },
 "total": {
 "value": "7+",
-"open": "8+"
+"open": "4+"
 }
 },
-"lastUpdated": "2026-11-27T12:31Z",
+"lastUpdated": "2026-11-27T21:32Z",
 "current": {
 "target": {
 "value": 7.0,
@@ -9585,14 +9372,14 @@
 },
 "open": {
 "target": {
-"value": 8.0,
-"displayValue": "8+"
+"value": 4.0,
+"displayValue": "4+"
 }
 }
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "228",
@@ -9600,23 +9387,63 @@
 },
 "odds": {
 "american": {
-"value": "+122",
-"open": "+117"
+"value": "+750",
+"open": "+144"
 },
 "decimal": {
-"value": "2.22",
-"open": "2.17"
+"value": "8.50",
+"open": "2.44"
 },
 "fraction": {
-"value": "61/50",
-"open": "117/100"
+"value": "15/2",
+"open": "36/25"
+},
+"total": {
+"value": "8+",
+"open": "4+"
+}
+},
+"lastUpdated": "2026-11-27T21:32Z",
+"current": {
+"target": {
+"value": 8.0,
+"displayValue": "8+"
+}
+},
+"open": {
+"target": {
+"value": 4.0,
+"displayValue": "4+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
+},
+"type": {
+"id": "327",
+"name": "Rebounds + Assists Milestones"
+},
+"odds": {
+"american": {
+"value": "-450",
+"open": "-140"
+},
+"decimal": {
+"value": "1.22",
+"open": "1.71"
+},
+"fraction": {
+"value": "2/9",
+"open": "5/7"
 },
 "total": {
 "value": "8+",
 "open": "8+"
 }
 },
-"lastUpdated": "2026-11-27T12:31Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 8.0,
@@ -9632,71 +9459,31 @@
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
 },
 "type": {
-"id": "228",
-"name": "Points Milestones - 1st Quarter"
+"id": "327",
+"name": "Rebounds + Assists Milestones"
 },
 "odds": {
 "american": {
-"value": "+179",
-"open": "+117"
+"value": "-155",
+"open": "-140"
 },
 "decimal": {
-"value": "2.79",
-"open": "2.17"
+"value": "1.64",
+"open": "1.71"
 },
 "fraction": {
-"value": "179/100",
-"open": "117/100"
-},
-"total": {
-"value": "9+",
-"open": "8+"
-}
-},
-"lastUpdated": "2026-11-27T12:31Z",
-"current": {
-"target": {
-"value": 9.0,
-"displayValue": "9+"
-}
-},
-"open": {
-"target": {
-"value": 8.0,
-"displayValue": "8+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "228",
-"name": "Points Milestones - 1st Quarter"
-},
-"odds": {
-"american": {
-"value": "+256",
-"open": "+117"
-},
-"decimal": {
-"value": "3.56",
-"open": "2.17"
-},
-"fraction": {
-"value": "64/25",
-"open": "117/100"
+"value": "20/31",
+"open": "5/7"
 },
 "total": {
 "value": "10+",
 "open": "8+"
 }
 },
-"lastUpdated": "2026-11-27T12:31Z",
+"lastUpdated": "2026-11-27T21:30Z",
 "current": {
 "target": {
 "value": 10.0,
@@ -9712,31 +9499,151 @@
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
 },
 "type": {
-"id": "228",
-"name": "Points Milestones - 1st Quarter"
+"id": "327",
+"name": "Rebounds + Assists Milestones"
 },
 "odds": {
 "american": {
-"value": "+362",
-"open": "+117"
+"value": "+160",
+"open": "-140"
 },
 "decimal": {
-"value": "4.62",
-"open": "2.17"
+"value": "2.60",
+"open": "1.71"
 },
 "fraction": {
-"value": "181/50",
-"open": "117/100"
+"value": "8/5",
+"open": "5/7"
+},
+"total": {
+"value": "12+",
+"open": "8+"
+}
+},
+"lastUpdated": "2026-11-27T21:30Z",
+"current": {
+"target": {
+"value": 12.0,
+"displayValue": "12+"
+}
+},
+"open": {
+"target": {
+"value": 8.0,
+"displayValue": "8+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
+},
+"type": {
+"id": "327",
+"name": "Rebounds + Assists Milestones"
+},
+"odds": {
+"american": {
+"value": "+550",
+"open": "-140"
+},
+"decimal": {
+"value": "6.50",
+"open": "1.71"
+},
+"fraction": {
+"value": "11/2",
+"open": "5/7"
+},
+"total": {
+"value": "15+",
+"open": "8+"
+}
+},
+"lastUpdated": "2026-11-27T21:30Z",
+"current": {
+"target": {
+"value": 15.0,
+"displayValue": "15+"
+}
+},
+"open": {
+"target": {
+"value": 8.0,
+"displayValue": "8+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
+},
+"type": {
+"id": "327",
+"name": "Rebounds + Assists Milestones"
+},
+"odds": {
+"american": {
+"value": "+1600",
+"open": "-140"
+},
+"decimal": {
+"value": "17.00",
+"open": "1.71"
+},
+"fraction": {
+"value": "16/1",
+"open": "5/7"
+},
+"total": {
+"value": "18+",
+"open": "8+"
+}
+},
+"lastUpdated": "2026-11-27T21:30Z",
+"current": {
+"target": {
+"value": 18.0,
+"displayValue": "18+"
+}
+},
+"open": {
+"target": {
+"value": 8.0,
+"displayValue": "8+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
+},
+"type": {
+"id": "327",
+"name": "Rebounds + Assists Milestones"
+},
+"odds": {
+"american": {
+"value": "+100",
+"open": "-140"
+},
+"decimal": {
+"value": "2.00",
+"open": "1.71"
+},
+"fraction": {
+"value": "1/1",
+"open": "5/7"
 },
 "total": {
 "value": "11+",
 "open": "8+"
 }
 },
-"lastUpdated": "2026-11-27T12:31Z",
+"lastUpdated": "2026-11-27T21:56Z",
 "current": {
 "target": {
 "value": 11.0,
@@ -9752,87 +9659,7 @@
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "228",
-"name": "Points Milestones - 1st Quarter"
-},
-"odds": {
-"american": {
-"value": "+522",
-"open": "+117"
-},
-"decimal": {
-"value": "6.22",
-"open": "2.17"
-},
-"fraction": {
-"value": "261/50",
-"open": "117/100"
-},
-"total": {
-"value": "12+",
-"open": "8+"
-}
-},
-"lastUpdated": "2026-11-27T12:31Z",
-"current": {
-"target": {
-"value": 12.0,
-"displayValue": "12+"
-}
-},
-"open": {
-"target": {
-"value": 8.0,
-"displayValue": "8+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
-},
-"type": {
-"id": "228",
-"name": "Points Milestones - 1st Quarter"
-},
-"odds": {
-"american": {
-"value": "+740",
-"open": "+117"
-},
-"decimal": {
-"value": "8.40",
-"open": "2.17"
-},
-"fraction": {
-"value": "37/5",
-"open": "117/100"
-},
-"total": {
-"value": "13+",
-"open": "8+"
-}
-},
-"lastUpdated": "2026-11-27T12:31Z",
-"current": {
-"target": {
-"value": 13.0,
-"displayValue": "13+"
-}
-},
-"open": {
-"target": {
-"value": 8.0,
-"displayValue": "8+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
 },
 "type": {
 "id": "327",
@@ -9840,23 +9667,23 @@
 },
 "odds": {
 "american": {
-"value": "-1600",
-"open": "-140"
+"value": "-2500",
+"open": "+110"
 },
 "decimal": {
-"value": "1.06",
-"open": "1.71"
+"value": "1.04",
+"open": "2.10"
 },
 "fraction": {
-"value": "1/16",
-"open": "5/7"
+"value": "1/25",
+"open": "11/10"
 },
 "total": {
 "value": "5+",
-"open": "8+"
+"open": "12+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:37Z",
 "current": {
 "target": {
 "value": 5.0,
@@ -9865,14 +9692,14 @@
 },
 "open": {
 "target": {
-"value": 8.0,
-"displayValue": "8+"
+"value": 12.0,
+"displayValue": "12+"
 }
 }
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
 },
 "type": {
 "id": "327",
@@ -9880,23 +9707,23 @@
 },
 "odds": {
 "american": {
-"value": "-195",
-"open": "-140"
+"value": "-300",
+"open": "+110"
 },
 "decimal": {
-"value": "1.51",
-"open": "1.71"
+"value": "1.33",
+"open": "2.10"
 },
 "fraction": {
-"value": "20/39",
-"open": "5/7"
+"value": "1/3",
+"open": "11/10"
 },
 "total": {
 "value": "8+",
-"open": "8+"
+"open": "12+"
 }
 },
-"lastUpdated": "2026-11-27T07:51Z",
+"lastUpdated": "2026-11-27T21:37Z",
 "current": {
 "target": {
 "value": 8.0,
@@ -9904,135 +9731,15 @@
 }
 },
 "open": {
-"target": {
-"value": 8.0,
-"displayValue": "8+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
-},
-"type": {
-"id": "327",
-"name": "Rebounds + Assists Milestones"
-},
-"odds": {
-"american": {
-"value": "+140",
-"open": "-140"
-},
-"decimal": {
-"value": "2.40",
-"open": "1.71"
-},
-"fraction": {
-"value": "7/5",
-"open": "5/7"
-},
-"total": {
-"value": "10+",
-"open": "8+"
-}
-},
-"lastUpdated": "2026-11-27T07:51Z",
-"current": {
-"target": {
-"value": 10.0,
-"displayValue": "10+"
-}
-},
-"open": {
-"target": {
-"value": 8.0,
-"displayValue": "8+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
-},
-"type": {
-"id": "327",
-"name": "Rebounds + Assists Milestones"
-},
-"odds": {
-"american": {
-"value": "+330",
-"open": "-140"
-},
-"decimal": {
-"value": "4.30",
-"open": "1.71"
-},
-"fraction": {
-"value": "33/10",
-"open": "5/7"
-},
-"total": {
-"value": "12+",
-"open": "8+"
-}
-},
-"lastUpdated": "2026-11-27T07:51Z",
-"current": {
 "target": {
 "value": 12.0,
 "displayValue": "12+"
 }
-},
-"open": {
-"target": {
-"value": 8.0,
-"displayValue": "8+"
-}
 }
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
-},
-"type": {
-"id": "327",
-"name": "Rebounds + Assists Milestones"
-},
-"odds": {
-"american": {
-"value": "+1100",
-"open": "-140"
-},
-"decimal": {
-"value": "12.00",
-"open": "1.71"
-},
-"fraction": {
-"value": "11/1",
-"open": "5/7"
-},
-"total": {
-"value": "15+",
-"open": "8+"
-}
-},
-"lastUpdated": "2026-11-27T07:51Z",
-"current": {
-"target": {
-"value": 15.0,
-"displayValue": "15+"
-}
-},
-"open": {
-"target": {
-"value": 8.0,
-"displayValue": "8+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/3995?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
 },
 "type": {
 "id": "327",
@@ -10041,134 +9748,14 @@
 "odds": {
 "american": {
 "value": "-120",
-"open": "-140"
+"open": "+110"
 },
 "decimal": {
 "value": "1.83",
-"open": "1.71"
+"open": "2.10"
 },
 "fraction": {
 "value": "5/6",
-"open": "5/7"
-},
-"total": {
-"value": "9+",
-"open": "8+"
-}
-},
-"lastUpdated": "2026-11-27T08:39Z",
-"current": {
-"target": {
-"value": 9.0,
-"displayValue": "9+"
-}
-},
-"open": {
-"target": {
-"value": 8.0,
-"displayValue": "8+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
-},
-"type": {
-"id": "327",
-"name": "Rebounds + Assists Milestones"
-},
-"odds": {
-"american": {
-"value": "-3000",
-"open": "+110"
-},
-"decimal": {
-"value": "1.03",
-"open": "2.10"
-},
-"fraction": {
-"value": "1/30",
-"open": "11/10"
-},
-"total": {
-"value": "5+",
-"open": "12+"
-}
-},
-"lastUpdated": "2026-11-27T06:08Z",
-"current": {
-"target": {
-"value": 5.0,
-"displayValue": "5+"
-}
-},
-"open": {
-"target": {
-"value": 12.0,
-"displayValue": "12+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
-},
-"type": {
-"id": "327",
-"name": "Rebounds + Assists Milestones"
-},
-"odds": {
-"american": {
-"value": "-340",
-"open": "+110"
-},
-"decimal": {
-"value": "1.29",
-"open": "2.10"
-},
-"fraction": {
-"value": "5/17",
-"open": "11/10"
-},
-"total": {
-"value": "8+",
-"open": "12+"
-}
-},
-"lastUpdated": "2026-11-27T04:27Z",
-"current": {
-"target": {
-"value": 8.0,
-"displayValue": "8+"
-}
-},
-"open": {
-"target": {
-"value": 12.0,
-"displayValue": "12+"
-}
-}
-},
-{
-"athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6589?lang=en&region=us"
-},
-"type": {
-"id": "327",
-"name": "Rebounds + Assists Milestones"
-},
-"odds": {
-"american": {
-"value": "-135",
-"open": "+110"
-},
-"decimal": {
-"value": "1.74",
-"open": "2.10"
-},
-"fraction": {
-"value": "20/27",
 "open": "11/10"
 },
 "total": {
@@ -10176,7 +9763,7 @@
 "open": "12+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:37Z",
 "current": {
 "target": {
 "value": 10.0,
@@ -10200,15 +9787,15 @@
 },
 "odds": {
 "american": {
-"value": "+170",
+"value": "+190",
 "open": "+110"
 },
 "decimal": {
-"value": "2.70",
+"value": "2.90",
 "open": "2.10"
 },
 "fraction": {
-"value": "17/10",
+"value": "19/10",
 "open": "11/10"
 },
 "total": {
@@ -10216,7 +9803,7 @@
 "open": "12+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:37Z",
 "current": {
 "target": {
 "value": 12.0,
@@ -10240,15 +9827,15 @@
 },
 "odds": {
 "american": {
-"value": "+500",
+"value": "+600",
 "open": "+110"
 },
 "decimal": {
-"value": "6.00",
+"value": "7.00",
 "open": "2.10"
 },
 "fraction": {
-"value": "5/1",
+"value": "6/1",
 "open": "11/10"
 },
 "total": {
@@ -10256,7 +9843,7 @@
 "open": "12+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:37Z",
 "current": {
 "target": {
 "value": 15.0,
@@ -10280,15 +9867,15 @@
 },
 "odds": {
 "american": {
-"value": "+1400",
+"value": "+1600",
 "open": "+110"
 },
 "decimal": {
-"value": "15.00",
+"value": "17.00",
 "open": "2.10"
 },
 "fraction": {
-"value": "14/1",
+"value": "16/1",
 "open": "11/10"
 },
 "total": {
@@ -10296,7 +9883,7 @@
 "open": "12+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T21:37Z",
 "current": {
 "target": {
 "value": 18.0,
@@ -10320,15 +9907,15 @@
 },
 "odds": {
 "american": {
-"value": "+2200",
+"value": "+2500",
 "open": "+110"
 },
 "decimal": {
-"value": "23.00",
+"value": "26.00",
 "open": "2.10"
 },
 "fraction": {
-"value": "22/1",
+"value": "25/1",
 "open": "11/10"
 },
 "total": {
@@ -10336,7 +9923,7 @@
 "open": "12+"
 }
 },
-"lastUpdated": "2026-11-27T04:27Z",
+"lastUpdated": "2026-11-27T22:54Z",
 "current": {
 "target": {
 "value": 20.0,
@@ -10352,7 +9939,7 @@
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "327",
@@ -10360,23 +9947,23 @@
 },
 "odds": {
 "american": {
-"value": "-1200",
-"open": "-135"
+"value": "-370",
+"open": "-110"
 },
 "decimal": {
-"value": "1.08",
-"open": "1.74"
+"value": "1.27",
+"open": "1.90"
 },
 "fraction": {
-"value": "1/12",
-"open": "20/27"
+"value": "10/37",
+"open": "10/11"
 },
 "total": {
 "value": "5+",
-"open": "8+"
+"open": "7+"
 }
 },
-"lastUpdated": "2026-11-27T07:50Z",
+"lastUpdated": "2026-11-27T21:37Z",
 "current": {
 "target": {
 "value": 5.0,
@@ -10385,14 +9972,14 @@
 },
 "open": {
 "target": {
-"value": 8.0,
-"displayValue": "8+"
+"value": 7.0,
+"displayValue": "7+"
 }
 }
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "327",
@@ -10400,23 +9987,63 @@
 },
 "odds": {
 "american": {
-"value": "-150",
-"open": "-135"
+"value": "-115",
+"open": "-110"
 },
 "decimal": {
-"value": "1.66",
-"open": "1.74"
+"value": "1.86",
+"open": "1.90"
 },
 "fraction": {
-"value": "4/6",
-"open": "20/27"
+"value": "20/23",
+"open": "10/11"
+},
+"total": {
+"value": "7+",
+"open": "7+"
+}
+},
+"lastUpdated": "2026-11-27T21:37Z",
+"current": {
+"target": {
+"value": 7.0,
+"displayValue": "7+"
+}
+},
+"open": {
+"target": {
+"value": 7.0,
+"displayValue": "7+"
+}
+}
+},
+{
+"athlete": {
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
+},
+"type": {
+"id": "327",
+"name": "Rebounds + Assists Milestones"
+},
+"odds": {
+"american": {
+"value": "+145",
+"open": "-110"
+},
+"decimal": {
+"value": "2.45",
+"open": "1.90"
+},
+"fraction": {
+"value": "29/20",
+"open": "10/11"
 },
 "total": {
 "value": "8+",
-"open": "8+"
+"open": "7+"
 }
 },
-"lastUpdated": "2026-11-27T07:50Z",
+"lastUpdated": "2026-11-27T21:37Z",
 "current": {
 "target": {
 "value": 8.0,
@@ -10425,14 +10052,14 @@
 },
 "open": {
 "target": {
-"value": 8.0,
-"displayValue": "8+"
+"value": 7.0,
+"displayValue": "7+"
 }
 }
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "327",
@@ -10440,23 +10067,23 @@
 },
 "odds": {
 "american": {
-"value": "+185",
-"open": "-135"
+"value": "+370",
+"open": "-110"
 },
 "decimal": {
-"value": "2.85",
-"open": "1.74"
+"value": "4.70",
+"open": "1.90"
 },
 "fraction": {
-"value": "37/20",
-"open": "20/27"
+"value": "37/10",
+"open": "10/11"
 },
 "total": {
 "value": "10+",
-"open": "8+"
+"open": "7+"
 }
 },
-"lastUpdated": "2026-11-27T07:50Z",
+"lastUpdated": "2026-11-27T21:37Z",
 "current": {
 "target": {
 "value": 10.0,
@@ -10465,14 +10092,14 @@
 },
 "open": {
 "target": {
-"value": 8.0,
-"displayValue": "8+"
+"value": 7.0,
+"displayValue": "7+"
 }
 }
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "327",
@@ -10480,23 +10107,23 @@
 },
 "odds": {
 "american": {
-"value": "+475",
-"open": "-135"
+"value": "+900",
+"open": "-110"
 },
 "decimal": {
-"value": "5.75",
-"open": "1.74"
+"value": "10.00",
+"open": "1.90"
 },
 "fraction": {
-"value": "19/4",
-"open": "20/27"
+"value": "9/1",
+"open": "10/11"
 },
 "total": {
 "value": "12+",
-"open": "8+"
+"open": "7+"
 }
 },
-"lastUpdated": "2026-11-27T07:50Z",
+"lastUpdated": "2026-11-27T21:37Z",
 "current": {
 "target": {
 "value": 12.0,
@@ -10505,14 +10132,14 @@
 },
 "open": {
 "target": {
-"value": 8.0,
-"displayValue": "8+"
+"value": 7.0,
+"displayValue": "7+"
 }
 }
 },
 {
 "athlete": {
-"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/6606?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2027/athletes/4066436?lang=en&region=us"
 },
 "type": {
 "id": "327",
@@ -10520,23 +10147,23 @@
 },
 "odds": {
 "american": {
-"value": "+1700",
-"open": "-135"
+"value": "+2200",
+"open": "-110"
 },
 "decimal": {
-"value": "18.00",
-"open": "1.74"
+"value": "23.00",
+"open": "1.90"
 },
 "fraction": {
-"value": "17/1",
-"open": "20/27"
+"value": "22/1",
+"open": "10/11"
 },
 "total": {
 "value": "15+",
-"open": "8+"
+"open": "7+"
 }
 },
-"lastUpdated": "2026-11-27T07:50Z",
+"lastUpdated": "2026-11-27T21:37Z",
 "current": {
 "target": {
 "value": 15.0,
@@ -10545,8 +10172,8 @@
 },
 "open": {
 "target": {
-"value": 8.0,
-"displayValue": "8+"
+"value": 7.0,
+"displayValue": "7+"
 }
 }
 }

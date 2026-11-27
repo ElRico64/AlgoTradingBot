@@ -17052,8 +17052,12 @@
    "market check: model 75.5% vs books 71.9% -> 72.7% (keeps 21% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-27T09:42:55+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.3509,
+  "graded_at": "2026-11-27T22:43:47+00:00",
+  "final": "CGY 3 \u2013 NJ 5",
+  "close_price": -270.0,
+  "clv": -0.0105
  },
  {
   "id": "confidence:2026-11-27:NBA-20261127-DEN-UTAH-21:moneyline:away",
