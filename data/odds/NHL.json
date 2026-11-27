@@ -21945,38 +21945,38 @@ null,
 "under_price": -115.0
 },
 "NHL-20261127-CGY-NJ-13": {
-"away_ml": 230.0,
-"away_spread_price": -112.0,
-"home_ml": -285.0,
-"home_spread_price": -108.0,
+"away_ml": 220.0,
+"away_spread_price": -115.0,
+"home_ml": -270.0,
+"home_spread_price": -105.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.7555,
-0.7186
+0.7438,
+0.7086
 ],
 [
 "moneyline",
 "away",
 null,
-0.2445,
-0.2814
+0.2562,
+0.2914
 ],
 [
 "spread",
 "home",
 -1.5,
-0.4525,
-0.4955
+0.4467,
+0.4887
 ],
 [
 "spread",
 "away",
 -1.5,
-0.5475,
-0.5045
+0.5533,
+0.5113
 ],
 [
 "total",
@@ -22165,65 +22165,10 @@ null,
 "under_price": 102.0
 },
 "NHL-20261127-FLA-WSH-15": {
-"away_ml": -118.0,
-"away_spread_price": 205.0,
-"home_ml": -102.0,
-"home_spread_price": -250.0,
-"model": [
-[
-"moneyline",
-"home",
-null,
-0.4593,
-0.4818
-],
-[
-"moneyline",
-"away",
-null,
-0.5407,
-0.5182
-],
-[
-"spread",
-"home",
-1.5,
-0.6298,
-0.6932
-],
-[
-"spread",
-"away",
-1.5,
-0.3702,
-0.3068
-],
-[
-"total",
-"over",
-6.5,
-0.5192,
-0.5113
-],
-[
-"total",
-"under",
-6.5,
-0.4808,
-0.4887
-]
-],
-"over_price": -115.0,
-"source": "DraftKings",
-"spread": 1.5,
-"total": 6.5,
-"under_price": -105.0
-},
-"NHL-20261127-LA-ANA-16": {
 "away_ml": -115.0,
-"away_spread_price": 215.0,
+"away_spread_price": 205.0,
 "home_ml": -105.0,
-"home_spread_price": -265.0,
+"home_spread_price": -250.0,
 "model": [
 [
 "moneyline",
@@ -22243,15 +22188,70 @@ null,
 "spread",
 "home",
 1.5,
-0.6403,
-0.7043
+0.6298,
+0.6932
 ],
 [
 "spread",
 "away",
 1.5,
-0.3597,
-0.2957
+0.3702,
+0.3068
+],
+[
+"total",
+"over",
+6.5,
+0.5212,
+0.5182
+],
+[
+"total",
+"under",
+6.5,
+0.4788,
+0.4818
+]
+],
+"over_price": -118.0,
+"source": "DraftKings",
+"spread": 1.5,
+"total": 6.5,
+"under_price": -102.0
+},
+"NHL-20261127-LA-ANA-16": {
+"away_ml": -115.0,
+"away_spread_price": 205.0,
+"home_ml": -105.0,
+"home_spread_price": -250.0,
+"model": [
+[
+"moneyline",
+"home",
+null,
+0.468,
+0.4887
+],
+[
+"moneyline",
+"away",
+null,
+0.532,
+0.5113
+],
+[
+"spread",
+"home",
+1.5,
+0.6298,
+0.6932
+],
+[
+"spread",
+"away",
+1.5,
+0.3702,
+0.3068
 ],
 [
 "total",
@@ -22366,29 +22366,29 @@ null,
 [
 "total",
 "over",
-6.5,
-0.4992,
-0.4464
+5.5,
+0.5321,
+0.5536
 ],
 [
 "total",
 "under",
-6.5,
-0.5008,
-0.5536
+5.5,
+0.4679,
+0.4464
 ]
 ],
-"over_price": 114.0,
+"over_price": -135.0,
 "source": "DraftKings",
 "spread": -1.5,
-"total": 6.5,
-"under_price": -135.0
+"total": 5.5,
+"under_price": 114.0
 },
 "NHL-20261127-PIT-BUF-20": {
 "away_ml": 130.0,
-"away_spread_price": -198.0,
+"away_spread_price": -185.0,
 "home_ml": -155.0,
-"home_spread_price": 164.0,
+"home_spread_price": 154.0,
 "model": [
 [
 "moneyline",
@@ -22408,15 +22408,15 @@ null,
 "spread",
 "home",
 -1.5,
-0.3354,
-0.3572
+0.3481,
+0.3723
 ],
 [
 "spread",
 "away",
 -1.5,
-0.6646,
-0.6428
+0.6519,
+0.6277
 ],
 [
 "total",
@@ -22441,9 +22441,9 @@ null,
 },
 "NHL-20261127-SEA-EDM-20": {
 "away_ml": 180.0,
-"away_spread_price": -142.0,
+"away_spread_price": -135.0,
 "home_ml": -218.0,
-"home_spread_price": 120.0,
+"home_spread_price": 114.0,
 "model": [
 [
 "moneyline",
@@ -22463,15 +22463,15 @@ null,
 "spread",
 "home",
 -1.5,
-0.4001,
-0.4339
+0.4107,
+0.4464
 ],
 [
 "spread",
 "away",
 -1.5,
-0.5999,
-0.5661
+0.5893,
+0.5536
 ],
 [
 "total",
@@ -22550,24 +22550,24 @@ null,
 "under_price": -105.0
 },
 "NHL-20261127-UTAH-NSH-13": {
-"away_ml": -118.0,
+"away_ml": -115.0,
 "away_spread_price": 210.0,
-"home_ml": -102.0,
+"home_ml": -105.0,
 "home_spread_price": -258.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.4593,
-0.4818
+0.468,
+0.4887
 ],
 [
 "moneyline",
 "away",
 null,
-0.5407,
-0.5182
+0.532,
+0.5113
 ],
 [
 "spread",
@@ -22715,24 +22715,24 @@ null,
 "under_price": -105.0
 },
 "NHL-20261127-WPG-NYI-19": {
-"away_ml": 114.0,
+"away_ml": 105.0,
 "away_spread_price": -225.0,
-"home_ml": -135.0,
+"home_ml": -125.0,
 "home_spread_price": 185.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.551,
-0.5536
+0.5258,
+0.5339
 ],
 [
 "moneyline",
 "away",
 null,
-0.449,
-0.4464
+0.4742,
+0.4661
 ],
 [
 "spread",
