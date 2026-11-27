@@ -1,14 +1,51 @@
 {
 "boxscores": {
-"days_scanned": 469,
+"days_scanned": 470,
 "errors": 4,
 "games_stored": 2809,
 "new_games": 0,
 "new_rows": 0,
-"seconds": 7.5
+"seconds": 7.9
 },
-"candidate_legs": 0,
-"espn": "",
+"candidate_legs": 3186,
+"espn": "ESPN props: over/under side order confirmed by the data",
+"espn_orientation": {
+"checked_at": "2026-11-27T09:43:43+00:00",
+"first_is_over": true,
+"milestone_first_is_over_share": 1.0,
+"milestone_matches": 468,
+"model_corr": 0.5170874090612454,
+"model_n": 508,
+"results_loglik_diff": 91.13,
+"results_n": 3239
+},
+"espn_types": {
+"(milestone ladders left out: no matching full-game line, or ambiguous)": 71,
+"3-Point Field Goals Milestones": 669,
+"Assists Milestones": 890,
+"Assists Milestones - 1st Quarter": 76,
+"Blocks Milestones": 92,
+"First Basket": 110,
+"Points + Assists + Rebounds Milestones": 938,
+"Points + Assists Milestones": 831,
+"Points + Rebounds Milestones": 909,
+"Points Milestones": 1119,
+"Points Milestones - 1st Quarter": 646,
+"Rebounds + Assists Milestones": 626,
+"Rebounds Milestones": 1428,
+"Steals Milestones": 262,
+"Team Total Points": 44,
+"To Record a Double Double": 134,
+"To Record a Triple Double": 58,
+"Total 3-Point Field Goals": 237,
+"Total Assists": 252,
+"Total Assists and Rebounds": 251,
+"Total Points": 270,
+"Total Points and Assists": 252,
+"Total Points and Rebounds": 266,
+"Total Points, Rebounds, and Assists": 257,
+"Total Rebounds": 259
+},
 "graded_now": 0,
 "market_check": {
 "market_n": 25261,
@@ -237,7 +274,7 @@
 }
 }
 },
-"prices": "prop prices: none (add a free ODDS_API_KEY to price props; nothing is invented)",
+"prices": "prop prices: ESPN (free), 3847 milestones and 508 over/unders on 11 games",
 "rows": 60539,
-"updated_at": "2026-11-27T03:47:37+00:00"
+"updated_at": "2026-11-27T09:43:21+00:00"
 }
