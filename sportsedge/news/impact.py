@@ -55,6 +55,9 @@ class PlayerImpactRegistry:
         # leagues whose table covers every player who matters: anyone missing from it has no
         # measurable cost (a fringe player, or one out long enough to be in his team's rating)
         self.complete: set = set()
+        # leagues whose table covers some positions only (NFL: QB, RB, WR, TE): a player at one of
+        # them missing from the table has no measurable cost; other positions keep their defaults
+        self.roles: dict = {}
 
     def add(self, league: str, player: str, impact: float, impact_sd: float, role: Optional[str] = None):
         self._d[(league.upper(), _key(player))] = (impact, impact_sd, role)
@@ -62,8 +65,10 @@ class PlayerImpactRegistry:
     def get(self, league: str, player: str):
         return self._d.get((league.upper(), _key(player)))
 
-    def covers(self, league: str) -> bool:
-        return league.upper() in getattr(self, "complete", set())
+    def covers(self, league: str, role: Optional[str] = None) -> bool:
+        if league.upper() in getattr(self, "complete", set()):
+            return True
+        return bool(role) and str(role).upper() in getattr(self, "roles", {}).get(league.upper(), ())
 
     @classmethod
     def from_csv(cls, path: str) -> "PlayerImpactRegistry":
@@ -114,7 +119,7 @@ def build_factors(events: Iterable[NewsEvent], cfg: LeagueConfig, as_of: datetim
         if q >= 0.999:
             continue
         reg = registry.get(cfg.league, ev.player) if registry else None
-        if reg is None and registry is not None and registry.covers(cfg.league):
+        if reg is None and registry is not None and registry.covers(cfg.league, ev.role):
             continue  # priced from data: no measurable cost
         role = ev.role or (reg[2] if reg else None)
         if reg:

@@ -44,7 +44,7 @@ from .types import Game, GameResult, MarketOdds, MarketProbability, Prediction
 
 # Bump when a code change makes previously saved engines incompatible; saved
 # engines from another version are retrained from scratch instead of reused.
-ENGINE_VERSION = 7  # 5: nested-CV gate for the pattern engine; 6: learned skew-t margins (NBA); 7: player absences (NBA)
+ENGINE_VERSION = 8  # 5: nested-CV gate for the pattern engine; 6: learned skew-t margins (NBA); 7: player absences (NBA); 8: NHL/NFL absences
 
 
 def _logit(p: float) -> float:
@@ -134,14 +134,16 @@ class LeagueEngine:
         self.lineup: dict = {}
         self.lineup_xe = 0.0
         self.lineup_xx = 0.0
+        self.lineup_n = 0.0
 
     # ------------------------------------------------------------------ utils
     @property
     def lineup_scale(self) -> float:
-        """Margin points per point of box-score absence cost, learned from residuals:
+        """Margin points (goals) per point (goal) of box-score absence cost, learned from residuals:
         c = (sum x e + k * 1) / (sum x^2 + k), a ridge toward 1 (cost taken at face value)."""
-        k = 50.0
-        return float(np.clip((getattr(self, "lineup_xe", 0.0) + k) / (getattr(self, "lineup_xx", 0.0) + k), 0.0, 2.0))
+        xx, n = getattr(self, "lineup_xx", 0.0), getattr(self, "lineup_n", 0.0)
+        k = 25.0 * xx / n if n > 0 else 1.0  # a prior worth 25 typical games, in each sport's own units
+        return float(np.clip((getattr(self, "lineup_xe", 0.0) + k) / (xx + k), 0.0, 2.0))
 
     @property
     def half_total(self) -> float:
@@ -284,6 +286,7 @@ class LeagueEngine:
             for x, e in lin_obs:  # learned after the day's forecasts, like everything else
                 self.lineup_xe = 0.9995 * getattr(self, "lineup_xe", 0.0) + x * e
                 self.lineup_xx = 0.9995 * getattr(self, "lineup_xx", 0.0) + x * x
+                self.lineup_n = 0.9995 * getattr(self, "lineup_n", 0.0) + 1.0
             for r in day:
                 self.kf_margin.update(r.home, r.away, r.margin, r.neutral, r.start_time)
                 self.kf_total.update(r.home, r.away, r.total, r.neutral, r.start_time)

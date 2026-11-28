@@ -689,46 +689,93 @@ def _read_engine(path: str) -> Optional[LeagueEngine]:
     return eng if getattr(eng, "version", None) == ENGINE_VERSION else None
 
 
-def nba_absences(data_dir: str) -> dict:
-    """Walk-forward absence cost of every NBA game in the box scores (empty without them)."""
-    from .models.player_value import absence_features
+PLAYER_LEAGUES = ("NBA", "NHL", "NFL")
+# box-score games needed before player values are used (the engine learns how much they matter)
+MIN_PLAYER_GAMES = {"NBA": 200, "NHL": 600, "NFL": 150}
+
+
+def _player_rows(data_dir: str, league: str) -> list[dict]:
     from .props.boxscores import load_rows
 
+    rows = load_rows(data_dir, league)
+    return rows if len({r["game_id"] for r in rows}) >= MIN_PLAYER_GAMES[league] else []
+
+
+def league_absences(data_dir: str, league: str) -> dict:
+    """Walk-forward absence cost of every past game in the box scores (empty without enough of them)."""
+    from .models.player_value import absence_features
+
+    if league not in PLAYER_LEAGUES:
+        return {}
     try:
-        rows = load_rows(data_dir)
-        return absence_features(rows) if len(rows) > 5000 else {}
+        rows = _player_rows(data_dir, league)
+        return absence_features(rows, league=league) if rows else {}
     except Exception as e:  # never let this stop the picks
-        log.warning("NBA absences unavailable: %s", e)
+        log.warning("%s absences unavailable: %s", league, e)
         return {}
 
 
-def nba_impact_registry(data_dir: str, scale: float, base=None):
-    """What each NBA player's absence costs his team now, priced from box scores and the
-    engine's learned scale. Saved to data/players/NBA_impacts.csv for inspection."""
+def nba_absences(data_dir: str) -> dict:
+    return league_absences(data_dir, "NBA")
+
+
+def impact_registry(data_dir: str, league: str, scale: float, base=None):
+    """What each player's absence costs his team now, priced from box scores and the engine's
+    learned scale. Saved to data/players/<LEAGUE>_impacts.csv for inspection."""
     from .models.player_value import player_impacts
+    from .models.player_value_nfl import COVERED_ROLES
     from .news.impact import PlayerImpactRegistry
-    from .props.boxscores import load_rows
 
     try:
-        rows = load_rows(data_dir)
-        if len(rows) <= 5000:
+        rows = _player_rows(data_dir, league)
+        if not rows:
             return base
-        imps = player_impacts(rows, scale=scale)
+        imps = player_impacts(rows, scale=scale, league=league)
     except Exception as e:
-        log.warning("NBA player impacts unavailable: %s", e)
+        log.warning("%s player impacts unavailable: %s", league, e)
         return base
     reg = base or PlayerImpactRegistry()
     for x in imps:
-        if base is None or base.get("NBA", x["player"]) is None:  # a hand-made table wins
-            reg.add("NBA", x["player"], x["impact"], x["impact_sd"])
-    if len(imps) >= 50:  # only a full table may say "anyone missing from it has no measurable cost"
-        reg.complete.add("NBA")
-    path = os.path.join(data_dir, "players", "NBA_impacts.csv")
+        if base is None or base.get(league, x["player"]) is None:  # a hand-made table wins
+            reg.add(league, x["player"], x["impact"], x["impact_sd"], x.get("role") or None)
+    if len(imps) >= 30:  # only a full table may say "anyone missing from it has no measurable cost"
+        if league == "NFL":
+            reg.roles["NFL"] = set(COVERED_ROLES)
+        else:
+            reg.complete.add(league)
+    path = os.path.join(data_dir, "players", f"{league}_impacts.csv")
     with open(path, "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(imps[0]) if imps else ["player"])
         w.writeheader()
         w.writerows(imps)
     return reg
+
+
+def nba_impact_registry(data_dir: str, scale: float, base=None):
+    return impact_registry(data_dir, "NBA", scale, base)
+
+
+def update_player_boxscores(data_dir: str, day: date, leagues) -> dict:
+    """NHL and NFL box scores (NBA's come with the props step), newest first, time-budgeted.
+    Never fails the update."""
+    from .props.boxscores import update_boxscores
+
+    out = {}
+    for league, secs in (("NHL", 120.0), ("NFL", 60.0)):
+        if league not in leagues:
+            continue
+        try:
+            path = os.path.join(data_dir, "history", f"{league}.csv")
+            if not os.path.exists(path):
+                continue
+            with open(path, newline="") as f:
+                days = sorted({datetime.fromisoformat(r["date"]).date() for r in csv.DictReader(f)})
+            budget = float(os.environ.get(f"{league}_BOX_SECONDS", secs))
+            out[league] = update_boxscores(data_dir, days, day, budget_seconds=budget, league=league)
+        except Exception as e:
+            log.warning("%s box scores skipped: %s", league, e)
+            out[league] = {"error": type(e).__name__}
+    return out
 
 
 def _load_engine(league: str, data_dir: str, day: date, bootstrap_days: int,
@@ -760,7 +807,7 @@ def _load_engine(league: str, data_dir: str, day: date, bootstrap_days: int,
     os.makedirs(os.path.dirname(hist_path), exist_ok=True)
     write_results(hist_path, history)
 
-    lineup = nba_absences(data_dir) if league == "NBA" else {}
+    lineup = league_absences(data_dir, league)
     eng = None
     for name in _saved_engines(cache_dir, league):
         if name >= os.path.basename(cache):
@@ -768,6 +815,8 @@ def _load_engine(league: str, data_dir: str, day: date, bootstrap_days: int,
         eng = _read_engine(os.path.join(cache_dir, name))
         if eng is not None:
             break
+    if eng is not None and len(lineup) > 1.5 * getattr(eng, "lineup_trained", 0) + 100:
+        eng = None  # many more box scores than it learned from: learn the absences on the whole history
     if eng is not None and eng.history:
         seen = {g.game_id for g in eng.history}
         last = eng.history[-1].start_time
@@ -784,6 +833,7 @@ def _load_engine(league: str, data_dir: str, day: date, bootstrap_days: int,
         eng = LeagueEngine(league)
         eng.lineup = lineup
         eng.fit(history)
+        eng.lineup_trained = len(lineup)
     os.makedirs(cache_dir, exist_ok=True)
     tmp = cache + ".tmp"
     with open(tmp, "wb") as f:
@@ -831,8 +881,8 @@ def run_league(league: str, data_dir: str, day: date, policy: PickPolicy, ledger
         events = gather_news(league, analyzer=analyzer)
         imp_path = os.path.join(data_dir, "player_impacts.csv")
         reg = PlayerImpactRegistry.from_csv(imp_path) if os.path.exists(imp_path) else None
-        if league == "NBA":
-            reg = nba_impact_registry(data_dir, engine.lineup_scale, reg)
+        if league in PLAYER_LEAGUES:
+            reg = impact_registry(data_dir, league, engine.lineup_scale, reg)
         factors = build_factors(events, get_config(league), datetime.now(timezone.utc), reg)
     board_path = os.path.join(data_dir, ".cache", f"board-{league}.json")
     previous = {}
@@ -935,6 +985,9 @@ def run_daily(leagues=ALL_LEAGUES, data_dir: str = "data", site_dir: str = "site
         finals.update(r.finals)
     settle_parlays(ledger, finals, day)
     props = run_nba_props(runs, data_dir, day, odds_key, ledger, leagues)
+    player_box = update_player_boxscores(data_dir, day, leagues)
+    if player_box:
+        log.info("player box scores: %s", player_box)
     parlay_scan = update_parlays(ledger, [g for r in runs for g in r.games], day.isoformat())
     os.makedirs(data_dir, exist_ok=True)
     with open(ledger_path, "w") as f:

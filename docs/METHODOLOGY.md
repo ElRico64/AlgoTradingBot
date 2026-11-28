@@ -607,6 +607,66 @@ is why 70%+ moneyline picks were well calibrated (said 80.0%, hit 79.7% on
 gap. The check gives the engine more say on its own as its new predictions
 prove themselves.
 
+## 8f. NHL and NFL player availability (`models/player_value.py`, `models/player_value_nfl.py`)
+
+The same problem existed in hockey and football.
+* NHL: every injured skater cost 0.06 goals and every goalie 0.25, whoever
+  he was.
+* NFL: every injured quarterback cost 4 points, starter or third-stringer,
+  and everyone else 0.4.
+
+The fix follows the NBA's (§8e): box scores give each player a value, the
+engine learns how much absences move results, and the injury report sets
+who plays.
+
+**NHL.**
+* *Skaters:* the same regularised plus-minus as the NBA, on time on ice and
+  goals. The box-score prior uses goals, assists, shots, +/-, blocks, hits,
+  takeaways and giveaways per 60. Five skaters, 60 minutes.
+* *Goalies:* goals saved above average per shot, gsaa = sv% − league sv%.
+  Save percentage is shrunk toward the league with 2,000 pseudo-shots, as in
+  the existing goalie model.
+* *Past games:* a game started by someone other than the team's usual
+  starter costs (gsaa_usual − gsaa_actual) × shots against per game.
+* *Live:* the usual starter's cost is (gsaa_starter − gsaa_backup) × shots
+  per game × his share of starts. He is marked as a goalie, so his absence
+  raises the opponent's scoring rate.
+* NHL box scores (time on ice, goals, shots; goalies' shots and goals
+  against) download from ESPN's game pages, two minutes per update.
+
+**NFL.** Seventeen games cannot separate 53 players by plus-minus, so the
+model values what box scores measure well.
+* *Quarterbacks:* adjusted net yards per dropback,
+  (yds + 20·TD − 45·INT − sack yds)/(att + sacks), shrunk toward the league
+  rate minus 1.0 with 250 pseudo-dropbacks. A short record is treated as a
+  backup's. The cost of the starter being out is
+  0.065 pts/yd × [(ANY/A_starter − ANY/A_backup) × dropbacks per game + rush
+  yds/game difference]. The backup is the team's next quarterback by recent
+  starts, or a replacement-level passer.
+* *Running backs and receivers:* production per touch, (yards + 20·TD) /
+  (carries + targets), shrunk to the league rate. The replacement gets the
+  same touches at 85% of the league's production.
+* *Linemen and defenders* do not appear in box scores. They keep the
+  position defaults, and the injury table says so (it covers QB, RB, FB, WR
+  and TE only). A quarterback who is not his team's starter no longer costs
+  4 points.
+* NFL box scores (passing, rushing, receiving) download one minute per
+  update.
+
+**Learning and gating.**
+* The engine learns each sport's scale from its own residuals, as in the
+  NBA. The prior is now worth 25 typical games in each sport's units, so
+  hockey's small goal costs are not swamped by a fixed prior.
+* Player values are used only after 600 NHL or 150 NFL box-score games.
+  Until then each league runs as before.
+* When box-score coverage grows by half or more, the engine retrains from
+  scratch, so the whole history learns the absences.
+* A raw game page per update is saved to `data/players/samples/` to check
+  ESPN's format.
+* The walk-forward test against the engine without absences (as in §8e) runs
+  once the box scores are in. A league whose absences do not improve
+  out-of-sample predictions will have them switched off.
+
 ## 8d. Methods considered (November 2026)
 
 | Method | Verdict | Evidence |

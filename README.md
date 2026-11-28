@@ -144,11 +144,13 @@ fictional teams and players, so you can see it before anything is set up.
 
 ### NBA injuries and spreads
 
-* **Injuries are priced by who the player is.** Each NBA player's value
-  comes from two seasons of box scores (`docs/METHODOLOGY.md` §8e). The
+* **Injuries are priced by who the player is** in the NBA, NHL and NFL.
+  NHL: skaters plus each team's starting goalie. NFL: starting quarterbacks,
+  running backs and receivers. Each player's value comes from box scores
+  (`docs/METHODOLOGY.md` §8e–8f). The
   engine learns from its own misses how much an absence moves results. The
-  injury report sets each player's chance of playing. Tonight's table is in
-  `data/players/NBA_impacts.csv`.
+  injury report sets each player's chance of playing. Tonight's tables are in
+  `data/players/<LEAGUE>_impacts.csv`.
 * **NBA spreads 70%+** is its own tab and record. A spread is published only
   when the market-checked chance to cover is at least 70%. Spreads are set
   near 50/50, so this is rare. On days with none, the tab shows the

@@ -1,2 +1,2 @@
 """The app version, shown in the menu and on the board. Bump it with every release."""
-VERSION = "2026.11.24.1"
+VERSION = "2026.11.28.1"

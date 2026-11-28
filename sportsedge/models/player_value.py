@@ -37,6 +37,28 @@ from typing import Iterable, Optional
 import numpy as np
 
 BOX_STATS = ("pts", "reb", "ast", "stl", "blk", "tov", "fg3m")
+
+
+@dataclass(frozen=True)
+class Spec:
+    """How a sport's box score maps onto the value model."""
+    league: str
+    minutes_key: str          # playing time column
+    score_key: str            # scoring column (team margin = sum over players)
+    box_stats: tuple          # box-score rates for the prior
+    period: float             # minutes in a game
+    on_court: int             # players on the floor / ice (skaters)
+    default_minutes: float
+    impact_floor: float       # costs below this are not listed
+    sd_floor: float
+    skip_pos: tuple = ()      # positions left out of the skater model (NHL goalies)
+
+
+SPECS = {
+    "NBA": Spec("NBA", "min", "pts", BOX_STATS, 48.0, 5, 12.0, 0.05, 0.3),
+    "NHL": Spec("NHL", "toi", "g", ("g", "a", "s", "pm", "bs", "ht", "tk", "gv"), 60.0, 5, 12.0, 0.01, 0.03,
+                skip_pos=("G",)),
+}
 HALF_LIFE_DAYS = 365.0
 LAMBDA = 30.0          # ridge on the player-specific part (u), in units of game-weight
 LAMBDA_BOX = 1.0       # light ridge on the box-score weights (gamma)
@@ -55,16 +77,18 @@ class LineupGame:
     minutes: dict  # team -> {player_id: minutes}
 
 
-def build_games(rows: Iterable[dict]) -> list[LineupGame]:
-    """Box-score rows -> games with each team's players and minutes; margin from summed points."""
+def build_games(rows: Iterable[dict], spec: Spec = SPECS["NBA"]) -> list[LineupGame]:
+    """Box-score rows -> games with each team's players and minutes; margin from summed points (goals)."""
     g: dict = {}
     for r in rows:
         x = g.get(r["game_id"])
         if x is None:
             x = g[r["game_id"]] = {"when": r["date"], "teams": {}, "home": None, "away": None, "pts": defaultdict(float)}
         t = r["team"]
-        x["teams"].setdefault(t, {})[r["player_id"]] = float(r.get("min") or 0.0)
-        x["pts"][t] += float(r.get("pts") or 0.0)
+        x["teams"].setdefault(t, {})
+        if r.get("pos") not in spec.skip_pos:
+            x["teams"][t][r["player_id"]] = float(r.get(spec.minutes_key) or 0.0)
+            x["pts"][t] += float(r.get(spec.score_key) or 0.0)
         if int(r.get("home") or 0):
             x["home"], x["away"] = t, r["opp"]
         else:
@@ -87,24 +111,25 @@ class PlayerValues:
     home_adv: float = 0.0
     fitted_through: Optional[datetime] = None
     n_games: int = 0
+    spec: Spec = SPECS["NBA"]
 
     def get(self, pid: str) -> float:
         return self.values.get(pid, getattr(self, "_default", 0.0))
 
-    @staticmethod
-    def _box_features(rows: list[dict], before: Optional[datetime]) -> tuple[dict, np.ndarray]:
-        S = defaultdict(lambda: np.zeros(len(BOX_STATS)))
+    def _box_features(self, rows: list[dict], before: Optional[datetime]) -> tuple[dict, np.ndarray]:
+        sp = self.spec
+        S = defaultdict(lambda: np.zeros(len(sp.box_stats)))
         M = defaultdict(float)
         for r in rows:
-            if before is not None and r["_when"] >= before:
+            if (before is not None and r["_when"] >= before) or r.get("pos") in sp.skip_pos:
                 continue
-            m = float(r.get("min") or 0.0)
+            m = float(r.get(sp.minutes_key) or 0.0)
             if m <= 0:
                 continue
-            S[r["player_id"]] += np.array([float(r.get(s) or 0.0) for s in BOX_STATS])
+            S[r["player_id"]] += np.array([float(r.get(s) or 0.0) for s in sp.box_stats])
             M[r["player_id"]] += m
         tot_m = sum(M.values()) or 1.0
-        league = sum(S.values(), np.zeros(len(BOX_STATS))) / tot_m
+        league = sum(S.values(), np.zeros(len(sp.box_stats))) / tot_m
         z = {pid: 36.0 * (S[pid] + K_MINUTES * league) / (M[pid] + K_MINUTES) for pid in S}
         return z, 36.0 * league
 
@@ -121,15 +146,15 @@ class PlayerValues:
         z, zbar = self._box_features(rows, before)
         pids = sorted({p for g in gs for t in (g.home, g.away) for p in g.minutes[t]})
         idx = {p: k for k, p in enumerate(pids)}
-        P, K = len(pids), len(BOX_STATS)
-        Z = np.array([(z.get(p, zbar) - zbar) / np.maximum(zbar, 1e-6) for p in pids])  # relative rates
+        P, K = len(pids), len(self.spec.box_stats)
+        Z = np.array([(z.get(p, zbar) - zbar) / np.maximum(np.abs(zbar), 1e-6) for p in pids])  # relative rates
         last = max(g.when for g in gs)
         w = np.array([0.5 ** ((last - g.when).days / half_life_days) for g in gs])
         X = np.zeros((len(gs), P))
         for r, g in enumerate(gs):
             for t, s in ((g.home, 1.0), (g.away, -1.0)):
                 for p, m in g.minutes[t].items():
-                    X[r, idx[p]] += s * m / 48.0
+                    X[r, idx[p]] += s * m / self.spec.period
         y = np.array([g.margin for g in gs])
         # unknowns: [a, gamma (K), u (P)];  v = Z gamma + u
         D = np.hstack([np.ones((len(gs), 1)), X @ Z, X])
@@ -147,11 +172,13 @@ class PlayerValues:
 
 
 def strength(values: PlayerValues, minutes: dict) -> float:
-    """Team strength (points per game vs an average team) of players with expected minutes."""
+    """Team strength (points / goals per game vs an average team) of players with expected minutes."""
     tot = sum(minutes.values())
     if tot <= 0:
         return 0.0
-    return sum((240.0 * m / tot) / 48.0 * values.get(p) for p, m in minutes.items())
+    sp = getattr(values, "spec", SPECS["NBA"])
+    team_minutes = sp.on_court * sp.period
+    return sum((team_minutes * m / tot) / sp.period * values.get(p) for p, m in minutes.items())
 
 
 COST_MODE = "share"  # "bench" was tested on real games and predicted worse (see METHODOLOGY 8e)
@@ -173,14 +200,15 @@ def cost_when_out(values: PlayerValues, minutes: dict, pid: str, mode: Optional[
         tot = sum(bench.values())
         if tot > 0:
             v_bench = sum(m * values.get(p) for p, m in bench.items()) / tot
-            return (values.get(pid) - v_bench) * minutes[pid] / 48.0
+            return (values.get(pid) - v_bench) * minutes[pid] / getattr(values, "spec", SPECS["NBA"]).period
     return strength(values, minutes) - strength(values, rest)
 
 
 class MinutesTracker:
     """Expected minutes and recent availability per player, walked forward game by game."""
 
-    def __init__(self, half_life_games: float = 8.0):
+    def __init__(self, half_life_games: float = 8.0, default_minutes: float = DEFAULT_MINUTES):
+        self.default_minutes = default_minutes
         self.min_ewma: dict = {}
         self.team: dict = {}
         self.name: dict = {}
@@ -189,7 +217,7 @@ class MinutesTracker:
         self.d = 0.5 ** (1.0 / half_life_games)
 
     def expected(self, pid: str) -> float:
-        return self.min_ewma.get(pid, DEFAULT_MINUTES)
+        return self.min_ewma.get(pid, getattr(self, "default_minutes", DEFAULT_MINUTES))
 
     def roster(self, team: str, min_share: float = 0.25) -> dict:
         """Players currently with `team` who play: {player_id: expected minutes}."""
@@ -214,7 +242,7 @@ class MinutesTracker:
             self.team_games[t] += 1
 
 
-def absence_features(rows: list[dict], refit_days: int = 14) -> dict:
+def absence_features(rows: list[dict], refit_days: int = 14, league: str = "NBA") -> dict:
     """Walk-forward absence cost per past game, home perspective (positive favours home):
 
         x_g = sum_away cost_out(i) * share(i)  -  sum_home cost_out(i) * share(i)
@@ -225,14 +253,20 @@ def absence_features(rows: list[dict], refit_days: int = 14) -> dict:
     from datetime import timedelta
     from itertools import groupby
 
-    games = build_games(rows)
-    mt = MinutesTracker()
-    vals, next_fit, out = PlayerValues(), None, {}
+    if league == "NFL":
+        from .player_value_nfl import absence_features as nfl_features
+        return nfl_features(rows)
+    spec = SPECS[league]
+    games = build_games(rows, spec)
+    mt = MinutesTracker(default_minutes=spec.default_minutes)
+    gk = GoalieTracker() if league == "NHL" else None
+    by_game = _goalie_lines(rows) if gk else {}
+    vals, next_fit, out = PlayerValues(spec=spec), None, {}
     for day, it in groupby(games, key=lambda g: g.when.date()):
         day_games = list(it)
         when = day_games[0].when.replace(hour=0, minute=0, second=0, microsecond=0)
         if next_fit is None or when >= next_fit:
-            vals = PlayerValues().fit(games, rows, before=when)
+            vals = PlayerValues(spec=spec).fit(games, rows, before=when)
             next_fit = when + timedelta(days=refit_days)
         if vals.n_games:
             for g in day_games:
@@ -241,32 +275,136 @@ def absence_features(rows: list[dict], refit_days: int = 14) -> dict:
                     roster = mt.roster(t)
                     x += sign * sum(cost_when_out(vals, roster, p) * mt.played_share.get(p, 0.0)
                                     for p in roster if p not in g.minutes[t])
+                    if gk is not None:
+                        x += sign * gk.start_cost(t, by_game.get((g.game_id, t)))
                 out[g.game_id] = x
         for g in day_games:
             mt.update(g)
+            if gk is not None:
+                for t in (g.home, g.away):
+                    gk.update(t, by_game.get((g.game_id, t)))
     return out
 
 
-def player_impacts(rows: list[dict], scale: float = 1.0, as_of: Optional[datetime] = None) -> list[dict]:
-    """What each current player's absence costs his team (margin points), for the injury model.
+# ------------------------------------------------------------------ NHL goalies
+GOALIE_SV_K = 2000.0     # pseudo-shots at the league save percentage
+GOALIE_DECAY = 0.985     # per game a goalie plays: older games count less
+START_DECAY = 0.85       # per team game: who starts now
+
+
+def _goalie_lines(rows: list[dict]) -> dict:
+    """(game_id, team) -> {goalie_id: (toi, shots_against, goals_against)} for NHL box scores."""
+    out: dict = defaultdict(dict)
+    for r in rows:
+        if r.get("pos") == "G" and (r.get("toi") or 0) > 0:
+            out[(r["game_id"], r["team"])][r["player_id"]] = (float(r.get("toi") or 0), float(r.get("sa") or 0),
+                                                            float(r.get("ga") or 0))
+    return out
+
+
+class GoalieTracker:
+    """Each goalie's save percentage (shrunk to the league), each team's usual starter, shots faced.
+
+    Goals saved above average per shot: gsaa = sv_shrunk - sv_league. When a team starts a goalie
+    other than its usual starter, the cost is (gsaa_usual - gsaa_actual) * shots against per game."""
+
+    def __init__(self):
+        self.sa: dict = defaultdict(float)
+        self.ga: dict = defaultdict(float)
+        self.share: dict = defaultdict(dict)    # team -> {goalie: EW start share}
+        self.shots: dict = {}                   # team -> EW shots against per game
+        self.lg_sa = 0.0
+        self.lg_ga = 0.0
+        self.name: dict = {}
+
+    def league_sv(self) -> float:
+        return 1.0 - self.lg_ga / self.lg_sa if self.lg_sa > 500 else 0.900
+
+    def gsaa(self, gid: str) -> float:
+        lg = self.league_sv()
+        sv = (self.sa[gid] - self.ga[gid] + GOALIE_SV_K * lg) / (self.sa[gid] + GOALIE_SV_K)
+        return sv - lg
+
+    def usual(self, team: str) -> Optional[str]:
+        sh = self.share.get(team) or {}
+        return max(sh, key=sh.get) if sh else None
+
+    def backup(self, team: str) -> Optional[str]:
+        sh = self.share.get(team) or {}
+        u = self.usual(team)
+        rest = {g: v for g, v in sh.items() if g != u}
+        return max(rest, key=rest.get) if rest else None
+
+    def start_cost(self, team: str, lines: Optional[dict]) -> float:
+        """Cost to `team` of the goalie who actually started instead of its usual starter."""
+        u = self.usual(team)
+        if not lines or u is None:
+            return 0.0
+        started = max(lines, key=lambda g: lines[g][0])
+        if started == u:
+            return 0.0
+        return (self.gsaa(u) - self.gsaa(started)) * self.shots.get(team, 30.0)
+
+    def update(self, team: str, lines: Optional[dict], names: Optional[dict] = None) -> None:
+        if not lines:
+            return
+        started = max(lines, key=lambda g: lines[g][0])
+        sh = self.share[team]
+        for g in list(sh):
+            sh[g] *= START_DECAY
+        sh[started] = sh.get(started, 0.0) + (1 - START_DECAY)
+        tot_sa = 0.0
+        for g, (toi, sa, ga) in lines.items():
+            self.sa[g] = self.sa[g] * GOALIE_DECAY + sa
+            self.ga[g] = self.ga[g] * GOALIE_DECAY + ga
+            self.lg_sa += sa
+            self.lg_ga += ga
+            tot_sa += sa
+            if names and g in names:
+                self.name[g] = names[g]
+        self.shots[team] = tot_sa if team not in self.shots else 0.9 * self.shots[team] + 0.1 * tot_sa
+
+
+def player_impacts(rows: list[dict], scale: float = 1.0, as_of: Optional[datetime] = None,
+                   league: str = "NBA") -> list[dict]:
+    """What each current player's absence costs his team (margin points / goals), for the injury model.
 
     impact = scale * cost_when_out * played_share: a player who has been missing for weeks is
-    already priced into the team's rating, so only the part not yet reflected counts."""
-    games = build_games(rows)
+    already priced into the team's rating, so only the part not yet reflected counts.
+    NHL goalies: the usual starter's cost is (gsaa_starter - gsaa_backup) * shots per game."""
+    if league == "NFL":
+        from .player_value_nfl import player_impacts as nfl_impacts
+        return nfl_impacts(rows, scale, as_of)
+    spec = SPECS[league]
+    games = build_games(rows, spec)
     if as_of is not None:
         games = [g for g in games if g.when < as_of]
-    vals = PlayerValues().fit(games, rows)
+    vals = PlayerValues(spec=spec).fit(games, rows)
     names = {r["player_id"]: r["player"] for r in rows}
-    mt = MinutesTracker()
+    mt = MinutesTracker(default_minutes=spec.default_minutes)
+    gk = GoalieTracker() if league == "NHL" else None
+    by_game = _goalie_lines(rows) if gk else {}
     for g in games:
         mt.update(g, names)
+        if gk is not None:
+            for t in (g.home, g.away):
+                gk.update(t, by_game.get((g.game_id, t)), names)
     out = []
     for team in sorted(set(mt.team.values())):
         roster = mt.roster(team)
         for p in roster:
             c = cost_when_out(vals, roster, p) * mt.played_share.get(p, 0.0) * scale
-            if c > 0.05:
-                out.append({"league": "NBA", "team": team, "player": mt.name.get(p, p), "player_id": p,
-                            "impact": round(c, 2), "impact_sd": round(max(0.3, 0.35 * c), 2),
-                            "value_per48": round(vals.get(p), 2), "minutes": round(roster[p], 1)})
+            if c > spec.impact_floor:
+                out.append({"league": league, "team": team, "player": mt.name.get(p, p), "player_id": p,
+                            "impact": round(c, 3), "impact_sd": round(max(spec.sd_floor, 0.35 * c), 3),
+                            "value_per48": round(vals.get(p), 3), "minutes": round(roster[p], 1), "role": ""})
+        if gk is not None:
+            u, b = gk.usual(team), gk.backup(team)
+            if u is not None:
+                diff = gk.gsaa(u) - (gk.gsaa(b) if b is not None else -0.008)  # no backup seen: below average
+                c = max(0.0, diff) * gk.shots.get(team, 30.0) * gk.share[team].get(u, 0.0) * scale
+                if c > spec.impact_floor:
+                    out.append({"league": league, "team": team, "player": gk.name.get(u, u), "player_id": u,
+                                "impact": round(c, 3), "impact_sd": round(max(spec.sd_floor, 0.4 * c), 3),
+                                "value_per48": round(gk.gsaa(u), 4), "minutes": 60.0, "role": "G"})
     return sorted(out, key=lambda x: -x["impact"])
