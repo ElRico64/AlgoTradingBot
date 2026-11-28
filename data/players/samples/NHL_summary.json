@@ -1,7 +1,7 @@
 {
 "header": {
-"id": "401892781",
-"uid": "s:70~l:90~e:401892781",
+"id": "401892795",
+"uid": "s:70~l:90~e:401892795",
 "season": {
 "year": 2027,
 "current": true,
@@ -10,9 +10,9 @@
 "timeValid": true,
 "competitions": [
 {
-"id": "401892781",
-"uid": "s:70~l:90~e:401892781~c:401892781",
-"date": "2026-11-26T00:00Z",
+"id": "401892795",
+"uid": "s:70~l:90~e:401892795~c:401892795",
+"date": "2026-11-27T18:00Z",
 "neutralSite": false,
 "boxscoreAvailable": true,
 "commentaryAvailable": false,
@@ -232,13 +232,13 @@
 }
 ]
 },
-"score": "2",
+"score": "1",
 "linescores": [
 {
 "displayValue": "1"
 },
 {
-"displayValue": "1"
+"displayValue": "0"
 },
 {
 "displayValue": "0"
@@ -247,37 +247,37 @@
 "record": [
 {
 "type": "total",
-"summary": "15-8-1",
-"displayValue": "15-8-1, 31 PTS"
+"summary": "15-9-1",
+"displayValue": "15-9-1, 31 PTS"
 },
 {
 "type": "home",
-"summary": "9-5-0",
-"displayValue": "9-5-0"
+"summary": "9-6-0",
+"displayValue": "9-6-0"
 }
 ],
 "possession": false
 },
 {
-"id": "28",
-"uid": "s:70~l:90~t:28",
+"id": "21",
+"uid": "s:70~l:90~t:21",
 "order": 1,
 "homeAway": "away",
 "winner": true,
 "team": {
-"id": "28",
-"guid": "3fb0986b-350c-b309-1dca-29e401834691",
-"uid": "s:70~l:90~t:28",
-"location": "Winnipeg",
-"name": "Jets",
-"nickname": "Jets",
-"abbreviation": "WPG",
-"displayName": "Winnipeg Jets",
-"color": "002d62",
-"alternateColor": "c41230",
+"id": "21",
+"guid": "5aa11fc5-b122-f21a-1ddb-a63c5b3dddee",
+"uid": "s:70~l:90~t:21",
+"location": "Toronto",
+"name": "Maple Leafs",
+"nickname": "Maple Leafs",
+"abbreviation": "TOR",
+"displayName": "Toronto Maple Leafs",
+"color": "003e7e",
+"alternateColor": "ffffff",
 "logos": [
 {
-"href": "https://a.espncdn.com/i/teamlogos/nhl/500/wpg.png",
+"href": "https://a.espncdn.com/i/teamlogos/nhl/500/tor.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -285,10 +285,10 @@
 "full",
 "default"
 ],
-"lastUpdated": "2024-07-02T15:51Z"
+"lastUpdated": "2024-07-03T19:49Z"
 },
 {
-"href": "https://a.espncdn.com/i/teamlogos/nhl/500-dark/wpg.png",
+"href": "https://a.espncdn.com/i/teamlogos/nhl/500-dark/tor.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -299,7 +299,7 @@
 "lastUpdated": "2024-07-02T15:46Z"
 },
 {
-"href": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wpg.png",
+"href": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tor.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -307,10 +307,10 @@
 "full",
 "scoreboard"
 ],
-"lastUpdated": "2024-07-02T15:51Z"
+"lastUpdated": "2024-07-03T19:49Z"
 },
 {
-"href": "https://a.espncdn.com/i/teamlogos/nhl/500-dark/scoreboard/wpg.png",
+"href": "https://a.espncdn.com/i/teamlogos/nhl/500-dark/scoreboard/tor.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -322,7 +322,7 @@
 "lastUpdated": "2024-07-02T15:46Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/primary_logo_on_white_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/primary_logo_on_white_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -333,7 +333,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/primary_logo_on_black_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/primary_logo_on_black_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -344,7 +344,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/primary_logo_on_primary_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/primary_logo_on_primary_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -355,7 +355,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/primary_logo_on_secondary_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/primary_logo_on_secondary_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -366,7 +366,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/primary_logo_black.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/primary_logo_black.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -377,7 +377,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/primary_logo_white.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/primary_logo_white.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -388,7 +388,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/secondary_logo_on_white_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/secondary_logo_on_white_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -399,7 +399,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/secondary_logo_on_black_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/secondary_logo_on_black_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -410,7 +410,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/secondary_logo_on_primary_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/secondary_logo_on_primary_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -421,7 +421,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/secondary_logo_on_secondary_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/secondary_logo_on_secondary_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -432,7 +432,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/secondary_logo_black.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/secondary_logo_black.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -443,7 +443,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/secondary_logo_white.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/secondary_logo_white.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -461,15 +461,15 @@
 "desktop",
 "team"
 ],
-"href": "https://www.espn.com/nhl/team/_/name/wpg/winnipeg-jets",
+"href": "https://www.espn.com/nhl/team/_/name/tor/toronto-maple-leafs",
 "text": "Clubhouse"
 }
 ]
 },
-"score": "4",
+"score": "3",
 "linescores": [
 {
-"displayValue": "2"
+"displayValue": "1"
 },
 {
 "displayValue": "1"
@@ -481,13 +481,13 @@
 "record": [
 {
 "type": "total",
-"summary": "13-9-4",
-"displayValue": "13-9-4, 30 PTS"
+"summary": "10-14-3",
+"displayValue": "10-14-3, 23 PTS"
 },
 {
 "type": "road",
-"summary": "6-4-2",
-"displayValue": "6-4-2"
+"summary": "6-4-1",
+"displayValue": "6-4-1"
 }
 ],
 "possession": false
@@ -507,14 +507,14 @@
 {
 "name": "winningGoalie",
 "displayName": "Winning Goalie",
-"playerId": 4697683,
+"playerId": 3067313,
 "athlete": {
-"id": "4697683",
-"uid": "s:70~l:90~a:4697683",
-"guid": "241f54f1-90b7-3a52-abc2-cda10e71f89f",
-"fullName": "Nico Daws",
-"displayName": "Nico Daws",
-"shortName": "N. Daws",
+"id": "3067313",
+"uid": "s:70~l:90~a:3067313",
+"guid": "544b2d4d-146e-ac6d-95b0-6d4dfadaaca8",
+"fullName": "Anthony Stolarz",
+"displayName": "Anthony Stolarz",
+"shortName": "A. Stolarz",
 "links": [
 {
 "language": "en-US",
@@ -523,23 +523,23 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nhl/player/_/id/4697683",
+"href": "https://www.espn.com/nhl/player/_/id/3067313",
 "text": "Player Card",
 "shortText": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nhl/players/full/4697683.png",
-"alt": "Nico Daws"
+"href": "https://a.espncdn.com/i/headshots/nhl/players/full/3067313.png",
+"alt": "Anthony Stolarz"
 }
 },
 "team": {
-"id": "28",
-"name": "Jets",
-"nickname": "Jets",
+"id": "21",
+"name": "Maple Leafs",
+"nickname": "Maple Leafs",
 "logos": [
 {
-"href": "https://a.espncdn.com/i/teamlogos/nhl/500/wpg.png",
+"href": "https://a.espncdn.com/i/teamlogos/nhl/500/tor.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -547,10 +547,10 @@
 "full",
 "default"
 ],
-"lastUpdated": "2024-07-02T15:51Z"
+"lastUpdated": "2024-07-03T19:49Z"
 },
 {
-"href": "https://a.espncdn.com/i/teamlogos/nhl/500-dark/wpg.png",
+"href": "https://a.espncdn.com/i/teamlogos/nhl/500-dark/tor.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -561,7 +561,7 @@
 "lastUpdated": "2024-07-02T15:46Z"
 },
 {
-"href": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wpg.png",
+"href": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tor.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -569,10 +569,10 @@
 "full",
 "scoreboard"
 ],
-"lastUpdated": "2024-07-02T15:51Z"
+"lastUpdated": "2024-07-03T19:49Z"
 },
 {
-"href": "https://a.espncdn.com/i/teamlogos/nhl/500-dark/scoreboard/wpg.png",
+"href": "https://a.espncdn.com/i/teamlogos/nhl/500-dark/scoreboard/tor.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -584,7 +584,7 @@
 "lastUpdated": "2024-07-02T15:46Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/primary_logo_on_white_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/primary_logo_on_white_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -595,7 +595,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/primary_logo_on_black_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/primary_logo_on_black_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -606,7 +606,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/primary_logo_on_primary_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/primary_logo_on_primary_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -617,7 +617,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/primary_logo_on_secondary_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/primary_logo_on_secondary_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -628,7 +628,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/primary_logo_black.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/primary_logo_black.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -639,7 +639,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/primary_logo_white.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/primary_logo_white.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -650,7 +650,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/secondary_logo_on_white_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/secondary_logo_on_white_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -661,7 +661,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/secondary_logo_on_black_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/secondary_logo_on_black_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -672,7 +672,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/secondary_logo_on_primary_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/secondary_logo_on_primary_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -683,7 +683,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/secondary_logo_on_secondary_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/secondary_logo_on_secondary_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -694,7 +694,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/secondary_logo_black.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/secondary_logo_black.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -705,7 +705,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/secondary_logo_white.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/secondary_logo_white.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -935,14 +935,14 @@
 {
 "name": "firstStar",
 "displayName": "First Star",
-"playerId": 3899952,
+"playerId": 2976833,
 "athlete": {
-"id": "3899952",
-"uid": "s:70~l:90~a:3899952",
-"guid": "fed5ad3c-bfe3-b3a7-2bfb-bcaeda9f3f4a",
-"fullName": "Kyle Connor",
-"displayName": "Kyle Connor",
-"shortName": "K. Connor",
+"id": "2976833",
+"uid": "s:70~l:90~a:2976833",
+"guid": "693b5883-0f06-0157-680a-6ea42a13b067",
+"fullName": "Morgan Rielly",
+"displayName": "Morgan Rielly",
+"shortName": "M. Rielly",
 "links": [
 {
 "language": "en-US",
@@ -951,23 +951,23 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nhl/player/_/id/3899952",
+"href": "https://www.espn.com/nhl/player/_/id/2976833",
 "text": "Player Card",
 "shortText": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nhl/players/full/3899952.png",
-"alt": "Kyle Connor"
+"href": "https://a.espncdn.com/i/headshots/nhl/players/full/2976833.png",
+"alt": "Morgan Rielly"
 }
 },
 "team": {
-"id": "28",
-"name": "Jets",
-"nickname": "Jets",
+"id": "21",
+"name": "Maple Leafs",
+"nickname": "Maple Leafs",
 "logos": [
 {
-"href": "https://a.espncdn.com/i/teamlogos/nhl/500/wpg.png",
+"href": "https://a.espncdn.com/i/teamlogos/nhl/500/tor.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -975,10 +975,10 @@
 "full",
 "default"
 ],
-"lastUpdated": "2024-07-02T15:51Z"
+"lastUpdated": "2024-07-03T19:49Z"
 },
 {
-"href": "https://a.espncdn.com/i/teamlogos/nhl/500-dark/wpg.png",
+"href": "https://a.espncdn.com/i/teamlogos/nhl/500-dark/tor.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -989,7 +989,7 @@
 "lastUpdated": "2024-07-02T15:46Z"
 },
 {
-"href": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wpg.png",
+"href": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tor.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -997,10 +997,10 @@
 "full",
 "scoreboard"
 ],
-"lastUpdated": "2024-07-02T15:51Z"
+"lastUpdated": "2024-07-03T19:49Z"
 },
 {
-"href": "https://a.espncdn.com/i/teamlogos/nhl/500-dark/scoreboard/wpg.png",
+"href": "https://a.espncdn.com/i/teamlogos/nhl/500-dark/scoreboard/tor.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -1012,7 +1012,7 @@
 "lastUpdated": "2024-07-02T15:46Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/primary_logo_on_white_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/primary_logo_on_white_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1023,7 +1023,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/primary_logo_on_black_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/primary_logo_on_black_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1034,7 +1034,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/primary_logo_on_primary_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/primary_logo_on_primary_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1045,7 +1045,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/primary_logo_on_secondary_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/primary_logo_on_secondary_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1056,7 +1056,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/primary_logo_black.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/primary_logo_black.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1067,7 +1067,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/primary_logo_white.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/primary_logo_white.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1078,7 +1078,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/secondary_logo_on_white_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/secondary_logo_on_white_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1089,7 +1089,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/secondary_logo_on_black_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/secondary_logo_on_black_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1100,7 +1100,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/secondary_logo_on_primary_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/secondary_logo_on_primary_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1111,7 +1111,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/secondary_logo_on_secondary_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/secondary_logo_on_secondary_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1122,7 +1122,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/secondary_logo_black.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/secondary_logo_black.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1133,7 +1133,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/secondary_logo_white.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/secondary_logo_white.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1149,14 +1149,14 @@
 {
 "name": "secondStar",
 "displayName": "Second Star",
-"playerId": 5080207,
+"playerId": 3067313,
 "athlete": {
-"id": "5080207",
-"uid": "s:70~l:90~a:5080207",
-"guid": "1ea0eb22-792c-3e8a-9f9b-3fda1497d7d4",
-"fullName": "Fraser Minten",
-"displayName": "Fraser Minten",
-"shortName": "F. Minten",
+"id": "3067313",
+"uid": "s:70~l:90~a:3067313",
+"guid": "544b2d4d-146e-ac6d-95b0-6d4dfadaaca8",
+"fullName": "Anthony Stolarz",
+"displayName": "Anthony Stolarz",
+"shortName": "A. Stolarz",
 "links": [
 {
 "language": "en-US",
@@ -1165,23 +1165,23 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nhl/player/_/id/5080207",
+"href": "https://www.espn.com/nhl/player/_/id/3067313",
 "text": "Player Card",
 "shortText": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nhl/players/full/5080207.png",
-"alt": "Fraser Minten"
+"href": "https://a.espncdn.com/i/headshots/nhl/players/full/3067313.png",
+"alt": "Anthony Stolarz"
 }
 },
 "team": {
-"id": "1",
-"name": "Bruins",
-"nickname": "Bruins",
+"id": "21",
+"name": "Maple Leafs",
+"nickname": "Maple Leafs",
 "logos": [
 {
-"href": "https://a.espncdn.com/i/teamlogos/nhl/500/bos.png",
+"href": "https://a.espncdn.com/i/teamlogos/nhl/500/tor.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -1189,10 +1189,10 @@
 "full",
 "default"
 ],
-"lastUpdated": "2025-09-25T18:13Z"
+"lastUpdated": "2024-07-03T19:49Z"
 },
 {
-"href": "https://a.espncdn.com/i/teamlogos/nhl/500-dark/bos.png",
+"href": "https://a.espncdn.com/i/teamlogos/nhl/500-dark/tor.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -1200,10 +1200,10 @@
 "full",
 "dark"
 ],
-"lastUpdated": "2025-09-25T18:11Z"
+"lastUpdated": "2024-07-02T15:46Z"
 },
 {
-"href": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/bos.png",
+"href": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tor.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -1211,10 +1211,10 @@
 "full",
 "scoreboard"
 ],
-"lastUpdated": "2025-09-25T18:13Z"
+"lastUpdated": "2024-07-03T19:49Z"
 },
 {
-"href": "https://a.espncdn.com/i/teamlogos/nhl/500-dark/scoreboard/bos.png",
+"href": "https://a.espncdn.com/i/teamlogos/nhl/500-dark/scoreboard/tor.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -1223,10 +1223,10 @@
 "scoreboard",
 "dark"
 ],
-"lastUpdated": "2025-09-25T18:12Z"
+"lastUpdated": "2024-07-02T15:46Z"
 },
 {
-"href": "https://a.espncdn.com/guid/585503ab-1462-2afe-7a70-aafea4f6b1b6/logos/primary_logo_on_white_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/primary_logo_on_white_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1237,7 +1237,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/585503ab-1462-2afe-7a70-aafea4f6b1b6/logos/primary_logo_on_black_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/primary_logo_on_black_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1248,7 +1248,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/585503ab-1462-2afe-7a70-aafea4f6b1b6/logos/primary_logo_on_primary_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/primary_logo_on_primary_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1259,7 +1259,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/585503ab-1462-2afe-7a70-aafea4f6b1b6/logos/primary_logo_on_secondary_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/primary_logo_on_secondary_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1270,7 +1270,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/585503ab-1462-2afe-7a70-aafea4f6b1b6/logos/primary_logo_black.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/primary_logo_black.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1281,7 +1281,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/585503ab-1462-2afe-7a70-aafea4f6b1b6/logos/primary_logo_white.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/primary_logo_white.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1292,7 +1292,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/585503ab-1462-2afe-7a70-aafea4f6b1b6/logos/secondary_logo_on_white_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/secondary_logo_on_white_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1303,7 +1303,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/585503ab-1462-2afe-7a70-aafea4f6b1b6/logos/secondary_logo_on_black_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/secondary_logo_on_black_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1314,7 +1314,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/585503ab-1462-2afe-7a70-aafea4f6b1b6/logos/secondary_logo_on_primary_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/secondary_logo_on_primary_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1325,7 +1325,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/585503ab-1462-2afe-7a70-aafea4f6b1b6/logos/secondary_logo_on_secondary_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/secondary_logo_on_secondary_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1336,7 +1336,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/585503ab-1462-2afe-7a70-aafea4f6b1b6/logos/secondary_logo_black.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/secondary_logo_black.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1347,7 +1347,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/585503ab-1462-2afe-7a70-aafea4f6b1b6/logos/secondary_logo_white.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/secondary_logo_white.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1363,14 +1363,14 @@
 {
 "name": "thirdStar",
 "displayName": "Third Star",
-"playerId": 3042016,
+"playerId": 2993474,
 "athlete": {
-"id": "3042016",
-"uid": "s:70~l:90~a:3042016",
-"guid": "ff0c1841-3d0a-2893-5b09-1640c5db716e",
-"fullName": "Josh Morrissey",
-"displayName": "Josh Morrissey",
-"shortName": "J. Morrissey",
+"id": "2993474",
+"uid": "s:70~l:90~a:2993474",
+"guid": "11ee6f35-c3ef-8376-077e-7453251830a7",
+"fullName": "Colton Sissons",
+"displayName": "Colton Sissons",
+"shortName": "C. Sissons",
 "links": [
 {
 "language": "en-US",
@@ -1379,23 +1379,23 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nhl/player/_/id/3042016",
+"href": "https://www.espn.com/nhl/player/_/id/2993474",
 "text": "Player Card",
 "shortText": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nhl/players/full/3042016.png",
-"alt": "Josh Morrissey"
+"href": "https://a.espncdn.com/i/headshots/nhl/players/full/2993474.png",
+"alt": "Colton Sissons"
 }
 },
 "team": {
-"id": "28",
-"name": "Jets",
-"nickname": "Jets",
+"id": "21",
+"name": "Maple Leafs",
+"nickname": "Maple Leafs",
 "logos": [
 {
-"href": "https://a.espncdn.com/i/teamlogos/nhl/500/wpg.png",
+"href": "https://a.espncdn.com/i/teamlogos/nhl/500/tor.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -1403,10 +1403,10 @@
 "full",
 "default"
 ],
-"lastUpdated": "2024-07-02T15:51Z"
+"lastUpdated": "2024-07-03T19:49Z"
 },
 {
-"href": "https://a.espncdn.com/i/teamlogos/nhl/500-dark/wpg.png",
+"href": "https://a.espncdn.com/i/teamlogos/nhl/500-dark/tor.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -1417,7 +1417,7 @@
 "lastUpdated": "2024-07-02T15:46Z"
 },
 {
-"href": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/wpg.png",
+"href": "https://a.espncdn.com/i/teamlogos/nhl/500/scoreboard/tor.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -1425,10 +1425,10 @@
 "full",
 "scoreboard"
 ],
-"lastUpdated": "2024-07-02T15:51Z"
+"lastUpdated": "2024-07-03T19:49Z"
 },
 {
-"href": "https://a.espncdn.com/i/teamlogos/nhl/500-dark/scoreboard/wpg.png",
+"href": "https://a.espncdn.com/i/teamlogos/nhl/500-dark/scoreboard/tor.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -1440,7 +1440,7 @@
 "lastUpdated": "2024-07-02T15:46Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/primary_logo_on_white_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/primary_logo_on_white_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1451,7 +1451,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/primary_logo_on_black_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/primary_logo_on_black_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1462,7 +1462,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/primary_logo_on_primary_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/primary_logo_on_primary_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1473,7 +1473,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/primary_logo_on_secondary_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/primary_logo_on_secondary_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1484,7 +1484,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/primary_logo_black.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/primary_logo_black.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1495,7 +1495,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/primary_logo_white.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/primary_logo_white.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1506,7 +1506,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/secondary_logo_on_white_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/secondary_logo_on_white_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1517,7 +1517,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/secondary_logo_on_black_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/secondary_logo_on_black_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1528,7 +1528,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/secondary_logo_on_primary_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/secondary_logo_on_primary_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1539,7 +1539,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/secondary_logo_on_secondary_color.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/secondary_logo_on_secondary_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1550,7 +1550,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/secondary_logo_black.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/secondary_logo_black.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1561,7 +1561,7 @@
 "lastUpdated": "2026-07-22T20:31Z"
 },
 {
-"href": "https://a.espncdn.com/guid/3fb0986b-350c-b309-1dca-29e401834691/logos/secondary_logo_white.png",
+"href": "https://a.espncdn.com/guid/5aa11fc5-b122-f21a-1ddb-a63c5b3dddee/logos/secondary_logo_white.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -1615,40 +1615,48 @@
 "type": "season",
 "title": "Regular Season Series",
 "description": "Regular Season Series",
-"summary": "Series tied 1-1",
-"completed": true,
-"totalCompetitions": 2,
+"summary": "TOR leads series 1-0",
+"completed": false,
+"totalCompetitions": 4,
 "competitors": [
 {
 "id": "1",
 "uid": "s:70~l:90~t:1",
-"wins": 1,
+"wins": 0,
 "ties": 0,
 "team": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/seasons/2027/teams/1?lang=en&region=us"
 }
 },
 {
-"id": "28",
-"uid": "s:70~l:90~t:28",
+"id": "21",
+"uid": "s:70~l:90~t:21",
 "wins": 1,
 "ties": 0,
 "team": {
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/seasons/2027/teams/28?lang=en&region=us"
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/seasons/2027/teams/21?lang=en&region=us"
 }
 }
 ],
 "events": [
 {
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/events/401891831?lang=en&region=us",
-"id": "401891831"
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/events/401892795?lang=en&region=us",
+"id": "401892795"
 },
 {
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/events/401892781?lang=en&region=us",
-"id": "401892781"
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/events/401893261?lang=en&region=us",
+"id": "401893261"
+},
+{
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/events/401893293?lang=en&region=us",
+"id": "401893293"
+},
+{
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/events/401893689?lang=en&region=us",
+"id": "401893689"
 }
 ],
-"startDate": "2026-10-03T00:00Z"
+"startDate": "2026-11-27T18:00Z"
 }
 ],
 "boxscoreMinutes": true
@@ -1661,7 +1669,7 @@
 "desktop",
 "event"
 ],
-"href": "https://www.espn.com/nhl/game/_/gameId/401892781/jets-bruins",
+"href": "https://www.espn.com/nhl/game/_/gameId/401892795/maple-leafs-bruins",
 "text": "Gamecast",
 "shortText": "Gamecast",
 "isExternal": false,
@@ -1673,7 +1681,7 @@
 "desktop",
 "event"
 ],
-"href": "https://www.espn.com/nhl/recap?gameId=401892781",
+"href": "https://www.espn.com/nhl/recap?gameId=401892795",
 "text": "Recap",
 "shortText": "Recap",
 "isExternal": false,
@@ -1685,7 +1693,7 @@
 "desktop",
 "event"
 ],
-"href": "https://www.espn.com/nhl/boxscore/_/gameId/401892781",
+"href": "https://www.espn.com/nhl/boxscore/_/gameId/401892795",
 "text": "Box Score",
 "shortText": "Box Score",
 "isExternal": false,
@@ -1697,7 +1705,7 @@
 "desktop",
 "event"
 ],
-"href": "https://www.espn.com/nhl/playbyplay/_/gameId/401892781",
+"href": "https://www.espn.com/nhl/playbyplay/_/gameId/401892795",
 "text": "Play-by-Play",
 "shortText": "Play-by-Play",
 "isExternal": false,
@@ -1709,7 +1717,7 @@
 "desktop",
 "event"
 ],
-"href": "https://www.espn.com/nhl/matchup?gameId=401892781",
+"href": "https://www.espn.com/nhl/matchup?gameId=401892795",
 "text": "Team Stats",
 "shortText": "Team Stats",
 "isExternal": false,
@@ -1721,7 +1729,7 @@
 "desktop",
 "event"
 ],
-"href": "https://www.espn.com/nhl/video?gameId=401892781",
+"href": "https://www.espn.com/nhl/video?gameId=401892795",
 "text": "Videos",
 "shortText": "Videos",
 "isExternal": false,
@@ -1936,10 +1944,10 @@
 },
 "standings": [
 {
-"team": "Winnipeg",
-"link": "https://www.espn.com/nhl/team/_/name/wpg/winnipeg-jets",
-"id": "28",
-"uid": "s:70~l:90~t:28",
+"team": "Boston",
+"link": "https://www.espn.com/nhl/team/_/name/bos/boston-bruins",
+"id": "1",
+"uid": "s:70~l:90~t:1",
 "stats": [
 {
 "name": "otLosses",
@@ -1948,8 +1956,8 @@
 "description": "Number of Overtime Losses",
 "abbreviation": "OTL",
 "type": "otlosses",
-"value": 4.0,
-"displayValue": "4"
+"value": 1.0,
+"displayValue": "1"
 },
 {
 "name": "losses",
@@ -1968,8 +1976,8 @@
 "description": "Total Points",
 "abbreviation": "PTS",
 "type": "points",
-"value": 32.0,
-"displayValue": "32"
+"value": 31.0,
+"displayValue": "31"
 },
 {
 "name": "wins",
@@ -1978,13 +1986,13 @@
 "description": "Wins",
 "abbreviation": "W",
 "type": "wins",
-"value": 14.0,
-"displayValue": "14"
+"value": 15.0,
+"displayValue": "15"
 }
 ],
 "logo": [
 {
-"href": "https://a.espncdn.com/i/teamlogos/nhl/500/wpg.png",
+"href": "https://a.espncdn.com/i/teamlogos/nhl/500/bos.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -1992,10 +2000,83 @@
 "full",
 "default"
 ],
-"lastUpdated": "2024-07-02T15:51Z"
+"lastUpdated": "2025-09-25T18:13Z"
 },
 {
-"href": "https://a.espncdn.com/i/teamlogos/nhl/500-dark/scoreboard/wpg.png",
+"href": "https://a.espncdn.com/i/teamlogos/nhl/500-dark/scoreboard/bos.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"scoreboard",
+"dark"
+],
+"lastUpdated": "2025-09-25T18:12Z"
+}
+]
+},
+{
+"team": "Toronto",
+"link": "https://www.espn.com/nhl/team/_/name/tor/toronto-maple-leafs",
+"id": "21",
+"uid": "s:70~l:90~t:21",
+"stats": [
+{
+"name": "otLosses",
+"displayName": "Overtime Losses",
+"shortDisplayName": "OTL",
+"description": "Number of Overtime Losses",
+"abbreviation": "OTL",
+"type": "otlosses",
+"value": 3.0,
+"displayValue": "3"
+},
+{
+"name": "losses",
+"displayName": "Losses",
+"shortDisplayName": "L",
+"description": "Losses",
+"abbreviation": "L",
+"type": "losses",
+"value": 14.0,
+"displayValue": "14"
+},
+{
+"name": "points",
+"displayName": "Points",
+"shortDisplayName": "PTS",
+"description": "Total Points",
+"abbreviation": "PTS",
+"type": "points",
+"value": 23.0,
+"displayValue": "23"
+},
+{
+"name": "wins",
+"displayName": "Wins",
+"shortDisplayName": "W",
+"description": "Wins",
+"abbreviation": "W",
+"type": "wins",
+"value": 10.0,
+"displayValue": "10"
+}
+],
+"logo": [
+{
+"href": "https://a.espncdn.com/i/teamlogos/nhl/500/tor.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"default"
+],
+"lastUpdated": "2024-07-03T19:49Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nhl/500-dark/scoreboard/tor.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -2014,17 +2095,17 @@
 "players": [
 {
 "team": {
-"id": "28",
-"uid": "s:70~l:90~t:28",
-"slug": "winnipeg-jets",
-"location": "Winnipeg",
-"name": "Jets",
-"abbreviation": "WPG",
-"displayName": "Winnipeg Jets",
-"shortDisplayName": "Jets",
-"color": "002d62",
-"alternateColor": "c41230",
-"logo": "https://a.espncdn.com/i/teamlogos/nhl/500/wpg.png"
+"id": "21",
+"uid": "s:70~l:90~t:21",
+"slug": "toronto-maple-leafs",
+"location": "Toronto",
+"name": "Maple Leafs",
+"abbreviation": "TOR",
+"displayName": "Toronto Maple Leafs",
+"shortDisplayName": "Maple Leafs",
+"color": "003e7e",
+"alternateColor": "ffffff",
+"logo": "https://a.espncdn.com/i/teamlogos/nhl/500/tor.png"
 },
 "statistics": [
 {
@@ -2101,12 +2182,12 @@
 "athletes": [
 {
 "athlete": {
-"id": "4316970",
-"uid": "s:70~l:90~a:4316970",
-"guid": "67ca00b7-6607-3ba3-b8bf-7f646462cf46",
-"lastName": "Barron",
-"displayName": "Morgan Barron",
-"shortName": "M. Barron",
+"id": "3024916",
+"uid": "s:70~l:90~a:3024916",
+"guid": "3acaf1a1-0423-dfae-1fb3-34906c9d6b1f",
+"lastName": "Blueger",
+"displayName": "Teddy Blueger",
+"shortName": "T. Blueger",
 "links": [
 {
 "language": "en-US",
@@ -2115,7 +2196,7 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nhl/player/_/id/4316970",
+"href": "https://www.espn.com/nhl/player/_/id/3024916",
 "text": "Player Card",
 "shortText": "Player Card",
 "isExternal": false,
@@ -2123,10 +2204,10 @@
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nhl/players/full/4316970.png",
-"alt": "Morgan Barron"
+"href": "https://a.espncdn.com/i/headshots/nhl/players/full/3024916.png",
+"alt": "Teddy Blueger"
 },
-"jersey": "36",
+"jersey": "73",
 "position": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/1?lang=en&region=us",
 "id": "1",
@@ -2142,24 +2223,156 @@
 "scratched": false
 },
 "stats": [
+"0",
 "1",
-"2",
-"2",
+"0",
 "1",
-"13:32",
-"0:03",
-"0:38",
-"12:51",
+"13:18",
+"0:00",
+"3:33",
+"9:45",
 "19",
+"0",
+"4",
+"0",
+"0",
+"0",
+"0",
+"5",
+"4",
+"55.6",
+"0",
+"0",
+"0"
+]
+},
+{
+"athlete": {
+"id": "5149211",
+"uid": "s:70~l:90~a:5149211",
+"guid": "04d7d3d9-0cc6-30b6-8706-86f98b0b2370",
+"lastName": "Cowan",
+"displayName": "Easton Cowan",
+"shortName": "E. Cowan",
+"links": [
+{
+"language": "en-US",
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nhl/player/_/id/5149211",
+"text": "Player Card",
+"shortText": "Player Card",
+"isExternal": false,
+"isPremium": false
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nhl/players/full/5149211.png",
+"alt": "Easton Cowan"
+},
+"jersey": "53",
+"position": {
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/3?lang=en&region=us",
+"id": "3",
+"name": "Right Wing",
+"displayName": "Right Wing",
+"abbreviation": "RW",
+"leaf": true,
+"parent": {
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/20?lang=en&region=us"
+}
+},
+"active": true,
+"scratched": false
+},
+"stats": [
 "1",
-"6",
+"2",
+"1",
+"1",
+"15:06",
+"1:35",
+"0:17",
+"13:14",
+"19",
 "0",
+"9",
+"1",
+"2",
+"0",
+"0",
+"0",
+"0",
+"0.0",
+"0",
+"0",
+"0"
+]
+},
+{
+"athlete": {
+"id": "4197009",
+"uid": "s:70~l:90~a:4197009",
+"guid": "5bf944de-a290-c0c1-2ad3-e330f59ffbfb",
+"lastName": "Duhaime",
+"displayName": "Brandon Duhaime",
+"shortName": "B. Duhaime",
+"links": [
+{
+"language": "en-US",
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nhl/player/_/id/4197009",
+"text": "Player Card",
+"shortText": "Player Card",
+"isExternal": false,
+"isPremium": false
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nhl/players/full/4197009.png",
+"alt": "Brandon Duhaime"
+},
+"jersey": "24",
+"position": {
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/2?lang=en&region=us",
+"id": "2",
+"name": "Left Wing",
+"displayName": "Left Wing",
+"abbreviation": "LW",
+"leaf": true,
+"parent": {
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/20?lang=en&region=us"
+}
+},
+"active": true,
+"scratched": false
+},
+"stats": [
+"0",
+"0",
+"0",
+"1",
+"10:17",
+"0:00",
+"1:39",
+"8:38",
+"17",
+"0",
+"1",
 "1",
 "0",
 "0",
-"6",
-"6",
-"50.0",
+"0",
+"1",
+"0",
+"100.0",
 "0",
 "1",
 "2"
@@ -2167,12 +2380,12 @@
 },
 {
 "athlete": {
-"id": "5361711",
-"uid": "s:70~l:90~a:5361711",
-"guid": "6854ec91-51b8-3be4-b36e-62d976a141d5",
-"lastName": "Bjorck",
-"displayName": "Viggo Bjorck",
-"shortName": "V. Bjorck",
+"id": "4063569",
+"uid": "s:70~l:90~a:4063569",
+"guid": "2b547f59-202f-6170-9a0b-b02646b795e9",
+"lastName": "MacEwen",
+"displayName": "Zack MacEwen",
+"shortName": "Z. MacEwen",
 "links": [
 {
 "language": "en-US",
@@ -2181,7 +2394,7 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nhl/player/_/id/5361711",
+"href": "https://www.espn.com/nhl/player/_/id/4063569",
 "text": "Player Card",
 "shortText": "Player Card",
 "isExternal": false,
@@ -2189,338 +2402,8 @@
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nhl/players/full/5361711.png",
-"alt": "Viggo Bjorck"
-},
-"jersey": "61",
-"position": {
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/1?lang=en&region=us",
-"id": "1",
-"name": "Center",
-"displayName": "Center",
-"abbreviation": "C",
-"leaf": true,
-"parent": {
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/20?lang=en&region=us"
-}
-},
-"active": true,
-"scratched": false
-},
-"stats": [
-"1",
-"1",
-"0",
-"1",
-"18:17",
-"0:51",
-"0:36",
-"16:50",
-"24",
-"0",
-"2",
-"0",
-"0",
-"2",
-"0",
-"1",
-"2",
-"33.3",
-"0",
-"0",
-"0"
-]
-},
-{
-"athlete": {
-"id": "3899952",
-"uid": "s:70~l:90~a:3899952",
-"guid": "fed5ad3c-bfe3-b3a7-2bfb-bcaeda9f3f4a",
-"lastName": "Connor",
-"displayName": "Kyle Connor",
-"shortName": "K. Connor",
-"links": [
-{
-"language": "en-US",
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nhl/player/_/id/3899952",
-"text": "Player Card",
-"shortText": "Player Card",
-"isExternal": false,
-"isPremium": false
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nhl/players/full/3899952.png",
-"alt": "Kyle Connor"
-},
-"jersey": "81",
-"position": {
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/2?lang=en&region=us",
-"id": "2",
-"name": "Left Wing",
-"displayName": "Left Wing",
-"abbreviation": "LW",
-"leaf": true,
-"parent": {
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/20?lang=en&region=us"
-}
-},
-"active": true,
-"scratched": false
-},
-"stats": [
-"0",
-"1",
-"0",
-"2",
-"22:12",
-"1:56",
-"0:23",
-"19:53",
-"23",
-"1",
-"20",
-"2",
-"2",
-"0",
-"0",
-"0",
-"0",
-"0.0",
-"0",
-"0",
-"0"
-]
-},
-{
-"athlete": {
-"id": "3652598",
-"uid": "s:70~l:90~a:3652598",
-"guid": "c616fc56-d105-68af-cf00-d9e05ceacc2e",
-"lastName": "Iafallo",
-"displayName": "Alex Iafallo",
-"shortName": "A. Iafallo",
-"links": [
-{
-"language": "en-US",
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nhl/player/_/id/3652598",
-"text": "Player Card",
-"shortText": "Player Card",
-"isExternal": false,
-"isPremium": false
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nhl/players/full/3652598.png",
-"alt": "Alex Iafallo"
-},
-"jersey": "9",
-"position": {
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/2?lang=en&region=us",
-"id": "2",
-"name": "Left Wing",
-"displayName": "Left Wing",
-"abbreviation": "LW",
-"leaf": true,
-"parent": {
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/20?lang=en&region=us"
-}
-},
-"active": true,
-"scratched": false
-},
-"stats": [
-"1",
-"0",
-"0",
-"0",
-"14:23",
-"0:48",
-"0:12",
-"13:23",
-"21",
-"0",
-"4",
-"0",
-"1",
-"1",
-"0",
-"0",
-"0",
-"0.0",
-"0",
-"0",
-"0"
-]
-},
-{
-"athlete": {
-"id": "4419679",
-"uid": "s:70~l:90~a:4419679",
-"guid": "3c5593ed-4e71-38a5-bbe6-dd7f07351ef5",
-"lastName": "Koepke",
-"displayName": "Cole Koepke",
-"shortName": "C. Koepke",
-"links": [
-{
-"language": "en-US",
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nhl/player/_/id/4419679",
-"text": "Player Card",
-"shortText": "Player Card",
-"isExternal": false,
-"isPremium": false
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nhl/players/full/4419679.png",
-"alt": "Cole Koepke"
-},
-"jersey": "45",
-"position": {
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/2?lang=en&region=us",
-"id": "2",
-"name": "Left Wing",
-"displayName": "Left Wing",
-"abbreviation": "LW",
-"leaf": true,
-"parent": {
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/20?lang=en&region=us"
-}
-},
-"active": true,
-"scratched": false
-},
-"stats": [
-"0",
-"1",
-"0",
-"0",
-"7:33",
-"0:03",
-"0:00",
-"7:30",
-"11",
-"0",
-"3",
-"0",
-"1",
-"1",
-"0",
-"0",
-"0",
-"0.0",
-"1",
-"0",
-"0"
-]
-},
-{
-"athlete": {
-"id": "2563066",
-"uid": "s:70~l:90~a:2563066",
-"guid": "62dcfc50-a8c0-f5dd-5836-b42de76d88f6",
-"lastName": "Lowry",
-"displayName": "Adam Lowry",
-"shortName": "A. Lowry",
-"links": [
-{
-"language": "en-US",
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nhl/player/_/id/2563066",
-"text": "Player Card",
-"shortText": "Player Card",
-"isExternal": false,
-"isPremium": false
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nhl/players/full/2563066.png",
-"alt": "Adam Lowry"
-},
-"jersey": "17",
-"position": {
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/1?lang=en&region=us",
-"id": "1",
-"name": "Center",
-"displayName": "Center",
-"abbreviation": "C",
-"leaf": true,
-"parent": {
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/20?lang=en&region=us"
-}
-},
-"active": true,
-"scratched": false
-},
-"stats": [
-"0",
-"2",
-"0",
-"-1",
-"17:12",
-"0:03",
-"1:01",
-"16:08",
-"24",
-"0",
-"3",
-"0",
-"4",
-"1",
-"0",
-"5",
-"11",
-"31.3",
-"1",
-"0",
-"0"
-]
-},
-{
-"athlete": {
-"id": "4697401",
-"uid": "s:70~l:90~a:4697401",
-"guid": "24b53eb7-62c7-3c62-9270-7bac93da64d3",
-"lastName": "Mercer",
-"displayName": "Dawson Mercer",
-"shortName": "D. Mercer",
-"links": [
-{
-"language": "en-US",
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nhl/player/_/id/4697401",
-"text": "Player Card",
-"shortText": "Player Card",
-"isExternal": false,
-"isPremium": false
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nhl/players/full/4697401.png",
-"alt": "Dawson Mercer"
+"href": "https://a.espncdn.com/i/headshots/nhl/players/full/4063569.png",
+"alt": "Zack MacEwen"
 },
 "jersey": "19",
 "position": {
@@ -2538,20 +2421,218 @@
 "scratched": false
 },
 "stats": [
+"0",
+"2",
+"0",
+"1",
+"7:51",
+"0:00",
+"0:00",
+"7:51",
+"10",
+"0",
+"3",
+"0",
+"0",
+"1",
+"0",
+"0",
+"0",
+"0.0",
+"0",
+"0",
+"0"
+]
+},
+{
+"athlete": {
+"id": "4587996",
+"uid": "s:70~l:90~a:4587996",
+"guid": "05239482-6d9c-034d-6e4a-6536a3eef631",
+"lastName": "Marchenko",
+"displayName": "Kirill Marchenko",
+"shortName": "K. Marchenko",
+"links": [
+{
+"language": "en-US",
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nhl/player/_/id/4587996",
+"text": "Player Card",
+"shortText": "Player Card",
+"isExternal": false,
+"isPremium": false
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nhl/players/full/4587996.png",
+"alt": "Kirill Marchenko"
+},
+"jersey": "86",
+"position": {
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/3?lang=en&region=us",
+"id": "3",
+"name": "Right Wing",
+"displayName": "Right Wing",
+"abbreviation": "RW",
+"leaf": true,
+"parent": {
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/20?lang=en&region=us"
+}
+},
+"active": true,
+"scratched": false
+},
+"stats": [
+"0",
+"0",
+"0",
+"0",
+"15:28",
+"3:31",
+"0:00",
+"11:57",
+"17",
+"0",
+"6",
+"0",
+"1",
+"2",
+"0",
+"0",
+"0",
+"0.0",
+"0",
+"0",
+"0"
+]
+},
+{
+"athlete": {
+"id": "4024123",
+"uid": "s:70~l:90~a:4024123",
+"guid": "dfef08c0-dde0-de14-4b8f-13ca40daef21",
+"lastName": "Matthews",
+"displayName": "Auston Matthews",
+"shortName": "A. Matthews",
+"links": [
+{
+"language": "en-US",
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nhl/player/_/id/4024123",
+"text": "Player Card",
+"shortText": "Player Card",
+"isExternal": false,
+"isPremium": false
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nhl/players/full/4024123.png",
+"alt": "Auston Matthews"
+},
+"jersey": "34",
+"position": {
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/1?lang=en&region=us",
+"id": "1",
+"name": "Center",
+"displayName": "Center",
+"abbreviation": "C",
+"leaf": true,
+"parent": {
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/20?lang=en&region=us"
+}
+},
+"active": true,
+"scratched": false
+},
+"stats": [
+"1",
+"0",
+"0",
+"0",
+"19:39",
+"3:19",
+"0:02",
+"16:18",
+"22",
+"0",
+"14",
+"0",
+"0",
+"0",
+"0",
+"8",
+"7",
+"53.3",
+"0",
+"0",
+"0"
+]
+},
+{
+"athlete": {
+"id": "5342529",
+"uid": "s:70~l:90~a:5342529",
+"guid": "dc6fd0ad-e8ca-3035-a73a-d8c12f735828",
+"lastName": "McKenna",
+"displayName": "Gavin McKenna",
+"shortName": "G. McKenna",
+"links": [
+{
+"language": "en-US",
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nhl/player/_/id/5342529",
+"text": "Player Card",
+"shortText": "Player Card",
+"isExternal": false,
+"isPremium": false
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nhl/players/full/5342529.png",
+"alt": "Gavin McKenna"
+},
+"jersey": "92",
+"position": {
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/2?lang=en&region=us",
+"id": "2",
+"name": "Left Wing",
+"displayName": "Left Wing",
+"abbreviation": "LW",
+"leaf": true,
+"parent": {
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/20?lang=en&region=us"
+}
+},
+"active": true,
+"scratched": false
+},
+"stats": [
 "1",
 "0",
 "0",
 "1",
-"15:45",
-"0:49",
-"0:28",
-"14:28",
-"18",
+"14:23",
+"3:12",
+"0:00",
+"11:11",
+"16",
 "0",
-"5",
+"7",
 "1",
 "0",
-"1",
+"0",
 "0",
 "0",
 "0",
@@ -2563,12 +2644,12 @@
 },
 {
 "athlete": {
-"id": "4697392",
-"uid": "s:70~l:90~a:4697392",
-"guid": "1885aa83-5427-3d43-ba54-9bd3988696ce",
-"lastName": "Perfetti",
-"displayName": "Cole Perfetti",
-"shortName": "C. Perfetti",
+"id": "3114736",
+"uid": "s:70~l:90~a:3114736",
+"guid": "f7054599-31be-43fb-d1c9-c2cd15ce9cba",
+"lastName": "Nylander",
+"displayName": "William Nylander",
+"shortName": "W. Nylander",
 "links": [
 {
 "language": "en-US",
@@ -2577,7 +2658,7 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nhl/player/_/id/4697392",
+"href": "https://www.espn.com/nhl/player/_/id/3114736",
 "text": "Player Card",
 "shortText": "Player Card",
 "isExternal": false,
@@ -2585,8 +2666,272 @@
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nhl/players/full/4697392.png",
-"alt": "Cole Perfetti"
+"href": "https://a.espncdn.com/i/headshots/nhl/players/full/3114736.png",
+"alt": "William Nylander"
+},
+"jersey": "88",
+"position": {
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/3?lang=en&region=us",
+"id": "3",
+"name": "Right Wing",
+"displayName": "Right Wing",
+"abbreviation": "RW",
+"leaf": true,
+"parent": {
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/20?lang=en&region=us"
+}
+},
+"active": true,
+"scratched": false
+},
+"stats": [
+"0",
+"0",
+"1",
+"1",
+"14:48",
+"1:41",
+"0:15",
+"12:52",
+"20",
+"0",
+"11",
+"0",
+"3",
+"0",
+"0",
+"0",
+"1",
+"0.0",
+"0",
+"0",
+"0"
+]
+},
+{
+"athlete": {
+"id": "3042111",
+"uid": "s:70~l:90~a:3042111",
+"guid": "3fc5576d-a8bc-2e86-ee88-40edc20910e4",
+"lastName": "Paul",
+"displayName": "Nick Paul",
+"shortName": "N. Paul",
+"links": [
+{
+"language": "en-US",
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nhl/player/_/id/3042111",
+"text": "Player Card",
+"shortText": "Player Card",
+"isExternal": false,
+"isPremium": false
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nhl/players/full/3042111.png",
+"alt": "Nick Paul"
+},
+"jersey": "20",
+"position": {
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/2?lang=en&region=us",
+"id": "2",
+"name": "Left Wing",
+"displayName": "Left Wing",
+"abbreviation": "LW",
+"leaf": true,
+"parent": {
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/20?lang=en&region=us"
+}
+},
+"active": true,
+"scratched": false
+},
+"stats": [
+"0",
+"1",
+"0",
+"0",
+"18:03",
+"1:29",
+"1:16",
+"15:18",
+"22",
+"0",
+"2",
+"0",
+"1",
+"0",
+"0",
+"2",
+"0",
+"100.0",
+"0",
+"1",
+"2"
+]
+},
+{
+"athlete": {
+"id": "4874912",
+"uid": "s:70~l:90~a:4874912",
+"guid": "b37cd14b-ceb4-3aef-b7b1-b02ae6173810",
+"lastName": "Raty",
+"displayName": "Aatu Raty",
+"shortName": "A. Raty",
+"links": [
+{
+"language": "en-US",
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nhl/player/_/id/4874912",
+"text": "Player Card",
+"shortText": "Player Card",
+"isExternal": false,
+"isPremium": false
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nhl/players/full/4874912.png",
+"alt": "Aatu Raty"
+},
+"jersey": "26",
+"position": {
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/1?lang=en&region=us",
+"id": "1",
+"name": "Center",
+"displayName": "Center",
+"abbreviation": "C",
+"leaf": true,
+"parent": {
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/20?lang=en&region=us"
+}
+},
+"active": true,
+"scratched": false
+},
+"stats": [
+"2",
+"6",
+"0",
+"0",
+"13:27",
+"0:18",
+"0:49",
+"12:20",
+"20",
+"0",
+"1",
+"0",
+"1",
+"2",
+"0",
+"8",
+"1",
+"88.9",
+"1",
+"0",
+"0"
+]
+},
+{
+"athlete": {
+"id": "2993474",
+"uid": "s:70~l:90~a:2993474",
+"guid": "11ee6f35-c3ef-8376-077e-7453251830a7",
+"lastName": "Sissons",
+"displayName": "Colton Sissons",
+"shortName": "C. Sissons",
+"links": [
+{
+"language": "en-US",
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nhl/player/_/id/2993474",
+"text": "Player Card",
+"shortText": "Player Card",
+"isExternal": false,
+"isPremium": false
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nhl/players/full/2993474.png",
+"alt": "Colton Sissons"
+},
+"jersey": "15",
+"position": {
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/1?lang=en&region=us",
+"id": "1",
+"name": "Center",
+"displayName": "Center",
+"abbreviation": "C",
+"leaf": true,
+"parent": {
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/20?lang=en&region=us"
+}
+},
+"active": true,
+"scratched": false
+},
+"stats": [
+"2",
+"2",
+"1",
+"2",
+"15:53",
+"0:00",
+"3:37",
+"12:16",
+"22",
+"1",
+"3",
+"1",
+"1",
+"1",
+"0",
+"8",
+"4",
+"66.7",
+"1",
+"0",
+"0"
+]
+},
+{
+"athlete": {
+"id": "5160",
+"uid": "s:70~l:90~a:5160",
+"guid": "ff6af87a-96de-67cf-1ff1-16ba3c98f8fa",
+"lastName": "Tavares",
+"displayName": "John Tavares",
+"shortName": "J. Tavares",
+"links": [
+{
+"language": "en-US",
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nhl/player/_/id/5160",
+"text": "Player Card",
+"shortText": "Player Card",
+"isExternal": false,
+"isPremium": false
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nhl/players/full/5160.png",
+"alt": "John Tavares"
 },
 "jersey": "91",
 "position": {
@@ -2605,221 +2950,23 @@
 },
 "stats": [
 "0",
+"2",
+"0",
 "1",
-"1",
-"1",
-"15:52",
-"1:53",
+"15:31",
+"3:29",
 "0:00",
-"13:59",
+"12:02",
 "18",
 "0",
-"9",
-"0",
-"0",
-"2",
-"0",
-"1",
-"2",
-"33.3",
-"2",
-"0",
-"0"
-]
-},
-{
-"athlete": {
-"id": "2562632",
-"uid": "s:70~l:90~a:2562632",
-"guid": "c4473399-439a-e4eb-ecf4-35464c8043d0",
-"lastName": "Scheifele",
-"displayName": "Mark Scheifele",
-"shortName": "M. Scheifele",
-"links": [
-{
-"language": "en-US",
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nhl/player/_/id/2562632",
-"text": "Player Card",
-"shortText": "Player Card",
-"isExternal": false,
-"isPremium": false
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nhl/players/full/2562632.png",
-"alt": "Mark Scheifele"
-},
-"jersey": "55",
-"position": {
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/1?lang=en&region=us",
-"id": "1",
-"name": "Center",
-"displayName": "Center",
-"abbreviation": "C",
-"leaf": true,
-"parent": {
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/20?lang=en&region=us"
-}
-},
-"active": true,
-"scratched": false
-},
-"stats": [
-"1",
-"0",
-"1",
-"3",
-"21:46",
-"2:00",
-"0:00",
-"19:46",
-"21",
-"1",
-"9",
-"1",
-"1",
-"0",
-"0",
-"5",
-"8",
-"38.5",
-"3",
-"0",
-"0"
-]
-},
-{
-"athlete": {
-"id": "4233583",
-"uid": "s:70~l:90~a:4233583",
-"guid": "0045287b-8071-31fc-300d-b1fd5ef91f26",
-"lastName": "Vilardi",
-"displayName": "Gabriel Vilardi",
-"shortName": "G. Vilardi",
-"links": [
-{
-"language": "en-US",
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nhl/player/_/id/4233583",
-"text": "Player Card",
-"shortText": "Player Card",
-"isExternal": false,
-"isPremium": false
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nhl/players/full/4233583.png",
-"alt": "Gabriel Vilardi"
-},
-"jersey": "13",
-"position": {
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/1?lang=en&region=us",
-"id": "1",
-"name": "Center",
-"displayName": "Center",
-"abbreviation": "C",
-"leaf": true,
-"parent": {
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/20?lang=en&region=us"
-}
-},
-"active": true,
-"scratched": false
-},
-"stats": [
-"0",
-"0",
-"0",
-"1",
-"19:23",
-"1:59",
-"0:00",
-"17:24",
-"20",
-"0",
-"6",
-"0",
-"1",
-"0",
-"0",
-"0",
-"1",
-"0.0",
-"2",
-"0",
-"0"
-]
-},
-{
-"athlete": {
-"id": "5149188",
-"uid": "s:70~l:90~a:5149188",
-"guid": "279e072c-7c83-3c72-afe2-c1b9faa38e75",
-"lastName": "Yager",
-"displayName": "Brayden Yager",
-"shortName": "B. Yager",
-"links": [
-{
-"language": "en-US",
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nhl/player/_/id/5149188",
-"text": "Player Card",
-"shortText": "Player Card",
-"isExternal": false,
-"isPremium": false
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nhl/players/full/5149188.png",
-"alt": "Brayden Yager"
-},
-"jersey": "29",
-"position": {
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/1?lang=en&region=us",
-"id": "1",
-"name": "Center",
-"displayName": "Center",
-"abbreviation": "C",
-"leaf": true,
-"parent": {
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/20?lang=en&region=us"
-}
-},
-"active": true,
-"scratched": false
-},
-"stats": [
-"0",
-"0",
-"0",
-"0",
-"9:15",
-"0:54",
-"0:00",
-"8:21",
-"11",
-"0",
-"1",
-"0",
-"0",
-"0",
-"0",
-"0",
 "4",
-"0.0",
+"0",
+"2",
+"3",
+"0",
+"3",
+"6",
+"33.3",
 "0",
 "1",
 "2"
@@ -2901,12 +3048,12 @@
 "athletes": [
 {
 "athlete": {
-"id": "4697648",
-"uid": "s:70~l:90~a:4697648",
-"guid": "dc550396-a320-325d-8a82-0e02fb86d9f6",
-"lastName": "Bauer",
-"displayName": "Tyrel Bauer",
-"shortName": "T. Bauer",
+"id": "5488",
+"uid": "s:70~l:90~a:5488",
+"guid": "5c88ec88-d9a7-e66c-d917-d97b1de9636f",
+"lastName": "Ekman-Larsson",
+"displayName": "Oliver Ekman-Larsson",
+"shortName": "O. Ekman-Larsson",
 "links": [
 {
 "language": "en-US",
@@ -2915,7 +3062,7 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nhl/player/_/id/4697648",
+"href": "https://www.espn.com/nhl/player/_/id/5488",
 "text": "Player Card",
 "shortText": "Player Card",
 "isExternal": false,
@@ -2923,10 +3070,10 @@
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nhl/players/full/4697648.png",
-"alt": "Tyrel Bauer"
+"href": "https://a.espncdn.com/i/headshots/nhl/players/full/5488.png",
+"alt": "Oliver Ekman-Larsson"
 },
-"jersey": "77",
+"jersey": "95",
 "position": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/4?lang=en&region=us",
 "id": "4",
@@ -2942,103 +3089,37 @@
 "scratched": false
 },
 "stats": [
-"0",
-"0",
-"0",
-"0",
-"4:41",
-"0:00",
-"0:00",
-"4:41",
-"9",
-"0",
+"1",
 "1",
 "0",
-"1",
 "0",
+"22:21",
+"1:35",
+"3:06",
+"17:40",
+"29",
+"0",
+"0",
+"0",
+"1",
+"2",
 "0",
 "0",
 "0",
 "0.0",
 "0",
-"2",
-"7"
-]
-},
-{
-"athlete": {
-"id": "4233884",
-"uid": "s:70~l:90~a:4233884",
-"guid": "84421d37-0373-b532-9520-619cc41ee379",
-"lastName": "Ferraro",
-"displayName": "Mario Ferraro",
-"shortName": "M. Ferraro",
-"links": [
-{
-"language": "en-US",
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nhl/player/_/id/4233884",
-"text": "Player Card",
-"shortText": "Player Card",
-"isExternal": false,
-"isPremium": false
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nhl/players/full/4233884.png",
-"alt": "Mario Ferraro"
-},
-"jersey": "38",
-"position": {
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/4?lang=en&region=us",
-"id": "4",
-"name": "Defense",
-"displayName": "Defense",
-"abbreviation": "D",
-"leaf": true,
-"parent": {
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/27?lang=en&region=us"
-}
-},
-"active": true,
-"scratched": false
-},
-"stats": [
-"2",
-"4",
-"0",
-"2",
-"18:56",
-"0:00",
-"0:15",
-"18:41",
-"19",
-"0",
-"2",
-"1",
-"1",
-"1",
-"0",
-"0",
-"0",
-"0.0",
-"1",
 "0",
 "0"
 ]
 },
 {
 "athlete": {
-"id": "3042016",
-"uid": "s:70~l:90~a:3042016",
-"guid": "ff0c1841-3d0a-2893-5b09-1640c5db716e",
-"lastName": "Morrissey",
-"displayName": "Josh Morrissey",
-"shortName": "J. Morrissey",
+"id": "3020803",
+"uid": "s:70~l:90~a:3020803",
+"guid": "4b66de9d-551b-94de-addc-1f5c04a382a3",
+"lastName": "McCabe",
+"displayName": "Jake McCabe",
+"shortName": "J. McCabe",
 "links": [
 {
 "language": "en-US",
@@ -3047,7 +3128,7 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nhl/player/_/id/3042016",
+"href": "https://www.espn.com/nhl/player/_/id/3020803",
 "text": "Player Card",
 "shortText": "Player Card",
 "isExternal": false,
@@ -3055,8 +3136,140 @@
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nhl/players/full/3042016.png",
-"alt": "Josh Morrissey"
+"href": "https://a.espncdn.com/i/headshots/nhl/players/full/3020803.png",
+"alt": "Jake McCabe"
+},
+"jersey": "22",
+"position": {
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/4?lang=en&region=us",
+"id": "4",
+"name": "Defense",
+"displayName": "Defense",
+"abbreviation": "D",
+"leaf": true,
+"parent": {
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/27?lang=en&region=us"
+}
+},
+"active": true,
+"scratched": false
+},
+"stats": [
+"3",
+"4",
+"0",
+"0",
+"22:40",
+"0:13",
+"3:47",
+"18:40",
+"31",
+"0",
+"1",
+"0",
+"1",
+"0",
+"0",
+"0",
+"0",
+"0.0",
+"2",
+"1",
+"2"
+]
+},
+{
+"athlete": {
+"id": "3149843",
+"uid": "s:70~l:90~a:3149843",
+"guid": "ed2b3345-c009-393c-b7ab-0d0398abb0fb",
+"lastName": "Raddysh",
+"displayName": "Darren Raddysh",
+"shortName": "D. Raddysh",
+"links": [
+{
+"language": "en-US",
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nhl/player/_/id/3149843",
+"text": "Player Card",
+"shortText": "Player Card",
+"isExternal": false,
+"isPremium": false
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nhl/players/full/3149843.png",
+"alt": "Darren Raddysh"
+},
+"jersey": "43",
+"position": {
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/4?lang=en&region=us",
+"id": "4",
+"name": "Defense",
+"displayName": "Defense",
+"abbreviation": "D",
+"leaf": true,
+"parent": {
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/27?lang=en&region=us"
+}
+},
+"active": true,
+"scratched": false
+},
+"stats": [
+"0",
+"0",
+"0",
+"0",
+"22:20",
+"3:31",
+"0:34",
+"18:15",
+"27",
+"0",
+"1",
+"0",
+"2",
+"0",
+"0",
+"0",
+"0",
+"0.0",
+"3",
+"0",
+"0"
+]
+},
+{
+"athlete": {
+"id": "2976833",
+"uid": "s:70~l:90~a:2976833",
+"guid": "693b5883-0f06-0157-680a-6ea42a13b067",
+"lastName": "Rielly",
+"displayName": "Morgan Rielly",
+"shortName": "M. Rielly",
+"links": [
+{
+"language": "en-US",
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nhl/player/_/id/2976833",
+"text": "Player Card",
+"shortText": "Player Card",
+"isExternal": false,
+"isPremium": false
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nhl/players/full/2976833.png",
+"alt": "Morgan Rielly"
 },
 "jersey": "44",
 "position": {
@@ -3074,218 +3287,86 @@
 "scratched": false
 },
 "stats": [
-"2",
 "0",
 "0",
-"2",
-"21:34",
-"1:58",
-"0:00",
-"19:36",
-"24",
-"1",
-"2",
-"0",
-"2",
-"0",
-"0",
-"0",
-"0",
-"0.0",
-"1",
-"0",
-"0"
-]
-},
-{
-"athlete": {
-"id": "3988847",
-"uid": "s:70~l:90~a:3988847",
-"guid": "2462385e-93bc-070e-e729-45cb73809fcc",
-"lastName": "Pionk",
-"displayName": "Neal Pionk",
-"shortName": "N. Pionk",
-"links": [
-{
-"language": "en-US",
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nhl/player/_/id/3988847",
-"text": "Player Card",
-"shortText": "Player Card",
-"isExternal": false,
-"isPremium": false
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nhl/players/full/3988847.png",
-"alt": "Neal Pionk"
-},
-"jersey": "4",
-"position": {
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/4?lang=en&region=us",
-"id": "4",
-"name": "Defense",
-"displayName": "Defense",
-"abbreviation": "D",
-"leaf": true,
-"parent": {
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/27?lang=en&region=us"
-}
-},
-"active": true,
-"scratched": false
-},
-"stats": [
-"0",
-"2",
-"0",
-"1",
-"21:24",
-"0:52",
-"1:24",
-"19:08",
-"28",
-"0",
-"4",
-"0",
-"2",
-"1",
-"0",
-"0",
-"0",
-"0.0",
-"0",
-"0",
-"0"
-]
-},
-{
-"athlete": {
-"id": "5080223",
-"uid": "s:70~l:90~a:5080223",
-"guid": "d2431e18-d77a-3121-8ffb-abd0d868e50f",
-"lastName": "Salomonsson",
-"displayName": "Elias Salomonsson",
-"shortName": "E. Salomonsson",
-"links": [
-{
-"language": "en-US",
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nhl/player/_/id/5080223",
-"text": "Player Card",
-"shortText": "Player Card",
-"isExternal": false,
-"isPremium": false
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nhl/players/full/5080223.png",
-"alt": "Elias Salomonsson"
-},
-"jersey": "57",
-"position": {
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/4?lang=en&region=us",
-"id": "4",
-"name": "Defense",
-"displayName": "Defense",
-"abbreviation": "D",
-"leaf": true,
-"parent": {
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/27?lang=en&region=us"
-}
-},
-"active": true,
-"scratched": false
-},
-"stats": [
-"1",
-"0",
-"0",
-"0",
-"17:39",
-"0:03",
-"0:13",
-"17:23",
-"24",
-"0",
-"0",
-"0",
-"1",
-"0",
-"0",
-"0",
-"0",
-"0.0",
-"1",
-"0",
-"0"
-]
-},
-{
-"athlete": {
-"id": "4233878",
-"uid": "s:70~l:90~a:4233878",
-"guid": "a9c00e38-a87b-5cec-2232-3517d3b1f41a",
-"lastName": "Samberg",
-"displayName": "Dylan Samberg",
-"shortName": "D. Samberg",
-"links": [
-{
-"language": "en-US",
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nhl/player/_/id/4233878",
-"text": "Player Card",
-"shortText": "Player Card",
-"isExternal": false,
-"isPremium": false
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nhl/players/full/4233878.png",
-"alt": "Dylan Samberg"
-},
-"jersey": "54",
-"position": {
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/4?lang=en&region=us",
-"id": "4",
-"name": "Defense",
-"displayName": "Defense",
-"abbreviation": "D",
-"leaf": true,
-"parent": {
-"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/27?lang=en&region=us"
-}
-},
-"active": true,
-"scratched": false
-},
-"stats": [
-"0",
-"1",
-"1",
-"1",
-"21:19",
-"0:03",
-"1:26",
-"19:50",
-"28",
 "0",
 "3",
-"1",
+"18:56",
+"1:37",
+"0:36",
+"16:43",
+"28",
+"2",
+"2",
+"0",
+"3",
+"2",
+"0",
+"0",
+"0",
+"0.0",
 "0",
 "1",
+"2"
+]
+},
+{
+"athlete": {
+"id": "3096102",
+"uid": "s:70~l:90~a:3096102",
+"guid": "ff2b78a1-e109-f70c-4aaa-c85d37d32af6",
+"lastName": "Stecher",
+"displayName": "Troy Stecher",
+"shortName": "T. Stecher",
+"links": [
+{
+"language": "en-US",
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nhl/player/_/id/3096102",
+"text": "Player Card",
+"shortText": "Player Card",
+"isExternal": false,
+"isPremium": false
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nhl/players/full/3096102.png",
+"alt": "Troy Stecher"
+},
+"jersey": "28",
+"position": {
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/4?lang=en&region=us",
+"id": "4",
+"name": "Defense",
+"displayName": "Defense",
+"abbreviation": "D",
+"leaf": true,
+"parent": {
+"$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/27?lang=en&region=us"
+}
+},
+"active": true,
+"scratched": false
+},
+"stats": [
+"0",
+"2",
+"0",
+"3",
+"22:39",
+"0:00",
+"3:08",
+"19:31",
+"27",
+"0",
+"2",
+"1",
+"0",
+"2",
 "0",
 "0",
 "0",
@@ -3297,12 +3378,12 @@
 },
 {
 "athlete": {
-"id": "4997138",
-"uid": "s:70~l:90~a:4997138",
-"guid": "41b5fb10-7cf1-3efc-8905-cbf8b765ed18",
-"lastName": "Thrun",
-"displayName": "Henry Thrun",
-"shortName": "H. Thrun",
+"id": "5592",
+"uid": "s:70~l:90~a:5592",
+"guid": "e071be99-5541-93a3-8d28-3a27005957f3",
+"lastName": "Tanev",
+"displayName": "Chris Tanev",
+"shortName": "C. Tanev",
 "links": [
 {
 "language": "en-US",
@@ -3311,7 +3392,7 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nhl/player/_/id/4997138",
+"href": "https://www.espn.com/nhl/player/_/id/5592",
 "text": "Player Card",
 "shortText": "Player Card",
 "isExternal": false,
@@ -3319,8 +3400,8 @@
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nhl/players/full/4997138.png",
-"alt": "Henry Thrun"
+"href": "https://a.espncdn.com/i/headshots/nhl/players/full/5592.png",
+"alt": "Chris Tanev"
 },
 "jersey": "8",
 "position": {
@@ -3338,17 +3419,17 @@
 "scratched": false
 },
 "stats": [
-"1",
-"2",
-"1",
 "0",
-"16:32",
+"0",
+"0",
+"0",
+"7:53",
 "0:00",
-"0:00",
-"16:32",
-"18",
+"2:12",
+"5:41",
+"11",
 "0",
-"0",
+"1",
 "0",
 "0",
 "0",
@@ -3356,7 +3437,7 @@
 "0",
 "0",
 "0.0",
-"1",
+"0",
 "0",
 "0"
 ]
@@ -3483,12 +3564,12 @@
 "athletes": [
 {
 "athlete": {
-"id": "4697683",
-"uid": "s:70~l:90~a:4697683",
-"guid": "241f54f1-90b7-3a52-abc2-cda10e71f89f",
-"lastName": "Daws",
-"displayName": "Nico Daws",
-"shortName": "N. Daws",
+"id": "3067313",
+"uid": "s:70~l:90~a:3067313",
+"guid": "544b2d4d-146e-ac6d-95b0-6d4dfadaaca8",
+"lastName": "Stolarz",
+"displayName": "Anthony Stolarz",
+"shortName": "A. Stolarz",
 "links": [
 {
 "language": "en-US",
@@ -3497,7 +3578,7 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nhl/player/_/id/4697683",
+"href": "https://www.espn.com/nhl/player/_/id/3067313",
 "text": "Player Card",
 "shortText": "Player Card",
 "isExternal": false,
@@ -3505,10 +3586,10 @@
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nhl/players/full/4697683.png",
-"alt": "Nico Daws"
+"href": "https://a.espncdn.com/i/headshots/nhl/players/full/3067313.png",
+"alt": "Anthony Stolarz"
 },
-"jersey": "35",
+"jersey": "41",
 "position": {
 "$ref": "http://sports.core.api.espn.pvt/v2/sports/hockey/leagues/nhl/positions/5?lang=en&region=us",
 "id": "5",
@@ -3521,16 +3602,16 @@
 "scratched": false
 },
 "stats": [
-"2",
-"23",
-"0",
-"0",
-"21",
-".913",
-"20",
 "1",
+"29",
 "0",
-"59:57",
+"0",
+"28",
+".966",
+"24",
+"4",
+"0",
+"60:00",
 "0",
 "0"
 ]
@@ -3671,23 +3752,23 @@
 },
 "stats": [
 "0",
-"0",
-"0",
-"-4",
-"15:04",
-"1:39",
-"0:00",
-"13:25",
-"20",
 "1",
+"1",
+"-1",
+"19:26",
+"5:40",
+"0:00",
+"13:46",
+"21",
+"0",
 "6",
 "0",
+"3",
 "2",
-"1",
-"0",
 "0",
 "1",
-"0.0",
+"2",
+"33.3",
 "1",
 "0",
 "0"
@@ -3736,27 +3817,27 @@
 "scratched": false
 },
 "stats": [
+"2",
+"3",
 "0",
-"5",
 "0",
-"0",
-"8:23",
-"0:00",
-"0:00",
-"8:23",
-"10",
+"12:12",
+"0:02",
+"1:15",
+"10:55",
+"17",
 "0",
 "2",
 "0",
+"3",
 "1",
-"1",
-"0",
-"0",
-"0",
-"0.0",
 "0",
 "1",
-"5"
+"0",
+"100.0",
+"0",
+"0",
+"0"
 ]
 },
 {
@@ -3802,24 +3883,24 @@
 "scratched": false
 },
 "stats": [
-"0",
+"1",
 "2",
 "0",
-"0",
-"10:11",
+"-1",
+"9:52",
 "0:00",
-"1:25",
-"8:46",
-"14",
+"1:41",
+"8:11",
+"15",
 "0",
 "3",
 "0",
 "0",
 "1",
 "0",
-"0",
-"0",
-"0.0",
+"1",
+"5",
+"16.7",
 "0",
 "0",
 "0"
@@ -3870,23 +3951,23 @@
 "stats": [
 "0",
 "1",
-"1",
-"1",
-"15:11",
+"0",
+"-1",
+"16:09",
 "0:00",
-"1:23",
-"13:48",
-"18",
+"1:43",
+"14:26",
+"21",
 "0",
 "3",
 "0",
+"0",
+"2",
+"0",
+"0",
 "1",
-"1",
-"0",
-"0",
-"0",
 "0.0",
-"0",
+"1",
 "0",
 "0"
 ]
@@ -3935,24 +4016,24 @@
 },
 "stats": [
 "0",
-"1",
 "0",
 "0",
-"9:51",
+"-1",
+"9:23",
 "0:00",
-"0:23",
-"9:28",
-"12",
+"1:09",
+"8:14",
+"14",
 "0",
 "0",
 "0",
-"1",
 "0",
 "0",
-"3",
-"3",
+"0",
+"2",
+"2",
 "50.0",
-"0",
+"1",
 "0",
 "0"
 ]
@@ -4003,24 +4084,24 @@
 "0",
 "0",
 "0",
-"-4",
-"17:53",
-"1:39",
-"1:32",
-"14:42",
-"23",
+"-1",
+"20:38",
+"5:43",
+"1:43",
+"13:12",
+"26",
 "0",
 "11",
 "0",
-"3",
-"1",
-"0",
-"13",
-"3",
-"81.3",
+"4",
 "2",
 "0",
-"0"
+"8",
+"12",
+"40.0",
+"0",
+"1",
+"2"
 ]
 },
 {
@@ -4068,23 +4149,23 @@
 "stats": [
 "1",
 "3",
+"1",
 "0",
-"1",
-"15:07",
-"0:00",
-"0:56",
-"14:11",
-"18",
-"1",
+"18:33",
+"1:06",
+"1:37",
+"15:50",
+"22",
+"0",
 "9",
 "0",
-"2",
+"3",
 "0",
 "0",
-"6",
-"5",
-"54.5",
+"7",
 "1",
+"87.5",
+"2",
 "0",
 "0"
 ]
@@ -4133,26 +4214,26 @@
 },
 "stats": [
 "1",
-"1",
-"0",
-"0",
-"19:05",
-"0:00",
-"0:00",
-"19:05",
-"20",
-"0",
-"8",
-"0",
 "2",
+"0",
+"-1",
+"16:49",
+"1:36",
+"0:13",
+"15:00",
+"22",
 "1",
+"9",
 "0",
 "1",
 "0",
-"100.0",
+"0",
 "1",
 "1",
-"2"
+"50.0",
+"0",
+"0",
+"0"
 ]
 },
 {
@@ -4199,24 +4280,24 @@
 },
 "stats": [
 "0",
-"2",
 "0",
-"-4",
-"17:34",
-"1:39",
+"0",
+"0",
+"5:50",
+"2:42",
 "0:00",
-"15:55",
-"21",
+"3:08",
+"6",
 "0",
 "11",
-"1",
-"1",
+"0",
+"0",
 "1",
 "0",
 "0",
 "0",
 "0.0",
-"2",
+"0",
 "0",
 "0"
 ]
@@ -4264,25 +4345,25 @@
 "scratched": false
 },
 "stats": [
-"1",
-"1",
+"0",
+"0",
 "0",
 "-1",
-"21:52",
-"0:36",
+"20:02",
+"3:38",
 "0:00",
-"21:16",
+"16:24",
 "22",
 "0",
 "6",
+"1",
+"5",
+"1",
 "0",
 "0",
-"2",
-"0",
-"0",
-"0",
+"1",
 "0.0",
-"3",
+"2",
 "0",
 "0"
 ]
@@ -4332,23 +4413,23 @@
 "stats": [
 "0",
 "0",
-"1",
-"1",
-"9:45",
+"0",
+"0",
+"16:45",
+"0:35",
 "0:00",
-"0:00",
-"9:45",
-"12",
+"16:10",
+"21",
 "0",
 "4",
 "0",
 "0",
-"2",
-"0",
-"0",
-"0",
-"0.0",
 "1",
+"0",
+"0",
+"1",
+"0.0",
+"0",
 "0",
 "0"
 ]
@@ -4397,24 +4478,24 @@
 },
 "stats": [
 "0",
-"1",
 "0",
+"1",
 "-1",
-"20:00",
-"1:39",
-"0:03",
-"18:18",
-"20",
+"19:40",
+"5:36",
+"0:28",
+"13:36",
+"21",
 "0",
 "6",
-"1",
+"0",
+"3",
 "1",
 "0",
+"2",
+"9",
+"18.2",
 "0",
-"11",
-"6",
-"64.7",
-"1",
 "0",
 "0"
 ]
@@ -4539,22 +4620,22 @@
 "1",
 "0",
 "0",
-"-1",
-"19:10",
-"0:00",
-"1:38",
-"17:32",
+"0",
+"16:44",
+"0:10",
+"2:43",
+"13:51",
 "23",
 "0",
 "2",
 "0",
-"0",
+"1",
 "0",
 "0",
 "0",
 "0",
 "0.0",
-"0",
+"1",
 "0",
 "0"
 ]
@@ -4602,20 +4683,20 @@
 "scratched": false
 },
 "stats": [
-"1",
-"2",
 "0",
-"-1",
-"14:53",
+"5",
+"0",
+"-2",
+"14:59",
 "0:00",
-"0:22",
-"14:31",
-"19",
+"0:57",
+"14:02",
+"17",
 "0",
 "0",
 "0",
 "0",
-"0",
+"1",
 "0",
 "0",
 "0",
@@ -4668,25 +4749,25 @@
 "scratched": false
 },
 "stats": [
+"2",
+"1",
 "0",
-"0",
-"0",
-"0",
-"22:04",
+"-2",
+"18:16",
 "0:00",
-"1:22",
-"20:42",
+"0:54",
+"17:22",
 "25",
 "0",
 "1",
-"1",
-"4",
-"1",
+"0",
+"0",
+"0",
 "0",
 "0",
 "0",
 "0.0",
-"2",
+"1",
 "0",
 "0"
 ]
@@ -4734,25 +4815,25 @@
 "scratched": false
 },
 "stats": [
-"0",
 "1",
 "0",
 "0",
-"15:13",
-"0:00",
-"0:03",
-"15:10",
+"0",
+"15:32",
+"0:53",
+"0:08",
+"14:31",
 "20",
 "0",
 "3",
 "1",
-"4",
-"0",
+"3",
+"1",
 "0",
 "0",
 "0",
 "0.0",
-"1",
+"2",
 "0",
 "0"
 ]
@@ -4800,14 +4881,14 @@
 "scratched": false
 },
 "stats": [
+"2",
 "0",
 "0",
-"1",
-"-2",
-"25:49",
-"1:39",
-"0:53",
-"23:17",
+"-3",
+"26:49",
+"5:47",
+"1:36",
+"19:26",
 "29",
 "0",
 "1",
@@ -4818,9 +4899,9 @@
 "0",
 "0",
 "0.0",
-"1",
-"1",
-"2"
+"0",
+"2",
+"4"
 ]
 },
 {
@@ -4866,25 +4947,25 @@
 "scratched": false
 },
 "stats": [
-"0",
+"2",
 "2",
 "0",
-"-1",
-"20:17",
-"0:00",
-"1:24",
-"18:53",
+"0",
+"19:55",
+"0:02",
+"4:11",
+"15:42",
 "21",
 "0",
 "0",
 "0",
-"0",
 "2",
 "0",
 "0",
 "0",
+"0",
 "0.0",
-"3",
+"2",
 "0",
 "0"
 ]
@@ -5050,15 +5131,15 @@
 },
 "stats": [
 "3",
-"17",
+"18",
 "0",
 "0",
-"14",
-".824",
+"15",
+".833",
 "12",
-"2",
+"3",
 "0",
-"58:38",
+"56:26",
 "0",
 "0"
 ]
