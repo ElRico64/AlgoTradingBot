@@ -52,8 +52,10 @@ def _num(v) -> Optional[float]:
 
 # ---- NHL: skaters (time on ice, goals, assists, shots, +/-, ...) and goalies (shots, goals against)
 NHL_STATS = ("toi", "g", "a", "s", "pm", "bs", "ht", "tk", "gv", "sa", "ga", "sv")
-_NHL_LABELS = {"TOI": "toi", "G": "g", "A": "a", "S": "s", "SOG": "s", "+/-": "pm", "BS": "bs", "HT": "ht",
+# (ESPN's NHL "SOG" column is shootout goals, not shots on goal: keys decide when a page has them)
+_NHL_LABELS = {"TOI": "toi", "G": "g", "A": "a", "S": "s", "+/-": "pm", "BS": "bs", "HT": "ht",
                "TK": "tk", "GV": "gv", "SA": "sa", "GA": "ga", "SV": "sv", "SAVES": "sv"}
+FORMAT_VERSION = {"NBA": 1, "NHL": 2, "NFL": 1}  # a bump re-downloads that league's box scores
 _NHL_KEYS = {"timeOnIce": "toi", "goals": "g", "assists": "a", "shotsTotal": "s", "shots": "s", "plusMinus": "pm",
              "blockedShots": "bs", "hits": "ht", "takeaways": "tk", "giveaways": "gv", "shotsAgainst": "sa",
              "goalsAgainst": "ga", "saves": "sv"}
@@ -118,22 +120,25 @@ def _parse_nhl(data: dict, aliases: dict) -> list[dict]:
     if h is None:
         return []
     teams, start, gid, eid = h
-    rows = []
+    rows, seen = [], {}
     for block in (data.get("boxscore") or {}).get("players") or []:
         team = aliases.get((block.get("team") or {}).get("abbreviation"), (block.get("team") or {}).get("abbreviation"))
         if team not in (teams["home"], teams["away"]):
             continue
         for st in block.get("statistics") or []:
             keys, labels = st.get("keys") or [], st.get("labels") or st.get("names") or []
-            cols = [(_NHL_KEYS.get(keys[i]) if i < len(keys) else None) or
-                    (_NHL_LABELS.get(str(labels[i]).upper()) if i < len(labels) else None)
-                    for i in range(max(len(keys), len(labels)))]
+            if keys:  # keys name each column exactly; labels are ambiguous ("SOG" = shootout goals)
+                cols = [_NHL_KEYS.get(k) for k in keys]
+            else:
+                cols = [_NHL_LABELS.get(str(x).upper()) for x in labels]
             goalie = "goal" in str(st.get("name") or st.get("type") or "").lower() or ("sa" in cols and "g" not in cols)
             if "toi" not in cols:
                 continue
             for a in st.get("athletes") or []:
                 vals = a.get("stats") or []
                 rec = {c: _num(vals[i]) for i, c in enumerate(cols) if c and i < len(vals)}
+                if str((a.get("athlete") or {}).get("id") or "") in seen.get(team, set()):
+                    continue  # listed twice (forwards and skaters)
                 if goalie and rec.get("sv") is None and rec.get("sa") is not None and rec.get("ga") is not None:
                     rec["sv"] = rec["sa"] - rec["ga"]
                 if goalie and rec.get("sa") is None and rec.get("sv") is not None and rec.get("ga") is not None:
@@ -143,6 +148,7 @@ def _parse_nhl(data: dict, aliases: dict) -> list[dict]:
                 ath = a.get("athlete") or {}
                 pos = "G" if goalie else ((ath.get("position") or {}).get("abbreviation") or "")
                 rows.append(_row(gid, eid, start, team, teams, ath, pos, bool(a.get("starter")), rec, "NHL"))
+                seen.setdefault(team, set()).add(str(ath.get("id") or ""))
     return [r for r in rows if r["player_id"]]
 
 
@@ -316,6 +322,12 @@ def update_boxscores(data_dir: str, game_days: list[date], today: date, budget_s
     fetch_summary = fetch_summary or (lambda eid: _get_json(f"{ESPN_BASE}/{SPORT_PATH[league]}/summary?event={eid}"))
     aliases = espn.ABBR_ALIASES.get(league, {})
     reg = _load_registry(data_dir, league)
+    if reg.get("format", 1) != FORMAT_VERSION.get(league, 1):  # parsed by an older parser: start over
+        path, _ = _paths(data_dir, league)
+        if os.path.exists(path):
+            os.remove(path)
+        reg = {"done": {}, "days": {}}
+    reg["format"] = FORMAT_VERSION.get(league, 1)
     sample_saved = False
     t0, new_rows, games_done, errors = time.time(), [], 0, 0
     days = sorted({d for d in game_days if d < today} | {today - timedelta(days=k) for k in (1, 2)}, reverse=True)

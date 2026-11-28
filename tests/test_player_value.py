@@ -330,3 +330,30 @@ def test_nfl_table_covers_skill_positions_only():
     assert f["Patrick Mahomes"].impact == 6.2
     assert "Third Stringer" not in f                      # a QB who does not start costs nothing
     assert f["Joe Thuney"].impact == get_config("NFL").default_player_impact  # linemen keep the default
+
+
+def test_nhl_real_espn_columns_shootout_goals_are_not_shots():
+    """ESPN's real NHL layout (Nov 2026): "S" is shots (key shotsTotal) and "SOG" is shootout goals
+    (key shootoutGoals). Keys decide; a "skaters" group repeating players is not counted twice."""
+    from sportsedge.props.boxscores import parse_boxscore
+    keys = ["blockedShots", "hits", "takeaways", "plusMinus", "timeOnIce", "powerPlayTimeOnIce", "shortHandedTimeOnIce",
+            "evenStrengthTimeOnIce", "shifts", "goals", "ytdGoals", "assists", "shotsTotal", "shotsMissed", "shootoutGoals",
+            "faceoffsWon", "faceoffsLost", "faceoffPercent", "giveaways", "penalties", "penaltyMinutes"]
+    labels = ["BS", "HT", "TK", "+/-", "TOI", "PPTOI", "SHTOI", "ESTOI", "SHFT", "G", "YTDG", "A", "S", "SM", "SOG",
+              "FW", "FL", "FO%", "GV", "PN", "PIM"]
+    ath = {"athlete": {"id": "3041970", "displayName": "Sam Bennett", "position": {"abbreviation": "C"}},
+           "stats": ["0", "2", "1", "-1", "20:49", "3:03", "0:00", "17:46", "25", "1", "9", "1", "4", "2", "0", "8", "7", "53.3", "1", "0", "0"]}
+    gk = {"name": "goalies", "labels": ["GA", "SA", "SOS", "SOSA", "SV", "SV%", "ESSV", "PPSV", "SHSV", "TOI", "YTDG", "PIM"],
+          "keys": ["goalsAgainst", "shotsAgainst", "shootoutSaves", "shootoutShotsAgainst", "saves", "savePct",
+                   "evenStrengthSaves", "powerPlaySaves", "shortHandedSaves", "timeOnIce", "ytdGoals", "penaltyMinutes"],
+          "athletes": [{"athlete": {"id": "4352796", "displayName": "Akira Schmid"},
+                        "stats": ["4", "32", "0", "0", "28", ".875", "19", "7", "2", "63:14", "0", "0"]}]}
+    groups = [{"name": "forwards", "keys": keys, "labels": labels, "athletes": [ath]},
+              {"name": "skaters", "keys": keys, "labels": labels, "athletes": [ath]}, gk]
+    data = {"header": _hdr("401802345", "2026-11-27T00:00Z", "FLA", "TB"),
+            "boxscore": {"players": [{"team": {"abbreviation": "FLA"}, "statistics": groups}]}}
+    rows = parse_boxscore(data, league="NHL")
+    (sk,) = [r for r in rows if r["pos"] != "G"]
+    assert (sk["s"], sk["g"], sk["a"], sk["pm"], round(sk["toi"], 2)) == (4, 1, 1, -1, 20.82)
+    (g,) = [r for r in rows if r["pos"] == "G"]
+    assert (g["sa"], g["ga"], g["sv"]) == (32, 4, 28)

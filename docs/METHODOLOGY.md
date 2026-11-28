@@ -663,9 +663,29 @@ model values what box scores measure well.
   scratch, so the whole history learns the absences.
 * A raw game page per update is saved to `data/players/samples/` to check
   ESPN's format.
-* The walk-forward test against the engine without absences (as in §8e) runs
-  once the box scores are in. A league whose absences do not improve
-  out-of-sample predictions will have them switched off.
+* A league whose absences do not improve out-of-sample predictions in the
+  walk-forward test (§8e) has them switched off.
+
+**NFL result** (November 28, 2026). 258 box-score games, Nov 2025–Nov 2026;
+124 of them had a priced absence. The stacker was fitted on the earlier 40%
+and the remaining 357 games scored, with and without absences:
+
+| out-of-sample log-loss | before | with absences |
+|---|---|---|
+| full engine (stacked) | 0.6286 | **0.6244** |
+| games with posted odds | 0.6115 | **0.6006** |
+
+On games with posted odds the market scored 0.6098.
+* Paired bootstrap of the per-game gain: +0.0041, 95% interval
+  −0.0006 to +0.0091. The chance the gain is not real is 4.6%.
+* The learned scale settled at 1.88: backups play worse than the
+  conservative prior says.
+* Kept on. The evidence is positive but thin, and the scale keeps learning.
+
+**NHL** first downloads read ESPN's "SOG" column (shootout goals) as shots,
+so every skater showed 0 shots. Keys now decide over labels, and the stored
+NHL box scores re-download under a new format version. The NHL test runs
+once 600 games are back.
 
 ## 8d. Methods considered (November 2026)
 
