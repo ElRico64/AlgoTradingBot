@@ -1,18 +1,18 @@
 {
 "header": {
-"id": "401873083",
-"uid": "s:20~l:28~e:401873083",
+"id": "401772964",
+"uid": "s:20~l:28~e:401772964",
 "season": {
-"year": 2026,
-"current": true,
+"year": 2025,
+"current": false,
 "type": 2
 },
 "timeValid": true,
 "competitions": [
 {
-"id": "401873083",
-"uid": "s:20~l:28~e:401873083~c:401873083",
-"date": "2026-11-27T20:00Z",
+"id": "401772964",
+"uid": "s:20~l:28~e:401772964~c:401772964",
+"date": "2026-01-04T18:00Z",
 "neutralSite": false,
 "conferenceCompetition": false,
 "boxscoreAvailable": true,
@@ -25,25 +25,25 @@
 "playByPlaySource": "full",
 "competitors": [
 {
-"id": "23",
-"uid": "s:20~l:28~t:23",
+"id": "4",
+"uid": "s:20~l:28~t:4",
 "order": 0,
 "homeAway": "home",
-"winner": true,
+"winner": false,
 "team": {
-"id": "23",
-"guid": "debcd592-8d53-71f1-fc15-5c8b8ef9df6e",
-"uid": "s:20~l:28~t:23",
-"location": "Pittsburgh",
-"name": "Steelers",
-"nickname": "Steelers",
-"abbreviation": "PIT",
-"displayName": "Pittsburgh Steelers",
-"color": "000000",
-"alternateColor": "ffb612",
+"id": "4",
+"guid": "75b8623b-8926-b411-0476-3d3602b78523",
+"uid": "s:20~l:28~t:4",
+"location": "Cincinnati",
+"name": "Bengals",
+"nickname": "Bengals",
+"abbreviation": "CIN",
+"displayName": "Cincinnati Bengals",
+"color": "fb4f14",
+"alternateColor": "000000",
 "logos": [
 {
-"href": "https://a.espncdn.com/i/teamlogos/nfl/500/pit.png",
+"href": "https://a.espncdn.com/i/teamlogos/nfl/500/cin.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -51,10 +51,10 @@
 "full",
 "default"
 ],
-"lastUpdated": "2024-06-25T18:56Z"
+"lastUpdated": "2024-06-25T18:46Z"
 },
 {
-"href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/pit.png",
+"href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/cin.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -62,10 +62,10 @@
 "full",
 "dark"
 ],
-"lastUpdated": "2024-06-25T18:56Z"
+"lastUpdated": "2024-06-25T18:46Z"
 },
 {
-"href": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/pit.png",
+"href": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/cin.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -73,10 +73,10 @@
 "full",
 "scoreboard"
 ],
-"lastUpdated": "2024-06-25T18:56Z"
+"lastUpdated": "2024-06-25T18:46Z"
 },
 {
-"href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/scoreboard/pit.png",
+"href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/scoreboard/cin.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -85,10 +85,10 @@
 "scoreboard",
 "dark"
 ],
-"lastUpdated": "2024-06-25T18:56Z"
+"lastUpdated": "2024-06-25T18:46Z"
 },
 {
-"href": "https://a.espncdn.com/guid/debcd592-8d53-71f1-fc15-5c8b8ef9df6e/logos/grayscale.png",
+"href": "https://a.espncdn.com/guid/75b8623b-8926-b411-0476-3d3602b78523/logos/grayscale.png",
 "width": 500,
 "height": 500,
 "alt": "",
@@ -99,7 +99,7 @@
 "lastUpdated": "2026-03-31T12:53Z"
 },
 {
-"href": "https://a.espncdn.com/guid/debcd592-8d53-71f1-fc15-5c8b8ef9df6e/logos/primary_logo_on_white_color.png",
+"href": "https://a.espncdn.com/guid/75b8623b-8926-b411-0476-3d3602b78523/logos/primary_logo_on_white_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -110,7 +110,7 @@
 "lastUpdated": "2026-07-22T20:30Z"
 },
 {
-"href": "https://a.espncdn.com/guid/debcd592-8d53-71f1-fc15-5c8b8ef9df6e/logos/primary_logo_on_black_color.png",
+"href": "https://a.espncdn.com/guid/75b8623b-8926-b411-0476-3d3602b78523/logos/primary_logo_on_black_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -121,7 +121,7 @@
 "lastUpdated": "2026-07-22T20:30Z"
 },
 {
-"href": "https://a.espncdn.com/guid/debcd592-8d53-71f1-fc15-5c8b8ef9df6e/logos/primary_logo_on_primary_color.png",
+"href": "https://a.espncdn.com/guid/75b8623b-8926-b411-0476-3d3602b78523/logos/primary_logo_on_primary_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -132,7 +132,7 @@
 "lastUpdated": "2026-07-22T20:30Z"
 },
 {
-"href": "https://a.espncdn.com/guid/debcd592-8d53-71f1-fc15-5c8b8ef9df6e/logos/primary_logo_on_secondary_color.png",
+"href": "https://a.espncdn.com/guid/75b8623b-8926-b411-0476-3d3602b78523/logos/primary_logo_on_secondary_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -143,7 +143,7 @@
 "lastUpdated": "2026-07-22T20:30Z"
 },
 {
-"href": "https://a.espncdn.com/guid/debcd592-8d53-71f1-fc15-5c8b8ef9df6e/logos/primary_logo_black.png",
+"href": "https://a.espncdn.com/guid/75b8623b-8926-b411-0476-3d3602b78523/logos/primary_logo_black.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -154,7 +154,7 @@
 "lastUpdated": "2026-07-22T20:30Z"
 },
 {
-"href": "https://a.espncdn.com/guid/debcd592-8d53-71f1-fc15-5c8b8ef9df6e/logos/primary_logo_white.png",
+"href": "https://a.espncdn.com/guid/75b8623b-8926-b411-0476-3d3602b78523/logos/primary_logo_white.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -165,7 +165,7 @@
 "lastUpdated": "2026-07-22T20:30Z"
 },
 {
-"href": "https://a.espncdn.com/guid/debcd592-8d53-71f1-fc15-5c8b8ef9df6e/logos/secondary_logo_on_white_color.png",
+"href": "https://a.espncdn.com/guid/75b8623b-8926-b411-0476-3d3602b78523/logos/secondary_logo_on_white_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -176,7 +176,7 @@
 "lastUpdated": "2026-07-22T20:30Z"
 },
 {
-"href": "https://a.espncdn.com/guid/debcd592-8d53-71f1-fc15-5c8b8ef9df6e/logos/secondary_logo_on_black_color.png",
+"href": "https://a.espncdn.com/guid/75b8623b-8926-b411-0476-3d3602b78523/logos/secondary_logo_on_black_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -187,7 +187,7 @@
 "lastUpdated": "2026-07-22T20:30Z"
 },
 {
-"href": "https://a.espncdn.com/guid/debcd592-8d53-71f1-fc15-5c8b8ef9df6e/logos/secondary_logo_on_primary_color.png",
+"href": "https://a.espncdn.com/guid/75b8623b-8926-b411-0476-3d3602b78523/logos/secondary_logo_on_primary_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -198,7 +198,7 @@
 "lastUpdated": "2026-07-22T20:30Z"
 },
 {
-"href": "https://a.espncdn.com/guid/debcd592-8d53-71f1-fc15-5c8b8ef9df6e/logos/secondary_logo_on_secondary_color.png",
+"href": "https://a.espncdn.com/guid/75b8623b-8926-b411-0476-3d3602b78523/logos/secondary_logo_on_secondary_color.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -209,7 +209,7 @@
 "lastUpdated": "2026-07-22T20:30Z"
 },
 {
-"href": "https://a.espncdn.com/guid/debcd592-8d53-71f1-fc15-5c8b8ef9df6e/logos/secondary_logo_black.png",
+"href": "https://a.espncdn.com/guid/75b8623b-8926-b411-0476-3d3602b78523/logos/secondary_logo_black.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -220,7 +220,7 @@
 "lastUpdated": "2026-07-22T20:30Z"
 },
 {
-"href": "https://a.espncdn.com/guid/debcd592-8d53-71f1-fc15-5c8b8ef9df6e/logos/secondary_logo_white.png",
+"href": "https://a.espncdn.com/guid/75b8623b-8926-b411-0476-3d3602b78523/logos/secondary_logo_white.png",
 "width": 4096,
 "height": 4096,
 "alt": "",
@@ -238,21 +238,269 @@
 "desktop",
 "team"
 ],
-"href": "https://www.espn.com/nfl/team/_/name/pit/pittsburgh-steelers",
+"href": "https://www.espn.com/nfl/team/_/name/cin/cincinnati-bengals",
 "text": "Clubhouse"
 }
 ]
 },
-"score": "27",
+"score": "18",
 "linescores": [
 {
-"displayValue": "14"
+"displayValue": "6"
 },
 {
-"displayValue": "10"
+"displayValue": "6"
 },
 {
 "displayValue": "0"
+},
+{
+"displayValue": "6"
+}
+],
+"record": [
+{
+"type": "total",
+"summary": "6-11",
+"displayValue": "6-11"
+},
+{
+"type": "home",
+"summary": "3-6",
+"displayValue": "3-6"
+}
+],
+"possession": false
+},
+{
+"id": "5",
+"uid": "s:20~l:28~t:5",
+"order": 1,
+"homeAway": "away",
+"winner": true,
+"team": {
+"id": "5",
+"guid": "539babc5-e5fb-753b-8ae1-c15032a91ef4",
+"uid": "s:20~l:28~t:5",
+"location": "Cleveland",
+"name": "Browns",
+"nickname": "Browns",
+"abbreviation": "CLE",
+"displayName": "Cleveland Browns",
+"color": "472a08",
+"alternateColor": "ff3c00",
+"logos": [
+{
+"href": "https://a.espncdn.com/i/teamlogos/nfl/500/cle.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"default"
+],
+"lastUpdated": "2024-06-25T18:47Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/cle.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"dark"
+],
+"lastUpdated": "2024-06-25T18:47Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/cle.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"scoreboard"
+],
+"lastUpdated": "2024-06-25T18:47Z"
+},
+{
+"href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/scoreboard/cle.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"scoreboard",
+"dark"
+],
+"lastUpdated": "2024-06-25T18:47Z"
+},
+{
+"href": "https://a.espncdn.com/guid/539babc5-e5fb-753b-8ae1-c15032a91ef4/logos/grayscale.png",
+"width": 500,
+"height": 500,
+"alt": "",
+"rel": [
+"full",
+"grayscale"
+],
+"lastUpdated": "2026-03-30T20:28Z"
+},
+{
+"href": "https://a.espncdn.com/guid/539babc5-e5fb-753b-8ae1-c15032a91ef4/logos/primary_logo_on_white_color.png",
+"width": 4096,
+"height": 4096,
+"alt": "",
+"rel": [
+"full",
+"primary_logo_on_white_color"
+],
+"lastUpdated": "2026-07-22T20:30Z"
+},
+{
+"href": "https://a.espncdn.com/guid/539babc5-e5fb-753b-8ae1-c15032a91ef4/logos/primary_logo_on_black_color.png",
+"width": 4096,
+"height": 4096,
+"alt": "",
+"rel": [
+"full",
+"primary_logo_on_black_color"
+],
+"lastUpdated": "2026-07-22T20:30Z"
+},
+{
+"href": "https://a.espncdn.com/guid/539babc5-e5fb-753b-8ae1-c15032a91ef4/logos/primary_logo_on_primary_color.png",
+"width": 4096,
+"height": 4096,
+"alt": "",
+"rel": [
+"full",
+"primary_logo_on_primary_color"
+],
+"lastUpdated": "2026-07-22T20:30Z"
+},
+{
+"href": "https://a.espncdn.com/guid/539babc5-e5fb-753b-8ae1-c15032a91ef4/logos/primary_logo_on_secondary_color.png",
+"width": 4096,
+"height": 4096,
+"alt": "",
+"rel": [
+"full",
+"primary_logo_on_secondary_color"
+],
+"lastUpdated": "2026-07-22T20:30Z"
+},
+{
+"href": "https://a.espncdn.com/guid/539babc5-e5fb-753b-8ae1-c15032a91ef4/logos/primary_logo_black.png",
+"width": 4096,
+"height": 4096,
+"alt": "",
+"rel": [
+"full",
+"primary_logo_black"
+],
+"lastUpdated": "2026-07-22T20:30Z"
+},
+{
+"href": "https://a.espncdn.com/guid/539babc5-e5fb-753b-8ae1-c15032a91ef4/logos/primary_logo_white.png",
+"width": 4096,
+"height": 4096,
+"alt": "",
+"rel": [
+"full",
+"primary_logo_white"
+],
+"lastUpdated": "2026-07-22T20:30Z"
+},
+{
+"href": "https://a.espncdn.com/guid/539babc5-e5fb-753b-8ae1-c15032a91ef4/logos/secondary_logo_on_white_color.png",
+"width": 4096,
+"height": 4096,
+"alt": "",
+"rel": [
+"full",
+"secondary_logo_on_white_color"
+],
+"lastUpdated": "2026-07-22T20:30Z"
+},
+{
+"href": "https://a.espncdn.com/guid/539babc5-e5fb-753b-8ae1-c15032a91ef4/logos/secondary_logo_on_black_color.png",
+"width": 4096,
+"height": 4096,
+"alt": "",
+"rel": [
+"full",
+"secondary_logo_on_black_color"
+],
+"lastUpdated": "2026-07-22T20:30Z"
+},
+{
+"href": "https://a.espncdn.com/guid/539babc5-e5fb-753b-8ae1-c15032a91ef4/logos/secondary_logo_on_primary_color.png",
+"width": 4096,
+"height": 4096,
+"alt": "",
+"rel": [
+"full",
+"secondary_logo_on_primary_color"
+],
+"lastUpdated": "2026-07-22T20:30Z"
+},
+{
+"href": "https://a.espncdn.com/guid/539babc5-e5fb-753b-8ae1-c15032a91ef4/logos/secondary_logo_on_secondary_color.png",
+"width": 4096,
+"height": 4096,
+"alt": "",
+"rel": [
+"full",
+"secondary_logo_on_secondary_color"
+],
+"lastUpdated": "2026-07-22T20:30Z"
+},
+{
+"href": "https://a.espncdn.com/guid/539babc5-e5fb-753b-8ae1-c15032a91ef4/logos/secondary_logo_black.png",
+"width": 4096,
+"height": 4096,
+"alt": "",
+"rel": [
+"full",
+"secondary_logo_black"
+],
+"lastUpdated": "2026-07-22T20:30Z"
+},
+{
+"href": "https://a.espncdn.com/guid/539babc5-e5fb-753b-8ae1-c15032a91ef4/logos/secondary_logo_white.png",
+"width": 4096,
+"height": 4096,
+"alt": "",
+"rel": [
+"full",
+"secondary_logo_white"
+],
+"lastUpdated": "2026-07-22T20:30Z"
+}
+],
+"links": [
+{
+"rel": [
+"clubhouse",
+"desktop",
+"team"
+],
+"href": "https://www.espn.com/nfl/team/_/name/cle/cleveland-browns",
+"text": "Clubhouse"
+}
+]
+},
+"score": "20",
+"linescores": [
+{
+"displayValue": "7"
+},
+{
+"displayValue": "7"
+},
+{
+"displayValue": "3"
 },
 {
 "displayValue": "3"
@@ -261,261 +509,13 @@
 "record": [
 {
 "type": "total",
-"summary": "7-4",
-"displayValue": "7-4"
-},
-{
-"type": "home",
-"summary": "5-0",
-"displayValue": "5-0"
-}
-],
-"possession": false
-},
-{
-"id": "7",
-"uid": "s:20~l:28~t:7",
-"order": 1,
-"homeAway": "away",
-"winner": false,
-"team": {
-"id": "7",
-"guid": "51042145-e3c1-0694-ae0d-f720342ff8fc",
-"uid": "s:20~l:28~t:7",
-"location": "Denver",
-"name": "Broncos",
-"nickname": "Broncos",
-"abbreviation": "DEN",
-"displayName": "Denver Broncos",
-"color": "0a2343",
-"alternateColor": "fc4c02",
-"logos": [
-{
-"href": "https://a.espncdn.com/i/teamlogos/nfl/500/den.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"default"
-],
-"lastUpdated": "2024-06-25T18:48Z"
-},
-{
-"href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/den.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"dark"
-],
-"lastUpdated": "2024-06-25T18:59Z"
-},
-{
-"href": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/den.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"scoreboard"
-],
-"lastUpdated": "2024-06-25T18:48Z"
-},
-{
-"href": "https://a.espncdn.com/i/teamlogos/nfl/500-dark/scoreboard/den.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"scoreboard",
-"dark"
-],
-"lastUpdated": "2024-06-25T18:59Z"
-},
-{
-"href": "https://a.espncdn.com/guid/51042145-e3c1-0694-ae0d-f720342ff8fc/logos/grayscale.png",
-"width": 500,
-"height": 500,
-"alt": "",
-"rel": [
-"full",
-"grayscale"
-],
-"lastUpdated": "2026-03-31T12:53Z"
-},
-{
-"href": "https://a.espncdn.com/guid/51042145-e3c1-0694-ae0d-f720342ff8fc/logos/primary_logo_on_white_color.png",
-"width": 4096,
-"height": 4096,
-"alt": "",
-"rel": [
-"full",
-"primary_logo_on_white_color"
-],
-"lastUpdated": "2026-07-22T20:30Z"
-},
-{
-"href": "https://a.espncdn.com/guid/51042145-e3c1-0694-ae0d-f720342ff8fc/logos/primary_logo_on_black_color.png",
-"width": 4096,
-"height": 4096,
-"alt": "",
-"rel": [
-"full",
-"primary_logo_on_black_color"
-],
-"lastUpdated": "2026-07-22T20:30Z"
-},
-{
-"href": "https://a.espncdn.com/guid/51042145-e3c1-0694-ae0d-f720342ff8fc/logos/primary_logo_on_primary_color.png",
-"width": 4096,
-"height": 4096,
-"alt": "",
-"rel": [
-"full",
-"primary_logo_on_primary_color"
-],
-"lastUpdated": "2026-07-22T20:30Z"
-},
-{
-"href": "https://a.espncdn.com/guid/51042145-e3c1-0694-ae0d-f720342ff8fc/logos/primary_logo_on_secondary_color.png",
-"width": 4096,
-"height": 4096,
-"alt": "",
-"rel": [
-"full",
-"primary_logo_on_secondary_color"
-],
-"lastUpdated": "2026-07-22T20:30Z"
-},
-{
-"href": "https://a.espncdn.com/guid/51042145-e3c1-0694-ae0d-f720342ff8fc/logos/primary_logo_black.png",
-"width": 4096,
-"height": 4096,
-"alt": "",
-"rel": [
-"full",
-"primary_logo_black"
-],
-"lastUpdated": "2026-07-22T20:30Z"
-},
-{
-"href": "https://a.espncdn.com/guid/51042145-e3c1-0694-ae0d-f720342ff8fc/logos/primary_logo_white.png",
-"width": 4096,
-"height": 4096,
-"alt": "",
-"rel": [
-"full",
-"primary_logo_white"
-],
-"lastUpdated": "2026-07-22T20:30Z"
-},
-{
-"href": "https://a.espncdn.com/guid/51042145-e3c1-0694-ae0d-f720342ff8fc/logos/secondary_logo_on_white_color.png",
-"width": 4096,
-"height": 4096,
-"alt": "",
-"rel": [
-"full",
-"secondary_logo_on_white_color"
-],
-"lastUpdated": "2026-07-22T20:30Z"
-},
-{
-"href": "https://a.espncdn.com/guid/51042145-e3c1-0694-ae0d-f720342ff8fc/logos/secondary_logo_on_black_color.png",
-"width": 4096,
-"height": 4096,
-"alt": "",
-"rel": [
-"full",
-"secondary_logo_on_black_color"
-],
-"lastUpdated": "2026-07-22T20:30Z"
-},
-{
-"href": "https://a.espncdn.com/guid/51042145-e3c1-0694-ae0d-f720342ff8fc/logos/secondary_logo_on_primary_color.png",
-"width": 4096,
-"height": 4096,
-"alt": "",
-"rel": [
-"full",
-"secondary_logo_on_primary_color"
-],
-"lastUpdated": "2026-07-22T20:30Z"
-},
-{
-"href": "https://a.espncdn.com/guid/51042145-e3c1-0694-ae0d-f720342ff8fc/logos/secondary_logo_on_secondary_color.png",
-"width": 4096,
-"height": 4096,
-"alt": "",
-"rel": [
-"full",
-"secondary_logo_on_secondary_color"
-],
-"lastUpdated": "2026-07-22T20:30Z"
-},
-{
-"href": "https://a.espncdn.com/guid/51042145-e3c1-0694-ae0d-f720342ff8fc/logos/secondary_logo_black.png",
-"width": 4096,
-"height": 4096,
-"alt": "",
-"rel": [
-"full",
-"secondary_logo_black"
-],
-"lastUpdated": "2026-07-22T20:30Z"
-},
-{
-"href": "https://a.espncdn.com/guid/51042145-e3c1-0694-ae0d-f720342ff8fc/logos/secondary_logo_white.png",
-"width": 4096,
-"height": 4096,
-"alt": "",
-"rel": [
-"full",
-"secondary_logo_white"
-],
-"lastUpdated": "2026-07-22T20:30Z"
-}
-],
-"links": [
-{
-"rel": [
-"clubhouse",
-"desktop",
-"team"
-],
-"href": "https://www.espn.com/nfl/team/_/name/den/denver-broncos",
-"text": "Clubhouse"
-}
-]
-},
-"score": "5",
-"linescores": [
-{
-"displayValue": "0"
-},
-{
-"displayValue": "5"
-},
-{
-"displayValue": "0"
-},
-{
-"displayValue": "0"
-}
-],
-"record": [
-{
-"type": "total",
-"summary": "8-3",
-"displayValue": "8-3"
+"summary": "5-12",
+"displayValue": "5-12"
 },
 {
 "type": "road",
-"summary": "3-3",
-"displayValue": "3-3"
+"summary": "2-6",
+"displayValue": "2-6"
 }
 ],
 "possession": false
@@ -536,15 +536,15 @@
 "broadcasts": [
 {
 "type": {
-"id": "4",
-"shortName": "Streaming"
+"id": "1",
+"shortName": "TV"
 },
 "market": {
 "id": "1",
 "type": "National"
 },
 "media": {
-"shortName": "Prime Video"
+"shortName": "CBS"
 },
 "lang": "en",
 "region": "us",
@@ -561,7 +561,7 @@
 "desktop",
 "event"
 ],
-"href": "https://www.espn.com/nfl/game/_/gameId/401873083/broncos-steelers",
+"href": "https://www.espn.com/nfl/game/_/gameId/401772964/browns-bengals",
 "text": "Gamecast",
 "shortText": "Summary",
 "isExternal": false,
@@ -573,7 +573,7 @@
 "desktop",
 "event"
 ],
-"href": "https://www.espn.com/nfl/recap?gameId=401873083",
+"href": "https://www.espn.com/nfl/recap?gameId=401772964",
 "text": "Recap",
 "shortText": "Recap",
 "isExternal": false,
@@ -585,7 +585,7 @@
 "desktop",
 "event"
 ],
-"href": "https://www.espn.com/nfl/boxscore/_/gameId/401873083",
+"href": "https://www.espn.com/nfl/boxscore/_/gameId/401772964",
 "text": "Box Score",
 "shortText": "Box Score",
 "isExternal": false,
@@ -597,7 +597,7 @@
 "desktop",
 "event"
 ],
-"href": "https://www.espn.com/nfl/playbyplay/_/gameId/401873083",
+"href": "https://www.espn.com/nfl/playbyplay/_/gameId/401772964",
 "text": "Play-by-Play",
 "shortText": "Play-by-Play",
 "isExternal": false,
@@ -609,26 +609,14 @@
 "desktop",
 "event"
 ],
-"href": "https://www.espn.com/nfl/matchup?gameId=401873083",
+"href": "https://www.espn.com/nfl/matchup?gameId=401772964",
 "text": "Team Stats",
 "shortText": "Team Stats",
 "isExternal": false,
 "isPremium": false
-},
-{
-"rel": [
-"videos",
-"desktop",
-"event"
-],
-"href": "https://www.espn.com/nfl/video?gameId=401873083",
-"text": "Videos",
-"shortText": "Videos",
-"isExternal": false,
-"isPremium": false
 }
 ],
-"week": 12,
+"week": 18,
 "league": {
 "id": "28",
 "uid": "s:20~l:28",
@@ -839,17 +827,17 @@
 "players": [
 {
 "team": {
-"id": "7",
-"uid": "s:20~l:28~t:7",
-"slug": "denver-broncos",
-"location": "Denver",
-"name": "Broncos",
-"abbreviation": "DEN",
-"displayName": "Denver Broncos",
-"shortDisplayName": "Broncos",
-"color": "0a2343",
-"alternateColor": "fc4c02",
-"logo": "https://a.espncdn.com/i/teamlogos/nfl/500/den.png"
+"id": "5",
+"uid": "s:20~l:28~t:5",
+"slug": "cleveland-browns",
+"location": "Cleveland",
+"name": "Browns",
+"abbreviation": "CLE",
+"displayName": "Cleveland Browns",
+"shortDisplayName": "Browns",
+"color": "472a08",
+"alternateColor": "ff3c00",
+"logo": "https://a.espncdn.com/i/teamlogos/nfl/500/cle.png"
 },
 "statistics": [
 {
@@ -864,7 +852,7 @@
 "adjQBR",
 "QBRating"
 ],
-"text": "Denver Passing",
+"text": "Cleveland Passing",
 "labels": [
 "C/ATT",
 "YDS",
@@ -888,12 +876,12 @@
 "athletes": [
 {
 "athlete": {
-"id": "4426338",
-"uid": "s:20~l:28~a:4426338",
-"guid": "f9de7512-a950-3317-816b-abe094068409",
-"firstName": "Bo",
-"lastName": "Nix",
-"displayName": "Bo Nix",
+"id": "4432762",
+"uid": "s:20~l:28~a:4432762",
+"guid": "fecbc03c-f8bf-342e-82be-991901cf6449",
+"firstName": "Shedeur",
+"lastName": "Sanders",
+"displayName": "Shedeur Sanders",
 "links": [
 {
 "rel": [
@@ -901,37 +889,37 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4426338/bo-nix",
+"href": "https://www.espn.com/nfl/player/_/id/4432762/shedeur-sanders",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4426338.png",
-"alt": "Bo Nix"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4432762.png",
+"alt": "Shedeur Sanders"
 },
-"jersey": "10"
+"jersey": "12"
 },
 "stats": [
-"22/40",
-"169",
-"4.2",
+"11/22",
+"111",
+"5.0",
 "0",
-"2",
-"3-37",
-"24.7",
-"44.7"
+"0",
+"6-29",
+"11.8",
+"64.8"
 ]
 }
 ],
 "totals": [
-"22/40",
-"132",
-"4.2",
+"11/22",
+"82",
+"5.0",
 "0",
-"2",
-"3-37",
+"0",
+"6-29",
 "--",
-"44.7"
+"64.8"
 ]
 },
 {
@@ -943,7 +931,7 @@
 "rushingTouchdowns",
 "longRushing"
 ],
-"text": "Denver Rushing",
+"text": "Cleveland Rushing",
 "labels": [
 "CAR",
 "YDS",
@@ -961,12 +949,12 @@
 "athletes": [
 {
 "athlete": {
-"id": "4391845",
-"uid": "s:20~l:28~a:4391845",
-"guid": "ebd087c9-60e8-c778-85ef-aaa4f461ee31",
-"firstName": "Cody",
-"lastName": "Schrader",
-"displayName": "Cody Schrader",
+"id": "5081397",
+"uid": "s:20~l:28~a:5081397",
+"guid": "a4e5aba0-47c3-3698-ba26-87310d8d1d30",
+"firstName": "Dylan",
+"lastName": "Sampson",
+"displayName": "Dylan Sampson",
 "links": [
 {
 "rel": [
@@ -974,98 +962,32 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4391845/cody-schrader",
+"href": "https://www.espn.com/nfl/player/_/id/5081397/dylan-sampson",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4391845.png",
-"alt": "Cody Schrader"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/5081397.png",
+"alt": "Dylan Sampson"
 },
-"jersey": "25"
-},
-"stats": [
-"7",
-"27",
-"3.9",
-"0",
-"9"
-]
-},
-{
-"athlete": {
-"id": "4702555",
-"uid": "s:20~l:28~a:4702555",
-"guid": "18f44346-4f89-3095-99e8-c6af7adec2b2",
-"firstName": "Jonah",
-"lastName": "Coleman",
-"displayName": "Jonah Coleman",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/4702555/jonah-coleman",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4702555.png",
-"alt": "Jonah Coleman"
-},
-"jersey": "20"
+"jersey": "22"
 },
 "stats": [
-"15",
-"26",
-"1.7",
-"0",
-"9"
-]
-},
-{
-"athlete": {
-"id": "4362748",
-"uid": "s:20~l:28~a:4362748",
-"guid": "ebcabe19-67c9-6ae6-ed8a-161cc0ba29f1",
-"firstName": "Tyler",
-"lastName": "Badie",
-"displayName": "Tyler Badie",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/4362748/tyler-badie",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4362748.png",
-"alt": "Tyler Badie"
-},
-"jersey": "28"
-},
-"stats": [
-"1",
-"11",
-"11.0",
+"10",
+"32",
+"3.2",
 "0",
 "11"
 ]
 },
 {
 "athlete": {
-"id": "4426338",
-"uid": "s:20~l:28~a:4426338",
-"guid": "f9de7512-a950-3317-816b-abe094068409",
-"firstName": "Bo",
-"lastName": "Nix",
-"displayName": "Bo Nix",
+"id": "4432762",
+"uid": "s:20~l:28~a:4432762",
+"guid": "fecbc03c-f8bf-342e-82be-991901cf6449",
+"firstName": "Shedeur",
+"lastName": "Sanders",
+"displayName": "Shedeur Sanders",
 "links": [
 {
 "rel": [
@@ -1073,15 +995,114 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4426338/bo-nix",
+"href": "https://www.espn.com/nfl/player/_/id/4432762/shedeur-sanders",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4426338.png",
-"alt": "Bo Nix"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4432762.png",
+"alt": "Shedeur Sanders"
 },
-"jersey": "10"
+"jersey": "12"
+},
+"stats": [
+"3",
+"26",
+"8.7",
+"0",
+"13"
+]
+},
+{
+"athlete": {
+"id": "4601080",
+"uid": "s:20~l:28~a:4601080",
+"guid": "7065be65-729f-30dc-891c-97c90744eaa9",
+"firstName": "Raheim",
+"lastName": "Sanders",
+"displayName": "Raheim Sanders",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/4601080/raheim-sanders",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4601080.png",
+"alt": "Raheim Sanders"
+},
+"jersey": "35"
+},
+"stats": [
+"5",
+"26",
+"5.2",
+"0",
+"14"
+]
+},
+{
+"athlete": {
+"id": "4613104",
+"uid": "s:20~l:28~a:4613104",
+"guid": "a63d2bd9-8318-332e-93d4-4e3f012161f5",
+"firstName": "Malachi",
+"lastName": "Corley",
+"displayName": "Malachi Corley",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/4613104/malachi-corley",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4613104.png",
+"alt": "Malachi Corley"
+},
+"jersey": "83"
+},
+"stats": [
+"3",
+"18",
+"6.0",
+"0",
+"8"
+]
+},
+{
+"athlete": {
+"id": "4035222",
+"uid": "s:20~l:28~a:4035222",
+"guid": "84e6fda6-12db-d1ef-5807-05d2bc6f94ed",
+"firstName": "Trayveon",
+"lastName": "Williams",
+"displayName": "Trayveon Williams",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/4035222/trayveon-williams",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4035222.png",
+"alt": "Trayveon Williams"
+},
+"jersey": "38"
 },
 "stats": [
 "1",
@@ -1093,12 +1114,12 @@
 },
 {
 "athlete": {
-"id": "3929914",
-"uid": "s:20~l:28~a:3929914",
-"guid": "99d401e0-d0a9-ad7f-23d9-4ff283cd06f1",
-"firstName": "Adam",
-"lastName": "Prentice",
-"displayName": "Adam Prentice",
+"id": "4241463",
+"uid": "s:20~l:28~a:4241463",
+"guid": "a6f54531-6f5b-5d5d-2026-28a308e5cb59",
+"firstName": "Jerry",
+"lastName": "Jeudy",
+"displayName": "Jerry Jeudy",
 "links": [
 {
 "rel": [
@@ -1106,15 +1127,48 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/3929914/adam-prentice",
+"href": "https://www.espn.com/nfl/player/_/id/4241463/jerry-jeudy",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/3929914.png",
-"alt": "Adam Prentice"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4241463.png",
+"alt": "Jerry Jeudy"
 },
-"jersey": "46"
+"jersey": "3"
+},
+"stats": [
+"1",
+"5",
+"5.0",
+"0",
+"5"
+]
+},
+{
+"athlete": {
+"id": "4808839",
+"uid": "s:20~l:28~a:4808839",
+"guid": "5b3ecef9-96f9-36c1-bcba-5f9452c45c81",
+"firstName": "Isaiah",
+"lastName": "Bond",
+"displayName": "Isaiah Bond",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/4808839/isaiah-bond",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4808839.png",
+"alt": "Isaiah Bond"
+},
+"jersey": "16"
 },
 "stats": [
 "1",
@@ -1123,47 +1177,14 @@
 "0",
 "4"
 ]
-},
-{
-"athlete": {
-"id": "4686472",
-"uid": "s:20~l:28~a:4686472",
-"guid": "9874a811-7338-3390-bfc5-c75b65beb1b0",
-"firstName": "Marvin",
-"lastName": "Mims Jr.",
-"displayName": "Marvin Mims Jr.",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/4686472/marvin-mims-jr",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4686472.png",
-"alt": "Marvin Mims Jr."
-},
-"jersey": "19"
-},
-"stats": [
-"1",
-"-2",
-"-2.0",
-"0",
-"-2"
-]
 }
 ],
 "totals": [
-"26",
-"73",
-"2.8",
+"24",
+"118",
+"4.9",
 "0",
-"11"
+"14"
 ]
 },
 {
@@ -1176,7 +1197,7 @@
 "longReception",
 "receivingTargets"
 ],
-"text": "Denver Receiving",
+"text": "Cleveland Receiving",
 "labels": [
 "REC",
 "YDS",
@@ -1196,12 +1217,12 @@
 "athletes": [
 {
 "athlete": {
-"id": "4372016",
-"uid": "s:20~l:28~a:4372016",
-"guid": "db4bf6c9-e27d-8382-372f-120b3da89bd6",
-"firstName": "Jaylen",
-"lastName": "Waddle",
-"displayName": "Jaylen Waddle",
+"id": "4369863",
+"uid": "s:20~l:28~a:4369863",
+"guid": "620c7bc3-7ac3-0044-9614-4bcea9534af6",
+"firstName": "Cedric",
+"lastName": "Tillman",
+"displayName": "Cedric Tillman",
 "links": [
 {
 "rel": [
@@ -1209,33 +1230,33 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4372016/jaylen-waddle",
+"href": "https://www.espn.com/nfl/player/_/id/4369863/cedric-tillman",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4372016.png",
-"alt": "Jaylen Waddle"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4369863.png",
+"alt": "Cedric Tillman"
 },
-"jersey": "17"
+"jersey": "19"
 },
 "stats": [
-"5",
-"53",
-"10.6",
+"1",
+"23",
+"23.0",
 "0",
-"22",
-"8"
+"23",
+"2"
 ]
 },
 {
 "athlete": {
-"id": "4702555",
-"uid": "s:20~l:28~a:4702555",
-"guid": "18f44346-4f89-3095-99e8-c6af7adec2b2",
-"firstName": "Jonah",
-"lastName": "Coleman",
-"displayName": "Jonah Coleman",
+"id": "4613104",
+"uid": "s:20~l:28~a:4613104",
+"guid": "a63d2bd9-8318-332e-93d4-4e3f012161f5",
+"firstName": "Malachi",
+"lastName": "Corley",
+"displayName": "Malachi Corley",
 "links": [
 {
 "rel": [
@@ -1243,33 +1264,33 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4702555/jonah-coleman",
+"href": "https://www.espn.com/nfl/player/_/id/4613104/malachi-corley",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4702555.png",
-"alt": "Jonah Coleman"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4613104.png",
+"alt": "Malachi Corley"
 },
-"jersey": "20"
+"jersey": "83"
 },
 "stats": [
-"8",
-"46",
-"5.8",
+"2",
+"20",
+"10.0",
 "0",
-"17",
-"10"
+"19",
+"2"
 ]
 },
 {
 "athlete": {
-"id": "4600981",
-"uid": "s:20~l:28~a:4600981",
-"guid": "04318999-444f-3e9e-9229-03883bcf9742",
-"firstName": "Pat",
-"lastName": "Bryant",
-"displayName": "Pat Bryant",
+"id": "4241463",
+"uid": "s:20~l:28~a:4241463",
+"guid": "a6f54531-6f5b-5d5d-2026-28a308e5cb59",
+"firstName": "Jerry",
+"lastName": "Jeudy",
+"displayName": "Jerry Jeudy",
 "links": [
 {
 "rel": [
@@ -1277,67 +1298,33 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4600981/pat-bryant",
+"href": "https://www.espn.com/nfl/player/_/id/4241463/jerry-jeudy",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4600981.png",
-"alt": "Pat Bryant"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4241463.png",
+"alt": "Jerry Jeudy"
 },
-"jersey": "13"
-},
-"stats": [
-"4",
-"42",
-"10.5",
-"0",
-"17",
-"7"
-]
-},
-{
-"athlete": {
-"id": "3911853",
-"uid": "s:20~l:28~a:3911853",
-"guid": "6eb28a2d-193f-f208-fde3-2fe9e37ec7a9",
-"firstName": "Adam",
-"lastName": "Trautman",
-"displayName": "Adam Trautman",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/3911853/adam-trautman",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/3911853.png",
-"alt": "Adam Trautman"
-},
-"jersey": "82"
+"jersey": "3"
 },
 "stats": [
 "2",
 "17",
 "8.5",
 "0",
-"14",
-"2"
+"11",
+"6"
 ]
 },
 {
 "athlete": {
-"id": "4383440",
-"uid": "s:20~l:28~a:4383440",
-"guid": "3cf9ec19-4b51-a32d-df44-0248ef633ea0",
-"firstName": "Nate",
-"lastName": "Adkins",
-"displayName": "Nate Adkins",
+"id": "4035222",
+"uid": "s:20~l:28~a:4035222",
+"guid": "84e6fda6-12db-d1ef-5807-05d2bc6f94ed",
+"firstName": "Trayveon",
+"lastName": "Williams",
+"displayName": "Trayveon Williams",
 "links": [
 {
 "rel": [
@@ -1345,15 +1332,151 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4383440/nate-adkins",
+"href": "https://www.espn.com/nfl/player/_/id/4035222/trayveon-williams",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4383440.png",
-"alt": "Nate Adkins"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4035222.png",
+"alt": "Trayveon Williams"
 },
-"jersey": "45"
+"jersey": "38"
+},
+"stats": [
+"1",
+"13",
+"13.0",
+"0",
+"13",
+"2"
+]
+},
+{
+"athlete": {
+"id": "4808839",
+"uid": "s:20~l:28~a:4808839",
+"guid": "5b3ecef9-96f9-36c1-bcba-5f9452c45c81",
+"firstName": "Isaiah",
+"lastName": "Bond",
+"displayName": "Isaiah Bond",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/4808839/isaiah-bond",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4808839.png",
+"alt": "Isaiah Bond"
+},
+"jersey": "16"
+},
+"stats": [
+"1",
+"13",
+"13.0",
+"0",
+"13",
+"2"
+]
+},
+{
+"athlete": {
+"id": "5081397",
+"uid": "s:20~l:28~a:5081397",
+"guid": "a4e5aba0-47c3-3698-ba26-87310d8d1d30",
+"firstName": "Dylan",
+"lastName": "Sampson",
+"displayName": "Dylan Sampson",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/5081397/dylan-sampson",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/5081397.png",
+"alt": "Dylan Sampson"
+},
+"jersey": "22"
+},
+"stats": [
+"2",
+"12",
+"6.0",
+"0",
+"9",
+"3"
+]
+},
+{
+"athlete": {
+"id": "4601080",
+"uid": "s:20~l:28~a:4601080",
+"guid": "7065be65-729f-30dc-891c-97c90744eaa9",
+"firstName": "Raheim",
+"lastName": "Sanders",
+"displayName": "Raheim Sanders",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/4601080/raheim-sanders",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4601080.png",
+"alt": "Raheim Sanders"
+},
+"jersey": "35"
+},
+"stats": [
+"1",
+"7",
+"7.0",
+"0",
+"7",
+"1"
+]
+},
+{
+"athlete": {
+"id": "4362603",
+"uid": "s:20~l:28~a:4362603",
+"guid": "62cfe932-60b8-ac9b-c5bc-10ae9e6062ce",
+"firstName": "Brenden",
+"lastName": "Bates",
+"displayName": "Brenden Bates",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/4362603/brenden-bates",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4362603.png",
+"alt": "Brenden Bates"
+},
+"jersey": "82"
 },
 "stats": [
 "1",
@@ -1361,85 +1484,17 @@
 "6.0",
 "0",
 "6",
-"2"
-]
-},
-{
-"athlete": {
-"id": "3128429",
-"uid": "s:20~l:28~a:3128429",
-"guid": "32a202cd-dda5-e1c7-1c11-569436ff5230",
-"firstName": "Courtland",
-"lastName": "Sutton",
-"displayName": "Courtland Sutton",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/3128429/courtland-sutton",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/3128429.png",
-"alt": "Courtland Sutton"
-},
-"jersey": "14"
-},
-"stats": [
-"1",
-"4",
-"4.0",
-"0",
-"4",
-"8"
-]
-},
-{
-"athlete": {
-"id": "4431280",
-"uid": "s:20~l:28~a:4431280",
-"guid": "96745857-1db8-3cee-a314-cd5defc307f4",
-"firstName": "Troy",
-"lastName": "Franklin",
-"displayName": "Troy Franklin",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/4431280/troy-franklin",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4431280.png",
-"alt": "Troy Franklin"
-},
-"jersey": "11"
-},
-"stats": [
-"1",
-"1",
-"1.0",
-"0",
-"1",
 "1"
 ]
 },
 {
 "athlete": {
-"id": "3051876",
-"uid": "s:20~l:28~a:3051876",
-"guid": "9e0efe52-174f-d361-6d08-4886592d9038",
-"firstName": "Evan",
-"lastName": "Engram",
-"displayName": "Evan Engram",
+"id": "4242536",
+"uid": "s:20~l:28~a:4242536",
+"guid": "6de32762-aa15-4453-f0e8-16c83cf155ba",
+"firstName": "Sal",
+"lastName": "Cannella",
+"displayName": "Sal Cannella",
 "links": [
 {
 "rel": [
@@ -1447,15 +1502,11 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/3051876/evan-engram",
+"href": "https://www.espn.com/nfl/player/_/id/4242536/sal-cannella",
 "text": "Player Card"
 }
 ],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/3051876.png",
-"alt": "Evan Engram"
-},
-"jersey": "1"
+"jersey": "87"
 },
 "stats": [
 "0",
@@ -1463,17 +1514,51 @@
 "0.0",
 "0",
 "0",
-"2"
+"1"
+]
+},
+{
+"athlete": {
+"id": "4362018",
+"uid": "s:20~l:28~a:4362018",
+"guid": "f183a787-3a2d-48c3-9e68-c2c11b8be162",
+"firstName": "Blake",
+"lastName": "Whiteheart",
+"displayName": "Blake Whiteheart",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/4362018/blake-whiteheart",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4362018.png",
+"alt": "Blake Whiteheart"
+},
+"jersey": "86"
+},
+"stats": [
+"0",
+"0",
+"0.0",
+"0",
+"0",
+"1"
 ]
 }
 ],
 "totals": [
-"22",
-"169",
-"7.7",
+"11",
+"111",
+"10.1",
 "0",
-"22",
-"40"
+"23",
+"21"
 ]
 },
 {
@@ -1483,7 +1568,7 @@
 "fumblesLost",
 "fumblesRecovered"
 ],
-"text": "Denver Fumbles",
+"text": "Cleveland Fumbles",
 "labels": [
 "FUM",
 "LOST",
@@ -1497,12 +1582,12 @@
 "athletes": [
 {
 "athlete": {
-"id": "4426338",
-"uid": "s:20~l:28~a:4426338",
-"guid": "f9de7512-a950-3317-816b-abe094068409",
-"firstName": "Bo",
-"lastName": "Nix",
-"displayName": "Bo Nix",
+"id": "4432762",
+"uid": "s:20~l:28~a:4432762",
+"guid": "fecbc03c-f8bf-342e-82be-991901cf6449",
+"firstName": "Shedeur",
+"lastName": "Sanders",
+"displayName": "Shedeur Sanders",
 "links": [
 {
 "rel": [
@@ -1510,15 +1595,15 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4426338/bo-nix",
+"href": "https://www.espn.com/nfl/player/_/id/4432762/shedeur-sanders",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4426338.png",
-"alt": "Bo Nix"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4432762.png",
+"alt": "Shedeur Sanders"
 },
-"jersey": "10"
+"jersey": "12"
 },
 "stats": [
 "1",
@@ -1528,12 +1613,12 @@
 },
 {
 "athlete": {
-"id": "4382401",
-"uid": "s:20~l:28~a:4382401",
-"guid": "92678f63-04a1-3bbf-7cbe-7a151d72c1e2",
-"firstName": "Riley",
-"lastName": "Moss",
-"displayName": "Riley Moss",
+"id": "4700660",
+"uid": "s:20~l:28~a:4700660",
+"guid": "c2509e93-869a-3c94-b179-78a7190319f6",
+"firstName": "Sam",
+"lastName": "Webb",
+"displayName": "Sam Webb",
 "links": [
 {
 "rel": [
@@ -1541,15 +1626,15 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4382401/riley-moss",
+"href": "https://www.espn.com/nfl/player/_/id/4700660/sam-webb",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4382401.png",
-"alt": "Riley Moss"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4700660.png",
+"alt": "Sam Webb"
 },
-"jersey": "21"
+"jersey": "27"
 },
 "stats": [
 "0",
@@ -1575,7 +1660,7 @@
 "QBHits",
 "defensiveTouchdowns"
 ],
-"text": "Denver Defense",
+"text": "Cleveland Defense",
 "labels": [
 "TOT",
 "SOLO",
@@ -1597,12 +1682,12 @@
 "athletes": [
 {
 "athlete": {
-"id": "2612151",
-"uid": "s:20~l:28~a:2612151",
-"guid": "09bb1ac0-bc1d-dd2c-1148-c2bbb4e0f537",
-"firstName": "Alex",
-"lastName": "Singleton",
-"displayName": "Alex Singleton",
+"id": "4036261",
+"uid": "s:20~l:28~a:4036261",
+"guid": "104d2c30-3385-ced1-12ca-5f2c9d4ebcbc",
+"firstName": "Devin",
+"lastName": "Bush",
+"displayName": "Devin Bush",
 "links": [
 {
 "rel": [
@@ -1610,34 +1695,34 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/2612151/alex-singleton",
+"href": "https://www.espn.com/nfl/player/_/id/4036261/devin-bush",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/2612151.png",
-"alt": "Alex Singleton"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4036261.png",
+"alt": "Devin Bush"
 },
-"jersey": "49"
+"jersey": "30"
 },
 "stats": [
-"13",
-"3",
+"14",
+"6",
+"0",
 "0",
 "1",
 "0",
-"0",
-"0"
+"1"
 ]
 },
 {
 "athlete": {
-"id": "4360853",
-"uid": "s:20~l:28~a:4360853",
-"guid": "379f2aa6-c5f8-b840-c0e3-e7f8ef5a8d2b",
-"firstName": "Talanoa",
-"lastName": "Hufanga",
-"displayName": "Talanoa Hufanga",
+"id": "4242208",
+"uid": "s:20~l:28~a:4242208",
+"guid": "a779bb68-fefd-f56b-6f64-bad23a1063d7",
+"firstName": "Grant",
+"lastName": "Delpit",
+"displayName": "Grant Delpit",
 "links": [
 {
 "rel": [
@@ -1645,34 +1730,34 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4360853/talanoa-hufanga",
+"href": "https://www.espn.com/nfl/player/_/id/4242208/grant-delpit",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4360853.png",
-"alt": "Talanoa Hufanga"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4242208.png",
+"alt": "Grant Delpit"
 },
 "jersey": "9"
 },
 "stats": [
-"8",
+"10",
+"5",
+"1",
 "1",
 "0",
-"0",
-"0",
-"0",
+"2",
 "0"
 ]
 },
 {
 "athlete": {
-"id": "3915282",
-"uid": "s:20~l:28~a:3915282",
-"guid": "be61e311-bf3b-9128-5dc2-b791c5e15e47",
-"firstName": "Zach",
-"lastName": "Allen",
-"displayName": "Zach Allen",
+"id": "4569620",
+"uid": "s:20~l:28~a:4569620",
+"guid": "c06119aa-1159-aac5-8817-9697b1f82326",
+"firstName": "Ronnie",
+"lastName": "Hickman",
+"displayName": "Ronnie Hickman",
 "links": [
 {
 "rel": [
@@ -1680,123 +1765,53 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/3915282/zach-allen",
+"href": "https://www.espn.com/nfl/player/_/id/4569620/ronnie-hickman",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/3915282.png",
-"alt": "Zach Allen"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4569620.png",
+"alt": "Ronnie Hickman"
 },
-"jersey": "99"
+"jersey": "33"
+},
+"stats": [
+"8",
+"5",
+"0",
+"0",
+"2",
+"0",
+"0"
+]
+},
+{
+"athlete": {
+"id": "4567403",
+"uid": "s:20~l:28~a:4567403",
+"guid": "f04cbcea-3d0b-5f8d-2087-baee83a93991",
+"firstName": "Mohamoud",
+"lastName": "Diabate",
+"displayName": "Mohamoud Diabate",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/4567403/mohamoud-diabate",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4567403.png",
+"alt": "Mohamoud Diabate"
+},
+"jersey": "43"
 },
 "stats": [
 "7",
-"2",
-"0",
-"0",
-"0",
-"0",
-"0"
-]
-},
-{
-"athlete": {
-"id": "4039059",
-"uid": "s:20~l:28~a:4039059",
-"guid": "ae9d5ad4-f516-5bb3-4bda-e1544d766125",
-"firstName": "Brandon",
-"lastName": "Jones",
-"displayName": "Brandon Jones",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/4039059/brandon-jones",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4039059.png",
-"alt": "Brandon Jones"
-},
-"jersey": "22"
-},
-"stats": [
-"4",
-"2",
-"0",
-"0",
-"1",
-"0",
-"0"
-]
-},
-{
-"athlete": {
-"id": "4382401",
-"uid": "s:20~l:28~a:4382401",
-"guid": "92678f63-04a1-3bbf-7cbe-7a151d72c1e2",
-"firstName": "Riley",
-"lastName": "Moss",
-"displayName": "Riley Moss",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/4382401/riley-moss",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4382401.png",
-"alt": "Riley Moss"
-},
-"jersey": "21"
-},
-"stats": [
-"4",
-"2",
-"0",
-"0",
-"1",
-"0",
-"0"
-]
-},
-{
-"athlete": {
-"id": "4683535",
-"uid": "s:20~l:28~a:4683535",
-"guid": "b2c1b4e8-2831-3b1f-aef6-ea180748ca03",
-"firstName": "Tyler",
-"lastName": "Onyedim",
-"displayName": "Tyler Onyedim",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/4683535/tyler-onyedim",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4683535.png",
-"alt": "Tyler Onyedim"
-},
-"jersey": "98"
-},
-"stats": [
-"4",
 "1",
 "0",
 "0",
@@ -1807,12 +1822,12 @@
 },
 {
 "athlete": {
-"id": "4692048",
-"uid": "s:20~l:28~a:4692048",
-"guid": "1c64793d-b913-3c3a-ab78-96eee44a61dd",
-"firstName": "Que",
-"lastName": "Robinson",
-"displayName": "Que Robinson",
+"id": "3139389",
+"uid": "s:20~l:28~a:3139389",
+"guid": "6403d1be-e508-b43b-586c-ec128bc6c756",
+"firstName": "D'Angelo",
+"lastName": "Ross",
+"displayName": "D'Angelo Ross",
 "links": [
 {
 "rel": [
@@ -1820,209 +1835,34 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4692048/que-robinson",
+"href": "https://www.espn.com/nfl/player/_/id/3139389/dangelo-ross",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4692048.png",
-"alt": "Que Robinson"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/3139389.png",
+"alt": "D'Angelo Ross"
 },
-"jersey": "51"
-},
-"stats": [
-"4",
-"1",
-"0",
-"0",
-"0",
-"1",
-"0"
-]
-},
-{
-"athlete": {
-"id": "4360259",
-"uid": "s:20~l:28~a:4360259",
-"guid": "223fe152-4b91-6bf5-3a1d-f47efbcd136a",
-"firstName": "Nik",
-"lastName": "Bonitto",
-"displayName": "Nik Bonitto",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/4360259/nik-bonitto",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4360259.png",
-"alt": "Nik Bonitto"
-},
-"jersey": "15"
+"jersey": "20"
 },
 "stats": [
-"3",
-"3",
-"1",
-"2",
-"0",
-"1",
-"0"
-]
-},
-{
-"athlete": {
-"id": "3894915",
-"uid": "s:20~l:28~a:3894915",
-"guid": "f62c9d13-a755-3ac4-0ba9-fa0d571e4016",
-"firstName": "D.J.",
-"lastName": "Jones",
-"displayName": "D.J. Jones",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/3894915/dj-jones",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/3894915.png",
-"alt": "D.J. Jones"
-},
-"jersey": "93"
-},
-"stats": [
+"6",
 "3",
 "0",
 "0",
-"0",
-"0",
-"0",
-"0"
-]
-},
-{
-"athlete": {
-"id": "4040608",
-"uid": "s:20~l:28~a:4040608",
-"guid": "d84edc78-83ad-9980-5066-8c8358d6541b",
-"firstName": "Jonathon",
-"lastName": "Cooper",
-"displayName": "Jonathon Cooper",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/4040608/jonathon-cooper",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4040608.png",
-"alt": "Jonathon Cooper"
-},
-"jersey": "0"
-},
-"stats": [
-"3",
-"0",
-"0",
-"0",
-"0",
-"0",
-"0"
-]
-},
-{
-"athlete": {
-"id": "5216101",
-"uid": "s:20~l:28~a:5216101",
-"guid": "71f7b587-8309-3ed3-b7cb-138e3fbf16d0",
-"firstName": "Dondrea",
-"lastName": "Tillman",
-"displayName": "Dondrea Tillman",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/5216101/dondrea-tillman",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/5216101.png",
-"alt": "Dondrea Tillman"
-},
-"jersey": "92"
-},
-"stats": [
-"3",
-"0",
-"0",
-"0",
-"0",
-"0",
-"0"
-]
-},
-{
-"athlete": {
-"id": "4261090",
-"uid": "s:20~l:28~a:4261090",
-"guid": "e49bdf77-300a-1574-757a-30122855eca6",
-"firstName": "Jordan",
-"lastName": "Jackson",
-"displayName": "Jordan Jackson",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/4261090/jordan-jackson",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4261090.png",
-"alt": "Jordan Jackson"
-},
-"jersey": "94"
-},
-"stats": [
 "2",
-"1",
-"0",
-"0",
-"0",
 "0",
 "0"
 ]
 },
 {
 "athlete": {
-"id": "4372012",
-"uid": "s:20~l:28~a:4372012",
-"guid": "1e86c395-b340-8084-cacb-61d1eb0fa424",
-"firstName": "Pat",
-"lastName": "Surtain II",
-"displayName": "Pat Surtain II",
+"id": "2969961",
+"uid": "s:20~l:28~a:2969961",
+"guid": "c4263718-6be9-f66e-f50e-93c290c30802",
+"firstName": "Rayshawn",
+"lastName": "Jenkins",
+"displayName": "Rayshawn Jenkins",
 "links": [
 {
 "rel": [
@@ -2030,104 +1870,34 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4372012/pat-surtain-ii",
+"href": "https://www.espn.com/nfl/player/_/id/2969961/rayshawn-jenkins",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4372012.png",
-"alt": "Pat Surtain II"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/2969961.png",
+"alt": "Rayshawn Jenkins"
 },
-"jersey": "2"
-},
-"stats": [
-"2",
-"1",
-"0",
-"0",
-"0",
-"0",
-"0"
-]
-},
-{
-"athlete": {
-"id": "4428503",
-"uid": "s:20~l:28~a:4428503",
-"guid": "bbdd338c-c9c4-8646-9dcf-98c56c3058f9",
-"firstName": "JL",
-"lastName": "Skinner",
-"displayName": "JL Skinner",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/4428503/jl-skinner",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4428503.png",
-"alt": "JL Skinner"
-},
-"jersey": "34"
+"jersey": "5"
 },
 "stats": [
-"2",
-"1",
-"0",
-"0",
-"0",
-"0",
-"0"
-]
-},
-{
-"athlete": {
-"id": "4039064",
-"uid": "s:20~l:28~a:4039064",
-"guid": "68cac3d2-0d5e-997c-649b-f60cea8cfa88",
-"firstName": "Malcolm",
-"lastName": "Roach",
-"displayName": "Malcolm Roach",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/4039064/malcolm-roach",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4039064.png",
-"alt": "Malcolm Roach"
-},
-"jersey": "97"
-},
-"stats": [
+"5",
 "2",
 "0",
 "0",
 "0",
 "0",
-"0",
 "0"
 ]
 },
 {
 "athlete": {
-"id": "4693373",
-"uid": "s:20~l:28~a:4693373",
-"guid": "5b95127b-b6a8-31d1-840e-c752a23ddaec",
-"firstName": "Jordan",
-"lastName": "Turner",
-"displayName": "Jordan Turner",
+"id": "3915507",
+"uid": "s:20~l:28~a:3915507",
+"guid": "2f29e8e2-0cf6-943e-9854-492271ebd0aa",
+"firstName": "Jerome",
+"lastName": "Baker",
+"displayName": "Jerome Baker",
 "links": [
 {
 "rel": [
@@ -2135,123 +1905,18 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4693373/jordan-turner",
+"href": "https://www.espn.com/nfl/player/_/id/3915507/jerome-baker",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4693373.png",
-"alt": "Jordan Turner"
-},
-"jersey": "55"
-},
-"stats": [
-"2",
-"0",
-"0",
-"0",
-"0",
-"0",
-"0"
-]
-},
-{
-"athlete": {
-"id": "4875336",
-"uid": "s:20~l:28~a:4875336",
-"guid": "231a1830-0ce2-3f5a-83e3-0c88555f4960",
-"firstName": "Karene",
-"lastName": "Reid",
-"displayName": "Karene Reid",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/4875336/karene-reid",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4875336.png",
-"alt": "Karene Reid"
-},
-"jersey": "47"
-},
-"stats": [
-"2",
-"0",
-"0",
-"0",
-"0",
-"0",
-"0"
-]
-},
-{
-"athlete": {
-"id": "3919548",
-"uid": "s:20~l:28~a:3919548",
-"guid": "6785b24d-cfc0-c886-6a53-dfded123758b",
-"firstName": "Justin",
-"lastName": "Strnad",
-"displayName": "Justin Strnad",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/3919548/justin-strnad",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/3919548.png",
-"alt": "Justin Strnad"
-},
-"jersey": "40"
-},
-"stats": [
-"1",
-"1",
-"0",
-"0",
-"0",
-"0",
-"0"
-]
-},
-{
-"athlete": {
-"id": "4372016",
-"uid": "s:20~l:28~a:4372016",
-"guid": "db4bf6c9-e27d-8382-372f-120b3da89bd6",
-"firstName": "Jaylen",
-"lastName": "Waddle",
-"displayName": "Jaylen Waddle",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/4372016/jaylen-waddle",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4372016.png",
-"alt": "Jaylen Waddle"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/3915507.png",
+"alt": "Jerome Baker"
 },
 "jersey": "17"
 },
 "stats": [
-"1",
+"5",
 "1",
 "0",
 "0",
@@ -2262,12 +1927,12 @@
 },
 {
 "athlete": {
-"id": "4567462",
-"uid": "s:20~l:28~a:4567462",
-"guid": "ed3e66ac-4c8f-a1cd-06d4-ac061d826168",
-"firstName": "Ja'Quan",
-"lastName": "McMillian",
-"displayName": "Ja'Quan McMillian",
+"id": "4700660",
+"uid": "s:20~l:28~a:4700660",
+"guid": "c2509e93-869a-3c94-b179-78a7190319f6",
+"firstName": "Sam",
+"lastName": "Webb",
+"displayName": "Sam Webb",
 "links": [
 {
 "rel": [
@@ -2275,15 +1940,295 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4567462/jaquan-mcmillian",
+"href": "https://www.espn.com/nfl/player/_/id/4700660/sam-webb",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4567462.png",
-"alt": "Ja'Quan McMillian"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4700660.png",
+"alt": "Sam Webb"
 },
-"jersey": "29"
+"jersey": "27"
+},
+"stats": [
+"4",
+"2",
+"0",
+"0",
+"0",
+"0",
+"1"
+]
+},
+{
+"athlete": {
+"id": "4873232",
+"uid": "s:20~l:28~a:4873232",
+"guid": "9167867c-52d4-3d9e-982c-f4b7ad9f259b",
+"firstName": "Mason",
+"lastName": "Graham",
+"displayName": "Mason Graham",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/4873232/mason-graham",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4873232.png",
+"alt": "Mason Graham"
+},
+"jersey": "94"
+},
+"stats": [
+"4",
+"1",
+"0",
+"0",
+"0",
+"0",
+"0"
+]
+},
+{
+"athlete": {
+"id": "4361510",
+"uid": "s:20~l:28~a:4361510",
+"guid": "2b8dc0cf-e69f-7f12-f0cb-87ae4069e680",
+"firstName": "Cameron",
+"lastName": "Thomas",
+"displayName": "Cameron Thomas",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/4361510/cameron-thomas",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4361510.png",
+"alt": "Cameron Thomas"
+},
+"jersey": "99"
+},
+"stats": [
+"3",
+"2",
+"0",
+"0",
+"0",
+"0",
+"0"
+]
+},
+{
+"athlete": {
+"id": "4379397",
+"uid": "s:20~l:28~a:4379397",
+"guid": "5235f9a5-e8e2-d876-2ed4-83deb390b1b3",
+"firstName": "Tyson",
+"lastName": "Campbell",
+"displayName": "Tyson Campbell",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/4379397/tyson-campbell",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4379397.png",
+"alt": "Tyson Campbell"
+},
+"jersey": "7"
+},
+"stats": [
+"3",
+"1",
+"0",
+"0",
+"0",
+"0",
+"0"
+]
+},
+{
+"athlete": {
+"id": "16837",
+"uid": "s:20~l:28~a:16837",
+"guid": "b02d0fd9-27af-e28f-6a39-736a008b624a",
+"firstName": "Shelby",
+"lastName": "Harris",
+"displayName": "Shelby Harris",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/16837/shelby-harris",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/16837.png",
+"alt": "Shelby Harris"
+},
+"jersey": "93"
+},
+"stats": [
+"2",
+"2",
+"0",
+"0",
+"1",
+"0",
+"0"
+]
+},
+{
+"athlete": {
+"id": "4362018",
+"uid": "s:20~l:28~a:4362018",
+"guid": "f183a787-3a2d-48c3-9e68-c2c11b8be162",
+"firstName": "Blake",
+"lastName": "Whiteheart",
+"displayName": "Blake Whiteheart",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/4362018/blake-whiteheart",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4362018.png",
+"alt": "Blake Whiteheart"
+},
+"jersey": "86"
+},
+"stats": [
+"2",
+"1",
+"0",
+"0",
+"0",
+"0",
+"0"
+]
+},
+{
+"athlete": {
+"id": "4570119",
+"uid": "s:20~l:28~a:4570119",
+"guid": "6baf6ed3-44e7-4e96-ccae-052ffc5ea024",
+"firstName": "Alex",
+"lastName": "Wright",
+"displayName": "Alex Wright",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/4570119/alex-wright",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4570119.png",
+"alt": "Alex Wright"
+},
+"jersey": "91"
+},
+"stats": [
+"2",
+"1",
+"0",
+"0",
+"1",
+"0",
+"0"
+]
+},
+{
+"athlete": {
+"id": "3122132",
+"uid": "s:20~l:28~a:3122132",
+"guid": "031d8156-6271-ea30-409f-137309621805",
+"firstName": "Myles",
+"lastName": "Garrett",
+"displayName": "Myles Garrett",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/3122132/myles-garrett",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/3122132.png",
+"alt": "Myles Garrett"
+},
+"jersey": "95"
+},
+"stats": [
+"1",
+"1",
+"1",
+"1",
+"0",
+"2",
+"0"
+]
+},
+{
+"athlete": {
+"id": "4259300",
+"uid": "s:20~l:28~a:4259300",
+"guid": "53875525-a74e-4d46-06dd-7d7a20569c88",
+"firstName": "Tre",
+"lastName": "Avery",
+"displayName": "Tre Avery",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/4259300/tre-avery",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4259300.png",
+"alt": "Tre Avery"
+},
+"jersey": "28"
 },
 "stats": [
 "1",
@@ -2297,12 +2242,12 @@
 },
 {
 "athlete": {
-"id": "4037559",
-"uid": "s:20~l:28~a:4037559",
-"guid": "7316a3bf-f31c-44e2-a112-96f3657f888d",
-"firstName": "Devon",
-"lastName": "Key",
-"displayName": "Devon Key",
+"id": "5085888",
+"uid": "s:20~l:28~a:5085888",
+"guid": "ff811ebc-2005-32cc-a69a-a133f34e00be",
+"firstName": "Easton",
+"lastName": "Mascarenas-Arnold",
+"displayName": "Easton Mascarenas-Arnold",
 "links": [
 {
 "rel": [
@@ -2310,13 +2255,153 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4037559/devon-key",
+"href": "https://www.espn.com/nfl/player/_/id/5085888/easton-mascarenas-arnold",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4037559.png",
-"alt": "Devon Key"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/5085888.png",
+"alt": "Easton Mascarenas-Arnold"
+},
+"jersey": "42"
+},
+"stats": [
+"1",
+"1",
+"0",
+"0",
+"0",
+"0",
+"0"
+]
+},
+{
+"athlete": {
+"id": "4572922",
+"uid": "s:20~l:28~a:4572922",
+"guid": "61d8777f-0699-2052-91bc-769c6138eac7",
+"firstName": "Christopher",
+"lastName": "Edmonds",
+"displayName": "Christopher Edmonds",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/4572922/christopher-edmonds",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4572922.png",
+"alt": "Christopher Edmonds"
+},
+"jersey": "41"
+},
+"stats": [
+"1",
+"0",
+"0",
+"0",
+"0",
+"0",
+"0"
+]
+},
+{
+"athlete": {
+"id": "4600415",
+"uid": "s:20~l:28~a:4600415",
+"guid": "06ef637c-936e-33bf-b601-913d43d221ce",
+"firstName": "Mike",
+"lastName": "Hall Jr.",
+"displayName": "Mike Hall Jr.",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/4600415/mike-hall-jr",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4600415.png",
+"alt": "Mike Hall Jr."
+},
+"jersey": "51"
+},
+"stats": [
+"1",
+"0",
+"0",
+"0",
+"0",
+"0",
+"0"
+]
+},
+{
+"athlete": {
+"id": "4686027",
+"uid": "s:20~l:28~a:4686027",
+"guid": "1f250052-307a-30d5-a62b-0a0ffe844acd",
+"firstName": "Donovan",
+"lastName": "McMillon",
+"displayName": "Donovan McMillon",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/4686027/donovan-mcmillon",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4686027.png",
+"alt": "Donovan McMillon"
+},
+"jersey": "31"
+},
+"stats": [
+"1",
+"0",
+"0",
+"0",
+"0",
+"0",
+"0"
+]
+},
+{
+"athlete": {
+"id": "4695783",
+"uid": "s:20~l:28~a:4695783",
+"guid": "e8e65c70-6780-3165-a4c7-bf12252b4351",
+"firstName": "Myles",
+"lastName": "Harden",
+"displayName": "Myles Harden",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/4695783/myles-harden",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4695783.png",
+"alt": "Myles Harden"
 },
 "jersey": "26"
 },
@@ -2332,12 +2417,12 @@
 },
 {
 "athlete": {
-"id": "4429193",
-"uid": "s:20~l:28~a:4429193",
-"guid": "36a4f8f4-ef46-3d5b-aac6-26da29746318",
-"firstName": "Kris",
-"lastName": "Abrams-Draine",
-"displayName": "Kris Abrams-Draine",
+"id": "4427963",
+"uid": "s:20~l:28~a:4427963",
+"guid": "b300b6e5-47a7-5f58-c938-3795674da9d0",
+"firstName": "Isaiah",
+"lastName": "McGuire",
+"displayName": "Isaiah McGuire",
 "links": [
 {
 "rel": [
@@ -2345,35 +2430,35 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4429193/kris-abrams-draine",
+"href": "https://www.espn.com/nfl/player/_/id/4427963/isaiah-mcguire",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4429193.png",
-"alt": "Kris Abrams-Draine"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4427963.png",
+"alt": "Isaiah McGuire"
 },
-"jersey": "31"
+"jersey": "57"
 },
 "stats": [
+"0",
+"0",
+"0",
+"0",
+"0",
 "1",
-"0",
-"0",
-"0",
-"0",
-"0",
 "0"
 ]
 }
 ],
 "totals": [
-"73",
-"21",
-"1",
-"3",
+"82",
+"36",
 "2",
 "2",
-"0"
+"7",
+"5",
+"2"
 ]
 },
 {
@@ -2383,7 +2468,7 @@
 "interceptionYards",
 "interceptionTouchdowns"
 ],
-"text": "Denver Interceptions",
+"text": "Cleveland Interceptions",
 "labels": [
 "INT",
 "YDS",
@@ -2394,8 +2479,44 @@
 "Yards",
 "Touchdowns"
 ],
-"athletes": [],
-"totals": []
+"athletes": [
+{
+"athlete": {
+"id": "4036261",
+"uid": "s:20~l:28~a:4036261",
+"guid": "104d2c30-3385-ced1-12ca-5f2c9d4ebcbc",
+"firstName": "Devin",
+"lastName": "Bush",
+"displayName": "Devin Bush",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/4036261/devin-bush",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4036261.png",
+"alt": "Devin Bush"
+},
+"jersey": "30"
+},
+"stats": [
+"1",
+"97",
+"1"
+]
+}
+],
+"totals": [
+"1",
+"97",
+"1"
+]
 },
 {
 "name": "kickReturns",
@@ -2406,7 +2527,7 @@
 "longKickReturn",
 "kickReturnTouchdowns"
 ],
-"text": "Denver Kick Returns",
+"text": "Cleveland Kick Returns",
 "labels": [
 "NO",
 "YDS",
@@ -2424,12 +2545,12 @@
 "athletes": [
 {
 "athlete": {
-"id": "4362748",
-"uid": "s:20~l:28~a:4362748",
-"guid": "ebcabe19-67c9-6ae6-ed8a-161cc0ba29f1",
-"firstName": "Tyler",
-"lastName": "Badie",
-"displayName": "Tyler Badie",
+"id": "4035222",
+"uid": "s:20~l:28~a:4035222",
+"guid": "84e6fda6-12db-d1ef-5807-05d2bc6f94ed",
+"firstName": "Trayveon",
+"lastName": "Williams",
+"displayName": "Trayveon Williams",
 "links": [
 {
 "rel": [
@@ -2437,63 +2558,30 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4362748/tyler-badie",
+"href": "https://www.espn.com/nfl/player/_/id/4035222/trayveon-williams",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4362748.png",
-"alt": "Tyler Badie"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4035222.png",
+"alt": "Trayveon Williams"
 },
-"jersey": "28"
-},
-"stats": [
-"4",
-"94",
-"23.5",
-"38",
-"0"
-]
-},
-{
-"athlete": {
-"id": "4686472",
-"uid": "s:20~l:28~a:4686472",
-"guid": "9874a811-7338-3390-bfc5-c75b65beb1b0",
-"firstName": "Marvin",
-"lastName": "Mims Jr.",
-"displayName": "Marvin Mims Jr.",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/4686472/marvin-mims-jr",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4686472.png",
-"alt": "Marvin Mims Jr."
-},
-"jersey": "19"
+"jersey": "38"
 },
 "stats": [
-"2",
-"47",
-"23.5",
-"27",
+"3",
+"73",
+"24.3",
+"29",
 "0"
 ]
 }
 ],
 "totals": [
-"6",
-"141",
-"23.5",
-"38",
+"3",
+"73",
+"24.3",
+"29",
 "0"
 ]
 },
@@ -2506,7 +2594,7 @@
 "longPuntReturn",
 "puntReturnTouchdowns"
 ],
-"text": "Denver Punt Returns",
+"text": "Cleveland Punt Returns",
 "labels": [
 "NO",
 "YDS",
@@ -2521,8 +2609,48 @@
 "Longest Punt Return",
 "Touchdowns"
 ],
-"athletes": [],
-"totals": []
+"athletes": [
+{
+"athlete": {
+"id": "4877203",
+"uid": "s:20~l:28~a:4877203",
+"guid": "885a7775-410a-3167-af4f-39e0c8280f59",
+"firstName": "Gage",
+"lastName": "Larvadain",
+"displayName": "Gage Larvadain",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/4877203/gage-larvadain",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4877203.png",
+"alt": "Gage Larvadain"
+},
+"jersey": "84"
+},
+"stats": [
+"2",
+"6",
+"3.0",
+"4",
+"0"
+]
+}
+],
+"totals": [
+"2",
+"6",
+"3.0",
+"4",
+"0"
+]
 },
 {
 "name": "kicking",
@@ -2533,7 +2661,7 @@
 "extraPointsMade/extraPointAttempts",
 "totalKickingPoints"
 ],
-"text": "Denver Kicking",
+"text": "Cleveland Kicking",
 "labels": [
 "FG",
 "PCT",
@@ -2551,12 +2679,12 @@
 "athletes": [
 {
 "athlete": {
-"id": "2985659",
-"uid": "s:20~l:28~a:2985659",
-"guid": "ea08c425-ec7d-6abb-c79b-a0acae427a5e",
-"firstName": "Wil",
-"lastName": "Lutz",
-"displayName": "Wil Lutz",
+"id": "4258620",
+"uid": "s:20~l:28~a:4258620",
+"guid": "99e25216-f4cd-9f29-51ed-1acfff24ce9d",
+"firstName": "Andre",
+"lastName": "Szmyt",
+"displayName": "Andre Szmyt",
 "links": [
 {
 "rel": [
@@ -2564,31 +2692,31 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/2985659/wil-lutz",
+"href": "https://www.espn.com/nfl/player/_/id/4258620/andre-szmyt",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/2985659.png",
-"alt": "Wil Lutz"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4258620.png",
+"alt": "Andre Szmyt"
 },
-"jersey": "3"
+"jersey": "25"
 },
 "stats": [
-"1/2",
-"50.0",
-"44",
-"0/0",
-"3"
+"2/2",
+"100.0",
+"49",
+"2/2",
+"8"
 ]
 }
 ],
 "totals": [
-"1/2",
-"50.0",
-"44",
-"0/0",
-"3"
+"2/2",
+"100.0",
+"49",
+"2/2",
+"8"
 ]
 },
 {
@@ -2601,7 +2729,7 @@
 "puntsInside20",
 "longPunt"
 ],
-"text": "Denver Punting",
+"text": "Cleveland Punting",
 "labels": [
 "NO",
 "YDS",
@@ -2621,12 +2749,12 @@
 "athletes": [
 {
 "athlete": {
-"id": "4589212",
-"uid": "s:20~l:28~a:4589212",
-"guid": "f8df1b37-ff7b-3d82-a14d-d4aefd7d5e39",
-"firstName": "Jeremy",
-"lastName": "Crawshaw",
-"displayName": "Jeremy Crawshaw",
+"id": "4039396",
+"uid": "s:20~l:28~a:4039396",
+"guid": "692267f8-81f9-fbb1-b73c-4a0e7aef9197",
+"firstName": "Corey",
+"lastName": "Bojorquez",
+"displayName": "Corey Bojorquez",
 "links": [
 {
 "rel": [
@@ -2634,32 +2762,32 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4589212/jeremy-crawshaw",
+"href": "https://www.espn.com/nfl/player/_/id/4039396/corey-bojorquez",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4589212.png",
-"alt": "Jeremy Crawshaw"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4039396.png",
+"alt": "Corey Bojorquez"
 },
-"jersey": "16"
+"jersey": "13"
 },
 "stats": [
-"6",
-"271",
-"45.2",
+"5",
+"225",
+"45.0",
 "0",
-"3",
+"1",
 "52"
 ]
 }
 ],
 "totals": [
-"6",
-"271",
-"45.2",
+"5",
+"225",
+"45.0",
 "0",
-"3",
+"1",
 "52"
 ]
 }
@@ -2668,17 +2796,17 @@
 },
 {
 "team": {
-"id": "23",
-"uid": "s:20~l:28~t:23",
-"slug": "pittsburgh-steelers",
-"location": "Pittsburgh",
-"name": "Steelers",
-"abbreviation": "PIT",
-"displayName": "Pittsburgh Steelers",
-"shortDisplayName": "Steelers",
-"color": "000000",
-"alternateColor": "ffb612",
-"logo": "https://a.espncdn.com/i/teamlogos/nfl/500/pit.png"
+"id": "4",
+"uid": "s:20~l:28~t:4",
+"slug": "cincinnati-bengals",
+"location": "Cincinnati",
+"name": "Bengals",
+"abbreviation": "CIN",
+"displayName": "Cincinnati Bengals",
+"shortDisplayName": "Bengals",
+"color": "fb4f14",
+"alternateColor": "000000",
+"logo": "https://a.espncdn.com/i/teamlogos/nfl/500/cin.png"
 },
 "statistics": [
 {
@@ -2693,7 +2821,7 @@
 "adjQBR",
 "QBRating"
 ],
-"text": "Pittsburgh Passing",
+"text": "Cincinnati Passing",
 "labels": [
 "C/ATT",
 "YDS",
@@ -2717,12 +2845,12 @@
 "athletes": [
 {
 "athlete": {
-"id": "3116407",
-"uid": "s:20~l:28~a:3116407",
-"guid": "779f3cff-73eb-dcb6-1327-48a95fa9d491",
-"firstName": "Mason",
-"lastName": "Rudolph",
-"displayName": "Mason Rudolph",
+"id": "3915511",
+"uid": "s:20~l:28~a:3915511",
+"guid": "e6957db5-5b2e-a82d-c788-d889115d9772",
+"firstName": "Joe",
+"lastName": "Burrow",
+"displayName": "Joe Burrow",
 "links": [
 {
 "rel": [
@@ -2730,37 +2858,37 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/3116407/mason-rudolph",
+"href": "https://www.espn.com/nfl/player/_/id/3915511/joe-burrow",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/3116407.png",
-"alt": "Mason Rudolph"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/3915511.png",
+"alt": "Joe Burrow"
 },
-"jersey": "2"
+"jersey": "9"
 },
 "stats": [
-"9/15",
-"142",
-"9.5",
+"29/39",
+"236",
+"6.1",
+"3",
 "1",
-"0",
-"1-12",
-"81.5",
-"113.8"
+"2-14",
+"67.8",
+"104.2"
 ]
 }
 ],
 "totals": [
-"9/15",
-"130",
-"9.5",
+"29/39",
+"222",
+"6.1",
+"3",
 "1",
-"0",
-"1-12",
+"2-14",
 "--",
-"113.8"
+"104.2"
 ]
 },
 {
@@ -2772,7 +2900,7 @@
 "rushingTouchdowns",
 "longRushing"
 ],
-"text": "Pittsburgh Rushing",
+"text": "Cincinnati Rushing",
 "labels": [
 "CAR",
 "YDS",
@@ -2790,12 +2918,12 @@
 "athletes": [
 {
 "athlete": {
-"id": "4038815",
-"uid": "s:20~l:28~a:4038815",
-"guid": "da1e8487-d66d-6ff0-7438-e9d6e77856e0",
-"firstName": "Rico",
-"lastName": "Dowdle",
-"displayName": "Rico Dowdle",
+"id": "4362238",
+"uid": "s:20~l:28~a:4362238",
+"guid": "07049770-8e6a-c054-e9f3-0a204d623b57",
+"firstName": "Chase",
+"lastName": "Brown",
+"displayName": "Chase Brown",
 "links": [
 {
 "rel": [
@@ -2803,64 +2931,163 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4038815/rico-dowdle",
+"href": "https://www.espn.com/nfl/player/_/id/4362238/chase-brown",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4038815.png",
-"alt": "Rico Dowdle"
-},
-"jersey": "13"
-},
-"stats": [
-"11",
-"71",
-"6.5",
-"0",
-"27"
-]
-},
-{
-"athlete": {
-"id": "4569987",
-"uid": "s:20~l:28~a:4569987",
-"guid": "224e4c1e-625d-b1b2-b8ea-1316942fa7ac",
-"firstName": "Jaylen",
-"lastName": "Warren",
-"displayName": "Jaylen Warren",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/4569987/jaylen-warren",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4569987.png",
-"alt": "Jaylen Warren"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4362238.png",
+"alt": "Chase Brown"
 },
 "jersey": "30"
 },
 "stats": [
-"20",
-"46",
-"2.3",
+"13",
+"72",
+"5.5",
 "0",
-"6"
+"19"
+]
+},
+{
+"athlete": {
+"id": "3116389",
+"uid": "s:20~l:28~a:3116389",
+"guid": "41728606-98bf-ee0d-fcb7-539c733041fb",
+"firstName": "Samaje",
+"lastName": "Perine",
+"displayName": "Samaje Perine",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/3116389/samaje-perine",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/3116389.png",
+"alt": "Samaje Perine"
+},
+"jersey": "34"
+},
+"stats": [
+"8",
+"42",
+"5.3",
+"0",
+"13"
+]
+},
+{
+"athlete": {
+"id": "3915511",
+"uid": "s:20~l:28~a:3915511",
+"guid": "e6957db5-5b2e-a82d-c788-d889115d9772",
+"firstName": "Joe",
+"lastName": "Burrow",
+"displayName": "Joe Burrow",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/3915511/joe-burrow",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/3915511.png",
+"alt": "Joe Burrow"
+},
+"jersey": "9"
+},
+"stats": [
+"2",
+"17",
+"8.5",
+"0",
+"9"
+]
+},
+{
+"athlete": {
+"id": "4570738",
+"uid": "s:20~l:28~a:4570738",
+"guid": "47125c83-b5ba-343b-a3e7-9d6e54ed3baa",
+"firstName": "Ke'Shawn",
+"lastName": "Williams",
+"displayName": "Ke'Shawn Williams",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/4570738/keshawn-williams",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4570738.png",
+"alt": "Ke'Shawn Williams"
+},
+"jersey": "12"
+},
+"stats": [
+"1",
+"9",
+"9.0",
+"0",
+"9"
+]
+},
+{
+"athlete": {
+"id": "11252",
+"uid": "s:20~l:28~a:11252",
+"guid": "cfd567df-191e-29cf-0dc6-0bcf84085135",
+"firstName": "Joe",
+"lastName": "Flacco",
+"displayName": "Joe Flacco",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/11252/joe-flacco",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/11252.png",
+"alt": "Joe Flacco"
+},
+"jersey": "16"
+},
+"stats": [
+"1",
+"2",
+"2.0",
+"0",
+"2"
 ]
 }
 ],
 "totals": [
-"31",
-"117",
-"3.8",
+"25",
+"142",
+"5.7",
 "0",
-"27"
+"19"
 ]
 },
 {
@@ -2873,7 +3100,7 @@
 "longReception",
 "receivingTargets"
 ],
-"text": "Pittsburgh Receiving",
+"text": "Cincinnati Receiving",
 "labels": [
 "REC",
 "YDS",
@@ -2893,12 +3120,12 @@
 "athletes": [
 {
 "athlete": {
-"id": "4685261",
-"uid": "s:20~l:28~a:4685261",
-"guid": "e9fc2458-287b-37fb-a2a2-222f32efdad4",
-"firstName": "Germie",
-"lastName": "Bernard",
-"displayName": "Germie Bernard",
+"id": "4362628",
+"uid": "s:20~l:28~a:4362628",
+"guid": "f9be91fa-7d8d-811b-6452-b14d1a1feb2c",
+"firstName": "Ja'Marr",
+"lastName": "Chase",
+"displayName": "Ja'Marr Chase",
 "links": [
 {
 "rel": [
@@ -2906,33 +3133,169 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4685261/germie-bernard",
+"href": "https://www.espn.com/nfl/player/_/id/4362628/jamarr-chase",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4685261.png",
-"alt": "Germie Bernard"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4362628.png",
+"alt": "Ja'Marr Chase"
 },
-"jersey": "17"
+"jersey": "1"
 },
 "stats": [
+"8",
+"96",
+"12.0",
 "1",
-"58",
-"58.0",
+"21",
+"10"
+]
+},
+{
+"athlete": {
+"id": "4239993",
+"uid": "s:20~l:28~a:4239993",
+"guid": "f6207352-946a-a75a-aff5-28f316536d4d",
+"firstName": "Tee",
+"lastName": "Higgins",
+"displayName": "Tee Higgins",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/4239993/tee-higgins",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4239993.png",
+"alt": "Tee Higgins"
+},
+"jersey": "5"
+},
+"stats": [
+"6",
+"67",
+"11.2",
+"1",
+"21",
+"9"
+]
+},
+{
+"athlete": {
+"id": "4362238",
+"uid": "s:20~l:28~a:4362238",
+"guid": "07049770-8e6a-c054-e9f3-0a204d623b57",
+"firstName": "Chase",
+"lastName": "Brown",
+"displayName": "Chase Brown",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/4362238/chase-brown",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4362238.png",
+"alt": "Chase Brown"
+},
+"jersey": "30"
+},
+"stats": [
+"4",
+"18",
+"4.5",
+"1",
+"6",
+"6"
+]
+},
+{
+"athlete": {
+"id": "3127310",
+"uid": "s:20~l:28~a:3127310",
+"guid": "12728d97-cd25-a05d-e301-79560d9efce9",
+"firstName": "Drew",
+"lastName": "Sample",
+"displayName": "Drew Sample",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/3127310/drew-sample",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/3127310.png",
+"alt": "Drew Sample"
+},
+"jersey": "89"
+},
+"stats": [
+"3",
+"17",
+"5.7",
 "0",
-"58",
+"8",
+"3"
+]
+},
+{
+"athlete": {
+"id": "3116164",
+"uid": "s:20~l:28~a:3116164",
+"guid": "f3cc6528-0247-52b4-23c4-4c54da4e1571",
+"firstName": "Mike",
+"lastName": "Gesicki",
+"displayName": "Mike Gesicki",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/3116164/mike-gesicki",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/3116164.png",
+"alt": "Mike Gesicki"
+},
+"jersey": "88"
+},
+"stats": [
+"2",
+"13",
+"6.5",
+"0",
+"10",
 "2"
 ]
 },
 {
 "athlete": {
-"id": "4431492",
-"uid": "s:20~l:28~a:4431492",
-"guid": "26f43986-7674-3ef9-b523-f3f66dbd16a4",
-"firstName": "Roman",
-"lastName": "Wilson",
-"displayName": "Roman Wilson",
+"id": "4368003",
+"uid": "s:20~l:28~a:4368003",
+"guid": "48765517-fcf0-4b46-9666-f01d11d95ce1",
+"firstName": "Andrei",
+"lastName": "Iosivas",
+"displayName": "Andrei Iosivas",
 "links": [
 {
 "rel": [
@@ -2940,33 +3303,33 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4431492/roman-wilson",
+"href": "https://www.espn.com/nfl/player/_/id/4368003/andrei-iosivas",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4431492.png",
-"alt": "Roman Wilson"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4368003.png",
+"alt": "Andrei Iosivas"
 },
-"jersey": "14"
+"jersey": "80"
 },
 "stats": [
-"1",
-"37",
-"37.0",
+"2",
+"10",
+"5.0",
 "0",
-"37",
-"1"
+"7",
+"3"
 ]
 },
 {
 "athlete": {
-"id": "4047650",
-"uid": "s:20~l:28~a:4047650",
-"guid": "c6727be7-1ac0-315c-437d-e281fe9a2e84",
-"firstName": "DK",
-"lastName": "Metcalf",
-"displayName": "DK Metcalf",
+"id": "3116389",
+"uid": "s:20~l:28~a:3116389",
+"guid": "41728606-98bf-ee0d-fcb7-539c733041fb",
+"firstName": "Samaje",
+"lastName": "Perine",
+"displayName": "Samaje Perine",
 "links": [
 {
 "rel": [
@@ -2974,33 +3337,33 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4047650/dk-metcalf",
+"href": "https://www.espn.com/nfl/player/_/id/3116389/samaje-perine",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4047650.png",
-"alt": "DK Metcalf"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/3116389.png",
+"alt": "Samaje Perine"
 },
-"jersey": "4"
+"jersey": "34"
 },
 "stats": [
 "3",
-"36",
-"12.0",
-"1",
-"22",
+"10",
+"3.3",
+"0",
+"5",
 "4"
 ]
 },
 {
 "athlete": {
-"id": "4035687",
-"uid": "s:20~l:28~a:4035687",
-"guid": "f9ac7a55-5934-2bf7-e70a-9c1d04cac2eb",
-"firstName": "Michael",
-"lastName": "Pittman Jr.",
-"displayName": "Michael Pittman Jr.",
+"id": "4036131",
+"uid": "s:20~l:28~a:4036131",
+"guid": "96eb607e-4310-ea22-02d0-fbd0cd080faf",
+"firstName": "Noah",
+"lastName": "Fant",
+"displayName": "Noah Fant",
 "links": [
 {
 "rel": [
@@ -3008,135 +3371,33 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4035687/michael-pittman-jr",
+"href": "https://www.espn.com/nfl/player/_/id/4036131/noah-fant",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4035687.png",
-"alt": "Michael Pittman Jr."
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4036131.png",
+"alt": "Noah Fant"
 },
-"jersey": "11"
-},
-"stats": [
-"1",
-"7",
-"7.0",
-"0",
-"7",
-"2"
-]
-},
-{
-"athlete": {
-"id": "4038815",
-"uid": "s:20~l:28~a:4038815",
-"guid": "da1e8487-d66d-6ff0-7438-e9d6e77856e0",
-"firstName": "Rico",
-"lastName": "Dowdle",
-"displayName": "Rico Dowdle",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/4038815/rico-dowdle",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4038815.png",
-"alt": "Rico Dowdle"
-},
-"jersey": "13"
+"jersey": "86"
 },
 "stats": [
 "1",
-"3",
-"3.0",
+"5",
+"5.0",
 "0",
-"3",
+"5",
 "1"
-]
-},
-{
-"athlete": {
-"id": "4361411",
-"uid": "s:20~l:28~a:4361411",
-"guid": "dd0c7d09-aed2-e7dd-defd-12de97619e6e",
-"firstName": "Pat",
-"lastName": "Freiermuth",
-"displayName": "Pat Freiermuth",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/4361411/pat-freiermuth",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4361411.png",
-"alt": "Pat Freiermuth"
-},
-"jersey": "88"
-},
-"stats": [
-"1",
-"1",
-"1.0",
-"0",
-"1",
-"1"
-]
-},
-{
-"athlete": {
-"id": "4569987",
-"uid": "s:20~l:28~a:4569987",
-"guid": "224e4c1e-625d-b1b2-b8ea-1316942fa7ac",
-"firstName": "Jaylen",
-"lastName": "Warren",
-"displayName": "Jaylen Warren",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/4569987/jaylen-warren",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4569987.png",
-"alt": "Jaylen Warren"
-},
-"jersey": "30"
-},
-"stats": [
-"1",
-"0",
-"0.0",
-"0",
-"0",
-"2"
 ]
 }
 ],
 "totals": [
-"9",
-"142",
-"15.8",
-"1",
-"58",
-"13"
+"29",
+"236",
+"8.1",
+"3",
+"21",
+"38"
 ]
 },
 {
@@ -3146,7 +3407,7 @@
 "fumblesLost",
 "fumblesRecovered"
 ],
-"text": "Pittsburgh Fumbles",
+"text": "Cincinnati Fumbles",
 "labels": [
 "FUM",
 "LOST",
@@ -3160,12 +3421,12 @@
 "athletes": [
 {
 "athlete": {
-"id": "4038815",
-"uid": "s:20~l:28~a:4038815",
-"guid": "da1e8487-d66d-6ff0-7438-e9d6e77856e0",
-"firstName": "Rico",
-"lastName": "Dowdle",
-"displayName": "Rico Dowdle",
+"id": "4036131",
+"uid": "s:20~l:28~a:4036131",
+"guid": "96eb607e-4310-ea22-02d0-fbd0cd080faf",
+"firstName": "Noah",
+"lastName": "Fant",
+"displayName": "Noah Fant",
 "links": [
 {
 "rel": [
@@ -3173,15 +3434,15 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4038815/rico-dowdle",
+"href": "https://www.espn.com/nfl/player/_/id/4036131/noah-fant",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4038815.png",
-"alt": "Rico Dowdle"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4036131.png",
+"alt": "Noah Fant"
 },
-"jersey": "13"
+"jersey": "86"
 },
 "stats": [
 "1",
@@ -3191,12 +3452,12 @@
 },
 {
 "athlete": {
-"id": "3045282",
-"uid": "s:20~l:28~a:3045282",
-"guid": "fa239d3e-e2c0-2e06-6856-2a52abea3f2c",
-"firstName": "T.J.",
-"lastName": "Watt",
-"displayName": "T.J. Watt",
+"id": "4426992",
+"uid": "s:20~l:28~a:4426992",
+"guid": "0af52c7e-8c35-a510-f546-60211842dbea",
+"firstName": "Howard",
+"lastName": "Cross III",
+"displayName": "Howard Cross III",
 "links": [
 {
 "rel": [
@@ -3204,15 +3465,15 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/3045282/tj-watt",
+"href": "https://www.espn.com/nfl/player/_/id/4426992/howard-cross-iii",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/3045282.png",
-"alt": "T.J. Watt"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4426992.png",
+"alt": "Howard Cross III"
 },
-"jersey": "90"
+"jersey": "95"
 },
 "stats": [
 "0",
@@ -3238,7 +3499,7 @@
 "QBHits",
 "defensiveTouchdowns"
 ],
-"text": "Pittsburgh Defense",
+"text": "Cincinnati Defense",
 "labels": [
 "TOT",
 "SOLO",
@@ -3260,12 +3521,12 @@
 "athletes": [
 {
 "athlete": {
-"id": "4361652",
-"uid": "s:20~l:28~a:4361652",
-"guid": "c1a0c4b5-c6d8-b2e5-4d96-018b0cf333ec",
-"firstName": "Payton",
-"lastName": "Wilson",
-"displayName": "Payton Wilson",
+"id": "3116748",
+"uid": "s:20~l:28~a:3116748",
+"guid": "43fd48bf-9bd1-a089-d966-b060abe6a9e4",
+"firstName": "B.J.",
+"lastName": "Hill",
+"displayName": "B.J. Hill",
 "links": [
 {
 "rel": [
@@ -3273,20 +3534,20 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4361652/payton-wilson",
+"href": "https://www.espn.com/nfl/player/_/id/3116748/bj-hill",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4361652.png",
-"alt": "Payton Wilson"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/3116748.png",
+"alt": "B.J. Hill"
 },
-"jersey": "41"
+"jersey": "92"
 },
 "stats": [
 "8",
-"5",
-"0",
+"4",
+"1",
 "1",
 "0",
 "1",
@@ -3295,12 +3556,12 @@
 },
 {
 "athlete": {
-"id": "4570044",
-"uid": "s:20~l:28~a:4570044",
-"guid": "036fd1d7-80a7-613d-5f86-981407de3d6d",
-"firstName": "Jaquan",
-"lastName": "Brisker",
-"displayName": "Jaquan Brisker",
+"id": "4243923",
+"uid": "s:20~l:28~a:4243923",
+"guid": "382818ff-8b26-9b0b-65b8-1aad5d9b9125",
+"firstName": "Cameron",
+"lastName": "Sample",
+"displayName": "Cameron Sample",
 "links": [
 {
 "rel": [
@@ -3308,174 +3569,34 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4570044/jaquan-brisker",
+"href": "https://www.espn.com/nfl/player/_/id/4243923/cameron-sample",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4570044.png",
-"alt": "Jaquan Brisker"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4243923.png",
+"alt": "Cameron Sample"
 },
-"jersey": "3"
+"jersey": "96"
 },
 "stats": [
 "6",
 "4",
+"2",
+"1",
 "0",
-"0",
-"0",
-"0",
+"2",
 "0"
 ]
 },
 {
 "athlete": {
-"id": "4820584",
-"uid": "s:20~l:28~a:4820584",
-"guid": "28a6ba42-138c-386b-9c1e-39901938bfbe",
-"firstName": "Robert",
-"lastName": "Spears-Jennings",
-"displayName": "Robert Spears-Jennings",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/4820584/robert-spears-jennings",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4820584.png",
-"alt": "Robert Spears-Jennings"
-},
-"jersey": "28"
-},
-"stats": [
-"6",
-"3",
-"0",
-"1",
-"0",
-"0",
-"0"
-]
-},
-{
-"athlete": {
-"id": "4429164",
-"uid": "s:20~l:28~a:4429164",
-"guid": "b5a6a0e4-88c9-3a7f-ae1c-8c7ecb944815",
-"firstName": "Nick",
-"lastName": "Herbig",
-"displayName": "Nick Herbig",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/4429164/nick-herbig",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4429164.png",
-"alt": "Nick Herbig"
-},
-"jersey": "51"
-},
-"stats": [
-"5",
-"5",
-"1",
-"1",
-"0",
-"1",
-"0"
-]
-},
-{
-"athlete": {
-"id": "3873935",
-"uid": "s:20~l:28~a:3873935",
-"guid": "537896f1-aa7f-dc2b-5a56-b9bdae0e9c06",
-"firstName": "Jamel",
-"lastName": "Dean",
-"displayName": "Jamel Dean",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/3873935/jamel-dean",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/3873935.png",
-"alt": "Jamel Dean"
-},
-"jersey": "35"
-},
-"stats": [
-"5",
-"5",
-"0",
-"0",
-"1",
-"0",
-"0"
-]
-},
-{
-"athlete": {
-"id": "4242207",
-"uid": "s:20~l:28~a:4242207",
-"guid": "8822527a-d2cf-e259-fbf1-8989fdec740c",
-"firstName": "Patrick",
-"lastName": "Queen",
-"displayName": "Patrick Queen",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/4242207/patrick-queen",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4242207.png",
-"alt": "Patrick Queen"
-},
-"jersey": "6"
-},
-"stats": [
-"5",
-"4",
-"0",
-"1",
-"0",
-"0",
-"0"
-]
-},
-{
-"athlete": {
-"id": "3045282",
-"uid": "s:20~l:28~a:3045282",
-"guid": "fa239d3e-e2c0-2e06-6856-2a52abea3f2c",
+"id": "4240612",
+"uid": "s:20~l:28~a:4240612",
+"guid": "37fef844-1a58-d7ae-ced1-917123fb0c03",
 "firstName": "T.J.",
-"lastName": "Watt",
-"displayName": "T.J. Watt",
+"lastName": "Slaton Jr.",
+"displayName": "T.J. Slaton Jr.",
 "links": [
 {
 "rel": [
@@ -3483,34 +3604,69 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/3045282/tj-watt",
+"href": "https://www.espn.com/nfl/player/_/id/4240612/tj-slaton-jr",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/3045282.png",
-"alt": "T.J. Watt"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4240612.png",
+"alt": "T.J. Slaton Jr."
 },
-"jersey": "90"
+"jersey": "98"
+},
+"stats": [
+"5",
+"2",
+"1",
+"1",
+"0",
+"1",
+"0"
+]
+},
+{
+"athlete": {
+"id": "4428985",
+"uid": "s:20~l:28~a:4428985",
+"guid": "cfd391f6-93c2-3e9f-bfeb-723c48112e9c",
+"firstName": "Myles",
+"lastName": "Murphy",
+"displayName": "Myles Murphy",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/4428985/myles-murphy",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4428985.png",
+"alt": "Myles Murphy"
+},
+"jersey": "99"
 },
 "stats": [
 "5",
 "2",
 "0",
+"0",
 "1",
 "0",
-"0",
-"1"
+"0"
 ]
 },
 {
 "athlete": {
-"id": "4685327",
-"uid": "s:20~l:28~a:4685327",
-"guid": "c4f37108-302c-3730-b2eb-a6926cdb02bc",
-"firstName": "Daylen",
-"lastName": "Everette",
-"displayName": "Daylen Everette",
+"id": "4431519",
+"uid": "s:20~l:28~a:4431519",
+"guid": "cb8bdc1f-b7cd-396b-9675-ea08924284f0",
+"firstName": "Barrett",
+"lastName": "Carter",
+"displayName": "Barrett Carter",
 "links": [
 {
 "rel": [
@@ -3518,34 +3674,69 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4685327/daylen-everette",
+"href": "https://www.espn.com/nfl/player/_/id/4431519/barrett-carter",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4685327.png",
-"alt": "Daylen Everette"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4431519.png",
+"alt": "Barrett Carter"
+},
+"jersey": "49"
+},
+"stats": [
+"5",
+"2",
+"0",
+"0",
+"0",
+"0",
+"0"
+]
+},
+{
+"athlete": {
+"id": "4426422",
+"uid": "s:20~l:28~a:4426422",
+"guid": "0f5bc4b1-28cb-150d-001f-170110292d1a",
+"firstName": "Dax",
+"lastName": "Hill",
+"displayName": "Dax Hill",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/4426422/dax-hill",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4426422.png",
+"alt": "Dax Hill"
 },
 "jersey": "23"
 },
 "stats": [
 "4",
-"3",
+"4",
 "0",
 "0",
-"3",
+"0",
 "0",
 "0"
 ]
 },
 {
 "athlete": {
-"id": "4430947",
-"uid": "s:20~l:28~a:4430947",
-"guid": "719d67dc-96d8-3b44-9a9c-8ac9a3f58075",
-"firstName": "Yahya",
-"lastName": "Black",
-"displayName": "Yahya Black",
+"id": "3125356",
+"uid": "s:20~l:28~a:3125356",
+"guid": "596d272b-21a0-e588-a59a-53e4ee6f84ae",
+"firstName": "Jalen",
+"lastName": "Davis",
+"displayName": "Jalen Davis",
 "links": [
 {
 "rel": [
@@ -3553,15 +3744,15 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4430947/yahya-black",
+"href": "https://www.espn.com/nfl/player/_/id/3125356/jalen-davis",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4430947.png",
-"alt": "Yahya Black"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/3125356.png",
+"alt": "Jalen Davis"
 },
-"jersey": "94"
+"jersey": "35"
 },
 "stats": [
 "4",
@@ -3569,18 +3760,18 @@
 "0",
 "0",
 "0",
-"1",
+"0",
 "0"
 ]
 },
 {
 "athlete": {
-"id": "13977",
-"uid": "s:20~l:28~a:13977",
-"guid": "712b78be-6085-d619-137e-3179c2c4c1f4",
-"firstName": "Cameron",
-"lastName": "Heyward",
-"displayName": "Cameron Heyward",
+"id": "3917797",
+"uid": "s:20~l:28~a:3917797",
+"guid": "00ce3c34-c43d-4d1f-072a-173b58b35417",
+"firstName": "Joe",
+"lastName": "Giles-Harris",
+"displayName": "Joe Giles-Harris",
 "links": [
 {
 "rel": [
@@ -3588,54 +3779,54 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/13977/cameron-heyward",
+"href": "https://www.espn.com/nfl/player/_/id/3917797/joe-giles-harris",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/13977.png",
-"alt": "Cameron Heyward"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/3917797.png",
+"alt": "Joe Giles-Harris"
 },
-"jersey": "97"
+"jersey": "43"
+},
+"stats": [
+"4",
+"1",
+"0",
+"0",
+"0",
+"0",
+"0"
+]
+},
+{
+"athlete": {
+"id": "4567098",
+"uid": "s:20~l:28~a:4567098",
+"guid": "b3c68b74-63a6-6c6b-fb9e-f506249fb609",
+"firstName": "Jordan",
+"lastName": "Battle",
+"displayName": "Jordan Battle",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/4567098/jordan-battle",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4567098.png",
+"alt": "Jordan Battle"
+},
+"jersey": "27"
 },
 "stats": [
 "3",
-"2",
-"1",
-"1",
-"0",
-"1",
-"0"
-]
-},
-{
-"athlete": {
-"id": "4360308",
-"uid": "s:20~l:28~a:4360308",
-"guid": "1dc1a913-0a8e-bc43-ae5c-ed57709d3e3e",
-"firstName": "KJ",
-"lastName": "Henry",
-"displayName": "KJ Henry",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/4360308/kj-henry",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4360308.png",
-"alt": "KJ Henry"
-},
-"jersey": "57"
-},
-"stats": [
 "3",
-"1",
 "0",
 "0",
 "0",
@@ -3645,12 +3836,12 @@
 },
 {
 "athlete": {
-"id": "4682980",
-"uid": "s:20~l:28~a:4682980",
-"guid": "dda3e155-2461-3379-8a26-0218bf5962c7",
-"firstName": "Derrick",
-"lastName": "Harmon",
-"displayName": "Derrick Harmon",
+"id": "4427729",
+"uid": "s:20~l:28~a:4427729",
+"guid": "ed5a6d48-2cd5-62cb-2ccd-ba89cce77e36",
+"firstName": "Demetrius",
+"lastName": "Knight Jr.",
+"displayName": "Demetrius Knight Jr.",
 "links": [
 {
 "rel": [
@@ -3658,160 +3849,20 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4682980/derrick-harmon",
+"href": "https://www.espn.com/nfl/player/_/id/4427729/demetrius-knight-jr",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4682980.png",
-"alt": "Derrick Harmon"
-},
-"jersey": "99"
-},
-"stats": [
-"3",
-"1",
-"0",
-"0",
-"0",
-"0",
-"0"
-]
-},
-{
-"athlete": {
-"id": "5084849",
-"uid": "s:20~l:28~a:5084849",
-"guid": "782f92fc-7a54-388a-845f-3c5f51f91f5f",
-"firstName": "Kevin",
-"lastName": "Jobity Jr.",
-"displayName": "Kevin Jobity Jr.",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/5084849/kevin-jobity-jr",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/5084849.png",
-"alt": "Kevin Jobity Jr."
-},
-"jersey": "92"
-},
-"stats": [
-"3",
-"1",
-"0",
-"0",
-"0",
-"0",
-"0"
-]
-},
-{
-"athlete": {
-"id": "4428909",
-"uid": "s:20~l:28~a:4428909",
-"guid": "3e45dffa-3564-0d0a-5e73-9d725fa282d9",
-"firstName": "Jacoby",
-"lastName": "Windmon",
-"displayName": "Jacoby Windmon",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/4428909/jacoby-windmon",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4428909.png",
-"alt": "Jacoby Windmon"
-},
-"jersey": "53"
-},
-"stats": [
-"2",
-"1",
-"0",
-"0",
-"0",
-"0",
-"0"
-]
-},
-{
-"athlete": {
-"id": "4429490",
-"uid": "s:20~l:28~a:4429490",
-"guid": "b94cea81-bc3a-3c33-bf5a-e87ff1a3de87",
-"firstName": "Carson",
-"lastName": "Bruener",
-"displayName": "Carson Bruener",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/4429490/carson-bruener",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4429490.png",
-"alt": "Carson Bruener"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4427729.png",
+"alt": "Demetrius Knight Jr."
 },
 "jersey": "44"
 },
 "stats": [
+"3",
 "2",
 "1",
-"0",
-"0",
-"0",
-"0",
-"0"
-]
-},
-{
-"athlete": {
-"id": "4426694",
-"uid": "s:20~l:28~a:4426694",
-"guid": "1b33cedc-29a8-f9f6-53dc-05a3d0ebcc07",
-"firstName": "Keeanu",
-"lastName": "Benton",
-"displayName": "Keeanu Benton",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/4426694/keeanu-benton",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4426694.png",
-"alt": "Keeanu Benton"
-},
-"jersey": "95"
-},
-"stats": [
-"2",
-"0",
-"0",
 "0",
 "1",
 "1",
@@ -3820,12 +3871,12 @@
 },
 {
 "athlete": {
-"id": "4363034",
-"uid": "s:20~l:28~a:4363034",
-"guid": "d3e870a4-6ef6-23a2-d633-1ed041ea905e",
-"firstName": "Asante",
-"lastName": "Samuel Jr.",
-"displayName": "Asante Samuel Jr.",
+"id": "4240575",
+"uid": "s:20~l:28~a:4240575",
+"guid": "35f2aa8c-e37b-d712-3c72-c05e407ad66a",
+"firstName": "Geno",
+"lastName": "Stone",
+"displayName": "Geno Stone",
 "links": [
 {
 "rel": [
@@ -3833,19 +3884,54 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4363034/asante-samuel-jr",
+"href": "https://www.espn.com/nfl/player/_/id/4240575/geno-stone",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4363034.png",
-"alt": "Asante Samuel Jr."
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4240575.png",
+"alt": "Geno Stone"
 },
 "jersey": "22"
 },
 "stats": [
+"3",
+"2",
+"0",
+"0",
 "1",
-"1",
+"0",
+"0"
+]
+},
+{
+"athlete": {
+"id": "4362502",
+"uid": "s:20~l:28~a:4362502",
+"guid": "8eff4fb0-ac74-eea3-3a84-4e90109d5a0d",
+"firstName": "DJ",
+"lastName": "Ivey",
+"displayName": "DJ Ivey",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/4362502/dj-ivey",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4362502.png",
+"alt": "DJ Ivey"
+},
+"jersey": "38"
+},
+"stats": [
+"2",
+"2",
 "0",
 "0",
 "0",
@@ -3855,12 +3941,12 @@
 },
 {
 "athlete": {
-"id": "4693370",
-"uid": "s:20~l:28~a:4693370",
-"guid": "0fb33cde-7172-3bd6-b9d1-6ac5e08f21fd",
-"firstName": "Riley",
-"lastName": "Nowakowski",
-"displayName": "Riley Nowakowski",
+"id": "4430065",
+"uid": "s:20~l:28~a:4430065",
+"guid": "dc16214a-c672-34f1-a61a-b8d27c9fd560",
+"firstName": "Cedric",
+"lastName": "Johnson",
+"displayName": "Cedric Johnson",
 "links": [
 {
 "rel": [
@@ -3868,18 +3954,53 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4693370/riley-nowakowski",
+"href": "https://www.espn.com/nfl/player/_/id/4430065/cedric-johnson",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4693370.png",
-"alt": "Riley Nowakowski"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4430065.png",
+"alt": "Cedric Johnson"
+},
+"jersey": "52"
+},
+"stats": [
+"2",
+"1",
+"1",
+"1",
+"0",
+"2",
+"0"
+]
+},
+{
+"athlete": {
+"id": "4429946",
+"uid": "s:20~l:28~a:4429946",
+"guid": "c01e95ba-8f36-1c2e-653b-634f79713a53",
+"firstName": "PJ",
+"lastName": "Jules",
+"displayName": "PJ Jules",
+"links": [
+{
+"rel": [
+"playercard",
+"desktop",
+"athlete"
+],
+"href": "https://www.espn.com/nfl/player/_/id/4429946/pj-jules",
+"text": "Player Card"
+}
+],
+"headshot": {
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4429946.png",
+"alt": "PJ Jules"
 },
 "jersey": "37"
 },
 "stats": [
-"1",
+"2",
 "1",
 "0",
 "0",
@@ -3890,12 +4011,12 @@
 },
 {
 "athlete": {
-"id": "4431590",
-"uid": "s:20~l:28~a:4431590",
-"guid": "a810e96c-0c76-30c2-aa9f-16d54b53a1a4",
-"firstName": "Jack",
-"lastName": "Sawyer",
-"displayName": "Jack Sawyer",
+"id": "3051746",
+"uid": "s:20~l:28~a:3051746",
+"guid": "1c609219-3fa9-8d64-ee51-38b71cea7a0f",
+"firstName": "Oren",
+"lastName": "Burks",
+"displayName": "Oren Burks",
 "links": [
 {
 "rel": [
@@ -3903,19 +4024,19 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4431590/jack-sawyer",
+"href": "https://www.espn.com/nfl/player/_/id/3051746/oren-burks",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4431590.png",
-"alt": "Jack Sawyer"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/3051746.png",
+"alt": "Oren Burks"
 },
-"jersey": "33"
+"jersey": "42"
 },
 "stats": [
 "1",
-"0",
+"1",
 "0",
 "0",
 "0",
@@ -3925,12 +4046,12 @@
 },
 {
 "athlete": {
-"id": "4567979",
-"uid": "s:20~l:28~a:4567979",
-"guid": "6338c7ad-ee07-06e2-b921-a5b57f96464a",
-"firstName": "Brandin",
-"lastName": "Echols",
-"displayName": "Brandin Echols",
+"id": "4257240",
+"uid": "s:20~l:28~a:4257240",
+"guid": "86f774b0-8e45-7e67-f613-aefb7b3a8542",
+"firstName": "Tycen",
+"lastName": "Anderson",
+"displayName": "Tycen Anderson",
 "links": [
 {
 "rel": [
@@ -3938,34 +4059,34 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4567979/brandin-echols",
+"href": "https://www.espn.com/nfl/player/_/id/4257240/tycen-anderson",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4567979.png",
-"alt": "Brandin Echols"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4257240.png",
+"alt": "Tycen Anderson"
 },
 "jersey": "26"
 },
 "stats": [
 "1",
+"1",
 "0",
 "0",
-"0",
-"0",
+"1",
 "0",
 "0"
 ]
 },
 {
 "athlete": {
-"id": "4692628",
-"uid": "s:20~l:28~a:4692628",
-"guid": "bb5c76dd-fca7-35dd-a332-4eb392489644",
-"firstName": "Doneiko",
-"lastName": "Slaughter",
-"displayName": "Doneiko Slaughter",
+"id": "4685562",
+"uid": "s:20~l:28~a:4685562",
+"guid": "ee8dca16-7ec4-3fa6-8c10-6cc028cd1802",
+"firstName": "Shemar",
+"lastName": "Stewart",
+"displayName": "Shemar Stewart",
 "links": [
 {
 "rel": [
@@ -3973,70 +4094,35 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4692628/doneiko-slaughter",
+"href": "https://www.espn.com/nfl/player/_/id/4685562/shemar-stewart",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4692628.png",
-"alt": "Doneiko Slaughter"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4685562.png",
+"alt": "Shemar Stewart"
 },
-"jersey": "40"
+"jersey": "97"
 },
 "stats": [
 "1",
 "0",
 "0",
 "0",
-"0",
-"0",
-"0"
-]
-},
-{
-"athlete": {
-"id": "3045373",
-"uid": "s:20~l:28~a:3045373",
-"guid": "a5623fce-1fb1-d273-2b6e-61ac583303c3",
-"firstName": "Jalen",
-"lastName": "Ramsey",
-"displayName": "Jalen Ramsey",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/3045373/jalen-ramsey",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/3045373.png",
-"alt": "Jalen Ramsey"
-},
-"jersey": "5"
-},
-"stats": [
-"0",
-"0",
-"0",
-"0",
+"1",
 "2",
-"0",
-"1"
+"0"
 ]
 }
 ],
 "totals": [
-"71",
-"41",
-"2",
+"59",
+"33",
 "6",
-"7",
+"4",
 "5",
-"2"
+"9",
+"0"
 ]
 },
 {
@@ -4046,7 +4132,7 @@
 "interceptionYards",
 "interceptionTouchdowns"
 ],
-"text": "Pittsburgh Interceptions",
+"text": "Cincinnati Interceptions",
 "labels": [
 "INT",
 "YDS",
@@ -4057,75 +4143,8 @@
 "Yards",
 "Touchdowns"
 ],
-"athletes": [
-{
-"athlete": {
-"id": "3045373",
-"uid": "s:20~l:28~a:3045373",
-"guid": "a5623fce-1fb1-d273-2b6e-61ac583303c3",
-"firstName": "Jalen",
-"lastName": "Ramsey",
-"displayName": "Jalen Ramsey",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/3045373/jalen-ramsey",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/3045373.png",
-"alt": "Jalen Ramsey"
-},
-"jersey": "5"
-},
-"stats": [
-"1",
-"36",
-"1"
-]
-},
-{
-"athlete": {
-"id": "4685327",
-"uid": "s:20~l:28~a:4685327",
-"guid": "c4f37108-302c-3730-b2eb-a6926cdb02bc",
-"firstName": "Daylen",
-"lastName": "Everette",
-"displayName": "Daylen Everette",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/4685327/daylen-everette",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4685327.png",
-"alt": "Daylen Everette"
-},
-"jersey": "23"
-},
-"stats": [
-"1",
-"20",
-"0"
-]
-}
-],
-"totals": [
-"2",
-"56",
-"1"
-]
+"athletes": [],
+"totals": []
 },
 {
 "name": "kickReturns",
@@ -4136,7 +4155,7 @@
 "longKickReturn",
 "kickReturnTouchdowns"
 ],
-"text": "Pittsburgh Kick Returns",
+"text": "Cincinnati Kick Returns",
 "labels": [
 "NO",
 "YDS",
@@ -4154,12 +4173,12 @@
 "athletes": [
 {
 "athlete": {
-"id": "4428119",
-"uid": "s:20~l:28~a:4428119",
-"guid": "d9523718-5c26-7458-5735-84e5fde38e9c",
-"firstName": "Lew",
-"lastName": "Nichols",
-"displayName": "Lew Nichols",
+"id": "4570738",
+"uid": "s:20~l:28~a:4570738",
+"guid": "47125c83-b5ba-343b-a3e7-9d6e54ed3baa",
+"firstName": "Ke'Shawn",
+"lastName": "Williams",
+"displayName": "Ke'Shawn Williams",
 "links": [
 {
 "rel": [
@@ -4167,63 +4186,30 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4428119/lew-nichols",
+"href": "https://www.espn.com/nfl/player/_/id/4570738/keshawn-williams",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4428119.png",
-"alt": "Lew Nichols"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4570738.png",
+"alt": "Ke'Shawn Williams"
 },
-"jersey": "31"
-},
-"stats": [
-"1",
-"22",
-"22.0",
-"22",
-"0"
-]
-},
-{
-"athlete": {
-"id": "4694237",
-"uid": "s:20~l:28~a:4694237",
-"guid": "c594fa98-bf7e-39ae-a32b-eb664a8e7a36",
-"firstName": "Max",
-"lastName": "Hurleman",
-"displayName": "Max Hurleman",
-"links": [
-{
-"rel": [
-"playercard",
-"desktop",
-"athlete"
-],
-"href": "https://www.espn.com/nfl/player/_/id/4694237/max-hurleman",
-"text": "Player Card"
-}
-],
-"headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4694237.png",
-"alt": "Max Hurleman"
-},
-"jersey": "84"
+"jersey": "12"
 },
 "stats": [
-"1",
-"22",
-"22.0",
-"22",
+"4",
+"99",
+"24.8",
+"31",
 "0"
 ]
 }
 ],
 "totals": [
-"2",
-"44",
-"22.0",
-"22",
+"4",
+"99",
+"24.8",
+"31",
 "0"
 ]
 },
@@ -4236,7 +4222,7 @@
 "longPuntReturn",
 "puntReturnTouchdowns"
 ],
-"text": "Pittsburgh Punt Returns",
+"text": "Cincinnati Punt Returns",
 "labels": [
 "NO",
 "YDS",
@@ -4254,12 +4240,12 @@
 "athletes": [
 {
 "athlete": {
-"id": "4694237",
-"uid": "s:20~l:28~a:4694237",
-"guid": "c594fa98-bf7e-39ae-a32b-eb664a8e7a36",
-"firstName": "Max",
-"lastName": "Hurleman",
-"displayName": "Max Hurleman",
+"id": "4570738",
+"uid": "s:20~l:28~a:4570738",
+"guid": "47125c83-b5ba-343b-a3e7-9d6e54ed3baa",
+"firstName": "Ke'Shawn",
+"lastName": "Williams",
+"displayName": "Ke'Shawn Williams",
 "links": [
 {
 "rel": [
@@ -4267,30 +4253,30 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/4694237/max-hurleman",
+"href": "https://www.espn.com/nfl/player/_/id/4570738/keshawn-williams",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4694237.png",
-"alt": "Max Hurleman"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4570738.png",
+"alt": "Ke'Shawn Williams"
 },
-"jersey": "84"
+"jersey": "12"
 },
 "stats": [
-"4",
-"30",
-"7.5",
-"15",
+"3",
+"13",
+"4.3",
+"8",
 "0"
 ]
 }
 ],
 "totals": [
-"4",
-"30",
-"7.5",
-"15",
+"3",
+"13",
+"4.3",
+"8",
 "0"
 ]
 },
@@ -4303,7 +4289,7 @@
 "extraPointsMade/extraPointAttempts",
 "totalKickingPoints"
 ],
-"text": "Pittsburgh Kicking",
+"text": "Cincinnati Kicking",
 "labels": [
 "FG",
 "PCT",
@@ -4321,12 +4307,12 @@
 "athletes": [
 {
 "athlete": {
-"id": "17372",
-"uid": "s:20~l:28~a:17372",
-"guid": "8ad36dbe-d0e6-9493-9684-926df627f249",
-"firstName": "Chris",
-"lastName": "Boswell",
-"displayName": "Chris Boswell",
+"id": "4360234",
+"uid": "s:20~l:28~a:4360234",
+"guid": "9e956ba3-1a18-c026-647f-79e699d0256f",
+"firstName": "Evan",
+"lastName": "McPherson",
+"displayName": "Evan McPherson",
 "links": [
 {
 "rel": [
@@ -4334,31 +4320,31 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/17372/chris-boswell",
+"href": "https://www.espn.com/nfl/player/_/id/4360234/evan-mcpherson",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/17372.png",
-"alt": "Chris Boswell"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4360234.png",
+"alt": "Evan McPherson"
 },
-"jersey": "9"
+"jersey": "2"
 },
 "stats": [
-"2/2",
-"100.0",
-"47",
-"3/3",
-"9"
+"0/0",
+"0.0",
+"0",
+"0/2",
+"0"
 ]
 }
 ],
 "totals": [
-"2/2",
-"100.0",
-"47",
-"3/3",
-"9"
+"0/0",
+"0.0",
+"0",
+"0/2",
+"0"
 ]
 },
 {
@@ -4371,7 +4357,7 @@
 "puntsInside20",
 "longPunt"
 ],
-"text": "Pittsburgh Punting",
+"text": "Cincinnati Punting",
 "labels": [
 "NO",
 "YDS",
@@ -4391,12 +4377,12 @@
 "athletes": [
 {
 "athlete": {
-"id": "3051397",
-"uid": "s:20~l:28~a:3051397",
-"guid": "625afb46-2094-7b6a-55ca-a3171dc77a35",
-"firstName": "Cameron",
-"lastName": "Johnston",
-"displayName": "Cameron Johnston",
+"id": "4608820",
+"uid": "s:20~l:28~a:4608820",
+"guid": "1cef9567-3f8f-3fc8-a4f6-657cd7e6112b",
+"firstName": "Ryan",
+"lastName": "Rehkow",
+"displayName": "Ryan Rehkow",
 "links": [
 {
 "rel": [
@@ -4404,33 +4390,33 @@
 "desktop",
 "athlete"
 ],
-"href": "https://www.espn.com/nfl/player/_/id/3051397/cameron-johnston",
+"href": "https://www.espn.com/nfl/player/_/id/4608820/ryan-rehkow",
 "text": "Player Card"
 }
 ],
 "headshot": {
-"href": "https://a.espncdn.com/i/headshots/nfl/players/full/3051397.png",
-"alt": "Cameron Johnston"
+"href": "https://a.espncdn.com/i/headshots/nfl/players/full/4608820.png",
+"alt": "Ryan Rehkow"
 },
-"jersey": "19"
+"jersey": "8"
 },
 "stats": [
 "5",
-"206",
-"41.2",
-"1",
-"2",
-"54"
+"222",
+"44.4",
+"0",
+"4",
+"58"
 ]
 }
 ],
 "totals": [
 "5",
-"206",
-"41.2",
-"1",
-"2",
-"54"
+"222",
+"44.4",
+"0",
+"4",
+"58"
 ]
 }
 ],

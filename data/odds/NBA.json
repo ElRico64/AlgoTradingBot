@@ -15464,105 +15464,105 @@ null,
 "moneyline",
 "home",
 null,
-0.6786,
+0.6761,
 0.6837
 ],
 [
 "moneyline",
 "away",
 null,
-0.3214,
+0.3239,
 0.3163
 ],
 [
 "spread",
 "home",
 -5.5,
-0.5938,
+0.5822,
 0.5113
 ],
 [
 "spread",
 "away",
 -5.5,
-0.4062,
+0.4178,
 0.4887
 ],
 [
 "total",
 "over",
-213.5,
-0.5833,
-0.5
+212.5,
+0.6038,
+0.4955
 ],
 [
 "total",
 "under",
-213.5,
-0.4167,
-0.5
+212.5,
+0.3962,
+0.5045
 ]
 ],
-"over_price": -110.0,
+"over_price": -108.0,
 "source": "DraftKings",
 "spread": -5.5,
-"total": 213.5,
-"under_price": -110.0
+"total": 212.5,
+"under_price": -112.0
 },
 "NBA-20261128-IND-CHI-20": {
-"away_ml": 120.0,
-"away_spread_price": -105.0,
-"home_ml": -142.0,
-"home_spread_price": -115.0,
+"away_ml": 124.0,
+"away_spread_price": -119.0,
+"home_ml": -148.0,
+"home_spread_price": -102.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.5549,
-0.5661
+0.5639,
+0.5752
 ],
 [
 "moneyline",
 "away",
 null,
-0.4451,
-0.4339
+0.4361,
+0.4248
 ],
 [
 "spread",
 "home",
--2.5,
-0.511,
-0.5113
+-3.5,
+0.4831,
+0.4808
 ],
 [
 "spread",
 "away",
--2.5,
-0.489,
-0.4887
+-3.5,
+0.5169,
+0.5192
 ],
 [
 "total",
 "over",
 234.5,
 0.5749,
-0.5102
+0.4955
 ],
 [
 "total",
 "under",
 234.5,
 0.4251,
-0.4898
+0.5045
 ]
 ],
-"over_price": -115.0,
+"over_price": -108.0,
 "source": "DraftKings",
-"spread": -2.5,
+"spread": -3.5,
 "total": 234.5,
-"under_price": -106.0
+"under_price": -112.0
 },
 "NBA-20261128-OKC-MIL-20": {
 "away_ml": -561.0,
@@ -15588,14 +15588,14 @@ null,
 "spread",
 "home",
 11.5,
-0.4537,
+0.4533,
 0.5
 ],
 [
 "spread",
 "away",
 11.5,
-0.5463,
+0.5467,
 0.5
 ],
 [
@@ -15620,93 +15620,93 @@ null,
 "under_price": -110.0
 },
 "NBA-20261128-ORL-WSH-17": {
-"away_ml": -167.0,
-"away_spread_price": -111.0,
-"home_ml": 140.0,
-"home_spread_price": -109.0,
+"away_ml": -173.0,
+"away_spread_price": -115.0,
+"home_ml": 145.0,
+"home_spread_price": -105.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.3464,
-0.3956
+0.3389,
+0.3872
 ],
 [
 "moneyline",
 "away",
 null,
-0.6536,
-0.6044
+0.6611,
+0.6128
 ],
 [
 "spread",
 "home",
 3.5,
 0.546,
-0.4977
+0.4887
 ],
 [
 "spread",
 "away",
 3.5,
 0.454,
-0.5023
+0.5113
 ],
 [
 "total",
 "over",
-220.5,
-0.6419,
-0.4887
+219.5,
+0.6614,
+0.5113
 ],
 [
 "total",
 "under",
-220.5,
-0.3581,
-0.5113
+219.5,
+0.3386,
+0.4887
 ]
 ],
-"over_price": -105.0,
+"over_price": -115.0,
 "source": "DraftKings",
 "spread": 3.5,
-"total": 220.5,
-"under_price": -115.0
+"total": 219.5,
+"under_price": -105.0
 },
 "NBA-20261128-PHI-HOU-20": {
-"away_ml": 394.0,
-"away_spread_price": -114.0,
-"home_ml": -518.0,
-"home_spread_price": -106.0,
+"away_ml": 411.0,
+"away_spread_price": -106.0,
+"home_ml": -545.0,
+"home_spread_price": -114.0,
 "model": [
 [
 "moneyline",
 "home",
 null,
-0.8067,
-0.8179
+0.8143,
+0.8246
 ],
 [
 "moneyline",
 "away",
 null,
-0.1933,
-0.1821
+0.1857,
+0.1754
 ],
 [
 "spread",
 "home",
 -12.5,
-0.4806,
-0.4909
+0.4861,
+0.5091
 ],
 [
 "spread",
 "away",
 -12.5,
-0.5194,
-0.5091
+0.5139,
+0.4909
 ],
 [
 "total",
