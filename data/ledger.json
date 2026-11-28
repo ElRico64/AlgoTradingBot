@@ -17130,8 +17130,12 @@
    "market check: model 81.1% vs books 77.8% -> 78.4% (keeps 18% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-27T09:43:06+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.2532,
+  "graded_at": "2026-11-28T03:34:42+00:00",
+  "final": "MIL 98 \u2013 DET 113",
+  "close_price": -452.0,
+  "clv": 0.0209
  },
  {
   "id": "confidence:2026-11-27:NBA-20261127-GS-POR-21:moneyline:home",
@@ -17206,8 +17210,12 @@
    "market check: model 75.0% vs books 77.0% -> 76.7% (keeps 18% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-27T09:43:06+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "lost",
+  "profit": -1.0,
+  "graded_at": "2026-11-28T03:34:42+00:00",
+  "final": "ATL 87 \u2013 BOS 86",
+  "close_price": -378.0,
+  "clv": 0.0
  },
  {
   "id": "confidence:2026-11-27:NBA-20261127-BKN-TOR-19:moneyline:home",
@@ -17245,8 +17253,12 @@
    "market check: model 73.7% vs books 73.6% -> 73.6% (keeps 18% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-27T09:43:06+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "won",
+  "profit": 0.3226,
+  "graded_at": "2026-11-28T03:34:42+00:00",
+  "final": "BKN 100 \u2013 TOR 124",
+  "close_price": -374.0,
+  "clv": 0.0329
  },
  {
   "id": "value:2026-11-27:NFL-20261127-DEN-PIT-15:moneyline:away",
@@ -17292,8 +17304,12 @@
    "market check: model 77.1% vs books 69.2% -> 72.2% (keeps 36% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-27T09:43:13+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "lost",
+  "profit": -1.0,
+  "graded_at": "2026-11-28T03:34:54+00:00",
+  "final": "DEN 5 \u2013 PIT 27",
+  "close_price": -242.0,
+  "clv": -0.005
  },
  {
   "id": "confidence:2026-11-27:NFL-20261127-DEN-PIT-15:moneyline:away",
@@ -17339,7 +17355,11 @@
    "market check: model 77.1% vs books 69.2% -> 72.2% (keeps 36% of the model's disagreement, learned from graded games)"
   ],
   "published_at": "2026-11-27T09:43:13+00:00",
-  "status": "pending",
-  "profit": null
+  "status": "lost",
+  "profit": -1.0,
+  "graded_at": "2026-11-28T03:34:54+00:00",
+  "final": "DEN 5 \u2013 PIT 27",
+  "close_price": -242.0,
+  "clv": -0.005
  }
 ]
